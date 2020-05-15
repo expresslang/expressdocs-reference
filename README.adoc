@@ -1,0 +1,117 @@
+= Annotated EXPRESS
+
+Initial prototype of Annotated EXPRESS such that each file is appropriately sized for editing.
+
+The Annotated EXPRESS file is based on the usage of the `(* ... *)` remark syntax with `remark tag` (7.1.6.3 of ISO 10303-11) for annotations.
+
+WARNING: This is just a prototype. Actual long-term concrete syntax will be determined upon further discussion.
+
+
+== EXPRESS root file
+
+The "`root`" is the `action_schema.exp` file.
+
+There are two sections to the file.
+
+The first part describes metadata and information of the `action_schema` SCHEMA
+extracted from Part 41 (`resource_docs/fundamentals_of_product_description_and_support/resource.xml`)
+under its corresponding `<schema>` tag.
+The text in this part is written in the Metanorma format.
+
+[source]
+----
+(*"action_schema"
+
+@version = '8'
+@number = '10230'
+@number.supersedes = '8369'
+
+== General
+
+The subject of the *action_schema* is the description of actions,
+the reasons for these actions, and the status of these actions.
+...
+
+image::action_schemaexpg2.xml[]
+
+*)
+----
+
+The second part are "`import`" statements that include
+external Annotated EXPRESS files:
+
+[source]
+----
+...
+  (* reference_from.basic_attribute_schema *)
+
+  (* reference_from.support_resource_schema *)
+
+  (* type.as_description_attribute_select *)
+...
+----
+
+For example, `(* reference_from.basic_attribute_schema *)` refers to
+the file `reference_from.basic_attribute_schema.exp`.
+
+When all the files are concatenated in the `action_schema.exp`,
+the result will be the original `action_schema.exp`.
+
+
+== EXPRESS declaration files
+
+Each EXPRESS declaration file consists of the EXPRESS declaration of the
+`ENTITY`, `TYPE`, `RULE`, `FUNCTION`, etc.,
+with the annotation portions wrapped in the annotated remark syntax.
+
+In the following example, the ENTITY declaration is being annotated with
+this block of rich text.
+
+[source]
+----
+ENTITY action;
+  name : label;
+...
+END_ENTITY;
+
+(*"action"
+
+An *action* is the identification of the occurrence of an activity and a description of its result.
+
+An action has a definition that is specified by an
+express_ref:[action_schema.action_method].
+
+NOTE: In particular application domains, terms such as task, process, activity, operation, and event may be synonyms for *action*.
+
+[example]
+====
+Change, distilling, design, a process to drill a hole, and a task such as training someone are examples of actions.
+====
+
+*)
+----
+
+Additional annotation remarks can be expressed for attributes and
+local rules, see the EXPRESS LRM for specifics.
+
+[source]
+----
+(*"action.name"
+the express_ref:[support_resource_schema.label]
+by which the *action* is known.
+*)
+----
+
+[source]
+----
+(*"action_directive_relationship.wr:WR1"
+A *action_directive_relationship* shall not participate in its own definition.
+*)
+----
+
+
+== express_ref
+
+The `express_ref:[schema.name]` syntax is used inside annotated remarks to refer
+to a link to the EXPRESS declaration of `schema.name`.
+
