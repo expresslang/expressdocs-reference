@@ -1,0 +1,52 @@
+ENTITY versioned_action_request;
+  id : identifier;
+  version : OPTIONAL label;
+  purpose : text;
+  description : OPTIONAL text;
+END_ENTITY;
+
+
+(*"versioned_action_request"
+A *versioned_action_request* is a specification of a desired result.
+
+NOTE: The desired result being identified and described may be obtained through one of more
+express_ref:[action_schema.action_method]s.
+
+*)
+
+
+(*"versioned_action_request.id"
+
+the
+express_ref:[support_resource_schema.identifier]
+that distinguishes the *versioned_action_request*.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+
+NOTE: The context in which id is used as a discriminating characteristic can be identified in an annotated
+Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between
+partners sharing this information.
+
+*)
+
+
+(*"versioned_action_request.version"
+the identification of the version of the *versioned_action_request*.
+The value of the attribute need not be specified.
+*)
+
+
+(*"versioned_action_request.purpose"
+an informal description of the reason for the *versioned_action_request*.
+*)
+
+
+(*"versioned_action_request.description"
+the
+express_ref:[support_resource_schema.text]
+that characterizes the *versioned_action_request*.
+The value of the attribute need not be specified.
+*)

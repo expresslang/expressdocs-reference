@@ -1,0 +1,3 @@
+TYPE as_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
+  action);
+END_TYPE;

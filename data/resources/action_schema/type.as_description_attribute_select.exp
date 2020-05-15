@@ -1,0 +1,3 @@
+TYPE as_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
+  action_request_solution);
+END_TYPE;

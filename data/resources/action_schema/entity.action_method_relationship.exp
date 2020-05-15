@@ -1,0 +1,67 @@
+ENTITY action_method_relationship;
+  name : label;
+  description : OPTIONAL text;
+  relating_method : action_method;
+  related_method : action_method;
+END_ENTITY;
+
+
+(*"action_method_relationship"
+An *action_method_relationship* is a relationship between two instances of the entity data type
+express_ref:[action_schema.action_method]
+and provides an identification and description of this relationship.
+
+NOTE: The role of *action_method_relationship* can be defined in the annotated EXPRESS schemas that use or
+specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+
+
+NOTE: This entity, together with the
+express_ref:[action_schema.action_method]
+entity, is based on the relationship template that is described in annex E.3.
+
+
+NOTE: This entity may be used to define a procedural relationship among constituent activities.
+
+*)
+
+
+(*"action_method_relationship.name"
+the
+express_ref:[support_resource_schema.label]
+by which the *action_method_relationship* is known.
+*)
+
+
+(*"action_method_relationship.description"
+the
+express_ref:[support_resource_schema.text]
+that characterizes the *action_method_relationship*.
+The value of the attribute need not be specified.
+*)
+
+
+(*"action_method_relationship.relating_method"
+
+one of the instances of
+express_ref:[action_schema.action_method]
+that is a part of the relationship.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+*)
+
+
+(*"action_method_relationship.related_method"
+
+the other instance of
+express_ref:[action_schema.action_method]
+that is a part of the relationship.
+If one element of the relationship is dependent upon the other this attribute shall be the dependent one.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+*)

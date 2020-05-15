@@ -1,0 +1,33 @@
+ENTITY directed_action
+  SUBTYPE OF (executed_action);
+  directive : action_directive;
+END_ENTITY;
+
+
+(*"directed_action"
+A *directed_action* is a type of
+express_ref:[action_schema.executed_action]
+that is governed by an
+express_ref:[action_schema.action_directive].
+
+[example]
+====
+A *directed_action* could be the inspection of a building as directed by city officials according to the
+city building codes for earthquake safety.
+The action is the inspection of the building.
+The directive is issued by city officials guided by the city building codes.
+In an application protocol, the building authority may be associated with an
+express_ref:[management_resources_schema.organization_assignment].
+The building codes may be associated with a
+express_ref:[management_resources_schema.document_reference].
+====
+
+*)
+
+
+(*"directed_action.directive"
+the
+express_ref:[action_schema.action_directive]
+that governs the *directed_action*.
+*)
+

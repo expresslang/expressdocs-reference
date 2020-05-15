@@ -1,0 +1,5 @@
+REFERENCE FROM support_resource_schema ( -- ISO 10303-41
+  bag_to_set,
+  identifier,
+  label,
+  text);

@@ -1,0 +1,73 @@
+ENTITY versioned_action_request_relationship;
+  id : identifier;
+  name : label;
+  description : OPTIONAL text;
+  relating_versioned_action_request : versioned_action_request;
+  related_versioned_action_request : versioned_action_request;
+END_ENTITY;
+
+
+
+(*"versioned_action_request_relationship"
+A *versioned_action_request_relationship* is a relationship between two
+express_ref:[action_schema.versioned_action_request]
+objects.
+
+[example]
+Two express_ref:[action_schema.versioned_action_request] objects may  be related if
+they address similar problems.
+
+[example]
+A express_ref:[action_schema.versioned_action_request] may be a version of a work request.
+It might be related to a different version of the work request using a *versioned_action_request_relationship*.
+
+*)
+
+
+(*"versioned_action_request_relationship.id"
+the
+express_ref:[support_resource_schema.identifier]
+that distinguishes the *versioned_action_request_relationship*.
+*)
+
+
+(*"versioned_action_request_relationship.name"
+the
+express_ref:[support_resource_schema.label]
+by which the *versioned_action_request_relationship* is known.
+*)
+
+
+(*"versioned_action_request_relationship.description"
+the
+express_ref:[support_resource_schema.text]
+that characterizes the *versioned_action_request_relationship*.
+The value of this attribute need not be specified.
+*)
+
+
+(*"versioned_action_request_relationship.relating_versioned_action_request"
+
+one of the instances of
+express_ref:[action_schema.versioned_action_request]
+that is a part of the relationship.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+*)
+
+
+(*"versioned_action_request_relationship.related_versioned_action_request"
+
+the other instance of
+express_ref:[action_schema.versioned_action_request]
+that is a part of the relationship.
+If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+*)

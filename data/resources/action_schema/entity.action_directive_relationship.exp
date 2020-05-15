@@ -1,0 +1,51 @@
+ENTITY action_directive_relationship;
+	name			: label;
+	description 	: OPTIONAL STRING;
+	relating 		: action_directive;
+	related 		: action_directive;
+	relation_type 	: STRING;
+ WHERE
+	WR1 : acyclic_action_directive_relationship(SELF, [related], 'ACTION_SCHEMA.ACTION_DIRECTIVE_RELATIONSHIP');
+END_ENTITY;
+
+
+(*"action_directive_relationship"
+An *action_directive_relationship* is a relationship between two
+express_ref:[action_schema.action_directive]
+objects.
+*)
+
+
+(*"action_directive_relationship.name"
+shall be unique within a population of *action_directive_relationship*.
+*)
+
+
+(*"action_directive_relationship.description"
+the text or the set of texts that provide further information about the *action_directive_relationship*.
+The value of this attribute need not be specified.
+*)
+
+
+(*"action_directive_relationship.related"
+the other object of
+express_ref:[action_schema.action_directive]
+that is part of the relationship.
+*)
+
+
+(*"action_directive_relationship.relating"
+one object of
+express_ref:[action_schema.action_directive]
+that is part of the relationship.
+*)
+
+
+(*"action_directive_relationship.relation_type"
+the meaning of the relationship.
+*)
+
+
+(*"action_directive_relationship.wr:WR1"
+A *action_directive_relationship* shall not participate in its own definition.
+*)

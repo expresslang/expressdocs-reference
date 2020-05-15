@@ -1,0 +1,51 @@
+FUNCTION acyclic_action_directive_relationship (relation : action_directive_relationship; relatives : SET [1:?] of action_directive; specific_relation : STRING):BOOLEAN;
+	LOCAL
+		x : SET of action_directive_relationship;
+	END_LOCAL;
+	IF relation.relating IN relatives THEN
+		RETURN (FALSE);
+	END_IF;
+	x := QUERY(adr <* bag_to_set(USEDIN(relation.relating, 'ACTION_SCHEMA.' + 'ACTION_DIRECTIVE_RELATIONSHIP.' + 'RELATED')) | specific_relation IN TYPEOF(adr));
+	REPEAT i := 1 TO HIINDEX(x);
+		IF NOT acyclic_action_directive_relationship(x[i], relatives + relation.relating, specific_relation) THEN
+	 		RETURN (FALSE);
+		END_IF;
+	END_REPEAT;
+	RETURN (TRUE);
+END_FUNCTION;
+
+
+(*"acyclic_action_directive_relationship"
+The *acyclic_action_directive_relationship* function determines whether the graph of instance of the entity data type
+express_ref:[action_schema.action_directive]
+that contains relation as one of its links contains a cycle.
+this function may be used to evaluate either a
+express_ref:[action_schema.action_directive_relationship]
+or any of its subtypes.
+
+The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
+
+
+NOTE: The algorithm of the function is explained in annex E.2.
+
+*)
+
+(*"acyclic_action_directive_relationship.relation"
+(input) the candidate
+express_ref:[action_schema.action_directive_relationship]
+to be checked.
+*)
+
+(*"acyclic_action_directive_relationship.relatives"
+(input) the set of instances of the entity data type
+express_ref:[action_schema.action_directive]
+for which the function is searching in the
+express_ref:[action_schema.action_directive_relationship.relating]
+parameter of the relation argument.
+*)
+
+(*"acyclic_action_directive_relationship.specific_relation"
+(input) the fully qualified name of a subtype of the
+express_ref:[action_schema.action_directive_relationship]
+entity.
+*)

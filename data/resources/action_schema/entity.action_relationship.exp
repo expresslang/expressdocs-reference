@@ -1,0 +1,59 @@
+ENTITY action_relationship;
+  name : label;
+  description : OPTIONAL text;
+  relating_action : action;
+  related_action : action;
+END_ENTITY;
+
+
+(*"action_relationship"
+An *action_relationship* is a relationship between two instances of the entity data type
+express_ref:[action_schema.action]
+and provides an identification and description of this relationship.
+
+NOTE: The role of *action_relationship* can be defined in the annotated EXPRESS schemas that use or
+specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+
+*)
+
+
+(*"action_relationship.name"
+the
+express_ref:[support_resource_schema.label]
+by which the *action_relationship* is known.
+*)
+
+
+(*"action_relationship.description"
+the
+express_ref:[support_resource_schema.text]
+that characterizes the *action_relationship*.
+The value of the attribute need not be specified.
+*)
+
+
+(*"action_relationship.relating_action"
+
+one of the instances of
+express_ref:[action_schema.action]
+that is a part of the relationship.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+*)
+
+
+(*"action_relationship.related_action"
+
+the other instance of
+express_ref:[action_schema.action]
+that is a part of the relationship.
+If one element of the relationship is dependent upon the other this attribute shall be the dependent one.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+*)

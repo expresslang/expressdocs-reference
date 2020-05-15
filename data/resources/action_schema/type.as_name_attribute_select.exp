@@ -1,0 +1,3 @@
+TYPE as_name_attribute_select = SELECT BASED_ON name_attribute_select WITH (
+  action_request_solution);
+END_TYPE;

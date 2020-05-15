@@ -1,0 +1,79 @@
+ENTITY action;
+  name : label;
+  description : OPTIONAL text;
+  chosen_method : action_method;
+DERIVE
+  id : identifier := get_id_value(SELF);
+WHERE
+  WR1: SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.IDENTIFIED_ITEM')) <= 1;
+END_ENTITY;
+
+(*"action"
+
+An *action* is the identification of the occurrence of an activity and a description of its result.
+
+An *action* identifies an activity that has taken place, is taking place, or is expected to take place in the future.
+
+An action has a definition that is specified by an
+express_ref:[action_schema.action_method].
+
+NOTE: In particular application domains, terms such as task, process, activity, operation, and event may be synonyms for *action*.
+
+[example]
+====
+Change, distilling, design, a process to drill a hole, and a task such as training someone are examples of actions.
+====
+
+*)
+
+(*"action.name"
+the express_ref:[support_resource_schema.label] 
+by which the *action* is known.
+*)
+
+(*"action.description"
+the express_ref:[support_resource_schema.text] 
+that characterizes the *action*. 
+The value of the attribute need not be specified.
+*)
+
+(*"action.chosen_method"
+the express_ref:[action_schema.action_method] 
+that specifies the procedure selected to carry out the *action* and a description of the results of that *action*.
+*)
+
+(*"action.id"
+the express_ref:[support_resource_schema.identifier] 
+that distinguishes the *action*.
+
+NOTE: This attribute is an enhancement to the definition of *action* using a method that is upwardly compatible
+with ISO 10303-41:1994.
+
+
+NOTE: The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+this entity, or in an agreement of common understanding between the partners sharing this information.
+
+
+NOTE: The context in which id is used as a discriminating characteristic can be identified in an annotated
+Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between
+partners sharing this information.
+
+*)
+
+(*"action.wr:WR1"
+
+Each *action* shall be the 
+express_ref:[basic_attribute_schema.id_attribute.identified_item]
+in at most one 
+express_ref:[basic_attribute_schema.id_attribute].
+
+NOTE: The express_ref:[basic_attribute_schema.id_attribute] 
+data type is defined in 
+express_ref:[basic_attribute_schema] 
+of this part of ISO 10303.
+
+NOTE: A template for constraining the population of the entity data types defined in the
+express_ref:[basic_attribute_schema] 
+is described in annex E.
+
+*)

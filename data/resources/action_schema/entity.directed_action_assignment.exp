@@ -1,0 +1,36 @@
+ENTITY directed_action_assignment
+	ABSTRACT SUPERTYPE ;
+	assigned_directed_action : directed_action;
+  DERIVE
+	role : object_role := get_role(SELF);
+  WHERE
+	WR1: SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ROLE_ASSOCIATION.ITEM_WITH_ROLE')) <= 1;
+END_ENTITY;
+
+
+(*"directed_action_assignment"
+A *directed_action_assignment*
+is an association of a
+express_ref:[action_schema.directed_action]
+with product data.
+*)
+
+
+(*"directed_action_assignment.assigned_directed_action"
+the instance of the  *directed_action* entity data that is to be associated with product data.
+*)
+
+
+(*"directed_action_assignment.role"
+the *object_role* that specifies the purpose of the association of the *directed_action_assignment* with product data.
+*)
+
+(*"directed_action_assignment.wr:WR1"
+
+Each *directed_action_assignment* shall be
+*item_with_role*
+in at most one
+express_ref:[basic_attribute_schema.role_association].
+
+*)
+
