@@ -15,7 +15,7 @@ WARNING: This is just a prototype. Actual long-term concrete syntax will be dete
 
 === Prototype workflow
 Here is an example
-image :: figure_01.png[Sample workflow]
+image::figure_01.png[Sample workflow]
 
 ====Informal Propositions
 The proposal includes support for IPs.
