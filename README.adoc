@@ -13,6 +13,10 @@ The Annotated EXPRESS file is based on the usage of the `(* ... *)` remark synta
 
 WARNING: This is just a prototype. Actual long-term concrete syntax will be determined upon further discussion.
 
+=== Prototype workflow
+Here is an example
+image :: figure_01.png[Sample workflow]
+
 ====Informal Propositions
 The proposal includes support for IPs.
 
