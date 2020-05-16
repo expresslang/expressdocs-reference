@@ -1,6 +1,13 @@
 = Annotated EXPRESS
+== Design intent
+=== Single source data
+The annotated EXPRESS will be the single lexical source for both the EXPRESS and the associated descriptions.
+A processor will generate the relevant xml files (e.g., the arm.xml and arm_descriptions.xml) from this source data.
 
-Initial prototype of Annotated EXPRESS such that each file is appropriately sized for editing.
+=== Appropriately sized files
+When descriptions are combined with the EXPRESS, the files can become large. This prototype introduces
+a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
+Each file is named with the EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
 
 The Annotated EXPRESS file is based on the usage of the `(* ... *)` remark syntax with `remark tag` (7.1.6.3 of ISO 10303-11) for annotations.
 
