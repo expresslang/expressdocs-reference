@@ -13,6 +13,8 @@ The Annotated EXPRESS file is based on the usage of the `(* ... *)` remark synta
 
 WARNING: This is just a prototype. Actual long-term concrete syntax will be determined upon further discussion.
 
+====Informal Propositions
+The proposal includes support for IPs.
 
 == EXPRESS root file
 

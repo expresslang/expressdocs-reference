@@ -77,3 +77,10 @@ express_ref:[basic_attribute_schema]
 is described in annex E.
 
 *)
+(*"action.ip:IP1"
+
+This is a dummy ip inserted for prototyping.
+
+note that the e.g., arm.xml uses a special encoding of a WR name to indicate an IP.
+We propose to define a type for consistency.*)
+
