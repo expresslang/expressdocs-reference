@@ -7,9 +7,9 @@ The superset syntax is based on the usage of the `(* ... *)` remark syntax with 
 A processor will generate the relevant xml files (e.g., the arm.xml and arm_descriptions.xml) from this source data.
 A processor will cumulate individual EXPRESS files into the SCHEMA file.
 
-=== Appropriately sized files
+=== Motivation for individual files
 When descriptions are combined with the EXPRESS, the files can become large. This prototype introduces
-a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
+a modified structure for the EXPRESS source such that each file is appropriately sized for editing, and such that each file name explicitly identifies its content model.
 Each file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
 The content of each file is the content for that declaration with annotation.
 
