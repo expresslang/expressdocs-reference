@@ -10,9 +10,8 @@ A processor will cumulate individual EXPRESS files into the SCHEMA file.
 === Appropriately sized files
 When descriptions are combined with the EXPRESS, the files can become large. This prototype introduces
 a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
-Each file is named with the EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
-
-
+Each file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
+The content of each file is the content for that declaration with annotation.
 === Informal Propositions
 The proposal includes support for IPs.
 
@@ -20,8 +19,7 @@ The proposal includes support for IPs.
 The `express_ref:[schema.name]` syntax is used inside annotated remarks to refer to a link to the EXPRESS declaration of `schema.name`.  
 The `express_ref:[schema.name]` syntax may be used outside of a SCHEMA as well.
 
-WARNING: This is just a prototype. Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from
-prototype implementation.
+WARNING: This is just a prototype from the developer view point. Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation. The organization structure is chosen for clarity rather than compactness. It is understood that a USE FROM may contain only one line. `Interface` is not included in the initial prototype because it is not an EXPRESS keyword, and thus not in the actual EXPRESS files. It will be considered if the code prototype uses the <schema>.xml as the actual source.
 
 === Prototype workflow
 Here is an example
