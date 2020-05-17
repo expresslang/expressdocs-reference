@@ -12,6 +12,7 @@ When descriptions are combined with the EXPRESS, the files can become large. Thi
 a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
 Each file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
 The content of each file is the content for that declaration with annotation.
+
 === Informal Propositions
 The proposal includes support for IPs.
 
@@ -19,7 +20,7 @@ The proposal includes support for IPs.
 The `express_ref:[schema.name]` syntax is used inside annotated remarks to refer to a link to the EXPRESS declaration of `schema.name`.  
 The `express_ref:[schema.name]` syntax may be used outside of a SCHEMA as well.
 
-WARNING: This is just a prototype from the developer view point. Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation. The organization structure is chosen for clarity rather than compactness. It is understood that a USE FROM may contain only one line. `Interface` is not included in the initial prototype because it is not an EXPRESS keyword, and thus not in the actual EXPRESS files. It will be considered if the code prototype uses the <schema>.xml as the actual source.
+WARNING: This is just a prototype from the developer view point. Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation. The organization structure is chosen for clarity rather than compactness. It is understood that a USE FROM may contain only one line. `Interface` is not included in the initial prototype because it is not an EXPRESS keyword, and thus not in the actual EXPRESS files. It will be considered if the code prototype uses the <schema>.xml as the actual source for generating the individual EXPRESS files. Also to be considered is whether the ensuing clutter of the <schema_name> directory warrants putting the individual EXPRESS files in a subdirectory.
 
 === Prototype workflow
 Here is an example
@@ -37,7 +38,7 @@ under its corresponding `<schema>` tag.
 The text in this section is written in the Metanorma format.
 The `express_ref:[schema.name]` syntax may be used in this section.
 
-[example] Following is an example of the first section.
+Following is an example of the first section.
 [source]
 ----
 (*"action_schema"
@@ -57,7 +58,8 @@ image::action_schemaexpg2.xml[]
 ----
 
 The second section are "`import`" statements that include external Annotated EXPRESS files.
-[example] Following is an example of the second section.
+The ordering of the statements dictate the order in the resulting cumulative file.
+Following is an example of the second section.
 
 [source]
 ----
@@ -73,7 +75,6 @@ The second section are "`import`" statements that include external Annotated EXP
 For example, `(* reference_from.basic_attribute_schema *)` refers to the file `reference_from.basic_attribute_schema.exp`.
 
 When all the files are concatenated in the `action_schema.exp`, the result will be the original `action_schema.exp`.
-The order of the files in the cumulative schema reflects the ordering in the "`root`" schema file.
 
 == EXPRESS declaration files
 
@@ -82,7 +83,7 @@ Each EXPRESS declaration file consists of the EXPRESS declaration of the content
 declarations to be combined into the cumulative schema.
 The annotation portions are wrapped in the annotated remark tag syntax.
 
-[example] In the following example, the ENTITY declaration is being annotated with this block of rich text.
+In the following example, the ENTITY declaration is being annotated with this block of rich text.
 
 [source]
 ----
@@ -109,7 +110,7 @@ Change, distilling, design, a process to drill a hole, and a task such as traini
 ----
 
 Additional annotation remarks can be expressed for attributes and
-local rules, see the EXPRESS LRM for specifics.
+local rules, see the EXPRESS LRM for specifics. As noted above, although not illustrated herein, an extension to support IPs is required.
 
 [source]
 ----
