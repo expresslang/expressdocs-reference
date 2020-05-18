@@ -1,42 +1,78 @@
 = Annotated EXPRESS
-== Design intent
+
+== Design Requirements
+Significantly reduce barrier to new developers working in EXPRESS lexical form in STEPmod.
+Retain current publication workflow based on XML.
+Retain current EXPRESS development workflow based on EXPRESS tooling.
+
+== System Characteristics
+* Single source data.
+* Smaller amounts of text per file.
+* Easy to use EXPRESS cross-references.
+* Support for IPs.
+* Git hosted.
+* Injection into workflow
+
 === Single source data
-The annotated EXPRESS will be the single lexical source for both the EXPRESS and the associated descriptions.
+The annotated EXPRESS asciiDoc file (e.g., entity.action.adoc) will be the single lexical source for both the EXPRESS and the associated descriptions.
 The annotated EXPRESS syntax is a superset of Metanorma format.
 The superset syntax is based on the usage of the `(* ... *)` remark syntax with `remark tag` (7.1.6.3 of ISO 10303-11) for additional annotations.
+A processor will accumulate individual EXPRESS asciiDoc files into the SCHEMA (e.g., action_schema.exp) file.
 A processor will generate the relevant xml files (e.g., the arm.xml and arm_descriptions.xml) from this source data.
-A processor will cumulate individual EXPRESS files into the SCHEMA file.
 
-=== Motivation for individual files
-When descriptions are combined with the EXPRESS, the files can become large. This prototype introduces
-a modified structure for the EXPRESS source such that each file is appropriately sized for editing, and such that each file name explicitly identifies its content model.
-Each file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
-The content of each file is the content for that declaration with annotation.
+===  Smaller amounts of text per file.
+This prototype introduces a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
+Each annotated EXPRESS file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
 
 === Informal Propositions
-The proposal includes support for IPs.
+The proposal includes support for IPs natively included in the asciiDoc file.
 
-=== express_ref
-The `express_ref:[schema.name]` syntax is used inside annotated remarks to refer to a link to the EXPRESS declaration of `schema.name`.  
-The `express_ref:[schema.name]` syntax may be used outside of a SCHEMA as well.
+=== Easy to use EXPRESS cross-references.
+The `express_ref:[schema.name]` syntax is used to refer to a link to the EXPRESS declaration of `schema.name`.  
+The cross references make use of pre-compiled xml indices for speed as needed.
 
-WARNING: This is just a prototype from the developer view point. Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation. The organization structure is chosen for clarity rather than compactness. It is understood that a USE FROM may contain only one line. `Interface` is not included in the initial prototype because it is not an EXPRESS keyword, and thus not in the actual EXPRESS files. It will be considered if the code prototype uses the <schema>.xml as the actual source for generating the individual EXPRESS files. Also to be considered is whether the ensuing clutter of the <schema_name> directory warrants putting the individual EXPRESS files in a subdirectory.
+NOTE: Exact syntax Needs more work...
+
+=== Git hosting
+Yes
+
+=== Injection into workflow
+This tooling operates on the very front-end of the development toolchain so no impact on publication environment is envisioned from this
+addition.
+Use of EXPRESS-G authoring tools based on the cumulative EXPRESS schema file will continue.
+
+== Prototype
+The prototype was created by hand converting an action_schema descriptions.xml file to METANORMA asciiDoc.
+Each EXPRESS declaration was partitioned into an individual asciiDoc file.
+One for the SCHEMA.
+One for each of the other declarations.
+
+WARNING: This is a prototype from the developer view point. 
+Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation. 
+The organization structure is chosen for clarity rather than compactness. 
+
+NOTE: Clutter avoidance in the <schema_name> directory warrants putting the individual EXPRESS files in a subdirectory. 
+We may or may not get to this in the prototype.
+
+NOTE: Because the snippet files are not valid EXPRESS, we will use the .adoc file name extension.
 
 === Prototype workflow
-Here is an example
+Here is an example. METANORMA is embedded in the syntax checker, and in the automaton, or it might be embedded in the Text editor. It is up to the developer how they prefer to use the technology. There are lots of tools that render the various output forms METANORMA generates. The example is naive but not the focus of the prototype.
+
+WARNING: Clearly the sequence diagram needs re-write, as soon as I find the source file.
+
 image::figure_01.png[Sample workflow]
 
-== EXPRESS root file
-=== Structure description 
-The "`root`" is the `action_schema.exp` file.
+The "`root`" is the `action_schema.adoc` file.
+When the root has been processed, the result will be an annotated `action_schema.exp`.
 
+=== Prototype root file description 
 There are two sections to the "`root`" schema file.
 
 The first section describes metadata and information of the `action_schema` SCHEMA
 extracted from Part 41 (`resource_docs/fundamentals_of_product_description_and_support/resource.xml`)
 under its corresponding `<schema>` tag.
 The text in this section is written in the Metanorma format.
-The `express_ref:[schema.name]` syntax may be used in this section.
 
 Following is an example of the first section.
 [source]
@@ -48,33 +84,31 @@ Following is an example of the first section.
 @number.supersedes = '8369'
 
 == General
-
 The subject of the *action_schema* is the description of actions, the reasons for these actions, and the status of these actions.
 ...
 
 image::action_schemaexpg2.xml[]
 
 *)
+SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
 ----
 
-The second section are "`import`" statements that include external Annotated EXPRESS files.
+The second section consist of "`import`" statements that include external Annotated EXPRESS files.
+For example, `(* reference_from.basic_attribute_schema *)` refers to the file `reference_from.basic_attribute_schema.exp`.
 The ordering of the statements dictate the order in the resulting cumulative file.
 Following is an example of the second section.
 
 [source]
 ----
 ...
-  (* reference_from.basic_attribute_schema *)
+  include::reference_from.basic_attribute_schema
 
-  (* reference_from.support_resource_schema *)
+  include::reference_from.support_resource_schema
 
-  (* type.as_description_attribute_select *)
+  include::type.as_description_attribute_select
+END_SCHEMA;
 ...
 ----
-
-For example, `(* reference_from.basic_attribute_schema *)` refers to the file `reference_from.basic_attribute_schema.exp`.
-
-When all the files are concatenated in the `action_schema.exp`, the result will be the original `action_schema.exp`.
 
 == EXPRESS declaration files
 
@@ -83,7 +117,8 @@ Each EXPRESS declaration file consists of the EXPRESS declaration of the content
 declarations to be combined into the cumulative schema.
 The annotation portions are wrapped in the annotated remark tag syntax.
 
-In the following example, the ENTITY declaration is being annotated with this block of rich text.
+In the following example, the ENTITY `action` declaration is being annotated with this block of rich text.
+The `action` declaration is contained in the entity.action.adoc file.
 
 [source]
 ----
@@ -113,6 +148,7 @@ Additional annotation remarks can be expressed for attributes and
 local rules, see the EXPRESS LRM for specifics. As noted above, although not illustrated herein, an extension to support IPs is required.
 
 [source]
+
 ----
 (*"action.name"
 the express_ref:[support_resource_schema.label]
