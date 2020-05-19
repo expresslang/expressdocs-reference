@@ -59,8 +59,6 @@ NOTE: Because the snippet files are not valid EXPRESS, we will use the .adoc fil
 === Prototype workflow
 Here is an example. METANORMA is embedded in the syntax checker, and in the automaton, or it might be embedded in the Text editor. It is up to the developer how they prefer to use the technology. There are lots of tools that render the various output forms METANORMA generates. The example is naive but not the focus of the prototype.
 
-WARNING: Clearly the sequence diagram needs re-write, as soon as I find the source file.
-
 image::figure_01.png[Sample workflow]
 
 The "`root`" is the `action_schema.adoc` file.
@@ -110,7 +108,7 @@ END_SCHEMA;
 ...
 ----
 
-== EXPRESS declaration files
+=== Prototype EXPRESS declaration files
 
 Each EXPRESS declaration file consists of the EXPRESS declaration of the content of one of the
  `REFERENCE_FROM`, `USE_FROM`, `CONSTANT`, `TYPE`, `ENTITY`, `RULE`, `FUNCTION`, `SUBTYPE_CONSTRAINT`, and `PROCEDURE`
