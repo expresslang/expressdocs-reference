@@ -6,6 +6,7 @@ Retain current publication workflow based on XML.
 Retain current EXPRESS development workflow based on EXPRESS tooling.
 
 == System Characteristics
+=== General
 * Single source data.
 * Smaller amounts of text per file.
 * Easy to use EXPRESS cross-references.
@@ -15,14 +16,27 @@ Retain current EXPRESS development workflow based on EXPRESS tooling.
 
 === Single source data
 The annotated EXPRESS asciiDoc file (e.g., entity.action.adoc) will be the single lexical source for both the EXPRESS and the associated descriptions.
+This file is managed in the Git repo.
 The annotated EXPRESS syntax is a superset of Metanorma format.
 The superset syntax is based on the usage of the `(* ... *)` remark syntax with `remark tag` (7.1.6.3 of ISO 10303-11) for additional annotations.
-A processor will accumulate individual EXPRESS asciiDoc files into the SCHEMA (e.g., action_schema.exp) file.
+A processor will accumulate individual EXPRESS asciiDoc files into the SCHEMA (e.g., action_schema.exp) .exp file.
+The SCHEMA .exp file is a valid EXPRESS file.
 A processor will generate the relevant xml files (e.g., the arm.xml and arm_descriptions.xml) from this source data.
+A further processor will generate the published target HTML files.
+A further processor will remove the annotation from the .exp files for public access.
 
 ===  Smaller amounts of text per file.
 This prototype introduces a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
 Each annotated EXPRESS file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
+
+==== Root file
+The `root file` contains the SCHEMA level contents plus includes for the leaf files. There are no intermediate nodes in the tree.
+The `root` file will contain an attribute declaring the file encoding to be metanorma.
+
+NOTE: It is tbd whether the source encoding is needed in further processing. If so, a `remark tag` in the EXPRESS file will be added by metanorma.
+
+==== Leaf file
+Each `leaf file` contains annotated EXPRESS for one EXPRESS declaration in the schema.
 
 === Informal Propositions
 The proposal includes support for IPs natively included in the asciiDoc file.
@@ -33,6 +47,10 @@ The cross references make use of pre-compiled xml indices for speed as needed.
 
 NOTE: Exact syntax Needs more work...
 
+NOTE: Which tool converts the short-hand link to that in descriptions.xml is undetermined at this time but is part of the prototype.
+
+NOTE: Because metanorma is a command line tool and not a text editor, an external application is needed to provide look up for the user to populate the short-hand cross-refs.
+
 === Git hosting
 Yes
 
@@ -42,22 +60,32 @@ addition.
 Use of EXPRESS-G authoring tools based on the cumulative EXPRESS schema file will continue.
 
 == Prototype
+=== General
 The prototype was created by hand converting an action_schema descriptions.xml file to METANORMA asciiDoc.
 Each EXPRESS declaration was partitioned into an individual asciiDoc file.
 One for the SCHEMA.
 One for each of the other declarations.
+The directory organizational structure is chosen specificatlly to mirror the types of EXPRESS declarations to make the file names self-reading. 
 
 WARNING: This is a prototype from the developer view point. 
 Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation. 
-The organization structure is chosen for clarity rather than compactness. 
 
 NOTE: Clutter avoidance in the <schema_name> directory warrants putting the individual EXPRESS files in a subdirectory. 
 We may or may not get to this in the prototype.
 
 NOTE: Because the snippet files are not valid EXPRESS, we will use the .adoc file name extension.
 
-=== Prototype workflow
-Here is an example. METANORMA is embedded in the syntax checker, and in the automaton, or it might be embedded in the Text editor. It is up to the developer how they prefer to use the technology. There are lots of tools that render the various output forms METANORMA generates. The example is naive but not the focus of the prototype.
+=== Conceptual prototype workflow viewing
+In this example a developer generates viewable results of an edit.
+
+image::source_asciiDoc_view.png[Sample formatted viewing]
+
+=== Prototype workflow checking EXPRESS 
+In this example a developer generates a local .exp file for further processing by Express Engine.
+
+image::Build_local_annotated_.exp_file.png[Creating an annotated .exp file]
+
+This figure shows lots of options for processing. METANORMA is embedded in the syntax checker, and in the automaton, or it might be embedded in the Text editor. It is up to the developer how they prefer to use the technology. There are lots of tools that render the various output forms METANORMA generates. The example is naive but not the focus of the prototype.
 
 image::figure_01.png[Sample workflow]
 
@@ -80,7 +108,7 @@ Following is an example of the first section.
 @version = '8'
 @number = '10230'
 @number.supersedes = '8369'
-
+@remark.tag.encoding = 'metanorma'
 == General
 The subject of the *action_schema* is the description of actions, the reasons for these actions, and the status of these actions.
 ...
@@ -161,3 +189,5 @@ A *action_directive_relationship* shall not participate in its own definition.
 *)
 ----
 
+NOTE: running metanorma on command line for the asciiDoc README.adoc file itself
+metanorma --type iso -x html README.adoc

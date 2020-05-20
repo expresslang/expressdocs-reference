@@ -1,0 +1,96 @@
+(*
+$Id: action_schema.exp,v 1.31 2019/03/29 20:48:36 tom Exp $
+ISO 10303 TC184/SC4/WG12 N10230
+*)
+
+SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
+
+(*"action_schema"
+
+@version = '8'
+@number = '10230'
+@number.supersedes = '8369'
+@remark.tag.encoding = 'metanorma'
+
+== General
+
+The subject of the *action_schema* is the description of actions,
+the reasons for these actions, and the status of these actions.
+
+EXAMPLE: Reasons for action include evolving user requirements,
+manufacturing problems and difficulties that arise when a product
+is in use.
+
+== Fundamental concepts and assumptions
+
+Action information can be attached to any aspect of product data.
+
+== EXPRESS-G diagram of the action_schema
+
+image::action_schemaexpg1.xml[]
+
+image::action_schemaexpg2.xml[]
+
+*)
+
+ include::reference_from.basic_attribute_schema.adoc
+
+ include::reference_from.support_resource_schema.adoc
+
+ include::type.as_description_attribute_select.adoc
+
+ include::type.as_id_attribute_select.adoc
+
+ include::type.as_name_attribute_select.adoc
+
+ include::type.as_role_select.adoc
+
+ include::type.supported_item.adoc
+
+ include::entity.action.adoc
+
+ include::entity.action_directive.adoc
+
+ include::entity.action_method.adoc
+
+ include::entity.action_method_relationship.adoc
+
+ include::entity.action_relationship.adoc
+
+ include::entity.action_request_solution.adoc
+
+ include::entity.action_request_status.adoc
+
+ include::entity.action_resource.adoc
+
+ include::entity.action_resource_relationship.adoc
+
+ include::entity.action_resource_type.adoc
+
+ include::entity.action_status.adoc
+
+ include::entity.directed_action.adoc
+
+ include::entity.directed_action_assignment.adoc
+
+ include::entity.executed_action.adoc
+
+ include::entity.versioned_action_request.adoc
+
+ include::entity.versioned_action_request_relationship.adoc
+
+ include::entity.action_directive_relationship.adoc
+
+ include::function.acyclic_action_method_relationship.adoc
+
+ include::rule.nuts_and_bolts.adoc
+
+ include::function.acyclic_action_relationship.adoc
+
+ include::function.acyclic_action_resource_relationship.adoc
+
+ include::function.acyclic_versioned_action_request_relationship.adoc
+
+ include::function.acyclic_action_directive_relationship.adoc
+
+END_SCHEMA;.adoc
