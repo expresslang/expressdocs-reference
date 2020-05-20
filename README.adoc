@@ -47,10 +47,14 @@ NOTE: The exact encoding protocol for the workflow process is an outcome of the 
 
 ==== Root file for resource document
 The file `stepmod/data/resource_docs/<doc_name>/resource.adoc` will be the `root` .adoc file for the resource document.
+
+EXAMPLE: The `root file` for the part 41 resource document is stepmod/data/resource_docs/fundamentals_of_product_description_and_support.adoc
  
 ==== Root file for resource schema
 The location for the `root file` is: `stepmod/data/resource/<schema_name>/<schema_name>.adoc` 
 The `root file` contains the SCHEMA level contents plus includes for the leaf files. There are no intermediate nodes in the tree.
+
+EXAMPLE: The `root file` for the action_schema is stepmod/data/resources/action_schema.adoc.
 
 ==== Root file for module document
 The file `stepmod/data/modules/<doc_name>/module.adoc` will be the `root` .adoc file for the module document.
