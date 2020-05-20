@@ -29,13 +29,39 @@ A further processor will remove the annotation from the .exp files for public ac
 This prototype introduces a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
 Each annotated EXPRESS file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
 
-==== Root file
+=== Schema graph structure
+The graph structure mirrors the delivered EXPRESS .exp file.
+It is a tree with one root node and one or more leaf nodes.
+There are no intermediate nodes in the tree.
+
+=== Schema file extension
+Because the snippet files are not valid EXPRESS, we will use the .adoc file name extension.
+
+=== Root files
+The `root file` for the document will contain an attribute declaring the document encoding to be metanorma.
+The encoding applies to all schemata associated with the document, in addition to the main body of the document.
+
+The `root file` for schemata contains the SCHEMA level contents plus includes for the leaf files. 
+
+NOTE: The exact encoding protocol for the workflow process is an outcome of the prototype.
+
+==== Root file for resource document
+The file `stepmod/data/resource_docs/<doc_name>/resource.adoc` will be the `root` .adoc file for the resource document.
+ 
+==== Root file for resource schema
+The location for the `root file` is: `stepmod/data/resource/<schema_name>/<schema_name>.adoc` 
 The `root file` contains the SCHEMA level contents plus includes for the leaf files. There are no intermediate nodes in the tree.
-The `root` file will contain an attribute declaring the file encoding to be metanorma.
 
-NOTE: It is tbd whether the source encoding is needed in further processing. If so, a `remark tag` in the EXPRESS file will be added by metanorma.
+==== Root file for module document
+The file `stepmod/data/modules/<doc_name>/module.adoc` will be the `root` .adoc file for the module document.
+ 
+==== Root file for ARM/MIM shortform schema
+The location for the `root file is: `stepmod/data/modules/<doc_name>/<arm|mim>.adoc` 
+The `root file` contains the SCHEMA level contents plus includes for the leaf files. There are no intermediate nodes in the tree.
 
-==== Leaf file
+NOTE: There is no .adoc file for EXPRESS longform schemata.
+
+==== Leaf schema file
 Each `leaf file` contains annotated EXPRESS for one EXPRESS declaration in the schema.
 
 === Informal Propositions
@@ -65,15 +91,13 @@ The prototype was created by hand converting an action_schema descriptions.xml f
 Each EXPRESS declaration was partitioned into an individual asciiDoc file.
 One for the SCHEMA.
 One for each of the other declarations.
-The directory organizational structure is chosen specificatlly to mirror the types of EXPRESS declarations to make the file names self-reading. 
+The fle names reflect the types and names of EXPRESS declarations to make the file names self-reading. 
 
 WARNING: This is a prototype from the developer view point. 
 Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation. 
 
 NOTE: Clutter avoidance in the <schema_name> directory warrants putting the individual EXPRESS files in a subdirectory. 
 We may or may not get to this in the prototype.
-
-NOTE: Because the snippet files are not valid EXPRESS, we will use the .adoc file name extension.
 
 === Conceptual prototype workflow viewing
 In this example a developer generates viewable results of an edit.
@@ -85,6 +109,7 @@ In this example a developer generates a local .exp file for further processing b
 
 image::Build_local_annotated_.exp_file.png[Creating an annotated .exp file]
 
+=== Random workflow
 This figure shows lots of options for processing. METANORMA is embedded in the syntax checker, and in the automaton, or it might be embedded in the Text editor. It is up to the developer how they prefer to use the technology. There are lots of tools that render the various output forms METANORMA generates. The example is naive but not the focus of the prototype.
 
 image::figure_01.png[Sample workflow]
@@ -190,4 +215,4 @@ A *action_directive_relationship* shall not participate in its own definition.
 ----
 
 NOTE: running metanorma on command line for the asciiDoc README.adoc file itself
-metanorma --type iso -x html README.adoc
+metanorma --type generic -x html README.adoc
