@@ -1,3 +1,0 @@
-TYPE as_role_select = SELECT BASED_ON role_select WITH (
-  directed_action_assignment);
-END_TYPE;

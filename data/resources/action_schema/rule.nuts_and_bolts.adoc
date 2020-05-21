@@ -1,2 +1,0 @@
-RULE nuts_and_bolts;
-END_RULE;
