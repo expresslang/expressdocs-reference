@@ -60,125 +60,14 @@ A further processor will generate the published target HTML files.
 A further processor will remove the annotation from the `.exp` files for public access.
 
 
-////
-=== Smaller amounts of text per file
-
-This prototype introduces a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
-Each annotated EXPRESS file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
-
-=== Schema graph structure
-
-The graph structure mirrors the delivered EXPRESS `.exp` file.
-It is a tree with one root node and one or more leaf nodes.
-There are no intermediate nodes in the tree.
-
-=== Schema file extension
-
-Because the snippet files are not valid EXPRESS, we will use the `.adoc` file name extension.
-////
-
-
-=== Document files in Metanorma
-
-The "`root document file`" (e.g. `data/<resource-type>/<doc-name>/document.adoc`) is the entry point of the document.
-
-//will contain an attribute declaring the document encoding to be Metanorma.
-//The encoding applies to all schemata associated with the document, in addition to the main body of the document.
-//The "`root file`" for schemata contains the SCHEMA level contents plus includes for the leaf files.
-
-//NOTE: The exact encoding protocol for the workflow process is an outcome of the prototype.
-
-Resource documents::
-`stepmod/data/<doc-type>/<doc-name>/document.adoc` +
-+
-EXAMPLE: The `root file` for the part 41 resource document is `stepmod/data/resource_docs/fundamentals_of_product_description_and_support/document.adoc`
-
-Resource schema::
-`stepmod/data/resource/<schema-name>/document.adoc`
-+
-EXAMPLE: The `root file` for the action_schema is `stepmod/data/resources/action_schema/document.adoc`.
-
-Module documents::
-`stepmod/data/modules/<doc-name>/document.adoc`
-
-ARM/MIM shortform schema::
-`stepmod/data/modules/<doc-name>/<arm|mim>.adoc`
-
-
-=== Informal Propositions
+==== Informal Propositions
 
 The proposal includes support for IPs natively included in the Annotated EXPRESS file.
 
 
-=== Easy to use EXPRESS cross-references
-
-The `express_ref:[schema.name]` syntax is used to refer to a link to the EXPRESS declaration of `schema.name`.
-The cross references make use of pre-compiled xml indices for speed as needed.
-
-NOTE: Exact syntax needs more work...
-
-NOTE: Which tool converts the short-hand link to that in descriptions.xml is undetermined at this time but is part of the prototype.
-
-NOTE: Because Metanorma is a command line tool and not a text editor, an external application is needed to provide look up for the user to populate the short-hand cross-refs.
-
-
-=== Git hosting
-
-Yes
-
-
-=== Injection into workflow
-
-This tooling operates on the very front-end of the development toolchain so no impact on publication environment is envisioned from this
-addition.
-Use of EXPRESS-G authoring tools based on the cumulative EXPRESS schema file will continue.
-
-
-== Prototype provided in this repository
-
-=== General
-
-The prototype was created by hand converting the EXPRESS `action_schema` `descriptions.xml` file to Metanorma AsciiDoc.
-Each EXPRESS declaration was partitioned into an individual AsciiDoc file.
-One for the SCHEMA.
-One for each of the other declarations.
-The file names reflect the types and names of EXPRESS declarations to make the file names self-reading.
-
-WARNING: This is a prototype from the developer view point.
-Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation.
-
-NOTE: Clutter avoidance in the <schema-name> directory warrants putting the individual EXPRESS files in a subdirectory.
-We may or may not get to this in the prototype.
-
-=== Conceptual prototype workflow viewing
-
-In this example a developer generates viewable results of an edit.
-
-image::source_AsciiDoc_view.png[Sample formatted viewing]
-
-=== Prototype workflow checking EXPRESS
-
-In this example a developer generates a local `.exp` file for further processing by Express Engine.
-
-image::Build_local_annotated_.exp_file.png[Creating an annotated .exp file]
-
-=== Random workflow
-
-This figure shows lots of options for processing. Metanorma is embedded in the syntax checker, and in the automaton, or it might be embedded in the Text editor. It is up to the developer how they prefer to use the technology. There are lots of tools that render the various output forms Metanorma generates. The example is naive but not the focus of the prototype.
-
-image::figure_01.png[Sample workflow]
-
-The "`root`" is the `action_schema.exp` file.
-
-
-=== Annotated EXPRESS schema root file
+==== Schema root file
 
 There is a single "`root file`" per schema.
-
-The first section describes metadata and information of the `action_schema` SCHEMA
-extracted from Part 41 (`resource_docs/fundamentals_of_product_description_and_support/resource.xml`)
-under its corresponding `<schema>` tag.
-The text in this section is written in the Metanorma format.
 
 Following is an example of an Annotated EXPRESS remark that annotates the schema.
 
@@ -252,11 +141,153 @@ A *action_directive_relationship* shall not participate in its own definition.
 *)
 ----
 
+
+////
+=== Smaller amounts of text per file
+
+This prototype introduces a modified structure for the EXPRESS source such that each file is appropriately sized for editing.
+Each annotated EXPRESS file is named with an EXPRESS declaration type and name (e.g., reference_from.basic_attribute_schema).
+
+=== Schema graph structure
+
+The graph structure mirrors the delivered EXPRESS `.exp` file.
+It is a tree with one root node and one or more leaf nodes.
+There are no intermediate nodes in the tree.
+
+=== Schema file extension
+
+Because the snippet files are not valid EXPRESS, we will use the `.adoc` file name extension.
+////
+
+
+=== Document files in Metanorma
+
+The "`root document file`" (e.g. `data/<resource-type>/<doc-name>/document.adoc`) is the entry point of the document.
+
+//will contain an attribute declaring the document encoding to be Metanorma.
+//The encoding applies to all schemata associated with the document, in addition to the main body of the document.
+//The "`root file`" for schemata contains the SCHEMA level contents plus includes for the leaf files.
+
+//NOTE: The exact encoding protocol for the workflow process is an outcome of the prototype.
+
+Resource documents::
+`stepmod/data/<doc-type>/<doc-name>/document.adoc` +
++
+EXAMPLE: The `root file` for the part 41 resource document is `stepmod/data/resource_docs/fundamentals_of_product_description_and_support/document.adoc`
+
+Resource schema::
+`stepmod/data/resource/<schema-name>/document.adoc`
++
+EXAMPLE: The `root file` for the action_schema is `stepmod/data/resources/action_schema/document.adoc`.
+
+Module documents::
+`stepmod/data/modules/<doc-name>/document.adoc`
+
+ARM/MIM shortform schema::
+`stepmod/data/modules/<doc-name>/<arm|mim>.adoc`
+
+
+==== Easy to use EXPRESS cross-references
+
+The `express_ref:[schema.name]` syntax is used to refer to a link to the EXPRESS declaration of `schema.name`.
+The cross references make use of pre-compiled xml indices for speed as needed.
+
+NOTE: Exact syntax needs more work...
+
+NOTE: Which tool converts the short-hand link to that in descriptions.xml is undetermined at this time but is part of the prototype.
+
+NOTE: Because Metanorma is a command line tool and not a text editor, an external application is needed to provide look up for the user to populate the short-hand cross-refs.
+
+
+=== Git hosting
+
+Yes
+
+
+=== Injection into workflow
+
+This tooling operates on the very front-end of the development toolchain so no impact on publication environment is envisioned from this
+addition.
+Use of EXPRESS-G authoring tools based on the cumulative EXPRESS schema file will continue.
+
+
+==== Conceptual prototype workflow viewing
+
+In this example a developer generates viewable results of an edit.
+
+image::source_AsciiDoc_view.png[Sample formatted viewing]
+
+==== Prototype workflow checking EXPRESS
+
+In this example a developer generates a local `.exp` file for further processing by Express Engine.
+
+image::Build_local_annotated_.exp_file.png[Creating an annotated .exp file]
+
+==== Random workflow
+
+This figure shows lots of options for processing. Metanorma is embedded in the syntax checker, and in the automaton, or it might be embedded in the text editor. It is up to the developer how they prefer to use the technology. There are lots of tools that render the various output forms Metanorma generates. The example is naive but not the focus of the prototype.
+
+image::figure_01.png[Sample workflow]
+
+
+
+== Prototype provided in this repository
+
+=== General
+
+The prototype contains the following information created via manual conversion:
+
+* `data/resource_docs/fundamentals_of_product_description_and_support`: ISO 10303-41 "`Product data representation and exchange: Integrated application resource: Finite element analysis`" which describes "`fundamentals_of_product_description_and_support`".
+
+* `data/resources/action_schema`: example for Annotated EXPRESS.
+
+* `data/resources/aic_curve_swept_solid`: example for amended Express Engine XML generated from Annotated EXPRESS.
+
+WARNING: This is a prototype. Concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation.
+
+
+=== Annotated EXPRESS: `data/resources/action_schema`
+
+Steps taken to convert from SMRLv8:
+
+* Content in `data/resources/action_schema/descriptions.xml` migrated into Annotated EXPRESS file `action_schema.exp`
+* `developer.xml`, `resource_map.xml` deleted
+
+=== Annotated EXPRESS: `data/resources/aic_curve_swept_solid`
+
+Steps taken to convert from SMRLv8:
+
+* Content in `data/resources/aic_curve_swept_solid/descriptions.xml` migrated into Annotated EXPRESS file `aic_curve_swept_solid.exp`
+* Content in `data/resources/aic_curve_swept_solid/aic_curve_swept_solid.xml` hand-crafted to demonstrate that EXPRESS "`remark tags`" from `aic_curve_swept_solid.exp` are included in the resulting `aic_curve_swept_solid.xml` file intended to be generated by Express Engine.
+
+=== Metanorma document: `data/resource_docs/fundamentals_of_product_description_and_support/document.adoc`
+
+Steps taken to convert from SMRLv8:
+
+* Content in `data/resource_docs/fundamentals_of_product_description_and_support/resource.xml` migrated into Metanorma AsciiDoc document (`document.adoc`) and sections (in the `sections/` directory) (The text in remark tags is written in Metanorma AsciiDoc format)
+** XPATH `resource.xml/scope` => `sections/01-scope.adoc`
+** XPATH `resource.xml/normrefs` => `sections/02-norm-refs.adoc`
+** XPATH `resource.xml/terms` => `sections/03-terms.adoc`
+** XPATH `resource.xml/schemas` => individual Annotated EXPRESS files, e.g. `data/resources/action_schema/action_schema.exp`
+
+** TODO: These files should be automatically generated:
+*** `sections/04-schemas.adoc`
+*** `sections/91-short-names.adoc`
+*** `sections/92-identifier.adoc`
+*** `sections/93-listings.adoc`
+*** `sections/94-expressg-diagrams.adoc`
+
+** XPATH `resource.xml/tech-discussion` => `95-tech-discussion.adoc`
+** XPATH `resource.xml/examples` => `96-examples.adoc`
+** XPATH `resource.xml/bibliography` => `99-bibliography.adoc`
+
+
+
 NOTE: Running Metanorma on command line for the `fundamentals_of_product_description_and_support` document can be done with this command:
 `metanorma --type iso -x html data/resource_docs/fundamentals_of_product_description_and_support/resource.adoc`
 
 
-== Changes needed in Express Engine
+== Implementation changes needed in Express Engine
 
 === Provide "`remark tag`" content in XML as `remark_tag`
 
@@ -285,7 +316,7 @@ NOTE: Running Metanorma on command line for the `fundamentals_of_product_descrip
 ----
 
 
-== Changes needed in Metanorma
+== Implementation changes needed in Metanorma
 
 === Support for generating a linked document collection (in HTML)
 
