@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="curve_swept_solid" file="aic_curve_swept_solidexpg1.xml">
+<img src="aic_curve_swept_solidexpg1.gif">
+<img.area shape="rect" coords="10,10,140,51" href="../../resources/aic_curve_swept_solid/aic_curve_swept_solid.xml" />
+<img.area shape="rect" coords="294,844,424,885" href="../../resources/representation_schema/representation_schema.xml" />
+<img.area shape="rect" coords="294,696,397,737" href="../../resources/geometry_schema/geometry_schema.xml" />
+<img.area shape="rect" coords="294,745,391,786" href="../../resources/measure_schema/measure_schema.xml" />
+<img.area shape="rect" coords="294,794,526,835" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml" />
+<img.area shape="rect" coords="288,118,432,159" href="../../resources/geometric_model_schema/geometric_model_schema.xml" />
+</img>
+</imgfile.content>
