@@ -1,0 +1,15 @@
+
+[bibliography]
+== Bibliography
+
+* [[[ref8824-1, ISO 8824-1]]]
+
+* [[[ISO-IEC-10746-2, ISO/IEC 10746-2]]]
+
+* [[[ISO_10303-21, ISO 10303-21]]]
+
+* [[[ISO_10303-22, ISO 10303-22]]]
+
+* [[[IETF-RFC-1738, IETF RFC 1738]]]
+
+* [[[HTML,W3C HTML]]]

@@ -1,0 +1,31 @@
+
+[appendix,obligation=normative]
+== Information object registration
+
+// TODO: this clause is fully generated
+
+=== Document Identification
+
+To provide for unambiguous identification of an information object in an open system, the object identifier
+
+{ iso standard 10303 part(41) version(6) }
+
+is assigned to this part of ISO 10303. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
+
+=== Schema identification
+
+==== action-schema schema identification
+
+To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
+
+{ iso standard 10303 part(41) version(8) object(1) action-schema(1) }
+
+is assigned to the action-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
+
+==== application-context-schema schema identification
+
+To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
+
+{ iso standard 10303 part(41) version(8) object(1) application-context-schema(2) }
+
+is assigned to the application-context-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.

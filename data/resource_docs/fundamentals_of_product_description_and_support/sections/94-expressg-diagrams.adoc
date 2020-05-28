@@ -1,0 +1,73 @@
+
+[appendix]
+== EXPRESS-G diagrams
+
+The diagrams in this annex correspond to the EXPRESS schemas specified in this part of ISO 10303. The diagrams use the EXPRESS-G graphical notation for the EXPRESS language. EXPRESS-G is defined in ISO 10303-11.
+
+////
+TODO: generate diagrams list
+
+Figure D.1 — EXPRESS-G diagram of the action_schema (1 of 2);
+Figure D.2 — EXPRESS-G diagram of the action_schema (2 of 2);
+Figure D.3 — EXPRESS-G diagram of the application_context_schema (1 of 2);
+Figure D.4 — EXPRESS-G diagram of the application_context_schema (2 of 2);
+Figure D.5 — EXPRESS-G diagram of the approval_schema (1 of 2);
+Figure D.6 — EXPRESS-G diagram of the approval_schema (2 of 2);
+Figure D.7 — EXPRESS-G diagram of the basic_attribute_schema (1 of 5);
+Figure D.8 — EXPRESS-G diagram of the basic_attribute_schema (2 of 5);
+Figure D.9 — EXPRESS-G diagram of the basic_attribute_schema (3 of 5);
+Figure D.10 — EXPRESS-G diagram of the basic_attribute_schema (4 of 5);
+Figure D.11 — EXPRESS-G diagram of the basic_attribute_schema (5 of 5);
+Figure D.12 — EXPRESS-G diagram of the certification_schema (1 of 2);
+Figure D.13 — EXPRESS-G diagram of the certification_schema (2 of 2);
+Figure D.14 — EXPRESS-G diagram of the contract_schema (1 of 2);
+Figure D.15 — EXPRESS-G diagram of the contract_schema (2 of 2);
+Figure D.16 — EXPRESS-G diagram of the date_time_schema (1 of 3);
+Figure D.17 — EXPRESS-G diagram of the date_time_schema (2 of 3);
+Figure D.18 — EXPRESS-G diagram of the date_time_schema (3 of 3);
+Figure D.19 — EXPRESS-G diagram of the document_schema (1 of 2);
+Figure D.20 — EXPRESS-G diagram of the document_schema (2 of 2);
+Figure D.21 — EXPRESS-G diagram of the effectivity_schema (1 of 2);
+Figure D.22 — EXPRESS-G diagram of the effectivity_schema (2 of 2);
+Figure D.23 — EXPRESS-G diagram of the experience_schema (1 of 2);
+Figure D.24 — EXPRESS-G diagram of the experience_schema (2 of 2);
+Figure D.25 — EXPRESS-G diagram of the external_reference_schema (1 of 2);
+Figure D.26 — EXPRESS-G diagram of the external_reference_schema (2 of 2);
+Figure D.27 — EXPRESS-G diagram of the group_schema (1 of 2);
+Figure D.28 — EXPRESS-G diagram of the group_schema (2 of 2);
+Figure D.29 — EXPRESS-G diagram of the language_schema (1 of 2);
+Figure D.30 — EXPRESS-G diagram of the language_schema (2 of 2);
+Figure D.31 — EXPRESS-G diagram of the location_schema (1 of 2);
+Figure D.32 — EXPRESS-G diagram of the location_schema (2 of 2);
+Figure D.33 — EXPRESS-G diagram of the management_resources_schema (1 of 9);
+Figure D.34 — EXPRESS-G diagram of the management_resources_schema (2 of 9);
+Figure D.35 — EXPRESS-G diagram of the management_resources_schema (3 of 9);
+Figure D.36 — EXPRESS-G diagram of the management_resources_schema (4 of 9);
+Figure D.37 — EXPRESS-G diagram of the management_resources_schema (5 of 9);
+Figure D.38 — EXPRESS-G diagram of the management_resources_schema (6 of 9);
+Figure D.39 — EXPRESS-G diagram of the management_resources_schema (7 of 9);
+Figure D.40 — EXPRESS-G diagram of the management_resources_schema (8 of 9);
+Figure D.41 — EXPRESS-G diagram of the management_resources_schema (9 of 9);
+Figure D.42 — EXPRESS-G diagram of the measure_schema (1 of 5);
+Figure D.43 — EXPRESS-G diagram of the measure_schema (2 of 5);
+Figure D.44 — EXPRESS-G diagram of the measure_schema (3 of 5);
+Figure D.45 — EXPRESS-G diagram of the measure_schema (4 of 5);
+Figure D.46 — EXPRESS-G diagram of the measure_schema (5 of 5);
+Figure D.47 — EXPRESS-G diagram of the person_organization_schema (1 of 4);
+Figure D.48 — EXPRESS-G diagram of the person_organization_schema (2 of 4);
+Figure D.49 — EXPRESS-G diagram of the person_organization_schema (3 of 4);
+Figure D.50 — EXPRESS-G diagram of the person_organization_schema (4 of 4);
+Figure D.51 — EXPRESS-G diagram of the product_definition_schema (1 of 3);
+Figure D.52 — EXPRESS-G diagram of the product_definition_schema (2 of 3);
+Figure D.53 — EXPRESS-G diagram of the product_definition_schema (3 of 3);
+Figure D.54 — EXPRESS-G diagram of the product_property_definition_schema (1 of 2);
+Figure D.55 — EXPRESS-G diagram of the product_property_definition_schema (2 of 2);
+Figure D.56 — EXPRESS-G diagram of the product_property_representation_schema (1 of 2);
+Figure D.57 — EXPRESS-G diagram of the product_property_representation_schema (2 of 2);
+Figure D.58 — EXPRESS-G diagram of the qualifications_schema (1 of 2);
+Figure D.59 — EXPRESS-G diagram of the qualifications_schema (2 of 2);
+Figure D.60 — EXPRESS-G diagram of the security_classification_schema (1 of 2);
+Figure D.61 — EXPRESS-G diagram of the security_classification_schema (2 of 2);
+Figure D.62 — EXPRESS-G diagram of the support_resource_schema (1 of 2);
+Figure D.63 — EXPRESS-G diagram of the support_resource_schema (2 of 2).
+////

@@ -1,0 +1,1064 @@
+
+<changes>
+   <change_edition version="2">
+      <schema.changes schema_name="action_schema"><!-- 4 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>action;</li>
+               <li>action_directive;</li>
+               <li>action_method;</li>
+               <li>action_method_relationship;</li>
+               <li>action_relationship;</li>
+               <li>action_request_solution;</li>
+               <li>action_request_status;</li>
+               <li>action_resource;</li>
+               <li>action_resource_relationship;</li>
+               <li>action_resource_type;</li>
+               <li>action_status;</li>
+               <li>directed_action;</li>
+               <li>executed_action;</li>
+               <li>supported_item;</li>
+               <li>versioned_action_request.</li>
+            </ul>
+         </description>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="action"/>
+            <modified.object type="ENTITY" name="action_directive"/>
+            <modified.object type="ENTITY" name="action_method"/>
+            <modified.object type="ENTITY" name="action_method_relationship"/>
+            <modified.object type="ENTITY" name="action_relationship"/>
+            <modified.object type="ENTITY" name="action_request_solution"/>
+            <modified.object type="ENTITY" name="action_resource"/>
+            <modified.object type="ENTITY" name="action_resource_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_action_method_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_action_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_action_resource_relationship"/>
+            <modified.object type="ENTITY" name="versioned_action_request"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="application_context_schema"><!-- 5 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>application_context_element;</li>
+               <li>application_context;</li>
+               <li>application_protocol_definition;</li>
+               <li>library_context;</li>
+               <li>product_concept_context;</li>
+               <li>product_context;</li>
+               <li>product_definition_context.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="ENTITY" name="application_context_relationship"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="application_context"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="approval_schema"><!-- 6 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>approval;</li>
+               <li>approval_date_time;</li>
+               <li>approval_relationship;</li>
+               <li>approval_role;</li>
+               <li>approval_status.</li>
+            </ul>
+         </description>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="acyclic_approval_relationship"/>
+            <modified.object type="ENTITY" name="approval_date_time"/>
+            <modified.object type="ENTITY" name="approval_relationship"/>
+            <modified.object type="ENTITY" name="approval_role"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="basic_attribute_schema"><!-- 7 schema -->
+         <schema.additions>
+            <modified.object type="ENTITY" name="description_attribute"/>
+            <modified.object type="TYPE" name="description_attribute_select"/>
+            <modified.object type="FUNCTION" name="get_description_value"/>
+            <modified.object type="FUNCTION" name="get_id_value"/>
+            <modified.object type="FUNCTION" name="get_name_value"/>
+            <modified.object type="FUNCTION" name="get_role"/>
+            <modified.object type="ENTITY" name="id_attribute"/>
+            <modified.object type="TYPE" name="id_attribute_select"/>
+            <modified.object type="ENTITY" name="name_attribute"/>
+            <modified.object type="TYPE" name="name_attribute_select"/>
+            <modified.object type="ENTITY" name="object_role"/>
+            <modified.object type="ENTITY" name="role_association"/>
+            <modified.object type="TYPE" name="role_select"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="certification_schema"><!-- 8 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>certification;</li>
+               <li>certification_type.</li>
+            </ul>
+         </description>
+      </schema.changes>
+      <schema.changes schema_name="contract_schema"><!-- 9 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>contract_type.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_contract_relationship"/>
+            <modified.object type="ENTITY" name="contract_relationship"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="date_time_schema"><!-- 10 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>calendar_date;</li>
+               <li>coordinated_universal_time_offset;</li>
+               <li>date_role;</li>
+               <li>date_time_role;</li>
+               <li>date_time_select;</li>
+               <li>hour_in_day;</li>
+               <li>local_time;</li>
+               <li>ordinal_date;</li>
+               <li>time_role;</li>
+               <li>year_number.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_event_occurrence_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_time_interval_relationship"/>
+            <modified.object type="TYPE" name="date_time_or_event_occurrence"/>
+            <modified.object type="ENTITY" name="event_occurrence"/>
+            <modified.object type="ENTITY" name="event_occurrence_context_role"/>
+            <modified.object type="ENTITY" name="event_occurrence_relationship"/>
+            <modified.object type="ENTITY" name="event_occurrence_role"/>
+            <modified.object type="ENTITY" name="relative_event_occurrence"/>
+            <modified.object type="ENTITY" name="time_interval"/>
+            <modified.object type="ENTITY" name="time_interval_relationship"/>
+            <modified.object type="ENTITY" name="time_interval_role"/>
+            <modified.object type="ENTITY" name="time_interval_with_bounds"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="TYPE" name="ahead_or_behind"/>
+            <modified.object type="ENTITY" name="coordinated_universal_time_offset"/>
+            <modified.object type="ENTITY" name="date_role"/>
+            <modified.object type="ENTITY" name="date_time_role"/>
+            <modified.object type="TYPE" name="day_in_month_number"/>
+            <modified.object type="TYPE" name="day_in_year_number"/>
+            <modified.object type="TYPE" name="second_in_minute"/>
+            <modified.object type="ENTITY" name="time_role"/>
+            <modified.object type="FUNCTION" name="valid_calendar_date"/>
+            <modified.object type="ENTITY" name="week_of_year_and_day_date"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="document_schema"><!-- 11 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>document;</li>
+               <li>document_relationship;</li>
+               <li>document_type;</li>
+               <li>document_with_class.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="ENTITY" name="document_product_association"/>
+            <modified.object type="ENTITY" name="document_representation_type"/>
+            <modified.object type="TYPE" name="product_or_formation_or_definition"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="acyclic_document_relationship"/>
+            <modified.object type="ENTITY" name="document"/>
+            <modified.object type="ENTITY" name="document_relationship"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="effectivity_schema"><!-- 12 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>dated_effectivity;</li>
+               <li>effectivity;</li>
+               <li>lot_effectivity;</li>
+               <li>serial_numbered_effectivity.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_effectivity_relationship"/>
+            <modified.object type="ENTITY" name="effectivity_relationship"/>
+            <modified.object type="ENTITY" name="time_interval_based_effectivity"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="dated_effectivity"/>
+            <modified.object type="ENTITY" name="effectivity"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="external_reference_schema"><!-- 14 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>external_source_relationship;</li>
+               <li>externally_defined_item;</li>
+               <li>pre_defined_item;</li>
+               <li>source_item.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_externally_defined_item_relationship"/>
+            <modified.object type="ENTITY" name="externally_defined_item_relationship"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="acyclic_external_source_relationship"/>
+            <modified.object type="ENTITY" name="external_source"/>
+            <modified.object type="ENTITY" name="external_source_relationship"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="group_schema"><!-- 15 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>group_relationship.</li>
+            </ul>
+         </description>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="acyclic_group_relationship"/>
+            <modified.object type="ENTITY" name="group"/>
+            <modified.object type="ENTITY" name="group_relationship"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="management_resources_schema"><!-- 17 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>external_referent_assignment;</li>
+               <li>library_assignment;</li>
+               <li>name_assignment.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="ENTITY" name="action_method_assignment"/>
+            <modified.object type="ENTITY" name="action_method_role"/>
+            <modified.object type="FUNCTION" name="acyclic_identification_assignment_relationship"/>
+            <modified.object type="ENTITY" name="attribute_classification_assignment"/>
+            <modified.object type="TYPE" name="attribute_type"/>
+            <modified.object type="ENTITY" name="attribute_value_assignment"/>
+            <modified.object type="ENTITY" name="attribute_value_role"/>
+            <modified.object type="ENTITY" name="classification_assignment"/>
+            <modified.object type="ENTITY" name="classification_role"/>
+            <modified.object type="ENTITY" name="document_usage_constraint_assignment"/>
+            <modified.object type="ENTITY" name="document_usage_role"/>
+            <modified.object type="ENTITY" name="effectivity_context_role"/>
+            <modified.object type="ENTITY" name="effectivity_context_assignment"/>
+            <modified.object type="ENTITY" name="event_occurrence_assignment"/>
+            <modified.object type="ENTITY" name="event_occurrence_context_assignment"/>
+            <modified.object type="ENTITY" name="external_identification_assignment"/>
+            <modified.object type="ENTITY" name="identification_assignment_relationship"/>
+            <modified.object type="ENTITY" name="identification_assignment"/>
+            <modified.object type="ENTITY" name="identification_role"/>
+            <modified.object type="ENTITY" name="organizational_project_role"/>
+            <modified.object type="ENTITY" name="organizational_project_assignment"/>
+            <modified.object type="ENTITY" name="time_interval_assignment"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="action_assignment"/>
+            <modified.object type="ENTITY" name="action_request_assignment"/>
+            <modified.object type="ENTITY" name="approval_assignment"/>
+            <modified.object type="ENTITY" name="certification_assignment"/>
+            <modified.object type="ENTITY" name="contract_assignment"/>
+            <modified.object type="ENTITY" name="document_reference"/>
+            <modified.object type="ENTITY" name="effectivity_assignment"/>
+            <modified.object type="ENTITY" name="external_referent_assignment"/>
+            <modified.object type="ENTITY" name="group_assignment"/>
+            <modified.object type="ENTITY" name="name_assignment"/>
+            <modified.object type="ENTITY" name="security_classification_assignment"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="measure_schema"><!-- 18 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>amount_of_substance_measure_with_unit;</li>
+               <li>amount_of_substance_unit;</li>
+               <li>area_measure_with_unit;</li>
+               <li>area_unit;</li>
+               <li>context_dependent_measure;</li>
+               <li>context_dependent_unit;</li>
+               <li>conversion_based_unit;</li>
+               <li>derived_unit_element;</li>
+               <li>descriptive_measure;</li>
+               <li>dimensional_exponents;</li>
+               <li>electric_current_measure_with_unit;</li>
+               <li>electric_current_unit;</li>
+               <li>global_unit_assigned_context;</li>
+               <li>length_measure_with_unit;</li>
+               <li>length_unit;</li>
+               <li>luminous_intensity_unit;</li>
+               <li>luminous_intensity_measure_with_unit;</li>
+               <li>mass_measure_with_unit;</li>
+               <li>mass_unit;</li>
+               <li>named_unit;</li>
+               <li>parameter_value;</li>
+               <li>plane_angle_measure_with_unit;</li>
+               <li>plane_angle_unit;</li>
+               <li>ratio_measure_with_unit;</li>
+               <li>ratio_unit;</li>
+               <li>si_unit;</li>
+               <li>solid_angle_measure_with_unit;</li>
+               <li>solid_angle_unit;</li>
+               <li>thermodynamic_temperature_measure_with_unit;</li>
+               <li>thermodynamic_temperature_unit;</li>
+               <li>time_measure_with_unit;</li>
+               <li>time_unit;</li>
+               <li>volume_measure_with_unit;</li>
+               <li>volume_unit.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="TYPE" name="celsius_temperature_measure"/>
+            <modified.object type="ENTITY" name="celsius_temperature_measure_with_unit"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="derived_unit"/>
+            <modified.object type="FUNCTION" name="dimensions_for_si_unit"/>
+            <modified.object type="ENTITY" name="si_unit"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="person_organization_schema"><!-- 19 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>address;</li>
+               <li>organization_relationship;</li>
+               <li>organization_role;</li>
+               <li>organizational_project;</li>
+               <li>person_and_organization_role;</li>
+               <li>person_organization_select;</li>
+               <li>person_role.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_organizational_project_relationship"/>
+            <modified.object type="ENTITY" name="organizational_project_relationship"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="acyclic_organization_relationship"/>
+            <modified.object type="ENTITY" name="organization"/>
+            <modified.object type="ENTITY" name="organization_relationship"/>
+            <modified.object type="ENTITY" name="organization_role"/>
+            <modified.object type="ENTITY" name="organizational_address"/>
+            <modified.object type="ENTITY" name="organizational_project"/>
+            <modified.object type="ENTITY" name="person"/>
+            <modified.object type="ENTITY" name="person_and_organization"/>
+            <modified.object type="ENTITY" name="person_and_organization_role"/>
+            <modified.object type="ENTITY" name="person_role"/>
+            <modified.object type="ENTITY" name="personal_address"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_definition_schema"><!-- 20 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>product;</li>
+               <li>product_category;</li>
+               <li>product_category_relationship;</li>
+               <li>product_definition;</li>
+               <li>product_definition_effectivity;</li>
+               <li>product_definition_formation_relationship;</li>
+               <li>product_definition_formation_with_specified_source;</li>
+               <li>product_definition_relationship;</li>
+               <li>product_definition_substitute;</li>
+               <li>source.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_product_relationship"/>
+            <modified.object type="FUNCTION" name="get_product_definitions"/>
+            <modified.object type="ENTITY" name="product_definition_context_association"/>
+            <modified.object type="ENTITY" name="product_definition_context_role"/>
+            <modified.object type="ENTITY" name="product_relationship"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="acyclic_product_category_relationship"/>
+            <modified.object type="FUNCTION"
+                             name="acyclic_product_definition_formation_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_product_definition_relationship"/>
+            <modified.object type="ENTITY" name="product"/>
+            <modified.object type="ENTITY" name="product_category_relationship"/>
+            <modified.object type="ENTITY" name="product_definition"/>
+            <modified.object type="ENTITY" name="product_definition_relationship"/>
+            <modified.object type="ENTITY" name="product_definition_substitute"/>
+            <modified.object type="ENTITY" name="product_definition_formation_relationship"/>
+            <modified.object type="ENTITY" name="product_definition_effectivity"/>
+            <modified.object type="ENTITY" name="product_definition_formation"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_property_definition_schema"><!-- 21 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>characterized_definition;</li>
+               <li>characterized_object;</li>
+               <li>characterized_product_definition;</li>
+               <li>product_definition_shape;</li>
+               <li>property_definition;</li>
+               <li>shape_aspect;</li>
+               <li>shape_aspect_relationship;</li>
+               <li>shape_definition.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_characterized_object_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_general_property_relationship"/>
+            <modified.object type="ENTITY" name="characterized_object_relationship"/>
+            <modified.object type="TYPE" name="derived_property_select"/>
+            <modified.object type="ENTITY" name="general_property"/>
+            <modified.object type="ENTITY" name="general_property_association"/>
+            <modified.object type="ENTITY" name="general_property_relationship"/>
+            <modified.object type="FUNCTION" name="get_shape_aspects"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="acyclic_shape_aspect_relationship"/>
+            <modified.object type="ENTITY" name="characterized_object"/>
+            <modified.object type="ENTITY" name="product_definition_shape"/>
+            <modified.object type="ENTITY" name="property_definition"/>
+            <modified.object type="ENTITY" name="shape_aspect"/>
+            <modified.object type="ENTITY" name="shape_aspect_relationship"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_property_representation_schema"><!-- 22 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>context_dependent_shape_representation;</li>
+               <li>property_definition_representation;</li>
+               <li>shape_definition_representation;</li>
+               <li>shape_representation;</li>
+               <li>shape_representation_relationship.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="get_property_definition_representations"/>
+            <modified.object type="ENTITY" name="item_identified_representation_usage"/>
+            <modified.object type="TYPE" name="represented_definition"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="context_dependent_shape_representation"/>
+            <modified.object type="ENTITY" name="property_definition_representation"/>
+            <modified.object type="FUNCTION" name="relatives_of_product_definitions"/>
+            <modified.object type="FUNCTION" name="relatives_of_shape_representations"/>
+            <modified.object type="ENTITY" name="shape_definition_representation"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="security_classification_schema"><!-- 24 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>security_classification;</li>
+               <li>security_classification_level.</li>
+            </ul>
+         </description>
+      </schema.changes>
+      <schema.changes schema_name="support_resource_schema"><!-- 25 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>identifier;</li>
+               <li>label;</li>
+               <li>text.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="FUNCTION" name="type_check_function"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="bag_to_set"/>
+         </schema.modifications>
+      </schema.changes>
+   </change_edition>
+   <change_edition version="3">
+      <description>
+		This also incorporates the modifications of Technical Corrigenda 1 and Technical Corrigenda 2.
+		<p>The following EXPRESS schemas have been added:</p>
+         <ul>
+            <li>experience_schema;</li>
+            <li>location_schema;</li>
+            <li>qualifications_schema.</li>
+         </ul>
+      </description>
+      <schema.changes schema_name="action_schema"><!-- 4 schema -->
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_versioned_action_request_relationship"/>
+            <modified.object type="ENTITY" name="versioned_action_request_relationship"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="date_time_schema"><!-- 10 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>date.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="ENTITY" name="year_month"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="date"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="document_schema"><!-- 11 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types have been modified:
+			<ul>
+               <li>document:
+					<p>"E.g." replaced with "EXAMPLE".</p>
+               </li>
+            </ul>
+         </description>
+      </schema.changes>
+      <schema.changes schema_name="experience_schema"><!-- 13 schema -->
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_experience_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_experience_type_relationship"/>
+            <modified.object type="ENTITY" name="experience"/>
+            <modified.object type="ENTITY" name="experience_relationship"/>
+            <modified.object type="ENTITY" name="experience_type"/>
+            <modified.object type="ENTITY" name="experience_type_relationship"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="location_schema"><!-- 16 schema -->
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_location_relationship"/>
+            <modified.object type="ENTITY" name="location"/>
+            <modified.object type="ENTITY" name="location_relationship"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="management_resources_schema"><!-- 17 schema -->
+         <schema.additions>
+            <modified.object type="ENTITY" name="experience_assignment"/>
+            <modified.object type="ENTITY" name="experience_role"/>
+            <modified.object type="ENTITY" name="experience_type_assignment"/>
+            <modified.object type="ENTITY" name="experience_type_role"/>
+            <modified.object type="ENTITY" name="location_assignment"/>
+            <modified.object type="ENTITY" name="location_representation_assignment"/>
+            <modified.object type="ENTITY" name="location_representation_role"/>
+            <modified.object type="ENTITY" name="location_role"/>
+            <modified.object type="ENTITY" name="organization_type_assignment"/>
+            <modified.object type="ENTITY" name="organization_type_role"/>
+            <modified.object type="ENTITY" name="person_type_assignment"/>
+            <modified.object type="ENTITY" name="person_type_definition_assignment"/>
+            <modified.object type="ENTITY" name="person_type_definition_role"/>
+            <modified.object type="ENTITY" name="person_type_role"/>
+            <modified.object type="ENTITY" name="position_in_organization_assignment"/>
+            <modified.object type="ENTITY" name="position_in_organization_role"/>
+            <modified.object type="ENTITY" name="position_in_organization_type_assignment"/>
+            <modified.object type="ENTITY" name="position_in_organization_type_role"/>
+            <modified.object type="ENTITY" name="qualification_assignment"/>
+            <modified.object type="ENTITY" name="qualification_role"/>
+            <modified.object type="ENTITY" name="qualification_type_assignment"/>
+            <modified.object type="ENTITY" name="qualification_type_role"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="measure_schema"><!-- 18 schema -->
+         <description>
+			The definitions of the following EXPRESS entity data types were modified:
+			<ul>
+               <li>numeric_measure;</li>
+               <li>area_unit;</li>
+               <li>volume_unit.</li>
+            </ul>
+         </description>
+         <schema.additions>
+            <modified.object type="TYPE" name="absorbed_dose_measure"/>
+            <modified.object type="TYPE" name="acceleration_measure"/>
+            <modified.object type="TYPE" name="capacitance_measure"/>
+            <modified.object type="TYPE" name="conductance_measure"/>
+            <modified.object type="TYPE" name="dose_equivalent_measure"/>
+            <modified.object type="TYPE" name="electric_charge_measure"/>
+            <modified.object type="TYPE" name="electric_potential_measure"/>
+            <modified.object type="TYPE" name="energy_measure"/>
+            <modified.object type="TYPE" name="force_measure"/>
+            <modified.object type="TYPE" name="frequency_measure"/>
+            <modified.object type="TYPE" name="illuminance_measure"/>
+            <modified.object type="TYPE" name="inductance_measure"/>
+            <modified.object type="TYPE" name="luminous_flux_measure"/>
+            <modified.object type="TYPE" name="magnetic_flux_density_measure"/>
+            <modified.object type="TYPE" name="magnetic_flux_measure"/>
+            <modified.object type="TYPE" name="non_negative_length_measure"/>
+            <modified.object type="TYPE" name="power_measure"/>
+            <modified.object type="TYPE" name="pressure_measure"/>
+            <modified.object type="TYPE" name="radioactivity_measure"/>
+            <modified.object type="TYPE" name="resistance_measure"/>
+            <modified.object type="TYPE" name="velocity_measure"/>
+            <modified.object type="ENTITY" name="absorbed_dose_measure_with_unit"/>
+            <modified.object type="ENTITY" name="absorbed_dose_unit"/>
+            <modified.object type="ENTITY" name="acceleration_measure_with_unit"/>
+            <modified.object type="ENTITY" name="acceleration_unit"/>
+            <modified.object type="ENTITY" name="capacitance_measure_with_unit"/>
+            <modified.object type="ENTITY" name="capacitance_unit"/>
+            <modified.object type="ENTITY" name="conductance_measure_with_unit"/>
+            <modified.object type="ENTITY" name="conductance_unit"/>
+            <modified.object type="ENTITY" name="dose_equivalent_measure_with_unit"/>
+            <modified.object type="ENTITY" name="dose_equivalent_unit"/>
+            <modified.object type="ENTITY" name="electric_charge_measure_with_unit"/>
+            <modified.object type="ENTITY" name="electric_charge_unit"/>
+            <modified.object type="ENTITY" name="electric_potential_measure_with_unit"/>
+            <modified.object type="ENTITY" name="electric_potential_unit"/>
+            <modified.object type="ENTITY" name="energy_measure_with_unit"/>
+            <modified.object type="ENTITY" name="energy_unit"/>
+            <modified.object type="ENTITY" name="force_measure_with_unit"/>
+            <modified.object type="ENTITY" name="force_unit"/>
+            <modified.object type="ENTITY" name="frequency_measure_with_unit"/>
+            <modified.object type="ENTITY" name="frequency_unit"/>
+            <modified.object type="ENTITY" name="illuminance_measure_with_unit"/>
+            <modified.object type="ENTITY" name="illuminance_unit"/>
+            <modified.object type="ENTITY" name="inductance_measure_with_unit"/>
+            <modified.object type="ENTITY" name="inductance_unit"/>
+            <modified.object type="ENTITY" name="luminous_flux_measure_with_unit"/>
+            <modified.object type="ENTITY" name="luminous_flux_unit"/>
+            <modified.object type="ENTITY" name="magnetic_flux_density_measure_with_unit"/>
+            <modified.object type="ENTITY" name="magnetic_flux_density_unit"/>
+            <modified.object type="ENTITY" name="magnetic_flux_measure_with_unit"/>
+            <modified.object type="ENTITY" name="magnetic_flux_unit"/>
+            <modified.object type="ENTITY" name="power_measure_with_unit"/>
+            <modified.object type="ENTITY" name="power_unit"/>
+            <modified.object type="ENTITY" name="pressure_measure_with_unit"/>
+            <modified.object type="ENTITY" name="pressure_unit"/>
+            <modified.object type="ENTITY" name="radioactivity_measure_with_unit"/>
+            <modified.object type="ENTITY" name="radioactivity_unit"/>
+            <modified.object type="ENTITY" name="resistance_measure_with_unit"/>
+            <modified.object type="ENTITY" name="resistance_unit"/>
+            <modified.object type="ENTITY" name="velocity_measure_with_unit"/>
+            <modified.object type="ENTITY" name="velocity_unit"/>
+            <modified.object type="ENTITY" name="si_absorbed_dose_unit"/>
+            <modified.object type="ENTITY" name="si_capacitance_unit"/>
+            <modified.object type="ENTITY" name="si_conductance_unit"/>
+            <modified.object type="ENTITY" name="si_dose_equivalent_unit"/>
+            <modified.object type="ENTITY" name="si_electric_charge_unit"/>
+            <modified.object type="ENTITY" name="si_electric_potential_unit"/>
+            <modified.object type="ENTITY" name="si_energy_unit"/>
+            <modified.object type="ENTITY" name="si_force_unit"/>
+            <modified.object type="ENTITY" name="si_frequency_unit"/>
+            <modified.object type="ENTITY" name="si_illuminance_unit"/>
+            <modified.object type="ENTITY" name="si_inductance_unit"/>
+            <modified.object type="ENTITY" name="si_magnetic_flux_density_unit"/>
+            <modified.object type="ENTITY" name="si_magnetic_flux_unit"/>
+            <modified.object type="ENTITY" name="si_power_unit"/>
+            <modified.object type="ENTITY" name="si_pressure_unit"/>
+            <modified.object type="ENTITY" name="si_radioactivity_unit"/>
+            <modified.object type="ENTITY" name="si_resistance_unit"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="TYPE" name="measure_value"/>
+            <modified.object type="TYPE" name="positive_length_measure"/>
+            <modified.object type="ENTITY" name="area_unit"/>
+            <modified.object type="ENTITY" name="conversion_based_unit"/>
+            <modified.object type="ENTITY" name="derived_unit"/>
+            <modified.object type="ENTITY" name="measure_with_unit"/>
+            <modified.object type="ENTITY" name="named_unit"/>
+            <modified.object type="ENTITY" name="volume_unit"/>
+            <modified.object type="FUNCTION" name="derive_dimensional_exponents"/>
+            <modified.object type="FUNCTION" name="valid_units"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="person_organization_schema"><!-- 19 schema -->
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_organization_type_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_person_type_definition_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_position_in_organization_relationship"/>
+            <modified.object type="ENTITY" name="organization_type"/>
+            <modified.object type="ENTITY" name="organization_type_relationship"/>
+            <modified.object type="ENTITY" name="person_type"/>
+            <modified.object type="ENTITY" name="person_type_definition"/>
+            <modified.object type="ENTITY" name="person_type_definition_formation"/>
+            <modified.object type="ENTITY" name="person_type_definition_relationship"/>
+            <modified.object type="ENTITY" name="position_in_organization"/>
+            <modified.object type="ENTITY" name="position_in_organization_relationship"/>
+            <modified.object type="ENTITY" name="position_in_organization_type"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="product_definition_schema"><!-- 20 schema -->
+         <schema.additions>
+            <modified.object type="FUNCTION" name="categories_of_product"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="product_property_representation_schema"><!-- 22 schema -->
+         <schema.additions>
+            <modified.object type="ENTITY" name="chain_based_item_identified_representation_usage"/>
+            <modified.object type="TYPE" name="chained_representation_link"/>
+            <modified.object type="FUNCTION" name="get_directed_link"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="representation_schema"/>
+            <modified.object type="FUNCTION" name="get_property_definition_representations">
+               <description>
+					White-space removed from string literal expression: 'PRODUCT_PROPERTY_DEFINITION_SCHEMA.PROPERTY_DEFINITION.DEFINITION'
+				</description>
+            </modified.object>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="qualifications_schema"><!-- 23 schema -->
+         <schema.additions>
+            <modified.object type="FUNCTION" name="acyclic_qualification_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_qualification_type_relationship"/>
+            <modified.object type="ENTITY" name="qualification"/>
+            <modified.object type="ENTITY" name="qualification_relationship"/>
+            <modified.object type="ENTITY" name="qualification_type"/>
+            <modified.object type="ENTITY" name="qualification_type_relationship"/>
+         </schema.additions>
+      </schema.changes>
+   </change_edition>
+   <change_edition version="4">
+      <description>
+         <p>
+			The following entity types had been introduced to support external element references
+			outside the local population of entity instances:
+		</p>
+         <ul>
+            <li>component_path_shape_aspect;</li>
+            <li>externally_defined_item_with_multiple_references;</li>
+            <li>generic_product_definition_reference;</li>
+            <li>product_definition_reference;</li>
+            <li>product_definition_reference_with_local_representation.</li>
+         </ul>
+         <p>
+			The following entity types had been introduced to support the the characterization of objects:
+		</p>
+         <ul>
+            <li>characterized_chain_based_item_within_representation;</li>
+            <li>characterized_item_within_representation;</li>
+            <li>characterized_product.</li>
+         </ul>
+         <p>
+			The following select types from the basic_attribute_schema had been converted into extensible selects
+			and then extended in several other schemas:
+		</p>
+         <ul>
+            <li>description_attribute_select;</li>
+            <li>id_attribute_select;</li>
+            <li>name_attribute_select;</li>
+            <li>role_select.</li>
+         </ul>
+      </description>
+      <schema.changes schema_name="action_schema"><!-- 4 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="acs_description_attribute_select"/>
+            <modified.object type="TYPE" name="acs_id_attribute_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="versioned_action_request"/>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="application_context_schema"><!-- 5 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="acs_description_attribute_select"/>
+            <modified.object type="TYPE" name="acs_id_attribute_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="approval_schema"><!-- 6 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="apps_description_attribute_select"/>
+            <modified.object type="TYPE" name="apps_role_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="basic_attribute_schema"><!-- 7 schema -->
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="description_attribute_select"/>
+            <modified.object type="REFERENCE_FROM" name="id_attribute_select"/>
+            <modified.object type="REFERENCE_FROM" name="name_attribute_select"/>
+            <modified.object type="REFERENCE_FROM" name="role_select"/>
+         </schema.modifications>
+         <schema.deletions>
+            <modified.object type="REFERENCE_FROM" name="action_schema"/>
+            <modified.object type="REFERENCE_FROM" name="application_context_schema"/>
+            <modified.object type="REFERENCE_FROM" name="approval_schema"/>
+            <modified.object type="REFERENCE_FROM" name="configuration_management_schema"/>
+            <modified.object type="REFERENCE_FROM" name="date_time_schema"/>
+            <modified.object type="REFERENCE_FROM" name="effectivity_schema"/>
+            <modified.object type="REFERENCE_FROM" name="external_reference_schema"/>
+            <modified.object type="REFERENCE_FROM" name="management_resources_schema"/>
+            <modified.object type="REFERENCE_FROM" name="measure_schema"/>
+            <modified.object type="REFERENCE_FROM" name="person_organization_schema"/>
+            <modified.object type="REFERENCE_FROM" name="product_definition_schema"/>
+            <modified.object type="REFERENCE_FROM" name="product_property_definition_schema"/>
+            <modified.object type="REFERENCE_FROM" name="product_property_representation_schema"/>
+            <modified.object type="REFERENCE_FROM" name="group_schema"/>
+            <modified.object type="REFERENCE_FROM" name="representation_schema"/>
+         </schema.deletions>
+      </schema.changes>
+      <schema.changes schema_name="date_time_schema"><!-- 10 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="dts_description_attribute_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="effectivity_schema"><!-- 12 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="effs_description_attribute_select"/>
+            <modified.object type="TYPE" name="effs_name_attribute_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+            <modified.object type="ENTITY" name="dated_effectivity"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="external_reference_schema"><!-- 14 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="ers_description_attribute_select"/>
+            <modified.object type="ENTITY" name="externally_defined_item_with_multiple_references"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="group_schema"><!-- 15 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="gs_id_attribute_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="management_resources_schema"><!-- 17 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="mrs_role_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="measure_schema"><!-- 18 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="s_name_attribute_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="person_organization_schema"><!-- 19 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="pos_description_attribute_select"/>
+            <modified.object type="TYPE" name="pos_id_attribute_select"/>
+            <modified.object type="TYPE" name="pos_name_attribute_select"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_definition_schema"><!-- 20 schema -->
+         <schema.additions>
+            <modified.object type="REFERENCE_FROM" name="product_structure_schema"/>
+            <modified.object type="TYPE" name="product_definition_or_reference"/>
+            <modified.object type="TYPE" name="pds_id_attribute_select"/>
+            <modified.object type="TYPE" name="pds_name_attribute_select"/>
+            <modified.object type="ENTITY" name="characterized_product"/>
+            <modified.object type="ENTITY" name="generic_product_definition_reference"/>
+            <modified.object type="ENTITY" name="product_definition_reference"/>
+            <modified.object type="ENTITY"
+                             name="product_definition_reference_with_local_representation"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+            <modified.object type="ENTITY" name="product_definition_relationship"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_property_definition_schema"><!-- 21 schema -->
+         <schema.additions>
+            <modified.object type="REFERENCE_FROM" name="product_structure_schema"/>
+            <modified.object type="TYPE" name="ppds_id_attribute_select"/>
+            <modified.object type="TYPE" name="internal_or_reflected_shape_aspect"/>
+            <modified.object type="TYPE" name="multi_or_next_assembly_usage_occurrence"/>
+            <modified.object type="ENTITY" name="component_path_shape_aspect"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+            <modified.object type="ENTITY" name="shape_aspect"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_property_representation_schema"><!-- 22 schema -->
+         <schema.additions>
+            <modified.object type="TYPE" name="pprs_name_attribute_select"/>
+            <modified.object type="TYPE" name="item_identified_representation_usage_definition"/>
+            <modified.object type="TYPE" name="item_identified_representation_usage_select"/>
+            <modified.object type="ENTITY"
+                             name="characterized_chain_based_item_within_representation"/>
+            <modified.object type="ENTITY" name="characterized_item_within_representation"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="basic_attribute_schema"/>
+            <modified.object type="REFERENCE_FROM" name="product_property_definition_schema"/>
+            <modified.object type="ENTITY" name="chain_based_item_identified_representation_usage"/>
+            <modified.object type="ENTITY" name="item_identified_representation_usage"/>
+            <modified.object type="ENTITY" name="representation_schema"/>
+            <modified.object type="ENTITY" name="shape_definition_representation"/>
+            <modified.object type="FUNCTION" name="get_directed_link"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="support_resource_schema"><!-- 25 schema -->
+         <schema.modifications>
+            <modified.object type="FUNCTION" name="type_check_function"/>
+         </schema.modifications>
+      </schema.changes>
+   </change_edition>
+   <change_edition version="5">
+      <schema.changes schema_name="basic_attribute_schema">
+         <schema.additions>
+            <modified.object type="ENTITY" name="aggregate_id_attribute"/>
+            <modified.object type="FUNCTION" name="get_aggregate_id_value"/>
+            <modified.object name="generic_attribute_list_select" type="TYPE"/>
+            <modified.object name="generic_attribute_select" type="TYPE"/>
+            <modified.object type="ENTITY" name="generic_attribute"/>
+            <modified.object type="ENTITY" name="generic_attribute_assignment"/>
+            <modified.object type="ENTITY" name="generic_attribute_list_assignment"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="measure_schema">
+         <schema.additions>
+            <modified.object type="ENTITY" name="positive_length_measure_with_unit"/>
+            <modified.object type="ENTITY" name="positive_plane_angle_measure_with_unit"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="person_organization_schema">
+         <schema.additions>
+            <modified.object name="pos_generic_attribute_select" type="TYPE"/>
+            <modified.object name="pos_generic_attribute_list_select" type="TYPE"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object name="basic_attribute_schema" type="REFERENCE_FROM"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_definition_schema">
+         <schema.additions>
+            <modified.object type="ENTITY" name="product_definition_relationship_relationship"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="TYPE" name="product_definition_or_reference"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_property_definition_schema">
+         <schema.additions>
+            <modified.object type="REFERENCE_FROM" name="product_property_representation_schema"/>
+            <modified.object type="REFERENCE_FROM" name="shape_dimension_schema"/>
+            <modified.object type="REFERENCE_FROM" name="shape_tolerance_schema"/>
+            <modified.object type="TYPE" name="characterized_item"/>
+            <modified.object name="constituent_shape_aspect" type="ENTITY"/>
+            <modified.object type="TYPE" name="shape_aspect_or_characterized_object"/>
+            <modified.object type="ENTITY" name="shape_aspect_occurrence"/>
+            <modified.object type="FUNCTION" name="acyclic_shape_aspect"/>
+            <modified.object type="FUNCTION" name="acyclic_shape_aspect_occurrence"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="REFERENCE_FROM" name="product_definition_schema"/>
+            <modified.object type="REFERENCE_FROM" name="product_structure_schema"/>
+            <modified.object type="TYPE" name="characterized_definition"/>
+            <modified.object type="TYPE" name="characterized_product_definition"/>
+            <modified.object type="TYPE" name="derived_property_select"/>
+            <modified.object type="ENTITY" name="general_property_association"/>
+            <modified.object type="ENTITY" name="shape_aspect"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="product_property_representation_schema">
+         <schema.additions>
+            <modified.object name="shape_representation_reference" type="ENTITY"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object type="ENTITY" name="item_identified_representation_usage"/>
+            <modified.object type="ENTITY" name="characterized_item_within_representation">
+               <description>The change corrected the EXPRESS layout to align to directives</description>
+            </modified.object>
+            <modified.object type="REFERENCE_FROM" name="representation_schema"/>
+            <modified.object name="shape_representation_relationship" type="ENTITY"/>
+         </schema.modifications>
+      </schema.changes>
+   </change_edition>
+   <change_edition version="6">
+      <schema.changes schema_name="action_schema">
+         <schema.additions>
+            <modified.object type="ENTITY" name="action_directive_relationship"/>
+            <modified.object type="ENTITY" name="directed_action_assignment"/>
+            <modified.object type="FUNCTION" name="acyclic_action_directive_relationship"/>
+            <modified.object name="as_role_select" type="TYPE"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object name="basic_attribute_schema" type="REFERENCE_FROM"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="basic_attribute_schema">
+         <description>ENTITY basic_attribute's description updated.</description>
+      </schema.changes>
+      <schema.changes schema_name="application_context_schema">
+         <schema.additions>
+            <modified.object type="REFERENCE_FROM" name="language_schema"/>
+            <modified.object type="REFERENCE_FROM" name="management_resources_schema"/>
+            <modified.object type="REFERENCE_FROM" name="person_organization_schema"/>
+            <modified.object type="TYPE" name="exchange_identification_context_select"/>
+            <modified.object type="ENTITY" name="dependent_product_definition_exchange_context"/>
+            <modified.object type="ENTITY"
+                             name="identification_dependent_product_definition_exchange_context"/>
+            <modified.object type="ENTITY"
+                             name="language_dependent_product_definition_exchange_context"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="effectivity_schema"><!-- 12 schema -->
+         <schema.additions>
+            <modified.object type="REFERENCE_FROM" name="action_schema"/>
+            <modified.object type="ENTITY" name="condition"/>
+            <modified.object type="ENTITY" name="conditional_configuration"/>
+            <modified.object type="ENTITY" name="conditional_effectivity"/>
+         </schema.additions>
+         <schema.modifications>
+            <modified.object name="effectivity_relationship" type="ENTITY"/>
+         </schema.modifications>
+      </schema.changes>
+      <schema.changes schema_name="language_schema">
+         <description>
+		Added new language schema
+	</description>
+         <schema.additions>
+            <modified.object type="REFERENCE_FROM" name="group_schema"/>
+            <modified.object type="ENTITY" name="language"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="management_resources_schema">
+         <schema.additions>
+            <modified.object type="TYPE" name="assignment_object_select"/>
+            <modified.object type="ENTITY" name="assignment_object_relationship"/>
+            <modified.object type="ENTITY" name="classification_assignment_relationship"/>
+            <modified.object type="ENTITY" name="external_identification_assignment_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_assignment_object_relationship"/>
+            <modified.object type="FUNCTION" name="acyclic_classification_assignment_relationship"/>
+            <modified.object type="FUNCTION"
+                             name="acyclic_external_identification_assignment_relationship"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="product_definition_schema">
+         <schema.additions>
+            <modified.object type="ENTITY" name="alternative_solution_relationship"/>
+            <modified.object type="ENTITY" name="final_solution"/>
+            <modified.object type="FUNCTION" name="acyclic_alternative_solution_relationship"/>
+         </schema.additions>
+      </schema.changes>
+      <schema.changes schema_name="product_property_definition_schema">
+         <description>Editorial enhancements.</description>
+      </schema.changes>
+      <schema.changes schema_name="product_property_representation_schema">
+         <schema.additions>
+            <modified.object type="REFERENCE_FROM" name="product_structure_schema"/>
+            <modified.object type="ENTITY"
+                             name="specified_occurrence_context_dependent_shape_representation"/>
+         </schema.additions>
+      </schema.changes>
+   </change_edition>
+</changes>
