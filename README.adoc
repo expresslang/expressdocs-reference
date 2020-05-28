@@ -25,7 +25,7 @@ The STEPmod source repository will contain two types of information:
 1. EXPRESS SCHEMAs in "`Annotated EXPRESS`". These are valid EXPRESS `.exp` files that contain remarks intended to describe EXPRESS code.
 2. Document files in Metanorma format. These are valid AsciiDoc files that generate valid ISO documents that can be compiled into the resulting SMRL.
 
-For Annotated EXPRESS files, they are organized as:
+For Annotated EXPRESS files, they are organized by `{resource-type}`:
 
 * `data/application_protocols`
 * `data/business_object_models`
@@ -33,7 +33,7 @@ For Annotated EXPRESS files, they are organized as:
 * `data/modules`
 * `data/resources`
 
-For Metanorma files, they are organized as:
+For Metanorma files, they are organized by `{doc-type}`:
 
 * `data/ap_docs`
 * `data/bom_docs`
@@ -41,14 +41,15 @@ For Metanorma files, they are organized as:
 * `data/module_docs`
 * `data/resource_docs`
 
+
 NOTE: These directories are modeled after the relationship between the current `resources/` and `resource_docs` directories.
 
 
-=== Annotated EXPRESS: single source data
+=== Single source data in Annotated EXPRESS
 
-The "`Annotated EXPRESS`" file containing AsciiDoc remarks (e.g., `entity.action.exp`) will be the single lexical source for both the EXPRESS and the associated descriptions.
+The "`Annotated EXPRESS`" file containing AsciiDoc remarks (e.g., `action_schema.exp`) will be the single lexical source for both the EXPRESS and the associated descriptions.
 
-This file is managed in the Git repo.
+These files are managed in the Git repo.
 
 The annotated EXPRESS syntax is typical EXPRESS with Metanorma syntax contained in the "`remark tag`" (`(* ... *)` remark tag syntax, 7.1.6.3 of ISO 10303-11) for annotations.
 
@@ -57,6 +58,7 @@ The SCHEMA `.exp` file is a valid EXPRESS file.
 A processor will generate the relevant xml files (e.g., the arm.xml and arm_descriptions.xml) from this source data.
 A further processor will generate the published target HTML files.
 A further processor will remove the annotation from the `.exp` files for public access.
+
 
 ////
 === Smaller amounts of text per file
@@ -75,40 +77,38 @@ There are no intermediate nodes in the tree.
 Because the snippet files are not valid EXPRESS, we will use the `.adoc` file name extension.
 ////
 
-=== Document files
 
-The `root file` for the document will contain an attribute declaring the document encoding to be Metanorma.
-The encoding applies to all schemata associated with the document, in addition to the main body of the document.
+=== Document files in Metanorma
 
-The `root file` for schemata contains the SCHEMA level contents plus includes for the leaf files.
+The "`root document file`" (e.g. `data/<resource-type>/<doc-name>/document.adoc`) is the entry point of the document.
 
-NOTE: The exact encoding protocol for the workflow process is an outcome of the prototype.
+//will contain an attribute declaring the document encoding to be Metanorma.
+//The encoding applies to all schemata associated with the document, in addition to the main body of the document.
+//The "`root file`" for schemata contains the SCHEMA level contents plus includes for the leaf files.
 
-==== Root file for resource document
-The file `stepmod/data/resource_docs/<doc_name>/resource.adoc` will be the "`root`" `.adoc` file for the resource document.
+//NOTE: The exact encoding protocol for the workflow process is an outcome of the prototype.
 
-EXAMPLE: The `root file` for the part 41 resource document is `stepmod/data/resource_docs/fundamentals_of_product_description_and_support.adoc`
+Resource documents::
+`stepmod/data/<doc-type>/<doc-name>/document.adoc` +
++
+EXAMPLE: The `root file` for the part 41 resource document is `stepmod/data/resource_docs/fundamentals_of_product_description_and_support/document.adoc`
 
-==== Root file for resource schema
-The location for the `root file` is: `stepmod/data/resource/<schema_name>/<schema_name>.adoc`
-The `root file` contains the SCHEMA level contents plus includes for the leaf files. There are no intermediate nodes in the tree.
+Resource schema::
+`stepmod/data/resource/<schema-name>/document.adoc`
++
+EXAMPLE: The `root file` for the action_schema is `stepmod/data/resources/action_schema/document.adoc`.
 
-EXAMPLE: The `root file` for the action_schema is `stepmod/data/resources/action_schema.adoc`.
+Module documents::
+`stepmod/data/modules/<doc-name>/document.adoc`
 
-==== Root file for module document
-The file `stepmod/data/modules/<doc_name>/module.adoc` will be the "`root`" `.adoc` file for the module document.
-
-==== Root file for ARM/MIM shortform schema
-The location for the "`root`" file is: `stepmod/data/modules/<doc_name>/<arm|mim>.adoc`
-
-The `root file` contains the SCHEMA level contents plus includes for the leaf files. There are no intermediate nodes in the tree.
-
-NOTE: There is no `.adoc` file for EXPRESS longform schemata.
+ARM/MIM shortform schema::
+`stepmod/data/modules/<doc-name>/<arm|mim>.adoc`
 
 
 === Informal Propositions
 
 The proposal includes support for IPs natively included in the Annotated EXPRESS file.
+
 
 === Easy to use EXPRESS cross-references
 
@@ -121,9 +121,11 @@ NOTE: Which tool converts the short-hand link to that in descriptions.xml is und
 
 NOTE: Because Metanorma is a command line tool and not a text editor, an external application is needed to provide look up for the user to populate the short-hand cross-refs.
 
+
 === Git hosting
 
 Yes
+
 
 === Injection into workflow
 
@@ -131,11 +133,12 @@ This tooling operates on the very front-end of the development toolchain so no i
 addition.
 Use of EXPRESS-G authoring tools based on the cumulative EXPRESS schema file will continue.
 
-== Prototype
+
+== Prototype provided in this repository
 
 === General
 
-The prototype was created by hand converting an action_schema descriptions.xml file to Metanorma AsciiDoc.
+The prototype was created by hand converting the EXPRESS `action_schema` `descriptions.xml` file to Metanorma AsciiDoc.
 Each EXPRESS declaration was partitioned into an individual AsciiDoc file.
 One for the SCHEMA.
 One for each of the other declarations.
@@ -144,7 +147,7 @@ The file names reflect the types and names of EXPRESS declarations to make the f
 WARNING: This is a prototype from the developer view point.
 Actual long-term concrete syntax will be determined upon further discussion and requirements gathered from prototype implementation.
 
-NOTE: Clutter avoidance in the <schema_name> directory warrants putting the individual EXPRESS files in a subdirectory.
+NOTE: Clutter avoidance in the <schema-name> directory warrants putting the individual EXPRESS files in a subdirectory.
 We may or may not get to this in the prototype.
 
 === Conceptual prototype workflow viewing
