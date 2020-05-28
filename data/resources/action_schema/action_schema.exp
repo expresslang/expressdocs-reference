@@ -124,23 +124,23 @@ Change, distilling, design, a process to drill a hole, and a task such as traini
 *)
 
 (*"action.name"
-the express_ref:[support_resource_schema.label] 
+the express_ref:[support_resource_schema.label]
 by which the *action* is known.
 *)
 
 (*"action.description"
-the express_ref:[support_resource_schema.text] 
-that characterizes the *action*. 
+the express_ref:[support_resource_schema.text]
+that characterizes the *action*.
 The value of the attribute need not be specified.
 *)
 
 (*"action.chosen_method"
-the express_ref:[action_schema.action_method] 
+the express_ref:[action_schema.action_method]
 that specifies the procedure selected to carry out the *action* and a description of the results of that *action*.
 *)
 
 (*"action.id"
-the express_ref:[support_resource_schema.identifier] 
+the express_ref:[support_resource_schema.identifier]
 that distinguishes the *action*.
 
 NOTE: This attribute is an enhancement to the definition of *action* using a method that is upwardly compatible
@@ -157,18 +157,18 @@ partners sharing this information.
 
 (*"action.wr:WR1"
 
-Each *action* shall be the 
+Each *action* shall be the
 express_ref:[basic_attribute_schema.id_attribute.identified_item]
-in at most one 
+in at most one
 express_ref:[basic_attribute_schema.id_attribute].
 
-NOTE: The express_ref:[basic_attribute_schema.id_attribute] 
-data type is defined in 
-express_ref:[basic_attribute_schema] 
+NOTE: The express_ref:[basic_attribute_schema.id_attribute]
+data type is defined in
+express_ref:[basic_attribute_schema]
 of this part of ISO 10303.
 
 NOTE: A template for constraining the population of the entity data types defined in the
-express_ref:[basic_attribute_schema] 
+express_ref:[basic_attribute_schema]
 is described in annex E.
 
 *)
