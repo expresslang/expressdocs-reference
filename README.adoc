@@ -7,6 +7,7 @@
 * Retain current publication workflow based on XML.
 * Retain current EXPRESS development workflow based on EXPRESS tooling.
 
+NOTE: This project does not deal with the SysML work in StepLib.
 
 == System characteristics
 
@@ -37,6 +38,9 @@ The STEPmod source repository will contain two types of information:
 (DOCUMENTS) Metanorma documents are located in a single directory:
 
 * `data/documents`
+
+NOTE: `business_object_models` have been withdrawn, but are considered
+here still part of the SMRL for generation.
 
 
 === Single source data in Annotated EXPRESS
@@ -317,7 +321,7 @@ NOTE: The express_model.dtd references a "`description`" XML element. The covera
 `eengine --tagged_xml -mode resource -schema aic_curve_swept_solid -stepmod ../../..`
 
 ==== XML output results for EXPRESS keyword (specified in ISO 10303-11)
- 
+
 The `<remark_tag>` should be provided in the context of the EXPRESS declaration. The layout follows the EXPRESS keyword.
 
 [source]
@@ -350,7 +354,7 @@ The `<remark_tag>` should be provided in the context of the EXPRESS declaration.
 ----
   <where label="IP1">
     <remark_tag>
-     The domain shall be valid.	
+     The domain shall be valid.
     </remark_tag>
   </where>
 ----
