@@ -21,7 +21,7 @@ NOTE: This project does not deal with the SysML work in StepLib.
 * Injection into workflow
 
 
-=== Repository
+=== STEPmod source repository
 
 The STEPmod source repository will contain two types of information:
 
@@ -43,7 +43,9 @@ NOTE: `business_object_models` have been withdrawn, but are considered
 here still part of the SMRL for generation.
 
 
-=== Single source data in Annotated EXPRESS
+=== Annotated EXPRESS (EXPRESS with annotations)
+
+(Input to Express Engine)
 
 The "`Annotated EXPRESS`" file containing AsciiDoc remarks (e.g., `action_schema.exp`) will be the single lexical source for both the EXPRESS and the associated descriptions.
 
@@ -53,7 +55,7 @@ The annotated EXPRESS syntax is typical EXPRESS with Metanorma syntax contained 
 
 The schema `.exp` file is a valid EXPRESS file.
 
-A processor will generate the relevant xml files (e.g., the arm.xml and arm_descriptions.xml) from this source data.
+A processor will generate the relevant xml files (e.g., the `arm.xml` and `arm_descriptions.xml`) from this source data.
 A further processor will generate the published target HTML files.
 A further processor will remove the annotation from the `.exp` files for public access.
 
@@ -164,9 +166,12 @@ Because the snippet files are not valid EXPRESS, we will use the `.adoc` file na
 ////
 
 
-=== Document files in Metanorma
+=== Standard documents
+
+(Input to Metanorma)
 
 The "`root document file`" (e.g. `data/documents/<doc-type>/<doc-name>/document.adoc`) is the entry point of the document.
+Each root file contains all metadata designated for an ISO International Standard document.
 
 //will contain an attribute declaring the document encoding to be Metanorma.
 //The encoding applies to all schemata associated with the document, in addition to the main body of the document.
@@ -195,14 +200,18 @@ Resource documents::
 EXAMPLE: The part 41 resource document is located at `data/documents/resources/fundamentals_of_product_description_and_support/document.adoc`
 
 
+==== Direct access to EXPRESS data model elements
 
-
-==== Easy to use EXPRESS cross-references
-
-The Metanorma `express_ref:[schema.name]` syntax is used to refer to a link to the EXPRESS declaration of `schema.name`.
+The Metanorma `express_ref:[schema.name]` syntax (TBD) is used to refer to a link to the EXPRESS declaration of `schema.name`.
 The cross references make use of pre-compiled XML indices for speed as needed.
 
-NOTE: Exact syntax needs more work...
+A Metanorma data model plugin will be used to integrate with Express Engine:
+
+[source,adoc]
+------
+lutaml:[express.schema.name]
+lutaml:[express(schema_name).entity]
+------
 
 NOTE: Which tool converts the short-hand link to that in `resource.xml` (and `application_protocol.xml`, etc.) is undetermined at this time but is part of the prototype.
 
