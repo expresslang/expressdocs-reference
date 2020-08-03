@@ -314,9 +314,11 @@ NOTE: Running Metanorma on command line for the `fundamentals_of_product_descrip
 == Implementation changes needed in Express Engine
 
 Provide a tagged XML output option.
-Resolve the location embedded in the remark tag in the "`remark tag`" with concrete XML element "`<remark_tag> `".
+The content of the EXPRESS "`remark tag`" should be mapped to the existing XML element
+`<description>` from `express_model.dtd`.
 
-NOTE: The express_model.dtd references a "`description`" XML element. The coverage of that DTD will need to be verified.
+NOTE: It was confirmed in the TF1 call (20200803) that there are no side effects with using the
+existing XSL stylesheet; i.e. a populated `<description>` tag does not produce any side effects.
 
 [source]
 ----
@@ -331,29 +333,29 @@ NOTE: The express_model.dtd references a "`description`" XML element. The covera
 
 ==== XML output results for EXPRESS keyword (specified in ISO 10303-11)
 
-The `<remark_tag>` should be provided in the context of the EXPRESS declaration. The layout follows the EXPRESS keyword.
+The `<description>` should be provided in the context of the EXPRESS declaration. The layout follows the EXPRESS keyword.
 
 [source]
 ----
 <entity name="curve_swept_solid_shape_representation" supertypes="shape_representation">
-  <remark_tag>
+  <description>
  		A *curve_swept_solid_shape_representation* is a type of
  		express_ref:[product_property_representation_schema.shape_representation]
     ...
-  </remark_tag>
+  </description>
   <where expression="SIZEOF (QUERY (it &lt;* SELF.items |&#10;..." label="WR1">
-    <remark_tag>
+    <description>
      	The
      	express_ref:[representation_schema.representation.items]
       ...
-    </remark_tag>
+    </description>
   </where>
   <where expression="SIZEOF (QUERY (it &lt;* SELF.items |&#10; &gt; 0" label="WR2">
-    <remark_tag>
+    <description>
      	At least one of the
      	express_ref:[representation_schema.representation.items]
       ...
-    </remark_tag>
+    </description>
   </where>
 ----
 
@@ -362,9 +364,9 @@ The `<remark_tag>` should be provided in the context of the EXPRESS declaration.
 [source]
 ----
   <where label="IP1">
-    <remark_tag>
+    <description>
      The domain shall be valid.
-    </remark_tag>
+    </description>
   </where>
 ----
 
