@@ -1,4 +1,4 @@
-= Lutaml express
+= Metanorma with LutaML and EXPRESS
 :docnumber: 10303
 :tc-docnumber: 10446
 :partnumber: 41
