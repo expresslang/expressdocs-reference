@@ -90,8 +90,9 @@ image::action_schemaexpg2.xml[]
 	an express_ref:[action_schema.action],
 	or an express_ref:[action_schema.action_method].
 
-  NOTE: This specifies the use of an
+NOTE: This specifies the use of an
 	express_ref:[action_schema.action_resource].
+
 *)
 
 
@@ -252,7 +253,7 @@ entity data types that defines the expected results.
 
 (*"action_method"
 An *action_method* is the definition of an activity.
-This definition includes the activity’s objectives and effects.
+This definition includes the activity's objectives and effects.
 
 NOTE: This definition may be the basis for actions or the solution for action requests.
 
