@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+<?xml-stylesheet 
+  type="text/xsl" 
+  href="../../../xsl/descriptions.xsl"?>
+<!DOCTYPE ext_descriptions SYSTEM "../../../dtd/description.dtd">
+<ext_descriptions module_directory="basic_attribute_schema" schema_file="basic_attribute_schema.xml" describe.selects="YES" describe.subtype_constraints="YES" rcs.date="$Date: 2017/10/09 09:33:10 $" rcs.revision="$Revision: 1.8 $">
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Schema: basic_attribute_schema
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<ext_description linkend="basic_attribute_schema">
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Type: description_attribute_select 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.description_attribute_select"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.description_attribute_select">
+	A <b>description_attribute_select</b> specifies those objects that may be assigned a descriptive text.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Type: generic_attribute_list_select 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_list_select"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_list_select">
+	A <b>generic_attribute_list_select</b> specifies those objects that may be assigned a generic attribute list.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Type: generic_attribute_select 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_select"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_select">
+	A <b>generic_attribute_select</b> specifies those objects that may be assigned a generic attribute.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Type: id_attribute_select 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.id_attribute_select"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.id_attribute_select">
+	An <b>id_attribute_select</b> specifies those objects that may be assigned an identifier.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Type: name_attribute_select 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.name_attribute_select"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.name_attribute_select">
+	A <b>name_attribute_select</b> specifies those objects that may be assigned a name.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Type: role_select 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.role_select"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.role_select">
+	A <b>role_select</b> specifies those objects that may be assigned a role.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: aggregate_id_attribute 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.aggregate_id_attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.aggregate_id_attribute">
+	An <b>aggregate_id_attribute</b> is used for the case where there is more than one product data element for a specific identifier.
+	<note number="1">
+		This entity provides the capability to add an aggregate id attribute to product data using a method that is upwardly
+		compatible with ISO 10303-41:1994 and ISO 10303-43:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: aggregate_id_attribute  Attribute: attribute_value 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.id_attribute.attribute_value"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.aggregate_id_attribute.attribute_value">
+<p>
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.identifier"/>
+	that distinguishes the <b>identified_item</b>.
+</p>
+<note number="2">
+	The context in which <b>attribute_value</b> is used as a discriminating characteristic can be identified in an
+	annotated Express schema that uses or specializes this entity, or be default, in an agreement of common
+	understanding between partners sharing this information.
+</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: aggregate_id_attribute  Attribute: identified_item 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.aggregate_id_attribute.identified_item"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.aggregate_id_attribute.identified_item">
+	the collection of items that are identified.
+</ext_description>
+
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: description_attribute  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.description_attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.description_attribute">
+	A <b>description_attribute</b> is the assignment of a descriptive text string to product data.
+	<note>
+		This entity provides the capability to add a description attribute to product data using a method that is
+		upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: description_attribute  Attribute: attribute_value 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.description_attribute.attribute_value"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.description_attribute.attribute_value">
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.text"/> 
+	that characterizes the <b>described_item</b>.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: description_attribute  Attribute: described_item 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.description_attribute.described_item"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.description_attribute.described_item">
+	the item that is described.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute">
+	A <b>generic_attribute</b> is the declaration of a named attribute as a text string to enable it to be associated
+        with product data. This capability shall not be used to replace more specific assignment capabilities if both are available to a specified target.
+	<note>
+		This entity provides the capability to define a generic attribute associated with product data using a
+                  method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.
+	</note>
+	<example>
+		A person entity data type instance is included in both 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.generic_attribute_select"/> 
+		and 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.name_attribute_select"/>. 
+		The name attribute of person is provided for the name value.
+	</example>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute  Attribute: attribute_name 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute.attribute_name"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute.attribute_name">
+<p>
+	the
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/>
+	used to name the <b>generic_attribute</b>.
+</p>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute  Attribute: attribute_value 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute.attribute_value"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute.attribute_value">
+<p>
+	the
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.text"/>
+	that characterizes the <b>generic_attribute</b>.
+</p>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute_assignment  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_assignment"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_assignment">
+	A <b>generic_attribute_assignment</b> is the assignment of a generic attribute to element of product data.
+	<note>
+		This entity provides the capability to add a generic attribute to product data using a method that is upwardly
+		compatible with ISO 10303-41:1994 and ISO 10303-43:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute_assignment  Attribute: attribute 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_assignment.attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_assignment.attribute">
+<p>
+	the 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.generic_attribute"/>
+	to be associated with the product data.
+</p>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute_assignment  Attribute: item_with_attribute 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_assignment.item_with_attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_assignment.item_with_attribute">
+<p>
+	the item to which the attribute is assigned.
+</p>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute_list_assignment  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_list_assignment"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_list_assignment">
+	A <b>generic_attribute_list_assignment</b> is the assignment of a named list of generic attributes to element
+        of product data. 
+	<note>
+		This entity data type provides a capability to add a named list of generic attributes to certain product data
+                  entity data types using a method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994,
+                  and ISO 10303-44:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute_list_assignment  Attribute: attribute_name 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_list_assignment.attribute_name"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_list_assignment.attribute_name">
+<p>
+         the
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/>
+	used to name the list of generic attributes.
+</p>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute_list_assignment  Attribute: attributes 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_list_assignment.attributes"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_list_assignment.attributes">
+<p>
+         the list of 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.generic_attribute"/>s
+	that are assigned to the element of product data.
+</p>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: generic_attribute_list_assignment  Attribute: item_with_attribute 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.generic_attribute_list_assignment.item_with_attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.generic_attribute_list_assignment.item_with_attribute">
+<p>
+	the item to which the attributes are assigned.
+</p>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: id_attribute  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.id_attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.id_attribute">
+	An <b>id_attribute</b> is the assignment of an identifier to product data.
+	<note number="1">
+		This entity provides the capability to add an id attribute to product data using a method that is upwardly
+		compatible with ISO 10303-41:1994 and ISO 10303-43:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: id_attribute  Attribute: attribute_value 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.id_attribute.attribute_value"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.id_attribute.attribute_value">
+<p>
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.identifier"/>
+	that distinguishes the <b>identified_item</b>.
+</p>
+<note number="2">
+	The context in which <b>attribute_value</b> is used as a discriminating characteristic can be identified in an
+	annotated Express schema that uses or specializes this entity, or be default, in an agreement of common
+	understanding between partners sharing this information.
+</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: id_attribute  Attribute: identified_item 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.id_attribute.identified_item"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.id_attribute.identified_item">
+	the item that is identified.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: name_attribute  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.name_attribute"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.name_attribute">
+	A <b>name_attribute</b> is the assignment of a label by which the product data is known.
+	<note>
+		This entity provides the capability to add a name attribute to product data using a method that is upwardly
+		compatible with ISO 10303-41:1994 and ISO 10303-44:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: name_attribute  Attribute: attribute_value 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.name_attribute.attribute_value"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.name_attribute.attribute_value">
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	by which the <b>named_item</b> is known.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: name_attribute  Attribute: named_item 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.name_attribute.named_item"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.name_attribute.named_item">
+	the item to which the name is applied.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: object_role  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.object_role"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.object_role">
+	An <b>object_role</b> is a specification of a role for the association of management type data with other aspects of product
+	data and a description of that role.
+	<note>
+		This entity provides the capability to add a role attribute to an association of management type data with
+		other aspects of product data using a method that is upwardly compatible with ISO 10303-41:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: object_role  Attribute: description 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.object_role.description"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.object_role.description">
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.text"/> 
+	that characterizes the <b>object_role</b>. 
+	The value of the attribute need not be specified.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: object_role  Attribute: name 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.object_role.name"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.object_role.name">
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	by which the <b>object_role</b> is known.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: role_association  
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.role_association"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.role_association">
+	A <b>role_association</b> is the assignment of an 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.object_role"/> 
+	to an association of management type data with
+	other aspects of product data.
+	<note>
+		This entity data type provides a capability to add a role attribute to certain entity data types that specify
+		associations between product data and administrative or management data.
+		Such entity data types are specified in the
+		<express_ref linkend="management_resources_schema:ir_express:management_resources_schema">management_resources_schema</express_ref>.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: role_association  Attribute: item_with_role 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.role_association.item_with_role"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.role_association.item_with_role">
+	the item to which a role is assigned.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: basic_attribute_schema  Entity: role_association  Attribute: role 
+   <express_ref linkend="basic_attribute_schema::basic_attribute_schema.role_association.role"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="basic_attribute_schema.role_association.role">
+	the 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.object_role"/> 
+	that specifies the purpose of the association of the <b>role_association</b> with product data.
+</ext_description>
+
+<!-- +++++++++++ get_description_value +++++++++++ -->
+<ext_description linkend="basic_attribute_schema.get_description_value">
+	The <b>get_description_value</b> function accepts an object to which a descriptive text string may be assigned
+	and returns this description if present.
+	<p>
+		If a 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.description_attribute"/> 
+		references the object, the function will return the value of the 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.description_attribute.attribute_value"/>
+		attribute of this 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.description_attribute"/>. 
+		Otherwise, the indeterminate value will be returned.
+	</p>
+</ext_description>
+<!-- obj -->
+<ext_description linkend="basic_attribute_schema.get_description_value.obj">
+	(input) the object for which a 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.text"/> 
+	is determined. 
+	This is an input to the function.
+</ext_description>
+<!-- +++++++++++ get_aggregate_id_value +++++++++++ -->
+<ext_description linkend="basic_attribute_schema.get_aggregate_id_value">
+	The <b>get_aggregate_id_value</b> function accepts an object to which an identifier may be assigned and returns this identifier if present.
+	<p>
+		If an 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.aggregate_id_attribute"/> 
+		references the object, the function will return the value of the 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.aggregate_id_attribute.attribute_value"/> 
+		attribute of this 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.aggregate_id_attribute"/>. 
+		Otherwise, the indeterminate value will be returned.
+	</p>
+</ext_description>
+<!-- obj -->
+<ext_description linkend="basic_attribute_schema.get_aggregate_id_value.obj">
+	(input) the object for which an 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.identifier"/> 
+	is determined. 
+	This is an input to the function.
+</ext_description>
+<!-- +++++++++++ get_id_value +++++++++++ -->
+<ext_description linkend="basic_attribute_schema.get_id_value">
+	The <b>get_id_value</b> function accepts an object to which an identifier may be assigned and returns this identifier if present.
+	<p>
+		If an 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.id_attribute"/> 
+		references the object, the function will return the value of the 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.id_attribute.attribute_value"/> 
+		attribute of this 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.id_attribute"/>. 
+		Otherwise, the indeterminate value will be returned.
+	</p>
+</ext_description>
+<!-- obj -->
+<ext_description linkend="basic_attribute_schema.get_id_value.obj">
+	(input) the object for which an 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.identifier"/> 
+	is determined. 
+	This is an input to the function.
+</ext_description>
+
+<!-- +++++++++++ get_name_value +++++++++++ -->
+<ext_description linkend="basic_attribute_schema.get_name_value">
+	The <b>get_name_value</b> function accepts an object to which a label may be assigned and returns this label if present.
+	<p>
+		If a 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.name_attribute"/> 
+		references the object, the function will return the value of the 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.name_attribute.attribute_value"/>
+		attribute of this 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.name_attribute"/>. 
+		Otherwise, the indeterminate value will be returned.
+	</p>
+</ext_description>
+<!-- obj -->
+<ext_description linkend="basic_attribute_schema.get_name_value.obj">
+	the object for which a 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	is determined. 
+	This is an input to the function.
+</ext_description>
+
+<!-- +++++++++++ get_role +++++++++++ -->
+<ext_description linkend="basic_attribute_schema.get_role">
+	The <b>get_role</b> function accepts an object to which a role may be assigned and returns this role if present.
+	<p>
+		If a 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.role_association"/> 
+		references the object, the function will return the 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.object_role"/> 
+		of the 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.role_association.role"/>  
+		attribute of this
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.role_association"/>. 
+		Otherwise, the indeterminate value will be returned.
+	</p>
+</ext_description>
+<!-- obj -->
+<ext_description linkend="basic_attribute_schema.get_role.obj">
+	(input) the object for which an 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.object_role"/> 
+	is determined. 
+	This is an input to the function.
+</ext_description>
+</ext_descriptions>

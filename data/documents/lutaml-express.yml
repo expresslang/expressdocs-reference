@@ -1,0 +1,28 @@
+directives:
+  - documents-inline
+bibdata:
+  title: Lutaml Express sample collection
+  type: collection
+  docid:
+    type: iso
+    id: 10303
+  copyright:
+    owner:
+      name: International Standards Organization
+      abbreviation: ISO
+    from: 2021
+manifest:
+  level: brochure
+  title: Documents
+  docref:
+    - fileref: basic.xml
+      identifier: 10303-1
+    - fileref: lutaml-express.xml
+      identifier: 10303-41
+prefatory-content:
+|
+
+
+final-content:
+|
+

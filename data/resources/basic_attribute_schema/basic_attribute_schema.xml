@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/express.xsl"?><!DOCTYPE express SYSTEM "../../../dtd/express.dtd">
+<express description.file="descriptions.xml" language_version="2" rcs.date="$Date$" rcs.revision="$Revision$" reference="ISO 10303-41">
+   <application name="JSDAI" owner="LKSoft" source="basic_attribute_schema schema_instance" url="www.lksoft.com" version="4.0 beta"/>
+   <schema name="basic_attribute_schema">
+      <interface kind="reference" schema="support_resource_schema">
+         <interfaced.item name="identifier"/>
+         <interfaced.item name="label"/>
+         <interfaced.item name="text"/>
+      </interface>
+      <type name="description_attribute_select">
+         <select extensible="YES" genericentity="YES"/>
+      </type>
+      <type name="generic_attribute_list_select">
+         <select extensible="YES" genericentity="YES"/>
+      </type>
+      <type name="generic_attribute_select">
+         <select extensible="YES" genericentity="YES"/>
+      </type>
+      <type name="id_attribute_select">
+         <select extensible="YES" genericentity="YES"/>
+      </type>
+      <type name="name_attribute_select">
+         <select extensible="YES" genericentity="YES"/>
+      </type>
+      <type name="role_select">
+         <select extensible="YES" genericentity="YES"/>
+      </type>
+      <entity name="aggregate_id_attribute">
+         <explicit name="attribute_value">
+            <typename name="identifier"/>
+         </explicit>
+         <explicit name="identified_item">
+            <aggregate lower="1" type="SET" upper="?"/>
+            <typename name="id_attribute_select"/>
+         </explicit>
+      </entity>
+      <entity name="description_attribute">
+         <explicit name="attribute_value">
+            <typename name="text"/>
+         </explicit>
+         <explicit name="described_item">
+            <typename name="description_attribute_select"/>
+         </explicit>
+      </entity>
+      <entity name="generic_attribute">
+         <explicit name="attribute_name">
+            <typename name="label"/>
+         </explicit>
+         <explicit name="attribute_value">
+            <typename name="text"/>
+         </explicit>
+      </entity>
+      <entity name="generic_attribute_assignment">
+         <explicit name="attribute">
+            <typename name="generic_attribute"/>
+         </explicit>
+         <explicit name="item_with_attribute">
+            <typename name="generic_attribute_select"/>
+         </explicit>
+      </entity>
+      <entity name="generic_attribute_list_assignment">
+         <explicit name="attribute_name">
+            <typename name="label"/>
+         </explicit>
+         <explicit name="attributes">
+            <aggregate lower="1" type="LIST" upper="?"/>
+            <typename name="generic_attribute"/>
+         </explicit>
+         <explicit name="item_with_attribute">
+            <typename name="generic_attribute_list_select"/>
+         </explicit>
+      </entity>
+      <entity name="id_attribute">
+         <explicit name="attribute_value">
+            <typename name="identifier"/>
+         </explicit>
+         <explicit name="identified_item">
+            <typename name="id_attribute_select"/>
+         </explicit>
+      </entity>
+      <entity name="name_attribute">
+         <explicit name="attribute_value">
+            <typename name="label"/>
+         </explicit>
+         <explicit name="named_item">
+            <typename name="name_attribute_select"/>
+         </explicit>
+      </entity>
+      <entity name="object_role">
+         <explicit name="name">
+            <typename name="label"/>
+         </explicit>
+         <explicit name="description" optional="YES">
+            <typename name="text"/>
+         </explicit>
+      </entity>
+      <entity name="role_association">
+         <explicit name="role">
+            <typename name="object_role"/>
+         </explicit>
+         <explicit name="item_with_role">
+            <typename name="role_select"/>
+         </explicit>
+      </entity>
+      <function name="get_aggregate_id_value">
+         <parameter name="obj">
+            <typename name="id_attribute_select"/>
+         </parameter>
+         <typename name="identifier"/>
+         <algorithm>LOCAL
+      aggregate_id_bag : BAG OF aggregate_id_attribute := (USEDIN(obj, 'BASIC_ATTRIBUTE_SCHEMA.' + 'AGGREGATE_ID_ATTRIBUTE.' + 'IDENTIFIED_ITEM'));
+    END_LOCAL;
+
+    IF SIZEOF(aggregate_id_bag) = 1 THEN
+      RETURN (aggregate_id_bag[1].attribute_value);
+    ELSE
+      RETURN (?);
+    END_IF;</algorithm>
+      </function>
+      <function name="get_description_value">
+         <parameter name="obj">
+            <typename name="description_attribute_select"/>
+         </parameter>
+         <typename name="text"/>
+         <algorithm>LOCAL
+      description_bag : BAG OF description_attribute := (USEDIN(obj, 'BASIC_ATTRIBUTE_SCHEMA.' + 'DESCRIPTION_ATTRIBUTE.' + 'DESCRIBED_ITEM'));
+    END_LOCAL;
+
+    IF SIZEOF(description_bag) = 1 THEN
+      RETURN (description_bag[1].attribute_value);
+    ELSE
+      RETURN (?);
+    END_IF;</algorithm>
+      </function>
+      <function name="get_id_value">
+         <parameter name="obj">
+            <typename name="id_attribute_select"/>
+         </parameter>
+         <typename name="identifier"/>
+         <algorithm>LOCAL
+      id_bag : BAG OF id_attribute := (USEDIN(obj, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.' + 'IDENTIFIED_ITEM'));
+    END_LOCAL;
+
+    IF SIZEOF(id_bag) = 1 THEN
+      RETURN (id_bag[1].attribute_value);
+    ELSE
+      RETURN (?);
+    END_IF;</algorithm>
+      </function>
+      <function name="get_name_value">
+         <parameter name="obj">
+            <typename name="name_attribute_select"/>
+         </parameter>
+         <typename name="label"/>
+         <algorithm>LOCAL
+      name_bag : BAG OF name_attribute := (USEDIN(obj, 'BASIC_ATTRIBUTE_SCHEMA.' + 'NAME_ATTRIBUTE.' + 'NAMED_ITEM'));
+    END_LOCAL;
+
+    IF SIZEOF(name_bag) = 1 THEN
+      RETURN (name_bag[1].attribute_value);
+    ELSE
+      RETURN (?);
+    END_IF;</algorithm>
+      </function>
+      <function name="get_role">
+         <parameter name="obj">
+            <typename name="role_select"/>
+         </parameter>
+         <typename name="object_role"/>
+         <algorithm>LOCAL
+      role_bag : BAG OF role_association := (USEDIN(obj, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ROLE_ASSOCIATION.' + 'ITEM_WITH_ROLE'));
+    END_LOCAL;
+
+    IF SIZEOF(role_bag) = 1 THEN
+      RETURN (role_bag[1].role);
+    ELSE
+      RETURN (?);
+    END_IF;</algorithm>
+      </function>
+   </schema>
+</express>
