@@ -32,10 +32,11 @@
 
 == Schemas
 
-[lutaml, ../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp, repo]
+[lutaml, ../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp, repo, leveloffset=+2]
 ---
 {% for schema in repo.schemas %}
 [[{{schema.id}}]]
+[type="express-schema"]
 === {{ schema.id }}
 
 [source%unnumbered]
@@ -114,11 +115,10 @@
 
 {{ entity.remarks }}
 
-{% if entity.explicit_attributes.size > 0 %}
-[level=6]
-====== Explicit Attributes
+{% if entity.attributes.size > 0 %}
+====== Attributes
 
-{% for attribute in entity.explicit_attributes %}
+{% for attribute in entity.attributes %}
 [[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
 [level=7]
 ====== {{ attribute.id }}
@@ -132,46 +132,6 @@
 
 {% endfor %}
 {% endif %}
-
-{% if entity.derived_attributes.size > 0 %}
-[level=6]
-====== Derived Attributes
-
-{% for attribute in entity.derived_attributes %}
-[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
-====== {{ attribute.id }}
-
-[source%unnumbered]
--- 
-{{ attribute.sourcecode }}
--- 
-
-{{ attribute.remarks }}
-
-{% endfor %}
-{% endif %}
-
-
-{% if entity.inverse_attributes.size > 0 %}
-[level=6]
-====== Inverse Attributes
-
-{% for attribute in entity.inverse_attributes %}
-[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
-====== {{ attribute.id }}
-
-[source%unnumbered]
--- 
-{{ attribute.sourcecode }}
--- 
-
-{{ attribute.remarks }}
-
-{% endfor %}
-{% endif %}
-
 
 
 {% endfor %}
@@ -674,10 +634,11 @@
 
 
 
-[lutaml, ../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo]
+[lutaml, ../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+2]
 ---
 {% for schema in repo.schemas %}
 [[{{schema.id}}]]
+[type="express-schema"]
 === {{ schema.id }}
 
 [source%unnumbered]
@@ -756,11 +717,10 @@
 
 {{ entity.remarks }}
 
-{% if entity.explicit_attributes.size > 0 %}
-[level=6]
-====== Explicit Attributes
+{% if entity.attributes.size > 0 %}
+====== Attributes
 
-{% for attribute in entity.explicit_attributes %}
+{% for attribute in entity.attributes %}
 [[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
 [level=7]
 ====== {{ attribute.id }}
@@ -774,47 +734,6 @@
 
 {% endfor %}
 {% endif %}
-
-{% if entity.derived_attributes.size > 0 %}
-[level=6]
-====== Derived Attributes
-
-{% for attribute in entity.derived_attributes %}
-[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
-====== {{ attribute.id }}
-
-[source%unnumbered]
--- 
-{{ attribute.sourcecode }}
--- 
-
-{{ attribute.remarks }}
-
-{% endfor %}
-{% endif %}
-
-
-{% if entity.inverse_attributes.size > 0 %}
-[level=6]
-====== Inverse Attributes
-
-{% for attribute in entity.inverse_attributes %}
-[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
-====== {{ attribute.id }}
-
-[source%unnumbered]
--- 
-{{ attribute.sourcecode }}
--- 
-
-{{ attribute.remarks }}
-
-{% endfor %}
-{% endif %}
-
-
 
 {% endfor %}
 {% endif %}

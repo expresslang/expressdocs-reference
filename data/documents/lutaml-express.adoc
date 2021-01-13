@@ -32,10 +32,11 @@
 
 == Schemas
 
-[lutaml, ../../../resources/action_schema/action_schema.exp, repo]
+[lutaml, ../../../resources/action_schema/action_schema.exp, repo, leveloffset=+2]
 ---
 {% for schema in repo.schemas %}
 [[{{schema.id}}]]
+[type="express-schema"]
 === {{ schema.id }}
 
 [source%unnumbered]
@@ -114,32 +115,12 @@
 
 {{ entity.remarks }}
 
-{% if entity.explicit_attributes.size > 0 %}
-[level=6]
-====== Explicit Attributes
+{% if entity.attributes.size > 0 %}
+====== Attributes
 
-{% for attribute in entity.explicit_attributes %}
+{% for attribute in entity.attributes %}
 [[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
-====== {{ attribute.id }}
-
-[source%unnumbered]
--- 
-{{ attribute.sourcecode }}
---
-
-{{ attribute.remarks }}
-
-{% endfor %}
-{% endif %}
-
-{% if entity.derived_attributes.size > 0 %}
 [level=6]
-====== Derived Attributes
-
-{% for attribute in entity.derived_attributes %}
-[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
 ====== {{ attribute.id }}
 
 [source%unnumbered]
@@ -151,27 +132,6 @@
 
 {% endfor %}
 {% endif %}
-
-
-{% if entity.inverse_attributes.size > 0 %}
-[level=6]
-====== Inverse Attributes
-
-{% for attribute in entity.inverse_attributes %}
-[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
-====== {{ attribute.id }}
-
-[source%unnumbered]
--- 
-{{ attribute.sourcecode }}
--- 
-
-{{ attribute.remarks }}
-
-{% endfor %}
-{% endif %}
-
 
 
 {% endfor %}
