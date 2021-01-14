@@ -5,7 +5,7 @@ bibdata:
   type: collection
   docid:
     type: iso
-    id: 10303
+    id: ISO 10303
   copyright:
     owner:
       name: International Standards Organization
