@@ -53,10 +53,12 @@
 [[{{schema.id}}.{{constant.id}}]]
 ===== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 -- 
-{{ constant.sourcecode }}
+{{ constant.sourcecode  }}
 -- 
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -70,10 +72,12 @@
 [[{{schema.id}}.{{type.id}}]]
 ===== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 -- 
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -86,10 +90,12 @@
 [level=7]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 --
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 {% endfor %}
@@ -120,13 +126,15 @@
 
 {% for attribute in entity.attributes %}
 [[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
+[level=6]
 ====== {{ attribute.id }}
 
+{% if attribute.sourcecode %}
 [source%unnumbered]
 -- 
 {{ attribute.sourcecode }}
---
+-- 
+{% endif %}
 
 {{ attribute.remarks }}
 
@@ -144,10 +152,12 @@
 [[{{schema.id}}.{{constraint.id}}]]
 ===== {{ constraint.id }}
 
+{% if constraint.sourcecode %}
 [source%unnumbered]
 -- 
 {{ constraint.sourcecode }}
 -- 
+{% endif %}
 
 {{ constraint.remarks }}
 
@@ -176,10 +186,12 @@
 [level=6]
 ====== {{ parameter.id }}
 
+{% if parameter.sourcecode %}
 [source%unnumbered]
 --
 {{ parameter.sourcecode }}
 --
+{% endif %}
 
 {{ parameter.remarks }}
 
@@ -195,10 +207,12 @@
 [level=6]
 ====== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 --
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -212,10 +226,12 @@
 [level=8]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 -- 
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 
@@ -236,10 +252,12 @@
 [level=6]
 ====== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 --
 {{ constant.sourcecode }}
 --
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -255,10 +273,12 @@
 [level=6]
 ====== {{ variable.id }}
 
+{% if variable.sourcecode %}
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
 -- 
+{% endif %}
 
 {{ variable.remarks }}
 
@@ -289,10 +309,12 @@
 [level=6]
 ====== {{ statementid }}
 
+{% if statement.sourcecode %}
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
 -- 
+{% endif %}
 
 {{ statement.remarks }}
 
@@ -314,6 +336,7 @@
 [[{{schema.id}}.{{procedure.id}}]]
 ===== {{ procedure.id }}
 
+
 [source%unnumbered]
 -- 
 {{ procedure.sourcecode }}
@@ -330,10 +353,12 @@
 [level=6]
 ====== {{ parameter.id }}
 
+{% if parameter.sourcecode %}
 [source%unnumbered]
 --
 {{ parameter.sourcecode }}
 --
+{% endif %}
 
 {{ parameter.remarks }}
 
@@ -349,10 +374,12 @@
 [level=6]
 ====== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 --
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -366,10 +393,12 @@
 [level=8]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 -- 
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 
@@ -390,10 +419,12 @@
 [level=6]
 ====== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 --
 {{ constant.sourcecode }}
 --
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -409,10 +440,12 @@
 [level=6]
 ====== {{ variable.id }}
 
+{% if variable.sourcecode %}
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
 -- 
+{% endif %}
 
 {{ variable.remarks }}
 
@@ -445,10 +478,12 @@
 [level=6]
 ====== {{ statementid }}
 
+{% if statement.sourcecode %}
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
 -- 
+{% endif %}
 
 {{ statement.remarks }}
 
@@ -486,10 +521,12 @@
 [level=6]
 ====== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 --
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -503,10 +540,12 @@
 [level=8]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 -- 
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 
@@ -527,10 +566,12 @@
 [level=6]
 ====== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 --
 {{ constant.sourcecode }}
 --
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -546,10 +587,12 @@
 [level=6]
 ====== {{ variable.id }}
 
+{% if variable.sourcecode %}
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
 -- 
+{% endif %}
 
 {{ variable.remarks }}
 
@@ -582,10 +625,12 @@
 [level=6]
 ====== {{ statementid }}
 
+{% if statement.sourcecode %}
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
 -- 
+{% endif %}
 
 {{ statement.remarks }}
 
@@ -607,10 +652,12 @@
 [level=6]
 ====== {{ where1.id }}
 
+{% if where1.sourcecode %}
 [source%unnumbered]
 --
 {{ where1.sourcecode }}
 --
+{% endif %}
 
 {{ where1.remarks }}
 
@@ -624,6 +671,54 @@
 
 {% endfor %}
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -655,10 +750,12 @@
 [[{{schema.id}}.{{constant.id}}]]
 ===== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 -- 
-{{ constant.sourcecode }}
+{{ constant.sourcecode  }}
 -- 
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -672,10 +769,12 @@
 [[{{schema.id}}.{{type.id}}]]
 ===== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 -- 
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -688,10 +787,12 @@
 [level=7]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 --
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 {% endfor %}
@@ -722,18 +823,21 @@
 
 {% for attribute in entity.attributes %}
 [[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-[level=7]
+[level=6]
 ====== {{ attribute.id }}
 
+{% if attribute.sourcecode %}
 [source%unnumbered]
 -- 
 {{ attribute.sourcecode }}
---
+-- 
+{% endif %}
 
 {{ attribute.remarks }}
 
 {% endfor %}
 {% endif %}
+
 
 {% endfor %}
 {% endif %}
@@ -745,10 +849,12 @@
 [[{{schema.id}}.{{constraint.id}}]]
 ===== {{ constraint.id }}
 
+{% if constraint.sourcecode %}
 [source%unnumbered]
 -- 
 {{ constraint.sourcecode }}
 -- 
+{% endif %}
 
 {{ constraint.remarks }}
 
@@ -777,10 +883,12 @@
 [level=6]
 ====== {{ parameter.id }}
 
+{% if parameter.sourcecode %}
 [source%unnumbered]
 --
 {{ parameter.sourcecode }}
 --
+{% endif %}
 
 {{ parameter.remarks }}
 
@@ -796,10 +904,12 @@
 [level=6]
 ====== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 --
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -813,10 +923,12 @@
 [level=8]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 -- 
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 
@@ -837,10 +949,12 @@
 [level=6]
 ====== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 --
 {{ constant.sourcecode }}
 --
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -856,10 +970,12 @@
 [level=6]
 ====== {{ variable.id }}
 
+{% if variable.sourcecode %}
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
 -- 
+{% endif %}
 
 {{ variable.remarks }}
 
@@ -890,10 +1006,12 @@
 [level=6]
 ====== {{ statementid }}
 
+{% if statement.sourcecode %}
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
 -- 
+{% endif %}
 
 {{ statement.remarks }}
 
@@ -915,6 +1033,7 @@
 [[{{schema.id}}.{{procedure.id}}]]
 ===== {{ procedure.id }}
 
+
 [source%unnumbered]
 -- 
 {{ procedure.sourcecode }}
@@ -931,10 +1050,12 @@
 [level=6]
 ====== {{ parameter.id }}
 
+{% if parameter.sourcecode %}
 [source%unnumbered]
 --
 {{ parameter.sourcecode }}
 --
+{% endif %}
 
 {{ parameter.remarks }}
 
@@ -950,10 +1071,12 @@
 [level=6]
 ====== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 --
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -967,10 +1090,12 @@
 [level=8]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 -- 
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 
@@ -991,10 +1116,12 @@
 [level=6]
 ====== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 --
 {{ constant.sourcecode }}
 --
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -1010,10 +1137,12 @@
 [level=6]
 ====== {{ variable.id }}
 
+{% if variable.sourcecode %}
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
 -- 
+{% endif %}
 
 {{ variable.remarks }}
 
@@ -1046,10 +1175,12 @@
 [level=6]
 ====== {{ statementid }}
 
+{% if statement.sourcecode %}
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
 -- 
+{% endif %}
 
 {{ statement.remarks }}
 
@@ -1087,10 +1218,12 @@
 [level=6]
 ====== {{ type.id }}
 
+{% if type.sourcecode %}
 [source%unnumbered]
 --
 {{ type.sourcecode }}
 -- 
+{% endif %}
 
 {{ type.remarks }}
 
@@ -1104,10 +1237,12 @@
 [level=8]
 ====== {{ item.id }}
 
+{% if item.sourcecode %}
 [source%unnumbered]
 -- 
 {{ item.sourcecode }}
 --
+{% endif %}
 
 {{ item.remarks }}
 
@@ -1128,10 +1263,12 @@
 [level=6]
 ====== {{ constant.id }}
 
+{% if constant.sourcecode %}
 [source%unnumbered]
 --
 {{ constant.sourcecode }}
 --
+{% endif %}
 
 {{ constant.remarks }}
 
@@ -1147,10 +1284,12 @@
 [level=6]
 ====== {{ variable.id }}
 
+{% if variable.sourcecode %}
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
 -- 
+{% endif %}
 
 {{ variable.remarks }}
 
@@ -1183,10 +1322,12 @@
 [level=6]
 ====== {{ statementid }}
 
+{% if statement.sourcecode %}
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
 -- 
+{% endif %}
 
 {{ statement.remarks }}
 
@@ -1208,10 +1349,12 @@
 [level=6]
 ====== {{ where1.id }}
 
+{% if where1.sourcecode %}
 [source%unnumbered]
 --
 {{ where1.sourcecode }}
 --
+{% endif %}
 
 {{ where1.remarks }}
 
@@ -1221,9 +1364,6 @@
 
 {% endfor %}
 {% endif %}
-
-
-
 
 
 {% endfor %}
