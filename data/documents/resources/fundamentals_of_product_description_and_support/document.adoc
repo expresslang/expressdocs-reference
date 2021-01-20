@@ -50,7 +50,7 @@ This part of ISO 10303 specifies the generic product description resources, the 
    </contacts>
 ////
 
-include::sections/00-preface.adoc[]
+include::sections/00-introduction.adoc[]
 
 include::sections/01-scope.adoc[]
 
@@ -58,7 +58,22 @@ include::sections/02-norm-refs.adoc[]
 
 include::sections/03-terms.adoc[]
 
-import_express_schema::../resources/action_schema/action_schema.exp[]
+include::sections/04-schemas.adoc[]
+
+include::sections/91-short-names.adoc[]
+
+include::sections/92-identifier.adoc[]
+
+include::sections/93-listings.adoc[]
+
+include::sections/94-expressg-diagrams.adoc[]
+
+include::sections/95-tech-discussion.adoc[]
+
+include::sections/96-examples.adoc[]
+
+include::sections/99-bibliography.adoc[]
+
 
 ////
    <schema name="application_context_schema"

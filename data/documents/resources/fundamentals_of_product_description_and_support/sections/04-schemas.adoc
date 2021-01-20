@@ -1,5 +1,504 @@
 
-import_express_schema::../resources/action_schema/action_schema.exp[]
+[lutaml, ../../../../../resources/action_schema/action_schema.exp, repo, leveloffset=+1]
+---
+{% for schema in repo.schemas %}
+[[{{schema.id}}]]
+[type="express-schema"]
+== {{ schema.id }}
+
+{{ schema.remarks }}
+
+_EXPRESS specification:_
+
+[source%unnumbered]
+--
+{{ schema.sourcecode }}
+--
+
+{% if schema.constants.size > 0 %}
+=== {{schema.id}} constant definitions
+
+{% for constant in schema.constants %}
+[[{{schema.id}}.{{constant.id}}]]
+==== {{ constant.id }}
+
+{% if constant.sourcecode %}
+[source%unnumbered]
+-- 
+{{ constant.sourcecode  }}
+-- 
+{% endif %}
+
+{{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% if schema.types.size > 0 %}
+=== {{schema.id}} type definitions
+
+{% for type in schema.types %}
+[[{{schema.id}}.{{type.id}}]]
+==== {{ type.id }}
+
+{{ type.remarks }}
+
+{% if type.sourcecode %}
+_EXPRESS specification:_
+
+[source%unnumbered]
+-- 
+{{ type.sourcecode }}
+-- 
+{% endif %}
+
+{% if type.items.size > 0 %}
+
+{% for item in type.items %}
+[[{{schema.id}}.{{type.id}}.{{item.id}}]]
+_Type items:_
+
+{{ item.id }}: {{ item.remarks }}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+
+{% if schema.entities.size > 0 %}
+=== {{schema.id}} entity definitions
+
+{% for entity in schema.entities %}
+[[{{schema.id}}.{{entity.id}}]]
+==== {{ entity.id }}
+
+{{ entity.remarks }}
+
+_EXPRESS specification:_
+
+[source%unnumbered]
+-- 
+{{ entity.sourcecode }}
+--
+
+
+{% if entity.attributes.size > 0 %}
+_Attribute definitions_
+
+{% for attribute in entity.attributes %}
+[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
+*{{ attribute.id }}*: {{ attribute.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if schema.subtype_constraints.size > 0 %}
+_Subtype Constraints_
+
+{% for constraint in schema.subtype_constraints %}
+[[{{schema.id}}.{{constraint.id}}]]
+{{ constraint.id }}: {{ constraint.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% if schema.functions.size > 0 %}
+=== {{schema.id}} function definitions
+{% for function in schema.functions %}
+[[{{schema.id}}.{{function.id}}]]
+==== {{ function.id }}
+
+{{ function.remarks }}
+
+_EXPRESS specification:_
+
+[source%unnumbered]
+-- 
+{{ function.sourcecode }}
+--
+
+{% if function.parameters.size > 0 %}
+_Argument definitions:_
+
+{% for parameter in function.parameters %}
+[[{{schema.id}}.{{function.id}}.{{parameter.id}}]]
+{{ parameter.id }}: {{ parameter.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% if function.types.size > 0 %}
+_Function types:_
+
+{% for type in function.types %}
+[[{{schema.id}}.{{function.id}}.{{type.id}}]]
+{{ type.id }}: {{ type.remarks }}
+
+
+{% if type.items.size > 0 %}
+
+{% for item in type.items %}
+[[{{schema.id}}.{{function.id}}.{{type.id}}.{{item.id}}]]
+* Item {{ item.id }}: {{ item.remarks }}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if function.constants.size > 0 %}
+_Function constants:_
+
+{% for constant in function.constants %}
+[[{{schema.id}}.{{function.id}}.{{constant.id}}]]
+{{ constant.id }}: {{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% assign found = false %}
+{% for variable in function.variables %}
+{% if variable.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+_Function variables:_
+
+{% for variable in function.variables %}
+{% if variable.remarks %}
+
+[[{{schema.id}}.{{function.id}}.{{variable.id}}]]
+{{ variable.id }}: {{ variable.remarks }}
+
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% assign found = false %}
+{% for statement in function.statements %}
+{% if statement.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+_Function statements:_
+
+{% for statement in function.statements %}
+
+{% if statement.remarks %}
+
+{% if statement.id %}
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+[[{{schema.id}}.{{function.id}}.{{ statementid }}]]
+{{ statementid }}: {{ statement.remarks }}
+
+
+
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if schema.procedures.size > 0 %}
+=== Procedures
+{% for procedure in schema.procedures %}
+[[{{schema.id}}.{{procedure.id}}]]
+==== {{ procedure.id }}
+
+{{ procedure.remarks }}
+
+_EXPRESS specification:_
+
+[source%unnumbered]
+-- 
+{{ procedure.sourcecode }}
+--
+
+
+{% if procedure.parameters.size > 0 %}
+_Argument definitions:_
+
+{% for parameter in procedure.parameters %}
+[[{{schema.id}}.{{procedure.id}}.{{parameter.id}}]]
+{{ parameter.id }}: {{ parameter.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% if procedure.types.size > 0 %}
+_Procedure types:_
+
+{% for type in procedure.types %}
+[[{{schema.id}}.{{procedure.id}}.{{type.id}}]]
+{{ type.id }}: {{ type.remarks }}
+
+
+{% if type.items.size > 0 %}
+
+{% for item in type.items %}
+[[{{schema.id}}.{{procedure.id}}.{{type.id}}.{{item.id}}]]
+* Item {{ item.id }}: {{ item.remarks }}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if procedure.constants.size > 0 %}
+_Procedure constants:_
+
+{% for constant in procedure.constants %}
+[[{{schema.id}}.{{procedure.id}}.{{constant.id}}]]
+{{ constant.id }}: {{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% assign found = false %}
+{% for variable in procedure.variables %}
+{% if procedure.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+_Procedure variables:_
+
+{% for variable in procedure.variables %}
+{% if variable.remarks %}
+[[{{schema.id}}.{{procedure.id}}.{{variable.id}}]]
+{{ variable.id }}: {{ variable.remarks }}
+
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% assign found = false %}
+{% for statement in procedure.statements %}
+{% if statement.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+
+
+{% if found %}
+_Procedure statements:_
+
+{% for statement in procedure.statements %}
+
+{% if statement.remarks  %}
+
+{% if statement.id %} 
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+[[{{schema.id}}.{{procedure.id}}.{{statementid }}]]
+{{ statementid }}: {{ statement.remarks }}
+
+
+
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+{% if schema.rules.size > 0 %}
+=== Rules
+{% for rule in schema.rules %}
+[[{{schema.id}}.{{rule.id}}]]
+==== {{ rule.id }}
+
+{{ rule.remarks }}
+
+_EXPRESS specification:_
+
+[source%unnumbered]
+-- 
+{{ rule.sourcecode }}
+--
+
+
+{% if rule.types.size > 0 %}
+_Rule types:_
+
+{% for type in rule.types %}
+[[{{schema.id}}.{{rule.id}}.{{type.id}}]]
+{{ type.id }}: {{ type.remarks }}
+
+
+{% if type.items.size > 0 %}
+
+{% for item in type.items %}
+[[{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
+* Item {{ item.id }}: {{ item.remarks }}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if rule.constants.size > 0 %}
+_Rule constants:_
+
+{% for constant in rule.constants %}
+[[{{schema.id}}.{{rule.id}}.{{constant.id}}]]
+{{ constant.id }}: {{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% assign found = false %}
+{% for variable in procedure.variables %}
+{% if procedure.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+_Rule variables:_
+
+{% for variable in rule.variables %}
+{% if variable.remarks %}
+[[{{schema.id}}.{{rule.id}}.{{variable.id}}]]
+{{ variable.id }}: {{ variable.remarks }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+{% assign found = false %}
+{% for statement in function.statements %}
+{% if statement.remarks  %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+_Rule statements:_
+
+{% if statement.remarks  %}
+
+
+{% for statement in rule.statements %}
+
+{% if statement.id %} 
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+[[{{schema.id}}.{{rule.id}}.{{statementid }}]]
+{{ statementid }}: {{ statement.remarks }}
+
+
+
+
+{% endfor %}
+{% endif %}
+{% endif %}
+
+
+
+
+{% if rule.where.size > 0 %}
+_Rule where:_
+
+{% for where1 in rule.where %}
+[[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
+{{ where1.id }}: {{ where1.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // TODO: Import all schemas from Annotated EXPRESS
 
