@@ -165,15 +165,11 @@ in at most one
 
 NOTE: The <<express-schema:basic_attribute_schema:basic_attribute_schema.id_attribute,id_attribute>>
 data type is defined in
-<<express-schema:basic_attribute_schema]
-of this part of ISO 10303:basic_attribute_schema]
+<<express-schema:basic_attribute_schema,basic_attribute_schema>>
 of this part of ISO 10303.
 
 NOTE: A template for constraining the population of the entity data types defined in the
-express_ref:[basic_attribute_schema,
-
-NOTE: A template for constraining the population of the entity data types defined in the
-express_ref:[basic_attribute_schema>>
+<<express-schema:basic_attribute_schema,basic_attribute_schema>>
 is described in annex E.
 
 *)
@@ -503,8 +499,7 @@ in at most one
 NOTE: The
 <<express-schema:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>
 data type is defined in
-<<express-schema:basic_attribute_schema]
-of this part of ISO 10303:basic_attribute_schema]
+<<express-schema:basic_attribute_schema,basic_attribute_schema>>
 of this part of ISO 10303.
 
 *)
@@ -512,7 +507,7 @@ of this part of ISO 10303.
 (*"action_request_solution.wr:WR2"
 
 Each *action_request_solution* shall be the
-express_ref:[basic_attribute_schema.name_attribute.named_item,named_item>>
+<<express-schema:basic_attribute_schema:basic_attribute_schema.name_attribute.named_item,named_item>>
 in at most one
 <<express-schema:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>>.
 
@@ -520,17 +515,12 @@ in at most one
 NOTE: The
 <<express-schema:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>>
 data type is defined in
-<<express-schema:basic_attribute_schema]
-of this part of ISO 10303:basic_attribute_schema]
+<<express-schema:basic_attribute_schema,basic_attribute_schema>>
 of this part of ISO 10303.
 
 
 NOTE: A template for constraining the population of the entity data types defined in the
-express_ref:[basic_attribute_schema,
-
-
-NOTE: A template for constraining the population of the entity data types defined in the
-express_ref:[basic_attribute_schema>>
+<<express-schema:basic_attribute_schema,basic_attribute_schema>>
 is described in annex E.
 
 *)
@@ -721,7 +711,6 @@ NOTE: Information about the date and time may be associated with the *action_sta
 <<express-schema:management_resources_schema:management_resources_schema.date_and_time_assignment,date_and_time_assignment>>,
 or
 <<express-schema:management_resources_schema:management_resources_schema.time_assignment,time_assignment>>.
-</note>
 *)
 
 
