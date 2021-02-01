@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="effectivity_schemaexpg2.xml">
+<img src="effectivity_schemaexpg2.gif">
+<img.area shape="rect" coords="11,89,226,114" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effs_name_attribute_select" />
+<img.area shape="rect" coords="345,86,606,111" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effs_description_attribute_select" />
+<img.area shape="rect" coords="394,514,551,564" href="../../resources/action_schema/action_schema.xml#action_schema.action_method" />
+<img.area shape="rect" coords="753,863,1016,894" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="10,13,226,66" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute_select" />
+<img.area shape="rect" coords="753,813,1123,844" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_time_or_event_occurrence" />
+<img.area shape="rect" coords="347,472,572,503" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="753,986,1016,1017" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="754,202,979,233" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="753,950,1016,981" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="344,10,607,68" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute_select" />
+<img.area shape="rect" coords="347,344,610,375" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="753,1051,991,1082" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.time_interval" />
+<img.area shape="rect" coords="347,408,579,439" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="753,775,1123,806" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_time_or_event_occurrence" />
+<img.area shape="rect" coords="754,230,986,261" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="753,901,1019,932" href="../../resources/measure_schema/measure_schema.xml#measure_schema.measure_with_unit" />
+<img.area shape="rect" coords="347,947,488,1019" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.serial_numbered_effectivity" />
+<img.area shape="rect" coords="344,646,515,679" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.conditional_effectivity" />
+<img.area shape="rect" coords="347,771,487,848" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.dated_effectivity" />
+<img.area shape="rect" coords="345,203,483,260" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effectivity_relationship" />
+<img.area shape="rect" coords="347,859,490,936" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.lot_effectivity" />
+<img.area shape="rect" coords="347,1029,491,1104" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.time_interval_based_effectivity" />
+<img.area shape="rect" coords="103,327,227,519" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effectivity" />
+<img.area shape="rect" coords="347,707,512,759" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.conditional_configuration" />
+<img.area shape="rect" coords="395,587,549,632" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.condition" />
+</img>
+</imgfile.content>

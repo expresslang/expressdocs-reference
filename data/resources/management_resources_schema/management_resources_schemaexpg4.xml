@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="management_resources_schemaexpg4.xml">
+<img src="management_resources_schemaexpg4.gif">
+<img.area shape="poly" coords="624,512,633,526,704,526,713,512,704,498,633,498,624,512" href="./management_resources_schemaexpg2.xml" />
+<img.area shape="rect" coords="157,713,424,747" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="126,546,424,580" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="182,96,424,130" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_role" />
+<img.area shape="rect" coords="1040,429,1312,463" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.time_interval" />
+<img.area shape="rect" coords="110,428,424,462" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.time_interval_role" />
+<img.area shape="rect" coords="1040,97,1240,131" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date" />
+<img.area shape="rect" coords="76,180,424,214" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.event_occurrence_role" />
+<img.area shape="rect" coords="138,14,424,48" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_time_role" />
+<img.area shape="rect" coords="1040,14,1322,48" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_and_time" />
+<img.area shape="rect" coords="1040,346,1291,380" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.local_time" />
+<img.area shape="rect" coords="1040,180,1346,214" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.event_occurrence" />
+<img.area shape="rect" coords="1040,547,1290,581" href="../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effectivity" />
+<img.area shape="rect" coords="181,345,424,379" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.time_role" />
+<img.area shape="rect" coords="1040,713,1295,747" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="10,263,424,297" href="../../resources/date_time_schema/date_time_schema.xml#date_time_schema.event_occurrence_context_role" />
+<img.area shape="rect" coords="512,629,825,665" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.effectivity_context_assignment" />
+<img.area shape="rect" coords="540,546,796,582" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.effectivity_assignment" />
+<img.area shape="rect" coords="567,712,769,748" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.effectivity_context_role" />
+<img.area shape="rect" coords="568,96,768,132" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.date_assignment" />
+<img.area shape="rect" coords="482,262,854,298" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.event_occurrence_context_assignment" />
+<img.area shape="rect" coords="532,428,804,464" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.time_interval_assignment" />
+<img.area shape="rect" coords="527,13,809,49" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.date_and_time_assignment" />
+<img.area shape="rect" coords="568,345,769,381" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.time_assignment" />
+<img.area shape="rect" coords="515,179,821,215" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.event_occurrence_assignment" />
+</img>
+</imgfile.content>

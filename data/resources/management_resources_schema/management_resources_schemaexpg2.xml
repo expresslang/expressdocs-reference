@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="management_resources_schemaexpg2.xml">
+<img src="management_resources_schemaexpg2.gif">
+<img.area shape="rect" coords="252,897,399,925" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.mrs_role_select" />
+<img.area shape="poly" coords="454,764,463,778,740,778,749,764,740,750,463,750,454,764" href="./management_resources_schemaexpg8.xml" />
+<img.area shape="poly" coords="481,716,490,730,713,730,722,716,713,702,490,702,481,716" href="./management_resources_schemaexpg4.xml" />
+<img.area shape="poly" coords="489,665,498,679,704,679,713,665,704,651,498,651,489,665" href="./management_resources_schemaexpg5.xml" />
+<img.area shape="poly" coords="498,810,507,824,695,824,704,810,695,796,507,796,498,810" href="./management_resources_schemaexpg8.xml" />
+<img.area shape="poly" coords="500,873,509,887,693,887,702,873,693,859,509,859,500,873" href="./management_resources_schemaexpg8.xml" />
+<img.area shape="rect" coords="1033,268,1374,302" href="../../resources/action_schema/action_schema.xml#action_schema.versioned_action_request" />
+<img.area shape="rect" coords="10,187,308,221" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="1033,196,1219,230" href="../../resources/action_schema/action_schema.xml#action_schema.action" />
+<img.area shape="rect" coords="10,570,308,604" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="1033,99,1288,133" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="1033,14,1286,48" href="../../resources/action_schema/action_schema.xml#action_schema.action_method" />
+<img.area shape="rect" coords="10,344,308,378" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="10,486,308,520" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="10,420,308,454" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="1033,579,1479,613" href="../../resources/security_classification_schema/security_classification_schema.xml#security_classification_schema.security_classification" />
+<img.area shape="rect" coords="165,99,432,133" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="1033,353,1265,387" href="../../resources/approval_schema/approval_schema.xml#approval_schema.approval" />
+<img.area shape="rect" coords="178,948,473,982" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.role_select" />
+<img.area shape="rect" coords="1033,495,1249,529" href="../../resources/contract_schema/contract_schema.xml#contract_schema.contract" />
+<img.area shape="rect" coords="10,259,308,293" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="1033,429,1315,463" href="../../resources/certification_schema/certification_schema.xml#certification_schema.certification" />
+<img.area shape="rect" coords="467,428,739,464" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.certification_assignment" />
+<img.area shape="rect" coords="458,267,749,303" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.action_request_assignment" />
+<img.area shape="rect" coords="426,578,780,614" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.security_classification_assignment" />
+<img.area shape="rect" coords="491,195,715,231" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.action_assignment" />
+<img.area shape="rect" coords="484,494,723,530" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.contract_assignment" />
+<img.area shape="rect" coords="462,13,744,49" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.action_method_assignment" />
+<img.area shape="rect" coords="518,98,689,134" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.action_method_role" />
+<img.area shape="rect" coords="480,352,727,388" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.approval_assignment" />
+</img>
+</imgfile.content>

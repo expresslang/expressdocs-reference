@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="document_schemaexpg1.xml">
+<img src="document_schemaexpg1.gif">
+<img.area shape="rect" coords="10,10,116,51" href="../../resources/document_schema/document_schema.xml" />
+<img.area shape="rect" coords="247,98,400,139" href="../../resources/product_definition_schema/product_definition_schema.xml" />
+<img.area shape="rect" coords="248,179,396,220" href="../../resources/support_resource_schema/support_resource_schema.xml" />
+</img>
+</imgfile.content>
