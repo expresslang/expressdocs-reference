@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="management_resources_schemaexpg8.xml">
+<img src="management_resources_schemaexpg8.gif">
+<img.area shape="rect" coords="968,1039,1094,1067" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.attribute_type" />
+<img.area shape="poly" coords="619,24,628,38,699,38,708,24,699,10,628,10,619,24" href="./management_resources_schemaexpg2.xml" />
+<img.area shape="poly" coords="619,1254,628,1268,699,1268,708,1254,699,1240,628,1240,619,1254" href="./management_resources_schemaexpg2.xml" />
+<img.area shape="poly" coords="619,126,628,140,699,140,708,126,699,112,628,112,619,126" href="./management_resources_schemaexpg2.xml" />
+<img.area shape="rect" coords="968,1292,1235,1326" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="1051,1080,1318,1114" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="1141,336,1396,370" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="142,896,322,930" href="../../resources/group_schema/group_schema.xml#group_schema.group" />
+<img.area shape="rect" coords="10,512,372,546" href="../../resources/external_reference_schema/external_reference_schema.xml#external_reference_schema.external_source" />
+<img.area shape="rect" coords="968,235,1223,269" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="968,896,1235,930" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="530,960,797,994" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="55,808,322,842" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="24,1292,322,1326" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="1140,374,1407,408" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="968,166,1235,200" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="55,235,322,269" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="142,674,322,708" href="../../resources/group_schema/group_schema.xml#group_schema.group" />
+<img.area shape="rect" coords="55,1177,322,1211" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="1141,513,1396,547" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="968,1359,1333,1393" href="../../resources/application_context_schema/application_context_schema.xml#application_context_schema.library_context" />
+<img.area shape="rect" coords="24,59,322,93" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="1141,469,1441,503" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="24,166,322,200" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role" />
+<img.area shape="rect" coords="22,355,322,389" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="1144,673,1399,707" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="1051,1123,1306,1157" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="1144,629,1444,663" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="968,808,1223,842" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="968,1177,1223,1211" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="968,59,1148,93" href="../../resources/group_schema/group_schema.xml#group_schema.group" />
+<img.area shape="rect" coords="553,58,774,94" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.group_assignment" />
+<img.area shape="rect" coords="489,895,837,931" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.attribute_classification_assignment" />
+<img.area shape="rect" coords="450,464,579,595" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.external_identification_assignment" />
+<img.area shape="rect" coords="582,807,744,843" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.classification_role" />
+<img.area shape="rect" coords="555,165,772,201" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.name_assignment" />
+<img.area shape="rect" coords="449,626,581,756" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.classification_assignment" />
+<img.area shape="rect" coords="865,332,996,412" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.identification_assignment_relationship" />
+<img.area shape="rect" coords="553,1358,774,1394" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.library_assignment" />
+<img.area shape="rect" coords="449,332,579,412" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.identification_assignment" />
+<img.area shape="rect" coords="521,1035,806,1071" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.attribute_value_assignment" />
+<img.area shape="rect" coords="583,234,744,270" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.identification_role" />
+<img.area shape="rect" coords="576,1176,750,1212" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.attribute_value_role" />
+<img.area shape="rect" coords="865,624,1005,756" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.classification_assignment_relationship" />
+<img.area shape="rect" coords="869,464,1000,596" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.external_identification_assignment_relationship" />
+<img.area shape="rect" coords="508,1291,818,1327" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.external_referent_assignment" />
+</img>
+</imgfile.content>

@@ -1,0 +1,352 @@
+(*
+$Id: product_concept_schema.exp,v 1.4 2013/10/25 19:22:03 Exp $
+ISO 10303 TC184/SC4/WG12 N8371
+
+EXPRESS Source:
+ISO 10303-44 ed3 Product structure configuration - Product concept schema
+
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+and derivations of the Schema:
+
+Copyright ISO 2014  All rights reserved
+Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+subject to the following conditions:
+
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+USE OR OTHER DEALINGS IN THE SCHEMA.
+
+In addition, any modified copy of the Schema shall include the following notice:
+
+THIS SCHEMA HAS BEEN MODIFIED FROM THE SCHEMA DEFINED IN
+ISO 10303-44 ed3 Product structure configuration - Product concept schema
+AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
+*)
+
+SCHEMA product_concept_schema '{iso standard 10303 part(44) version(2) object(1) product_concept_schema(2)}';
+
+  REFERENCE FROM support_resource_schema
+    (text, label, identifier);
+
+  REFERENCE FROM application_context_schema
+    (product_concept_context);
+
+ENTITY concept_feature_operator;
+  name        : label;
+  description : OPTIONAL text;
+END_ENTITY;
+
+ENTITY concept_feature_relationship;
+  name                              : label;
+  description                       : OPTIONAL text;
+  relating_product_concept_feature  : product_concept_feature;
+  related_product_concept_feature   : product_concept_feature;
+END_ENTITY;
+
+ENTITY concept_feature_relationship_with_condition
+  SUBTYPE OF (concept_feature_relationship);
+  conditional_operator : concept_feature_operator;
+END_ENTITY;
+
+ENTITY conditional_concept_feature
+  SUBTYPE OF (product_concept_feature);
+  condition : concept_feature_relationship_with_condition;
+END_ENTITY;
+
+ENTITY product_concept;
+  id                  : identifier;
+  name                : label;
+  description         : OPTIONAL text;
+  market_context      : product_concept_context;
+UNIQUE
+  UR1: id;
+END_ENTITY;
+
+ENTITY product_concept_feature;
+  id          : identifier;
+  name        : label;
+  description : OPTIONAL text;
+END_ENTITY;
+
+ENTITY product_concept_feature_association;
+  name        : label;
+  description : OPTIONAL text;
+  concept     : product_concept;
+  feature     : product_concept_feature;
+END_ENTITY;
+
+ENTITY product_concept_relationship;
+  name                     : label;
+  description              : OPTIONAL text;
+  relating_product_concept : product_concept;
+  related_product_concept  : product_concept;
+END_ENTITY;
+
+END_SCHEMA; -- product_concept_schema
+
+(*"product_concept_schema"
+// Note schema EXPRESS are in ..\resources\resource_name name_of_schema.xml
+
+== Introduction
+
+The subject of the product\_concept\_schema is the idea of a product as defined by customer needs, i.e., a product concept. A product concept may exist before a product has been defined. A product concept identifies a collection of independent product features or capabilities. A product concept may also have product features identified specifically for it. Conditions among those features for a particular product may be specified to manage dependencies and define the valid product variations for a particular product concept.
+
+[example]
+====
+An automobile may have two types of engines identified as product features. One is a low power engine; the other is a high power engine. Air conditioning may also be identified as a product feature for the same automobile. A condition could be specified that if the air conditioning is present, the high power engine is necessary.
+====
+
+== Fundamental concerns
+
+The following concepts and assumptions apply.
+
+* A product concept identifies a deliverable product defined by a producer to satisfy a customer. A product concept is often used to identify a selection of product features or capabilities. 
+* A product concept may have several configuration items identified for it.
+* A product concept may exist without a product or product version.
+* A product concept may have product features identified for it defined by a producer to satisfy a customer viewpoint.
+* A set of rules for required interdependent combinations of a product feature may be specified. 
+
+[NOTE]
+--
+Examples and diagrams of the manner in which the entities of this part of ISO 10303 may be used to represent the combinations of product features are included in annex E!!!.
+--
+
+// EXPRESS-G
+
+expg_image:product_concept_schemaexpg1.xml[]
+
+expg_image:product_concept_schemaexpg2.xml[]
+*)
+
+(*"product_concept_schema.concept_feature_operator"
+A *concept\_feature\_operator* is a definition of an operation that is used to constrain the relationship between two express_ref:[product_concept_schema.product_concept_feature]. 
+
+[example]
+====
+"AND", "NOT", and "OR" are *concept\_feature\_operator* names.
+====
+
+[NOTE]
+--
+The meaning of the operation and the list of allowed values for the *name* attribute can be specified in each annotated EXPRESS schema that uses or specializes this entity or in an agreement of common understanding between the partners sharing this information.
+--
+
+[NOTE]
+--
+Annex E contains examples of this entity and figures that depict the relationships between it and the other entities of this schema.
+--
+*)
+
+(*"product_concept_schema.concept_feature_operator.name"
+the express_ref:[support_resource_schema.label] by which the *concept\_feature\_operator* is known.
+
+[NOTE]
+--
+The name designates the operation.
+--
+*)
+
+(*"product_concept_schema.concept_feature_operator.description"
+the express_ref:[support_resource_schema.text] that characterizes the *concept\_feature\_operator*. The value of this attribute need not be specified.
+*)
+
+(*"product_concept_schema.concept_feature_relationship"
+A *concept\_feature\_relationship* is an association between two express_ref:[product_concept_schema.product_concept_feature]. 
+
+[NOTE]
+--
+The meaning of the association can be specified in each annotated EXPRESS schema that uses or specializes this entity or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"product_concept_schema.concept_feature_relationship.name"
+the express_ref:[support_resource_schema.label] by which the *concept\_feature\_relationship* is known.
+*)
+
+(*"product_concept_schema.concept_feature_relationship.description"
+the express_ref:[support_resource_schema.text] that characterizes the *concept\_feature\_relationship*. The value of this attribute need not be specified.
+*)
+
+(*"product_concept_schema.concept_feature_relationship.relating_product_concept_feature"
+one of the express_ref:[product_concept_schema.product_concept_feature] that is a part of the association.
+*)
+
+(*"product_concept_schema.concept_feature_relationship.related_product_concept_feature"
+the other express_ref:[product_concept_schema.product_concept_feature] that is a part of the association. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+*)
+
+(*"product_concept_schema.concept_feature_relationship_with_condition"
+A *concept\_feature\_relationship\_with\_condition* is a type of express_ref:[product_concept_schema.concept_feature_relationship] in which a conditional operator characterizes the relationship between the express_ref:[product_concept_schema.concept_feature_relationship.related_product_concept_feature] and the express_ref:[product_concept_schema.concept_feature_relationship.relating_product_concept_feature]. 
+
+[NOTE]
+--
+When specified as the condition for a express_ref:[product_concept_schema.conditional_concept_feature], a *concept\_feature\_relationship\_with\_condition* defines a constraint for the use of a express_ref:[product_concept_schema.product_concept_feature]. Complex conditions can be constructed for a express_ref:[product_concept_schema.product_concept_feature] by using the *concept\_feature\_relationship\_with\_condition* to relate express_ref:[product_concept_schema.conditional_concept_feature] to each other.
+--
+
+[NOTE]
+--
+Annex E contains examples of this entity and figures that depict the relationships between it and the other entities of this schema.
+--
+*)
+
+(*"product_concept_schema.concept_feature_relationship_with_condition.conditional_operator"
+the express_ref:[product_concept_schema.concept_feature_operator] used in the relationship between the express_ref:[product_concept_schema.concept_feature_relationship.relating_product_concept_feature] and the express_ref:[product_concept_schema.concept_feature_relationship.related_product_concept_feature].
+
+[example]
+====
+A condition of negation is specified by using a express_ref:[product_concept_schema.concept_feature_operator] with a name of "NOT" and a *product\_concept\_feature\_relationship\_with\_condition* in which the express_ref:[product_concept_schema.concept_feature_relationship.related_product_concept_feature] and the express_ref:[product_concept_schema.concept_feature_relationship.relating_product_concept_feature] reference the same instance of express_ref:[product_concept_schema.product_concept_feature].
+====
+*)
+
+(*"product_concept_schema.conditional_concept_feature"
+A *conditional\_concept\_feature* is a type of express_ref:[product_concept_schema.product_concept_feature] that is the combination of two express_ref:[product_concept_schema.product_concept_feature] constrained by an operator. 
+
+[NOTE]
+--
+Complex combinations of express_ref:[product_concept_schema.product_concept_feature] may be constructed using *conditional\_concept\_feature*s as operands of a express_ref:[product_concept_schema.concept_feature_relationship_with_condition].
+--
+
+[NOTE]
+--
+Annex E contains examples of this entity and figures that depict the relationships between it and the other entities of this schema.
+--
+*)
+
+(*"product_concept_schema.conditional_concept_feature.condition"
+the express_ref:[product_concept_schema.concept_feature_relationship_with_condition] that establishes the condition for the *conditional\_concept\_feature*.
+*)
+
+(*"product_concept_schema.product_concept"
+A *product\_concept* is a type of product as specified in ISO 10303-41 that is defined by a producer to satisfy potential or actual customer requirements. 
+
+[NOTE]
+--
+A *product\_concept* will often correspond to the highest level item(s) manufactured by an organization for a customer. It may be characterized by a set of product features identified by the customers or derived from customers' needs. The definition of product concepts is often driven by market and customer requirements and forecasting.
+--
+
+[example]
+====
+If an organization manufactures cars and engines for cars, the cars will be represented by *product\_concept* instances. If another organization manufactures engines for cars, the engines will be represented as *product\_concept*s in that organization.
+====
+*)
+
+(*"product_concept_schema.product_concept.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *product\_concept*.
+
+[example]
+====
+The *id* could be a sales model number.
+====
+*)
+
+(*"product_concept_schema.product_concept.name"
+the express_ref:[support_resource_schema.label] by which the *product\_concept* is known.
+*)
+
+(*"product_concept_schema.product_concept.description"
+the express_ref:[support_resource_schema.text] that characterizes the *product\_concept*. The value of this attribute need not be specified.
+
+[NOTE]
+--
+This attribute can be used to convey the purpose, functionality, and selected features for the *product\_concept*.
+--
+*)
+
+(*"product_concept_schema.product_concept.market_context"
+the frame of reference in which the *product\_concept* is defined.
+
+[NOTE]
+--
+The frame of reference for the *product\_concept* is not restricted to a market context. To be upwardly compatible with *product\_concept* as specified in ISO 10303:1994, the name of the *market\_context* attribute is unchanged.
+--
+
+[NOTE]
+--
+The value of the *market\_context* attribute can be constrained in each annotated EXPRESS schema that uses or specializes this entity data type or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"product_concept_schema.product_concept.ur:UR1"
+The *id* shall be unique within a population of *product\_concept*.
+*)
+
+(*"product_concept_schema.product_concept_feature"
+A *product\_concept\_feature* is a characteristic intended to be used to distinguish variations among the products of one or more express_ref:[product_concept_schema.product_concept]. 
+
+[example]
+====
+"Luxury equipment" is a characteristic that distinguishes between a standard, low-price car and a topclass car.
+====
+
+[NOTE]
+--
+The categorization of *product\_concept\_feature*s is accomplished through the mechanisms defined in ISO 10303-41 for collecting product data into groups. The name of the group indicates the category of the collected items.
+--
+*)
+
+(*"product_concept_schema.product_concept_feature.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *product\_concept\_feature*.
+*)
+
+(*"product_concept_schema.product_concept_feature.name"
+the express_ref:[support_resource_schema.label] by which the *product\_concept\_feature* is known.
+*)
+
+(*"product_concept_schema.product_concept_feature.description"
+the express_ref:[support_resource_schema.text] that characterizes the *product\_concept\_feature*. The value of this attribute need not be specified.
+*)
+
+(*"product_concept_schema.product_concept_feature_association"
+A *product\_concept\_feature\_association* is a relationship, that relates a express_ref:[product_concept_schema.product_concept_feature] to a express_ref:[product_concept_schema.product_concept]. A express_ref:[product_concept_schema.product_concept_feature] as it is related to a express_ref:[product_concept_schema.product_concept] may define the content of a express_ref:[configuration_management_schema.configuration_item]. 
+
+[NOTE]
+--
+The meaning of the association can be specified in each annotated EXPRESS schema that uses or specializes this entity or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"product_concept_schema.product_concept_feature_association.name"
+the express_ref:[support_resource_schema.label] by which the *product\_concept\_feature\_association* is known.
+*)
+
+(*"product_concept_schema.product_concept_feature_association.description"
+the express_ref:[support_resource_schema.text] that characterizes the *product\_concept\_feature\_association*. The value of this attribute need not be specified.
+*)
+
+(*"product_concept_schema.product_concept_feature_association.concept"
+the express_ref:[product_concept_schema.product_concept] that is being associated.
+*)
+
+(*"product_concept_schema.product_concept_feature_association.feature"
+the express_ref:[product_concept_schema.product_concept_feature] that is being associated.
+*)
+
+(*"product_concept_schema.product_concept_relationship"
+A *product\_concept\_relationship* is an association between two express_ref:[product_concept_schema.product_concept]. 
+
+[NOTE]
+--
+The meaning of the association can be specified in each annotated EXPRESS schema that uses or specializes this entity or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"product_concept_schema.product_concept_relationship.name"
+the express_ref:[support_resource_schema.label] by which the *product\_concept\_relationship* is known.
+*)
+
+(*"product_concept_schema.product_concept_relationship.description"
+the express_ref:[support_resource_schema.text] that characterizes the *product\_concept\_relationship*. The value of this attribute need not be specified.
+*)
+
+(*"product_concept_schema.product_concept_relationship.relating_product_concept"
+one of the express_ref:[product_concept_schema.product_concept] that is a part of the association.
+*)
+
+(*"product_concept_schema.product_concept_relationship.related_product_concept"
+the other express_ref:[product_concept_schema.product_concept] that is a part of the association. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+*)

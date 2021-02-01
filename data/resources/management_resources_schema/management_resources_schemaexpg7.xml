@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="management_resources_schemaexpg7.xml">
+<img src="management_resources_schemaexpg7.gif">
+<img.area shape="rect" coords="10,726,310,760" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="43,105,310,139" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="10,1102,310,1136" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="43,462,310,496" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="55,60,310,94" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="55,598,310,632" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="846,1332,1335,1366" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.position_in_organization_type" />
+<img.area shape="rect" coords="846,972,1236,1006" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization_type" />
+<img.area shape="rect" coords="55,1146,310,1180" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="43,289,310,323" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="10,367,310,401" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="55,1332,310,1366" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="10,926,310,960" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="55,243,310,277" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="43,1018,310,1052" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="43,1190,310,1224" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="43,828,310,862" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="846,243,1192,277" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_type" />
+<img.area shape="rect" coords="55,415,310,449" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="10,15,310,49" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="55,777,310,811" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="43,642,310,676" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="55,972,310,1006" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="10,1289,310,1323" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="10,197,310,231" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="10,554,310,588" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="846,598,1278,632" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_type_definition" />
+<img.area shape="rect" coords="43,1375,310,1409" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="411,718,533,871" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.organization_type_role" />
+<img.area shape="rect" coords="421,192,523,329" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.person_type_assignment" />
+<img.area shape="rect" coords="412,921,533,1058" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.organization_type_assignment" />
+<img.area shape="rect" coords="434,10,511,145" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.person_type_role" />
+<img.area shape="rect" coords="422,549,523,682" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.person_type_definition_assignment" />
+<img.area shape="rect" coords="409,1285,530,1414" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.position_in_organization_type_assignment" />
+<img.area shape="rect" coords="409,1098,530,1229" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.position_in_organization_type_role" />
+<img.area shape="rect" coords="422,361,522,503" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.person_type_definition_role" />
+</img>
+</imgfile.content>

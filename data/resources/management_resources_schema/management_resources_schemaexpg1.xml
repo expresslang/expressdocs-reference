@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="management_resources_schemaexpg1.xml">
+<img src="management_resources_schemaexpg1.gif">
+<img.area shape="rect" coords="727,727,961,782" href="../../resources/person_organization_schema/person_organization_schema.xml" />
+<img.area shape="rect" coords="349,214,494,269" href="../../resources/approval_schema/approval_schema.xml" />
+<img.area shape="rect" coords="742,793,924,848" href="../../resources/qualifications_schema/qualifications_schema.xml" />
+<img.area shape="rect" coords="590,491,750,546" href="../../resources/experience_schema/experience_schema.xml" />
+<img.area shape="rect" coords="736,882,988,937" href="../../resources/security_classification_schema/security_classification_schema.xml" />
+<img.area shape="rect" coords="343,158,572,213" href="../../resources/application_context_schema/application_context_schema.xml" />
+<img.area shape="rect" coords="389,407,538,462" href="../../resources/document_schema/document_schema.xml" />
+<img.area shape="rect" coords="381,377,532,432" href="../../resources/date_time_schema/date_time_schema.xml" />
+<img.area shape="rect" coords="625,548,846,603" href="../../resources/external_reference_schema/external_reference_schema.xml" />
+<img.area shape="rect" coords="356,248,547,303" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml" />
+<img.area shape="rect" coords="647,964,858,1019" href="../../resources/support_resource_schema/support_resource_schema.xml" />
+<img.area shape="rect" coords="693,684,831,739" href="../../resources/location_schema/location_schema.xml" />
+<img.area shape="rect" coords="634,626,753,681" href="../../resources/group_schema/group_schema.xml" />
+<img.area shape="rect" coords="10,10,266,65" href="../../resources/management_resources_schema/management_resources_schema.xml" />
+<img.area shape="rect" coords="313,103,435,158" href="../../resources/action_schema/action_schema.xml" />
+<img.area shape="rect" coords="369,292,539,347" href="../../resources/certification_schema/certification_schema.xml" />
+<img.area shape="rect" coords="385,349,522,404" href="../../resources/contract_schema/contract_schema.xml" />
+<img.area shape="rect" coords="529,440,683,495" href="../../resources/effectivity_schema/effectivity_schema.xml" />
+</img>
+</imgfile.content>

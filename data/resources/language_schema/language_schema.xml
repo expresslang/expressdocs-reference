@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/express.xsl"?>
+<!DOCTYPE express SYSTEM "../../../dtd/express_model.dtd">
+
+<!-- Written by Express Engine -->
+<!--   5.0.18 (GIT 68d8345) -->
+<!--   Steel Bank CL 1.4.14 (64-bits) -->
+<!-- File: C:/Eclipse/photon_wks_head/stepmod/data/resources/language_schema/language_schema.exp -->
+<!-- 1 Schema: LANGUAGE_SCHEMA -->
+
+<express description.file="descriptions.xml" language_version="2" reference="ISO 10303-41">
+  <application name="Express Engine"
+    owner="Express Engine Team"
+    source="language_schema schema_instance"
+    url="exp-engine.sourceforge.net"
+    version="5.0.18 (GIT 68d8345)"/>
+  <schema name="language_schema">
+    <interface kind="reference" schema="group_schema">
+      <interfaced.item name="group"/>
+    </interface>
+    <entity name="language" supertypes="group">
+  <!-- description -->
+      <where label="WR1" expression="SELF\group.name &lt;&gt; ''"/>
+    </entity>
+  </schema>
+</express>

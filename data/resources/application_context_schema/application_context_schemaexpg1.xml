@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="application_context_schemaexpg1.xml">
+<img src="application_context_schemaexpg1.gif">
+<img.area shape="rect" coords="325,178,516,233" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml" />
+<img.area shape="rect" coords="325,517,536,572" href="../../resources/support_resource_schema/support_resource_schema.xml" />
+<img.area shape="rect" coords="325,431,559,486" href="../../resources/person_organization_schema/person_organization_schema.xml" />
+<img.area shape="rect" coords="325,302,468,357" href="../../resources/language_schema/language_schema.xml" />
+<img.area shape="rect" coords="10,10,239,65" href="../../resources/application_context_schema/application_context_schema.xml" />
+<img.area shape="rect" coords="325,241,476,296" href="../../resources/date_time_schema/date_time_schema.xml" />
+<img.area shape="rect" coords="325,368,581,423" href="../../resources/management_resources_schema/management_resources_schema.xml" />
+</img>
+</imgfile.content>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/express.xsl"?>
+<!DOCTYPE express SYSTEM "../../../dtd/express.dtd">
+
+<express description.file="descriptions.xml" language_version="2" rcs.date="$Date$" rcs.revision="$Revision$" reference="ISO 10303-41">
+   <application name="JSDAI" owner="LKSoft" source="group_schema schema_instance" url="www.lksoft.com" version="4.0 beta"/>
+   <schema name="group_schema">
+      <interface kind="reference" schema="support_resource_schema">
+         <interfaced.item name="label"/>
+         <interfaced.item name="bag_to_set"/>
+         <interfaced.item name="identifier"/>
+         <interfaced.item name="text"/>
+      </interface>
+      <interface kind="reference" schema="basic_attribute_schema">
+         <interfaced.item name="get_id_value"/>
+         <interfaced.item name="id_attribute"/>
+         <interfaced.item name="id_attribute_select"/>
+      </interface>
+      <type name="gs_id_attribute_select">
+         <select basedon="id_attribute_select" selectitems="group"/>
+      </type>
+      <entity name="group">
+         <explicit name="name">
+            <typename name="label"/>
+         </explicit>
+         <explicit name="description" optional="YES">
+            <typename name="text"/>
+         </explicit>
+         <derived expression="get_id_value(SELF)" name="id">
+            <typename name="identifier"/>
+         </derived>
+         <where expression="SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.IDENTIFIED_ITEM')) &lt;= 1" label="WR1"/>
+      </entity>
+      <entity name="group_relationship">
+         <explicit name="name">
+            <typename name="label"/>
+         </explicit>
+         <explicit name="description" optional="YES">
+            <typename name="text"/>
+         </explicit>
+         <explicit name="relating_group">
+            <typename name="group"/>
+         </explicit>
+         <explicit name="related_group">
+            <typename name="group"/>
+         </explicit>
+      </entity>
+      <function name="acyclic_group_relationship">
+         <parameter name="relation">
+            <typename name="group_relationship"/>
+         </parameter>
+         <parameter name="relatives">
+            <aggregate lower="1" type="SET" upper="?"/>
+            <typename name="group"/>
+         </parameter>
+         <parameter name="specific_relation">
+            <builtintype type="STRING"/>
+         </parameter>
+         <builtintype type="BOOLEAN"/>
+         <algorithm>LOCAL
+      x : SET OF group_relationship;
+    END_LOCAL;
+
+    IF relation.relating_group IN relatives THEN
+      RETURN (FALSE);
+    END_IF;
+    x := QUERY(grp &lt;* bag_to_set(USEDIN(relation.relating_group, 'GROUP_SCHEMA.' + 'GROUP_RELATIONSHIP.' + 'RELATED_GROUP')) | specific_relation IN TYPEOF(grp));
+    REPEAT i := 1 TO HIINDEX(x);
+      IF NOT acyclic_group_relationship(x[i], relatives + relation.relating_group, specific_relation) THEN
+        RETURN (FALSE);
+      END_IF;
+    END_REPEAT;
+    RETURN (TRUE);</algorithm>
+      </function>
+   </schema>
+</express>

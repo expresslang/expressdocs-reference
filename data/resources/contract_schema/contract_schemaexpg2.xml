@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="contract_schemaexpg2.xml">
+<img src="contract_schemaexpg2.gif">
+<img.area shape="rect" coords="212,13,395,40" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="634,143,817,170" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="32,123,215,150" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="38,151,215,178" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="10,95,215,122" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="635,101,812,128" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="290,94,375,178" href="../../resources/contract_schema/contract_schema.xml#contract_schema.contract_relationship" />
+<img.area shape="rect" coords="485,12,574,41" href="../../resources/contract_schema/contract_schema.xml#contract_schema.contract_type" />
+<img.area shape="rect" coords="495,93,563,177" href="../../resources/contract_schema/contract_schema.xml#contract_schema.contract" />
+</img>
+</imgfile.content>

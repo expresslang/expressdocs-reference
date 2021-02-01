@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<?xml-stylesheet 
+  type="text/xsl" 
+  href="../../../xsl/descriptions.xsl"?>
+<!DOCTYPE ext_descriptions SYSTEM "../../../dtd/description.dtd">
+<ext_descriptions module_directory="certification_schema" schema_file="certification_schema.xml" describe.selects="YES" describe.subtype_constraints="YES" rcs.date="$Date: 2013/12/06 20:01:13 $" rcs.revision="$Revision: 1.4 $">
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Schema: certification_schema
+   <express_ref linkend="certification_schema::certification_schema"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<ext_description linkend="certification_schema">
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: certification_schema  Entity: certification  
+   <express_ref linkend="certification_schema::certification_schema.certification"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="certification_schema.certification">
+	A <b>certification</b> is an assertion of facts. A <b>certification</b> is an incompletely modeled concept and requires population of related entity data types to form a complete certification.
+	<note>
+		The role of <b>certification</b> can be defined in the annotated EXPRESS schemas that use or specialize this
+		entity, or by default, in an agreement of common understanding between the partners sharing this information.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: certification_schema  Entity: certification  Attribute: name 
+   <express_ref linkend="certification_schema::certification_schema.certification.name"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="certification_schema.certification.name">
+	the 
+	 <express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	by which the <b>certification</b> is known.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: certification_schema  Entity: certification  Attribute: purpose 
+   <express_ref linkend="certification_schema::certification_schema.certification.purpose"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="certification_schema.certification.purpose">
+<p>
+	an informal description of the reason the <b>certification</b> is applied.
+</p>
+	<example>
+		A purpose for material certification could be the fact that certain customers demand material
+		certification for the products that are supplied to them.
+	</example>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: certification_schema  Entity: certification  Attribute: kind 
+   <express_ref linkend="certification_schema::certification_schema.certification.kind"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="certification_schema.certification.kind">
+	the 
+	<express_ref linkend="certification_schema:ir_express:certification_schema.certification_type"/> 
+	that defines the class of <b>certification</b> that is applied.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: certification_schema  Entity: certification_type  
+   <express_ref linkend="certification_schema::certification_schema.certification_type"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="certification_schema.certification_type">
+	A <b>certification_type</b> is the kind of 
+	<express_ref linkend="certification_schema:ir_express:certification_schema.certification"/> 
+	granted.
+	<example number="1">
+		Suppliers and manufacturers can be certified.
+	</example>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: certification_schema  Entity: certification_type  Attribute: description 
+   <express_ref linkend="certification_schema::certification_schema.certification_type.description"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="certification_schema.certification_type.description">
+<p>
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.text"/> 
+	that characterizes the <b>certification_type</b>.
+</p>
+	<note>
+		The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this
+		entity, or in an agreement of common understanding between the partners sharing this information.
+	</note>
+	<example number="2">
+		A certification type in an example supply chain is 'supplier'.
+	</example>
+</ext_description>
+</ext_descriptions>

@@ -1,5 +1,7 @@
 
-[lutaml, ../../../../../resources/action_schema/action_schema.exp, repo, leveloffset=+1]
+//[lutaml, ../../../../../resources/action_schema/action_schema.exp;../../../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../../../resources/approval_schema/application_context_schema_annotated.exp;../../../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../../../resources/certification_schema/certification_schema_annotated.exp;../../../../../resources/contract_schema/contract_schema_annotated.exp;../../../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../../../resources/document_schema/document_schema.exp;../../../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../../../resources/experience_schema/experience_schema_annotated.exp;../../../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../../../resources/group_schema/group_schema_annotated.exp;../../../../../resources/language_schema/language_schema_annotated.exp;../../../../../resources/location_schema/location_schema_annotated.exp;../../../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../../../resources/measure_schema/measure_schema_annotated.exp;../../../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../../../resources/product_concept_schema/product_concept_schema_annotated.exp;../../../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+1]
+//[lutaml, ../../../../../resources/action_schema/action_schema.exp, repo, leveloffset=+1]
+[lutaml, action_schema.exp, repo, leveloffset=+1]
 ---
 {% for schema in repo.schemas %}
 [[{{schema.id}}]]
@@ -12,7 +14,7 @@ _EXPRESS specification:_
 
 [source%unnumbered]
 --
-{{ schema.source }}
+{{ schema.head_source }}
 --
 
 {% if schema.constants.size > 0 %}
@@ -500,6 +502,5 @@ _Rule where:_
 
 
 
-// TODO: Import all schemas from Annotated EXPRESS
 
 

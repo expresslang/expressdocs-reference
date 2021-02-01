@@ -1,0 +1,390 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet 
+  type="text/xsl" 
+  href="../../../xsl/descriptions.xsl"?>
+<!DOCTYPE ext_descriptions SYSTEM "../../../dtd/description.dtd">
+<ext_descriptions module_directory="approval_schema" schema_file="approval_schema.xml" describe.selects="YES" describe.subtype_constraints="YES" rcs.date="$Date: 2013/12/10 02:09:47 $" rcs.revision="$Revision: 1.7 $">
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Schema: approval_schema
+   <express_ref linkend="approval_schema:ir_express:approval_schema"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<ext_description linkend="approval_schema">
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval  
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval">
+	An <b>approval</b> is a confirmation of the product data for its intended use. An <b>approval</b> is an incompletely modelled concept and requires population of related entity data types to form a complete approval.
+	<note number="1">
+		The role of <b>approval</b> can be defined in the annotated EXPRESS schemas that use or specialize this
+		entity, or by default, in an agreement of common understanding between the partners sharing this information.
+	</note>
+</ext_description>
+<!-- 
+
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval  Attribute: status 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval.status"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval.status">
+<p>
+	the type or level of <b>approval</b> in terms of its usage.
+</p>
+	
+	<example>
+		One possible status is 'released for production'; this explicitly identifies the approved usage.
+		Another possible status is 'preliminary design completed'; this only implies the approved usage that will depend upon
+		company-specific procedures.
+	</example>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval  Attribute: level 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval.level"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval.level">
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	that provides a user interpretable designation for the level of completion of the approval.
+</ext_description>
+
+
+
+
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_date_time  
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_date_time"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_date_time">
+	An <b>approval_date_time</b> is an association between an 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	and a date, time, or date and time.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_date_time  Attribute: date_time 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_date_time.date_time"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_date_time.date_time">
+	the moment when the <b>dated_approval</b> is given.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_date_time  Attribute: dated_approval 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_date_time.dated_approval"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_date_time.dated_approval">
+	the 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	with which the date or time is associated.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_date_time  Attribute: role 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_date_time.role"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_date_time.role">
+<p>
+	the 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.object_role"/> 
+	that specifies the purpose of the association of the <b>approval_date_time</b> with product data.
+</p>
+	<note number="1">
+		This attribute is an upwardly compatible addition to <b>approval_date_time</b> as specified in ISO 10303-41:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_date_time  Where: WR1 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_date_time.wr:WR1"/>
+
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_date_time.wr:WR1">
+<p>
+	Each <b>approval_date_time</b> shall be the 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.role_association.item_with_role"/> 
+	in at most one 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.role_association"/>.
+</p>
+	<note number="2">
+		A template for constraining the population of the entity data types defined in the
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema">basic_attribute_schema</express_ref> 
+		is described in annex E.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_person_organization  
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_person_organization"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_person_organization">
+	An <b>approval_person_organization</b> is an association between an 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	and a given person, organization, or person in the context of an organization.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_person_organization  Attribute: person_organization 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_person_organization.person_organization"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_person_organization.person_organization">
+	the person or organization playing the given role.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_person_organization  Attribute: authorized_approval 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_person_organization.authorized_approval"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_person_organization.authorized_approval">
+	the 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	that is affected by the person or organization.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_person_organization  Attribute: role 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_person_organization.role"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_person_organization.role">
+	the 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval_role"/> 
+	that specifies the purpose of the association of the 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	with a person or organization.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_relationship  
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_relationship">
+	An <b>approval_relationship</b> is a relationship between two instances of the entity data type 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	with a description of their relationship.
+	<note number="1">
+		The role of <b>approval_relationship</b> can be defined in the annotated EXPRESS schemas that use or
+		specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+	</note>
+	<note number="2">
+		This entity, together with the 
+		<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+		entity, is based on the relationship template that is described in annex E.3.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_relationship  Attribute: name 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship.name"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_relationship.name">
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	by which the <b>approval_relationship</b> is known.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_relationship  Attribute: description 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship.description"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_relationship.description">
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.text"/> 
+	that characterizes the <b>approval_relationship</b>. 
+	The value of the attribute need not be specified.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_relationship  Attribute: relating_approval 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship.relating_approval"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_relationship.relating_approval">
+<p>
+	one of the instances of 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	that is a part of the relationship.
+</p>
+	<note number="3">
+		The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+		this entity, or in an agreement of common understanding between the partners sharing this information.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_relationship  Attribute: related_approval 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship.related_approval"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_relationship.related_approval">
+<p>
+	the other instance of 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	that is a part of the relationship. 
+	If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+</p>
+	<note number="4">
+		The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+		this entity, or in an agreement of common understanding between the partners sharing this information.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_role  
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_role"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_role">
+	An <b>approval_role</b> is a definition of a function. An <b>approval_role</b> is an incompletely modelled concept and requires population of related entity data types to form a complete confirmation.
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_role  Attribute: role 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_role.role"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_role.role">
+<p>
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	by which the <b>approval_role</b> is known.
+</p>
+	<note number="1">
+		The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize
+		this entity, or in an agreement of common understanding between the partners sharing this information.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_role  Attribute: description 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_role.description"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_role.description">
+<p>
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.text"/> 
+	that characterizes the <b>approval_role</b>.
+</p>
+	<note number="2">
+		This attribute is an upwardly compatible addition to <b>approval_role</b> as specified in ISO 10303-41:1994.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_role  Where: WR1 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_role.wr:WR1"/>
+
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_role.wr:WR1">
+<p>
+	Each <b>approval_role</b> shall be the 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.description_attribute.described_item"/> 
+	in at most one 
+	<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.description_attribute"/>.
+</p>
+	<note number="3">
+		The 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema.description_attribute"/> 
+		data type is defined in 
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema">basic_attribute_schema</express_ref>
+		of this part of ISO 10303.
+	</note>
+	<note number="4">
+		A template for constraining the population of the entity data types defined in the
+		<express_ref linkend="basic_attribute_schema:ir_express:basic_attribute_schema">basic_attribute_schema</express_ref> 
+		is described in annex E.
+	</note>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_status  
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_status"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_status">
+	An <b>approval_status</b> specifies the state of an 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/>.
+	<example>
+		'Approved' and 'disapproved' are examples of <b>approval_status</b>.
+	</example>
+</ext_description>
+<!-- 
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Schema: approval_schema  Entity: approval_status  Attribute: name 
+   <express_ref linkend="approval_schema:ir_express:approval_schema.approval_status.name"/>
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  -->
+<ext_description linkend="approval_schema.approval_status.name">
+<p>
+	the 
+	<express_ref linkend="support_resource_schema:ir_express:support_resource_schema.label"/> 
+	by which the <b>approval_status</b> is known.
+</p>
+	<note>
+		The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this
+		entity, or in an agreement of common understanding between the partners sharing this information.
+	</note>
+</ext_description>
+
+<!-- +++++++++++ acyclic_approval_relationship +++++++++++ -->
+<ext_description linkend="approval_schema.acyclic_approval_relationship">
+	The <b>acyclic_approval_relationship</b> function determines whether the graph of instances of the entity data type 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	that contains relation as one of its links contains a cycle.
+	This function may be used to evaluate either a 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship"/> 
+	or any of its subtypes.
+	<p>
+		The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
+	</p>
+	<note number="1">
+		The algorithm of the function is explained in annex E.2.
+	</note>
+	<note number="2">
+		This function is not used in this schema. 
+		It is defined here because other ISO 10303 integrated resources and application protocols that use the 
+		<express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship"/> 
+		entity include rules that use this function.
+	</note>
+</ext_description>
+<!-- relation -->
+<ext_description linkend="approval_schema.acyclic_approval_relationship.relation">
+	(input) the candidate 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship"/> 
+	to be checked.
+</ext_description>
+<!-- relatives -->
+<ext_description linkend="approval_schema.acyclic_approval_relationship.relatives">
+	(input) the set of instances of the entity data type 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval"/> 
+	for which the function is searching in the 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship.relating_approval"/> 
+	parameter of the relation argument.
+</ext_description>
+<!-- specific_relation -->
+<ext_description linkend="approval_schema.acyclic_approval_relationship.specific_relation">
+	(input) the fully qualified name of a subtype of the 
+	<express_ref linkend="approval_schema:ir_express:approval_schema.approval_relationship"/> 
+	entity.
+</ext_description>
+
+</ext_descriptions>

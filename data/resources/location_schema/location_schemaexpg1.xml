@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="location_schemaexpg1.xml">
+<img src="location_schemaexpg1.gif">
+<img.area shape="rect" coords="203,62,351,103" href="../../resources/support_resource_schema/support_resource_schema.xml" />
+<img.area shape="rect" coords="10,62,106,103" href="../../resources/location_schema/location_schema.xml" />
+</img>
+</imgfile.content>

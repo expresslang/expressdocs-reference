@@ -1,0 +1,355 @@
+(*
+$Id: experience_schema.exp,v 1.18 2013/10/25 19:09:20 Exp $
+ISO 10303 TC184/SC4/WG12 N8369
+
+EXPRESS Source:
+ISO 10303-41 ed4 Fundamentals of product description and support - Experience schema
+
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+and derivations of the Schema:
+
+Copyright ISO 2014  All rights reserved
+Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+subject to the following conditions:
+
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+USE OR OTHER DEALINGS IN THE SCHEMA.
+
+In addition, any modified copy of the Schema shall include the following notice:
+
+THIS SCHEMA HAS BEEN MODIFIED FROM THE SCHEMA DEFINED IN
+ISO 10303-41 ed4 Fundamentals of product description and support - Experience schema
+AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
+*)
+
+SCHEMA experience_schema '{iso standard 10303 part(41) version(4) object(1) experience_schema(10)}';
+  REFERENCE FROM support_resource_schema (identifier, label, text, bag_to_set);
+  ENTITY experience;
+    id : identifier;
+    name : label;
+    description : OPTIONAL text;
+  END_ENTITY;
+
+  ENTITY experience_relationship;
+    id : identifier;
+    name : label;
+    description : OPTIONAL text;
+    relating_experience : experience;
+    related_experience : experience;
+  END_ENTITY;
+
+  ENTITY experience_type;
+    id : identifier;
+    name : label;
+    description : OPTIONAL text;
+  END_ENTITY;
+
+  ENTITY experience_type_relationship;
+    id : identifier;
+    name : label;
+    description : OPTIONAL text;
+    relating_experience_type : experience_type;
+    related_experience_type : experience_type;
+  END_ENTITY;
+
+  FUNCTION acyclic_experience_relationship (relation : experience_relationship; relatives : SET OF experience; specific_relation : STRING):BOOLEAN;
+    LOCAL
+      x : SET OF experience_relationship;
+    END_LOCAL;
+
+    IF relation.relating_experience IN relatives THEN
+      RETURN (FALSE);
+    END_IF;
+    x := QUERY(expr <* bag_to_set(USEDIN(relation.relating_experience, 'EXPERIENCE_SCHEMA.' + 'EXPERIENCE_RELATIONSHIP.' + 'RELATED_EXPERIENCE')) | specific_relation IN TYPEOF(expr));
+    REPEAT i := 1 TO HIINDEX(x);
+      IF NOT acyclic_experience_relationship(x[i], relatives + relation.relating_experience, specific_relation) THEN
+        RETURN (FALSE);
+      END_IF;
+    END_REPEAT;
+    RETURN (TRUE);
+  END_FUNCTION;
+
+  FUNCTION acyclic_experience_type_relationship (relation : experience_type_relationship; relatives : SET OF experience_type; specific_relation : STRING):BOOLEAN;
+    LOCAL
+      x : SET OF experience_type_relationship;
+    END_LOCAL;
+
+    IF relation.relating_experience_type IN relatives THEN
+      RETURN (FALSE);
+    END_IF;
+    x := QUERY(exptyp <* bag_to_set(USEDIN(relation.relating_experience_type, 'EXPERIENCE_SCHEMA.' + 'EXPERIENCE_TYPE_RELATIONSHIP.' + 'RELATED_EXPERIENCE_TYPE')) | specific_relation IN TYPEOF(exptyp));
+    REPEAT i := 1 TO HIINDEX(x);
+      IF NOT acyclic_experience_type_relationship(x[i], relatives + relation.relating_experience_type, specific_relation) THEN
+        RETURN (FALSE);
+      END_IF;
+    END_REPEAT;
+    RETURN (TRUE);
+  END_FUNCTION;
+
+END_SCHEMA;
+
+(*"experience_schema"
+== Introduction
+
+The subject of the *experience\_schema* is the identification and characterization of types of experience or particular episodes of experience gained by persons. This schema provides for the definition of generic data relating to particular episodes of experience. 
+
+[example]
+====
+The identification of a particular episode of experience is an example of generic data relating to experience.
+====
+
+[example]
+====
+The identification of a particular type of experience is an example of generic data relating to experience.
+====
+
+== Fundamental concerns
+
+This schema provides resources for the identification, naming, and description of:
+
+* experience;
+* types of experience;
+* relationships between specific experiences;
+* relationships between types of experience.
+
+expg_image:experience_schemaexpg1.xml[]
+
+expg_image:experience_schemaexpg2.xml[]
+*)
+
+(*"experience_schema.experience"
+An *experience* is an episode of practice, undertaken by a person or organization, that contributes to the accumulation of knowledge or a skill. 
+
+[example]
+====
+100 flying hours in a Tornado jet undertaken by a particular pilot in a particular year.
+====
+*)
+
+(*"experience_schema.experience.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *experience*.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+
+[NOTE]
+--
+The context in which id is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience.name"
+the express_ref:[support_resource_schema.label] by which the *experience* is known.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience.description"
+the express_ref:[support_resource_schema.text] that characterizes the *experience*. The value of this attribute need not be specified.
+*)
+
+(*"experience_schema.experience_relationship"
+An *experience\_relationship* is a relationship between two instances of the express_ref:[experience_schema.experience] entity data type and provides for the identification, naming, and description of that relationship.
+*)
+
+(*"experience_schema.experience_relationship.description"
+the express_ref:[support_resource_schema.text] that characterizes the *experience\_relationship*. The value of this attribute need not be specified.
+*)
+
+(*"experience_schema.experience_relationship.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *experience\_relationship*.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+
+[NOTE]
+--
+The context in which id is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_relationship.name"
+the express_ref:[support_resource_schema.label] by which the *experience\_relationship* is known.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_relationship.related_experience"
+the other instance of express_ref:[experience_schema.experience] that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_relationship.relating_experience"
+one of the instances of express_ref:[experience_schema.experience] that is a part of the relationship.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_type"
+An *experience\_type* is a category of experience.
+
+[example]
+====
+Flying experience.
+====
+
+[NOTE]
+--
+A relationship between an *experience\_type* object and one or more express_ref:[experience_schema.experience] objects is established by the declaration of an express_ref:[management_resources_schema.experience_type_assignment] subtype containing a single attribute that references a set of a SELECT type that contains an express_ref:[experience_schema.experience].
+--
+*)
+
+(*"experience_schema.experience_type.description"
+the express_ref:[support_resource_schema.text] that characterizes the *experience\_type*. The value of this attribute need not be specified.
+*)
+
+(*"experience_schema.experience_type.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *experience\_type*.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+
+[NOTE]
+--
+The context in which id is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_type.name"
+the express_ref:[support_resource_schema.label] by which the *experience\_type* is known.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_type_relationship"
+An *experience\_type\_relationship* is a relationship between two instances of the express_ref:[experience_schema.experience_type] entity data type and provides for the identification, naming, and description of that relationship.
+*)
+
+(*"experience_schema.experience_type_relationship.description"
+the express_ref:[support_resource_schema.text] that characterizes the *experience\_type\_relationship*. The value of this attribute need not be specified.
+*)
+
+(*"experience_schema.experience_type_relationship.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *experience\_type\_relationship*.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+
+[NOTE]
+--
+The context in which id is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_type_relationship.name"
+the express_ref:[support_resource_schema.label] by which the *experience\_type\_relationship* is known.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_type_relationship.relating_experience_type"
+one of the instances of express_ref:[experience_schema.experience_type] that is a part of the relationship.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.experience_type_relationship.related_experience_type"
+the other instance of express_ref:[experience_schema.experience_type] that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"experience_schema.acyclic_experience_relationship"
+The *acyclic\_experience\_relationship* function determines whether the graph of instances of the entity data type express_ref:[experience_schema.experience] that contains relation as one of its links contains a cycle. This function may be used to evaluate either an express_ref:[experience_schema.experience_relationship] or any of its subtypes. 
+
+The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
+
+[NOTE]
+--
+The algorithm of the function is explained in annex E.2.
+--
+
+[NOTE]
+--
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[experience_schema.experience_relationship] entity include rules that use this function.
+--
+*)
+
+(*"experience_schema.acyclic_experience_relationship.relation"
+(input) the candidate express_ref:[experience_schema.experience_relationship] to be checked.
+*)
+
+(*"experience_schema.acyclic_experience_relationship.relatives"
+(input) the set of instances of the entity data type express_ref:[experience_schema.experience] that the function is searching for in the express_ref:[experience_schema.experience_relationship.relating_experience] parameter of the *relation* argument.
+*)
+
+(*"experience_schema.acyclic_experience_relationship.specific_relation"
+(input) the fully qualified name of a subtype of the express_ref:[experience_schema.experience_relationship] entity.
+*)
+
+(*"experience_schema.acyclic_experience_type_relationship"
+The *acyclic\_experience\_type\_relationship* function determines whether the graph of instances of the entity data type express_ref:[experience_schema.experience_type] that contains relation as one of its links contains a cycle. This function may be used to evaluate either an express_ref:[experience_schema.experience_type_relationship] or any of its subtypes. 
+
+The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
+
+[NOTE]
+--
+The algorithm of the function is explained in annex E.2.
+--
+
+[NOTE]
+--
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[experience_schema.experience_type_relationship] entity include rules that use this function.
+--
+*)
+
+(*"experience_schema.acyclic_experience_type_relationship.relation"
+(input) the candidate express_ref:[experience_schema.experience_type_relationship] to be checked.
+*)
+
+(*"experience_schema.acyclic_experience_type_relationship.relatives"
+(input) the set of instances of the entity data type express_ref:[experience_schema.experience_type] that the function is searching for in the express_ref:[experience_schema.experience_type_relationship.relating_experience_type] parameter of the *relation* argument.
+*)
+
+(*"experience_schema.acyclic_experience_type_relationship.specific_relation"
+(input) the fully qualified name of a subtype of the express_ref:[experience_schema.experience_type_relationship] entity.
+*)

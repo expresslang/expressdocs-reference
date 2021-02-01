@@ -1,0 +1,179 @@
+(*
+$Id: location_schema.exp,v 1.17 2014/03/04 00:30:38 thomasrthurman Exp $
+ISO 10303 TC184/SC4/WG12 N8369
+
+EXPRESS Source:
+ISO 10303-41 ed4 Fundamentals of product description and support - Location schema
+
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+and derivations of the Schema:
+
+Copyright ISO 2014  All rights reserved
+Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+subject to the following conditions:
+
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+USE OR OTHER DEALINGS IN THE SCHEMA.
+
+In addition, any modified copy of the Schema shall include the following notice:
+
+THIS SCHEMA HAS BEEN MODIFIED FROM THE SCHEMA DEFINED IN
+ISO 10303-41 ed4 Fundamentals of product description and support - Location schema
+AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
+*)
+
+SCHEMA location_schema '{iso standard 10303 part(41) version(4) object(1) location_schema(14)}';
+  REFERENCE FROM support_resource_schema (identifier, label, text, bag_to_set);
+  ENTITY location;
+    id : identifier;
+    name : label;
+    description : OPTIONAL text;
+  END_ENTITY;
+
+  ENTITY location_relationship;
+    id : identifier;
+    name : label;
+    description : OPTIONAL text;
+    relating_location : location;
+    related_location : location;
+  END_ENTITY;
+
+  FUNCTION acyclic_location_relationship (relation : location_relationship; relatives : SET OF location; specific_relation : STRING):BOOLEAN;
+    LOCAL
+      x : SET OF location_relationship;
+    END_LOCAL;
+
+    IF relation.relating_location IN relatives THEN
+      RETURN (FALSE);
+    END_IF;
+    x := QUERY(lctn <* bag_to_set(USEDIN(relation.relating_location, 'LOCATION_SCHEMA.' + 'LOCATION_RELATIONSHIP.' + 'RELATED_LOCATION')) | specific_relation IN TYPEOF(lctn));
+    REPEAT i := 1 TO HIINDEX(x);
+      IF NOT acyclic_location_relationship(x[i], relatives + relation.relating_location, specific_relation) THEN
+        RETURN (FALSE);
+      END_IF;
+    END_REPEAT;
+    RETURN (TRUE);
+  END_FUNCTION;
+
+END_SCHEMA;
+
+(*"location_schema"
+== Introduction
+
+The subject of the *location\_schema* is the identification and characterization of different representations of places or positions in space at which something can take place or exist. 
+
+[example]
+====
+The identification of a geographical location is an example of generic data relating to a location.
+====
+
+== Fundamental concerns
+
+This schema provides resources for the identification, naming, and description of:
+
+* specific locations;
+* relationships between specific locations.
+
+expg_image:location_schemaexpg1.xml[]
+
+expg_image:location_schemaexpg2.xml[]
+*)
+
+(*"location_schema.location"
+A *location* is a place or position in space at which something can take place or exist. 
+
+[NOTE]
+--
+The specification or representation of a location might take the form of a postal address, a set of geographical or spacial coordinates, or an association with a product.
+--
+
+[example]
+====
+A map reference specifies a location where a building exists.
+====
+
+[example]
+====
+The "bridge" of a particular ship specifies a location where navigation equipment should be installed.
+====
+*)
+
+(*"location_schema.location.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *location*.
+*)
+
+(*"location_schema.location.name"
+the express_ref:[support_resource_schema.label] by which the *location* is known.
+*)
+
+(*"location_schema.location.description"
+the express_ref:[support_resource_schema.text] that characterizes the *location*. The value of this attribute need not be specified.
+*)
+
+(*"location_schema.location_relationship"
+A *location\_relationship* is a relationship between two instances of the express_ref:[location_schema.location] entity data type and provides for the identification, naming, and description of that relationship.
+*)
+
+(*"location_schema.location_relationship.id"
+the express_ref:[support_resource_schema.identifier] that distinguishes the *location\_relationship*.
+*)
+
+(*"location_schema.location_relationship.name"
+the express_ref:[support_resource_schema.label] by which the *location\_relationship* is known.
+*)
+
+(*"location_schema.location_relationship.description"
+the express_ref:[support_resource_schema.text] that characterizes the *location\_relationship*. The value of this attribute need not be specified.
+*)
+
+(*"location_schema.location_relationship.related_location"
+the other instance of express_ref:[location_schema.location] that is a part of the relationship. If one element of the relationship is dependent upon the other, attribute shall be the dependent one.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"location_schema.location_relationship.relating_location"
+one of the instances of express_ref:[location_schema.location] that is a part of the relationship.
+
+[NOTE]
+--
+The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.
+--
+*)
+
+(*"location_schema.acyclic_location_relationship"
+The *acyclic\_location\_relationship* function determines whether the graph of instances of the entity data type express_ref:[location_schema.location] that contains relation as one of its links contains a cycle. This function may be used to evaluate either a express_ref:[location_schema.location_relationship] or any of its subtypes. 
+
+The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
+
+[NOTE]
+--
+The algorithm of the function is explained in annex E.2.
+--
+
+[NOTE]
+--
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[location_schema.location_relationship] entity include rules that use this function.
+--
+*)
+
+(*"location_schema.acyclic_location_relationship.relation"
+(input) the candidate express_ref:[location_schema.location_relationship] to be checked.
+*)
+
+(*"location_schema.acyclic_location_relationship.relatives"
+(input) the set of instances of the entity data type express_ref:[location_schema.location] that the function is searching for in the express_ref:[location_schema.location_relationship.relating_location] parameter of the *relation* argument.
+*)
+
+(*"location_schema.acyclic_location_relationship.specific_relation"
+(input) the fully qualified name of a subtype of the express_ref:[location_schema.location_relationship] entity.
+*)

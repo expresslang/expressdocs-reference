@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="management_resources_schemaexpg6.xml">
+<img src="management_resources_schemaexpg6.gif">
+<img.area shape="rect" coords="233,436,500,470" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="111,139,500,173" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization_role" />
+<img.area shape="rect" coords="200,597,500,631" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="1192,202,1447,236" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="200,336,500,370" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier" />
+<img.area shape="rect" coords="1192,139,1539,173" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization" />
+<img.area shape="rect" coords="1192,15,1640,49" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_and_organization" />
+<img.area shape="rect" coords="233,691,500,725" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="245,386,500,420" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="1192,75,1495,109" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person" />
+<img.area shape="rect" coords="1192,644,1638,678" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.position_in_organization" />
+<img.area shape="rect" coords="245,644,500,678" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="155,75,500,109" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_role" />
+<img.area shape="rect" coords="233,202,500,236" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="1192,279,1620,313" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organizational_project" />
+<img.area shape="rect" coords="10,14,500,48" href="../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_and_organization_role" />
+<img.area shape="rect" coords="552,13,917,49" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.person_and_organization_assignment" />
+<img.area shape="rect" coords="672,328,797,478" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.position_in_organization_role" />
+<img.area shape="rect" coords="624,74,844,110" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.person_assignment" />
+<img.area shape="rect" coords="562,278,907,314" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.organizational_project_assignment" />
+<img.area shape="rect" coords="674,591,795,732" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.position_in_organization_assignment" />
+<img.area shape="rect" coords="602,138,866,174" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.organization_assignment" />
+<img.area shape="rect" coords="617,201,851,237" href="../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.organizational_project_role" />
+</img>
+</imgfile.content>
