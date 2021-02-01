@@ -1,7 +1,13 @@
-
-//[lutaml, ../../../../../resources/action_schema/action_schema.exp;../../../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../../../resources/approval_schema/application_context_schema_annotated.exp;../../../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../../../resources/certification_schema/certification_schema_annotated.exp;../../../../../resources/contract_schema/contract_schema_annotated.exp;../../../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../../../resources/document_schema/document_schema.exp;../../../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../../../resources/experience_schema/experience_schema_annotated.exp;../../../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../../../resources/group_schema/group_schema_annotated.exp;../../../../../resources/language_schema/language_schema_annotated.exp;../../../../../resources/location_schema/location_schema_annotated.exp;../../../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../../../resources/measure_schema/measure_schema_annotated.exp;../../../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../../../resources/product_concept_schema/product_concept_schema_annotated.exp;../../../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+1]
+// ../../../resources/approval_schema/application_context_schema_annotated.exp; - does not exists
+// data/resources/measure_schema/measure_schema_annotated.exp:
+//   expressir error: undefined method `downcase' for nil:NilClass
+//   NoMethodError: asciidoctor: FAILED: document.adoc: Failed to load AsciiDoc document - undefined method `downcase' for nil:NilClass
+//   lib/expressir/model/scope.rb:13:in `block in find'
+//   lib/expressir/model/scope.rb:13:in `each'
+//   lib/expressir/model/scope.rb:13:in `find'
 //[lutaml, ../../../../../resources/action_schema/action_schema.exp, repo, leveloffset=+1]
-[lutaml, action_schema.exp, repo, leveloffset=+1]
+// [lutaml, action_schema.exp, repo, leveloffset=+1]
+[lutaml, ../../../resources/action_schema/action_schema.exp;../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../resources/certification_schema/certification_schema_annotated.exp;../../../resources/contract_schema/contract_schema_annotated.exp;../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../resources/document_schema/document_schema.exp;../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../resources/experience_schema/experience_schema_annotated.exp;../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../resources/group_schema/group_schema_annotated.exp;../../../resources/language_schema/language_schema_annotated.exp;../../../resources/location_schema/location_schema_annotated.exp;../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../resources/product_concept_schema/product_concept_schema_annotated.exp;../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+1]
 ---
 {% for schema in repo.schemas %}
 [[{{schema.id}}]]
@@ -26,9 +32,9 @@ _EXPRESS specification:_
 
 {% if constant.source %}
 [source%unnumbered]
--- 
+--
 {{ constant.source  }}
--- 
+--
 {% endif %}
 
 {{ constant.remarks }}
@@ -49,9 +55,9 @@ _EXPRESS specification:_
 _EXPRESS specification:_
 
 [source%unnumbered]
--- 
+--
 {{ type.source }}
--- 
+--
 {% endif %}
 
 {% if type.items.size > 0 %}
@@ -82,7 +88,7 @@ _Type items:_
 _EXPRESS specification:_
 
 [source%unnumbered]
--- 
+--
 {{ entity.source }}
 --
 
@@ -123,7 +129,7 @@ _Subtype Constraints_
 _EXPRESS specification:_
 
 [source%unnumbered]
--- 
+--
 {{ function.source }}
 --
 
@@ -235,7 +241,7 @@ _Function statements:_
 _EXPRESS specification:_
 
 [source%unnumbered]
--- 
+--
 {{ procedure.source }}
 --
 
@@ -317,7 +323,7 @@ _Procedure statements:_
 
 {% if statement.remarks  %}
 
-{% if statement.id %} 
+{% if statement.id %}
 {% assign statementid = statement.id %}
 {% else %}
 {% assign statementid = forloop.index %}
@@ -347,7 +353,7 @@ _Procedure statements:_
 _EXPRESS specification:_
 
 [source%unnumbered]
--- 
+--
 {{ rule.source }}
 --
 
@@ -418,7 +424,7 @@ _Rule statements:_
 
 {% for statement in rule.statements %}
 
-{% if statement.id %} 
+{% if statement.id %}
 {% assign statementid = statement.id %}
 {% else %}
 {% assign statementid = forloop.index %}
