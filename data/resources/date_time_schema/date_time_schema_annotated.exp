@@ -362,7 +362,7 @@ END_SCHEMA;
 (*"date_time_schema"
 == Introduction
 
-The subject of the *date\_time\_schema* is the definition of dates, both calendar and ordinal, time of day, combinations of date and time of day, and periods of time.
+The subject of the *date_time_schema* is the definition of dates, both calendar and ordinal, time of day, combinations of date and time of day, and periods of time.
 
 == Fundamental concerns
 
@@ -376,7 +376,7 @@ expg_image:date_time_schemaexpg3.xml[]
 *)
 
 (*"date_time_schema.ahead_or_behind"
-The *ahead\_or\_behind* type is used to specify whether a given time is ahead of coordinated universal time, behind coordinated universal time or is coordinated universal time. 
+The *ahead_or_behind* type is used to specify whether a given time is ahead of coordinated universal time, behind coordinated universal time or is coordinated universal time. 
 
 [NOTE]
 --
@@ -397,15 +397,15 @@ a given time is behind coordinated universal time.
 *)
 
 (*"date_time_schema.date_time_or_event_occurrence"
-The *date\_time\_or\_event\_occurrence* type allows for the designation of a express_ref:[date_time_schema.date_time_select] or an express_ref:[date_time_schema.event_occurrence].
+The *date_time_or_event_occurrence* type allows for the designation of a <<express:date_time_schema:date_time_schema.date_time_select, date_time_select>> or an <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>>.
 *)
 
 (*"date_time_schema.date_time_select"
-A *date\_time\_select* type allows for the designation of a express_ref:[date_time_schema.date], express_ref:[date_time_schema.date_and_time], or a express_ref:[date_time_schema.local_time].
+A *date_time_select* type allows for the designation of a <<express:date_time_schema:date_time_schema.date, date>>, <<express:date_time_schema:date_time_schema.date_and_time, date_and_time>>, or a <<express:date_time_schema:date_time_schema.local_time, local_time>>.
 *)
 
 (*"date_time_schema.day_in_month_number"
-A *day\_in\_month\_number* is the position of the specified day in a month.
+A *day_in_month_number* is the position of the specified day in a month.
 *)
 
 (*"date_time_schema.day_in_month_number.wr:WR1"
@@ -413,7 +413,7 @@ The value of the integer shall be between 1 and 31 inclusive.
 *)
 
 (*"date_time_schema.day_in_week_number"
-A *day\_in\_week\_number* is the position of the specified day in a week as defined in ISO 8601. 
+A *day_in_week_number* is the position of the specified day in a week as defined in ISO 8601. 
 
 [NOTE]
 --
@@ -426,7 +426,7 @@ The value of the integer shall be between 1 and 7 inclusive.
 *)
 
 (*"date_time_schema.day_in_year_number"
-A *day\_in\_year\_number* is the position of the specified day in a year. 
+A *day_in_year_number* is the position of the specified day in a year. 
 
 [example]
 ====
@@ -439,11 +439,11 @@ The value of the integer shall be between 1 and 366 inclusive.
 *)
 
 (*"date_time_schema.hour_in_day"
-An *hour\_in\_day* is the hour element of a specified time on a 24-hour clock. Midnight shall be represented by the value zero. 
+An *hour_in_day* is the hour element of a specified time on a 24-hour clock. Midnight shall be represented by the value zero. 
 
 [example]
 ====
-The *hour\_in\_day* corresponding to 3 o'clock in the afternoon is 15.
+The *hour_in_day* corresponding to 3 o'clock in the afternoon is 15.
 ====
 
 [NOTE]
@@ -457,7 +457,7 @@ The value of the integer shall be between 0 and 23 inclusive.
 *)
 
 (*"date_time_schema.minute_in_hour"
-A *minute\_in\_hour* is the minute element of a specified time.
+A *minute_in_hour* is the minute element of a specified time.
 *)
 
 (*"date_time_schema.minute_in_hour.wr:WR1"
@@ -465,7 +465,7 @@ The value of the integer shall be between 0 and 59 inclusive.
 *)
 
 (*"date_time_schema.month_in_year_number"
-A *month\_in\_year\_number* is the position of the specified month in a year as defined in ISO 8601. 
+A *month_in_year_number* is the position of the specified month in a year as defined in ISO 8601. 
 
 [NOTE]
 --
@@ -478,7 +478,7 @@ The value of the integer shall be between 1 and 12 inclusive.
 *)
 
 (*"date_time_schema.second_in_minute"
-A *second\_in\_minute* is the position of the specified second in a minute.
+A *second_in_minute* is the position of the specified second in a minute.
 *)
 
 (*"date_time_schema.second_in_minute.wr:WR1"
@@ -496,7 +496,7 @@ The mean solar time is determined by the rotation of the earth. Leap seconds are
 *)
 
 (*"date_time_schema.week_in_year_number"
-A *week\_in\_year\_number* is the position of the specified calendar week as defined in ISO 8601. 
+A *week_in_year_number* is the position of the specified calendar week as defined in ISO 8601. 
 
 [NOTE]
 --
@@ -509,7 +509,7 @@ The value of the integer shall be between 1 and 53.
 *)
 
 (*"date_time_schema.year_number"
-A *year\_number* is the year as defined in the Gregorian calendar. The *year\_number* shall be completely and explicitly specified using as many digits as necessary to unambiguously convey the century and year within the century. Truncated year numbers shall not be used. 
+A *year_number* is the year as defined in the Gregorian calendar. The *year_number* shall be completely and explicitly specified using as many digits as necessary to unambiguously convey the century and year within the century. Truncated year numbers shall not be used. 
 
 [NOTE]
 --
@@ -518,7 +518,7 @@ ISO 8601:1988 defines the Gregorian calendar.
 
 [example]
 ====
-The *year\_number* corresponding to the first manned landing on the moon is 1969 (not 69).
+The *year_number* corresponding to the first manned landing on the moon is 1969 (not 69).
 ====
 *)
 
@@ -527,15 +527,15 @@ The value of the integer shall be greater than 1581.
 *)
 
 (*"date_time_schema.calendar_date"
-A *calendar\_date* is a type of express_ref:[date_time_schema.date] defined as a day in a month of a year as defined in ISO 8601.
+A *calendar_date* is a type of <<express:date_time_schema:date_time_schema.date, date>> defined as a day in a month of a year as defined in ISO 8601.
 *)
 
 (*"date_time_schema.calendar_date.day_component"
-the day element of the express_ref:[date_time_schema.date].
+the day element of the <<express:date_time_schema:date_time_schema.date, date>>.
 *)
 
 (*"date_time_schema.calendar_date.month_component"
-the month element of the express_ref:[date_time_schema.date].
+the month element of the <<express:date_time_schema:date_time_schema.date, date>>.
 *)
 
 (*"date_time_schema.calendar_date.wr:WR1"
@@ -543,12 +543,12 @@ The entity shall define a valid calendar date.
 
 [NOTE]
 --
-If the *month\_component* is 'April', 'June', 'August', or 'November' the *day\_component* will be between 1 and 30; when the *month\_component* is 'February' and the express_ref:[date_time_schema.date.year_component] is a leap year the *day\_component* will be between 1 and 29; if the *month\_component* is 'February' and the express_ref:[date_time_schema.date.year_component] is not a leap year the *day\_component* will be between 1 and 28. Otherwise, the *day\_component* will be between 1 and 31.
+If the *month_component* is 'April', 'June', 'August', or 'November' the *day_component* will be between 1 and 30; when the *month_component* is 'February' and the <<express:date_time_schema:date_time_schema.date.year_component, year_component>> is a leap year the *day_component* will be between 1 and 29; if the *month_component* is 'February' and the <<express:date_time_schema:date_time_schema.date.year_component, year_component>> is not a leap year the *day_component* will be between 1 and 28. Otherwise, the *day_component* will be between 1 and 31.
 --
 *)
 
 (*"date_time_schema.coordinated_universal_time_offset"
-A *coordinated\_universal\_time\_offset* is the oriented offset (specified in hours and possibly minutes) from the coordinated universal time. The offset is defined in ISO 8601 The offset value shall be positive. 
+A *coordinated_universal_time_offset* is the oriented offset (specified in hours and possibly minutes) from the coordinated universal time. The offset is defined in ISO 8601 The offset value shall be positive. 
 
 [NOTE]
 --
@@ -557,7 +557,7 @@ Coordinated Universal Time (UTC) is the international time standard. It is the c
 
 [NOTE]
 --
-A *coordinated\_universal\_time\_offset* is used to relate a time to coordinated universal time by an offset (specified in hours and minutes) and a direction.
+A *coordinated_universal_time_offset* is used to relate a time to coordinated universal time by an offset (specified in hours and minutes) and a direction.
 --
 *)
 
@@ -574,23 +574,23 @@ the direction of the offset.
 *)
 
 (*"date_time_schema.coordinated_universal_time_offset.actual_minute_offset"
-the value of the number of minutes offset used to compute the *coordinated\_universal\_time\_offset*, either the value of *minute\_offset* or 0.
+the value of the number of minutes offset used to compute the *coordinated_universal_time_offset*, either the value of *minute_offset* or 0.
 *)
 
 (*"date_time_schema.coordinated_universal_time_offset.wr:WR1"
-The *hour\_offset* shall be a positive number, less than 24.
+The *hour_offset* shall be a positive number, less than 24.
 *)
 
 (*"date_time_schema.coordinated_universal_time_offset.wr:WR2"
-The *minute\_offset* shall be a positive number, less than or equal to 59.
+The *minute_offset* shall be a positive number, less than or equal to 59.
 *)
 
 (*"date_time_schema.coordinated_universal_time_offset.wr:WR3"
-If the value of *sense* specifies that there is no offset from the Coordinated Universal time, *hour\_offset* and *actual\_minute\_offset* shall both be equal to zero. If either *hour\_offset* or *actual\_minute\_offset* is different from zero, the value of sense shall specify that there is an offset, either ahead or behind, from the Coordinated Universal time.
+If the value of *sense* specifies that there is no offset from the Coordinated Universal time, *hour_offset* and *actual_minute_offset* shall both be equal to zero. If either *hour_offset* or *actual_minute_offset* is different from zero, the value of sense shall specify that there is an offset, either ahead or behind, from the Coordinated Universal time.
 *)
 
 (*"date_time_schema.date"
-A *date* is the identification of a day or week or month in a year. A *date* may be a express_ref:[date_time_schema.calendar_date] or an express_ref:[date_time_schema.ordinal_date], or a express_ref:[date_time_schema.week_of_year_and_day_date], or a express_ref:[date_time_schema.year_month]. The date is defined in ISO 8601.
+A *date* is the identification of a day or week or month in a year. A *date* may be a <<express:date_time_schema:date_time_schema.calendar_date, calendar_date>> or an <<express:date_time_schema:date_time_schema.ordinal_date, ordinal_date>>, or a <<express:date_time_schema:date_time_schema.week_of_year_and_day_date, week_of_year_and_day_date>>, or a <<express:date_time_schema:date_time_schema.year_month, year_month>>. The date is defined in ISO 8601.
 *)
 
 (*"date_time_schema.date.year_component"
@@ -598,7 +598,7 @@ the year in which the *date* occurs.
 *)
 
 (*"date_time_schema.date_and_time"
-A *date\_and\_time* is a moment of time on a particular day.
+A *date_and_time* is a moment of time on a particular day.
 *)
 
 (*"date_time_schema.date_and_time.date_component"
@@ -610,16 +610,16 @@ the time element of the date time combination.
 *)
 
 (*"date_time_schema.date_role"
-A *date\_role* is a role for a express_ref:[date_time_schema.date] A *date\_role* is an incompletely modeled concept and requires population related entity data types to form a complete *date\_role*. 
+A *date_role* is a role for a <<express:date_time_schema:date_time_schema.date, date>> A *date_role* is an incompletely modeled concept and requires population related entity data types to form a complete *date_role*. 
 
 [NOTE]
 --
-A *date\_role* is a role for a express_ref:[management_resources_schema.date_assignment] and a description of that role.
+A *date_role* is a role for a <<express:management_resources_schema:management_resources_schema.date_assignment, date_assignment>> and a description of that role.
 --
 *)
 
 (*"date_time_schema.date_role.name"
-the express_ref:[support_resource_schema.label] by which the *date\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *date_role* is known.
 
 [NOTE]
 --
@@ -628,39 +628,39 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.date_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *date\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *date_role*. The value of the attribute need not be specified.
 
 [NOTE]
 --
-This attribute is an upwardly compatible addition to *date\_role* as specified in ISO 10303-41:1994.
+This attribute is an upwardly compatible addition to *date_role* as specified in ISO 10303-41:1994.
 --
 *)
 
 (*"date_time_schema.date_role.wr:WR1"
-Each *date\_role* shall be the express_ref:[basic_attribute_schema.description_attribute.described_item] in at most one express_ref:[basic_attribute_schema.description_attribute].
+Each *date_role* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item, described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>>.
 
 [NOTE]
 --
-The express_ref:[basic_attribute_schema.description_attribute] data type is defined in express_ref:[basic_attribute_schema] of this part of ISO 10303.
+The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"date_time_schema.date_time_role"
-A *date\_time\_role* is a role for a moment of time on a particular day. A *date\_time\_role* is an incompletely modeled concept that requires population of related entity data types to form a complete *date\_time\_role*
+A *date_time_role* is a role for a moment of time on a particular day. A *date_time_role* is an incompletely modeled concept that requires population of related entity data types to form a complete *date_time_role*
 
 [NOTE]
 --
-A *date\_time\_role* is a role for a express_ref:[management_resources_schema.date_and_time_assignment] and a description of that role.
+A *date_time_role* is a role for a <<express:management_resources_schema:management_resources_schema.date_and_time_assignment, date_and_time_assignment>> and a description of that role.
 --
 *)
 
 (*"date_time_schema.date_time_role.name"
-the express_ref:[support_resource_schema.label] by which the *date\_time\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *date_time_role* is known.
 
 [NOTE]
 --
@@ -669,48 +669,48 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.date_time_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *date\_time\_role*.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *date_time_role*.
 
 [NOTE]
 --
-This attribute is an upwardly compatible addition to *date\_time\_role* as specified in ISO 10303-41:1994.
+This attribute is an upwardly compatible addition to *date_time_role* as specified in ISO 10303-41:1994.
 --
 *)
 
 (*"date_time_schema.date_time_role.wr:WR1"
-Each *date\_time\_role* shall be the express_ref:[basic_attribute_schema.description_attribute.described_item] in at most one express_ref:[basic_attribute_schema.description_attribute].
+Each *date_time_role* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item, described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>>.
 
 [NOTE]
 --
-The express_ref:[basic_attribute_schema.description_attribute] data type is defined in express_ref:[basic_attribute_schema] of this part of ISO 10303.
+The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"date_time_schema.event_occurrence"
-An *event\_occurrence* is the fact of a transition between states at some point in time. The description of the *event\_occurrrnece* can provide an implicit representation of either the state preceeding the *event\_occurrence* or the state after the *event\_occurrence*. 
+An *event_occurrence* is the fact of a transition between states at some point in time. The description of the *event_occurrrnece* can provide an implicit representation of either the state preceeding the *event_occurrence* or the state after the *event_occurrence*. 
 
 [NOTE]
 --
-The point in time of the existence may not be known in terms of a calendar date before the *event\_occurrence* actually happens. One reason, why the *event\_occurrence* cannot always be expressed as a calendar date, is that the *event\_occurrence* is not possible to plan, for example a break down of a machine.
+The point in time of the existence may not be known in terms of a calendar date before the *event_occurrence* actually happens. One reason, why the *event_occurrence* cannot always be expressed as a calendar date, is that the *event_occurrence* is not possible to plan, for example a break down of a machine.
 --
 
 [example]
 ====
-The *event\_occurrence* 'start of production' implicitly declares that the before the *event\_occurrence* a product was not in production.
+The *event_occurrence* 'start of production' implicitly declares that the before the *event_occurrence* a product was not in production.
 ====
 *)
 
 (*"date_time_schema.event_occurrence.description"
-the express_ref:[support_resource_schema.text] that characterizes the *event\_occurrence*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *event_occurrence*. The value of the attribute need not be specified.
 *)
 
 (*"date_time_schema.event_occurrence.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *event\_occurrence*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *event_occurrence*.
 
 [NOTE]
 --
@@ -719,50 +719,50 @@ The context in which id is used as a discriminating characteristic can be identi
 *)
 
 (*"date_time_schema.event_occurrence.name"
-the express_ref:[support_resource_schema.label] by which the *event\_occurrence* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *event_occurrence* is known.
 *)
 
 (*"date_time_schema.event_occurrence_context_role"
-An *event\_occurrence\_context\_role* establishes a context for an express_ref:[management_resources_schema.event_occurrence_assignment]. An *event\_occurrence* is an incompletely modeled concept and requires population of related entity data types to form a complete *event\_occurrence\_context\_role*
+An *event_occurrence_context_role* establishes a context for an <<express:management_resources_schema:management_resources_schema.event_occurrence_assignment, event_occurrence_assignment>>. An *event_occurrence* is an incompletely modeled concept and requires population of related entity data types to form a complete *event_occurrence_context_role*
 
 [example]
 ====
-For the express_ref:[date_time_schema.event_occurrence] 'start of production' the product, for which production starts, is the context for that express_ref:[date_time_schema.event_occurrence].
+For the <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> 'start of production' the product, for which production starts, is the context for that <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>>.
 ====
 *)
 
 (*"date_time_schema.event_occurrence_context_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *event\_occurrence\_context\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *event_occurrence_context_role*. The value of the attribute need not be specified.
 *)
 
 (*"date_time_schema.event_occurrence_context_role.name"
-the express_ref:[support_resource_schema.label] by which the *event\_occurrence\_context\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *event_occurrence_context_role* is known.
 *)
 
 (*"date_time_schema.event_occurrence_relationship"
-An *event\_occurrence\_relationship* is a relationship between two express_ref:[date_time_schema.event_occurrence]s with a description of their relationship. 
+An *event_occurrence_relationship* is a relationship between two <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>>s with a description of their relationship. 
 
 [NOTE]
 --
-The role of *event\_occurrence\_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+The role of *event_occurrence_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
 --
 
 [NOTE]
 --
-This entity, together with the express_ref:[date_time_schema.event_occurrence] entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"date_time_schema.event_occurrence_relationship.name"
-the express_ref:[support_resource_schema.label] by which the *event\_occurrence\_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *event_occurrence_relationship* is known.
 *)
 
 (*"date_time_schema.event_occurrence_relationship.description"
-the express_ref:[support_resource_schema.text] that characterizes the *event\_occurrence\_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *event_occurrence_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"date_time_schema.event_occurrence_relationship.relating_event"
-one of the instances of express_ref:[date_time_schema.event_occurrence]s that is a part of the relationship.
+one of the instances of <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>>s that is a part of the relationship.
 
 [NOTE]
 --
@@ -771,7 +771,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.event_occurrence_relationship.related_event"
-the other instance of express_ref:[date_time_schema.event_occurrence]. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>>. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -780,23 +780,23 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.event_occurrence_role"
-An *event\_occurrence\_role* establishes a role for an *event\_occurrence*. An *event\_occurrence\_role* is an incompletely modeled concept and requires population of related entity data types to form a complete *event\_occurrence\_role*
+An *event_occurrence_role* establishes a role for an *event_occurrence*. An *event_occurrence_role* is an incompletely modeled concept and requires population of related entity data types to form a complete *event_occurrence_role*
 *)
 
 (*"date_time_schema.event_occurrence_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *event\_occurrence\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *event_occurrence_role*. The value of the attribute need not be specified.
 *)
 
 (*"date_time_schema.event_occurrence_role.name"
-the express_ref:[support_resource_schema.label] by which the *event\_occurrence\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *event_occurrence_role* is known.
 *)
 
 (*"date_time_schema.local_time"
-A *local\_time* is an instance of time represented on a 24-hour clock by hour, minute, and second. The instance is expressed in the local time zone and the offset with the coordinate universal time shall be specified. This concept is defined in ISO 8601. 
+A *local_time* is an instance of time represented on a 24-hour clock by hour, minute, and second. The instance is expressed in the local time zone and the offset with the coordinate universal time shall be specified. This concept is defined in ISO 8601. 
 
 [NOTE]
 --
-This construct is used to represent a moment of time whereas express_ref:[measure_schema.time_measure] represents amounts of time.
+This construct is used to represent a moment of time whereas <<express:measure_schema:measure_schema.time_measure, time_measure>> represents amounts of time.
 --
 *)
 
@@ -817,49 +817,49 @@ the offset of the local time zone to the coordinated universal time.
 *)
 
 (*"date_time_schema.local_time.wr:WR1"
-The entity shall define a valid time. The *second\_component* attribute shall only exist if the *minute\_component* attribute exists.
+The entity shall define a valid time. The *second_component* attribute shall only exist if the *minute_component* attribute exists.
 *)
 
 (*"date_time_schema.ordinal_date"
-An *ordinal\_date* is a type of express_ref:[date_time_schema.date] defined as a day of a year. This concept is defined in ISO 8601.
+An *ordinal_date* is a type of <<express:date_time_schema:date_time_schema.date, date>> defined as a day of a year. This concept is defined in ISO 8601.
 *)
 
 (*"date_time_schema.ordinal_date.day_component"
-the day element of the express_ref:[date_time_schema.date].
+the day element of the <<express:date_time_schema:date_time_schema.date, date>>.
 *)
 
 (*"date_time_schema.ordinal_date.wr:WR1"
-The *day\_component* shall be between 1 and 365 if the express_ref:[date_time_schema.date.year_component] is not a leap year. Otherwise the *day\_component* shall be between 1 and 366.
+The *day_component* shall be between 1 and 365 if the <<express:date_time_schema:date_time_schema.date.year_component, year_component>> is not a leap year. Otherwise the *day_component* shall be between 1 and 366.
 *)
 
 (*"date_time_schema.relative_event_occurrence"
-A *relative\_event\_occurrence* is a type of express_ref:[date_time_schema.event_occurrence] that takes place with an offset to an express_ref:[date_time_schema.event_occurrence]. 
+A *relative_event_occurrence* is a type of <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> that takes place with an offset to an <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>>. 
 
 [example]
 ====
-'Five days after start of production' is an example for a *relative\_event\_occurrence*, where 'five days' is an offset relative to an express_ref:[date_time_schema.event_occurrence] 'start of production'.
+'Five days after start of production' is an example for a *relative_event_occurrence*, where 'five days' is an offset relative to an <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> 'start of production'.
 ====
 *)
 
 (*"date_time_schema.relative_event_occurrence.base_event"
-the *relative\_event\_occurrence* is defined with respect to the *base\_event*.
+the *relative_event_occurrence* is defined with respect to the *base_event*.
 *)
 
 (*"date_time_schema.relative_event_occurrence.offset"
-the amount of time that passes between the occurrence of the *base\_event* and the *relative\_event\_occurrence*. A negative offset specifies that the *relative\_event\_occurrence* occurs before the *base\_event*.
+the amount of time that passes between the occurrence of the *base_event* and the *relative_event_occurrence*. A negative offset specifies that the *relative_event_occurrence* occurs before the *base_event*.
 *)
 
 (*"date_time_schema.time_interval"
-A *time\_interval* is the identification of an interval of time. This concept is defined in ISO 8601. 
+A *time_interval* is the identification of an interval of time. This concept is defined in ISO 8601. 
 
 [example]
 ====
-'Strike duration', 'delay of production', and 'Christmas holidays' are examples for *time\_interval*s.
+'Strike duration', 'delay of production', and 'Christmas holidays' are examples for *time_interval*s.
 ====
 *)
 
 (*"date_time_schema.time_interval.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *time\_interval*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *time_interval*.
 
 [NOTE]
 --
@@ -868,37 +868,37 @@ The context in which id is used as a discriminating characteristic can be identi
 *)
 
 (*"date_time_schema.time_interval.name"
-the express_ref:[support_resource_schema.label] by which the *time\_interval* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *time_interval* is known.
 *)
 
 (*"date_time_schema.time_interval.description"
-the express_ref:[support_resource_schema.text] that characterizes the *time\_interval*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *time_interval*. The value of the attribute need not be specified.
 *)
 
 (*"date_time_schema.time_interval_relationship"
-A *time\_interval\_relationship* is a relationship between two express_ref:[date_time_schema.time_interval]s with a description of their relationship. 
+A *time_interval_relationship* is a relationship between two <<express:date_time_schema:date_time_schema.time_interval, time_interval>>s with a description of their relationship. 
 
 [NOTE]
 --
-The role of *time\_interval\_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+The role of *time_interval_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
 --
 
 [NOTE]
 --
-This entity, together with the express_ref:[date_time_schema.time_interval] entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:date_time_schema:date_time_schema.time_interval, time_interval>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"date_time_schema.time_interval_relationship.name"
-the express_ref:[support_resource_schema.label] by which the *time\_interval\_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *time_interval_relationship* is known.
 *)
 
 (*"date_time_schema.time_interval_relationship.description"
-the express_ref:[support_resource_schema.text] that characterizes the *time\_interval\_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *time_interval_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"date_time_schema.time_interval_relationship.relating_time_interval"
-one of the instances of express_ref:[date_time_schema.time_interval] that is a part of the relationship.
+one of the instances of <<express:date_time_schema:date_time_schema.time_interval, time_interval>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -907,7 +907,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.time_interval_relationship.related_time_interval"
-the other instance of express_ref:[date_time_schema.time_interval]. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:date_time_schema:date_time_schema.time_interval, time_interval>>. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -916,16 +916,16 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.time_interval_role"
-A *time\_interval\_role* is a role that may be assigned to a *time\_interval* and includes a description of that role. 
+A *time_interval_role* is a role that may be assigned to a *time_interval* and includes a description of that role. 
 
 [NOTE]
 --
-The assignment of a role to a *time\_interval* is accomplished by the *time\_interval\_assignment* entity data type.
+The assignment of a role to a *time_interval* is accomplished by the *time_interval_assignment* entity data type.
 --
 *)
 
 (*"date_time_schema.time_interval_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *time\_interval\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *time_interval_role*. The value of the attribute need not be specified.
 
 [NOTE]
 --
@@ -934,57 +934,57 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.time_interval_role.name"
-the express_ref:[support_resource_schema.label] by which the *time\_interval\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *time_interval_role* is known.
 *)
 
 (*"date_time_schema.time_interval_with_bounds"
-A *time\_interval\_with\_bounds* is a type of express_ref:[date_time_schema.time_interval]. The *time\_interval\_with\_bounds* is bounded either on one side or both sides. If neither *secondary\_bound* nor *duration* are specified, the time interval begins at the point in time identified by *primary\_bound* and has no specified end point. 
+A *time_interval_with_bounds* is a type of <<express:date_time_schema:date_time_schema.time_interval, time_interval>>. The *time_interval_with_bounds* is bounded either on one side or both sides. If neither *secondary_bound* nor *duration* are specified, the time interval begins at the point in time identified by *primary_bound* and has no specified end point. 
 
 [example]
 ====
-'From 01-01-1999 to 31-12-1999' is an example for a both side bounded *time\_interval\_with\_bounds*, 'from 01-01-2000 on', and 'until start of production' are examples for a one side bounded *time\_interval\_with\_bounds*.
+'From 01-01-1999 to 31-12-1999' is an example for a both side bounded *time_interval_with_bounds*, 'from 01-01-2000 on', and 'until start of production' are examples for a one side bounded *time_interval_with_bounds*.
 ====
 *)
 
 (*"date_time_schema.time_interval_with_bounds.primary_bound"
-one of the bounds of the *time\_interval\_with\_bounds*. The value of this attribute need not be specified.
+one of the bounds of the *time_interval_with_bounds*. The value of this attribute need not be specified.
 *)
 
 (*"date_time_schema.time_interval_with_bounds.secondary_bound"
-the other bound of the *time\_interval\_with\_bounds*. The value of this attribute need not be specified.
+the other bound of the *time_interval_with_bounds*. The value of this attribute need not be specified.
 *)
 
 (*"date_time_schema.time_interval_with_bounds.duration"
-the express_ref:[measure_schema.time_measure_with_unit] that specifies the length of a *time\_interval\_with\_bounds*. If positive, the *time\_interval\_with\_bounds* is a lower bounded *time\_interval\_with\_bounds*, else an upper bounded *time\_interval\_with\_bounds*. The value of this attribute need not be specified.
+the <<express:measure_schema:measure_schema.time_measure_with_unit, time_measure_with_unit>> that specifies the length of a *time_interval_with_bounds*. If positive, the *time_interval_with_bounds* is a lower bounded *time_interval_with_bounds*, else an upper bounded *time_interval_with_bounds*. The value of this attribute need not be specified.
 *)
 
 (*"date_time_schema.time_interval_with_bounds.wr:WR1"
-Either the *primary\_bound* or the *secondary\_bound* or both shall be specified.
+Either the *primary_bound* or the *secondary_bound* or both shall be specified.
 *)
 
 (*"date_time_schema.time_interval_with_bounds.wr:WR2"
-The combination of *primary\_bound*, *secondary\_bound* and *duration* shall not be specified.
+The combination of *primary_bound*, *secondary_bound* and *duration* shall not be specified.
 *)
 
 (*"date_time_schema.time_interval_with_bounds.wr:WR3"
-If *primary\_bound* is specified and *secondary\_bound* is not specified and if *duration* is specified, the *duration* shall be positive.
+If *primary_bound* is specified and *secondary_bound* is not specified and if *duration* is specified, the *duration* shall be positive.
 *)
 
 (*"date_time_schema.time_interval_with_bounds.wr:WR4"
-If *primary\_bound* is not specified and *secondary\_bound* is specified, *duration* shall be specified and the *duration* shall be negative.
+If *primary_bound* is not specified and *secondary_bound* is specified, *duration* shall be specified and the *duration* shall be negative.
 *)
 
 (*"date_time_schema.time_role"
-A *time\_role* is a definition of a role for a *local\_time*. 
+A *time_role* is a definition of a role for a *local_time*. 
 
 [NOTE]
 --
-The assignment of the role to a *local\_time* is accomplished by the *time\_assignment* entity data type.
+The assignment of the role to a *local_time* is accomplished by the *time_assignment* entity data type.
 --
 *)
 
 (*"date_time_schema.time_role.name"
-the express_ref:[support_resource_schema.label] by which the *time\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *time_role* is known.
 
 [NOTE]
 --
@@ -993,58 +993,58 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.time_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *time\_role*.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *time_role*.
 
 [NOTE]
 --
-This attribute is an upwardly compatible addition to *time\_role* as specified in ISO 10303-41:1994
+This attribute is an upwardly compatible addition to *time_role* as specified in ISO 10303-41:1994
 --
 *)
 
 (*"date_time_schema.time_role.wr:WR1"
-Each *time\_role* shall be the express_ref:[basic_attribute_schema.description_attribute.described_item] in at most one express_ref:[basic_attribute_schema.description_attribute].
+Each *time_role* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item, described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>>.
 
 [NOTE]
 --
-The express_ref:[basic_attribute_schema.description_attribute] data type is defined in express_ref:[basic_attribute_schema] of this part of ISO 10303.
+The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"date_time_schema.week_of_year_and_day_date"
-A *week\_of\_year\_and\_day\_date* is a type of express_ref:[date_time_schema.date] defined by identifying the week within a year and the day within that particular week.
+A *week_of_year_and_day_date* is a type of <<express:date_time_schema:date_time_schema.date, date>> defined by identifying the week within a year and the day within that particular week.
 *)
 
 (*"date_time_schema.week_of_year_and_day_date.day_component"
-the day element of the express_ref:[date_time_schema.date].
+the day element of the <<express:date_time_schema:date_time_schema.date, date>>.
 *)
 
 (*"date_time_schema.week_of_year_and_day_date.week_component"
-the week element of the express_ref:[date_time_schema.date].
+the week element of the <<express:date_time_schema:date_time_schema.date, date>>.
 *)
 
 (*"date_time_schema.week_of_year_and_day_date.wr:WR1"
-The result of the expression *day\_component* + (7 \* express_ref:[date_time_schema.week_of_year_and_day_date.week_component]) shall be between 1 and 366 if the express_ref:[date_time_schema.date.year_component] is a leap year.
+The result of the expression *day_component* + (7 * <<express:date_time_schema:date_time_schema.week_of_year_and_day_date.week_component, week_component>>) shall be between 1 and 366 if the <<express:date_time_schema:date_time_schema.date.year_component, year_component>> is a leap year.
 *)
 
 (*"date_time_schema.week_of_year_and_day_date.wr:WR2"
-The result of the expression *day\_component* + (7 \* express_ref:[date_time_schema.week_of_year_and_day_date.week_component]) shall be between 1 and 365 if the express_ref:[date_time_schema.date.year_component] is not a leap year.
+The result of the expression *day_component* + (7 * <<express:date_time_schema:date_time_schema.week_of_year_and_day_date.week_component, week_component>>) shall be between 1 and 365 if the <<express:date_time_schema:date_time_schema.date.year_component, year_component>> is not a leap year.
 *)
 
 (*"date_time_schema.year_month"
-A *year\_month* is a type of express_ref:[date_time_schema.date] defined as a month of a year.
+A *year_month* is a type of <<express:date_time_schema:date_time_schema.date, date>> defined as a month of a year.
 *)
 
 (*"date_time_schema.year_month.month_component"
-the month element of the express_ref:[date_time_schema.date].
+the month element of the <<express:date_time_schema:date_time_schema.date, date>>.
 *)
 
 (*"date_time_schema.acyclic_event_occurrence_relationship"
-The *acyclic\_event\_occurrence\_relationship* function determines whether the graph of instances of the entity data type express_ref:[date_time_schema.event_occurrence] that contains relation as one of its links contains a cycle. This function may be used to evaluate either an express_ref:[date_time_schema.event_occurrence_relationship] or any of its subtypes. 
+The *acyclic_event_occurrence_relationship* function determines whether the graph of instances of the entity data type <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:date_time_schema:date_time_schema.event_occurrence_relationship, event_occurrence_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1055,24 +1055,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[date_time_schema.event_occurrence_relationship] entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:date_time_schema:date_time_schema.event_occurrence_relationship, event_occurrence_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"date_time_schema.acyclic_event_occurrence_relationship.relation"
-(input) the candidate express_ref:[date_time_schema.event_occurrence_relationship] to be checked.
+(input) the candidate <<express:date_time_schema:date_time_schema.event_occurrence_relationship, event_occurrence_relationship>> to be checked.
 *)
 
 (*"date_time_schema.acyclic_event_occurrence_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[date_time_schema.event_occurrence] for which the function is searching in the express_ref:[date_time_schema.event_occurrence_relationship.relating_event] parameter of the relation argument.
+(input) the set of instances of the entity data type <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> for which the function is searching in the <<express:date_time_schema:date_time_schema.event_occurrence_relationship.relating_event, relating_event>> parameter of the relation argument.
 *)
 
 (*"date_time_schema.acyclic_event_occurrence_relationship.specific_relation"
-(input) the fully qualified entity name of a type of express_ref:[date_time_schema.event_occurrence_relationship] entity.
+(input) the fully qualified entity name of a type of <<express:date_time_schema:date_time_schema.event_occurrence_relationship, event_occurrence_relationship>> entity.
 *)
 
 (*"date_time_schema.acyclic_time_interval_relationship"
-The *acyclic\_time\_interval\_relationship* function determines whether the graph of instances of the entity data type express_ref:[date_time_schema.time_interval] that contains relation as one of its links contains a cycle. This function may be used to evaluate either a express_ref:[date_time_schema.time_interval_relationship] or any of its subtypes. 
+The *acyclic_time_interval_relationship* function determines whether the graph of instances of the entity data type <<express:date_time_schema:date_time_schema.time_interval, time_interval>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:date_time_schema:date_time_schema.time_interval_relationship, time_interval_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1083,40 +1083,40 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[date_time_schema.time_interval_relationship] entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:date_time_schema:date_time_schema.time_interval_relationship, time_interval_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"date_time_schema.acyclic_time_interval_relationship.relation"
-(input) the candidate express_ref:[date_time_schema.time_interval_relationship] to be checked.
+(input) the candidate <<express:date_time_schema:date_time_schema.time_interval_relationship, time_interval_relationship>> to be checked.
 *)
 
 (*"date_time_schema.acyclic_time_interval_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[date_time_schema.time_interval] for which the function is searching in the express_ref:[date_time_schema.time_interval_relationship.relating_time_interval] parameter of the relation argument.
+(input) the set of instances of the entity data type <<express:date_time_schema:date_time_schema.time_interval, time_interval>> for which the function is searching in the <<express:date_time_schema:date_time_schema.time_interval_relationship.relating_time_interval, relating_time_interval>> parameter of the relation argument.
 *)
 
 (*"date_time_schema.acyclic_time_interval_relationship.specific_relation"
-(input) the fully qualified entity name of a type of express_ref:[date_time_schema.time_interval_relationship] entity.
+(input) the fully qualified entity name of a type of <<express:date_time_schema:date_time_schema.time_interval_relationship, time_interval_relationship>> entity.
 *)
 
 (*"date_time_schema.duration_is_negative"
-The *duration\_is\_negative* function determines whether a given express_ref:[date_time_schema.time_interval_with_bounds.duration] is negative. It returns TRUE if the express_ref:[date_time_schema.time_interval_with_bounds.duration] is negative. Otherwise, it returns FALSE.
+The *duration_is_negative* function determines whether a given <<express:date_time_schema:date_time_schema.time_interval_with_bounds.duration, duration>> is negative. It returns TRUE if the <<express:date_time_schema:date_time_schema.time_interval_with_bounds.duration, duration>> is negative. Otherwise, it returns FALSE.
 *)
 
 (*"date_time_schema.duration_is_negative.duration"
-(input) the candidate express_ref:[date_time_schema.time_interval_with_bounds.duration] that is being checked.
+(input) the candidate <<express:date_time_schema:date_time_schema.time_interval_with_bounds.duration, duration>> that is being checked.
 *)
 
 (*"date_time_schema.duration_is_positive"
-The *duration\_is\_positive* function determines whether a given express_ref:[date_time_schema.time_interval_with_bounds.duration] is positive. It returns TRUE if the express_ref:[date_time_schema.time_interval_with_bounds.duration] is a positive. Otherwise, it returns FALSE.
+The *duration_is_positive* function determines whether a given <<express:date_time_schema:date_time_schema.time_interval_with_bounds.duration, duration>> is positive. It returns TRUE if the <<express:date_time_schema:date_time_schema.time_interval_with_bounds.duration, duration>> is a positive. Otherwise, it returns FALSE.
 *)
 
 (*"date_time_schema.duration_is_positive.duration"
-(input) the candidate express_ref:[date_time_schema.time_interval_with_bounds.duration] that is being checked.
+(input) the candidate <<express:date_time_schema:date_time_schema.time_interval_with_bounds.duration, duration>> that is being checked.
 *)
 
 (*"date_time_schema.leap_year"
-The *leap\_year* function checks whether or not a particular year contains 366 days instead of 365 days, known as a leap year. 
+The *leap_year* function checks whether or not a particular year contains 366 days instead of 365 days, known as a leap year. 
 
 [NOTE]
 --
@@ -1129,17 +1129,17 @@ an integer representing a particular year in the Gregorian calendar.
 *)
 
 (*"date_time_schema.valid_calendar_date"
-The *valid\_calendar\_date* function determines whether the components of a express_ref:[date_time_schema.calendar_date] indicate a valid express_ref:[date_time_schema.date]. If the express_ref:[date_time_schema.calendar_date] is valid, the function returns TRUE. Otherwise it returns FALSE.
+The *valid_calendar_date* function determines whether the components of a <<express:date_time_schema:date_time_schema.calendar_date, calendar_date>> indicate a valid <<express:date_time_schema:date_time_schema.date, date>>. If the <<express:date_time_schema:date_time_schema.calendar_date, calendar_date>> is valid, the function returns TRUE. Otherwise it returns FALSE.
 *)
 
 (*"date_time_schema.valid_calendar_date.date"
-(input) the candidate express_ref:[date_time_schema.calendar_date] that is to be checked.
+(input) the candidate <<express:date_time_schema:date_time_schema.calendar_date, calendar_date>> that is to be checked.
 *)
 
 (*"date_time_schema.valid_time"
-The *valid\_time* function determines whether a candidate express_ref:[date_time_schema.local_time] has a express_ref:[date_time_schema.local_time.minute_component] if it has a express_ref:[date_time_schema.local_time.second_component]. It returns FALSE if the condition is not met. Otherwise it returns TRUE.
+The *valid_time* function determines whether a candidate <<express:date_time_schema:date_time_schema.local_time, local_time>> has a <<express:date_time_schema:date_time_schema.local_time.minute_component, minute_component>> if it has a <<express:date_time_schema:date_time_schema.local_time.second_component, second_component>>. It returns FALSE if the condition is not met. Otherwise it returns TRUE.
 *)
 
 (*"date_time_schema.valid_time.time"
-(input) the candidate express_ref:[date_time_schema.local_time] that is to be checked.
+(input) the candidate <<express:date_time_schema:date_time_schema.local_time, local_time>> that is to be checked.
 *)

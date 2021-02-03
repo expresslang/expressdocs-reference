@@ -601,7 +601,7 @@ END_SCHEMA;
 (*"management_resources_schema"
 == Introduction
 
-The subject of the *management\_resources\_schema* is the association of management data with other aspects of product data in specific application contexts.
+The subject of the *management_resources_schema* is the association of management data with other aspects of product data in specific application contexts.
 
 == Fundamental concerns
 
@@ -632,45 +632,45 @@ expg_image:management_resources_schemaexpg9.xml[]
 *)
 
 (*"management_resources_schema.attribute_type"
-The *attribute\_type* data type allows for the designation of a label or a text that can be assigned to an attribute of an entity.
+The *attribute_type* data type allows for the designation of a label or a text that can be assigned to an attribute of an entity.
 *)
 
 (*"management_resources_schema.action_assignment"
-An *action\_assignment* is an association of an express_ref:[action_schema.action] with product data.
+An *action_assignment* is an association of an <<express:action_schema:action_schema.action, action>> with product data.
 *)
 
 (*"management_resources_schema.action_assignment.assigned_action"
-the instance of the express_ref:[action_schema.action] entity data type that is to be associated with product data.
+the instance of the <<express:action_schema:action_schema.action, action>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.action_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *action\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *action_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *action\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *action_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 *)
 
 (*"management_resources_schema.action_assignment.wr:WR1"
-Each *action\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *action_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.action_method_assignment"
-An *action\_method\_assignment* is an association of an express_ref:[action_schema.action_method] with product data.
+An *action_method_assignment* is an association of an <<express:action_schema:action_schema.action_method, action_method>> with product data.
 *)
 
 (*"management_resources_schema.action_method_assignment.assigned_action_method"
-the instance of the express_ref:[action_schema.action_method] entity data type that is to be associated with the product data.
+the instance of the <<express:action_schema:action_schema.action_method, action_method>> entity data type that is to be associated with the product data.
 *)
 
 (*"management_resources_schema.action_method_assignment.role"
-the express_ref:[management_resources_schema.action_method_role] that specifies the purpose of the association of the *action\_method\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.action_method_role, action_method_role>> that specifies the purpose of the association of the *action_method_assignment* with product data.
 
 [NOTE]
 --
@@ -679,22 +679,22 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.action_method_role"
-An *action\_method\_role* is a definition of a role for an express_ref:[action_schema.action_method] and a description of that role.
+An *action_method_role* is a definition of a role for an <<express:action_schema:action_schema.action_method, action_method>> and a description of that role.
 
 [example]
 ====
-'Process XYZ' is an express_ref:[action_schema.action_method]. An express_ref:[management_resources_schema.action_method_assignment] assigns the express_ref:[action_schema.action_method] to the definition of a specific mechanical part.
+'Process XYZ' is an <<express:action_schema:action_schema.action_method, action_method>>. An <<express:management_resources_schema:management_resources_schema.action_method_assignment, action_method_assignment>> assigns the <<express:action_schema:action_schema.action_method, action_method>> to the definition of a specific mechanical part.
 ====
 
- The *action\_method\_role* for the express_ref:[management_resources_schema.action_method_assignment] is 'Process to mill mechanical part'.
+ The *action_method_role* for the <<express:management_resources_schema:management_resources_schema.action_method_assignment, action_method_assignment>> is 'Process to mill mechanical part'.
 *)
 
 (*"management_resources_schema.action_method_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *action\_method\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *action_method_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.action_method_role.name"
-the express_ref:[support_resource_schema.label] by which the *action\_method\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *action_method_role* is known.
 
 [NOTE]
 --
@@ -703,24 +703,24 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 
 [NOTE]
 --
-The entity data type express_ref:[management_resources_schema.action_method_assignment] implements the association of the role with a specific express_ref:[action_schema.action_method].
+The entity data type <<express:management_resources_schema:management_resources_schema.action_method_assignment, action_method_assignment>> implements the association of the role with a specific <<express:action_schema:action_schema.action_method, action_method>>.
 --
 *)
 
 (*"management_resources_schema.action_request_assignment"
-An *action\_request\_assignment* is an association of a express_ref:[action_schema.versioned_action_request] with product data.
+An *action_request_assignment* is an association of a <<express:action_schema:action_schema.versioned_action_request, versioned_action_request>> with product data.
 *)
 
 (*"management_resources_schema.action_request_assignment.assigned_action_request"
-the instance of the express_ref:[action_schema.versioned_action_request] entity data type that is to be associated with product data.
+the instance of the <<express:action_schema:action_schema.versioned_action_request, versioned_action_request>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.action_request_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *action\_request\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *action_request_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *action\_request\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *action_request_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 
 [NOTE]
@@ -730,28 +730,28 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.action_request_assignment.wr:WR1"
-Each *action\_request\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *action_request_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.approval_assignment"
-An *approval\_assignment* is an association of an express_ref:[approval_schema.approval] with product data.
+An *approval_assignment* is an association of an <<express:approval_schema:approval_schema.approval, approval>> with product data.
 *)
 
 (*"management_resources_schema.approval_assignment.assigned_approval"
-the instance of the express_ref:[approval_schema.approval] entity data type that is to be associated with product data.
+the instance of the <<express:approval_schema:approval_schema.approval, approval>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.approval_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *approval\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *approval_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *approval\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *approval_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 
 [NOTE]
@@ -761,32 +761,32 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.approval_assignment.wr:WR1"
-Each *approval\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *approval_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.assignment_object_relationship"
-An *assignment\_object\_relationship* is a relationship between two objects of the express_ref:[management_resources_schema.assignment_object_select] list representing the same object in different organizational contexts.
+An *assignment_object_relationship* is a relationship between two objects of the <<express:management_resources_schema:management_resources_schema.assignment_object_select, assignment_object_select>> list representing the same object in different organizational contexts.
 *)
 
 (*"management_resources_schema.assignment_object_relationship.description"
-the text or the set of texts that provide further information about the *assignment\_object\_relationship*. The value of this attribute need not be specified.
+the text or the set of texts that provide further information about the *assignment_object_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"management_resources_schema.assignment_object_relationship.id"
-the identifier or set of identifiers for the *assignment\_object\_relationship*.
+the identifier or set of identifiers for the *assignment_object_relationship*.
 *)
 
 (*"management_resources_schema.assignment_object_relationship.related"
-the other object of express_ref:[management_resources_schema.assignment_object_select] that is part of the relationship.
+the other object of <<express:management_resources_schema:management_resources_schema.assignment_object_select, assignment_object_select>> that is part of the relationship.
 *)
 
 (*"management_resources_schema.assignment_object_relationship.relating"
-one object of express_ref:[management_resources_schema.assignment_object_select] that is part of the relationship.
+one object of <<express:management_resources_schema:management_resources_schema.assignment_object_select, assignment_object_select>> that is part of the relationship.
 *)
 
 (*"management_resources_schema.assignment_object_relationship.relation_type"
@@ -794,23 +794,23 @@ the meaning of the relationship.
 *)
 
 (*"management_resources_schema.assignment_object_relationship.wr:WR1"
-An *assignment\_object\_relationship* shall not participate in its own definition.
+An *assignment_object_relationship* shall not participate in its own definition.
 *)
 
 (*"management_resources_schema.attribute_classification_assignment"
-An *attribute\_classification\_assignment* is an association of a class to an attribute of an existing entity in order to characterize it further. The meaning of the class of the existing attribute is determined by the role.
+An *attribute_classification_assignment* is an association of a class to an attribute of an existing entity in order to characterize it further. The meaning of the class of the existing attribute is determined by the role.
 *)
 
 (*"management_resources_schema.attribute_classification_assignment.assigned_class"
-the express_ref:[group_schema.group] that serves as a classification.
+the <<express:group_schema:group_schema.group, group>> that serves as a classification.
 *)
 
 (*"management_resources_schema.attribute_classification_assignment.attribute_name"
-the attribute for which the classification is defined. The *attribute\_name* shall identify an attribute of the assigned entity.
+the attribute for which the classification is defined. The *attribute_name* shall identify an attribute of the assigned entity.
 *)
 
 (*"management_resources_schema.attribute_classification_assignment.role"
-the express_ref:[management_resources_schema.classification_role] that specifies the purpose of the association of the *attribute\_classification\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.classification_role, classification_role>> that specifies the purpose of the association of the *attribute_classification_assignment* with product data.
 
 [NOTE]
 --
@@ -819,11 +819,11 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.attribute_value_assignment"
-An *attribute\_value\_assignment* is an extendion of the cardinality of a string valued attribute in an entity data type by one. The relationship of the extension to the existing attribute is determined by the role. The entity data types that have the attribute for which the extension is provided are identified by a specialization of express_ref:[management_resources_schema.attribute_value_assignment].
+An *attribute_value_assignment* is an extendion of the cardinality of a string valued attribute in an entity data type by one. The relationship of the extension to the existing attribute is determined by the role. The entity data types that have the attribute for which the extension is provided are identified by a specialization of <<express:management_resources_schema:management_resources_schema.attribute_value_assignment, attribute_value_assignment>>.
 *)
 
 (*"management_resources_schema.attribute_value_assignment.attribute_name"
-the attribute for which the additional value is defined. The *attribute\_name* shall identify an attribute of the assigned entity.
+the attribute for which the additional value is defined. The *attribute_name* shall identify an attribute of the assigned entity.
 
 [NOTE]
 --
@@ -832,16 +832,16 @@ The identified attribute may be defined in the entity or inherited from a supert
 
 [example]
 ====
-'name' and 'description' are examples for the *attribute\_name*.
+'name' and 'description' are examples for the *attribute_name*.
 ====
 *)
 
 (*"management_resources_schema.attribute_value_assignment.attribute_value"
-the express_ref:[management_resources_schema.attribute_type] that contains, as express_ref:[support_resource_schema.label], the additional value for the attribute of the assigned entity specified by *attribute\_name*.
+the <<express:management_resources_schema:management_resources_schema.attribute_type, attribute_type>> that contains, as <<express:support_resource_schema:support_resource_schema.label, label>>, the additional value for the attribute of the assigned entity specified by *attribute_name*.
 *)
 
 (*"management_resources_schema.attribute_value_assignment.role"
-the express_ref:[management_resources_schema.attribute_value_role] that specifies the purpose of the association of the *attribute\_value\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.attribute_value_role, attribute_value_role>> that specifies the purpose of the association of the *attribute_value_assignment* with product data.
 
 [NOTE]
 --
@@ -850,19 +850,19 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.attribute_value_assignment.wr:IP1"
-The type of *attribute\_value* (label or text) shall be the same as the type of the attribute specified by *attribute\_name*.
+The type of *attribute_value* (label or text) shall be the same as the type of the attribute specified by *attribute_name*.
 *)
 
 (*"management_resources_schema.attribute_value_role"
-An *attribute\_value\_role* is a description of the purpose of an additional value assigned to an attribute of an entity.
+An *attribute_value_role* is a description of the purpose of an additional value assigned to an attribute of an entity.
 *)
 
 (*"management_resources_schema.attribute_value_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *attribute\_value\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *attribute_value_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.attribute_value_role.name"
-the express_ref:[support_resource_schema.label] by which the *attribute\_value\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *attribute_value_role* is known.
 
 [example]
 ====
@@ -871,41 +871,41 @@ the express_ref:[support_resource_schema.label] by which the *attribute\_value\_
 *)
 
 (*"management_resources_schema.certification_assignment"
-A *certification\_assignment* is an association of a express_ref:[certification_schema.certification] with product data.
+A *certification_assignment* is an association of a <<express:certification_schema:certification_schema.certification, certification>> with product data.
 *)
 
 (*"management_resources_schema.certification_assignment.assigned_certification"
-the instance of the express_ref:[certification_schema.certification] entity data type that is to be associated with product data.
+the instance of the <<express:certification_schema:certification_schema.certification, certification>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.certification_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *certification\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *certification_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *certification\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *certification_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 *)
 
 (*"management_resources_schema.certification_assignment.wr:WR1"
-Each *certification\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *certification_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.classification_assignment"
-A *classification\_assignment* is an association of a class to product data.
+A *classification_assignment* is an association of a class to product data.
 *)
 
 (*"management_resources_schema.classification_assignment.assigned_class"
-the express_ref:[group_schema.group] that serves as a class.
+the <<express:group_schema:group_schema.group, group>> that serves as a class.
 *)
 
 (*"management_resources_schema.classification_assignment.role"
-the express_ref:[management_resources_schema.classification_role] that specifies the purpose of the association of the *classification\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.classification_role, classification_role>> that specifies the purpose of the association of the *classification_assignment* with product data.
 
 [NOTE]
 --
@@ -914,23 +914,23 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.classification_assignment_relationship"
-A *classification\_assignment\_relationship* is a relationship between two express_ref:[management_resources_schema.classification_assignment] objects.
+A *classification_assignment_relationship* is a relationship between two <<express:management_resources_schema:management_resources_schema.classification_assignment, classification_assignment>> objects.
 *)
 
 (*"management_resources_schema.classification_assignment_relationship.description"
-the text or the set of texts that provide further information about the *classification\_assignment\_relationship*. The value of this attribute need not be specified.
+the text or the set of texts that provide further information about the *classification_assignment_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"management_resources_schema.classification_assignment_relationship.id"
-the identifier or set of identifiers for the *classification\_assignment\_relationship*.
+the identifier or set of identifiers for the *classification_assignment_relationship*.
 *)
 
 (*"management_resources_schema.classification_assignment_relationship.related"
-the other object of express_ref:[management_resources_schema.classification_assignment] that is part of the relationship.
+the other object of <<express:management_resources_schema:management_resources_schema.classification_assignment, classification_assignment>> that is part of the relationship.
 *)
 
 (*"management_resources_schema.classification_assignment_relationship.relating"
-one object of express_ref:[management_resources_schema.classification_assignment] that is part of the relationship.
+one object of <<express:management_resources_schema:management_resources_schema.classification_assignment, classification_assignment>> that is part of the relationship.
 *)
 
 (*"management_resources_schema.classification_assignment_relationship.relation_type"
@@ -938,35 +938,35 @@ the meaning of the relationship.
 *)
 
 (*"management_resources_schema.classification_assignment_relationship.wr:WR1"
-A *classification\_assignment\_relationship* shall not participate in its own definition.
+A *classification_assignment_relationship* shall not participate in its own definition.
 *)
 
 (*"management_resources_schema.classification_role"
-A *classification\_role* is a specified purpose for including product data in an exchange and a description of that purpose.
+A *classification_role* is a specified purpose for including product data in an exchange and a description of that purpose.
 *)
 
 (*"management_resources_schema.classification_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *classification\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *classification_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.classification_role.name"
-the express_ref:[support_resource_schema.label] by which the *classification\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *classification_role* is known.
 *)
 
 (*"management_resources_schema.contract_assignment"
-A *contract\_assignment* is an association of a express_ref:[contract_schema.contract] with product data.
+A *contract_assignment* is an association of a <<express:contract_schema:contract_schema.contract, contract>> with product data.
 *)
 
 (*"management_resources_schema.contract_assignment.assigned_contract"
-the instance of the express_ref:[contract_schema.contract] entity data type that is to be associated with product data.
+the instance of the <<express:contract_schema:contract_schema.contract, contract>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.contract_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *contract\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *contract_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *contract\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *contract_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 
 [NOTE]
@@ -976,24 +976,24 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.contract_assignment.wr:WR1"
-Each *contract\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *contract_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.date_and_time_assignment"
-A *date\_and\_time\_assignment* is an association of a express_ref:[date_time_schema.date_and_time] with product data.
+A *date_and_time_assignment* is an association of a <<express:date_time_schema:date_time_schema.date_and_time, date_and_time>> with product data.
 *)
 
 (*"management_resources_schema.date_and_time_assignment.assigned_date_and_time"
-the instance of the express_ref:[date_time_schema.date_and_time] entity data type that is to be associated with the product data.
+the instance of the <<express:date_time_schema:date_time_schema.date_and_time, date_and_time>> entity data type that is to be associated with the product data.
 *)
 
 (*"management_resources_schema.date_and_time_assignment.role"
-the express_ref:[date_time_schema.date_time_role] that specifies the purpose of the association of the *date\_and\_time\_assignment* with product data.
+the <<express:date_time_schema:date_time_schema.date_time_role, date_time_role>> that specifies the purpose of the association of the *date_and_time_assignment* with product data.
 
 [NOTE]
 --
@@ -1002,20 +1002,20 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 
 [example]
 ====
-'Completed on' is an example of role that may be used to characterize the fact that the *assigned\_date\_and\_time* defines the date and time of that day when some action completed.
+'Completed on' is an example of role that may be used to characterize the fact that the *assigned_date_and_time* defines the date and time of that day when some action completed.
 ====
 *)
 
 (*"management_resources_schema.date_assignment"
-A *date\_assignment* is an association of a express_ref:[date_time_schema.date] with product data.
+A *date_assignment* is an association of a <<express:date_time_schema:date_time_schema.date, date>> with product data.
 *)
 
 (*"management_resources_schema.date_assignment.assigned_date"
-the express_ref:[date_time_schema.date] that is to be associated with the product data.
+the <<express:date_time_schema:date_time_schema.date, date>> that is to be associated with the product data.
 *)
 
 (*"management_resources_schema.date_assignment.role"
-the express_ref:[date_time_schema.date_role] that specifies the purpose of the association of the *date\_assignment* with product data.
+the <<express:date_time_schema:date_time_schema.date_role, date_role>> that specifies the purpose of the association of the *date_assignment* with product data.
 
 [NOTE]
 --
@@ -1024,20 +1024,20 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 
 [example]
 ====
-'Creation date' is an example of role that may be used to characterize the fact that the assigned product data has been created on the *assigned\_date*.
+'Creation date' is an example of role that may be used to characterize the fact that the assigned product data has been created on the *assigned_date*.
 ====
 *)
 
 (*"management_resources_schema.document_reference"
-A *document\_reference* is an association of a express_ref:[document_schema.document] with product data.
+A *document_reference* is an association of a <<express:document_schema:document_schema.document, document>> with product data.
 *)
 
 (*"management_resources_schema.document_reference.assigned_document"
-the instance of the express_ref:[document_schema.document] entity data type that is to be associated with product data.
+the instance of the <<express:document_schema:document_schema.document, document>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.document_reference.source"
-the express_ref:[support_resource_schema.label] stating the origination of the *assigned\_document*.
+the <<express:support_resource_schema:support_resource_schema.label, label>> stating the origination of the *assigned_document*.
 
 [example]
 ====
@@ -1046,11 +1046,11 @@ the express_ref:[support_resource_schema.label] stating the origination of the *
 *)
 
 (*"management_resources_schema.document_reference.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *document\_reference* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *document_reference* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *document\_reference* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *document_reference* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 
 [NOTE]
@@ -1060,24 +1060,24 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 *)
 
 (*"management_resources_schema.document_reference.wr:WR1"
-Each *document\_reference* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *document_reference* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.document_usage_constraint_assignment"
-A *document\_usage\_constraint\_assignment* is an association of a express_ref:[document_schema.document_usage_constraint] with product data.
+A *document_usage_constraint_assignment* is an association of a <<express:document_schema:document_schema.document_usage_constraint, document_usage_constraint>> with product data.
 *)
 
 (*"management_resources_schema.document_usage_constraint_assignment.assigned_document_usage"
-the instance of the express_ref:[document_schema.document_usage_constraint] entity data type that is associated with the product data.
+the instance of the <<express:document_schema:document_schema.document_usage_constraint, document_usage_constraint>> entity data type that is associated with the product data.
 *)
 
 (*"management_resources_schema.document_usage_constraint_assignment.role"
-the express_ref:[management_resources_schema.document_usage_role] that specifies the purpose of the association of the *document\_usage\_constraint\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.document_usage_role, document_usage_role>> that specifies the purpose of the association of the *document_usage_constraint_assignment* with product data.
 
 [NOTE]
 --
@@ -1086,20 +1086,20 @@ The values related to this attribute can be specified in an annotated EXPRESS sc
 
 [NOTE]
 --
-Multiple constraints can be expressed by multiple instances of (a subtype of) express_ref:[document_schema.document_usage_constraint]. Such multiple instances can refer to the same instance of express_ref:[management_resources_schema.document_usage_role] or to different instances.
+Multiple constraints can be expressed by multiple instances of (a subtype of) <<express:document_schema:document_schema.document_usage_constraint, document_usage_constraint>>. Such multiple instances can refer to the same instance of <<express:management_resources_schema:management_resources_schema.document_usage_role, document_usage_role>> or to different instances.
 --
 *)
 
 (*"management_resources_schema.document_usage_role"
-A *document\_usage\_role* is a specified purpose for including product data in an exchange and a description of that purpose.
+A *document_usage_role* is a specified purpose for including product data in an exchange and a description of that purpose.
 *)
 
 (*"management_resources_schema.document_usage_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *document\_usage\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *document_usage_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.document_usage_role.name"
-the express_ref:[support_resource_schema.label] by which the *document\_usage\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *document_usage_role* is known.
 
 [NOTE]
 --
@@ -1108,58 +1108,58 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 
 [example]
 ====
-Examples of *document\_usage\_role*.*name* are 'applying process constraint' and 'applying material constraint'.
+Examples of *document_usage_role*.*name* are 'applying process constraint' and 'applying material constraint'.
 ====
 *)
 
 (*"management_resources_schema.effectivity_assignment"
-An *effectivity\_assignment* is an association of an express_ref:[effectivity_schema.effectivity] with product data.
+An *effectivity_assignment* is an association of an <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> with product data.
 *)
 
 (*"management_resources_schema.effectivity_assignment.assigned_effectivity"
-the instance of the express_ref:[effectivity_schema.effectivity] entity data type that is to be associated with product data.
+the instance of the <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.effectivity_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *effectivity\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *effectivity_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *effectivity\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *effectivity_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 *)
 
 (*"management_resources_schema.effectivity_assignment.wr:WR1"
-Each *effectivity\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *effectivity_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.effectivity_context_assignment"
-An *effectivity\_context\_assignment* is an assignment of a purpose to an express_ref:[management_resources_schema.effectivity_assignment].
+An *effectivity_context_assignment* is an assignment of a purpose to an <<express:management_resources_schema:management_resources_schema.effectivity_assignment, effectivity_assignment>>.
 *)
 
 (*"management_resources_schema.effectivity_context_assignment.assigned_effectivity_assignment"
-the instance of the express_ref:[management_resources_schema.effectivity_assignment] entity data type that is to be associated with the product data.
+the instance of the <<express:management_resources_schema:management_resources_schema.effectivity_assignment, effectivity_assignment>> entity data type that is to be associated with the product data.
 *)
 
 (*"management_resources_schema.effectivity_context_assignment.role"
-the express_ref:[management_resources_schema.effectivity_context_role] that specifies the purpose of the association of the *effectivity\_context\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.effectivity_context_role, effectivity_context_role>> that specifies the purpose of the association of the *effectivity_context_assignment* with product data.
 *)
 
 (*"management_resources_schema.effectivity_context_role"
-An *effectivity\_context\_role* is a specified purpose and the product data that is the context for an express_ref:[management_resources_schema.effectivity_context_assignment] and a description of that purpose.
+An *effectivity_context_role* is a specified purpose and the product data that is the context for an <<express:management_resources_schema:management_resources_schema.effectivity_context_assignment, effectivity_context_assignment>> and a description of that purpose.
 *)
 
 (*"management_resources_schema.effectivity_context_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *effectivity\_context\_role*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *effectivity_context_role*. The value of this attribute need not be specified.
 *)
 
 (*"management_resources_schema.effectivity_context_role.name"
-the express_ref:[support_resource_schema.label] by which the *effectivity\_context\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *effectivity_context_role* is known.
 
 [NOTE]
 --
@@ -1168,41 +1168,41 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 
 [example]
 ====
-'Manufacturing location' is an example of the name of an *effectivity\_context\_role* that may be used to characterize the fact that if effectivity is assigned to product data in the context of a particular plant, this plant plays the role of a manufacturing location.
+'Manufacturing location' is an example of the name of an *effectivity_context_role* that may be used to characterize the fact that if effectivity is assigned to product data in the context of a particular plant, this plant plays the role of a manufacturing location.
 ====
 *)
 
 (*"management_resources_schema.event_occurrence_assignment"
-An *event\_occurrence\_assignment* is an association of an express_ref:[date_time_schema.event_occurrence] with product data.
+An *event_occurrence_assignment* is an association of an <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> with product data.
 *)
 
 (*"management_resources_schema.event_occurrence_assignment.assigned_event_occurrence"
-the instance of the express_ref:[date_time_schema.event_occurrence] entity data type that is to be associated with product data.
+the instance of the <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.event_occurrence_assignment.role"
-the express_ref:[date_time_schema.event_occurrence_role] that specifies the purpose of the association of the *event\_occurrence\_assignment* with product data.
+the <<express:date_time_schema:date_time_schema.event_occurrence_role, event_occurrence_role>> that specifies the purpose of the association of the *event_occurrence_assignment* with product data.
 *)
 
 (*"management_resources_schema.event_occurrence_context_assignment"
-An *event\_occurrence\_context\_assignment* is an identification of a context for the association of an express_ref:[management_resources_schema.event_occurrence_assignment] with product data. 
+An *event_occurrence_context_assignment* is an identification of a context for the association of an <<express:management_resources_schema:management_resources_schema.event_occurrence_assignment, event_occurrence_assignment>> with product data. 
 
 [example]
 ====
-For the express_ref:[date_time_schema.event_occurrence] 'start of production', the express_ref:[product_definition_schema.product] for which production starts is the context for that express_ref:[date_time_schema.event_occurrence].
+For the <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>> 'start of production', the <<express:product_definition_schema:product_definition_schema.product, product>> for which production starts is the context for that <<express:date_time_schema:date_time_schema.event_occurrence, event_occurrence>>.
 ====
 *)
 
 (*"management_resources_schema.event_occurrence_context_assignment.assigned_event_occurrence_assignment"
-the instance of the express_ref:[management_resources_schema.event_occurrence_assignment] entity data type that is to be associated with product data.
+the instance of the <<express:management_resources_schema:management_resources_schema.event_occurrence_assignment, event_occurrence_assignment>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.event_occurrence_context_assignment.role"
-the express_ref:[date_time_schema.event_occurrence_context_role] that specifies the purpose of the association of the *event\_occurrence\_context\_assignment* with product data.
+the <<express:date_time_schema:date_time_schema.event_occurrence_context_role, event_occurrence_context_role>> that specifies the purpose of the association of the *event_occurrence_context_assignment* with product data.
 *)
 
 (*"management_resources_schema.experience_assignment"
-An *experience\_assignment* is a mechanism for associating an express_ref:[experience_schema.experience] with product data. 
+An *experience_assignment* is a mechanism for associating an <<express:experience_schema:experience_schema.experience, experience>> with product data. 
 
 [example]
 ====
@@ -1211,43 +1211,43 @@ The association of a particular episode of flying practice with a particular pil
 *)
 
 (*"management_resources_schema.experience_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *experience\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *experience_assignment*.
 *)
 
 (*"management_resources_schema.experience_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *experience\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *experience_assignment* is known.
 *)
 
 (*"management_resources_schema.experience_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *experience\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *experience_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.experience_assignment.assigned_experience"
-the instance of the express_ref:[experience_schema.experience] entity data type that is to be associated with product data.
+the instance of the <<express:experience_schema:experience_schema.experience, experience>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.experience_assignment.role"
-the express_ref:[management_resources_schema.experience_role] that specifies the purpose of the association of the *experience\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.experience_role, experience_role>> that specifies the purpose of the association of the *experience_assignment* with product data.
 *)
 
 (*"management_resources_schema.experience_role"
-An *experience\_role* is a specified purpose for an express_ref:[experience_schema.experience] and the description of the purpose.
+An *experience_role* is a specified purpose for an <<express:experience_schema:experience_schema.experience, experience>> and the description of the purpose.
 *)
 
 (*"management_resources_schema.experience_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *experience\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *experience_role*.
 *)
 
 (*"management_resources_schema.experience_role.name"
-the express_ref:[support_resource_schema.label] by which the *experience\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *experience_role* is known.
 *)
 
 (*"management_resources_schema.experience_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *experience\_role*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *experience_role*. The value of this attribute need not be specified.
 *)
 
 (*"management_resources_schema.experience_type_assignment"
-An *experience\_type\_assignment* is a mechanism for associating an express_ref:[experience_schema.experience_type] with product data. 
+An *experience_type_assignment* is a mechanism for associating an <<express:experience_schema:experience_schema.experience_type, experience_type>> with product data. 
 
 [example]
 ====
@@ -1256,67 +1256,67 @@ The association of flying experience with a particular category of naval personn
 *)
 
 (*"management_resources_schema.experience_type_assignment.assigned_experience_type"
-the instance of the express_ref:[experience_schema.experience_type] entity data type that is to be associated with product data.
+the instance of the <<express:experience_schema:experience_schema.experience_type, experience_type>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.experience_type_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *experience\_type\_assignment*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *experience_type_assignment*. The value of this attribute need not be specified.
 *)
 
 (*"management_resources_schema.experience_type_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *experience\_type\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *experience_type_assignment*.
 *)
 
 (*"management_resources_schema.experience_type_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *experience\_type\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *experience_type_assignment* is known.
 *)
 
 (*"management_resources_schema.experience_type_assignment.role"
-the express_ref:[management_resources_schema.experience_type_role] that specifies the purpose of the association of the *experience\_type\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.experience_type_role, experience_type_role>> that specifies the purpose of the association of the *experience_type_assignment* with product data.
 *)
 
 (*"management_resources_schema.experience_type_role"
-An *experience\_type\_role* is a specified purpose for an express_ref:[experience_schema.experience_type] and a description of the purpose.
+An *experience_type_role* is a specified purpose for an <<express:experience_schema:experience_schema.experience_type, experience_type>> and a description of the purpose.
 *)
 
 (*"management_resources_schema.experience_type_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *experience\_type\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *experience_type_role*.
 *)
 
 (*"management_resources_schema.experience_type_role.name"
-the express_ref:[support_resource_schema.label] by which the *experience\_type\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *experience_type_role* is known.
 *)
 
 (*"management_resources_schema.experience_type_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *experience\_type\_role*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *experience_type_role*. The value of this attribute need not be specified.
 *)
 
 (*"management_resources_schema.external_identification_assignment"
-An *external\_identification\_assignment* is a type of express_ref:[management_resources_schema.identification_assignment] that is defined in the context of an express_ref:[external_reference_schema.external_source]. The express_ref:[external_reference_schema.external_source.source_id] shall be a valid identifier in the context of the source.
+An *external_identification_assignment* is a type of <<express:management_resources_schema:management_resources_schema.identification_assignment, identification_assignment>> that is defined in the context of an <<express:external_reference_schema:external_reference_schema.external_source, external_source>>. The <<express:external_reference_schema:external_reference_schema.external_source.source_id, source_id>> shall be a valid identifier in the context of the source.
 *)
 
 (*"management_resources_schema.external_identification_assignment.source"
-the express_ref:[external_reference_schema.external_source] that specifies the context in which in the express_ref:[external_reference_schema.external_source.source_id] is defined.
+the <<express:external_reference_schema:external_reference_schema.external_source, external_source>> that specifies the context in which in the <<express:external_reference_schema:external_reference_schema.external_source.source_id, source_id>> is defined.
 *)
 
 (*"management_resources_schema.external_identification_assignment_relationship"
-An *external\_identification\_assignment\_relationship* is a relationship between two express_ref:[management_resources_schema.external_identification_assignment] objects.
+An *external_identification_assignment_relationship* is a relationship between two <<express:management_resources_schema:management_resources_schema.external_identification_assignment, external_identification_assignment>> objects.
 *)
 
 (*"management_resources_schema.external_identification_assignment_relationship.description"
-the text or the set of texts that provide further information about the *external\_identification\_assignment\_relationship*. The value of this attribute need not be specified.
+the text or the set of texts that provide further information about the *external_identification_assignment_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"management_resources_schema.external_identification_assignment_relationship.id"
-the identifier or set of identifiers for the *external\_identification\_assignment\_relationship*.
+the identifier or set of identifiers for the *external_identification_assignment_relationship*.
 *)
 
 (*"management_resources_schema.external_identification_assignment_relationship.related"
-the other object of express_ref:[management_resources_schema.external_identification_assignment] that is part of the relationship.
+the other object of <<express:management_resources_schema:management_resources_schema.external_identification_assignment, external_identification_assignment>> that is part of the relationship.
 *)
 
 (*"management_resources_schema.external_identification_assignment_relationship.relating"
-one object of express_ref:[management_resources_schema.external_identification_assignment] that is part of the relationship.
+one object of <<express:management_resources_schema:management_resources_schema.external_identification_assignment, external_identification_assignment>> that is part of the relationship.
 *)
 
 (*"management_resources_schema.external_identification_assignment_relationship.relation_type"
@@ -1324,30 +1324,30 @@ the meaning of the relationship.
 *)
 
 (*"management_resources_schema.external_identification_assignment_relationship.wr:WR1"
-An *external\_identification\_assignment\_relationship* shall not participate in its own definition.
+An *external_identification_assignment_relationship* shall not participate in its own definition.
 *)
 
 (*"management_resources_schema.external_referent_assignment"
-An *external\_referent\_assignment* is an identification of product data referenced in outside sources.
+An *external_referent_assignment* is an identification of product data referenced in outside sources.
 
 [NOTE]
 --
-This is an incompletely modeled concept and requires population of related entity data types to form a complete *external\_referent\_assignment*.
+This is an incompletely modeled concept and requires population of related entity data types to form a complete *external_referent_assignment*.
 --
 
 [example]
 ====
-A URI for an externally defined tool is specified by assigning the value 'http://www.tool.com/mill.stp' to the name attribute of external\_referent\_assignment. The fact that the value is a URI is established by assigning a value of 'uri' to the role attribute of external\_referent\_assignment.
+A URI for an externally defined tool is specified by assigning the value 'http://www.tool.com/mill.stp' to the name attribute of external_referent_assignment. The fact that the value is a URI is established by assigning a value of 'uri' to the role attribute of external_referent_assignment.
 ====
 
 [example]
 ====
-A URI fragment identifier for the bottom face of the externally defined tool is specified by assigning the value 'http://www.tool.com/mill.stp#bottom\_face' to the name attribute of external\_referent\_assignment. The fact that the value is a URI
+A URI fragment identifier for the bottom face of the externally defined tool is specified by assigning the value 'http://www.tool.com/mill.stp#bottom_face' to the name attribute of external_referent_assignment. The fact that the value is a URI
 ====
 *)
 
 (*"management_resources_schema.external_referent_assignment.assigned_name"
-the express_ref:[support_resource_schema.label] by which the *external\_referent\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *external_referent_assignment* is known.
 
 [NOTE]
 --
@@ -1356,55 +1356,55 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"management_resources_schema.external_referent_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *external\_referent\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *external_referent_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *external\_referent\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *external_referent_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 *)
 
 (*"management_resources_schema.external_referent_assignment.ur:UR1"
-The *assigned\_name* shall be unique.
+The *assigned_name* shall be unique.
 *)
 
 (*"management_resources_schema.external_referent_assignment.wr:WR1"
-Each *external\_referent\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *external_referent_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.group_assignment"
-A *group\_assignment* is an association of a express_ref:[group_schema.group] with product data.
+A *group_assignment* is an association of a <<express:group_schema:group_schema.group, group>> with product data.
 *)
 
 (*"management_resources_schema.group_assignment.assigned_group"
-the instance of the express_ref:[group_schema.group] entity data type that is to be associated with product data.
+the instance of the <<express:group_schema:group_schema.group, group>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.group_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *group\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *group_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *group\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
+This attribute is an enhancement to the definition of *group_assignment* using a method that is upwardly compatible with ISO 10303-41:1994.
 --
 *)
 
 (*"management_resources_schema.group_assignment.wr:WR1"
-Each *group\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *group_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.identification_assignment"
-An *identification\_assignment* is an association of an identification with product data. The assignment is made within a specified role.
+An *identification_assignment* is an association of an identification with product data. The assignment is made within a specified role.
 *)
 
 (*"management_resources_schema.identification_assignment.assigned_id"
@@ -1417,20 +1417,20 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"management_resources_schema.identification_assignment.role"
-the express_ref:[management_resources_schema.identification_role] that specifies the purpose of the association of the *identification\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.identification_role, identification_role>> that specifies the purpose of the association of the *identification_assignment* with product data.
 
 [example]
 ====
-'Alias identification' is an example of a role that may be used to characterize the fact that the *assigned\_id* provides an alternate identification to some product data.
+'Alias identification' is an example of a role that may be used to characterize the fact that the *assigned_id* provides an alternate identification to some product data.
 ====
 *)
 
 (*"management_resources_schema.identification_assignment_relationship"
-An *identification\_assignment\_relationship* is a relationship between two instances of the entity data type express_ref:[management_resources_schema.identification_assignment] and provides an identification and description of their relationship. 
+An *identification_assignment_relationship* is a relationship between two instances of the entity data type <<express:management_resources_schema:management_resources_schema.identification_assignment, identification_assignment>> and provides an identification and description of their relationship. 
 
 [NOTE]
 --
-The role of *identification\_assignment\_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+The role of *identification_assignment_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
 --
 
 [NOTE]
@@ -1440,20 +1440,20 @@ Relationships represented using this entity may be parent child relationship. An
 
 [NOTE]
 --
-This entity, together with the express_ref:[management_resources_schema.identification_assignment] entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:management_resources_schema:management_resources_schema.identification_assignment, identification_assignment>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"management_resources_schema.identification_assignment_relationship.description"
-the express_ref:[support_resource_schema.text] that characterizes the *identification\_assignment\_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *identification_assignment_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.identification_assignment_relationship.name"
-the express_ref:[support_resource_schema.label] by which the *identification\_assignment\_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *identification_assignment_relationship* is known.
 *)
 
 (*"management_resources_schema.identification_assignment_relationship.related_identification_assignment"
-the other instance of express_ref:[management_resources_schema.identification_assignment] that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:management_resources_schema:management_resources_schema.identification_assignment, identification_assignment>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -1462,7 +1462,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"management_resources_schema.identification_assignment_relationship.relating_identification_assignment"
-one of the instances of express_ref:[management_resources_schema.identification_assignment] that is a part of the relationship.
+one of the instances of <<express:management_resources_schema:management_resources_schema.identification_assignment, identification_assignment>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -1471,15 +1471,15 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"management_resources_schema.identification_role"
-An *identification\_role* is a purpose for identifying an item of product data and includes identification and description of the purpose.
+An *identification_role* is a purpose for identifying an item of product data and includes identification and description of the purpose.
 *)
 
 (*"management_resources_schema.identification_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *identification\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *identification_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.identification_role.name"
-the express_ref:[support_resource_schema.label] by which the *identification\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *identification_role* is known.
 
 [NOTE]
 --
@@ -1488,19 +1488,19 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"management_resources_schema.library_assignment"
-A *library\_assignment* is a type of express_ref:[management_resources_schema.external_referent_assignment] that assigns a express_ref:[application_context_schema.library_context] to product data.
+A *library_assignment* is a type of <<express:management_resources_schema:management_resources_schema.external_referent_assignment, external_referent_assignment>> that assigns a <<express:application_context_schema:application_context_schema.library_context, library_context>> to product data.
 *)
 
 (*"management_resources_schema.library_assignment.frame_of_reference"
-the express_ref:[application_context_schema.library_context] in which the *library\_assignment* is defined.
+the <<express:application_context_schema:application_context_schema.library_context, library_context>> in which the *library_assignment* is defined.
 *)
 
 (*"management_resources_schema.library_assignment.ur:UR1"
-The *frame\_of\_reference* shall be unique.
+The *frame_of_reference* shall be unique.
 *)
 
 (*"management_resources_schema.location_assignment"
-A *location\_assignment* is a mechanism for associating a express_ref:[location_schema.location] with product data. 
+A *location_assignment* is a mechanism for associating a <<express:location_schema:location_schema.location, location>> with product data. 
 
 [example]
 ====
@@ -1509,27 +1509,27 @@ The association of a geographical location with an item of heavy lifting equipme
 *)
 
 (*"management_resources_schema.location_assignment.assigned_location"
-the instance of the express_ref:[location_schema.location] entity data type that is to be associated with product data.
+the instance of the <<express:location_schema:location_schema.location, location>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.location_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *location\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *location_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.location_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *location\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *location_assignment*.
 *)
 
 (*"management_resources_schema.location_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *location\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *location_assignment* is known.
 *)
 
 (*"management_resources_schema.location_assignment.role"
-the express_ref:[management_resources_schema.location_role] that specifies the purpose of the association of the *location\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.location_role, location_role>> that specifies the purpose of the association of the *location_assignment* with product data.
 *)
 
 (*"management_resources_schema.location_representation_assignment"
-A *location\_representation\_assignment* is a mechanism for associating a express_ref:[location_schema.location] with its representation. 
+A *location_representation_assignment* is a mechanism for associating a <<express:location_schema:location_schema.location, location>> with its representation. 
 
 [example]
 ====
@@ -1538,102 +1538,102 @@ The association of a location with its representation as a set of geographical c
 *)
 
 (*"management_resources_schema.location_representation_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *location\_representation\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *location_representation_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.location_representation_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *location\_representation\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *location_representation_assignment*.
 *)
 
 (*"management_resources_schema.location_representation_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *location\_representation\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *location_representation_assignment* is known.
 *)
 
 (*"management_resources_schema.location_representation_assignment.role"
-the express_ref:[management_resources_schema.location_representation_role] that specifies the purpose of the association of the *location\_representation\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.location_representation_role, location_representation_role>> that specifies the purpose of the association of the *location_representation_assignment* with product data.
 *)
 
 (*"management_resources_schema.location_representation_assignment.represented_location"
-the instance of the express_ref:[location_schema.location] entity data type that is to be associated with product data.
+the instance of the <<express:location_schema:location_schema.location, location>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.location_representation_role"
-A *location\_representation\_role* is a purpose for a representation of a location and provides identification and description of the purpose.
+A *location_representation_role* is a purpose for a representation of a location and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.location_representation_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *location\_representation\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *location_representation_role*.
 *)
 
 (*"management_resources_schema.location_representation_role.name"
-the express_ref:[support_resource_schema.label] by which the *location\_representation\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *location_representation_role* is known.
 *)
 
 (*"management_resources_schema.location_representation_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *location\_representation\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *location_representation_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.location_role"
-A *location\_role* is the purpose for a location in the context of product data an provides identification and description of the purpose.
+A *location_role* is the purpose for a location in the context of product data an provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.location_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *location\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *location_role*.
 *)
 
 (*"management_resources_schema.location_role.name"
-the express_ref:[support_resource_schema.label] by which the *location\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *location_role* is known.
 *)
 
 (*"management_resources_schema.location_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *location\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *location_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.name_assignment"
-A *name\_assignment* is an identification of a name used to designate product data.
+A *name_assignment* is an identification of a name used to designate product data.
 *)
 
 (*"management_resources_schema.name_assignment.assigned_name"
-the express_ref:[support_resource_schema.label] by which the product data is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the product data is known.
 *)
 
 (*"management_resources_schema.name_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *name\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *name_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *name\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994
+This attribute is an enhancement to the definition of *name_assignment* using a method that is upwardly compatible with ISO 10303-41:1994
 --
 *)
 
 (*"management_resources_schema.name_assignment.wr:WR1"
-Each *name\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *name_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.organization_assignment"
-An *organization\_assignment* is an association of an express_ref:[person_organization_schema.organization] with product data.
+An *organization_assignment* is an association of an <<express:person_organization_schema:person_organization_schema.organization, organization>> with product data.
 *)
 
 (*"management_resources_schema.organization_assignment.assigned_organization"
-the instance of the express_ref:[person_organization_schema.organization] entity data type that is to be associated with the product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.organization, organization>> entity data type that is to be associated with the product data.
 *)
 
 (*"management_resources_schema.organization_assignment.role"
-the express_ref:[person_organization_schema.organization_role] that specifies the purpose of the association of the *organization\_assignment* with product data.
+the <<express:person_organization_schema:person_organization_schema.organization_role, organization_role>> that specifies the purpose of the association of the *organization_assignment* with product data.
 
 [example]
 ====
-'Supplier' is an example of a role that may be used to characterize the fact that the assigned product data has been released by the *assigned\_organization*.
+'Supplier' is an example of a role that may be used to characterize the fact that the assigned product data has been released by the *assigned_organization*.
 ====
 *)
 
 (*"management_resources_schema.organization_type_assignment"
-An *organization\_type\_assignment* is a mechanism for associating an express_ref:[person_organization_schema.organization_type] with product data. 
+An *organization_type_assignment* is a mechanism for associating an <<express:person_organization_schema:person_organization_schema.organization_type, organization_type>> with product data. 
 
 [example]
 ====
@@ -1642,75 +1642,75 @@ An association between national standards bodies and ISO.
 *)
 
 (*"management_resources_schema.organization_type_assignment.assigned_organization_type"
-the instance of the express_ref:[person_organization_schema.organization_type] entity data type that is to be associated with product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.organization_type, organization_type>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.organization_type_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *organization\_type\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *organization_type_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.organization_type_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *organization\_type\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *organization_type_assignment*.
 *)
 
 (*"management_resources_schema.organization_type_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *organization\_type\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *organization_type_assignment* is known.
 *)
 
 (*"management_resources_schema.organization_type_assignment.role"
-the express_ref:[management_resources_schema.organization_type_role] that specifies the purpose of the association of the *organization\_type\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.organization_type_role, organization_type_role>> that specifies the purpose of the association of the *organization_type_assignment* with product data.
 *)
 
 (*"management_resources_schema.organization_type_role"
-An *organization\_type\_role* is a purpose for an *organization\_type* and provides identification and description of the purpose.
+An *organization_type_role* is a purpose for an *organization_type* and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.organization_type_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *organization\_type\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *organization_type_role*.
 *)
 
 (*"management_resources_schema.organization_type_role.name"
-the express_ref:[support_resource_schema.label] by which the *organization\_type\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *organization_type_role* is known.
 *)
 
 (*"management_resources_schema.organization_type_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *organization\_type\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *organization_type_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.organizational_project_assignment"
-An *organizational\_project\_assignment* is an association of an express_ref:[person_organization_schema.organizational_project] with product data.
+An *organizational_project_assignment* is an association of an <<express:person_organization_schema:person_organization_schema.organizational_project, organizational_project>> with product data.
 *)
 
 (*"management_resources_schema.organizational_project_assignment.assigned_organizational_project"
-the instance of the express_ref:[person_organization_schema.organizational_project] entity data type that is to be associated with product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.organizational_project, organizational_project>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.organizational_project_assignment.role"
-the express_ref:[management_resources_schema.organizational_project_role] that specifies the purpose of the association of the *organizational\_project\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.organizational_project_role, organizational_project_role>> that specifies the purpose of the association of the *organizational_project_assignment* with product data.
 *)
 
 (*"management_resources_schema.organizational_project_role"
-An *organizational\_project\_role* is a purpose for an *organizational\_project* and provides identification and description of the purpose.
+An *organizational_project_role* is a purpose for an *organizational_project* and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.organizational_project_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *organizational\_project\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *organizational_project_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.organizational_project_role.name"
-the express_ref:[support_resource_schema.label] by which the *organizational\_project\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *organizational_project_role* is known.
 *)
 
 (*"management_resources_schema.person_and_organization_assignment"
-A *person\_and\_organization\_assignment* is an association of a express_ref:[person_organization_schema.person_and_organization] with product data.
+A *person_and_organization_assignment* is an association of a <<express:person_organization_schema:person_organization_schema.person_and_organization, person_and_organization>> with product data.
 *)
 
 (*"management_resources_schema.person_and_organization_assignment.assigned_person_and_organization"
-the instance of the express_ref:[person_organization_schema.person_and_organization] entity data type that is to be associated with the product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.person_and_organization, person_and_organization>> entity data type that is to be associated with the product data.
 *)
 
 (*"management_resources_schema.person_and_organization_assignment.role"
-the express_ref:[person_organization_schema.person_and_organization_role] that specifies the purpose of the association of the *person\_and\_organization\_assignment* with product data.
+the <<express:person_organization_schema:person_organization_schema.person_and_organization_role, person_and_organization_role>> that specifies the purpose of the association of the *person_and_organization_assignment* with product data.
 
 [example]
 ====
@@ -1719,29 +1719,29 @@ the express_ref:[person_organization_schema.person_and_organization_role] that s
 *)
 
 (*"management_resources_schema.person_assignment"
-A *person\_assignment* is the association of a express_ref:[person_organization_schema.person] with product data.
+A *person_assignment* is the association of a <<express:person_organization_schema:person_organization_schema.person, person>> with product data.
 *)
 
 (*"management_resources_schema.person_assignment.assigned_person"
-the instance of the express_ref:[person_organization_schema.person] entity data type that is to be associated with product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.person, person>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.person_assignment.role"
-the express_ref:[person_organization_schema.person_role] that specifies the purpose of the association of the *person\_assignment* with product data.
+the <<express:person_organization_schema:person_organization_schema.person_role, person_role>> that specifies the purpose of the association of the *person_assignment* with product data.
 
 [NOTE]
 --
-The function of the express_ref:[person_organization_schema.person] with respect to the assignment is usually a consequence of the functions of the express_ref:[person_organization_schema.person] within his organization.
+The function of the <<express:person_organization_schema:person_organization_schema.person, person>> with respect to the assignment is usually a consequence of the functions of the <<express:person_organization_schema:person_organization_schema.person, person>> within his organization.
 --
 
 [example]
 ====
-'Designer' and 'creator' are examples of roles that may be used to characterize the fact that the assigned product data has been designed or created by the *assigned\_person*.
+'Designer' and 'creator' are examples of roles that may be used to characterize the fact that the assigned product data has been designed or created by the *assigned_person*.
 ====
 *)
 
 (*"management_resources_schema.person_type_assignment"
-A *person\_type\_assignment* is a mechanism for associating a express_ref:[person_organization_schema.person_type] with product data. 
+A *person_type_assignment* is a mechanism for associating a <<express:person_organization_schema:person_organization_schema.person_type, person_type>> with product data. 
 
 [example]
 ====
@@ -1750,27 +1750,27 @@ An association between a (generic) _structural engineer_ and a particular constr
 *)
 
 (*"management_resources_schema.person_type_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *person\_type\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *person_type_assignment*.
 *)
 
 (*"management_resources_schema.person_type_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *person\_type\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *person_type_assignment* is known.
 *)
 
 (*"management_resources_schema.person_type_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *person\_type\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *person_type_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.person_type_assignment.role"
-the express_ref:[management_resources_schema.person_type_role] that specifies the purpose of the association of the *person\_type\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.person_type_role, person_type_role>> that specifies the purpose of the association of the *person_type_assignment* with product data.
 *)
 
 (*"management_resources_schema.person_type_assignment.assigned_person_type"
-the instance of the express_ref:[person_organization_schema.person_type] entity data type that is to be associated with product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.person_type, person_type>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.person_type_definition_assignment"
-A *person\_type\_definition\_assignment* is a mechanism for associating a express_ref:[person_organization_schema.person_type_definition] with product data. 
+A *person_type_definition_assignment* is a mechanism for associating a <<express:person_organization_schema:person_organization_schema.person_type_definition, person_type_definition>> with product data. 
 
 [example]
 ====
@@ -1779,59 +1779,59 @@ An association between the definition of _structural engineer_ employed by the U
 *)
 
 (*"management_resources_schema.person_type_definition_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *person\_type\_definition\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *person_type_definition_assignment*.
 *)
 
 (*"management_resources_schema.person_type_definition_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *person\_type\_definition\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *person_type_definition_assignment* is known.
 *)
 
 (*"management_resources_schema.person_type_definition_assignment.role"
-the express_ref:[management_resources_schema.person_type_definition_role] that specifies the purpose of the association of the *person\_type\_definition\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.person_type_definition_role, person_type_definition_role>> that specifies the purpose of the association of the *person_type_definition_assignment* with product data.
 *)
 
 (*"management_resources_schema.person_type_definition_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *person\_type\_definition\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *person_type_definition_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.person_type_definition_assignment.assigned_person_type_definition"
-the instance of the express_ref:[person_organization_schema.person_type_definition] entity data type that is to be associated with product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.person_type_definition, person_type_definition>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.person_type_definition_role"
-A *person\_type\_definition\_role* is a purpose for a *person\_type\_definition* and provides identification and description of the purpose.
+A *person_type_definition_role* is a purpose for a *person_type_definition* and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.person_type_definition_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *person\_type\_definition\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *person_type_definition_role*.
 *)
 
 (*"management_resources_schema.person_type_definition_role.name"
-the express_ref:[support_resource_schema.label] by which the *person\_type\_definition\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *person_type_definition_role* is known.
 *)
 
 (*"management_resources_schema.person_type_definition_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *person\_type\_definition\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *person_type_definition_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.person_type_role"
-A *person\_type\_role* is a purpose for a *person\_type* and provides identification and description of the purpose.
+A *person_type_role* is a purpose for a *person_type* and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.person_type_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *person\_type\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *person_type_role*.
 *)
 
 (*"management_resources_schema.person_type_role.name"
-the express_ref:[support_resource_schema.label] by which the *person\_type\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *person_type_role* is known.
 *)
 
 (*"management_resources_schema.person_type_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *person\_type\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *person_type_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.position_in_organization_assignment"
-A *position\_in\_organization\_assignment* is a mechanism for associating a express_ref:[person_organization_schema.position_in_organization] with product data. 
+A *position_in_organization_assignment* is a mechanism for associating a <<express:person_organization_schema:person_organization_schema.position_in_organization, position_in_organization>> with product data. 
 
 [example]
 ====
@@ -1840,43 +1840,43 @@ An association between the managing director of a particular organization and a 
 *)
 
 (*"management_resources_schema.position_in_organization_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *position\_in\_organization\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *position_in_organization_assignment*.
 *)
 
 (*"management_resources_schema.position_in_organization_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *position\_in\_organization\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *position_in_organization_assignment* is known.
 *)
 
 (*"management_resources_schema.position_in_organization_assignment.role"
-the express_ref:[management_resources_schema.position_in_organization_role] that specifies the purpose of the association of the *position\_in\_organization\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.position_in_organization_role, position_in_organization_role>> that specifies the purpose of the association of the *position_in_organization_assignment* with product data.
 *)
 
 (*"management_resources_schema.position_in_organization_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *position\_in\_organization\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *position_in_organization_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.position_in_organization_assignment.assigned_position_in_organization"
-the instance of the express_ref:[person_organization_schema.position_in_organization] entity data type that is to be associated with product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.position_in_organization, position_in_organization>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.position_in_organization_role"
-A *position\_in\_organization\_role* is a purpose for a *position\_in\_organization* and provides identification and description of the purpose
+A *position_in_organization_role* is a purpose for a *position_in_organization* and provides identification and description of the purpose
 *)
 
 (*"management_resources_schema.position_in_organization_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *position\_in\_organization\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *position_in_organization_role*.
 *)
 
 (*"management_resources_schema.position_in_organization_role.name"
-the express_ref:[support_resource_schema.label] by which the *position\_in\_organization\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *position_in_organization_role* is known.
 *)
 
 (*"management_resources_schema.position_in_organization_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *position\_in\_organization\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *position_in_organization_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.position_in_organization_type_assignment"
-A *position\_in\_organization\_type\_assignment* is a mechanism for associating a express_ref:[person_organization_schema.position_in_organization_type] with product data. 
+A *position_in_organization_type_assignment* is a mechanism for associating a <<express:person_organization_schema:person_organization_schema.position_in_organization_type, position_in_organization_type>> with product data. 
 
 [example]
 ====
@@ -1885,43 +1885,43 @@ An association between a generic company manager and a project.
 *)
 
 (*"management_resources_schema.position_in_organization_type_assignment.assigned_position_in_organization_type"
-the instance of the express_ref:[person_organization_schema.position_in_organization_type] entity data type that is to be associated with product data.
+the instance of the <<express:person_organization_schema:person_organization_schema.position_in_organization_type, position_in_organization_type>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.position_in_organization_type_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *position\_in\_organization\_type\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *position_in_organization_type_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.position_in_organization_type_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *position\_in\_organization\_type\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *position_in_organization_type_assignment*.
 *)
 
 (*"management_resources_schema.position_in_organization_type_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *position\_in\_organization\_type\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *position_in_organization_type_assignment* is known.
 *)
 
 (*"management_resources_schema.position_in_organization_type_assignment.role"
-the express_ref:[management_resources_schema.position_in_organization_type_role] that specifies the purpose of the association of the *position\_in\_organization\_type\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.position_in_organization_type_role, position_in_organization_type_role>> that specifies the purpose of the association of the *position_in_organization_type_assignment* with product data.
 *)
 
 (*"management_resources_schema.position_in_organization_type_role"
-A *position\_in\_organization\_type\_role* is a purpose for a *position\_in\_organization\_type* and provides identification and description of the purpose.
+A *position_in_organization_type_role* is a purpose for a *position_in_organization_type* and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.position_in_organization_type_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *position\_in\_organization\_type\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *position_in_organization_type_role*.
 *)
 
 (*"management_resources_schema.position_in_organization_type_role.name"
-the express_ref:[support_resource_schema.label] by which the *position\_in\_organization\_type\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *position_in_organization_type_role* is known.
 *)
 
 (*"management_resources_schema.position_in_organization_type_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *position\_in\_organization\_type\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *position_in_organization_type_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.qualification_assignment"
-A *qualification\_assignment* is a mechanism for associating a express_ref:[qualifications_schema.qualification] with product data. 
+A *qualification_assignment* is a mechanism for associating a <<express:qualifications_schema:qualifications_schema.qualification, qualification>> with product data. 
 
 [example]
 ====
@@ -1930,43 +1930,43 @@ The association of a pilot’s licence with a person indicates that the person i
 *)
 
 (*"management_resources_schema.qualification_assignment.assigned_qualification"
-the instance of the express_ref:[qualifications_schema.qualification] entity data type that is to be associated with product data.
+the instance of the <<express:qualifications_schema:qualifications_schema.qualification, qualification>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.qualification_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *qualification\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *qualification_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.qualification_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *qualification\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *qualification_assignment*.
 *)
 
 (*"management_resources_schema.qualification_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *qualification\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *qualification_assignment* is known.
 *)
 
 (*"management_resources_schema.qualification_assignment.role"
-the express_ref:[management_resources_schema.qualification_role] that specifies the purpose of the association of the *qualification\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.qualification_role, qualification_role>> that specifies the purpose of the association of the *qualification_assignment* with product data.
 *)
 
 (*"management_resources_schema.qualification_role"
-A *qualification\_role* is a purpose for a qualification and provides identification and description of the purpose.
+A *qualification_role* is a purpose for a qualification and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.qualification_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *qualification\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *qualification_role*.
 *)
 
 (*"management_resources_schema.qualification_role.name"
-the express_ref:[support_resource_schema.label] by which the *qualification\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *qualification_role* is known.
 *)
 
 (*"management_resources_schema.qualification_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *qualification\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *qualification_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.qualification_type_assignment"
-A *qualification\_type\_assignment* is a mechanism for associating a express_ref:[qualifications_schema.qualification_type] with product data. 
+A *qualification_type_assignment* is a mechanism for associating a <<express:qualifications_schema:qualifications_schema.qualification_type, qualification_type>> with product data. 
 
 [example]
 ====
@@ -1975,56 +1975,56 @@ An association between a person and a Product Management Professional certificat
 *)
 
 (*"management_resources_schema.qualification_type_assignment.assigned_qualification_type"
-the instance of the express_ref:[qualifications_schema.qualification_type] entity data type that is to be associated with product data.
+the instance of the <<express:qualifications_schema:qualifications_schema.qualification_type, qualification_type>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.qualification_type_assignment.description"
-the express_ref:[support_resource_schema.text] that characterizes the *qualification\_type\_assignment*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *qualification_type_assignment*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.qualification_type_assignment.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *qualification\_type\_assignment*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *qualification_type_assignment*.
 *)
 
 (*"management_resources_schema.qualification_type_assignment.name"
-the express_ref:[support_resource_schema.label] by which the *qualification\_type\_assignment* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *qualification_type_assignment* is known.
 *)
 
 (*"management_resources_schema.qualification_type_role"
-A *qualification\_type\_role* is a purpose for a *qualification\_type* and provides identification and description of the purpose.
+A *qualification_type_role* is a purpose for a *qualification_type* and provides identification and description of the purpose.
 *)
 
 (*"management_resources_schema.qualification_type_role.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *qualification\_type\_role*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *qualification_type_role*.
 *)
 
 (*"management_resources_schema.qualification_type_role.name"
-the express_ref:[support_resource_schema.label] by which the *qualification\_type\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *qualification_type_role* is known.
 *)
 
 (*"management_resources_schema.qualification_type_role.description"
-the express_ref:[support_resource_schema.text] that characterizes the *qualification\_type\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *qualification_type_role*. The value of the attribute need not be specified.
 *)
 
 (*"management_resources_schema.qualification_type_assignment.role"
-the express_ref:[management_resources_schema.qualification_type_role] that specifies the purpose of the association of the *qualification\_type\_assignment* with product data.
+the <<express:management_resources_schema:management_resources_schema.qualification_type_role, qualification_type_role>> that specifies the purpose of the association of the *qualification_type_assignment* with product data.
 *)
 
 (*"management_resources_schema.reference_in"
-An *reference\_in* is a pre-defined a way for an external reference into a set of entity instances.
+An *reference_in* is a pre-defined a way for an external reference into a set of entity instances.
 
 [NOTE]
 --
-An HTML documents may contain "A" elements with a name attribute, or any other elements with an id attribute. The entity *reference\_in* provides an equivalent capability for an exchange file according to ISO 10303-21.
+An HTML documents may contain "A" elements with a name attribute, or any other elements with an id attribute. The entity *reference_in* provides an equivalent capability for an exchange file according to ISO 10303-21.
 --
 *)
 
 (*"management_resources_schema.reference_in.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *reference\_in*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *reference_in*.
 *)
 
 (*"management_resources_schema.reference_in.target"
-the entity instance for which an *reference\_in* is defined.
+the entity instance for which an *reference_in* is defined.
 *)
 
 (*"management_resources_schema.reference_in.ur:UR1"
@@ -2032,66 +2032,66 @@ Within an exchange set all *id*s shall be unique.
 *)
 
 (*"management_resources_schema.reference_in.ur:UR2"
-For a *target* instance at most one *reference\_in* shall be defined.
+For a *target* instance at most one *reference_in* shall be defined.
 *)
 
 (*"management_resources_schema.security_classification_assignment"
-A *security\_classification\_assignment* is an association of a express_ref:[security_classification_schema.security_classification] with product data.
+A *security_classification_assignment* is an association of a <<express:security_classification_schema:security_classification_schema.security_classification, security_classification>> with product data.
 *)
 
 (*"management_resources_schema.security_classification_assignment.assigned_security_classification"
-the instance of the express_ref:[security_classification_schema.security_classification] entity data type that is to be associated with product data.
+the instance of the <<express:security_classification_schema:security_classification_schema.security_classification, security_classification>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.security_classification_assignment.role"
-the express_ref:[basic_attribute_schema.object_role] that specifies the purpose of the association of the *security\_classification\_assignment* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *security_classification_assignment* with product data.
 
 [NOTE]
 --
-This attribute is an enhancement to the definition of *security\_classification\_assignment* using a method that is upwardly compatible with ISO 10303-41:1994
+This attribute is an enhancement to the definition of *security_classification_assignment* using a method that is upwardly compatible with ISO 10303-41:1994
 --
 *)
 
 (*"management_resources_schema.security_classification_assignment.wr:WR1"
-Each *security\_classification\_assignment* shall be the express_ref:[basic_attribute_schema.role_association.item_with_role] in at most one express_ref:[basic_attribute_schema.role_association].
+Each *security_classification_assignment* shall be the <<express:basic_attribute_schema:basic_attribute_schema.role_association.item_with_role, item_with_role>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"management_resources_schema.time_assignment"
-A *time\_assignment* is an association of a express_ref:[date_time_schema.local_time] with product data.
+A *time_assignment* is an association of a <<express:date_time_schema:date_time_schema.local_time, local_time>> with product data.
 *)
 
 (*"management_resources_schema.time_assignment.assigned_time"
-the instance of the express_ref:[date_time_schema.local_time] entity data type that is to be associated with product data.
+the instance of the <<express:date_time_schema:date_time_schema.local_time, local_time>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.time_assignment.role"
-the express_ref:[date_time_schema.time_role] that specifies the purpose of the association of the *time\_assignment* with product data.
+the <<express:date_time_schema:date_time_schema.time_role, time_role>> that specifies the purpose of the association of the *time_assignment* with product data.
 
 [example]
 ====
-'Start time' is an example of a role that may be used to characterize the fact that the *assigned\_time* defines the time when some action was expected to start.
+'Start time' is an example of a role that may be used to characterize the fact that the *assigned_time* defines the time when some action was expected to start.
 ====
 *)
 
 (*"management_resources_schema.time_interval_assignment"
-A *time\_interval\_assignment* is an association of a express_ref:[date_time_schema.time_interval] with product data.
+A *time_interval_assignment* is an association of a <<express:date_time_schema:date_time_schema.time_interval, time_interval>> with product data.
 *)
 
 (*"management_resources_schema.time_interval_assignment.assigned_time_interval"
-the instance of the express_ref:[date_time_schema.time_interval] entity data type that is to be associated with product data.
+the instance of the <<express:date_time_schema:date_time_schema.time_interval, time_interval>> entity data type that is to be associated with product data.
 *)
 
 (*"management_resources_schema.time_interval_assignment.role"
-the express_ref:[date_time_schema.time_interval_role] that specifies the purpose of the association of the *time\_interval\_assignment* with product data.
+the <<express:date_time_schema:date_time_schema.time_interval_role, time_interval_role>> that specifies the purpose of the association of the *time_interval_assignment* with product data.
 *)
 
 (*"management_resources_schema.acyclic_identification_assignment_relationship"
-The *acyclic\_identification\_assignment\_relationship* function determines whether the graph of instances of the entity data type express_ref:[management_resources_schema.identification_assignment] that contains relation as one of its links contains a cycle. This function may be used to evaluate either an express_ref:[management_resources_schema.identification_assignment_relationship] or any of its subtypes. 
+The *acyclic_identification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema:management_resources_schema.identification_assignment, identification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:management_resources_schema:management_resources_schema.identification_assignment_relationship, identification_assignment_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -2102,24 +2102,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[management_resources_schema.identification_assignment_relationship] entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:management_resources_schema:management_resources_schema.identification_assignment_relationship, identification_assignment_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"management_resources_schema.acyclic_identification_assignment_relationship.relation"
-(input) the candidate express_ref:[management_resources_schema.identification_assignment_relationship] to be checked.
+(input) the candidate <<express:management_resources_schema:management_resources_schema.identification_assignment_relationship, identification_assignment_relationship>> to be checked.
 *)
 
 (*"management_resources_schema.acyclic_identification_assignment_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[management_resources_schema.identification_assignment] that the function is searching for in the express_ref:[management_resources_schema.identification_assignment_relationship.relating_identification_assignment] parameter of the relation argument.
+(input) the set of instances of the entity data type <<express:management_resources_schema:management_resources_schema.identification_assignment, identification_assignment>> that the function is searching for in the <<express:management_resources_schema:management_resources_schema.identification_assignment_relationship.relating_identification_assignment, relating_identification_assignment>> parameter of the relation argument.
 *)
 
 (*"management_resources_schema.acyclic_identification_assignment_relationship.specific_relation"
-(input) the fully qualified entity name of a type of express_ref:[management_resources_schema.identification_assignment_relationship] entity.
+(input) the fully qualified entity name of a type of <<express:management_resources_schema:management_resources_schema.identification_assignment_relationship, identification_assignment_relationship>> entity.
 *)
 
 (*"management_resources_schema.acyclic_assignment_object_relationship"
-The *acyclic\_assignment\_object\_relationship* function determines whether the graph of instances of the entity data type express_ref:[management_resources_schema.assignment_object_select] that contains relation as one of its links contains a cycle. This function may be used to evaluate either an express_ref:[management_resources_schema.assignment_object_relationship] or any of its subtypes. 
+The *acyclic_assignment_object_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema:management_resources_schema.assignment_object_select, assignment_object_select>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:management_resources_schema:management_resources_schema.assignment_object_relationship, assignment_object_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -2130,19 +2130,19 @@ The algorithm of the function is explained in annex E.2.
 *)
 
 (*"management_resources_schema.acyclic_assignment_object_relationship.relation"
-(input) the candidate express_ref:[management_resources_schema.assignment_object_relationship] to be checked.
+(input) the candidate <<express:management_resources_schema:management_resources_schema.assignment_object_relationship, assignment_object_relationship>> to be checked.
 *)
 
 (*"management_resources_schema.acyclic_assignment_object_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[management_resources_schema.assignment_object_select] for which the function is searching in the express_ref:[management_resources_schema.assignment_object_relationship.relating] parameter of the relation argument.
+(input) the set of instances of the entity data type <<express:management_resources_schema:management_resources_schema.assignment_object_select, assignment_object_select>> for which the function is searching in the <<express:management_resources_schema:management_resources_schema.assignment_object_relationship.relating, relating>> parameter of the relation argument.
 *)
 
 (*"management_resources_schema.acyclic_assignment_object_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the express_ref:[management_resources_schema.assignment_object_relationship] entity.
+(input) the fully qualified name of a subtype of the <<express:management_resources_schema:management_resources_schema.assignment_object_relationship, assignment_object_relationship>> entity.
 *)
 
 (*"management_resources_schema.acyclic_classification_assignment_relationship"
-The *acyclic\_classification\_assignment\_relationship* function determines whether the graph of instances of the entity data type express_ref:[management_resources_schema.classification_assignment] that contains relation as one of its links contains a cycle. This function may be used to evaluate either a express_ref:[management_resources_schema.classification_assignment_relationship] or any of its subtypes. 
+The *acyclic_classification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema:management_resources_schema.classification_assignment, classification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:management_resources_schema:management_resources_schema.classification_assignment_relationship, classification_assignment_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -2153,19 +2153,19 @@ The algorithm of the function is explained in annex E.2.
 *)
 
 (*"management_resources_schema.acyclic_classification_assignment_relationship.relation"
-(input) the candidate express_ref:[management_resources_schema.classification_assignment_relationship] to be checked.
+(input) the candidate <<express:management_resources_schema:management_resources_schema.classification_assignment_relationship, classification_assignment_relationship>> to be checked.
 *)
 
 (*"management_resources_schema.acyclic_classification_assignment_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[management_resources_schema.classification_assignment] for which the function is searching in the express_ref:[management_resources_schema.classification_assignment_relationship.relating] parameter of the relation argument.
+(input) the set of instances of the entity data type <<express:management_resources_schema:management_resources_schema.classification_assignment, classification_assignment>> for which the function is searching in the <<express:management_resources_schema:management_resources_schema.classification_assignment_relationship.relating, relating>> parameter of the relation argument.
 *)
 
 (*"management_resources_schema.acyclic_classification_assignment_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the express_ref:[management_resources_schema.classification_assignment_relationship] entity.
+(input) the fully qualified name of a subtype of the <<express:management_resources_schema:management_resources_schema.classification_assignment_relationship, classification_assignment_relationship>> entity.
 *)
 
 (*"management_resources_schema.acyclic_external_identification_assignment_relationship"
-The *acyclic\_external\_identification\_assignment\_relationship* function determines whether the graph of instances of the entity data type express_ref:[management_resources_schema.external_identification_assignment] that contains relation as one of its links contains a cycle. This function may be used to evaluate either a express_ref:[management_resources_schema.external_identification_assignment_relationship] or any of its subtypes. 
+The *acyclic_external_identification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema:management_resources_schema.external_identification_assignment, external_identification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:management_resources_schema:management_resources_schema.external_identification_assignment_relationship, external_identification_assignment_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -2176,13 +2176,13 @@ The algorithm of the function is explained in annex E.2.
 *)
 
 (*"management_resources_schema.acyclic_external_identification_assignment_relationship.relation"
-(input) the candidate express_ref:[management_resources_schema.external_identification_assignment_relationship] to be checked.
+(input) the candidate <<express:management_resources_schema:management_resources_schema.external_identification_assignment_relationship, external_identification_assignment_relationship>> to be checked.
 *)
 
 (*"management_resources_schema.acyclic_external_identification_assignment_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[management_resources_schema.external_identification_assignment] for which the function is searching in the express_ref:[management_resources_schema.external_identification_assignment_relationship.relating] parameter of the relation argument.
+(input) the set of instances of the entity data type <<express:management_resources_schema:management_resources_schema.external_identification_assignment, external_identification_assignment>> for which the function is searching in the <<express:management_resources_schema:management_resources_schema.external_identification_assignment_relationship.relating, relating>> parameter of the relation argument.
 *)
 
 (*"management_resources_schema.acyclic_external_identification_assignment_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the express_ref:[management_resources_schema.external_identification_assignment_relationship] entity.
+(input) the fully qualified name of a subtype of the <<express:management_resources_schema:management_resources_schema.external_identification_assignment_relationship, external_identification_assignment_relationship>> entity.
 *)

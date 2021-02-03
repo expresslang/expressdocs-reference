@@ -45,7 +45,7 @@ END_SCHEMA;
 (*"certification_schema"
 == Introduction
 
-The subject of the *certification\_schema* is the definition of certifications. A certification assures and validates product data. 
+The subject of the *certification_schema* is the definition of certifications. A certification assures and validates product data. 
 
 [example]
 ====
@@ -76,7 +76,7 @@ The role of *certification* can be defined in the annotated EXPRESS schemas that
 *)
 
 (*"certification_schema.certification.name"
-the express_ref:[support_resource_schema.label] by which the *certification* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *certification* is known.
 *)
 
 (*"certification_schema.certification.purpose"
@@ -89,11 +89,11 @@ A purpose for material certification could be the fact that certain customers de
 *)
 
 (*"certification_schema.certification.kind"
-the express_ref:[certification_schema.certification_type] that defines the class of *certification* that is applied.
+the <<express:certification_schema:certification_schema.certification_type, certification_type>> that defines the class of *certification* that is applied.
 *)
 
 (*"certification_schema.certification_type"
-A *certification\_type* is the kind of express_ref:[certification_schema.certification] granted. 
+A *certification_type* is the kind of <<express:certification_schema:certification_schema.certification, certification>> granted. 
 
 [example]
 ====
@@ -102,7 +102,7 @@ Suppliers and manufacturers can be certified.
 *)
 
 (*"certification_schema.certification_type.description"
-the express_ref:[support_resource_schema.text] that characterizes the *certification\_type*.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *certification_type*.
 
 [NOTE]
 --

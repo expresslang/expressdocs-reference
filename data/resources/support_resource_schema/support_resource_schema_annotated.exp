@@ -70,7 +70,7 @@ END_SCHEMA;
 (*"support_resource_schema"
 == Introduction
 
-The subject of the *support\_resource\_schema* is a description of EXPRESS declarations that are shared by more than one of the ISO 10303 integrated resource schemas. 
+The subject of the *support_resource_schema* is a description of EXPRESS declarations that are shared by more than one of the ISO 10303 integrated resource schemas. 
 
 [NOTE]
 --
@@ -118,7 +118,7 @@ A *text* is an alphanumeric string intended to be read and understood by a human
 *)
 
 (*"support_resource_schema.bag_to_set"
-The *bag\_to\_set* function converts BAGs into SETs. 
+The *bag_to_set* function converts BAGs into SETs. 
 
 [example]
 ====
@@ -131,7 +131,7 @@ This function can be used to convert the BAGs returned by the USEDIN function in
 *)
 
 (*"support_resource_schema.type_check_function"
-The *type\_check\_function* function compares the names of the data types of the instance that is referred to by the parameter *the\_type* with the set of entity names specified by *sub\_names*. 
+The *type_check_function* function compares the names of the data types of the instance that is referred to by the parameter *the_type* with the set of entity names specified by *sub_names*. 
 
 Depending on the value of *criterion*, it returns TRUE if:
 
@@ -139,21 +139,21 @@ Depending on the value of *criterion*, it returns TRUE if:
 
 [NOTE]
 --
-If *sub\_names* contains the entity names of all the subtypes of a particular entity data type, this case can be used to ensure that no instance of the supertype exists.
+If *sub_names* contains the entity names of all the subtypes of a particular entity data type, this case can be used to ensure that no instance of the supertype exists.
 --
 
 * case 1: the intersection of the two aggregates is empty. 
 
 [NOTE]
 --
-If *sub\_names* contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no instance of these subtypes exists.
+If *sub_names* contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no instance of these subtypes exists.
 --
 
 * case 2: the intersection of the two aggregates contains exactly one name. 
 
 [NOTE]
 --
-If *sub\_names* contains the entity names of all the subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of subtypes of the entity exists and that only instances of subtypes of the entity exist.
+If *sub_names* contains the entity names of all the subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of subtypes of the entity exists and that only instances of subtypes of the entity exist.
 --
 
 [NOTE]
@@ -165,7 +165,7 @@ The concept of complex entity instance is defined in ISO 10303-11.
 
 [NOTE]
 --
-If *sub\_names* contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of these subtypes of the entity exists.
+If *sub_names* contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of these subtypes of the entity exists.
 --
 *)
 
@@ -174,7 +174,7 @@ If *sub\_names* contains the entity names of subtypes of a particular entity dat
 *)
 
 (*"support_resource_schema.type_check_function.sub_names"
-(input) the set of names of the entity data types that are candidates for the type of *the\_type*.
+(input) the set of names of the entity data types that are candidates for the type of *the_type*.
 *)
 
 (*"support_resource_schema.type_check_function.criterion"

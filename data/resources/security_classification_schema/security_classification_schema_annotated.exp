@@ -45,7 +45,7 @@ END_SCHEMA;
 (*"security_classification_schema"
 == Introduction
 
-The subject of the *security\_classification\_schema* is the definition of degrees of secrecy to be specified.
+The subject of the *security_classification_schema* is the definition of degrees of secrecy to be specified.
 
 == Fundamental concerns
 
@@ -57,7 +57,7 @@ expg_image:security_classification_schemaexpg2.xml[]
 *)
 
 (*"security_classification_schema.security_classification"
-A *security\_classification* is the level of confidentiality that is required for the purpose of product data protection. 
+A *security_classification* is the level of confidentiality that is required for the purpose of product data protection. 
 
 [NOTE]
 --
@@ -66,33 +66,33 @@ The role of can be defined in the annotated EXPRESS schemas that use or speciali
 *)
 
 (*"security_classification_schema.security_classification.name"
-the express_ref:[support_resource_schema.label] by which the *security\_classification* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *security_classification* is known.
 
 [example]
 ====
-'National Security' is a security classification role. A security classification assignment role assigns the security classification role to a express_ref:[management_resources_schema.security_classification_assignment].
+'National Security' is a security classification role. A security classification assignment role assigns the security classification role to a <<express:management_resources_schema:management_resources_schema.security_classification_assignment, security_classification_assignment>>.
 ====
 *)
 
 (*"security_classification_schema.security_classification.purpose"
-an informal description of the intent of the *security\_classification*.
+an informal description of the intent of the *security_classification*.
 *)
 
 (*"security_classification_schema.security_classification.security_level"
-the express_ref:[security_classification_schema.security_classification_level] that specifies the required degree of security.
+the <<express:security_classification_schema:security_classification_schema.security_classification_level, security_classification_level>> that specifies the required degree of security.
 *)
 
 (*"security_classification_schema.security_classification_level"
-A *security\_classification\_level* is a category of security required for product data protection. 
+A *security_classification_level* is a category of security required for product data protection. 
 
 [example]
 ====
-'Confidential', 'secret', and 'top secret' are examples of express_ref:[security_classification_schema.security_classification] levels.
+'Confidential', 'secret', and 'top secret' are examples of <<express:security_classification_schema:security_classification_schema.security_classification, security_classification>> levels.
 ====
 *)
 
 (*"security_classification_schema.security_classification_level.name"
-the express_ref:[support_resource_schema.label] by which the *security\_classification\_level* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *security_classification_level* is known.
 
 [NOTE]
 --

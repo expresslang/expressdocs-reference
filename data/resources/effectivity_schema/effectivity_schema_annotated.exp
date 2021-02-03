@@ -135,7 +135,7 @@ END_SCHEMA;
 (*"effectivity_schema"
 == Introduction
 
-The subject of the *effectivity\_schema* is the validity of aspects of product data or product life cycle activity data specified against certain criteria. 
+The subject of the *effectivity_schema* is the validity of aspects of product data or product life cycle activity data specified against certain criteria. 
 
 This schema supports the representation of effectivity according to the following criteria:
 
@@ -155,43 +155,43 @@ expg_image:effectivity_schemaexpg2.xml[]
 *)
 
 (*"effectivity_schema.condition"
-A *condition* is a type of express_ref:[action_schema.action_method] that must be fulfilled before a statement or relationship becomes valid.
+A *condition* is a type of <<express:action_schema:action_schema.action_method, action_method>> that must be fulfilled before a statement or relationship becomes valid.
 *)
 
 (*"effectivity_schema.conditional_effectivity"
-A *conditional\_effectivity* is a type of express_ref:[effectivity_schema.condition] or express_ref:[effectivity_schema.effectivity] for which the domain of applicability is defined by an explicit condition.
+A *conditional_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.condition, condition>> or <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> for which the domain of applicability is defined by an explicit condition.
 *)
 
 (*"effectivity_schema.conditional_configuration"
-A *conditional\_configuration* is a type of express_ref:[effectivity_schema.conditional_effectivity] and represents an association of a express_ref:[product_concept_schema.product_concept_feature_association] object with a design or process in order to define a valid usage of it in the context of a certain express_ref:[Product_class_mim.product_class].
+A *conditional_configuration* is a type of <<express:effectivity_schema:effectivity_schema.conditional_effectivity, conditional_effectivity>> and represents an association of a <<express:product_concept_schema:product_concept_schema.product_concept_feature_association, product_concept_feature_association>> object with a design or process in order to define a valid usage of it in the context of a certain <<express:Product_class_mim:Product_class_mim.product_class, product_class>>.
 *)
 
 (*"effectivity_schema.conditional_configuration.configuration_type"
-the *configuration\_type* defines the valid usage of a *conditional\_configuration*.
+the *configuration_type* defines the valid usage of a *conditional_configuration*.
 *)
 
 (*"effectivity_schema.conditional_configuration.inheritance_type"
-the *inheritance\_type* specifies the inheritance scheme for the configuration information as either *exception*, *inherited*, or *local*.
+the *inheritance_type* specifies the inheritance scheme for the configuration information as either *exception*, *inherited*, or *local*.
 
-* An *exception* inheritance\_type is when no inheritance scheme is applicable and all required configuration information must be attached locally at the business object.
-* An *inherited* inheritance\_type is when a scheme for inheritance of configuration information applies. The complete configuration information shall be collected from the different levels in the structure by evaluation of results.
-* A *local* inheritance\_type is when no inheritance scheme is applicable and all required configuration information must be attached locally at the business object. Nevertheless, any potentially inherited configuration information of a higher level shall be consistent, i.e., it shall be a subset of the locally defined configuration information.
+* An *exception* inheritance_type is when no inheritance scheme is applicable and all required configuration information must be attached locally at the business object.
+* An *inherited* inheritance_type is when a scheme for inheritance of configuration information applies. The complete configuration information shall be collected from the different levels in the structure by evaluation of results.
+* A *local* inheritance_type is when no inheritance scheme is applicable and all required configuration information must be attached locally at the business object. Nevertheless, any potentially inherited configuration information of a higher level shall be consistent, i.e., it shall be a subset of the locally defined configuration information.
 *)
 
 (*"effectivity_schema.dated_effectivity"
-A *dated\_effectivity* is a type of express_ref:[effectivity_schema.effectivity] for which the domain of applicability is defined as a possibly open-ended interval of time.
+A *dated_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of time.
 *)
 
 (*"effectivity_schema.dated_effectivity.effectivity_end_date"
-the express_ref:[date_time_schema.date_time_or_event_occurrence] that defines the upper bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no upper limit.
+the <<express:date_time_schema:date_time_schema.date_time_or_event_occurrence, date_time_or_event_occurrence>> that defines the upper bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no upper limit.
 *)
 
 (*"effectivity_schema.dated_effectivity.effectivity_start_date"
-the express_ref:[date_time_schema.date_time_or_event_occurrence] that defines the lower bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no lower limit.
+the <<express:date_time_schema:date_time_schema.date_time_or_event_occurrence, date_time_or_event_occurrence>> that defines the lower bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no lower limit.
 *)
 
 (*"effectivity_schema.dated_effectivity.wr:WR1"
-One or both of the *effectivity\_start\_date* or *effectivity\_end\_date* shall be specified.
+One or both of the *effectivity_start_date* or *effectivity_end_date* shall be specified.
 *)
 
 (*"effectivity_schema.effectivity"
@@ -202,11 +202,11 @@ An *effectivity* is the identification of a domain of applicability for product 
 A process is effective from 1998 March 1 through 1998 December 31.
 ====
 
- An *effectivity* may be either a express_ref:[effectivity_schema.serial_numbered_effectivity] or a express_ref:[effectivity_schema.dated_effectivity], or a express_ref:[effectivity_schema.lot_effectivity], or a express_ref:[effectivity_schema.time_interval_based_effectivity].
+ An *effectivity* may be either a <<express:effectivity_schema:effectivity_schema.serial_numbered_effectivity, serial_numbered_effectivity>> or a <<express:effectivity_schema:effectivity_schema.dated_effectivity, dated_effectivity>>, or a <<express:effectivity_schema:effectivity_schema.lot_effectivity, lot_effectivity>>, or a <<express:effectivity_schema:effectivity_schema.time_interval_based_effectivity, time_interval_based_effectivity>>.
 *)
 
 (*"effectivity_schema.effectivity.id"
-the express_ref:[support_resource_schema.identifier] that distinguishes the *effectivity*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *effectivity*.
 
 [NOTE]
 --
@@ -220,7 +220,7 @@ The context in which id is used as a discriminating characteristic can be identi
 *)
 
 (*"effectivity_schema.effectivity.description"
-the express_ref:[support_resource_schema.text] that characterizes the *effectivity*.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *effectivity*.
 
 [NOTE]
 --
@@ -229,7 +229,7 @@ This attribute is an upwardly compatible addition to *effectivity* as specified 
 *)
 
 (*"effectivity_schema.effectivity.name"
-the express_ref:[support_resource_schema.label] by which the *effectivity* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *effectivity* is known.
 
 [NOTE]
 --
@@ -238,34 +238,34 @@ This attribute is an upwardly compatible addition to *effectivity* as specified 
 *)
 
 (*"effectivity_schema.effectivity.wr:WR1"
-Each *effectivity* shall be the express_ref:[basic_attribute_schema.description_attribute.described_item] in at most one express_ref:[basic_attribute_schema.description_attribute].
+Each *effectivity* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item, described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>>.
 
 [NOTE]
 --
-The express_ref:[basic_attribute_schema.description_attribute] data type is defined in express_ref:[basic_attribute_schema] of this part of ISO 10303.
+The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> of this part of ISO 10303.
 --
 *)
 
 (*"effectivity_schema.effectivity.wr:WR2"
-Each *effectivity* shall be the express_ref:[basic_attribute_schema.name_attribute.named_item] in at most one express_ref:[basic_attribute_schema.name_attribute].
+Each *effectivity* shall be the <<express:basic_attribute_schema:basic_attribute_schema.name_attribute.named_item, named_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.name_attribute, name_attribute>>.
 
 [NOTE]
 --
-The express_ref:[basic_attribute_schema.name_attribute] data type is defined in express_ref:[basic_attribute_schema] of this part of ISO 10303.
+The <<express:basic_attribute_schema:basic_attribute_schema.name_attribute, name_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"effectivity_schema.effectivity_relationship"
-An *effectivity\_relationship* is a relationship between two instances of the entity data type express_ref:[effectivity_schema.effectivity] with a description of their relationship. 
+An *effectivity_relationship* is a relationship between two instances of the entity data type <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> with a description of their relationship. 
 
 [NOTE]
 --
-The role of *effectivity\_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+The role of *effectivity_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
 --
 
 [NOTE]
@@ -275,16 +275,16 @@ Relationships represented using this entity may be parent child relationship. An
 
 [NOTE]
 --
-This entity, together with the express_ref:[effectivity_schema.effectivity] entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"effectivity_schema.effectivity_relationship.name"
-the express_ref:[support_resource_schema.label] by which the *effectivity\_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *effectivity_relationship* is known.
 *)
 
 (*"effectivity_schema.effectivity_relationship.description"
-the express_ref:[support_resource_schema.text] that characterizes the *effectivity\_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *effectivity_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"effectivity_schema.effectivity_relationship.related_effectivity"
@@ -297,7 +297,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"effectivity_schema.effectivity_relationship.relating_effectivity"
-one of the instances of express_ref:[effectivity_schema.effectivity] that is a part of the relationship.
+one of the instances of <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -306,7 +306,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"effectivity_schema.lot_effectivity"
-A *lot\_effectivity* is a type of express_ref:[effectivity_schema.effectivity] for which the domain of applicability is defined as a given batch of items.
+A *lot_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> for which the domain of applicability is defined as a given batch of items.
 *)
 
 (*"effectivity_schema.lot_effectivity.effectivity_lot_id"
@@ -318,7 +318,7 @@ the size of the batch of items.
 *)
 
 (*"effectivity_schema.serial_numbered_effectivity"
-A *serial\_numbered\_effectivity* is a type of express_ref:[effectivity_schema.effectivity] for which the domain of applicability is defined as a possibly open-ended interval of serial numbers. 
+A *serial_numbered_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of serial numbers. 
 
 [NOTE]
 --
@@ -335,20 +335,20 @@ the last valid serial number. If a value for this attribute is not defined, the 
 *)
 
 (*"effectivity_schema.time_interval_based_effectivity"
-A *time\_interval\_based\_effectivity* is a type of express_ref:[effectivity_schema.effectivity] for which the domain of applicability is defined as a express_ref:[date_time_schema.time_interval]. 
+A *time_interval_based_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> for which the domain of applicability is defined as a <<express:date_time_schema:date_time_schema.time_interval, time_interval>>. 
 
 [NOTE]
 --
-This entity data type provides greater functionalities than the entity data type express_ref:[effectivity_schema.dated_effectivity]. In particular, it allows the specification of an effectivity period in which the period of time is defined by a date and a duration.
+This entity data type provides greater functionalities than the entity data type <<express:effectivity_schema:effectivity_schema.dated_effectivity, dated_effectivity>>. In particular, it allows the specification of an effectivity period in which the period of time is defined by a date and a duration.
 --
 *)
 
 (*"effectivity_schema.time_interval_based_effectivity.effectivity_period"
-the express_ref:[date_time_schema.time_interval] defining the period of time when the associated product data are effective.
+the <<express:date_time_schema:date_time_schema.time_interval, time_interval>> defining the period of time when the associated product data are effective.
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship"
-The *acyclic\_effectivity\_relationship* function determines whether the graph of instances of the entity data type express_ref:[effectivity_schema.effectivity] that contains relation as one of its links contains a cycle. This function may be used to evaluate either a express_ref:[effectivity_schema.effectivity_relationship] or any of its subtypes. 
+The *acyclic_effectivity_relationship* function determines whether the graph of instances of the entity data type <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:effectivity_schema:effectivity_schema.effectivity_relationship, effectivity_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -359,18 +359,18 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[effectivity_schema.effectivity_relationship] entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:effectivity_schema:effectivity_schema.effectivity_relationship, effectivity_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship.relation"
-(input) the candidate express_ref:[effectivity_schema.effectivity_relationship] to be checked.
+(input) the candidate <<express:effectivity_schema:effectivity_schema.effectivity_relationship, effectivity_relationship>> to be checked.
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[effectivity_schema.effectivity] for which the function is searching in the express_ref:[effectivity_schema.effectivity_relationship.relating_effectivity] parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:effectivity_schema:effectivity_schema.effectivity, effectivity>> for which the function is searching in the <<express:effectivity_schema:effectivity_schema.effectivity_relationship.relating_effectivity, relating_effectivity>> parameter of the *relation* argument.
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship.specific_relation"
-(input) the fully qualified entity name of a type of express_ref:[effectivity_schema.effectivity_relationship] entity.
+(input) the fully qualified entity name of a type of <<express:effectivity_schema:effectivity_schema.effectivity_relationship, effectivity_relationship>> entity.
 *)
