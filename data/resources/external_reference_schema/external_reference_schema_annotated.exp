@@ -129,7 +129,7 @@ END_SCHEMA;
 (*"external_reference_schema"
 == Introduction
 
-The subject of the *external\_reference\_schema* is the means of identifying information that is not explicitly represented in a given exchange.
+The subject of the *external_reference_schema* is the means of identifying information that is not explicitly represented in a given exchange.
 
 == Fundamental concerns
 
@@ -150,11 +150,11 @@ The role of *message* can be defined in the annotated EXPRESS schemas that use o
 *)
 
 (*"external_reference_schema.source_item"
-A *source\_item* type allows for the designation of an express_ref:[support_resource_schema.identifier] or a express_ref:[external_reference_schema.message].
+A *source_item* type allows for the designation of an <<express:support_resource_schema:support_resource_schema.identifier, identifier>> or a <<express:external_reference_schema:external_reference_schema.message, message>>.
 *)
 
 (*"external_reference_schema.external_source"
-An *external\_source* is the identification of a source of product data that is not the EXPRESS schema to which the exchange conforms. 
+An *external_source* is the identification of a source of product data that is not the EXPRESS schema to which the exchange conforms. 
 
 [NOTE]
 --
@@ -163,61 +163,61 @@ The product data may conform to some other part of this International Standard.
 *)
 
 (*"external_reference_schema.external_source.source_id"
-the identification of the *external\_source*.
+the identification of the *external_source*.
 *)
 
 (*"external_reference_schema.external_source.description"
-the express_ref:[support_resource_schema.text] that characterizes the *external\_source*.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *external_source*.
 
 [NOTE]
 --
-This attribute is an upwardly compatible addition to *external\_source* as specified in ISO 10303-41:1994.
+This attribute is an upwardly compatible addition to *external_source* as specified in ISO 10303-41:1994.
 --
 *)
 
 (*"external_reference_schema.external_source.wr:WR1"
-Each *external\_source* shall be the express_ref:[basic_attribute_schema.description_attribute.described_item] in at most one express_ref:[basic_attribute_schema.description_attribute].
+Each *external_source* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item, described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>>.
 
 [NOTE]
 --
-The express_ref:[basic_attribute_schema.description_attribute] data type is defined in express_ref:[basic_attribute_schema] of this part of ISO 10303.
+The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"external_reference_schema.external_source_relationship"
-An *external\_source\_relationship* is a relationship between two instances of the entity data type express_ref:[external_reference_schema.external_source] with a description of their relationship. 
+An *external_source_relationship* is a relationship between two instances of the entity data type <<express:external_reference_schema:external_reference_schema.external_source, external_source>> with a description of their relationship. 
 
 [NOTE]
 --
-The role of *external\_source\_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+The role of *external_source_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
 --
 
 [example]
 ====
-One express_ref:[external_reference_schema.external_source] may be a subset of another express_ref:[external_reference_schema.external_source]. This entity may be specialized to specify such a relationship.
+One <<express:external_reference_schema:external_reference_schema.external_source, external_source>> may be a subset of another <<express:external_reference_schema:external_reference_schema.external_source, external_source>>. This entity may be specialized to specify such a relationship.
 ====
 
 [NOTE]
 --
-This entity, together with the express_ref:[external_reference_schema.external_source] entity, is based on the relationship template that is described in annex E.3
+This entity, together with the <<express:external_reference_schema:external_reference_schema.external_source, external_source>> entity, is based on the relationship template that is described in annex E.3
 --
 *)
 
 (*"external_reference_schema.external_source_relationship.name"
-the express_ref:[support_resource_schema.label] by which the *external\_source\_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *external_source_relationship* is known.
 *)
 
 (*"external_reference_schema.external_source_relationship.description"
-the express_ref:[support_resource_schema.text] that characterizes the *external\_source\_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *external_source_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"external_reference_schema.external_source_relationship.relating_source"
-one of the instances of express_ref:[external_reference_schema.external_source] that is a part of the relationship.
+one of the instances of <<express:external_reference_schema:external_reference_schema.external_source, external_source>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -226,7 +226,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"external_reference_schema.external_source_relationship.related_source"
-the other instance of express_ref:[external_reference_schema.external_source] that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:external_reference_schema:external_reference_schema.external_source, external_source>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -235,7 +235,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"external_reference_schema.externally_defined_item"
-An *externally\_defined\_item* is the identification of information that is not explicitly represented in a given exchange and that is not defined in the annotated EXPRESS schema to which the exchange conforms.
+An *externally_defined_item* is the identification of information that is not explicitly represented in a given exchange and that is not defined in the annotated EXPRESS schema to which the exchange conforms.
 *)
 
 (*"external_reference_schema.externally_defined_item.item_id"
@@ -243,15 +243,15 @@ the string that specifies the identification of the referent item.
 *)
 
 (*"external_reference_schema.externally_defined_item.source"
-an express_ref:[external_reference_schema.external_source] that contains the referent item.
+an <<express:external_reference_schema:external_reference_schema.external_source, external_source>> that contains the referent item.
 *)
 
 (*"external_reference_schema.externally_defined_item_relationship"
-An *externally\_defined\_item\_relationship* is a relationship between two instances of the entity data type express_ref:[external_reference_schema.externally_defined_item] with an identification and description of their relationship. 
+An *externally_defined_item_relationship* is a relationship between two instances of the entity data type <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> with an identification and description of their relationship. 
 
 [NOTE]
 --
-The role of *externally\_defined\_item\_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
+The role of *externally_defined_item_relationship* can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.
 --
 
 [NOTE]
@@ -261,20 +261,20 @@ Relationships represented using this entity may be parent child relationship. An
 
 [NOTE]
 --
-This entity, together with the express_ref:[external_reference_schema.externally_defined_item] entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"external_reference_schema.externally_defined_item_relationship.name"
-the express_ref:[support_resource_schema.label] by which the *externally\_defined\_item\_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *externally_defined_item_relationship* is known.
 *)
 
 (*"external_reference_schema.externally_defined_item_relationship.description"
-the express_ref:[support_resource_schema.text] that characterizes the *externally\_defined\_item\_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *externally_defined_item_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"external_reference_schema.externally_defined_item_relationship.relating_item"
-one of the instances of express_ref:[external_reference_schema.externally_defined_item] that is a part of the relationship.
+one of the instances of <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -283,11 +283,11 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"external_reference_schema.externally_defined_item_with_multiple_references"
-An *externally\_defined\_item\_with\_multiple\_references* is a type of express_ref:[external_reference_schema.externally_defined_item] that allows to define additional references providing information on the context and location of the target item within the source.
+An *externally_defined_item_with_multiple_references* is a type of <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> that allows to define additional references providing information on the context and location of the target item within the source.
 *)
 
 (*"external_reference_schema.externally_defined_item_with_multiple_references.references"
-a list of express_ref:[external_reference_schema.source_item]s defining a path to the target express_ref:[external_reference_schema.externally_defined_item.item_id].
+a list of <<express:external_reference_schema:external_reference_schema.source_item, source_item>>s defining a path to the target <<express:external_reference_schema:external_reference_schema.externally_defined_item.item_id, item_id>>.
 *)
 
 (*"external_reference_schema.externally_defined_item_with_multiple_references.ur:UR1"
@@ -295,11 +295,11 @@ The list of references shall be unique.
 *)
 
 (*"external_reference_schema.externally_defined_item_with_multiple_references.wr:WR1"
-An *externally\_defined\_item\_with\_multiple\_references* is a type of express_ref:[external_reference_schema.externally_defined_item.item_id] that adds a list of references to provide an unambiguous path in the external data. The express_ref:[external_reference_schema.externally_defined_item.item_id] inherited from the express_ref:[external_reference_schema.externally_defined_item] is the target for the reference list, but is excluded from the list itself. The list ends at a entity data type that explicitly references the target or that is explicitly referenced by the target.
+An *externally_defined_item_with_multiple_references* is a type of <<express:external_reference_schema:external_reference_schema.externally_defined_item.item_id, item_id>> that adds a list of references to provide an unambiguous path in the external data. The <<express:external_reference_schema:external_reference_schema.externally_defined_item.item_id, item_id>> inherited from the <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> is the target for the reference list, but is excluded from the list itself. The list ends at a entity data type that explicitly references the target or that is explicitly referenced by the target.
 *)
 
 (*"external_reference_schema.externally_defined_item_relationship.related_item"
-the other instance of express_ref:[external_reference_schema.externally_defined_item] that is a part of the relationship. If one element of the relationship is dependent up on the other, this attribute shall be the dependent one.
+the other instance of <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> that is a part of the relationship. If one element of the relationship is dependent up on the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -308,20 +308,20 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"external_reference_schema.pre_defined_item"
-A *pre\_defined\_item* is the identification of information that is not explicitly represented in a given exchange but that is defined in the annotated EXPRESS schema to which the exchange conforms. 
+A *pre_defined_item* is the identification of information that is not explicitly represented in a given exchange but that is defined in the annotated EXPRESS schema to which the exchange conforms. 
 
 [example]
 ====
-A reference to the colour 'red' without any definition of the associated red-green-blue values would be a *pre\_defined\_item* if the red-green-blue values of the colour 'red' were specified in the relevant annotated EXPRESS schema.
+A reference to the colour 'red' without any definition of the associated red-green-blue values would be a *pre_defined_item* if the red-green-blue values of the colour 'red' were specified in the relevant annotated EXPRESS schema.
 ====
 *)
 
 (*"external_reference_schema.pre_defined_item.name"
-the express_ref:[support_resource_schema.label] by which the *pre\_defined\_item* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *pre_defined_item* is known.
 *)
 
 (*"external_reference_schema.acyclic_external_source_relationship"
-The *acyclic\_external\_source\_relationship* function determines whether the graph of instances of the entity data type express_ref:[external_reference_schema.external_source] that contains relation as one of its links contains a cycle. This function may be used to evaluate either an express_ref:[external_reference_schema.external_source_relationship] or any of its subtypes. 
+The *acyclic_external_source_relationship* function determines whether the graph of instances of the entity data type <<express:external_reference_schema:external_reference_schema.external_source, external_source>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:external_reference_schema:external_reference_schema.external_source_relationship, external_source_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -332,24 +332,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[external_reference_schema.external_source_relationship] entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:external_reference_schema:external_reference_schema.external_source_relationship, external_source_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"external_reference_schema.acyclic_external_source_relationship.relation"
-(input) the candidate express_ref:[external_reference_schema.external_source_relationship] to be checked.
+(input) the candidate <<express:external_reference_schema:external_reference_schema.external_source_relationship, external_source_relationship>> to be checked.
 *)
 
 (*"external_reference_schema.acyclic_external_source_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[external_reference_schema.external_source] for which the function is searching in the express_ref:[external_reference_schema.external_source_relationship.relating_source] parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:external_reference_schema:external_reference_schema.external_source, external_source>> for which the function is searching in the <<express:external_reference_schema:external_reference_schema.external_source_relationship.relating_source, relating_source>> parameter of the *relation* argument.
 *)
 
 (*"external_reference_schema.acyclic_external_source_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the express_ref:[external_reference_schema.external_source_relationship] entity.
+(input) the fully qualified name of a subtype of the <<express:external_reference_schema:external_reference_schema.external_source_relationship, external_source_relationship>> entity.
 *)
 
 (*"external_reference_schema.acyclic_externally_defined_item_relationship"
-The *acyclic\_externally\_defined\_item\_relationship* function determines whether the graph of instances of the entity data type express_ref:[external_reference_schema.externally_defined_item] that contains relation as one of its links contains a cycle. This function may be used to evaluate either an express_ref:[external_reference_schema.externally_defined_item_relationship] or any of its subtypes. 
+The *acyclic_externally_defined_item_relationship* function determines whether the graph of instances of the entity data type <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:external_reference_schema:external_reference_schema.externally_defined_item_relationship, externally_defined_item_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -360,18 +360,18 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the express_ref:[external_reference_schema.externally_defined_item_relationship] entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:external_reference_schema:external_reference_schema.externally_defined_item_relationship, externally_defined_item_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"external_reference_schema.acyclic_externally_defined_item_relationship.relation"
-(input) the candidate express_ref:[external_reference_schema.externally_defined_item_relationship] to be checked.
+(input) the candidate <<express:external_reference_schema:external_reference_schema.externally_defined_item_relationship, externally_defined_item_relationship>> to be checked.
 *)
 
 (*"external_reference_schema.acyclic_externally_defined_item_relationship.relatives"
-(input) the set of instances of the entity data type express_ref:[external_reference_schema.externally_defined_item] for which the function is searching in the express_ref:[external_reference_schema.externally_defined_item_relationship.relating_item] parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:external_reference_schema:external_reference_schema.externally_defined_item, externally_defined_item>> for which the function is searching in the <<express:external_reference_schema:external_reference_schema.externally_defined_item_relationship.relating_item, relating_item>> parameter of the *relation* argument.
 *)
 
 (*"external_reference_schema.acyclic_externally_defined_item_relationship.specific_relation"
-(input) the fully qualified entity name of a type of express_ref:[external_reference_schema.externally_defined_item_relationship] entity.
+(input) the fully qualified entity name of a type of <<express:external_reference_schema:external_reference_schema.externally_defined_item_relationship, externally_defined_item_relationship>> entity.
 *)

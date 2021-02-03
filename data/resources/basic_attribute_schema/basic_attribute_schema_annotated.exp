@@ -161,7 +161,7 @@ END_SCHEMA;
 (*"basic_attribute_schema"
 == Introduction
 
-The subject of the *basic\_attribute\_schema* is the assignment of id, name, description and role attributes to aspects of product data. This schema defines the mechanism to define a value for these attributes and associate it with product data. 
+The subject of the *basic_attribute_schema* is the assignment of id, name, description and role attributes to aspects of product data. This schema defines the mechanism to define a value for these attributes and associate it with product data. 
 
 [NOTE]
 --
@@ -182,13 +182,13 @@ The following concepts are supported by this schema:
 * the assignment of a descriptive text to product data;
 * the assignment of a role to an association of management type data with other aspects of product data.
 
-The assignment of an identifier corresponds to the *id\_attribute* entity data type. The entities to which an identifier may be assigned are specified in the *id\_attribute\_select* data type. These entities have a derived attribute *id*. The corresponding identifier value is provided by the *get\_id\_value* function. A constraint ensures that there is at most one instance of *id\_attribute* assigned to an instance of an entity in the *id\_attribute\_select* type.
+The assignment of an identifier corresponds to the *id_attribute* entity data type. The entities to which an identifier may be assigned are specified in the *id_attribute_select* data type. These entities have a derived attribute *id*. The corresponding identifier value is provided by the *get_id_value* function. A constraint ensures that there is at most one instance of *id_attribute* assigned to an instance of an entity in the *id_attribute_select* type.
 
-The assignment of a name corresponds to the *name\_attribute* entity data type. The entities to which a name may be assigned are specified in the *name\_attribute\_select* data type. These entities have a derived attribute name. The corresponding label value is provided by the *get\_name\_value* function. A constraint ensures that there is at most one instance of *name\_attribute* assigned to an instance of an entity in the *name\_attribute\_select* type.
+The assignment of a name corresponds to the *name_attribute* entity data type. The entities to which a name may be assigned are specified in the *name_attribute_select* data type. These entities have a derived attribute name. The corresponding label value is provided by the *get_name_value* function. A constraint ensures that there is at most one instance of *name_attribute* assigned to an instance of an entity in the *name_attribute_select* type.
 
-The assignment of a descriptive text corresponds to the *description\_attribute* entity data type. The entities to which a description may be assigned are specified in the *description\_attribute\_select* data type. These entities have a derived attribute description. The corresponding text value is provided by the *get\_description\_value* function. A constraint ensures that there is at most one instance of *description\_attribute* assigned to an instance of an entity in the *description\_attribute\_select* type.
+The assignment of a descriptive text corresponds to the *description_attribute* entity data type. The entities to which a description may be assigned are specified in the *description_attribute_select* data type. These entities have a derived attribute description. The corresponding text value is provided by the *get_description_value* function. A constraint ensures that there is at most one instance of *description_attribute* assigned to an instance of an entity in the *description_attribute_select* type.
 
-The assignment of a role corresponds to the *role\_association* entity data type. The entities to which a role may be assigned are specified in the *role\_select* data type. These entities have a derived attribute role. The corresponding *object\_role* is provided by the *get\_role* function. A constraint ensures that there is at most one instance of *role\_association* assigned to an instance of an entity in the *role\_select* type.
+The assignment of a role corresponds to the *role_association* entity data type. The entities to which a role may be assigned are specified in the *role_select* data type. These entities have a derived attribute role. The corresponding *object_role* is provided by the *get_role* function. A constraint ensures that there is at most one instance of *role_association* assigned to an instance of an entity in the *role_select* type.
 
 expg_image:basic_attribute_schemaexpg1.xml[]
 
@@ -202,31 +202,31 @@ expg_image:basic_attribute_schemaexpg5.xml[]
 *)
 
 (*"basic_attribute_schema.description_attribute_select"
-A *description\_attribute\_select* specifies those objects that may be assigned a descriptive text.
+A *description_attribute_select* specifies those objects that may be assigned a descriptive text.
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_select"
-A *generic\_attribute\_list\_select* specifies those objects that may be assigned a generic attribute list.
+A *generic_attribute_list_select* specifies those objects that may be assigned a generic attribute list.
 *)
 
 (*"basic_attribute_schema.generic_attribute_select"
-A *generic\_attribute\_select* specifies those objects that may be assigned a generic attribute.
+A *generic_attribute_select* specifies those objects that may be assigned a generic attribute.
 *)
 
 (*"basic_attribute_schema.id_attribute_select"
-An *id\_attribute\_select* specifies those objects that may be assigned an identifier.
+An *id_attribute_select* specifies those objects that may be assigned an identifier.
 *)
 
 (*"basic_attribute_schema.name_attribute_select"
-A *name\_attribute\_select* specifies those objects that may be assigned a name.
+A *name_attribute_select* specifies those objects that may be assigned a name.
 *)
 
 (*"basic_attribute_schema.role_select"
-A *role\_select* specifies those objects that may be assigned a role.
+A *role_select* specifies those objects that may be assigned a role.
 *)
 
 (*"basic_attribute_schema.aggregate_id_attribute"
-An *aggregate\_id\_attribute* is used for the case where there is more than one product data element for a specific identifier. 
+An *aggregate_id_attribute* is used for the case where there is more than one product data element for a specific identifier. 
 
 [NOTE]
 --
@@ -235,11 +235,11 @@ This entity provides the capability to add an aggregate id attribute to product 
 *)
 
 (*"basic_attribute_schema.aggregate_id_attribute.attribute_value"
-the <<express-schema:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *identified\_item*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *identified_item*.
 
 [NOTE]
 --
-The context in which *attribute\_value* is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.
+The context in which *attribute_value* is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.
 --
 *)
 
@@ -248,7 +248,7 @@ the collection of items that are identified.
 *)
 
 (*"basic_attribute_schema.description_attribute"
-A *description\_attribute* is the assignment of a descriptive text string to product data. 
+A *description_attribute* is the assignment of a descriptive text string to product data. 
 
 [NOTE]
 --
@@ -257,7 +257,7 @@ This entity provides the capability to add a description attribute to product da
 *)
 
 (*"basic_attribute_schema.description_attribute.attribute_value"
-the <<express-schema:support_resource_schema:support_resource_schema.text,text>> that characterizes the *described\_item*.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *described_item*.
 *)
 
 (*"basic_attribute_schema.description_attribute.described_item"
@@ -265,7 +265,7 @@ the item that is described.
 *)
 
 (*"basic_attribute_schema.generic_attribute"
-A *generic\_attribute* is the declaration of a named attribute as a text string to enable it to be associated with product data. This capability shall not be used to replace more specific assignment capabilities if both are available to a specified target. 
+A *generic_attribute* is the declaration of a named attribute as a text string to enable it to be associated with product data. This capability shall not be used to replace more specific assignment capabilities if both are available to a specified target. 
 
 [NOTE]
 --
@@ -274,20 +274,20 @@ This entity provides the capability to define a generic attribute associated wit
 
 [example]
 ====
-A person entity data type instance is included in both <<express-schema:basic_attribute_schema:basic_attribute_schema.generic_attribute_select,generic_attribute_select>> and <<express-schema:basic_attribute_schema:basic_attribute_schema.name_attribute_select,name_attribute_select>>. The name attribute of person is provided for the name value.
+A person entity data type instance is included in both <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute_select, generic_attribute_select>> and <<express:basic_attribute_schema:basic_attribute_schema.name_attribute_select, name_attribute_select>>. The name attribute of person is provided for the name value.
 ====
 *)
 
 (*"basic_attribute_schema.generic_attribute.attribute_name"
-the <<express-schema:support_resource_schema:support_resource_schema.label,label>> used to name the *generic\_attribute*.
+the <<express:support_resource_schema:support_resource_schema.label, label>> used to name the *generic_attribute*.
 *)
 
 (*"basic_attribute_schema.generic_attribute.attribute_value"
-the <<express-schema:support_resource_schema:support_resource_schema.text,text>> that characterizes the *generic\_attribute*.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *generic_attribute*.
 *)
 
 (*"basic_attribute_schema.generic_attribute_assignment"
-A *generic\_attribute\_assignment* is the assignment of a generic attribute to element of product data. 
+A *generic_attribute_assignment* is the assignment of a generic attribute to element of product data. 
 
 [NOTE]
 --
@@ -296,7 +296,7 @@ This entity provides the capability to add a generic attribute to product data u
 *)
 
 (*"basic_attribute_schema.generic_attribute_assignment.attribute"
-the <<express-schema:basic_attribute_schema:basic_attribute_schema.generic_attribute,generic_attribute>> to be associated with the product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute, generic_attribute>> to be associated with the product data.
 *)
 
 (*"basic_attribute_schema.generic_attribute_assignment.item_with_attribute"
@@ -304,7 +304,7 @@ the item to which the attribute is assigned.
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment"
-A *generic\_attribute\_list\_assignment* is the assignment of a named list of generic attributes to element of product data. 
+A *generic_attribute_list_assignment* is the assignment of a named list of generic attributes to element of product data. 
 
 [NOTE]
 --
@@ -313,11 +313,11 @@ This entity data type provides a capability to add a named list of generic attri
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment.attribute_name"
-the <<express-schema:support_resource_schema:support_resource_schema.label,label>> used to name the list of generic attributes.
+the <<express:support_resource_schema:support_resource_schema.label, label>> used to name the list of generic attributes.
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment.attributes"
-the list of <<express-schema:basic_attribute_schema:basic_attribute_schema.generic_attribute,generic_attribute>>s that are assigned to the element of product data.
+the list of <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute, generic_attribute>>s that are assigned to the element of product data.
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment.item_with_attribute"
@@ -325,7 +325,7 @@ the item to which the attributes are assigned.
 *)
 
 (*"basic_attribute_schema.id_attribute"
-An *id\_attribute* is the assignment of an identifier to product data. 
+An *id_attribute* is the assignment of an identifier to product data. 
 
 [NOTE]
 --
@@ -334,11 +334,11 @@ This entity provides the capability to add an id attribute to product data using
 *)
 
 (*"basic_attribute_schema.id_attribute.attribute_value"
-the <<express-schema:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *identified\_item*.
+the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *identified_item*.
 
 [NOTE]
 --
-The context in which *attribute\_value* is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.
+The context in which *attribute_value* is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.
 --
 *)
 
@@ -347,7 +347,7 @@ the item that is identified.
 *)
 
 (*"basic_attribute_schema.name_attribute"
-A *name\_attribute* is the assignment of a label by which the product data is known. 
+A *name_attribute* is the assignment of a label by which the product data is known. 
 
 [NOTE]
 --
@@ -356,7 +356,7 @@ This entity provides the capability to add a name attribute to product data usin
 *)
 
 (*"basic_attribute_schema.name_attribute.attribute_value"
-the <<express-schema:support_resource_schema:support_resource_schema.label,label>> by which the *named\_item* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *named_item* is known.
 *)
 
 (*"basic_attribute_schema.name_attribute.named_item"
@@ -364,7 +364,7 @@ the item to which the name is applied.
 *)
 
 (*"basic_attribute_schema.object_role"
-An *object\_role* is a specification of a role for the association of management type data with other aspects of product data and a description of that role. 
+An *object_role* is a specification of a role for the association of management type data with other aspects of product data and a description of that role. 
 
 [NOTE]
 --
@@ -373,19 +373,19 @@ This entity provides the capability to add a role attribute to an association of
 *)
 
 (*"basic_attribute_schema.object_role.description"
-the <<express-schema:support_resource_schema:support_resource_schema.text,text>> that characterizes the *object\_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *object_role*. The value of the attribute need not be specified.
 *)
 
 (*"basic_attribute_schema.object_role.name"
-the <<express-schema:support_resource_schema:support_resource_schema.label,label>> by which the *object\_role* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *object_role* is known.
 *)
 
 (*"basic_attribute_schema.role_association"
-A *role\_association* is the assignment of an <<express-schema:basic_attribute_schema:basic_attribute_schema.object_role,object_role>> to an association of management type data with other aspects of product data. 
+A *role_association* is the assignment of an <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> to an association of management type data with other aspects of product data. 
 
 [NOTE]
 --
-This entity data type provides a capability to add a role attribute to certain entity data types that specify associations between product data and administrative or management data. Such entity data types are specified in the <<express-schema:management_resources_schema]:management_resources_schema].
+This entity data type provides a capability to add a role attribute to certain entity data types that specify associations between product data and administrative or management data. Such entity data types are specified in the <<express:management_resources_schema:management_resources_schema, management_resources_schema>>.
 --
 *)
 
@@ -394,55 +394,55 @@ the item to which a role is assigned.
 *)
 
 (*"basic_attribute_schema.role_association.role"
-the express_ref:[basic_attribute_schema.object_role,object_role>> that specifies the purpose of the association of the *role\_association* with product data.
+the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> that specifies the purpose of the association of the *role_association* with product data.
 *)
 
 (*"basic_attribute_schema.get_description_value"
-The *get\_description\_value* function accepts an object to which a descriptive text string may be assigned and returns this description if present. 
+The *get_description_value* function accepts an object to which a descriptive text string may be assigned and returns this description if present. 
 
-If a <<express-schema:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>> references the object, the function will return the value of the <<express-schema:basic_attribute_schema:basic_attribute_schema.description_attribute.attribute_value,attribute_value>> attribute of this <<express-schema:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>. Otherwise, the indeterminate value will be returned.
+If a <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.attribute_value, attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.description_attribute, description_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_description_value.obj"
-(input) the object for which a <<express-schema:support_resource_schema:support_resource_schema.text,text>> is determined. This is an input to the function.
+(input) the object for which a <<express:support_resource_schema:support_resource_schema.text, text>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_aggregate_id_value"
-The *get\_aggregate\_id\_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
+The *get_aggregate_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
 
-If an <<express-schema:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>> references the object, the function will return the value of the <<express-schema:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute.attribute_value,attribute_value>> attribute of this <<express-schema:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>>. Otherwise, the indeterminate value will be returned.
+If an <<express:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute, aggregate_id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute.attribute_value, attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute, aggregate_id_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_aggregate_id_value.obj"
-(input) the object for which an <<express-schema:support_resource_schema:support_resource_schema.identifier,identifier>> is determined. This is an input to the function.
+(input) the object for which an <<express:support_resource_schema:support_resource_schema.identifier, identifier>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_id_value"
-The *get\_id\_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
+The *get_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
 
-If an <<express-schema:basic_attribute_schema:basic_attribute_schema.id_attribute,id_attribute>> references the object, the function will return the value of the <<express-schema:basic_attribute_schema:basic_attribute_schema.id_attribute.attribute_value,attribute_value>> attribute of this <<express-schema:basic_attribute_schema:basic_attribute_schema.id_attribute,id_attribute>>. Otherwise, the indeterminate value will be returned.
+If an <<express:basic_attribute_schema:basic_attribute_schema.id_attribute, id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.id_attribute.attribute_value, attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.id_attribute, id_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_id_value.obj"
-(input) the object for which an <<express-schema:support_resource_schema:support_resource_schema.identifier,identifier>> is determined. This is an input to the function.
+(input) the object for which an <<express:support_resource_schema:support_resource_schema.identifier, identifier>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_name_value"
-The *get\_name\_value* function accepts an object to which a label may be assigned and returns this label if present. 
+The *get_name_value* function accepts an object to which a label may be assigned and returns this label if present. 
 
-If a <<express-schema:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>> references the object, the function will return the value of the <<express-schema:basic_attribute_schema:basic_attribute_schema.name_attribute.attribute_value,attribute_value>> attribute of this <<express-schema:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>>. Otherwise, the indeterminate value will be returned.
+If a <<express:basic_attribute_schema:basic_attribute_schema.name_attribute, name_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.name_attribute.attribute_value, attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.name_attribute, name_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_name_value.obj"
-the object for which a <<express-schema:support_resource_schema:support_resource_schema.label,label>> is determined. This is an input to the function.
+the object for which a <<express:support_resource_schema:support_resource_schema.label, label>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_role"
-The *get\_role* function accepts an object to which a role may be assigned and returns this role if present. 
+The *get_role* function accepts an object to which a role may be assigned and returns this role if present. 
 
-If a <<express-schema:basic_attribute_schema:basic_attribute_schema.role_association,role_association>> references the object, the function will return the <<express-schema:basic_attribute_schema:basic_attribute_schema.object_role,object_role>> of the <<express-schema:basic_attribute_schema:basic_attribute_schema.role_association.role,role>> attribute of this <<express-schema:basic_attribute_schema:basic_attribute_schema.role_association,role_association>>. Otherwise, the indeterminate value will be returned.
+If a <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>> references the object, the function will return the <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> of the <<express:basic_attribute_schema:basic_attribute_schema.role_association.role, role>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.role_association, role_association>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_role.obj"
-(input) the object for which an <<express-schema:basic_attribute_schema:basic_attribute_schema.object_role,object_role>> is determined. This is an input to the function.
+(input) the object for which an <<express:basic_attribute_schema:basic_attribute_schema.object_role, object_role>> is determined. This is an input to the function.
 *)

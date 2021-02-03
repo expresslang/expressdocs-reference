@@ -1202,7 +1202,7 @@ END_SCHEMA;
 (*"measure_schema"
 == Introduction
 
-The subject of the *measure\_schema* is the description of physical quantities. 
+The subject of the *measure_schema* is the description of physical quantities. 
 
 [example]
 ====
@@ -1235,136 +1235,136 @@ expg_image:measure_schemaexpg5.xml[]
 *)
 
 (*"measure_schema.absorbed_dose_measure"
-An *absorbed\_dose\_measure* is the value of an absorbed dose of radiation.
+An *absorbed_dose_measure* is the value of an absorbed dose of radiation.
 *)
 
 (*"measure_schema.acceleration_measure"
-An *acceleration\_measure* is the value of the rate of change of velocity.
+An *acceleration_measure* is the value of the rate of change of velocity.
 *)
 
 (*"measure_schema.amount_of_substance_measure"
-An *amount\_of\_substance\_measure* is the value for the quantity of a substance when compared with the number of atoms in 0.012 kilogram of carbon 12.
+An *amount_of_substance_measure* is the value for the quantity of a substance when compared with the number of atoms in 0.012 kilogram of carbon 12.
 *)
 
 (*"measure_schema.area_measure"
-An *area\_measure* is the value of the extent of a surface.
+An *area_measure* is the value of the extent of a surface.
 *)
 
 (*"measure_schema.capacitance_measure"
-A *capacitance\_measure* is the value of capacitance.
+A *capacitance_measure* is the value of capacitance.
 *)
 
 (*"measure_schema.celsius_temperature_measure"
-A *celsius\_temperature\_measure* is the value for the degree of heat of a body.
+A *celsius_temperature_measure* is the value for the degree of heat of a body.
 *)
 
 (*"measure_schema.conductance_measure"
-A *conductance\_measure* is the value of an electrical conductance.
+A *conductance_measure* is the value of an electrical conductance.
 *)
 
 (*"measure_schema.context_dependent_measure"
-A *context\_dependent\_measure* is the value of a physical quantity that may be interpreted based on the context in which it is used.
+A *context_dependent_measure* is the value of a physical quantity that may be interpreted based on the context in which it is used.
 *)
 
 (*"measure_schema.count_measure"
-A *count\_measure* is the value of a count.
+A *count_measure* is the value of a count.
 *)
 
 (*"measure_schema.descriptive_measure"
-A *descriptive\_measure* is a textual value of a physical quantity.
+A *descriptive_measure* is a textual value of a physical quantity.
 *)
 
 (*"measure_schema.dose_equivalent_measure"
-A *dose\_equivalent\_measure* is the value of the radiation dose equivalent.
+A *dose_equivalent_measure* is the value of the radiation dose equivalent.
 *)
 
 (*"measure_schema.electric_charge_measure"
-An *electric\_charge\_measure* is the value of an electrical charge.
+An *electric_charge_measure* is the value of an electrical charge.
 *)
 
 (*"measure_schema.electric_current_measure"
-An *electric\_current\_measure* is the value for the movement of electrically charged particles.
+An *electric_current_measure* is the value for the movement of electrically charged particles.
 *)
 
 (*"measure_schema.electric_potential_measure"
-An *electric\_potential\_measure* is the value of an electrical potential.
+An *electric_potential_measure* is the value of an electrical potential.
 *)
 
 (*"measure_schema.energy_measure"
-An *energy\_measure* is the value of energy, or work done, in a system.
+An *energy_measure* is the value of energy, or work done, in a system.
 *)
 
 (*"measure_schema.force_measure"
-A *force\_measure* is the value of a force.
+A *force_measure* is the value of a force.
 *)
 
 (*"measure_schema.frequency_measure"
-A *frequency\_measure* is the value of a frequency.
+A *frequency_measure* is the value of a frequency.
 *)
 
 (*"measure_schema.illuminance_measure"
-An *illuminance\_measure* is the value of illuminance.
+An *illuminance_measure* is the value of illuminance.
 *)
 
 (*"measure_schema.inductance_measure"
-An *inductance\_measure* is the value of inductance.
+An *inductance_measure* is the value of inductance.
 *)
 
 (*"measure_schema.length_measure"
-A *length\_measure* is the value of a distance.
+A *length_measure* is the value of a distance.
 *)
 
 (*"measure_schema.luminous_flux_measure"
-A *luminous\_flux\_measure* is the value of luminous flux.
+A *luminous_flux_measure* is the value of luminous flux.
 *)
 
 (*"measure_schema.luminous_intensity_measure"
-A *luminous\_intensity\_measure* is the value for the brightness of a body.
+A *luminous_intensity_measure* is the value for the brightness of a body.
 *)
 
 (*"measure_schema.magnetic_flux_density_measure"
-A *magnetic\_flux\_density\_measure* is the value of magnetic flux density.
+A *magnetic_flux_density_measure* is the value of magnetic flux density.
 *)
 
 (*"measure_schema.magnetic_flux_measure"
-A *magnetic\_flux\_measure* is the value of magnetic flux.
+A *magnetic_flux_measure* is the value of magnetic flux.
 *)
 
 (*"measure_schema.mass_measure"
-A *mass\_measure* is the value of the amount of matter that a body contains.
+A *mass_measure* is the value of the amount of matter that a body contains.
 *)
 
 (*"measure_schema.measure_value"
-A *measure\_value* is a value as defined in ISO 31-0.
+A *measure_value* is a value as defined in ISO 31-0.
 *)
 
 (*"measure_schema.non_negative_length_measure"
-A *non\_negative\_length\_measure* type is a express_ref:[measure_schema.length_measure] whose value is greater than or equal to zero.
+A *non_negative_length_measure* type is a <<express:measure_schema:measure_schema.length_measure, length_measure>> whose value is greater than or equal to zero.
 *)
 
 (*"measure_schema.non_negative_length_measure.wr:WR1"
-A *non\_negative\_length\_measure* shall be positive or zero.
+A *non_negative_length_measure* shall be positive or zero.
 *)
 
 (*"measure_schema.numeric_measure"
-A *numeric\_measure* is the numeric value of a physical quantity. 
+A *numeric_measure* is the numeric value of a physical quantity. 
 
 [NOTE]
 --
-In order to define measure quantities that are not included as specific types in this standard a *numeric\_measure* may be used as the express_ref:[measure_schema.measure_with_unit.value_component] of a express_ref:[measure_schema.measure_with_unit], the corresponding express_ref:[measure_schema.measure_with_unit.unit_component] being an express_ref:[measure_schema.si_unit] or a express_ref:[measure_schema.derived_unit].
+In order to define measure quantities that are not included as specific types in this standard a *numeric_measure* may be used as the <<express:measure_schema:measure_schema.measure_with_unit.value_component, value_component>> of a <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>>, the corresponding <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> being an <<express:measure_schema:measure_schema.si_unit, si_unit>> or a <<express:measure_schema:measure_schema.derived_unit, derived_unit>>.
 --
 *)
 
 (*"measure_schema.parameter_value"
-A *parameter\_value* is the value that specifies the amount of a parameter in a parameter space.
+A *parameter_value* is the value that specifies the amount of a parameter in a parameter space.
 *)
 
 (*"measure_schema.plane_angle_measure"
-A *plane\_angle\_measure* is the value of an angle in a plane.
+A *plane_angle_measure* is the value of an angle in a plane.
 *)
 
 (*"measure_schema.positive_length_measure"
-A *positive\_length\_measure* is a express_ref:[measure_schema.length_measure] that is greater than zero.
+A *positive_length_measure* is a <<express:measure_schema:measure_schema.length_measure, length_measure>> that is greater than zero.
 *)
 
 (*"measure_schema.positive_length_measure.wr:WR1"
@@ -1372,7 +1372,7 @@ The value shall be positive.
 *)
 
 (*"measure_schema.positive_plane_angle_measure"
-A *positive\_plane\_angle\_measure* is a express_ref:[measure_schema.plane_angle_measure] that is greater than zero.
+A *positive_plane_angle_measure* is a <<express:measure_schema:measure_schema.plane_angle_measure, plane_angle_measure>> that is greater than zero.
 *)
 
 (*"measure_schema.positive_plane_angle_measure.wr:WR1"
@@ -1380,7 +1380,7 @@ The value shall be positive.
 *)
 
 (*"measure_schema.positive_ratio_measure"
-A *positive\_ratio\_measure* is a express_ref:[measure_schema.ratio_measure] that is greater than zero.
+A *positive_ratio_measure* is a <<express:measure_schema:measure_schema.ratio_measure, ratio_measure>> that is greater than zero.
 *)
 
 (*"measure_schema.positive_ratio_measure.wr:WR1"
@@ -1388,27 +1388,27 @@ The value shall be positive.
 *)
 
 (*"measure_schema.power_measure"
-A *power\_measure* is the value of power, or the rate of doing work.
+A *power_measure* is the value of power, or the rate of doing work.
 *)
 
 (*"measure_schema.pressure_measure"
-A *pressure\_measure* is the value of force per unit area.
+A *pressure_measure* is the value of force per unit area.
 *)
 
 (*"measure_schema.radioactivity_measure"
-A *radioactivity\_measure* is the value of the radioactive disintegration.
+A *radioactivity_measure* is the value of the radioactive disintegration.
 *)
 
 (*"measure_schema.ratio_measure"
-A *ratio\_measure* is the value of the relation between two physical quantities that are of the same kind.
+A *ratio_measure* is the value of the relation between two physical quantities that are of the same kind.
 *)
 
 (*"measure_schema.resistance_measure"
-A *resistance\_measure* is the value of electrical resistance.
+A *resistance_measure* is the value of electrical resistance.
 *)
 
 (*"measure_schema.si_prefix"
-An *si\_prefix* is the name of a prefix that may be associated with an express_ref:[measure_schema.si_unit]. The definitions of SI prefixes are specified in ISO 1000.
+An *si_prefix* is the name of a prefix that may be associated with an <<express:measure_schema:measure_schema.si_unit, si_unit>>. The definitions of SI prefixes are specified in ISO 1000.
 *)
 
 (*"measure_schema.si_prefix.exa"
@@ -1476,7 +1476,7 @@ see ISO 1000.
 *)
 
 (*"measure_schema.si_unit_name"
-An *si\_unit\_name* is the name of an SI unit. 
+An *si_unit_name* is the name of an SI unit. 
 
 [NOTE]
 --
@@ -1602,15 +1602,15 @@ see ISO 1000.
 *)
 
 (*"measure_schema.solid_angle_measure"
-A *solid\_angle\_measure* is the value of a solid angle.
+A *solid_angle_measure* is the value of a solid angle.
 *)
 
 (*"measure_schema.thermodynamic_temperature_measure"
-A *thermodynamic\_temperature\_measure* is the value for the degree of heat of a body.
+A *thermodynamic_temperature_measure* is the value for the degree of heat of a body.
 *)
 
 (*"measure_schema.time_measure"
-A *time\_measure* is the value of the duration of a period.
+A *time_measure* is the value of the duration of a period.
 *)
 
 (*"measure_schema.unit"
@@ -1623,23 +1623,23 @@ A *unit* is used to express other physical quantities of the same kind.
 *)
 
 (*"measure_schema.velocity_measure"
-A *velocity\_measure* is the value of the rate of change of position.
+A *velocity_measure* is the value of the rate of change of position.
 *)
 
 (*"measure_schema.volume_measure"
-A *volume\_measure* is the value of the solid content of a body.
+A *volume_measure* is the value of the solid content of a body.
 *)
 
 (*"measure_schema.absorbed_dose_measure_with_unit"
-An *absorbed\_dose\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is an absorbed dose of radiation as defined in ISO 31.
+An *absorbed_dose_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is an absorbed dose of radiation as defined in ISO 31.
 *)
 
 (*"measure_schema.absorbed_dose_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] be of type express_ref:[measure_schema.absorbed_dose_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> be of type <<express:measure_schema:measure_schema.absorbed_dose_unit, absorbed_dose_unit>>.
 *)
 
 (*"measure_schema.absorbed_dose_unit"
-An *absorbed\_dose\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the absorbed dose is expressed.
+An *absorbed_dose_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the absorbed dose is expressed.
 *)
 
 (*"measure_schema.absorbed_dose_unit.wr:WR1"
@@ -1647,15 +1647,15 @@ The dimensional exponents shall be equal to those of the Gray as defined in ISO 
 *)
 
 (*"measure_schema.acceleration_measure_with_unit"
-An *acceleration\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is an acceleration.
+An *acceleration_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is an acceleration.
 *)
 
 (*"measure_schema.acceleration_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] be of type express_ref:[measure_schema.acceleration_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> be of type <<express:measure_schema:measure_schema.acceleration_unit, acceleration_unit>>.
 *)
 
 (*"measure_schema.acceleration_unit"
-An *acceleration\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the acceleration of an object is expressed.
+An *acceleration_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the acceleration of an object is expressed.
 *)
 
 (*"measure_schema.acceleration_unit.wr:WR1"
@@ -1663,19 +1663,18 @@ The dimensional exponent of length shall be equal to one, the dimensional expone
 *)
 
 (*"measure_schema.amount_of_substance_measure_with_unit"
-An *amount\_of\_substance\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit]. 
-// in which the physical quantity is an 
+An *amount_of_substance_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>>. // in which the physical quantity is an 
 // <express_ref linkend="measure_schema:ir_express:measure_schema.amount_of_substance"/> 
 // as defined in ISO 31.
  This entity data type shall only be used to characterize a number of particles.
 *)
 
 (*"measure_schema.amount_of_substance_measure_with_unit.wr:WR1"
-The unit shall be an express_ref:[measure_schema.amount_of_substance_unit].
+The unit shall be an <<express:measure_schema:measure_schema.amount_of_substance_unit, amount_of_substance_unit>>.
 *)
 
 (*"measure_schema.amount_of_substance_unit"
-An *amount\_of\_substance\_unit* is a type of express_ref:[measure_schema.named_unit] in which the number of elementary entities of a substance as compared to the number of atoms in 0.012 kilograms of carbon-12 is expressed. 
+An *amount_of_substance_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the number of elementary entities of a substance as compared to the number of atoms in 0.012 kilograms of carbon-12 is expressed. 
 
 [NOTE]
 --
@@ -1693,15 +1692,15 @@ The dimensional exponent of amount of substance shall be equal to one, and all t
 *)
 
 (*"measure_schema.area_measure_with_unit"
-An *area\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is an area as defined in ISO 31.
+An *area_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is an area as defined in ISO 31.
 *)
 
 (*"measure_schema.area_measure_with_unit.wr:WR1"
-The unit shall be an express_ref:[measure_schema.area_unit].
+The unit shall be an <<express:measure_schema:measure_schema.area_unit, area_unit>>.
 *)
 
 (*"measure_schema.area_unit"
-An *area\_unit* is a type of express_ref:[measure_schema.derived_unit] used to measure the extent of a surface.
+An *area_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> used to measure the extent of a surface.
 *)
 
 (*"measure_schema.area_unit.wr:WR1"
@@ -1709,15 +1708,15 @@ The dimensional exponent of length shall be equal to two and all the other dimen
 *)
 
 (*"measure_schema.capacitance_measure_with_unit"
-A *capacitance\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is an electric capacitance as defined in ISO 31.
+A *capacitance_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is an electric capacitance as defined in ISO 31.
 *)
 
 (*"measure_schema.capacitance_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] be of type express_ref:[measure_schema.capacitance_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> be of type <<express:measure_schema:measure_schema.capacitance_unit, capacitance_unit>>.
 *)
 
 (*"measure_schema.capacitance_unit"
-A *capacitance\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the capacitance is expressed.
+A *capacitance_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the capacitance is expressed.
 *)
 
 (*"measure_schema.capacitance_unit.wr:WR1"
@@ -1725,23 +1724,23 @@ The dimensional exponents shall be equal to those of the farad as defined in ISO
 *)
 
 (*"measure_schema.celsius_temperature_measure_with_unit"
-A *celsius\_temperature\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a Celsius temperature as defined in ISO 31-4.
+A *celsius_temperature_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a Celsius temperature as defined in ISO 31-4.
 *)
 
 (*"measure_schema.celsius_temperature_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.thermodynamic_temperature_unit].
+The unit shall be a <<express:measure_schema:measure_schema.thermodynamic_temperature_unit, thermodynamic_temperature_unit>>.
 *)
 
 (*"measure_schema.conductance_measure_with_unit"
-A *conductance\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a conductance as defined in ISO 31.
+A *conductance_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a conductance as defined in ISO 31.
 *)
 
 (*"measure_schema.conductance_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.conductance_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.conductance_unit, conductance_unit>>.
 *)
 
 (*"measure_schema.conductance_unit"
-A *conductance\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the electrical conductance is expressed.
+A *conductance_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the electrical conductance is expressed.
 *)
 
 (*"measure_schema.conductance_unit.wr:WR1"
@@ -1749,7 +1748,7 @@ The dimensional exponents shall be equal to those of the siemens as defined in I
 *)
 
 (*"measure_schema.context_dependent_unit"
-A *context\_dependent\_unit* is a type of express_ref:[measure_schema.named_unit] that is not related to the system of units defined in this part of ISO 10303. 
+A *context_dependent_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> that is not related to the system of units defined in this part of ISO 10303. 
 
 [example]
 ====
@@ -1758,56 +1757,56 @@ The number of parts in an assembly is a physical quantity that may be measured i
 *)
 
 (*"measure_schema.context_dependent_unit.name"
-the express_ref:[support_resource_schema.label] by which the *context\_dependent\_unit* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *context_dependent_unit* is known.
 *)
 
 (*"measure_schema.conversion_based_unit"
-A *conversion\_based\_unit* is a type of express_ref:[measure_schema.named_unit] that defines a unit on the basis of a express_ref:[measure_schema.measure_with_unit]. 
+A *conversion_based_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> that defines a unit on the basis of a <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>>. 
 
 [NOTE]
 --
-The express_ref:[measure_schema.measure_with_unit.value_component] attribute of the express_ref:[measure_schema.measure_with_unit] defines the conversion factor.
+The <<express:measure_schema:measure_schema.measure_with_unit.value_component, value_component>> attribute of the <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> defines the conversion factor.
 --
 
 [example]
 ====
-An inch is a *conversion\_based\_unit*. It is from the Imperial system, its name is "inch", and it can be related to the express_ref:[measure_schema.si_unit], millimetre, through a express_ref:[measure_schema.measure_with_unit] whose value is 25.4 millimetre. A foot is also a *conversion\_based\_unit*. It is from the Imperial system, its name is "foot", and it can be related to an express_ref:[measure_schema.si_unit], millimetre, either directly or through the unit called "inch".
+An inch is a *conversion_based_unit*. It is from the Imperial system, its name is "inch", and it can be related to the <<express:measure_schema:measure_schema.si_unit, si_unit>>, millimetre, through a <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> whose value is 25.4 millimetre. A foot is also a *conversion_based_unit*. It is from the Imperial system, its name is "foot", and it can be related to an <<express:measure_schema:measure_schema.si_unit, si_unit>>, millimetre, either directly or through the unit called "inch".
 ====
 *)
 
 (*"measure_schema.conversion_based_unit.name"
-the express_ref:[support_resource_schema.label] by which the *conversion\_based\_unit* is known.
+the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *conversion_based_unit* is known.
 *)
 
 (*"measure_schema.conversion_based_unit.conversion_factor"
-the express_ref:[measure_schema.measure_with_unit] that specifies the physical quantity from which the *conversion\_based\_unit* is derived.
+the <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> that specifies the physical quantity from which the *conversion_based_unit* is derived.
 *)
 
 (*"measure_schema.conversion_based_unit.wr:WR1"
-The dimensional exponents shall be equal to those from the express_ref:[measure_schema.conversion_based_unit.conversion_factor].
+The dimensional exponents shall be equal to those from the <<express:measure_schema:measure_schema.conversion_based_unit.conversion_factor, conversion_factor>>.
 *)
 
 (*"measure_schema.derived_unit"
-A *derived\_unit* is an expression of units. 
+A *derived_unit* is an expression of units. 
 
 [example]
 ====
-Newtons per square millimetre is a *derived\_unit*.
+Newtons per square millimetre is a *derived_unit*.
 ====
 
- A *derived\_unit* may be either an express_ref:[measure_schema.absorbed_dose_unit] or an express_ref:[measure_schema.acceleration_unit], or a express_ref:[measure_schema.radioactivity_unit], or an express_ref:[measure_schema.area_unit], or a express_ref:[measure_schema.capacitance_unit], or a express_ref:[measure_schema.dose_equivalent_unit], or an express_ref:[measure_schema.electric_charge_unit], or a express_ref:[measure_schema.conductance_unit], or an express_ref:[measure_schema.electric_potential_unit], or an express_ref:[measure_schema.energy_unit], or a express_ref:[measure_schema.magnetic_flux_density_unit] or a express_ref:[measure_schema.force_unit], or a express_ref:[measure_schema.frequency_unit], or an express_ref:[measure_schema.illuminance_unit], or an express_ref:[measure_schema.inductance_unit], or a express_ref:[measure_schema.magnetic_flux_unit], or a express_ref:[measure_schema.power_unit], or a express_ref:[measure_schema.pressure_unit], or a express_ref:[measure_schema.resistance_unit], or a express_ref:[measure_schema.velocity_unit], or a express_ref:[measure_schema.volume_unit].
+ A *derived_unit* may be either an <<express:measure_schema:measure_schema.absorbed_dose_unit, absorbed_dose_unit>> or an <<express:measure_schema:measure_schema.acceleration_unit, acceleration_unit>>, or a <<express:measure_schema:measure_schema.radioactivity_unit, radioactivity_unit>>, or an <<express:measure_schema:measure_schema.area_unit, area_unit>>, or a <<express:measure_schema:measure_schema.capacitance_unit, capacitance_unit>>, or a <<express:measure_schema:measure_schema.dose_equivalent_unit, dose_equivalent_unit>>, or an <<express:measure_schema:measure_schema.electric_charge_unit, electric_charge_unit>>, or a <<express:measure_schema:measure_schema.conductance_unit, conductance_unit>>, or an <<express:measure_schema:measure_schema.electric_potential_unit, electric_potential_unit>>, or an <<express:measure_schema:measure_schema.energy_unit, energy_unit>>, or a <<express:measure_schema:measure_schema.magnetic_flux_density_unit, magnetic_flux_density_unit>> or a <<express:measure_schema:measure_schema.force_unit, force_unit>>, or a <<express:measure_schema:measure_schema.frequency_unit, frequency_unit>>, or an <<express:measure_schema:measure_schema.illuminance_unit, illuminance_unit>>, or an <<express:measure_schema:measure_schema.inductance_unit, inductance_unit>>, or a <<express:measure_schema:measure_schema.magnetic_flux_unit, magnetic_flux_unit>>, or a <<express:measure_schema:measure_schema.power_unit, power_unit>>, or a <<express:measure_schema:measure_schema.pressure_unit, pressure_unit>>, or a <<express:measure_schema:measure_schema.resistance_unit, resistance_unit>>, or a <<express:measure_schema:measure_schema.velocity_unit, velocity_unit>>, or a <<express:measure_schema:measure_schema.volume_unit, volume_unit>>.
 *)
 
 (*"measure_schema.derived_unit.elements"
-the express_ref:[measure_schema.derived_unit_element]s and their exponents that define the *derived\_unit*.
+the <<express:measure_schema:measure_schema.derived_unit_element, derived_unit_element>>s and their exponents that define the *derived_unit*.
 *)
 
 (*"measure_schema.derived_unit.name"
-the label by which the *derived\_unit* is known.
+the label by which the *derived_unit* is known.
 
 [NOTE]
 --
-This attribute is an upwardly compatible addition to *derived\_unit* as specified in ISO 10303-41:1994.
+This attribute is an upwardly compatible addition to *derived_unit* as specified in ISO 10303-41:1994.
 --
 *)
 
@@ -1816,25 +1815,25 @@ There shall be either more than one member in the elements set or the value of t
 *)
 
 (*"measure_schema.derived_unit.wr:WR2"
-Each *derived\_unit* shall be the express_ref:[basic_attribute_schema.name_attribute.named_item] in at most one express_ref:[basic_attribute_schema.name_attribute].
+Each *derived_unit* shall be the <<express:basic_attribute_schema:basic_attribute_schema.name_attribute.named_item, named_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.name_attribute, name_attribute>>.
 
 [NOTE]
 --
-The express_ref:[basic_attribute_schema.name_attribute] data type is defined in express_ref:[basic_attribute_schema] of this part of ISO 10303.
+The <<express:basic_attribute_schema:basic_attribute_schema.name_attribute, name_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the express_ref:[basic_attribute_schema] is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema, basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"measure_schema.derived_unit_element"
-A *derived\_unit\_element* is the association of a express_ref:[measure_schema.named_unit] with an exponent. 
+A *derived_unit_element* is the association of a <<express:measure_schema:measure_schema.named_unit, named_unit>> with an exponent. 
 
 [NOTE]
 --
-This entity is used in this part of ISO 10303 to represent an element of the dimensional expression of a express_ref:[measure_schema.derived_unit].
+This entity is used in this part of ISO 10303 to represent an element of the dimensional expression of a <<express:measure_schema:measure_schema.derived_unit, derived_unit>>.
 --
 
 [example]
@@ -1844,7 +1843,7 @@ Newtons per square millimetre is a derived unit. It has two elements, Newton who
 *)
 
 (*"measure_schema.derived_unit_element.unit"
-the express_ref:[measure_schema.named_unit] that specifies the mathematical factor of the element.
+the <<express:measure_schema:measure_schema.named_unit, named_unit>> that specifies the mathematical factor of the element.
 *)
 
 (*"measure_schema.derived_unit_element.exponent"
@@ -1852,7 +1851,7 @@ the power that is applied to the unit attribute.
 *)
 
 (*"measure_schema.dimensional_exponents"
-A *dimensional\_exponents* is a definition of the powers of the dimensions of the seven base quantities. 
+A *dimensional_exponents* is a definition of the powers of the dimensions of the seven base quantities. 
 
 [NOTE]
 --
@@ -1909,15 +1908,15 @@ the power of the luminous intensity base quantity.
 *)
 
 (*"measure_schema.dose_equivalent_measure_with_unit"
-A *dose\_equivalent\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a radiation dose equivalent as defined in ISO 31.
+A *dose_equivalent_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a radiation dose equivalent as defined in ISO 31.
 *)
 
 (*"measure_schema.dose_equivalent_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.dose_equivalent_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.dose_equivalent_unit, dose_equivalent_unit>>.
 *)
 
 (*"measure_schema.dose_equivalent_unit"
-A *dose\_equivalent\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the radiation dose equivalent is expressed.
+A *dose_equivalent_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the radiation dose equivalent is expressed.
 *)
 
 (*"measure_schema.dose_equivalent_unit.wr:WR1"
@@ -1925,15 +1924,15 @@ The dimensional exponents shall be equal to those of the sievert as defined in I
 *)
 
 (*"measure_schema.electric_charge_measure_with_unit"
-An *electric\_charge\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is an electric charge as defined in ISO 31.
+An *electric_charge_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is an electric charge as defined in ISO 31.
 *)
 
 (*"measure_schema.electric_charge_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.electric_charge_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.electric_charge_unit, electric_charge_unit>>.
 *)
 
 (*"measure_schema.electric_charge_unit"
-An *electric\_charge\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the electric charge is expressed.
+An *electric_charge_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the electric charge is expressed.
 *)
 
 (*"measure_schema.electric_charge_unit.wr:WR1"
@@ -1941,15 +1940,15 @@ The dimensional exponents shall be equal to those of the coulomb as defined in I
 *)
 
 (*"measure_schema.electric_current_measure_with_unit"
-An *electric\_current\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is an electric current as defined in ISO 31.
+An *electric_current_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is an electric current as defined in ISO 31.
 *)
 
 (*"measure_schema.electric_current_measure_with_unit.wr:WR1"
-The unit shall be an express_ref:[measure_schema.electric_current_unit].
+The unit shall be an <<express:measure_schema:measure_schema.electric_current_unit, electric_current_unit>>.
 *)
 
 (*"measure_schema.electric_current_unit"
-An *electric\_current\_unit* is a type of express_ref:[measure_schema.named_unit] in which the movement of electrically charged particles is expressed. 
+An *electric_current_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the movement of electrically charged particles is expressed. 
 
 [NOTE]
 --
@@ -1962,15 +1961,15 @@ The dimensional exponent of electric current shall be equal to one, and all the 
 *)
 
 (*"measure_schema.electric_potential_measure_with_unit"
-An *electric\_potential\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is an electric potential as defined in ISO 31.
+An *electric_potential_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is an electric potential as defined in ISO 31.
 *)
 
 (*"measure_schema.electric_potential_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.electric_potential_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.electric_potential_unit, electric_potential_unit>>.
 *)
 
 (*"measure_schema.electric_potential_unit"
-An *electric\_potential\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the electric potential is expressed.
+An *electric_potential_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the electric potential is expressed.
 *)
 
 (*"measure_schema.electric_potential_unit.wr:WR1"
@@ -1978,15 +1977,15 @@ The dimensional exponents shall be equal to those of the volt as defined in ISO 
 *)
 
 (*"measure_schema.energy_measure_with_unit"
-An *energy\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is energy as defined in ISO 31.
+An *energy_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is energy as defined in ISO 31.
 *)
 
 (*"measure_schema.energy_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.energy_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.energy_unit, energy_unit>>.
 *)
 
 (*"measure_schema.energy_unit"
-An *energy\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the energy is expressed.
+An *energy_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the energy is expressed.
 *)
 
 (*"measure_schema.energy_unit.wr:WR1"
@@ -1994,15 +1993,15 @@ The dimensional exponents shall be equal to those of the joule as defined in ISO
 *)
 
 (*"measure_schema.force_measure_with_unit"
-A *force\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is force as defined in ISO 31.
+A *force_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is force as defined in ISO 31.
 *)
 
 (*"measure_schema.force_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.force_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.force_unit, force_unit>>.
 *)
 
 (*"measure_schema.force_unit"
-A *force\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the force is expressed.
+A *force_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the force is expressed.
 *)
 
 (*"measure_schema.force_unit.wr:WR1"
@@ -2010,15 +2009,15 @@ The dimensional exponents shall be equal to those of the newton as defined in IS
 *)
 
 (*"measure_schema.frequency_measure_with_unit"
-A *frequency\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is a frequency as defined in ISO 31.
+A *frequency_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is a frequency as defined in ISO 31.
 *)
 
 (*"measure_schema.frequency_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.frequency_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.frequency_unit, frequency_unit>>.
 *)
 
 (*"measure_schema.frequency_unit"
-A *frequency\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the frequency is expressed.
+A *frequency_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the frequency is expressed.
 *)
 
 (*"measure_schema.frequency_unit.wr:WR1"
@@ -2026,7 +2025,7 @@ The dimensional exponents shall be equal to those of the hertz as defined in ISO
 *)
 
 (*"measure_schema.global_unit_assigned_context"
-A *global\_unit\_assigned\_context* is a type of express_ref:[representation_schema.representation_context] in which the units apply to all express_ref:[measure_schema.measure_value]s of the applicable kind. 
+A *global_unit_assigned_context* is a type of <<express:representation_schema:representation_schema.representation_context, representation_context>> in which the units apply to all <<express:measure_schema:measure_schema.measure_value, measure_value>>s of the applicable kind. 
 
 [NOTE]
 --
@@ -2035,7 +2034,7 @@ For an example of the use of this entity, see annex F.4.6.
 *)
 
 (*"measure_schema.global_unit_assigned_context.units"
-the units that apply in the express_ref:[representation_schema.representation_context].
+the units that apply in the <<express:representation_schema:representation_schema.representation_context, representation_context>>.
 *)
 
 (*"measure_schema.global_unit_assigned_context.wr:IP1"
@@ -2048,15 +2047,15 @@ For an example of the use of this entity, see annex F.4.6.
 *)
 
 (*"measure_schema.illuminance_measure_with_unit"
-An *illuminance\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is an illuminance as defined in ISO 31.
+An *illuminance_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is an illuminance as defined in ISO 31.
 *)
 
 (*"measure_schema.illuminance_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.illuminance_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.illuminance_unit, illuminance_unit>>.
 *)
 
 (*"measure_schema.illuminance_unit"
-An *illuminance\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the illuminance is expressed.
+An *illuminance_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the illuminance is expressed.
 *)
 
 (*"measure_schema.illuminance_unit.wr:WR1"
@@ -2064,15 +2063,15 @@ The dimensional exponents shall be equal to those of the lux as defined in ISO 3
 *)
 
 (*"measure_schema.inductance_measure_with_unit"
-An *inductance\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is an inductance as defined in ISO 31.
+An *inductance_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is an inductance as defined in ISO 31.
 *)
 
 (*"measure_schema.inductance_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.inductance_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.inductance_unit, inductance_unit>>.
 *)
 
 (*"measure_schema.inductance_unit"
-An *inductance\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the inductance is expressed.
+An *inductance_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the inductance is expressed.
 *)
 
 (*"measure_schema.inductance_unit.wr:WR1"
@@ -2080,15 +2079,15 @@ The dimensional exponents shall be equal to those of the henry as defined in ISO
 *)
 
 (*"measure_schema.length_measure_with_unit"
-A *length\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a length as defined in ISO 31.
+A *length_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a length as defined in ISO 31.
 *)
 
 (*"measure_schema.length_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.length_unit].
+The unit shall be a <<express:measure_schema:measure_schema.length_unit, length_unit>>.
 *)
 
 (*"measure_schema.length_unit"
-A *length\_unit* is a type of express_ref:[measure_schema.named_unit] in which distances are expressed. 
+A *length_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which distances are expressed. 
 
 [NOTE]
 --
@@ -2101,15 +2100,15 @@ The dimensional exponent of length shall be equal to one, and all the other dime
 *)
 
 (*"measure_schema.luminous_flux_measure_with_unit"
-A *luminous\_flux\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is a luminous flux as defined in ISO 31.
+A *luminous_flux_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is a luminous flux as defined in ISO 31.
 *)
 
 (*"measure_schema.luminous_flux_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.luminous_flux_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.luminous_flux_unit, luminous_flux_unit>>.
 *)
 
 (*"measure_schema.luminous_flux_unit"
-A *luminous\_flux\_unit* is a type of express_ref:[measure_schema.named_unit] in which the luminous flux is expressed.
+A *luminous_flux_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the luminous flux is expressed.
 *)
 
 (*"measure_schema.luminous_flux_unit.wr:WR1"
@@ -2117,15 +2116,15 @@ The dimensional exponents shall be equal to those of the lumen as defined in ISO
 *)
 
 (*"measure_schema.luminous_intensity_measure_with_unit"
-A *luminous\_intensity\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a luminous intensity as defined in ISO 31.
+A *luminous_intensity_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a luminous intensity as defined in ISO 31.
 *)
 
 (*"measure_schema.luminous_intensity_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.luminous_intensity_unit].
+The unit shall be a <<express:measure_schema:measure_schema.luminous_intensity_unit, luminous_intensity_unit>>.
 *)
 
 (*"measure_schema.luminous_intensity_unit"
-A *luminous\_intensity\_unit* is a type of express_ref:[measure_schema.named_unit] in which the brightness of a body is expressed. 
+A *luminous_intensity_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the brightness of a body is expressed. 
 
 [NOTE]
 --
@@ -2138,15 +2137,15 @@ The dimensional exponent of luminous intensity shall be equal to one, and all th
 *)
 
 (*"measure_schema.magnetic_flux_density_measure_with_unit"
-A *magnetic\_flux\_density\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is magnetic flux density as defined in ISO 31.
+A *magnetic_flux_density_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is magnetic flux density as defined in ISO 31.
 *)
 
 (*"measure_schema.magnetic_flux_density_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.magnetic_flux_density_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.magnetic_flux_density_unit, magnetic_flux_density_unit>>.
 *)
 
 (*"measure_schema.magnetic_flux_density_unit"
-A *magnetic\_flux\_density\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the magnetic flux density is expressed.
+A *magnetic_flux_density_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the magnetic flux density is expressed.
 *)
 
 (*"measure_schema.magnetic_flux_density_unit.wr:WR1"
@@ -2154,15 +2153,15 @@ The dimensional exponents shall be equal to those of the tesla as defined in ISO
 *)
 
 (*"measure_schema.magnetic_flux_measure_with_unit"
-A *magnetic\_flux\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is a magnetic flux as defined in ISO 31.
+A *magnetic_flux_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is a magnetic flux as defined in ISO 31.
 *)
 
 (*"measure_schema.magnetic_flux_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.magnetic_flux_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.magnetic_flux_unit, magnetic_flux_unit>>.
 *)
 
 (*"measure_schema.magnetic_flux_unit"
-A *magnetic\_flux\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the magnetic flux is expressed.
+A *magnetic_flux_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the magnetic flux is expressed.
 *)
 
 (*"measure_schema.magnetic_flux_unit.wr:WR1"
@@ -2170,15 +2169,15 @@ The dimensional exponents shall be equal to those of the weber as defined in ISO
 *)
 
 (*"measure_schema.mass_measure_with_unit"
-A *mass\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a mass as defined in ISO 31.
+A *mass_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a mass as defined in ISO 31.
 *)
 
 (*"measure_schema.mass_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.mass_unit].
+The unit shall be a <<express:measure_schema:measure_schema.mass_unit, mass_unit>>.
 *)
 
 (*"measure_schema.mass_unit"
-A *mass\_unit* is a type of express_ref:[measure_schema.named_unit] in which the amount of matter that a body contains is expressed. 
+A *mass_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the amount of matter that a body contains is expressed. 
 
 [NOTE]
 --
@@ -2191,11 +2190,11 @@ The dimensional exponent of mass shall be equal to one, and all the other dimens
 *)
 
 (*"measure_schema.measure_with_unit"
-A *measure\_with\_unit* is the specification of a physical quantity as defined in ISO 31. A *measure\_with\_unit* may be either a express_ref:[measure_schema.length_measure_with_unit] or a express_ref:[measure_schema.mass_measure_with_unit], or a express_ref:[measure_schema.time_measure_with_unit], or an express_ref:[measure_schema.electric_current_measure_with_unit], or a express_ref:[measure_schema.thermodynamic_temperature_measure_with_unit], or a express_ref:[measure_schema.celsius_temperature_measure_with_unit], or an express_ref:[measure_schema.amount_of_substance_measure_with_unit], or a express_ref:[measure_schema.luminous_intensity_measure_with_unit], or a express_ref:[measure_schema.plane_angle_measure_with_unit], or a express_ref:[measure_schema.solid_angle_measure_with_unit], or an express_ref:[measure_schema.area_measure_with_unit], or a express_ref:[measure_schema.volume_measure_with_unit], or a express_ref:[measure_schema.ratio_measure_with_unit], or an express_ref:[measure_schema.acceleration_measure_with_unit], or a express_ref:[measure_schema.capacitance_measure_with_unit], or an express_ref:[measure_schema.electric_charge_measure_with_unit], or a express_ref:[measure_schema.conductance_measure_with_unit], or an express_ref:[measure_schema.electric_potential_measure_with_unit], or an express_ref:[measure_schema.energy_measure_with_unit], or a express_ref:[measure_schema.magnetic_flux_density_measure_with_unit], or a express_ref:[measure_schema.force_measure_with_unit], or a express_ref:[measure_schema.frequency_measure_with_unit], or an express_ref:[measure_schema.illuminance_measure_with_unit], or an express_ref:[measure_schema.inductance_measure_with_unit], or a express_ref:[measure_schema.luminous_flux_measure_with_unit], or a express_ref:[measure_schema.magnetic_flux_measure_with_unit], or a express_ref:[measure_schema.power_measure_with_unit], or a express_ref:[measure_schema.pressure_measure_with_unit], or a express_ref:[measure_schema.resistance_measure_with_unit], or a express_ref:[measure_schema.velocity_measure_with_unit], or an express_ref:[measure_schema.absorbed_dose_measure_with_unit], or a express_ref:[measure_schema.radioactivity_measure_with_unit], or a express_ref:[measure_schema.dose_equivalent_measure_with_unit].
+A *measure_with_unit* is the specification of a physical quantity as defined in ISO 31. A *measure_with_unit* may be either a <<express:measure_schema:measure_schema.length_measure_with_unit, length_measure_with_unit>> or a <<express:measure_schema:measure_schema.mass_measure_with_unit, mass_measure_with_unit>>, or a <<express:measure_schema:measure_schema.time_measure_with_unit, time_measure_with_unit>>, or an <<express:measure_schema:measure_schema.electric_current_measure_with_unit, electric_current_measure_with_unit>>, or a <<express:measure_schema:measure_schema.thermodynamic_temperature_measure_with_unit, thermodynamic_temperature_measure_with_unit>>, or a <<express:measure_schema:measure_schema.celsius_temperature_measure_with_unit, celsius_temperature_measure_with_unit>>, or an <<express:measure_schema:measure_schema.amount_of_substance_measure_with_unit, amount_of_substance_measure_with_unit>>, or a <<express:measure_schema:measure_schema.luminous_intensity_measure_with_unit, luminous_intensity_measure_with_unit>>, or a <<express:measure_schema:measure_schema.plane_angle_measure_with_unit, plane_angle_measure_with_unit>>, or a <<express:measure_schema:measure_schema.solid_angle_measure_with_unit, solid_angle_measure_with_unit>>, or an <<express:measure_schema:measure_schema.area_measure_with_unit, area_measure_with_unit>>, or a <<express:measure_schema:measure_schema.volume_measure_with_unit, volume_measure_with_unit>>, or a <<express:measure_schema:measure_schema.ratio_measure_with_unit, ratio_measure_with_unit>>, or an <<express:measure_schema:measure_schema.acceleration_measure_with_unit, acceleration_measure_with_unit>>, or a <<express:measure_schema:measure_schema.capacitance_measure_with_unit, capacitance_measure_with_unit>>, or an <<express:measure_schema:measure_schema.electric_charge_measure_with_unit, electric_charge_measure_with_unit>>, or a <<express:measure_schema:measure_schema.conductance_measure_with_unit, conductance_measure_with_unit>>, or an <<express:measure_schema:measure_schema.electric_potential_measure_with_unit, electric_potential_measure_with_unit>>, or an <<express:measure_schema:measure_schema.energy_measure_with_unit, energy_measure_with_unit>>, or a <<express:measure_schema:measure_schema.magnetic_flux_density_measure_with_unit, magnetic_flux_density_measure_with_unit>>, or a <<express:measure_schema:measure_schema.force_measure_with_unit, force_measure_with_unit>>, or a <<express:measure_schema:measure_schema.frequency_measure_with_unit, frequency_measure_with_unit>>, or an <<express:measure_schema:measure_schema.illuminance_measure_with_unit, illuminance_measure_with_unit>>, or an <<express:measure_schema:measure_schema.inductance_measure_with_unit, inductance_measure_with_unit>>, or a <<express:measure_schema:measure_schema.luminous_flux_measure_with_unit, luminous_flux_measure_with_unit>>, or a <<express:measure_schema:measure_schema.magnetic_flux_measure_with_unit, magnetic_flux_measure_with_unit>>, or a <<express:measure_schema:measure_schema.power_measure_with_unit, power_measure_with_unit>>, or a <<express:measure_schema:measure_schema.pressure_measure_with_unit, pressure_measure_with_unit>>, or a <<express:measure_schema:measure_schema.resistance_measure_with_unit, resistance_measure_with_unit>>, or a <<express:measure_schema:measure_schema.velocity_measure_with_unit, velocity_measure_with_unit>>, or an <<express:measure_schema:measure_schema.absorbed_dose_measure_with_unit, absorbed_dose_measure_with_unit>>, or a <<express:measure_schema:measure_schema.radioactivity_measure_with_unit, radioactivity_measure_with_unit>>, or a <<express:measure_schema:measure_schema.dose_equivalent_measure_with_unit, dose_equivalent_measure_with_unit>>.
 *)
 
 (*"measure_schema.measure_with_unit.value_component"
-the value of the physical quantity if expressed with respect to the *unit\_component*.
+the value of the physical quantity if expressed with respect to the *unit_component*.
 *)
 
 (*"measure_schema.measure_with_unit.unit_component"
@@ -2203,27 +2202,27 @@ the unit in which the physical quantity is expressed.
 *)
 
 (*"measure_schema.measure_with_unit.wr:WR1"
-The *unit\_component* shall be a valid unit for the kind of measure specified by the *value\_component*.
+The *unit_component* shall be a valid unit for the kind of measure specified by the *value_component*.
 *)
 
 (*"measure_schema.named_unit"
-A *named\_unit* is a unit quantity. A *named\_unit* may be either a express_ref:[measure_schema.si_unit] or a express_ref:[measure_schema.conversion_based_unit], or a express_ref:[measure_schema.context_dependent_unit], and additionally may be a express_ref:[measure_schema.length_unit] or a express_ref:[measure_schema.mass_unit], or a express_ref:[measure_schema.time_unit], or an express_ref:[measure_schema.electric_current_unit], or a express_ref:[measure_schema.thermodynamic_temperature_unit], or an express_ref:[measure_schema.amount_of_substance_unit], or a express_ref:[measure_schema.luminous_flux_unit], or a express_ref:[measure_schema.luminous_intensity_unit], or a express_ref:[measure_schema.plane_angle_unit], or a express_ref:[measure_schema.solid_angle_unit], or a express_ref:[measure_schema.ratio_unit].
+A *named_unit* is a unit quantity. A *named_unit* may be either a <<express:measure_schema:measure_schema.si_unit, si_unit>> or a <<express:measure_schema:measure_schema.conversion_based_unit, conversion_based_unit>>, or a <<express:measure_schema:measure_schema.context_dependent_unit, context_dependent_unit>>, and additionally may be a <<express:measure_schema:measure_schema.length_unit, length_unit>> or a <<express:measure_schema:measure_schema.mass_unit, mass_unit>>, or a <<express:measure_schema:measure_schema.time_unit, time_unit>>, or an <<express:measure_schema:measure_schema.electric_current_unit, electric_current_unit>>, or a <<express:measure_schema:measure_schema.thermodynamic_temperature_unit, thermodynamic_temperature_unit>>, or an <<express:measure_schema:measure_schema.amount_of_substance_unit, amount_of_substance_unit>>, or a <<express:measure_schema:measure_schema.luminous_flux_unit, luminous_flux_unit>>, or a <<express:measure_schema:measure_schema.luminous_intensity_unit, luminous_intensity_unit>>, or a <<express:measure_schema:measure_schema.plane_angle_unit, plane_angle_unit>>, or a <<express:measure_schema:measure_schema.solid_angle_unit, solid_angle_unit>>, or a <<express:measure_schema:measure_schema.ratio_unit, ratio_unit>>.
 *)
 
 (*"measure_schema.named_unit.dimensions"
-the exponents of the base properties by which the *named\_unit* is defined.
+the exponents of the base properties by which the *named_unit* is defined.
 *)
 
 (*"measure_schema.plane_angle_measure_with_unit"
-A *plane\_angle\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a plane angle as defined in ISO 31.
+A *plane_angle_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a plane angle as defined in ISO 31.
 *)
 
 (*"measure_schema.plane_angle_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.plane_angle_unit].
+The unit shall be a <<express:measure_schema:measure_schema.plane_angle_unit, plane_angle_unit>>.
 *)
 
 (*"measure_schema.plane_angle_unit"
-A *plane\_angle\_unit* is a type of express_ref:[measure_schema.named_unit] in which angles in planes are expressed.
+A *plane_angle_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which angles in planes are expressed.
 *)
 
 (*"measure_schema.plane_angle_unit.wr:WR1"
@@ -2231,31 +2230,31 @@ All the dimensional exponents shall be equal to zero.
 *)
 
 (*"measure_schema.positive_length_measure_with_unit"
-A *positive\_length\_measure\_with\_unit* is a type of express_ref:[measure_schema.length_measure_with_unit] of which the value is positive.
+A *positive_length_measure_with_unit* is a type of <<express:measure_schema:measure_schema.length_measure_with_unit, length_measure_with_unit>> of which the value is positive.
 *)
 
 (*"measure_schema.positive_length_measure_with_unit.wr:WR1"
-The value of the express_ref:[measure_schema.measure_with_unit.value_component] shall be positive.
+The value of the <<express:measure_schema:measure_schema.measure_with_unit.value_component, value_component>> shall be positive.
 *)
 
 (*"measure_schema.positive_plane_angle_measure_with_unit"
-A *positive\_plane\_angle\_measure\_with\_unit* is a type of express_ref:[measure_schema.plane_angle_measure_with_unit] of which the value is positive.
+A *positive_plane_angle_measure_with_unit* is a type of <<express:measure_schema:measure_schema.plane_angle_measure_with_unit, plane_angle_measure_with_unit>> of which the value is positive.
 *)
 
 (*"measure_schema.positive_plane_angle_measure_with_unit.wr:WR1"
-The value of the express_ref:[measure_schema.measure_with_unit.value_component] shall be positive.
+The value of the <<express:measure_schema:measure_schema.measure_with_unit.value_component, value_component>> shall be positive.
 *)
 
 (*"measure_schema.power_measure_with_unit"
-A *power\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is a power as defined in ISO 31.
+A *power_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is a power as defined in ISO 31.
 *)
 
 (*"measure_schema.power_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.power_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.power_unit, power_unit>>.
 *)
 
 (*"measure_schema.power_unit"
-A *power\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the power is expressed.
+A *power_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the power is expressed.
 *)
 
 (*"measure_schema.power_unit.wr:WR1"
@@ -2263,15 +2262,15 @@ The dimensional exponents shall be equal to those of the watt as defined in ISO 
 *)
 
 (*"measure_schema.pressure_measure_with_unit"
-A *pressure\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is a pressure as defined in ISO 31.
+A *pressure_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is a pressure as defined in ISO 31.
 *)
 
 (*"measure_schema.pressure_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.pressure_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.pressure_unit, pressure_unit>>.
 *)
 
 (*"measure_schema.pressure_unit"
-A *pressure\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the pressure is expressed.
+A *pressure_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the pressure is expressed.
 *)
 
 (*"measure_schema.pressure_unit.wr:WR1"
@@ -2279,15 +2278,15 @@ The dimensional exponents shall be equal to those of the pascal as defined in IS
 *)
 
 (*"measure_schema.radioactivity_measure_with_unit"
-A *radioactivity\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is radioactivity as defined in ISO 31.
+A *radioactivity_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is radioactivity as defined in ISO 31.
 *)
 
 (*"measure_schema.radioactivity_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.radioactivity_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.radioactivity_unit, radioactivity_unit>>.
 *)
 
 (*"measure_schema.radioactivity_unit"
-A *radioactivity\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the radioactivity is expressed.
+A *radioactivity_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the radioactivity is expressed.
 *)
 
 (*"measure_schema.radioactivity_unit.wr:WR1"
@@ -2295,15 +2294,15 @@ The dimensional exponents shall be equal to those of the becquerel as defined in
 *)
 
 (*"measure_schema.ratio_measure_with_unit"
-A *ratio\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a ratio as defined in ISO 31.
+A *ratio_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a ratio as defined in ISO 31.
 *)
 
 (*"measure_schema.ratio_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.ratio_unit].
+The unit shall be a <<express:measure_schema:measure_schema.ratio_unit, ratio_unit>>.
 *)
 
 (*"measure_schema.ratio_unit"
-A *ratio\_unit* is a type of express_ref:[measure_schema.named_unit] in which the ratio between two physical quantities of the same kind is expressed.
+A *ratio_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the ratio between two physical quantities of the same kind is expressed.
 *)
 
 (*"measure_schema.ratio_unit.wr:WR1"
@@ -2311,15 +2310,15 @@ All the dimensional exponents shall be equal to zero.
 *)
 
 (*"measure_schema.resistance_measure_with_unit"
-A *resistance\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is an electrical resistance as defined in ISO 31.
+A *resistance_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is an electrical resistance as defined in ISO 31.
 *)
 
 (*"measure_schema.resistance_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.resistance_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.resistance_unit, resistance_unit>>.
 *)
 
 (*"measure_schema.resistance_unit"
-A *resistance\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the electrical resistance is expressed.
+A *resistance_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the electrical resistance is expressed.
 *)
 
 (*"measure_schema.resistance_unit.wr:WR1"
@@ -2327,11 +2326,11 @@ The dimensional exponents shall be equal to those of the ohm as defined in ISO 3
 *)
 
 (*"measure_schema.si_absorbed_dose_unit"
-A *si\_absorbed\_dose\_unit* is a type of express_ref:[measure_schema.absorbed_dose_unit] and a type of express_ref:[measure_schema.si_unit] in which the absorbed dose is expressed in SI units.
+A *si_absorbed_dose_unit* is a type of <<express:measure_schema:measure_schema.absorbed_dose_unit, absorbed_dose_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the absorbed dose is expressed in SI units.
 *)
 
 (*"measure_schema.si_absorbed_dose_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be gray.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be gray.
 *)
 
 (*"measure_schema.si_absorbed_dose_unit.wr:WR2"
@@ -2339,11 +2338,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_capacitance_unit"
-A *si\_capacitance\_unit* is a type of express_ref:[measure_schema.capacitance_unit] and a type of express_ref:[measure_schema.si_unit] in which the electric capacitance is expressed in SI units.
+A *si_capacitance_unit* is a type of <<express:measure_schema:measure_schema.capacitance_unit, capacitance_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the electric capacitance is expressed in SI units.
 *)
 
 (*"measure_schema.si_capacitance_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be farad.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be farad.
 *)
 
 (*"measure_schema.si_capacitance_unit.wr:WR2"
@@ -2351,11 +2350,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_conductance_unit"
-A *si\_conductance\_unit* is a type of express_ref:[measure_schema.conductance_unit] and a type of express_ref:[measure_schema.si_unit] in which the electrical conductance is expressed in SI units.
+A *si_conductance_unit* is a type of <<express:measure_schema:measure_schema.conductance_unit, conductance_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the electrical conductance is expressed in SI units.
 *)
 
 (*"measure_schema.si_conductance_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be siemens.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be siemens.
 *)
 
 (*"measure_schema.si_conductance_unit.wr:WR2"
@@ -2363,11 +2362,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_dose_equivalent_unit"
-A *si\_dose\_equivalent\_unit* is a type of express_ref:[measure_schema.dose_equivalent_unit] and a type of express_ref:[measure_schema.si_unit] in which the radiation dose equivalent is expressed in SI units.
+A *si_dose_equivalent_unit* is a type of <<express:measure_schema:measure_schema.dose_equivalent_unit, dose_equivalent_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the radiation dose equivalent is expressed in SI units.
 *)
 
 (*"measure_schema.si_dose_equivalent_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be sievert.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be sievert.
 *)
 
 (*"measure_schema.si_dose_equivalent_unit.wr:WR2"
@@ -2375,11 +2374,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_electric_charge_unit"
-A *si\_electric\_charge\_unit* is a type of express_ref:[measure_schema.electric_charge_unit] and a type of express_ref:[measure_schema.si_unit] in which the electric charge is expressed in SI units.
+A *si_electric_charge_unit* is a type of <<express:measure_schema:measure_schema.electric_charge_unit, electric_charge_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the electric charge is expressed in SI units.
 *)
 
 (*"measure_schema.si_electric_charge_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be volt.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be volt.
 *)
 
 (*"measure_schema.si_electric_charge_unit.wr:WR2"
@@ -2387,11 +2386,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_electric_potential_unit"
-A *si\_electric\_potential\_unit* is a type of express_ref:[measure_schema.electric_potential_unit] and a type of express_ref:[measure_schema.si_unit] in which the electric potential is expressed in SI units.
+A *si_electric_potential_unit* is a type of <<express:measure_schema:measure_schema.electric_potential_unit, electric_potential_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the electric potential is expressed in SI units.
 *)
 
 (*"measure_schema.si_electric_potential_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be volt.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be volt.
 *)
 
 (*"measure_schema.si_electric_potential_unit.wr:WR2"
@@ -2399,11 +2398,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_energy_unit"
-A *si\_energy\_unit* is a type of express_ref:[measure_schema.energy_unit] and a type of express_ref:[measure_schema.si_unit] in which the energy is expressed in SI units.
+A *si_energy_unit* is a type of <<express:measure_schema:measure_schema.energy_unit, energy_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the energy is expressed in SI units.
 *)
 
 (*"measure_schema.si_energy_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be joule.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be joule.
 *)
 
 (*"measure_schema.si_energy_unit.wr:WR2"
@@ -2411,11 +2410,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_force_unit"
-A *si\_force\_unit* is a type of express_ref:[measure_schema.force_unit] and a type of express_ref:[measure_schema.si_unit] in which the force is expressed in SI units.
+A *si_force_unit* is a type of <<express:measure_schema:measure_schema.force_unit, force_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the force is expressed in SI units.
 *)
 
 (*"measure_schema.si_force_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be newton.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be newton.
 *)
 
 (*"measure_schema.si_force_unit.wr:WR2"
@@ -2423,11 +2422,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_frequency_unit"
-A *si\_frequency\_unit* is a type of express_ref:[measure_schema.frequency_unit] and a type of express_ref:[measure_schema.si_unit] in which the frequency is expressed in SI units.
+A *si_frequency_unit* is a type of <<express:measure_schema:measure_schema.frequency_unit, frequency_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the frequency is expressed in SI units.
 *)
 
 (*"measure_schema.si_frequency_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be hertz.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be hertz.
 *)
 
 (*"measure_schema.si_frequency_unit.wr:WR2"
@@ -2435,11 +2434,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_illuminance_unit"
-A *si\_illuminance\_unit* is a type of express_ref:[measure_schema.illuminance_unit] and a type of express_ref:[measure_schema.si_unit] in which the illuminance is expressed in SI units.
+A *si_illuminance_unit* is a type of <<express:measure_schema:measure_schema.illuminance_unit, illuminance_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the illuminance is expressed in SI units.
 *)
 
 (*"measure_schema.si_illuminance_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be lux.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be lux.
 *)
 
 (*"measure_schema.si_illuminance_unit.wr:WR2"
@@ -2447,11 +2446,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_inductance_unit"
-A *si\_inductance\_unit* is a type of express_ref:[measure_schema.inductance_unit] and a type of express_ref:[measure_schema.si_unit] in which the inductance is expressed in SI units.
+A *si_inductance_unit* is a type of <<express:measure_schema:measure_schema.inductance_unit, inductance_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the inductance is expressed in SI units.
 *)
 
 (*"measure_schema.si_inductance_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be henry.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be henry.
 *)
 
 (*"measure_schema.si_inductance_unit.wr:WR2"
@@ -2459,11 +2458,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_magnetic_flux_density_unit"
-A *si\_magnetic\_flux\_density\_unit* is a type of express_ref:[measure_schema.magnetic_flux_density_unit] and a type of express_ref:[measure_schema.si_unit] in which the magnetic flux density is expressed in SI units.
+A *si_magnetic_flux_density_unit* is a type of <<express:measure_schema:measure_schema.magnetic_flux_density_unit, magnetic_flux_density_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the magnetic flux density is expressed in SI units.
 *)
 
 (*"measure_schema.si_magnetic_flux_density_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be tesla.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be tesla.
 *)
 
 (*"measure_schema.si_magnetic_flux_density_unit.wr:WR2"
@@ -2471,11 +2470,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_magnetic_flux_unit"
-A *si\_magnetic\_flux\_unit* is a type of express_ref:[measure_schema.magnetic_flux_unit] and a type of express_ref:[measure_schema.si_unit] in which the magnetic flux is expressed in SI units.
+A *si_magnetic_flux_unit* is a type of <<express:measure_schema:measure_schema.magnetic_flux_unit, magnetic_flux_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the magnetic flux is expressed in SI units.
 *)
 
 (*"measure_schema.si_magnetic_flux_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be weber.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be weber.
 *)
 
 (*"measure_schema.si_magnetic_flux_unit.wr:WR2"
@@ -2483,11 +2482,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_power_unit"
-A *si\_power\_unit* is a type of express_ref:[measure_schema.power_unit] and a type of express_ref:[measure_schema.si_unit] in which the power is expressed in SI units.
+A *si_power_unit* is a type of <<express:measure_schema:measure_schema.power_unit, power_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the power is expressed in SI units.
 *)
 
 (*"measure_schema.si_power_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be watt.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be watt.
 *)
 
 (*"measure_schema.si_power_unit.wr:WR2"
@@ -2495,11 +2494,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_pressure_unit"
-A *si\_pressure\_unit* is a type of express_ref:[measure_schema.pressure_unit] and a type of express_ref:[measure_schema.si_unit] in which the pressure is expressed in SI units.
+A *si_pressure_unit* is a type of <<express:measure_schema:measure_schema.pressure_unit, pressure_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the pressure is expressed in SI units.
 *)
 
 (*"measure_schema.si_pressure_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be pascal.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be pascal.
 *)
 
 (*"measure_schema.si_pressure_unit.wr:WR2"
@@ -2507,11 +2506,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_radioactivity_unit"
-A *si\_radioactivity\_unit* is a type of express_ref:[measure_schema.radioactivity_unit] and a type of express_ref:[measure_schema.si_unit] in which the radioactivity is expressed in SI units.
+A *si_radioactivity_unit* is a type of <<express:measure_schema:measure_schema.radioactivity_unit, radioactivity_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the radioactivity is expressed in SI units.
 *)
 
 (*"measure_schema.si_radioactivity_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be becquerel.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be becquerel.
 *)
 
 (*"measure_schema.si_radioactivity_unit.wr:WR2"
@@ -2519,11 +2518,11 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_resistance_unit"
-A *si\_resistance\_unit* is a type of express_ref:[measure_schema.resistance_unit] and a type of express_ref:[measure_schema.si_unit] in which the resistance is expressed in SI units.
+A *si_resistance_unit* is a type of <<express:measure_schema:measure_schema.resistance_unit, resistance_unit>> and a type of <<express:measure_schema:measure_schema.si_unit, si_unit>> in which the resistance is expressed in SI units.
 *)
 
 (*"measure_schema.si_resistance_unit.wr:WR1"
-The express_ref:[measure_schema.si_unit.name] of the express_ref:[measure_schema.si_unit] shall be ohm.
+The <<express:measure_schema:measure_schema.si_unit.name, name>> of the <<express:measure_schema:measure_schema.si_unit, si_unit>> shall be ohm.
 *)
 
 (*"measure_schema.si_resistance_unit.wr:WR2"
@@ -2531,35 +2530,35 @@ No other name shall be assigned to this entity.
 *)
 
 (*"measure_schema.si_unit"
-An *si\_unit* is a type of express_ref:[measure_schema.named_unit] that defines a unit with respect to the system of units defined in ISO 80000.
+An *si_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> that defines a unit with respect to the system of units defined in ISO 80000.
 *)
 
 (*"measure_schema.si_unit.prefix"
-the express_ref:[measure_schema.si_prefix] that specifies the ratio with the unit specified by name. The value of this attribute need not be specified.
+the <<express:measure_schema:measure_schema.si_prefix, si_prefix>> that specifies the ratio with the unit specified by name. The value of this attribute need not be specified.
 *)
 
 (*"measure_schema.si_unit.name"
-the express_ref:[measure_schema.si_unit_name] by which the *si\_unit* is known.
+the <<express:measure_schema:measure_schema.si_unit_name, si_unit_name>> by which the *si_unit* is known.
 *)
 
 (*"measure_schema.si_unit.dimensions"
-the express_ref:[measure_schema.dimensional_exponents] for the *si\_unit*.
+the <<express:measure_schema:measure_schema.dimensional_exponents, dimensional_exponents>> for the *si_unit*.
 *)
 
 (*"measure_schema.si_unit.wr:WR1"
-If the *si\_unit* is a express_ref:[measure_schema.mass_unit] it shall not be used by a express_ref:[measure_schema.derived_unit_element] unless the prefix is express_ref:[measure_schema.si_prefix.kilo].
+If the *si_unit* is a <<express:measure_schema:measure_schema.mass_unit, mass_unit>> it shall not be used by a <<express:measure_schema:measure_schema.derived_unit_element, derived_unit_element>> unless the prefix is <<express:measure_schema:measure_schema.si_prefix.kilo, kilo>>.
 *)
 
 (*"measure_schema.solid_angle_measure_with_unit"
-A *solid\_angle\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a solid angle as defined in ISO 31.
+A *solid_angle_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a solid angle as defined in ISO 31.
 *)
 
 (*"measure_schema.solid_angle_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.solid_angle_unit].
+The unit shall be a <<express:measure_schema:measure_schema.solid_angle_unit, solid_angle_unit>>.
 *)
 
 (*"measure_schema.solid_angle_unit"
-A *solid\_angle\_unit* is a type of express_ref:[measure_schema.named_unit] in which solid angles are expressed.
+A *solid_angle_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which solid angles are expressed.
 *)
 
 (*"measure_schema.solid_angle_unit.wr:WR1"
@@ -2567,15 +2566,15 @@ All the dimensional exponents shall be equal to zero.
 *)
 
 (*"measure_schema.thermodynamic_temperature_measure_with_unit"
-A *thermodynamic\_temperature\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a thermodynamic temperature as defined in ISO 31.
+A *thermodynamic_temperature_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a thermodynamic temperature as defined in ISO 31.
 *)
 
 (*"measure_schema.thermodynamic_temperature_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.thermodynamic_temperature_unit].
+The unit shall be a <<express:measure_schema:measure_schema.thermodynamic_temperature_unit, thermodynamic_temperature_unit>>.
 *)
 
 (*"measure_schema.thermodynamic_temperature_unit"
-A *thermodynamic\_temperature\_unit* is a type of express_ref:[measure_schema.named_unit] in which the degree of heat of a body is expressed. 
+A *thermodynamic_temperature_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the degree of heat of a body is expressed. 
 
 [NOTE]
 --
@@ -2588,15 +2587,15 @@ The dimensional exponent of thermodynamic temperature shall be equal to one and 
 *)
 
 (*"measure_schema.time_measure_with_unit"
-A *time\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a time as defined in ISO 31.
+A *time_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a time as defined in ISO 31.
 *)
 
 (*"measure_schema.time_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.time_unit].
+The unit shall be a <<express:measure_schema:measure_schema.time_unit, time_unit>>.
 *)
 
 (*"measure_schema.time_unit"
-A *time\_unit* is a type of express_ref:[measure_schema.named_unit] in which the duration of periods is expressed. 
+A *time_unit* is a type of <<express:measure_schema:measure_schema.named_unit, named_unit>> in which the duration of periods is expressed. 
 
 [NOTE]
 --
@@ -2609,15 +2608,15 @@ The dimensional exponent of time shall be equal to one, and all the other dimens
 *)
 
 (*"measure_schema.velocity_measure_with_unit"
-A *velocity\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the quantity measured is a velocity.
+A *velocity_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the quantity measured is a velocity.
 *)
 
 (*"measure_schema.velocity_measure_with_unit.wr:WR1"
-The express_ref:[measure_schema.measure_with_unit.unit_component] shall be of type express_ref:[measure_schema.velocity_unit].
+The <<express:measure_schema:measure_schema.measure_with_unit.unit_component, unit_component>> shall be of type <<express:measure_schema:measure_schema.velocity_unit, velocity_unit>>.
 *)
 
 (*"measure_schema.velocity_unit"
-A *velocity\_unit* is a type of express_ref:[measure_schema.derived_unit] in which the velocity is expressed.
+A *velocity_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> in which the velocity is expressed.
 *)
 
 (*"measure_schema.velocity_unit.wr:WR1"
@@ -2625,15 +2624,15 @@ The dimensional exponent of length shall be equal to one, the dimensional expone
 *)
 
 (*"measure_schema.volume_measure_with_unit"
-A *volume\_measure\_with\_unit* is a type of express_ref:[measure_schema.measure_with_unit] in which the physical quantity is a volume as defined in ISO 31.
+A *volume_measure_with_unit* is a type of <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> in which the physical quantity is a volume as defined in ISO 31.
 *)
 
 (*"measure_schema.volume_measure_with_unit.wr:WR1"
-The unit shall be a express_ref:[measure_schema.volume_unit].
+The unit shall be a <<express:measure_schema:measure_schema.volume_unit, volume_unit>>.
 *)
 
 (*"measure_schema.volume_unit"
-A *volume\_unit* is a type of express_ref:[measure_schema.derived_unit] used to measure the extent of a solid.
+A *volume_unit* is a type of <<express:measure_schema:measure_schema.derived_unit, derived_unit>> used to measure the extent of a solid.
 *)
 
 (*"measure_schema.volume_unit.wr:WR1"
@@ -2641,25 +2640,25 @@ The dimensional exponent of length shall be equal to three and all the other dim
 *)
 
 (*"measure_schema.derive_dimensional_exponents"
-The *derive\_dimensional\_exponents* function determines the dimensional exponents of a unit. For named units the dimensions attribute is returned and for derived units the dimensional exponents are calculated from its elements.
+The *derive_dimensional_exponents* function determines the dimensional exponents of a unit. For named units the dimensions attribute is returned and for derived units the dimensional exponents are calculated from its elements.
 *)
 
 (*"measure_schema.derive_dimensional_exponents.x"
-(input) the express_ref:[measure_schema.unit] that the express_ref:[measure_schema.dimensional_exponents] are being derived from.
+(input) the <<express:measure_schema:measure_schema.unit, unit>> that the <<express:measure_schema:measure_schema.dimensional_exponents, dimensional_exponents>> are being derived from.
 *)
 
 (*"measure_schema.dimensions_for_si_unit"
-The *dimensions\_for\_si\_unit* function returns the express_ref:[measure_schema.dimensional_exponents] of the given express_ref:[measure_schema.si_unit].
+The *dimensions_for_si_unit* function returns the <<express:measure_schema:measure_schema.dimensional_exponents, dimensional_exponents>> of the given <<express:measure_schema:measure_schema.si_unit, si_unit>>.
 *)
 
 (*"measure_schema.dimensions_for_si_unit.n"
-(input) the name of the express_ref:[measure_schema.si_unit_name] for which the express_ref:[measure_schema.dimensional_exponents] will be returned.
+(input) the name of the <<express:measure_schema:measure_schema.si_unit_name, si_unit_name>> for which the <<express:measure_schema:measure_schema.dimensional_exponents, dimensional_exponents>> will be returned.
 *)
 
 (*"measure_schema.valid_units"
-The *valid\_units* function validates a express_ref:[measure_schema.measure_with_unit]. If the unit of the express_ref:[measure_schema.measure_with_unit] is valid the function returns TRUE. Otherwise, it returns FALSE.
+The *valid_units* function validates a <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>>. If the unit of the <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> is valid the function returns TRUE. Otherwise, it returns FALSE.
 *)
 
 (*"measure_schema.valid_units.m"
-(input) the candidate express_ref:[measure_schema.measure_with_unit] that is to be checked.
+(input) the candidate <<express:measure_schema:measure_schema.measure_with_unit, measure_with_unit>> that is to be checked.
 *)
