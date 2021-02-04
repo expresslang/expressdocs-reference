@@ -80,9 +80,27 @@ This schema provides resources for the identification, naming, and description o
 * specific locations;
 * relationships between specific locations.
 
-expg_image:location_schemaexpg1.xml[]
+[.svgmap]
+====
+image::location_schemaexpg1.svg[]
 
-expg_image:location_schemaexpg2.xml[]
+* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
+* <<express:location_schema,location_schema>>; ../../resources/location_schema/location_schema.xml
+====
+
+[.svgmap]
+====
+image::location_schemaexpg2.svg[]
+
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
+* <<express:location_schema.xml#location_schema,location_schema.xml#location_schema>>; ../../resources/location_schema/location_schema.xml#location_schema.location_relationship
+* <<express:location_schema.xml#location_schema,location_schema.xml#location_schema>>; ../../resources/location_schema/location_schema.xml#location_schema.location
+====
 *)
 
 (*"location_schema.location"
@@ -105,35 +123,35 @@ The "bridge" of a particular ship specifies a location where navigation equipmen
 *)
 
 (*"location_schema.location.id"
-the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *location*.
+the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *location*.
 *)
 
 (*"location_schema.location.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *location* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *location* is known.
 *)
 
 (*"location_schema.location.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *location*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *location*. The value of this attribute need not be specified.
 *)
 
 (*"location_schema.location_relationship"
-A *location_relationship* is a relationship between two instances of the <<express:location_schema:location_schema.location, location>> entity data type and provides for the identification, naming, and description of that relationship.
+A *location_relationship* is a relationship between two instances of the <<express:location_schema:location_schema.location,location>> entity data type and provides for the identification, naming, and description of that relationship.
 *)
 
 (*"location_schema.location_relationship.id"
-the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *location_relationship*.
+the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *location_relationship*.
 *)
 
 (*"location_schema.location_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *location_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *location_relationship* is known.
 *)
 
 (*"location_schema.location_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *location_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *location_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"location_schema.location_relationship.related_location"
-the other instance of <<express:location_schema:location_schema.location, location>> that is a part of the relationship. If one element of the relationship is dependent upon the other, attribute shall be the dependent one.
+the other instance of <<express:location_schema:location_schema.location,location>> that is a part of the relationship. If one element of the relationship is dependent upon the other, attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -142,7 +160,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"location_schema.location_relationship.relating_location"
-one of the instances of <<express:location_schema:location_schema.location, location>> that is a part of the relationship.
+one of the instances of <<express:location_schema:location_schema.location,location>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -151,7 +169,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"location_schema.acyclic_location_relationship"
-The *acyclic_location_relationship* function determines whether the graph of instances of the entity data type <<express:location_schema:location_schema.location, location>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:location_schema:location_schema.location_relationship, location_relationship>> or any of its subtypes. 
+The *acyclic_location_relationship* function determines whether the graph of instances of the entity data type <<express:location_schema:location_schema.location,location>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:location_schema:location_schema.location_relationship,location_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -162,18 +180,18 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:location_schema:location_schema.location_relationship, location_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:location_schema:location_schema.location_relationship,location_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"location_schema.acyclic_location_relationship.relation"
-(input) the candidate <<express:location_schema:location_schema.location_relationship, location_relationship>> to be checked.
+(input) the candidate <<express:location_schema:location_schema.location_relationship,location_relationship>> to be checked.
 *)
 
 (*"location_schema.acyclic_location_relationship.relatives"
-(input) the set of instances of the entity data type <<express:location_schema:location_schema.location, location>> that the function is searching for in the <<express:location_schema:location_schema.location_relationship.relating_location, relating_location>> parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:location_schema:location_schema.location,location>> that the function is searching for in the <<express:location_schema:location_schema.location_relationship.relating_location,relating_location>> parameter of the *relation* argument.
 *)
 
 (*"location_schema.acyclic_location_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:location_schema:location_schema.location_relationship, location_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:location_schema:location_schema.location_relationship,location_relationship>> entity.
 *)

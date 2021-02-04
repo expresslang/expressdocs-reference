@@ -115,13 +115,47 @@ Product data can include citations of other information sources.
 Heat treatment processes documentation can be specified using the resource constructs that are defined in this schema.
 ====
 
-expg_image:document_schemaexpg1.xml[]
+[.svgmap]
+====
+image::document_schemaexpg1.svg[]
 
-expg_image:document_schemaexpg2.xml[]
+* <<express:document_schema,document_schema>>; ../../resources/document_schema/document_schema.xml
+* <<express:product_definition_schema,product_definition_schema>>; ../../resources/product_definition_schema/product_definition_schema.xml
+* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
+====
+
+[.svgmap]
+====
+image::document_schemaexpg2.svg[]
+
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.product_or_formation_or_definition
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:product_definition_schema.xml#product_definition_schema,product_definition_schema.xml#product_definition_schema>>; ../../resources/product_definition_schema/product_definition_schema.xml#product_definition_schema.product_definition_formation
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:product_definition_schema.xml#product_definition_schema,product_definition_schema.xml#product_definition_schema>>; ../../resources/product_definition_schema/product_definition_schema.xml#product_definition_schema.product
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:product_definition_schema.xml#product_definition_schema,product_definition_schema.xml#product_definition_schema>>; ../../resources/product_definition_schema/product_definition_schema.xml#product_definition_schema.product_definition
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.document_type
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.document_usage_constraint
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.document_product_association
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.document
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.document_representation_type
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.document_relationship
+* <<express:document_schema.xml#document_schema,document_schema.xml#document_schema>>; ../../resources/document_schema/document_schema.xml#document_schema.document_with_class
+====
 *)
 
 (*"document_schema.product_or_formation_or_definition"
-The *product_or_formation_or_definition* type allows for the designation of a <<express:product_definition_schema:product_definition_schema.product, product>>, a <<express:product_definition_schema:product_definition_schema.product_definition, product_definition>>, or a <<express:product_definition_schema:product_definition_schema.product_definition_formation, product_definition_formation>>.
+The *product_or_formation_or_definition* type allows for the designation of a <<express:product_definition_schema:product_definition_schema.product,product>>, a <<express:product_definition_schema:product_definition_schema.product_definition,product_definition>>, or a <<express:product_definition_schema:product_definition_schema.product_definition_formation,product_definition_formation>>.
 *)
 
 (*"document_schema.document"
@@ -144,7 +178,7 @@ This part of ISO 10303 provides several resources to describe documents and to a
 *)
 
 (*"document_schema.document.id"
-the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *document*.
+the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *document*.
 
 [NOTE]
 --
@@ -158,7 +192,7 @@ The context in which id is used as a discriminating characteristic can be identi
 *)
 
 (*"document_schema.document.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *document* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *document* is known.
 
 [NOTE]
 --
@@ -172,19 +206,19 @@ An example of the source of a *document* is "ISO".
 *)
 
 (*"document_schema.document.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *document*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *document*. The value of the attribute need not be specified.
 *)
 
 (*"document_schema.document.kind"
-the <<express:document_schema:document_schema.document_type, document_type>> that specifies the sort of data that the *document* describes.
+the <<express:document_schema:document_schema.document_type,document_type>> that specifies the sort of data that the *document* describes.
 *)
 
 (*"document_schema.document.representation_types"
-the set of <<express:document_schema:document_schema.document_representation_type, document_representation_type>> entities that specifies the way a *document* is represented.
+the set of <<express:document_schema:document_schema.document_representation_type,document_representation_type>> entities that specifies the way a *document* is represented.
 *)
 
 (*"document_schema.document_product_association"
-A *document_product_association* is an association between a <<express:document_schema:document_schema.document, document>> and a <<express:product_definition_schema:product_definition_schema.product, product>>, between a <<express:document_schema:document_schema.document, document>> and a <<express:product_definition_schema:product_definition_schema.product_definition_formation, product_definition_formation>>, or between a <<express:document_schema:document_schema.document, document>> and a <<express:product_definition_schema:product_definition_schema.product_definition, product_definition>>. 
+A *document_product_association* is an association between a <<express:document_schema:document_schema.document,document>> and a <<express:product_definition_schema:product_definition_schema.product,product>>, between a <<express:document_schema:document_schema.document,document>> and a <<express:product_definition_schema:product_definition_schema.product_definition_formation,product_definition_formation>>, or between a <<express:document_schema:document_schema.document,document>> and a <<express:product_definition_schema:product_definition_schema.product_definition,product_definition>>. 
 
 [NOTE]
 --
@@ -193,20 +227,20 @@ The role of *document_product_association* can be defined in the annotated EXPRE
 
 [NOTE]
 --
-The *document_product_association* may establish an equivalence between the <<express:document_schema:document_schema.document, document>> and the <<express:product_definition_schema:product_definition_schema.product_definition_formation, product_definition_formation>> or between the <<express:document_schema:document_schema.document, document>> and the <<express:product_definition_schema:product_definition_schema.product, product>> of the <<express:document_schema:document_schema.document, document>> and the <<express:product_definition_schema:product_definition_schema.product_definition, product_definition>>. This equivalence will provide a document with the versioning structure found in the <<express:product_definition_schema:product_definition_schema, product_definition_schema>>.
+The *document_product_association* may establish an equivalence between the <<express:document_schema:document_schema.document,document>> and the <<express:product_definition_schema:product_definition_schema.product_definition_formation,product_definition_formation>> or between the <<express:document_schema:document_schema.document,document>> and the <<express:product_definition_schema:product_definition_schema.product,product>> of the <<express:document_schema:document_schema.document,document>> and the <<express:product_definition_schema:product_definition_schema.product_definition,product_definition>>. This equivalence will provide a document with the versioning structure found in the <<express:product_definition_schema:product_definition_schema,product_definition_schema>>.
 --
 *)
 
 (*"document_schema.document_product_association.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *document_product_association* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *document_product_association* is known.
 *)
 
 (*"document_schema.document_product_association.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *document_product_association*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *document_product_association*. The value of the attribute need not be specified.
 *)
 
 (*"document_schema.document_product_association.relating_document"
-the instance of <<express:document_schema:document_schema.document, document>> that is part of the association.
+the instance of <<express:document_schema:document_schema.document,document>> that is part of the association.
 
 [NOTE]
 --
@@ -215,7 +249,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"document_schema.document_product_association.related_product"
-the instance of <<express:product_definition_schema:product_definition_schema.product, product>>, <<express:product_definition_schema:product_definition_schema.product_definition_formation, product_definition_formation>>, or <<express:product_definition_schema:product_definition_schema.product_definition, product_definition>> entity data type associated with an instance of <<express:document_schema:document_schema.document, document>>.
+the instance of <<express:product_definition_schema:product_definition_schema.product,product>>, <<express:product_definition_schema:product_definition_schema.product_definition_formation,product_definition_formation>>, or <<express:product_definition_schema:product_definition_schema.product_definition,product_definition>> entity data type associated with an instance of <<express:document_schema:document_schema.document,document>>.
 
 [NOTE]
 --
@@ -224,7 +258,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"document_schema.document_relationship"
-A *document_relationship* is a relationship between two instances of the entity data type <<express:document_schema:document_schema.document, document>> and provides a description of their relationship. 
+A *document_relationship* is a relationship between two instances of the entity data type <<express:document_schema:document_schema.document,document>> and provides a description of their relationship. 
 
 [NOTE]
 --
@@ -238,20 +272,20 @@ Relationships represented using this entity may be parent child relationship. An
 
 [NOTE]
 --
-This entity, together with the <<express:document_schema:document_schema.document, document>> entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:document_schema:document_schema.document,document>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"document_schema.document_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *document_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *document_relationship* is known.
 *)
 
 (*"document_schema.document_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *document_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *document_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"document_schema.document_relationship.relating_document"
-one of the instances of <<express:document_schema:document_schema.document, document>> that is a part of the relationship.
+one of the instances of <<express:document_schema:document_schema.document,document>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -260,7 +294,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"document_schema.document_relationship.related_document"
-the other instance of <<express:document_schema:document_schema.document, document>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:document_schema:document_schema.document,document>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -269,11 +303,11 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"document_schema.document_representation_type"
-A *document_representation_type* is a specification of the way a <<express:document_schema:document_schema.document, document>> is represented.
+A *document_representation_type* is a specification of the way a <<express:document_schema:document_schema.document,document>> is represented.
 *)
 
 (*"document_schema.document_representation_type.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *document_representation_type* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *document_representation_type* is known.
 
 [example]
 ====
@@ -282,7 +316,7 @@ the <<express:support_resource_schema:support_resource_schema.label, label>> by 
 *)
 
 (*"document_schema.document_representation_type.represented_document"
-the <<express:document_schema:document_schema.document, document>> for which the kinds of representation are specified.
+the <<express:document_schema:document_schema.document,document>> for which the kinds of representation are specified.
 *)
 
 (*"document_schema.document_type"
@@ -309,7 +343,7 @@ the name of the kind of data contained in a document.
 *)
 
 (*"document_schema.document_usage_constraint"
-A *document_usage_constraint* is an identification of a specific subject area or aspect from within a document and gives the relevant information or text that applies. The semantics of the reference can be found in the <<express:document_schema:document_schema.document, document>> itself. 
+A *document_usage_constraint* is an identification of a specific subject area or aspect from within a document and gives the relevant information or text that applies. The semantics of the reference can be found in the <<express:document_schema:document_schema.document,document>> itself. 
 
 [NOTE]
 --
@@ -318,11 +352,11 @@ This entity could be used to identify the clause of a document and the content o
 *)
 
 (*"document_schema.document_usage_constraint.source"
-the <<express:document_schema:document_schema.document, document>> in which the *subject_element* originates.
+the <<express:document_schema:document_schema.document,document>> in which the *subject_element* originates.
 
 [NOTE]
 --
-The inverse of this relationship is used to define multiple elements of a <<express:document_schema:document_schema.document, document>>.
+The inverse of this relationship is used to define multiple elements of a <<express:document_schema:document_schema.document,document>>.
 --
 *)
 
@@ -331,7 +365,7 @@ the name of an element of the *source*.
 *)
 
 (*"document_schema.document_usage_constraint.subject_element_value"
-the <<express:support_resource_schema:support_resource_schema.label, label>> that conveys a specific value of the *subject_element* present in the source
+the <<express:support_resource_schema:support_resource_schema.label,label>> that conveys a specific value of the *subject_element* present in the source
 
 [example]
 ====
@@ -340,7 +374,7 @@ For references to a 'surface finish' source the *subject_element* may be a 'Clau
 *)
 
 (*"document_schema.document_with_class"
-A *document_with_class* is a type of <<express:document_schema:document_schema.document, document>> for which a classification is specified. 
+A *document_with_class* is a type of <<express:document_schema:document_schema.document,document>> for which a classification is specified. 
 
 [example]
 ====
@@ -349,7 +383,7 @@ A surface finish document may be identified by various classes, class A, class B
 *)
 
 (*"document_schema.document_with_class.class"
-the identification of the data classification to which the <<express:document_schema:document_schema.document, document>> belongs.
+the identification of the data classification to which the <<express:document_schema:document_schema.document,document>> belongs.
 
 [NOTE]
 --
@@ -363,7 +397,7 @@ The value of this attribute would be 'A', 'B' or 'C' in the previous example.
 *)
 
 (*"document_schema.acyclic_document_relationship"
-The *acyclic_document_relationship* function determines whether the graph of instances of the entity data type <<express:document_schema:document_schema.document, document>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:document_schema:document_schema.document_relationship, document_relationship>> or any of its subtypes. 
+The *acyclic_document_relationship* function determines whether the graph of instances of the entity data type <<express:document_schema:document_schema.document,document>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:document_schema:document_schema.document_relationship,document_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -374,18 +408,18 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:document_schema:document_schema.document_relationship, document_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:document_schema:document_schema.document_relationship,document_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"document_schema.acyclic_document_relationship.relation"
-(input) the candidate <<express:document_schema:document_schema.document_relationship, document_relationship>> to be checked.
+(input) the candidate <<express:document_schema:document_schema.document_relationship,document_relationship>> to be checked.
 *)
 
 (*"document_schema.acyclic_document_relationship.relatives"
-(input) the set of instances of the entity data type <<express:document_schema:document_schema.document, document>> for which the function is searching in the <<express:document_schema:document_schema.document_relationship.relating_document, relating_document>> parameter of the relation argument.
+(input) the set of instances of the entity data type <<express:document_schema:document_schema.document,document>> for which the function is searching in the <<express:document_schema:document_schema.document_relationship.relating_document,relating_document>> parameter of the relation argument.
 *)
 
 (*"document_schema.acyclic_document_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:document_schema:document_schema.document_relationship, document_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:document_schema:document_schema.document_relationship,document_relationship>> entity.
 *)

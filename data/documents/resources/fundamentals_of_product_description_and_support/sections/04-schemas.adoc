@@ -51,6 +51,8 @@ _EXPRESS specification:_
 --
 {% endif %}
 
+Type item count of {{type.id}} is {{type.items.size}}
+
 {% if type.items.size > 0 %}
 
 {% for item in type.items %}
@@ -102,6 +104,25 @@ _Attribute definitions_
 {% endfor %}
 {% endif %}
 
+{% assign found = false %}
+{% for where1 in entity.where %}
+{% if where1.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and entity.where.size > 0 %}
+_Entity where:_
+
+{% for where1 in entity.where %}
+{% if where1.remarks %}
+[[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
+{{ where1.id }}: {{ where1.remarks }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
 
 {% endfor %}
 {% endif %}
@@ -132,12 +153,21 @@ _EXPRESS specification:_
 {{ function.source }}
 --
 
-{% if function.parameters.size > 0 %}
+{% assign found = false %}
+{% for parameter in function.parameters %}
+{% if parameter.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and function.parameters.size > 0 %}
 _Argument definitions:_
 
 {% for parameter in function.parameters %}
+{% if parameter.remarks %}
 [[{{schema.id}}.{{function.id}}.{{parameter.id}}]]
-{{ parameter.id }}: {{ parameter.remarks }}
+*{{ parameter.id }}*: {{ parameter.remarks }}
+{% endif %}
 
 {% endfor %}
 {% endif %}
@@ -244,13 +274,21 @@ _EXPRESS specification:_
 {{ procedure.source }}
 --
 
+{% assign found = false %}
+{% for parameter in procedure.parameters %}
+{% if parameter.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
 
-{% if procedure.parameters.size > 0 %}
+{% if found and procedure.parameters.size > 0 %}
 _Argument definitions:_
 
 {% for parameter in procedure.parameters %}
+{% if parameter.remarks %}
 [[{{schema.id}}.{{procedure.id}}.{{parameter.id}}]]
-{{ parameter.id }}: {{ parameter.remarks }}
+*{{ parameter.id }}*: {{ parameter.remarks }}
+{% endif %}
 
 {% endfor %}
 {% endif %}
@@ -440,14 +478,21 @@ _Rule statements:_
 {% endif %}
 
 
+{% assign found = false %}
+{% for where1 in entity.where %}
+{% if where1.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
 
-
-{% if rule.where.size > 0 %}
+{% if found and rule.where.size > 0 %}
 _Rule where:_
 
 {% for where1 in rule.where %}
+{% if where1.remarks %}
 [[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
 {{ where1.id }}: {{ where1.remarks }}
+{% endif %}
 
 {% endfor %}
 {% endif %}

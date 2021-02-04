@@ -118,13 +118,47 @@ Examples and diagrams of the manner in which the entities of this part of ISO 10
 
 // EXPRESS-G
 
-expg_image:product_concept_schemaexpg1.xml[]
+[.svgmap]
+====
+image::product_concept_schemaexpg1.svg[]
 
-expg_image:product_concept_schemaexpg2.xml[]
+* <<express:product_concept_schema,product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml
+* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
+* <<express:application_context_schema,application_context_schema>>; ../../resources/application_context_schema/application_context_schema.xml
+====
+
+[.svgmap]
+====
+image::product_concept_schemaexpg2.svg[]
+
+* <<express:application_context_schema.xml#application_context_schema,application_context_schema.xml#application_context_schema>>; ../../resources/application_context_schema/application_context_schema.xml#application_context_schema.product_concept_context
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.product_concept_feature_association
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.product_concept
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.concept_feature_relationship_with_condition
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.concept_feature_operator
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.product_concept_relationship
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.conditional_concept_feature
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.concept_feature_relationship
+* <<express:product_concept_schema.xml#product_concept_schema,product_concept_schema.xml#product_concept_schema>>; ../../resources/product_concept_schema/product_concept_schema.xml#product_concept_schema.product_concept_feature
+====
 *)
 
 (*"product_concept_schema.concept_feature_operator"
-A *concept_feature_operator* is a definition of an operation that is used to constrain the relationship between two <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>>. 
+A *concept_feature_operator* is a definition of an operation that is used to constrain the relationship between two <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>>. 
 
 [example]
 ====
@@ -143,7 +177,7 @@ Annex E contains examples of this entity and figures that depict the relationshi
 *)
 
 (*"product_concept_schema.concept_feature_operator.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *concept_feature_operator* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *concept_feature_operator* is known.
 
 [NOTE]
 --
@@ -152,11 +186,11 @@ The name designates the operation.
 *)
 
 (*"product_concept_schema.concept_feature_operator.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *concept_feature_operator*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *concept_feature_operator*. The value of this attribute need not be specified.
 *)
 
 (*"product_concept_schema.concept_feature_relationship"
-A *concept_feature_relationship* is an association between two <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>>. 
+A *concept_feature_relationship* is an association between two <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>>. 
 
 [NOTE]
 --
@@ -165,27 +199,27 @@ The meaning of the association can be specified in each annotated EXPRESS schema
 *)
 
 (*"product_concept_schema.concept_feature_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *concept_feature_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *concept_feature_relationship* is known.
 *)
 
 (*"product_concept_schema.concept_feature_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *concept_feature_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *concept_feature_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"product_concept_schema.concept_feature_relationship.relating_product_concept_feature"
-one of the <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> that is a part of the association.
+one of the <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> that is a part of the association.
 *)
 
 (*"product_concept_schema.concept_feature_relationship.related_product_concept_feature"
-the other <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> that is a part of the association. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> that is a part of the association. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 *)
 
 (*"product_concept_schema.concept_feature_relationship_with_condition"
-A *concept_feature_relationship_with_condition* is a type of <<express:product_concept_schema:product_concept_schema.concept_feature_relationship, concept_feature_relationship>> in which a conditional operator characterizes the relationship between the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.related_product_concept_feature, related_product_concept_feature>> and the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.relating_product_concept_feature, relating_product_concept_feature>>. 
+A *concept_feature_relationship_with_condition* is a type of <<express:product_concept_schema:product_concept_schema.concept_feature_relationship,concept_feature_relationship>> in which a conditional operator characterizes the relationship between the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.related_product_concept_feature,related_product_concept_feature>> and the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.relating_product_concept_feature,relating_product_concept_feature>>. 
 
 [NOTE]
 --
-When specified as the condition for a <<express:product_concept_schema:product_concept_schema.conditional_concept_feature, conditional_concept_feature>>, a *concept_feature_relationship_with_condition* defines a constraint for the use of a <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>>. Complex conditions can be constructed for a <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> by using the *concept_feature_relationship_with_condition* to relate <<express:product_concept_schema:product_concept_schema.conditional_concept_feature, conditional_concept_feature>> to each other.
+When specified as the condition for a <<express:product_concept_schema:product_concept_schema.conditional_concept_feature,conditional_concept_feature>>, a *concept_feature_relationship_with_condition* defines a constraint for the use of a <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>>. Complex conditions can be constructed for a <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> by using the *concept_feature_relationship_with_condition* to relate <<express:product_concept_schema:product_concept_schema.conditional_concept_feature,conditional_concept_feature>> to each other.
 --
 
 [NOTE]
@@ -195,20 +229,20 @@ Annex E contains examples of this entity and figures that depict the relationshi
 *)
 
 (*"product_concept_schema.concept_feature_relationship_with_condition.conditional_operator"
-the <<express:product_concept_schema:product_concept_schema.concept_feature_operator, concept_feature_operator>> used in the relationship between the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.relating_product_concept_feature, relating_product_concept_feature>> and the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.related_product_concept_feature, related_product_concept_feature>>.
+the <<express:product_concept_schema:product_concept_schema.concept_feature_operator,concept_feature_operator>> used in the relationship between the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.relating_product_concept_feature,relating_product_concept_feature>> and the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.related_product_concept_feature,related_product_concept_feature>>.
 
 [example]
 ====
-A condition of negation is specified by using a <<express:product_concept_schema:product_concept_schema.concept_feature_operator, concept_feature_operator>> with a name of "NOT" and a *product_concept_feature_relationship_with_condition* in which the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.related_product_concept_feature, related_product_concept_feature>> and the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.relating_product_concept_feature, relating_product_concept_feature>> reference the same instance of <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>>.
+A condition of negation is specified by using a <<express:product_concept_schema:product_concept_schema.concept_feature_operator,concept_feature_operator>> with a name of "NOT" and a *product_concept_feature_relationship_with_condition* in which the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.related_product_concept_feature,related_product_concept_feature>> and the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship.relating_product_concept_feature,relating_product_concept_feature>> reference the same instance of <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>>.
 ====
 *)
 
 (*"product_concept_schema.conditional_concept_feature"
-A *conditional_concept_feature* is a type of <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> that is the combination of two <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> constrained by an operator. 
+A *conditional_concept_feature* is a type of <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> that is the combination of two <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> constrained by an operator. 
 
 [NOTE]
 --
-Complex combinations of <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> may be constructed using *conditional_concept_feature*s as operands of a <<express:product_concept_schema:product_concept_schema.concept_feature_relationship_with_condition, concept_feature_relationship_with_condition>>.
+Complex combinations of <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> may be constructed using *conditional_concept_feature*s as operands of a <<express:product_concept_schema:product_concept_schema.concept_feature_relationship_with_condition,concept_feature_relationship_with_condition>>.
 --
 
 [NOTE]
@@ -218,7 +252,7 @@ Annex E contains examples of this entity and figures that depict the relationshi
 *)
 
 (*"product_concept_schema.conditional_concept_feature.condition"
-the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship_with_condition, concept_feature_relationship_with_condition>> that establishes the condition for the *conditional_concept_feature*.
+the <<express:product_concept_schema:product_concept_schema.concept_feature_relationship_with_condition,concept_feature_relationship_with_condition>> that establishes the condition for the *conditional_concept_feature*.
 *)
 
 (*"product_concept_schema.product_concept"
@@ -236,7 +270,7 @@ If an organization manufactures cars and engines for cars, the cars will be repr
 *)
 
 (*"product_concept_schema.product_concept.id"
-the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *product_concept*.
+the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *product_concept*.
 
 [example]
 ====
@@ -245,11 +279,11 @@ The *id* could be a sales model number.
 *)
 
 (*"product_concept_schema.product_concept.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *product_concept* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *product_concept* is known.
 *)
 
 (*"product_concept_schema.product_concept.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *product_concept*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *product_concept*. The value of this attribute need not be specified.
 
 [NOTE]
 --
@@ -276,7 +310,7 @@ The *id* shall be unique within a population of *product_concept*.
 *)
 
 (*"product_concept_schema.product_concept_feature"
-A *product_concept_feature* is a characteristic intended to be used to distinguish variations among the products of one or more <<express:product_concept_schema:product_concept_schema.product_concept, product_concept>>. 
+A *product_concept_feature* is a characteristic intended to be used to distinguish variations among the products of one or more <<express:product_concept_schema:product_concept_schema.product_concept,product_concept>>. 
 
 [example]
 ====
@@ -290,19 +324,19 @@ The categorization of *product_concept_feature*s is accomplished through the mec
 *)
 
 (*"product_concept_schema.product_concept_feature.id"
-the <<express:support_resource_schema:support_resource_schema.identifier, identifier>> that distinguishes the *product_concept_feature*.
+the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *product_concept_feature*.
 *)
 
 (*"product_concept_schema.product_concept_feature.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *product_concept_feature* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *product_concept_feature* is known.
 *)
 
 (*"product_concept_schema.product_concept_feature.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *product_concept_feature*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *product_concept_feature*. The value of this attribute need not be specified.
 *)
 
 (*"product_concept_schema.product_concept_feature_association"
-A *product_concept_feature_association* is a relationship, that relates a <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> to a <<express:product_concept_schema:product_concept_schema.product_concept, product_concept>>. A <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> as it is related to a <<express:product_concept_schema:product_concept_schema.product_concept, product_concept>> may define the content of a <<express:configuration_management_schema:configuration_management_schema.configuration_item, configuration_item>>. 
+A *product_concept_feature_association* is a relationship, that relates a <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> to a <<express:product_concept_schema:product_concept_schema.product_concept,product_concept>>. A <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> as it is related to a <<express:product_concept_schema:product_concept_schema.product_concept,product_concept>> may define the content of a <<express:configuration_management_schema:configuration_management_schema.configuration_item,configuration_item>>. 
 
 [NOTE]
 --
@@ -311,23 +345,23 @@ The meaning of the association can be specified in each annotated EXPRESS schema
 *)
 
 (*"product_concept_schema.product_concept_feature_association.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *product_concept_feature_association* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *product_concept_feature_association* is known.
 *)
 
 (*"product_concept_schema.product_concept_feature_association.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *product_concept_feature_association*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *product_concept_feature_association*. The value of this attribute need not be specified.
 *)
 
 (*"product_concept_schema.product_concept_feature_association.concept"
-the <<express:product_concept_schema:product_concept_schema.product_concept, product_concept>> that is being associated.
+the <<express:product_concept_schema:product_concept_schema.product_concept,product_concept>> that is being associated.
 *)
 
 (*"product_concept_schema.product_concept_feature_association.feature"
-the <<express:product_concept_schema:product_concept_schema.product_concept_feature, product_concept_feature>> that is being associated.
+the <<express:product_concept_schema:product_concept_schema.product_concept_feature,product_concept_feature>> that is being associated.
 *)
 
 (*"product_concept_schema.product_concept_relationship"
-A *product_concept_relationship* is an association between two <<express:product_concept_schema:product_concept_schema.product_concept, product_concept>>. 
+A *product_concept_relationship* is an association between two <<express:product_concept_schema:product_concept_schema.product_concept,product_concept>>. 
 
 [NOTE]
 --
@@ -336,17 +370,17 @@ The meaning of the association can be specified in each annotated EXPRESS schema
 *)
 
 (*"product_concept_schema.product_concept_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *product_concept_relationship* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *product_concept_relationship* is known.
 *)
 
 (*"product_concept_schema.product_concept_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *product_concept_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *product_concept_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"product_concept_schema.product_concept_relationship.relating_product_concept"
-one of the <<express:product_concept_schema:product_concept_schema.product_concept, product_concept>> that is a part of the association.
+one of the <<express:product_concept_schema:product_concept_schema.product_concept,product_concept>> that is a part of the association.
 *)
 
 (*"product_concept_schema.product_concept_relationship.related_product_concept"
-the other <<express:product_concept_schema:product_concept_schema.product_concept, product_concept>> that is a part of the association. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other <<express:product_concept_schema:product_concept_schema.product_concept,product_concept>> that is a part of the association. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 *)
