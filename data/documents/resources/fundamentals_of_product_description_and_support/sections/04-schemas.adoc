@@ -56,14 +56,23 @@ _EXPRESS specification:_
 {% if type.type.items %}
 {% if type.type.items.size > 0 %}
 
+{% assign found = false %}
+{% for item in type.type.items %}
+{% if item.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+_Type items:_
 {% for item in type.type.items %}
 [[{{schema.id}}.{{type.id}}.{{item.id}}]]
-_Type items:_
 
 {% if item.remarks %}
 {{ item.id }}: {{ item.remarks }}
 {% endif %}
 {% endfor %}
+{% endif %}
 {% endif %}
 {% endif %}
 {% endif %}
