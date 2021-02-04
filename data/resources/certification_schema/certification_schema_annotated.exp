@@ -61,9 +61,24 @@ A certified supplier can supply goods that do not require checking.
 
 Certification information can be attached to any aspect of product data.
 
-expg_image:certification_schemaexpg1.xml[]
+[.svgmap]
+====
+image::certification_schemaexpg1.svg[]
 
-expg_image:certification_schemaexpg2.xml[]
+* <<express:certification_schema,certification_schema>>; ../../resources/certification_schema/certification_schema.xml
+* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
+====
+
+[.svgmap]
+====
+image::certification_schemaexpg2.svg[]
+
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:certification_schema.xml#certification_schema,certification_schema.xml#certification_schema>>; ../../resources/certification_schema/certification_schema.xml#certification_schema.certification
+* <<express:certification_schema.xml#certification_schema,certification_schema.xml#certification_schema>>; ../../resources/certification_schema/certification_schema.xml#certification_schema.certification_type
+====
 *)
 
 (*"certification_schema.certification"
@@ -76,7 +91,7 @@ The role of *certification* can be defined in the annotated EXPRESS schemas that
 *)
 
 (*"certification_schema.certification.name"
-the <<express:support_resource_schema:support_resource_schema.label, label>> by which the *certification* is known.
+the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *certification* is known.
 *)
 
 (*"certification_schema.certification.purpose"
@@ -89,11 +104,11 @@ A purpose for material certification could be the fact that certain customers de
 *)
 
 (*"certification_schema.certification.kind"
-the <<express:certification_schema:certification_schema.certification_type, certification_type>> that defines the class of *certification* that is applied.
+the <<express:certification_schema:certification_schema.certification_type,certification_type>> that defines the class of *certification* that is applied.
 *)
 
 (*"certification_schema.certification_type"
-A *certification_type* is the kind of <<express:certification_schema:certification_schema.certification, certification>> granted. 
+A *certification_type* is the kind of <<express:certification_schema:certification_schema.certification,certification>> granted. 
 
 [example]
 ====
@@ -102,7 +117,7 @@ Suppliers and manufacturers can be certified.
 *)
 
 (*"certification_schema.certification_type.description"
-the <<express:support_resource_schema:support_resource_schema.text, text>> that characterizes the *certification_type*.
+the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *certification_type*.
 
 [NOTE]
 --

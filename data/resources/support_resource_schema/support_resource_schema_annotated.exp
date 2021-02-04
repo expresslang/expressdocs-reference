@@ -85,9 +85,21 @@ Product data items may have an identification. The formats used to define identi
 
 Product data items may have a label. The formats used to define labels are quite various. This International Standard defines identifiers as strings. It does not specify the internal structure and content of these strings.
 
-expg_image:support_resource_schemaexpg1.xml[]
+[.svgmap]
+====
+image::support_resource_schemaexpg1.svg[]
 
-expg_image:support_resource_schemaexpg2.xml[]
+* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
+====
+
+[.svgmap]
+====
+image::support_resource_schemaexpg2.svg[]
+
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
+* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+====
 *)
 
 (*"support_resource_schema.identifier"
