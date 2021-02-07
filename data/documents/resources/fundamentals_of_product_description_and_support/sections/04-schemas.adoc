@@ -69,7 +69,7 @@ _Type items:_
 [[{{schema.id}}.{{type.id}}.{{item.id}}]]
 
 {% if item.remarks %}
-{{ item.id }}: {{ item.remarks }}
+*{{ item.id }}*: {{ item.remarks }}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -78,6 +78,21 @@ _Type items:_
 {% endif %}
 {% endif %}
 
+{% assign found = false %}
+{% for where1 in type.where %}
+{% if where1.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and entity.where.size > 0 %}
+_Formal propositions:_
+
+{% for where1 in type.where %}
+{% if where1.remarks %}
+[[{{schema.id}}.{{type.id}}.{{where1.id}}]]
+{{ where1.id }}: {{ where1.remarks }}
+{% endif %}
 
 {% endfor %}
 {% endif %}
@@ -127,7 +142,7 @@ _Attribute definitions_
 {% endfor %}
 
 {% if found and entity.where.size > 0 %}
-_Entity where:_
+_Formal propositions:_
 
 {% for where1 in entity.where %}
 {% if where1.remarks %}
@@ -507,7 +522,7 @@ _Rule statements:_
 {% endfor %}
 
 {% if found and rule.where.size > 0 %}
-_Rule where:_
+_Formal propositions:_
 
 {% for where1 in rule.where %}
 {% if where1.remarks %}
