@@ -85,7 +85,7 @@ _Type items:_
 {% endif %}
 {% endfor %}
 
-{% if found and entity.where.size > 0 %}
+{% if found and type.where.size > 0 %}
 _Formal propositions:_
 
 {% for where1 in type.where %}
