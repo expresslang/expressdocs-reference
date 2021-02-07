@@ -97,6 +97,9 @@ _Formal propositions:_
 {% endfor %}
 {% endif %}
 
+{% endfor %}
+{% endif %}
+
 
 
 {% if schema.entities.size > 0 %}
