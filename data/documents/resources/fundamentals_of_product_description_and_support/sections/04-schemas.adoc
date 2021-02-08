@@ -97,6 +97,26 @@ _Formal propositions:_
 {% endfor %}
 {% endif %}
 
+{% assign found = false %}
+{% for where1 in type.informal_propositions %}
+{% if where1.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and type.informal_propositions.size > 0 %}
+_Informal propositions:_
+
+{% for where1 in type.informal_propositions %}
+{% if where1.remarks %}
+[[{{schema.id}}.{{type.id}}.{{where1.id}}]]
+{{ where1.id }}: {{ where1.remarks }}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
 {% endfor %}
 {% endif %}
 
@@ -155,6 +175,26 @@ _Formal propositions:_
 
 {% endfor %}
 {% endif %}
+
+{% assign found = false %}
+{% for where1 in entity.informal_propositions %}
+{% if where1.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and entity.informal_propositions.size > 0 %}
+_Informal propositions:_
+
+{% for where1 in entity.informal_propositions %}
+{% if where1.remarks %}
+[[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
+{{ where1.id }}: {{ where1.remarks }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
 
 
 {% endfor %}
@@ -535,6 +575,26 @@ _Formal propositions:_
 
 {% endfor %}
 {% endif %}
+
+{% assign found = false %}
+{% for where1 in rule.informal_propositions %}
+{% if where1.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and rule.informal_propositions.size > 0 %}
+_Informal propositions:_
+
+{% for where1 in rule.informal_propositions %}
+{% if where1.remarks %}
+[[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
+{{ where1.id }}: {{ where1.remarks }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
 
 
 {% endfor %}
