@@ -1,11 +1,15 @@
-[lutaml, ../../../resources/action_schema/action_schema.exp;../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../resources/approval_schema/approval_schema_annotated.exp;../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../resources/certification_schema/certification_schema_annotated.exp;../../../resources/contract_schema/contract_schema_annotated.exp;../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../resources/document_schema/document_schema.exp;../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../resources/experience_schema/experience_schema_annotated.exp;../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../resources/group_schema/group_schema_annotated.exp;../../../resources/language_schema/language_schema_annotated.exp;../../../resources/location_schema/location_schema_annotated.exp;../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../resources/measure_schema/measure_schema_annotated.exp;../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../resources/product_concept_schema/product_concept_schema_annotated.exp;../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+1]
+[lutaml, ../../../resources/action_schema/action_schema_annotated.exp;../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../resources/approval_schema/approval_schema_annotated.exp;../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../resources/certification_schema/certification_schema_annotated.exp;../../../resources/contract_schema/contract_schema_annotated.exp;../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../resources/document_schema/document_schema.exp;../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../resources/experience_schema/experience_schema_annotated.exp;../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../resources/group_schema/group_schema_annotated.exp;../../../resources/language_schema/language_schema_annotated.exp;../../../resources/location_schema/location_schema_annotated.exp;../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../resources/measure_schema/measure_schema_annotated.exp;../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../resources/product_concept_schema/product_concept_schema_annotated.exp;../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+1]
 ---
 {% for schema in repo.schemas %}
 [[{{schema.id}}]]
 [type="express"]
 == {{ schema.id }}
 
-{{ schema.remarks }}
+{% capture newLine %}
+
+{% endcapture %}
+
+{{ schema.remarks | join: newLine }}
 
 _EXPRESS specification:_
 
@@ -30,7 +34,7 @@ _EXPRESS specification:_
 --
 {% endif %}
 
-{{ constant.remarks }}
+{{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
@@ -44,7 +48,7 @@ _EXPRESS specification:_
 [type="express"]
 ==== {{ type.id }}
 
-{{ type.remarks }}
+{{ type.remarks | join: newLine }}
 
 {% if type.source %}
 _EXPRESS specification:_
@@ -62,7 +66,7 @@ _EXPRESS specification:_
 
 {% assign found = false %}
 {% for item in type.type.items %}
-{% if item.remarks %}
+{% if item.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -72,8 +76,8 @@ _Type items:_
 {% for item in type.type.items %}
 [[{{schema.id}}.{{type.id}}.{{item.id}}]]
 
-{% if item.remarks %}
-*{{ item.id }}*: {{ item.remarks }}
+{% if item.remarks.size > 0 %}
+*{{ item.id }}*: {{ item.remarks | join: newLine }}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -84,7 +88,7 @@ _Type items:_
 
 {% assign found = false %}
 {% for where1 in type.where %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -93,9 +97,9 @@ _Type items:_
 _Formal propositions:_
 
 {% for where1 in type.where %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{type.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks }}
+{{ where1.id }}: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -103,7 +107,7 @@ _Formal propositions:_
 
 {% assign found = false %}
 {% for where1 in type.informal_propositions %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -112,9 +116,9 @@ _Formal propositions:_
 _Informal propositions:_
 
 {% for where1 in type.informal_propositions %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{type.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks }}
+{{ where1.id }}: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 
@@ -135,7 +139,7 @@ _Informal propositions:_
 [type="express"]
 ==== {{ entity.id }}
 
-{{ entity.remarks }}
+{{ entity.remarks | join: newLine }}
 
 _EXPRESS specification:_
 
@@ -146,7 +150,7 @@ _EXPRESS specification:_
 
 {% assign found = false %}
 {% for attribute in entity.attributes %}
-{% if attribute.remarks %}
+{% if attribute.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -155,9 +159,9 @@ _EXPRESS specification:_
 _Attribute definitions_
 
 {% for attribute in entity.attributes %}
-{% if attribute.remarks %}
+{% if attribute.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
-*{{ attribute.id }}*: {{ attribute.remarks }}
+*{{ attribute.id }}*: {{ attribute.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -165,7 +169,7 @@ _Attribute definitions_
 
 {% assign found = false %}
 {% for where1 in entity.where %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -174,9 +178,9 @@ _Attribute definitions_
 _Formal propositions:_
 
 {% for where1 in entity.where %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks }}
+{{ where1.id }}: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -184,7 +188,7 @@ _Formal propositions:_
 
 {% assign found = false %}
 {% for where1 in entity.informal_propositions %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -193,9 +197,9 @@ _Formal propositions:_
 _Informal propositions:_
 
 {% for where1 in entity.informal_propositions %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks }}
+{{ where1.id }}: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -212,7 +216,7 @@ _Subtype Constraints_
 
 {% for constraint in schema.subtype_constraints %}
 [[{{schema.id}}.{{constraint.id}}]]
-{{ constraint.id }}: {{ constraint.remarks }}
+{{ constraint.id }}: {{ constraint.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
@@ -225,7 +229,7 @@ _Subtype Constraints_
 [type="express"]
 ==== {{ function.id }}
 
-{{ function.remarks }}
+{{ function.remarks | join: newLine }}
 
 _EXPRESS specification:_
 
@@ -236,7 +240,7 @@ _EXPRESS specification:_
 
 {% assign found = false %}
 {% for parameter in function.parameters %}
-{% if parameter.remarks %}
+{% if parameter.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -245,9 +249,9 @@ _EXPRESS specification:_
 _Argument definitions:_
 
 {% for parameter in function.parameters %}
-{% if parameter.remarks %}
+{% if parameter.remarks.size > 0 %}
 [[{{schema.id}}.{{function.id}}.{{parameter.id}}]]
-*{{ parameter.id }}*: {{ parameter.remarks }}
+*{{ parameter.id }}*: {{ parameter.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -259,15 +263,15 @@ _Function types:_
 
 {% for type in function.types %}
 [[{{schema.id}}.{{function.id}}.{{type.id}}]]
-{{ type.id }}: {{ type.remarks }}
+{{ type.id }}: {{ type.remarks | join: newLine }}
 
 
 {% if type.type and type.type.items and type.type.items.size > 0 %}
 
 {% for item in type.type.items %}
 [[{{schema.id}}.{{function.id}}.{{type.id}}.{{item.id}}]]
-{% if item.remarks %}
-* Item {{ item.id }}: {{ item.remarks }}
+{% if item.remarks.size > 0 %}
+* Item {{ item.id }}: {{ item.remarks | join: newLine }}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -282,14 +286,14 @@ _Function constants:_
 
 {% for constant in function.constants %}
 [[{{schema.id}}.{{function.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks }}
+{{ constant.id }}: {{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
 
 {% assign found = false %}
 {% for variable in function.variables %}
-{% if variable.remarks %}
+{% if variable.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -298,10 +302,10 @@ _Function constants:_
 _Function variables:_
 
 {% for variable in function.variables %}
-{% if variable.remarks %}
+{% if variable.remarks.size > 0 %}
 
 [[{{schema.id}}.{{function.id}}.{{variable.id}}]]
-{{ variable.id }}: {{ variable.remarks }}
+{{ variable.id }}: {{ variable.remarks | join: newLine }}
 
 {% endif %}
 {% endfor %}
@@ -309,7 +313,7 @@ _Function variables:_
 
 {% assign found = false %}
 {% for statement in function.statements %}
-{% if statement.remarks %}
+{% if statement.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -319,7 +323,7 @@ _Function statements:_
 
 {% for statement in function.statements %}
 
-{% if statement.remarks %}
+{% if statement.remarks.size > 0 %}
 
 {% if statement.id %}
 {% assign statementid = statement.id %}
@@ -328,7 +332,7 @@ _Function statements:_
 {% endif %}
 
 [[{{schema.id}}.{{function.id}}.{{ statementid }}]]
-{{ statementid }}: {{ statement.remarks }}
+{{ statementid }}: {{ statement.remarks | join: newLine }}
 
 
 
@@ -350,7 +354,7 @@ _Function statements:_
 [type="express"]
 ==== {{ procedure.id }}
 
-{{ procedure.remarks }}
+{{ procedure.remarks | join: newLine }}
 
 _EXPRESS specification:_
 
@@ -361,7 +365,7 @@ _EXPRESS specification:_
 
 {% assign found = false %}
 {% for parameter in procedure.parameters %}
-{% if parameter.remarks %}
+{% if parameter.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -370,9 +374,9 @@ _EXPRESS specification:_
 _Argument definitions:_
 
 {% for parameter in procedure.parameters %}
-{% if parameter.remarks %}
+{% if parameter.remarks.size > 0 %}
 [[{{schema.id}}.{{procedure.id}}.{{parameter.id}}]]
-*{{ parameter.id }}*: {{ parameter.remarks }}
+*{{ parameter.id }}*: {{ parameter.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -384,15 +388,15 @@ _Procedure types:_
 
 {% for type in procedure.types %}
 [[{{schema.id}}.{{procedure.id}}.{{type.id}}]]
-{{ type.id }}: {{ type.remarks }}
+{{ type.id }}: {{ type.remarks | join: newLine }}
 
 
 {% if type.type and type.type.items and type.type.items.size > 0 %}
 
 {% for item in type.type.items %}
 [[{{schema.id}}.{{procedure.id}}.{{type.id}}.{{item.id}}]]
-{% if item.remarks %}
-* Item {{ item.id }}: {{ item.remarks }}
+{% if item.remarks.size > 0 %}
+* Item {{ item.id }}: {{ item.remarks | join: newLine }}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -407,14 +411,14 @@ _Procedure constants:_
 
 {% for constant in procedure.constants %}
 [[{{schema.id}}.{{procedure.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks }}
+{{ constant.id }}: {{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
 
 {% assign found = false %}
 {% for variable in procedure.variables %}
-{% if procedure.remarks %}
+{% if procedure.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -423,9 +427,9 @@ _Procedure constants:_
 _Procedure variables:_
 
 {% for variable in procedure.variables %}
-{% if variable.remarks %}
+{% if variable.remarks.size > 0 %}
 [[{{schema.id}}.{{procedure.id}}.{{variable.id}}]]
-{{ variable.id }}: {{ variable.remarks }}
+{{ variable.id }}: {{ variable.remarks | join: newLine }}
 
 {% endif %}
 {% endfor %}
@@ -433,7 +437,7 @@ _Procedure variables:_
 
 {% assign found = false %}
 {% for statement in procedure.statements %}
-{% if statement.remarks %}
+{% if statement.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -454,7 +458,7 @@ _Procedure statements:_
 {% endif %}
 
 [[{{schema.id}}.{{procedure.id}}.{{statementid }}]]
-{{ statementid }}: {{ statement.remarks }}
+{{ statementid }}: {{ statement.remarks | join: newLine }}
 
 
 
@@ -474,7 +478,7 @@ _Procedure statements:_
 [type="express"]
 ==== {{ rule.id }}
 
-{{ rule.remarks }}
+{{ rule.remarks | join: newLine }}
 
 _EXPRESS specification:_
 
@@ -489,15 +493,15 @@ _Rule types:_
 
 {% for type in rule.types %}
 [[{{schema.id}}.{{rule.id}}.{{type.id}}]]
-{{ type.id }}: {{ type.remarks }}
+{{ type.id }}: {{ type.remarks | join: newLine }}
 
 
 {% if type.type and type.type.items and type.type.items.size > 0 %}
 
 {% for item in type.type.items %}
 [[{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
-{% if item.remarks %}
-* Item {{ item.id }}: {{ item.remarks }}
+{% if item.remarks.size > 0 %}
+* Item {{ item.id }}: {{ item.remarks | join: newLine }}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -512,7 +516,7 @@ _Rule constants:_
 
 {% for constant in rule.constants %}
 [[{{schema.id}}.{{rule.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks }}
+{{ constant.id }}: {{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
@@ -520,7 +524,7 @@ _Rule constants:_
 
 {% assign found = false %}
 {% for variable in procedure.variables %}
-{% if procedure.remarks %}
+{% if procedure.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -529,9 +533,9 @@ _Rule constants:_
 _Rule variables:_
 
 {% for variable in rule.variables %}
-{% if variable.remarks %}
+{% if variable.remarks.size > 0 %}
 [[{{schema.id}}.{{rule.id}}.{{variable.id}}]]
-{{ variable.id }}: {{ variable.remarks }}
+{{ variable.id }}: {{ variable.remarks | join: newLine }}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -559,7 +563,7 @@ _Rule statements:_
 {% endif %}
 
 [[{{schema.id}}.{{rule.id}}.{{statementid }}]]
-{{ statementid }}: {{ statement.remarks }}
+{{ statementid }}: {{ statement.remarks | join: newLine }}
 
 
 
@@ -571,7 +575,7 @@ _Rule statements:_
 
 {% assign found = false %}
 {% for where1 in entity.where %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -580,9 +584,9 @@ _Rule statements:_
 _Formal propositions:_
 
 {% for where1 in rule.where %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks }}
+{{ where1.id }}: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -590,7 +594,7 @@ _Formal propositions:_
 
 {% assign found = false %}
 {% for where1 in rule.informal_propositions %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
@@ -599,9 +603,9 @@ _Formal propositions:_
 _Informal propositions:_
 
 {% for where1 in rule.informal_propositions %}
-{% if where1.remarks %}
+{% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks }}
+{{ where1.id }}: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -615,53 +619,4 @@ _Informal propositions:_
 
 {% endfor %}
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
