@@ -15,10 +15,12 @@ _EXPRESS specification:_
 --
 
 {% if schema.constants.size > 0 %}
+[type="express"]
 === {{schema.id}} constant definitions
 
 {% for constant in schema.constants %}
 [[{{schema.id}}.{{constant.id}}]]
+[type="express"]
 ==== {{ constant.id }}
 
 {% if constant.source %}
@@ -34,10 +36,12 @@ _EXPRESS specification:_
 {% endif %}
 
 {% if schema.types.size > 0 %}
+[type="express"]
 === {{schema.id}} type definitions
 
 {% for type in schema.types %}
 [[{{schema.id}}.{{type.id}}]]
+[type="express"]
 ==== {{ type.id }}
 
 {{ type.remarks }}
@@ -123,10 +127,12 @@ _Informal propositions:_
 
 
 {% if schema.entities.size > 0 %}
+[type="express"]
 === {{schema.id}} entity definitions
 
 {% for entity in schema.entities %}
 [[{{schema.id}}.{{entity.id}}]]
+[type="express"]
 ==== {{ entity.id }}
 
 {{ entity.remarks }}
@@ -212,9 +218,11 @@ _Subtype Constraints_
 {% endif %}
 
 {% if schema.functions.size > 0 %}
+[type="express"]
 === {{schema.id}} function definitions
 {% for function in schema.functions %}
 [[{{schema.id}}.{{function.id}}]]
+[type="express"]
 ==== {{ function.id }}
 
 {{ function.remarks }}
@@ -335,9 +343,11 @@ _Function statements:_
 
 
 {% if schema.procedures.size > 0 %}
+[type="express"]
 === Procedures
 {% for procedure in schema.procedures %}
 [[{{schema.id}}.{{procedure.id}}]]
+[type="express"]
 ==== {{ procedure.id }}
 
 {{ procedure.remarks }}
@@ -457,9 +467,11 @@ _Procedure statements:_
 {% endif %}
 
 {% if schema.rules.size > 0 %}
+[type="express"]
 === Rules
 {% for rule in schema.rules %}
 [[{{schema.id}}.{{rule.id}}]]
+[type="express"]
 ==== {{ rule.id }}
 
 {{ rule.remarks }}
