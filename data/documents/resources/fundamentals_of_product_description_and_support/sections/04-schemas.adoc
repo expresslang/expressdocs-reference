@@ -1,9 +1,10 @@
 [lutaml, ../../../resources/action_schema/action_schema_annotated.exp;../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../resources/approval_schema/approval_schema_annotated.exp;../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../resources/certification_schema/certification_schema_annotated.exp;../../../resources/contract_schema/contract_schema_annotated.exp;../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../resources/document_schema/document_schema.exp;../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../resources/experience_schema/experience_schema_annotated.exp;../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../resources/group_schema/group_schema_annotated.exp;../../../resources/language_schema/language_schema_annotated.exp;../../../resources/location_schema/location_schema_annotated.exp;../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../resources/measure_schema/measure_schema_annotated.exp;../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../resources/product_concept_schema/product_concept_schema_annotated.exp;../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+1]
 ---
 {% for schema in repo.schemas %}
-[[{{schema.id}}]]
+{% assign schemaname = schema.id | append: "$" | remove: "_schema$" | remove: "$" | replace: "_", " " | capitalize %}
+[[{{schema.id }}]]
 [type="express"]
-== {{ schema.id }}
+== {{ schemaname }}
 
 {% capture newLine %}
 
@@ -11,16 +12,18 @@
 
 {{ schema.remarks | join: newLine }}
 
-_EXPRESS specification:_
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
 {{ schema.head_source }}
 --
 
+////
+// constants not allowed for by SC 4
 {% if schema.constants.size > 0 %}
 [type="express"]
-=== {{schema.id}} constant definitions
+=== {{ schemaname }} constant definitions
 
 {% for constant in schema.constants %}
 [[{{schema.id}}.{{constant.id}}]]
@@ -38,10 +41,12 @@ _EXPRESS specification:_
 
 {% endfor %}
 {% endif %}
+////
+
 
 {% if schema.types.size > 0 %}
 [type="express"]
-=== {{schema.id}} type definitions
+=== {{ schemaname }} type definitions
 
 {% for type in schema.types %}
 [[{{schema.id}}.{{type.id}}]]
@@ -51,7 +56,7 @@ _EXPRESS specification:_
 {{ type.remarks | join: newLine }}
 
 {% if type.source %}
-_EXPRESS specification:_
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
@@ -72,7 +77,7 @@ _EXPRESS specification:_
 {% endfor %}
 
 {% if found %}
-_Type items:_
+[underline]#Enumerated item definitions:#
 {% for item in type.type.items %}
 [[{{schema.id}}.{{type.id}}.{{item.id}}]]
 
@@ -94,12 +99,12 @@ _Type items:_
 {% endfor %}
 
 {% if found and type.where.size > 0 %}
-_Formal propositions:_
+[underline]#Formal propositions:#
 
 {% for where1 in type.where %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{type.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks | join: newLine }}
+*{{ where1.id }}*: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -113,7 +118,7 @@ _Formal propositions:_
 {% endfor %}
 
 {% if found and type.informal_propositions.size > 0 %}
-_Informal propositions:_
+[underline]#Informal propositions:#
 
 {% for where1 in type.informal_propositions %}
 {% if where1.remarks.size > 0 %}
@@ -126,13 +131,15 @@ _Informal propositions:_
 {% endif %}
 
 {% endfor %}
+
+
 {% endif %}
 
 
 
 {% if schema.entities.size > 0 %}
 [type="express"]
-=== {{schema.id}} entity definitions
+=== {{ schemaname }} entity definitions
 
 {% for entity in schema.entities %}
 [[{{schema.id}}.{{entity.id}}]]
@@ -141,7 +148,7 @@ _Informal propositions:_
 
 {{ entity.remarks | join: newLine }}
 
-_EXPRESS specification:_
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
@@ -156,7 +163,7 @@ _EXPRESS specification:_
 {% endfor %}
 
 {% if entity.attributes.size > 0 and found %}
-_Attribute definitions_
+[underline]#Attribute definitions:#
 
 {% for attribute in entity.attributes %}
 {% if attribute.remarks.size > 0 %}
@@ -175,12 +182,12 @@ _Attribute definitions_
 {% endfor %}
 
 {% if found and entity.where.size > 0 %}
-_Formal propositions:_
+[underline]#Formal propositions:#
 
 {% for where1 in entity.where %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks | join: newLine }}
+*{{ where1.id }}*: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -194,7 +201,7 @@ _Formal propositions:_
 {% endfor %}
 
 {% if found and entity.informal_propositions.size > 0 %}
-_Informal propositions:_
+[underline]#Informal propositions:#
 
 {% for where1 in entity.informal_propositions %}
 {% if where1.remarks.size > 0 %}
@@ -211,27 +218,220 @@ _Informal propositions:_
 {% endif %}
 
 
-{% if schema.subtype_constraints.size > 0 %}
-_Subtype Constraints_
 
-{% for constraint in schema.subtype_constraints %}
-[[{{schema.id}}.{{constraint.id}}]]
-{{ constraint.id }}: {{ constraint.remarks | join: newLine }}
+
+
+
+{% if schema.rules.size > 0 %}
+[type="express"]
+{% if schema.rules.size == 1 %}
+[[{{schema.id}}.{{schema.rules[0].id}}]]
+=== {{ schemaname }} rule definition: {schema.rules[0].id}
+{% else %}
+=== {{ schemaname }} rule definitions
+{% endif %}
+{% for rule in schema.rules %}
+{% if schema.rules.size > 1 %}
+[[{{schema.id}}.{{rule.id}}]]
+[type="express"]
+==== {{ rule.id }}
+{% endif %}
+
+{{ rule.remarks | join: newLine }}
+
+[underline]#EXPRESS specification:#
+
+[source%unnumbered]
+--
+{{ rule.source }}
+--
+
+
+{% if rule.constants.size > 0 %}
+[underline]#Rule constants:#
+
+{% for constant in rule.constants %}
+[[{{schema.id}}.{{rule.id}}.{{constant.id}}]]
+{{ constant.id }}: {{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
 
-{% if schema.functions.size > 0 %}
+
+{% if rule.types.size > 0 %}
+[underline]#Rule types:#
+
+{% for type in rule.types %}
+[[{{schema.id}}.{{rule.id}}.{{type.id}}]]
+{{ type.id }}: {{ type.remarks | join: newLine }}
+
+
+{% if type.type and type.type.items and type.type.items.size > 0 %}
+
+{% for item in type.type.items %}
+[[{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
+{% if item.remarks.size > 0 %}
+* Item {{ item.id }}: {{ item.remarks | join: newLine }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+
+{% assign found = false %}
+{% for variable in rule.variables %}
+{% if rule.remarks.size > 0 %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+// [underline]#Rule variables:#
+[underline]#Argument definitions:#
+
+{% for variable in rule.variables %}
+{% if variable.remarks.size > 0 %}
+[[{{schema.id}}.{{rule.id}}.{{variable.id}}]]
+*{{ variable.id }}*: {{ variable.remarks | join: newLine }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+{% assign found = false %}
+{% for statement in function.statements %}
+{% if statement.remarks  %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+[underline]#Rule statements:#
+
+{% if statement.remarks  %}
+
+
+{% for statement in rule.statements %}
+
+{% if statement.id %}
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+[[{{schema.id}}.{{rule.id}}.{{statementid }}]]
+{{ statementid }}: {{ statement.remarks | join: newLine }}
+
+
+{% endfor %}
+{% endif %}
+{% endif %}
+
+
+{% assign found = false %}
+{% for where1 in rule.where %}
+{% if where1.remarks.size > 0 %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and rule.where.size > 0 %}
+[underline]#Formal propositions:#
+
+{% for where1 in rule.where %}
+{% if where1.remarks.size > 0 %}
+[[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
+*{{ where1.id }}*: {{ where1.remarks | join: newLine }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% assign found = false %}
+{% for where1 in rule.informal_propositions %}
+{% if where1.remarks.size > 0 %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found and rule.informal_propositions.size > 0 %}
+[underline]#Informal propositions:#
+
+{% for where1 in rule.informal_propositions %}
+{% if where1.remarks.size > 0 %}
+[[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
+{{ where1.id }}: {{ where1.remarks | join: newLine }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+
+
+{% endfor %}
+{% endif %}
+
+
+
+
+
+{% if schema.subtype_constraints.size > 0 %}
+{% if schema.subtype_constraints.size == 1 %}
+[[{{schema.id}}.{{schema.constraints[0].id}}]]
 [type="express"]
-=== {{schema.id}} function definitions
+=== {{schemaname}} subtype constraint definition: {{schema.subtype_constraints[0].id }}
+{% else %}
+[type="express"]
+=== {{schemaname}} subtype constraint definitions
+{% endif %}
+
+{% for constraint in schema.subtype_constraints %}
+{% if schema.subtype_constraints.size > 1 %}
+[type="express"]
+[[{{schema.id}}.{{constraint.id}}]]
+==== {{ constraint.id }}
+{% endif %}
+
+{{ constraint.remarks | join: newLine }}
+
+[underline]#EXPRESS specification:#
+
+[source%unnumbered]
+--
+{{ constraint.source }}
+--
+
+{% endfor %}
+{% endif %}
+
+
+
+
+
+
+{% if schema.functions.size > 0 %}
+{% if schema.functions.size == 1 %}
+[[{{schema.id}}.{{schema.functions[0].id}}]]
+[type="express"]
+=== {{ schemaname }} function definition: {{ schema.functions[0].id }}
+{% else %}
+[type="express"]
+=== {{ schemaname }} function definitions
+{% endif %}
 {% for function in schema.functions %}
+{% if schema.functions.size > 1 %}
 [[{{schema.id}}.{{function.id}}]]
 [type="express"]
 ==== {{ function.id }}
+{% endif %}
 
 {{ function.remarks | join: newLine }}
 
-_EXPRESS specification:_
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
@@ -246,7 +446,7 @@ _EXPRESS specification:_
 {% endfor %}
 
 {% if found and function.parameters.size > 0 %}
-_Argument definitions:_
+[underline]#Argument definitions:#
 
 {% for parameter in function.parameters %}
 {% if parameter.remarks.size > 0 %}
@@ -257,9 +457,19 @@ _Argument definitions:_
 {% endfor %}
 {% endif %}
 
+{% if function.constants.size > 0 %}
+[underline]#Function constants:#
+
+{% for constant in function.constants %}
+[[{{schema.id}}.{{function.id}}.{{constant.id}}]]
+{{ constant.id }}: {{ constant.remarks | join: newLine }}
+
+{% endfor %}
+{% endif %}
+
 
 {% if function.types.size > 0 %}
-_Function types:_
+[underline]#Function types:#
 
 {% for type in function.types %}
 [[{{schema.id}}.{{function.id}}.{{type.id}}]]
@@ -281,15 +491,6 @@ _Function types:_
 {% endif %}
 
 
-{% if function.constants.size > 0 %}
-_Function constants:_
-
-{% for constant in function.constants %}
-[[{{schema.id}}.{{function.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks | join: newLine }}
-
-{% endfor %}
-{% endif %}
 
 {% assign found = false %}
 {% for variable in function.variables %}
@@ -299,7 +500,7 @@ _Function constants:_
 {% endfor %}
 
 {% if found %}
-_Function variables:_
+[underline]#Function variables:#
 
 {% for variable in function.variables %}
 {% if variable.remarks.size > 0 %}
@@ -319,7 +520,7 @@ _Function variables:_
 {% endfor %}
 
 {% if found %}
-_Function statements:_
+[underline]#Function statements:#
 
 {% for statement in function.statements %}
 
@@ -346,9 +547,14 @@ _Function statements:_
 {% endif %}
 
 
+
+
+
+
+
 {% if schema.procedures.size > 0 %}
 [type="express"]
-=== Procedures
+=== {{ schemaname }} procedure definitions
 {% for procedure in schema.procedures %}
 [[{{schema.id}}.{{procedure.id}}]]
 [type="express"]
@@ -356,7 +562,7 @@ _Function statements:_
 
 {{ procedure.remarks | join: newLine }}
 
-_EXPRESS specification:_
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
@@ -470,151 +676,11 @@ _Procedure statements:_
 {% endfor %}
 {% endif %}
 
-{% if schema.rules.size > 0 %}
-[type="express"]
-=== Rules
-{% for rule in schema.rules %}
-[[{{schema.id}}.{{rule.id}}]]
-[type="express"]
-==== {{ rule.id }}
-
-{{ rule.remarks | join: newLine }}
-
-_EXPRESS specification:_
-
 [source%unnumbered]
 --
-{{ rule.source }}
+END_SCHEMA; -- {{ schema.id }}
 --
 
-
-{% if rule.types.size > 0 %}
-_Rule types:_
-
-{% for type in rule.types %}
-[[{{schema.id}}.{{rule.id}}.{{type.id}}]]
-{{ type.id }}: {{ type.remarks | join: newLine }}
-
-
-{% if type.type and type.type.items and type.type.items.size > 0 %}
-
-{% for item in type.type.items %}
-[[{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
-{% if item.remarks.size > 0 %}
-* Item {{ item.id }}: {{ item.remarks | join: newLine }}
-{% endif %}
-{% endfor %}
-{% endif %}
-
-
-{% endfor %}
-{% endif %}
-
-
-{% if rule.constants.size > 0 %}
-_Rule constants:_
-
-{% for constant in rule.constants %}
-[[{{schema.id}}.{{rule.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks | join: newLine }}
-
-{% endfor %}
-{% endif %}
-
-
-{% assign found = false %}
-{% for variable in procedure.variables %}
-{% if procedure.remarks.size > 0 %}
-{% assign found = true %}
-{% endif %}
-{% endfor %}
-
-{% if found %}
-_Rule variables:_
-
-{% for variable in rule.variables %}
-{% if variable.remarks.size > 0 %}
-[[{{schema.id}}.{{rule.id}}.{{variable.id}}]]
-{{ variable.id }}: {{ variable.remarks | join: newLine }}
-{% endif %}
-{% endfor %}
-{% endif %}
-
-
-{% assign found = false %}
-{% for statement in function.statements %}
-{% if statement.remarks  %}
-{% assign found = true %}
-{% endif %}
-{% endfor %}
-
-{% if found %}
-_Rule statements:_
-
-{% if statement.remarks  %}
-
-
-{% for statement in rule.statements %}
-
-{% if statement.id %}
-{% assign statementid = statement.id %}
-{% else %}
-{% assign statementid = forloop.index %}
-{% endif %}
-
-[[{{schema.id}}.{{rule.id}}.{{statementid }}]]
-{{ statementid }}: {{ statement.remarks | join: newLine }}
-
-
-
-
-{% endfor %}
-{% endif %}
-{% endif %}
-
-
-{% assign found = false %}
-{% for where1 in entity.where %}
-{% if where1.remarks.size > 0 %}
-{% assign found = true %}
-{% endif %}
-{% endfor %}
-
-{% if found and rule.where.size > 0 %}
-_Formal propositions:_
-
-{% for where1 in rule.where %}
-{% if where1.remarks.size > 0 %}
-[[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks | join: newLine }}
-{% endif %}
-
-{% endfor %}
-{% endif %}
-
-{% assign found = false %}
-{% for where1 in rule.informal_propositions %}
-{% if where1.remarks.size > 0 %}
-{% assign found = true %}
-{% endif %}
-{% endfor %}
-
-{% if found and rule.informal_propositions.size > 0 %}
-_Informal propositions:_
-
-{% for where1 in rule.informal_propositions %}
-{% if where1.remarks.size > 0 %}
-[[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks | join: newLine }}
-{% endif %}
-
-{% endfor %}
-{% endif %}
-
-
-
-{% endfor %}
-{% endif %}
 
 
 {% endfor %}
