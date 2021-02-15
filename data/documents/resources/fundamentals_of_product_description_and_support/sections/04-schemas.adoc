@@ -246,6 +246,17 @@
 {{ rule.source }}
 --
 
+{% if rule.applies_to.size > 0 %}
+[underline]#Argument definitions:#
+
+{% for entity in rule.applies_to %}
+[[{{schema.id}}.{{rule.id}}.{{entity.id}}]]
+{{ entity.id }}: {{ entity.remarks | join: newLine }}
+
+{% endfor %}
+{% endif %}
+
+
 
 {% if rule.constants.size > 0 %}
 [underline]#Rule constants:#
@@ -290,8 +301,8 @@
 {% endfor %}
 
 {% if found %}
-// [underline]#Rule variables:#
-[underline]#Argument definitions:#
+[underline]#Rule variables:#
+
 
 {% for variable in rule.variables %}
 {% if variable.remarks.size > 0 %}
