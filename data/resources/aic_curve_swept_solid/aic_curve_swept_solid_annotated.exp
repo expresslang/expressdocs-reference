@@ -138,53 +138,71 @@ All geometry imported into this AIC is used for the purpose of defining swept so
 
 // EXPRESS-G
 
-expg_image:aic_curve_swept_solidexpg1.xml[]
+[.svgmap]
+====
+image::aic_curve_swept_solidexpg1.svg[]
 
-expg_image:aic_curve_swept_solidexpg2.xml[]
+* <<express:aic_curve_swept_solid>>; 1
+* <<express:representation_schema>>; 2
+* <<express:geometry_schema>>; 3
+* <<express:measure_schema>>; 4
+* <<express:product_property_representation_schema>>; 5
+* <<express:geometric_model_schema>>; 6
+====
+
+[.svgmap]
+====
+image::aic_curve_swept_solidexpg2.svg[]
+
+* <<express:geometric_model_schema.surface_curve_swept_area_solid>>; 1
+* <<express:product_property_representation_schema.shape_representation>>; 2
+* <<express:aic_curve_swept_solid.curve_swept_solid_shape_representation>>; 3
+* <<express:aic_curve_swept_solid.ruled_surface_swept_area_solid>>; 4
+====
 *)
 
 (*"aic_curve_swept_solid.curve_swept_solid_shape_representation"
-A *curve_swept_solid_shape_representation* is a type of <<express:product_property_representation_schema:product_property_representation_schema.shape_representation, shape_representation>> in which the shape of a product is represented by specialisations of <<express:geometric_model_schema:geometric_model_schema.swept_area_solid, swept_area_solid>> or <<express:geometric_model_schema:geometric_model_schema.swept_disk_solid, swept_disk_solid>> entities. 
+A *curve_swept_solid_shape_representation* is a type of <<express:product_property_representation_schema.shape_representation,shape_representation>> in which the shape of a product is represented by specialisations of <<express:geometric_model_schema.swept_area_solid,swept_area_solid>> or <<express:geometric_model_schema.swept_disk_solid,swept_disk_solid>> entities. 
 
-Each <<express:geometric_model_schema:geometric_model_schema.solid_model, solid_model>> in the <<express:representation_schema:representation_schema.representation, representation>> is required to be a <<express:geometric_model_schema:geometric_model_schema.swept_area_solid, swept_area_solid>> or a <<express:geometric_model_schema:geometric_model_schema.swept_disk_solid, swept_disk_solid>>.
+Each <<express:geometric_model_schema.solid_model,solid_model>> in the <<express:representation_schema.representation,representation>> is required to be a <<express:geometric_model_schema.swept_area_solid,swept_area_solid>> or a <<express:geometric_model_schema.swept_disk_solid,swept_disk_solid>>.
 
-Particular types of <<express:geometric_model_schema:geometric_model_schema.swept_area_solid, swept_area_solid>> that may be included are <<express:geometric_model_schema:geometric_model_schema.extruded_area_solid, extruded_area_solid>>, <<express:geometric_model_schema:geometric_model_schema.revolved_area_solid, revolved_area_solid>>, and <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid, surface_curve_swept_area_solid>>, including the <<express:aic_curve_swept_solid:aic_curve_swept_solid.ruled_surface_swept_area_solid, ruled_surface_swept_area_solid>>.
+Particular types of <<express:geometric_model_schema.swept_area_solid,swept_area_solid>> that may be included are <<express:geometric_model_schema.extruded_area_solid,extruded_area_solid>>, <<express:geometric_model_schema.revolved_area_solid,revolved_area_solid>>, and <<express:geometric_model_schema.surface_curve_swept_area_solid,surface_curve_swept_area_solid>>, including the <<express:aic_curve_swept_solid.ruled_surface_swept_area_solid,ruled_surface_swept_area_solid>>.
 *)
 
 (*"aic_curve_swept_solid.curve_swept_solid_shape_representation.wr:WR1"
-The <<express:representation_schema:representation_schema.representation.items, items>> in a *curve_swept_solid_shape_representation* shall be <<express:geometric_model_schema:geometric_model_schema.swept_area_solid, swept_area_solid>>, <<express:geometric_model_schema:geometric_model_schema.swept_disk_solid, swept_disk_solid>>, <<express:representation_schema:representation_schema.mapped_item, mapped_item>>, or <<express:geometry_schema:geometry_schema.axis2_placement_3d, axis2_placement_3d>>.
+The <<express:representation_schema.representation.items,items>> in a *curve_swept_solid_shape_representation* shall be <<express:geometric_model_schema.swept_area_solid,swept_area_solid>>, <<express:geometric_model_schema.swept_disk_solid,swept_disk_solid>>, <<express:representation_schema.mapped_item,mapped_item>>, or <<express:geometry_schema.axis2_placement_3d,axis2_placement_3d>>.
 *)
 
 (*"aic_curve_swept_solid.curve_swept_solid_shape_representation.wr:WR2"
-At least one of the <<express:representation_schema:representation_schema.representation.items, items>> shall be either a <<express:geometric_model_schema:geometric_model_schema.swept_area_solid, swept_area_solid>>, a <<express:geometric_model_schema:geometric_model_schema.swept_disk_solid, swept_disk_solid>> or a <<express:representation_schema:representation_schema.mapped_item, mapped_item>>.
+At least one of the <<express:representation_schema.representation.items,items>> shall be either a <<express:geometric_model_schema.swept_area_solid,swept_area_solid>>, a <<express:geometric_model_schema.swept_disk_solid,swept_disk_solid>> or a <<express:representation_schema.mapped_item,mapped_item>>.
 *)
 
 (*"aic_curve_swept_solid.curve_swept_solid_shape_representation.wr:WR3"
-For any <<express:representation_schema:representation_schema.mapped_item, mapped_item>>, the <<express:representation_schema:representation_schema.representation_map.mapped_representation, mapped_representation>> of its <<express:representation_schema:representation_schema.mapped_item.mapping_source, mapping_source>> shall be a *curve_swept_solid_shape_representation*.
+For any <<express:representation_schema.mapped_item,mapped_item>>, the <<express:representation_schema.representation_map.mapped_representation,mapped_representation>> of its <<express:representation_schema.mapped_item.mapping_source,mapping_source>> shall be a *curve_swept_solid_shape_representation*.
 *)
 
 (*"aic_curve_swept_solid.curve_swept_solid_shape_representation.wr:WR4"
-If there is a <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid, surface_curve_swept_area_solid>> in a *curve_swept_solid_shape_representation* the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.directrix, directrix>> shall be either a <<express:geometry_schema:geometry_schema.pcurve, pcurve>> or a <<express:geometry_schema:geometry_schema.surface_curve, surface_curve>>.
+If there is a <<express:geometric_model_schema.surface_curve_swept_area_solid,surface_curve_swept_area_solid>> in a *curve_swept_solid_shape_representation* the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>> shall be either a <<express:geometry_schema.pcurve,pcurve>> or a <<express:geometry_schema.surface_curve,surface_curve>>.
 *)
 
 (*"aic_curve_swept_solid.ruled_surface_swept_area_solid"
-A *ruled_surface_swept_area_solid* is a type of <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid, surface_curve_swept_area_solid>> in which the surface used to control the orientation of the <<express:geometric_model_schema:geometric_model_schema.swept_area_solid.swept_area, swept_area>> as it is swept along the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.directrix, directrix>> is a ruled surface. The ruled surface is required to be defined as a <<express:geometry_schema:geometry_schema.b_spline_surface, b_spline_surface>> of degree 1 in the first parameter direction. 
+A *ruled_surface_swept_area_solid* is a type of <<express:geometric_model_schema.surface_curve_swept_area_solid,surface_curve_swept_area_solid>> in which the surface used to control the orientation of the <<express:geometric_model_schema.swept_area_solid.swept_area,swept_area>> as it is swept along the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>> is a ruled surface. The ruled surface is required to be defined as a <<express:geometry_schema.b_spline_surface,b_spline_surface>> of degree 1 in the first parameter direction. 
 
 [NOTE]
 --
-At all times during the sweeping operation the <<express:geometric_model_schema:geometric_model_schema.swept_area_solid.swept_area, swept_area>> is maintained in the plane normal to the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.directrix, directrix>> and is oriented by keeping the x axis of the plane (z = 0) of the <<express:geometric_model_schema:geometric_model_schema.swept_area_solid.swept_area, swept_area>> in the direction of the normal to the ruled surface at the current point on the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.directrix, directrix>>. This implies that the negative y axis of the <<express:geometric_model_schema:geometric_model_schema.swept_area_solid.swept_area, swept_area>> plane lies in the direction of the projection of the ruling direction onto the plane normal to the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.directrix, directrix>>.
+At all times during the sweeping operation the <<express:geometric_model_schema.swept_area_solid.swept_area,swept_area>> is maintained in the plane normal to the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>> and is oriented by keeping the x axis of the plane (z = 0) of the <<express:geometric_model_schema.swept_area_solid.swept_area,swept_area>> in the direction of the normal to the ruled surface at the current point on the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>>. This implies that the negative y axis of the <<express:geometric_model_schema.swept_area_solid.swept_area,swept_area>> plane lies in the direction of the projection of the ruling direction onto the plane normal to the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>>.
 --
 *)
 
 (*"aic_curve_swept_solid.ruled_surface_swept_area_solid.wr:WR1"
-The <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.reference_surface, reference_surface>> of a *ruled_surface_swept_area_solid* shall be a <<express:geometry_schema:geometry_schema.b_spline_surface, b_spline_surface>> surface of <<express:geometry_schema:geometry_schema.b_spline_surface.u_degree, u_degree>> 1.
+The <<express:geometric_model_schema.surface_curve_swept_area_solid.reference_surface,reference_surface>> of a *ruled_surface_swept_area_solid* shall be a <<express:geometry_schema.b_spline_surface,b_spline_surface>> surface of <<express:geometry_schema.b_spline_surface.u_degree,u_degree>> 1.
 
 [NOTE]
 --
-This ensures that the reference surface has the form of a ruled surface bounded by two <<express:geometry_schema:geometry_schema.b_spline_curve, b_spline_curve>>. These curves have degree <<express:geometry_schema:geometry_schema.b_spline_surface.v_degree, v_degree>> and are defined by the two sub-lists of the <<express:geometry_schema:geometry_schema.b_spline_surface.control_points_list, control_points_list>> of the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.reference_surface, reference_surface>>.
+This ensures that the reference surface has the form of a ruled surface bounded by two <<express:geometry_schema.b_spline_curve,b_spline_curve>>. These curves have degree <<express:geometry_schema.b_spline_surface.v_degree,v_degree>> and are defined by the two sub-lists of the <<express:geometry_schema.b_spline_surface.control_points_list,control_points_list>> of the <<express:geometric_model_schema.surface_curve_swept_area_solid.reference_surface,reference_surface>>.
 --
 *)
 
 (*"aic_curve_swept_solid.ruled_surface_swept_area_solid.wr:WR2"
-The <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.directrix, directrix>> shall be either a <<express:geometry_schema:geometry_schema.pcurve, pcurve>> or a <<express:geometry_schema:geometry_schema.surface_curve, surface_curve>>. If the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.directrix, directrix>> is a <<express:geometry_schema:geometry_schema.surface_curve, surface_curve>> the <<express:geometry_schema:geometry_schema.surface_curve.curve_3d, curve_3d>> shall be a <<express:geometry_schema:geometry_schema.b_spline_curve, b_spline_curve>> of the same degree as the boundary curves of the ruled surface that is the <<express:geometric_model_schema:geometric_model_schema.surface_curve_swept_area_solid.reference_surface, reference_surface>>.
+The <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>> shall be either a <<express:geometry_schema.pcurve,pcurve>> or a <<express:geometry_schema.surface_curve,surface_curve>>. If the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>> is a <<express:geometry_schema.surface_curve,surface_curve>> the <<express:geometry_schema.surface_curve.curve_3d,curve_3d>> shall be a <<express:geometry_schema.b_spline_curve,b_spline_curve>> of the same degree as the boundary curves of the ruled surface that is the <<express:geometric_model_schema.surface_curve_swept_area_solid.reference_surface,reference_surface>>.
 *)

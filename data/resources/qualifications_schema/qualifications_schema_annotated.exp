@@ -107,6 +107,7 @@ The identification of types of qualifications and the definition of various kind
 == Fundamental concerns
 
 This schema provides resources for the identification, naming, and description of: 
+
 * qualifications;
 * types of qualification;
 * relationships between types of qualification.
@@ -115,30 +116,30 @@ This schema provides resources for the identification, naming, and description o
 ====
 image::qualifications_schemaexpg1.svg[]
 
-* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
-* <<express:qualifications_schema,qualifications_schema>>; ../../resources/qualifications_schema/qualifications_schema.xml
+* <<express:support_resource_schema>>; 1
+* <<express:qualifications_schema>>; 2
 ====
 
 [.svgmap]
 ====
 image::qualifications_schemaexpg2.svg[]
 
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:qualifications_schema.xml#qualifications_schema,qualifications_schema.xml#qualifications_schema>>; ../../resources/qualifications_schema/qualifications_schema.xml#qualifications_schema.qualification_type_relationship
-* <<express:qualifications_schema.xml#qualifications_schema,qualifications_schema.xml#qualifications_schema>>; ../../resources/qualifications_schema/qualifications_schema.xml#qualifications_schema.qualification
-* <<express:qualifications_schema.xml#qualifications_schema,qualifications_schema.xml#qualifications_schema>>; ../../resources/qualifications_schema/qualifications_schema.xml#qualifications_schema.qualification_relationship
-* <<express:qualifications_schema.xml#qualifications_schema,qualifications_schema.xml#qualifications_schema>>; ../../resources/qualifications_schema/qualifications_schema.xml#qualifications_schema.qualification_type
+* <<express:support_resource_schema.text>>; 1
+* <<express:support_resource_schema.text>>; 2
+* <<express:support_resource_schema.label>>; 3
+* <<express:support_resource_schema.label>>; 4
+* <<express:support_resource_schema.label>>; 5
+* <<express:support_resource_schema.identifier>>; 6
+* <<express:support_resource_schema.identifier>>; 7
+* <<express:support_resource_schema.identifier>>; 8
+* <<express:support_resource_schema.text>>; 9
+* <<express:support_resource_schema.label>>; 10
+* <<express:support_resource_schema.identifier>>; 11
+* <<express:support_resource_schema.text>>; 12
+* <<express:qualifications_schema.qualification_type_relationship>>; 13
+* <<express:qualifications_schema.qualification>>; 14
+* <<express:qualifications_schema.qualification_relationship>>; 15
+* <<express:qualifications_schema.qualification_type>>; 16
 ====
 *)
 
@@ -157,40 +158,40 @@ Mary Brown's doctorate entitled "Datamodelling Using EXPRESS2".
 
 [NOTE]
 --
-A relationship between a <<express:qualifications_schema:qualifications_schema.qualification_type,qualification_type>> object and one or more *qualification* objects is established by the declaration of a <<express:management_resources_schema:management_resources_schema.qualification_type_assignment,qualification_type_assignment>> subtype containing a single attribute that references a set of a SELECT type that contains an qualification.
+A relationship between a <<express:qualifications_schema.qualification_type,qualification_type>> object and one or more *qualification* objects is established by the declaration of a <<express:management_resources_schema.qualification_type_assignment,qualification_type_assignment>> subtype containing a single attribute that references a set of a SELECT type that contains an qualification.
 --
 *)
 
 (*"qualifications_schema.qualification.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *qualification*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *qualification*.
 *)
 
 (*"qualifications_schema.qualification.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *qualification* is known.
+the <<express:support_resource_schema.label,label>> by which the *qualification* is known.
 *)
 
 (*"qualifications_schema.qualification.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *qualification*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *qualification*. The value of this attribute need not be specified.
 *)
 
 (*"qualifications_schema.qualification_relationship"
-A *qualification_relationship* is a relationship between two instances of the <<express:qualifications_schema:qualifications_schema.qualification,qualification>> entity data type and provides for the identification, naming, and description of that relationship.
+A *qualification_relationship* is a relationship between two instances of the <<express:qualifications_schema.qualification,qualification>> entity data type and provides for the identification, naming, and description of that relationship.
 *)
 
 (*"qualifications_schema.qualification_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *qualification_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *qualification_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"qualifications_schema.qualification_relationship.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *qualification_relationship*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *qualification_relationship*.
 *)
 
 (*"qualifications_schema.qualification_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *qualification_relationship* is known
+the <<express:support_resource_schema.label,label>> by which the *qualification_relationship* is known
 *)
 
 (*"qualifications_schema.qualification_relationship.related_qualification"
-the other instance of <<express:qualifications_schema:qualifications_schema.qualification,qualification>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:qualifications_schema.qualification,qualification>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -199,7 +200,7 @@ the meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"qualifications_schema.qualification_relationship.relating_qualification"
-one of the instances of <<express:qualifications_schema:qualifications_schema.qualification,qualification>> that is a part of the relationship.
+one of the instances of <<express:qualifications_schema.qualification,qualification>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -222,40 +223,40 @@ A university degree.
 
 [NOTE]
 --
-A relationship between a *qualification_type* object and one or more <<express:qualifications_schema:qualifications_schema.qualification,qualification>> objects is established by the declaration of an <<express:management_resources_schema:management_resources_schema.qualification_type_assignment,qualification_type_assignment>> subtype containing a single attribute that references a set of a SELECT type that contains a <<express:qualifications_schema:qualifications_schema.qualification,qualification>>.
+A relationship between a *qualification_type* object and one or more <<express:qualifications_schema.qualification,qualification>> objects is established by the declaration of an <<express:management_resources_schema.qualification_type_assignment,qualification_type_assignment>> subtype containing a single attribute that references a set of a SELECT type that contains a <<express:qualifications_schema.qualification,qualification>>.
 --
 *)
 
 (*"qualifications_schema.qualification_type.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *qualification_type*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *qualification_type*.
 *)
 
 (*"qualifications_schema.qualification_type.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *qualification_type* is known.
+the <<express:support_resource_schema.label,label>> by which the *qualification_type* is known.
 *)
 
 (*"qualifications_schema.qualification_type.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *qualification_type*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *qualification_type*. The value of this attribute need not be specified.
 *)
 
 (*"qualifications_schema.qualification_type_relationship"
-A *qualification_type_relationship* is a relationship between two instances of the <<express:qualifications_schema:qualifications_schema.qualification_type,qualification_type>> entity data type and provides for the identification, naming, and description of that relationship.
+A *qualification_type_relationship* is a relationship between two instances of the <<express:qualifications_schema.qualification_type,qualification_type>> entity data type and provides for the identification, naming, and description of that relationship.
 *)
 
 (*"qualifications_schema.qualification_type_relationship.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *qualification_type_relationship*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *qualification_type_relationship*.
 *)
 
 (*"qualifications_schema.qualification_type_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *qualification_type_relationship* is known.
+the <<express:support_resource_schema.label,label>> by which the *qualification_type_relationship* is known.
 *)
 
 (*"qualifications_schema.qualification_type_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *qualification_type_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *qualification_type_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"qualifications_schema.qualification_type_relationship.related_qualification_type"
-the other instance of <<express:qualifications_schema:qualifications_schema.qualification_type,qualification_type>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:qualifications_schema.qualification_type,qualification_type>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -264,7 +265,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"qualifications_schema.qualification_type_relationship.relating_qualification_type"
-one of the instances of <<express:qualifications_schema:qualifications_schema.qualification_type,qualification_type>> that is a part of the relationship.
+one of the instances of <<express:qualifications_schema.qualification_type,qualification_type>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -273,7 +274,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"qualifications_schema.acyclic_qualification_relationship"
-The *acyclic_qualification_relationship* function determines whether the graph of instances of the entity data type <<express:qualifications_schema:qualifications_schema.qualification,qualification>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:qualifications_schema:qualifications_schema.qualification_relationship,qualification_relationship>> or any of its subtypes. 
+The *acyclic_qualification_relationship* function determines whether the graph of instances of the entity data type <<express:qualifications_schema.qualification,qualification>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:qualifications_schema.qualification_relationship,qualification_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -284,24 +285,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:qualifications_schema:qualifications_schema.qualification_relationship,qualification_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:qualifications_schema.qualification_relationship,qualification_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"qualifications_schema.acyclic_qualification_relationship.relation"
-(input) the candidate <<express:qualifications_schema:qualifications_schema.qualification_relationship,qualification_relationship>> to be checked.
+(input) the candidate <<express:qualifications_schema.qualification_relationship,qualification_relationship>> to be checked.
 *)
 
 (*"qualifications_schema.acyclic_qualification_relationship.relatives"
-(input) the set of instances of the entity data type <<express:qualifications_schema:qualifications_schema.qualification,qualification>> that the function is searching for in the <<express:qualifications_schema:qualifications_schema.qualification_relationship.relating_qualification,relating_qualification>> parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:qualifications_schema.qualification,qualification>> that the function is searching for in the <<express:qualifications_schema.qualification_relationship.relating_qualification,relating_qualification>> parameter of the *relation* argument.
 *)
 
 (*"qualifications_schema.acyclic_qualification_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:qualifications_schema:qualifications_schema.qualification_relationship,qualification_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:qualifications_schema.qualification_relationship,qualification_relationship>> entity.
 *)
 
 (*"qualifications_schema.acyclic_qualification_type_relationship"
-The *acyclic_qualification_type_relationship* function determines whether the graph of instances of the entity data type <<express:qualifications_schema:qualifications_schema.qualification_type,qualification_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:qualifications_schema:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> or any of its subtypes. 
+The *acyclic_qualification_type_relationship* function determines whether the graph of instances of the entity data type <<express:qualifications_schema.qualification_type,qualification_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -312,18 +313,18 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:qualifications_schema:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"qualifications_schema.acyclic_qualification_type_relationship.relation"
-(input) the candidate <<express:qualifications_schema:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> to be checked.
+(input) the candidate <<express:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> to be checked.
 *)
 
 (*"qualifications_schema.acyclic_qualification_type_relationship.relatives"
-(input) the set of instances of the entity data type <<express:qualifications_schema:qualifications_schema.qualification_type,qualification_type>> that the function is searching for in the <<express:qualifications_schema:qualifications_schema.qualification_type_relationship.relating_qualification_type,relating_qualification_type>> parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:qualifications_schema.qualification_type,qualification_type>> that the function is searching for in the <<express:qualifications_schema.qualification_type_relationship.relating_qualification_type,relating_qualification_type>> parameter of the *relation* argument.
 *)
 
 (*"qualifications_schema.acyclic_qualification_type_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:qualifications_schema:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:qualifications_schema.qualification_type_relationship,qualification_type_relationship>> entity.
 *)

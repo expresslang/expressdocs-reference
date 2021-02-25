@@ -194,105 +194,105 @@ The assignment of a role corresponds to the *role_association* entity data type.
 ====
 image::basic_attribute_schemaexpg1.svg[]
 
-* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
-* <<express:basic_attribute_schema,basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml
+* <<express:support_resource_schema>>; 1
+* <<express:basic_attribute_schema>>; 2
 ====
 
 [.svgmap]
 ====
 image::basic_attribute_schemaexpg2.svg[]
 
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute_select
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.generic_attribute_select
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.id_attribute_select
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute_select
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.role_select
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.generic_attribute_list_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.generic_attribute_assignment
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.role_association
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.id_attribute
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.generic_attribute
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.aggregate_id_attribute
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.generic_attribute_list_assignment
+* <<express:basic_attribute_schema.name_attribute_select>>; 1
+* <<express:basic_attribute_schema.generic_attribute_select>>; 2
+* <<express:basic_attribute_schema.id_attribute_select>>; 3
+* <<express:basic_attribute_schema.description_attribute_select>>; 4
+* <<express:basic_attribute_schema.role_select>>; 5
+* <<express:basic_attribute_schema.generic_attribute_list_select>>; 6
+* <<express:support_resource_schema.text>>; 7
+* <<express:support_resource_schema.label>>; 8
+* <<express:support_resource_schema.text>>; 9
+* <<express:support_resource_schema.label>>; 10
+* <<express:support_resource_schema.identifier>>; 11
+* <<express:support_resource_schema.text>>; 12
+* <<express:support_resource_schema.label>>; 13
+* <<express:support_resource_schema.label>>; 14
+* <<express:support_resource_schema.identifier>>; 15
+* <<express:basic_attribute_schema.generic_attribute_assignment>>; 16
+* <<express:basic_attribute_schema.description_attribute>>; 17
+* <<express:basic_attribute_schema.role_association>>; 18
+* <<express:basic_attribute_schema.object_role>>; 19
+* <<express:basic_attribute_schema.name_attribute>>; 20
+* <<express:basic_attribute_schema.id_attribute>>; 21
+* <<express:basic_attribute_schema.generic_attribute>>; 22
+* <<express:basic_attribute_schema.aggregate_id_attribute>>; 23
+* <<express:basic_attribute_schema.generic_attribute_list_assignment>>; 24
 ====
 
 [.svgmap]
 ====
 image::basic_attribute_schemaexpg3.svg[]
 
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute_select
-* <<express:date_time_schema.xml#date_time_schema,date_time_schema.xml#date_time_schema>>; ../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_time_role
-* <<express:product_property_representation_schema.xml#product_property_representation_schema,product_property_representation_schema.xml#product_property_representation_schema>>; ../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.property_definition_representation
-* <<express:application_context_schema.xml#application_context_schema,application_context_schema.xml#application_context_schema>>; ../../resources/application_context_schema/application_context_schema.xml#application_context_schema.application_context
-* <<express:external_reference_schema.xml#external_reference_schema,external_reference_schema.xml#external_reference_schema>>; ../../resources/external_reference_schema/external_reference_schema.xml#external_reference_schema.external_source
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_and_organization
-* <<express:configuration_management_schema.xml#configuration_management_schema,configuration_management_schema.xml#configuration_management_schema>>; ../../resources/configuration_management_schema/configuration_management_schema.xml#configuration_management_schema.configuration_design
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization_role
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_and_organization_role
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:approval_schema.xml#approval_schema,approval_schema.xml#approval_schema>>; ../../resources/approval_schema/approval_schema.xml#approval_schema.approval_role
-* <<express:product_property_representation_schema.xml#product_property_representation_schema,product_property_representation_schema.xml#product_property_representation_schema>>; ../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.context_dependent_shape_representation
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_role
-* <<express:action_schema.xml#action_schema,action_schema.xml#action_schema>>; ../../resources/action_schema/action_schema.xml#action_schema.action_request_solution
-* <<express:date_time_schema.xml#date_time_schema,date_time_schema.xml#date_time_schema>>; ../../resources/date_time_schema/date_time_schema.xml#date_time_schema.time_role
-* <<express:representation_schema.xml#representation_schema,representation_schema.xml#representation_schema>>; ../../resources/representation_schema/representation_schema.xml#representation_schema.representation
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effectivity
-* <<express:date_time_schema.xml#date_time_schema,date_time_schema.xml#date_time_schema>>; ../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_role
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute
+* <<express:basic_attribute_schema.description_attribute_select>>; 1
+* <<express:date_time_schema.date_time_role>>; 2
+* <<express:product_property_representation_schema.property_definition_representation>>; 3
+* <<express:application_context_schema.application_context>>; 4
+* <<express:external_reference_schema.external_source>>; 5
+* <<express:person_organization_schema.person_and_organization>>; 6
+* <<express:configuration_management_schema.configuration_design>>; 7
+* <<express:person_organization_schema.organization_role>>; 8
+* <<express:person_organization_schema.person_and_organization_role>>; 9
+* <<express:support_resource_schema.text>>; 10
+* <<express:approval_schema.approval_role>>; 11
+* <<express:product_property_representation_schema.context_dependent_shape_representation>>; 12
+* <<express:person_organization_schema.person_role>>; 13
+* <<express:action_schema.action_request_solution>>; 14
+* <<express:date_time_schema.time_role>>; 15
+* <<express:representation_schema.representation>>; 16
+* <<express:effectivity_schema.effectivity>>; 17
+* <<express:date_time_schema.date_role>>; 18
+* <<express:basic_attribute_schema.description_attribute>>; 19
 ====
 
 [.svgmap]
 ====
 image::basic_attribute_schemaexpg4.svg[]
 
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:product_property_representation_schema.xml#product_property_representation_schema,product_property_representation_schema.xml#product_property_representation_schema>>; ../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.property_definition_representation
-* <<express:action_schema.xml#action_schema,action_schema.xml#action_schema>>; ../../resources/action_schema/action_schema.xml#action_schema.action_request_solution
-* <<express:measure_schema.xml#measure_schema,measure_schema.xml#measure_schema>>; ../../resources/measure_schema/measure_schema.xml#measure_schema.derived_unit
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.address
-* <<express:product_definition_schema.xml#product_definition_schema,product_definition_schema.xml#product_definition_schema>>; ../../resources/product_definition_schema/product_definition_schema.xml#product_definition_schema.product_definition_substitute
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effectivity
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_and_organization
-* <<express:product_definition_schema.xml#product_definition_schema,product_definition_schema.xml#product_definition_schema>>; ../../resources/product_definition_schema/product_definition_schema.xml#product_definition_schema.product_definition
-* <<express:configuration_management_schema.xml#configuration_management_schema,configuration_management_schema.xml#configuration_management_schema>>; ../../resources/configuration_management_schema/configuration_management_schema.xml#configuration_management_schema.configuration_design
-* <<express:product_property_representation_schema.xml#product_property_representation_schema,product_property_representation_schema.xml#product_property_representation_schema>>; ../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.context_dependent_shape_representation
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute
+* <<express:basic_attribute_schema.name_attribute_select>>; 1
+* <<express:support_resource_schema.label>>; 2
+* <<express:product_property_representation_schema.property_definition_representation>>; 3
+* <<express:action_schema.action_request_solution>>; 4
+* <<express:measure_schema.derived_unit>>; 5
+* <<express:person_organization_schema.address>>; 6
+* <<express:product_definition_schema.product_definition_substitute>>; 7
+* <<express:effectivity_schema.effectivity>>; 8
+* <<express:person_organization_schema.person_and_organization>>; 9
+* <<express:product_definition_schema.product_definition>>; 10
+* <<express:configuration_management_schema.configuration_design>>; 11
+* <<express:product_property_representation_schema.context_dependent_shape_representation>>; 12
+* <<express:basic_attribute_schema.name_attribute>>; 13
 ====
 
 [.svgmap]
 ====
 image::basic_attribute_schemaexpg5.svg[]
 
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.role_select
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.document_reference
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.group_assignment
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.effectivity_assignment
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.security_classification_assignment
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:approval_schema.xml#approval_schema,approval_schema.xml#approval_schema>>; ../../resources/approval_schema/approval_schema.xml#approval_schema.approval_date_time
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.action_request_assignment
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.contract_assignment
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.name_assignment
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.external_referent_assignment
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.approval_assignment
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.certification_assignment
-* <<express:management_resources_schema.xml#management_resources_schema,management_resources_schema.xml#management_resources_schema>>; ../../resources/management_resources_schema/management_resources_schema.xml#management_resources_schema.action_assignment
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.role_association
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.object_role
+* <<express:basic_attribute_schema.role_select>>; 1
+* <<express:management_resources_schema.document_reference>>; 2
+* <<express:management_resources_schema.group_assignment>>; 3
+* <<express:management_resources_schema.effectivity_assignment>>; 4
+* <<express:management_resources_schema.security_classification_assignment>>; 5
+* <<express:support_resource_schema.label>>; 6
+* <<express:approval_schema.approval_date_time>>; 7
+* <<express:management_resources_schema.action_request_assignment>>; 8
+* <<express:management_resources_schema.contract_assignment>>; 9
+* <<express:management_resources_schema.name_assignment>>; 10
+* <<express:support_resource_schema.text>>; 11
+* <<express:management_resources_schema.external_referent_assignment>>; 12
+* <<express:management_resources_schema.approval_assignment>>; 13
+* <<express:management_resources_schema.certification_assignment>>; 14
+* <<express:management_resources_schema.action_assignment>>; 15
+* <<express:basic_attribute_schema.role_association>>; 16
+* <<express:basic_attribute_schema.object_role>>; 17
 ====
 *)
 
@@ -330,7 +330,7 @@ This entity provides the capability to add an aggregate id attribute to product 
 *)
 
 (*"basic_attribute_schema.aggregate_id_attribute.attribute_value"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *identified_item*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *identified_item*.
 
 [NOTE]
 --
@@ -352,7 +352,7 @@ This entity provides the capability to add a description attribute to product da
 *)
 
 (*"basic_attribute_schema.description_attribute.attribute_value"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *described_item*.
+the <<express:support_resource_schema.text,text>> that characterizes the *described_item*.
 *)
 
 (*"basic_attribute_schema.description_attribute.described_item"
@@ -369,16 +369,16 @@ This entity provides the capability to define a generic attribute associated wit
 
 [example]
 ====
-A person entity data type instance is included in both <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute_select,generic_attribute_select>> and <<express:basic_attribute_schema:basic_attribute_schema.name_attribute_select,name_attribute_select>>. The name attribute of person is provided for the name value.
+A person entity data type instance is included in both <<express:basic_attribute_schema.generic_attribute_select,generic_attribute_select>> and <<express:basic_attribute_schema.name_attribute_select,name_attribute_select>>. The name attribute of person is provided for the name value.
 ====
 *)
 
 (*"basic_attribute_schema.generic_attribute.attribute_name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> used to name the *generic_attribute*.
+the <<express:support_resource_schema.label,label>> used to name the *generic_attribute*.
 *)
 
 (*"basic_attribute_schema.generic_attribute.attribute_value"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *generic_attribute*.
+the <<express:support_resource_schema.text,text>> that characterizes the *generic_attribute*.
 *)
 
 (*"basic_attribute_schema.generic_attribute_assignment"
@@ -391,7 +391,7 @@ This entity provides the capability to add a generic attribute to product data u
 *)
 
 (*"basic_attribute_schema.generic_attribute_assignment.attribute"
-the <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute,generic_attribute>> to be associated with the product data.
+the <<express:basic_attribute_schema.generic_attribute,generic_attribute>> to be associated with the product data.
 *)
 
 (*"basic_attribute_schema.generic_attribute_assignment.item_with_attribute"
@@ -408,11 +408,11 @@ This entity data type provides a capability to add a named list of generic attri
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment.attribute_name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> used to name the list of generic attributes.
+the <<express:support_resource_schema.label,label>> used to name the list of generic attributes.
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment.attributes"
-the list of <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute,generic_attribute>>s that are assigned to the element of product data.
+the list of <<express:basic_attribute_schema.generic_attribute,generic_attribute>>s that are assigned to the element of product data.
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment.item_with_attribute"
@@ -429,7 +429,7 @@ This entity provides the capability to add an id attribute to product data using
 *)
 
 (*"basic_attribute_schema.id_attribute.attribute_value"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *identified_item*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *identified_item*.
 
 [NOTE]
 --
@@ -451,7 +451,7 @@ This entity provides the capability to add a name attribute to product data usin
 *)
 
 (*"basic_attribute_schema.name_attribute.attribute_value"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *named_item* is known.
+the <<express:support_resource_schema.label,label>> by which the *named_item* is known.
 *)
 
 (*"basic_attribute_schema.name_attribute.named_item"
@@ -468,19 +468,19 @@ This entity provides the capability to add a role attribute to an association of
 *)
 
 (*"basic_attribute_schema.object_role.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *object_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *object_role*. The value of the attribute need not be specified.
 *)
 
 (*"basic_attribute_schema.object_role.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *object_role* is known.
+the <<express:support_resource_schema.label,label>> by which the *object_role* is known.
 *)
 
 (*"basic_attribute_schema.role_association"
-A *role_association* is the assignment of an <<express:basic_attribute_schema:basic_attribute_schema.object_role,object_role>> to an association of management type data with other aspects of product data. 
+A *role_association* is the assignment of an <<express:basic_attribute_schema.object_role,object_role>> to an association of management type data with other aspects of product data. 
 
 [NOTE]
 --
-This entity data type provides a capability to add a role attribute to certain entity data types that specify associations between product data and administrative or management data. Such entity data types are specified in the <<express:management_resources_schema:management_resources_schema,management_resources_schema>>.
+This entity data type provides a capability to add a role attribute to certain entity data types that specify associations between product data and administrative or management data. Such entity data types are specified in the <<express:management_resources_schema,management_resources_schema>>.
 --
 *)
 
@@ -489,55 +489,55 @@ the item to which a role is assigned.
 *)
 
 (*"basic_attribute_schema.role_association.role"
-the <<express:basic_attribute_schema:basic_attribute_schema.object_role,object_role>> that specifies the purpose of the association of the *role_association* with product data.
+the <<express:basic_attribute_schema.object_role,object_role>> that specifies the purpose of the association of the *role_association* with product data.
 *)
 
 (*"basic_attribute_schema.get_description_value"
 The *get_description_value* function accepts an object to which a descriptive text string may be assigned and returns this description if present. 
 
-If a <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>. Otherwise, the indeterminate value will be returned.
+If a <<express:basic_attribute_schema.description_attribute,description_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.description_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.description_attribute,description_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_description_value.obj"
-(input) the object for which a <<express:support_resource_schema:support_resource_schema.text,text>> is determined. This is an input to the function.
+(input) the object for which a <<express:support_resource_schema.text,text>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_aggregate_id_value"
 The *get_aggregate_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
 
-If an <<express:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>>. Otherwise, the indeterminate value will be returned.
+If an <<express:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.aggregate_id_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_aggregate_id_value.obj"
-(input) the object for which an <<express:support_resource_schema:support_resource_schema.identifier,identifier>> is determined. This is an input to the function.
+(input) the object for which an <<express:support_resource_schema.identifier,identifier>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_id_value"
 The *get_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
 
-If an <<express:basic_attribute_schema:basic_attribute_schema.id_attribute,id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.id_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.id_attribute,id_attribute>>. Otherwise, the indeterminate value will be returned.
+If an <<express:basic_attribute_schema.id_attribute,id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.id_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.id_attribute,id_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_id_value.obj"
-(input) the object for which an <<express:support_resource_schema:support_resource_schema.identifier,identifier>> is determined. This is an input to the function.
+(input) the object for which an <<express:support_resource_schema.identifier,identifier>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_name_value"
 The *get_name_value* function accepts an object to which a label may be assigned and returns this label if present. 
 
-If a <<express:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema:basic_attribute_schema.name_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>>. Otherwise, the indeterminate value will be returned.
+If a <<express:basic_attribute_schema.name_attribute,name_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.name_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.name_attribute,name_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_name_value.obj"
-the object for which a <<express:support_resource_schema:support_resource_schema.label,label>> is determined. This is an input to the function.
+the object for which a <<express:support_resource_schema.label,label>> is determined. This is an input to the function.
 *)
 
 (*"basic_attribute_schema.get_role"
 The *get_role* function accepts an object to which a role may be assigned and returns this role if present. 
 
-If a <<express:basic_attribute_schema:basic_attribute_schema.role_association,role_association>> references the object, the function will return the <<express:basic_attribute_schema:basic_attribute_schema.object_role,object_role>> of the <<express:basic_attribute_schema:basic_attribute_schema.role_association.role,role>> attribute of this <<express:basic_attribute_schema:basic_attribute_schema.role_association,role_association>>. Otherwise, the indeterminate value will be returned.
+If a <<express:basic_attribute_schema.role_association,role_association>> references the object, the function will return the <<express:basic_attribute_schema.object_role,object_role>> of the <<express:basic_attribute_schema.role_association.role,role>> attribute of this <<express:basic_attribute_schema.role_association,role_association>>. Otherwise, the indeterminate value will be returned.
 *)
 
 (*"basic_attribute_schema.get_role.obj"
-(input) the object for which an <<express:basic_attribute_schema:basic_attribute_schema.object_role,object_role>> is determined. This is an input to the function.
+(input) the object for which an <<express:basic_attribute_schema.object_role,object_role>> is determined. This is an input to the function.
 *)
