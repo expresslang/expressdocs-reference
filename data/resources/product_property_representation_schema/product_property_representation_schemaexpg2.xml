@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="fundamentals_of_product_description_and_support" file="product_property_representation_schemaexpg2.xml">
+<img src="product_property_representation_schemaexpg2.gif">
+<img.area shape="rect" coords="64,1055,182,1091" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.pprs_description_attribute_select" />
+<img.area shape="rect" coords="27,628,168,649" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.represented_definition" />
+<img.area shape="rect" coords="10,1103,113,1147" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.pprs_name_attribute_select" />
+<img.area shape="rect" coords="137,371,410,392" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.item_identified_representation_usage_select" />
+<img.area shape="rect" coords="12,440,173,491" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.item_identified_representation_usage_definition" />
+<img.area shape="rect" coords="377,144,552,165" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.chained_representation_link" />
+<img.area shape="rect" coords="408,1069,681,1096" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation_reference" />
+<img.area shape="rect" coords="285,13,572,40" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation_relationship" />
+<img.area shape="rect" coords="356,109,573,136" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation" />
+<img.area shape="rect" coords="250,322,427,349" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="206,1052,383,1094" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute_select" />
+<img.area shape="rect" coords="314,396,560,423" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation_item" />
+<img.area shape="rect" coords="459,925,642,952" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="459,974,814,1001" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml#product_property_definition_schema.product_definition_shape" />
+<img.area shape="rect" coords="199,200,410,227" href="../../resources/representation_schema/representation_schema.xml#representation_schema.mapped_item" />
+<img.area shape="rect" coords="314,515,634,542" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml#product_property_definition_schema.property_definition" />
+<img.area shape="rect" coords="166,811,346,853" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation_relationship" />
+<img.area shape="rect" coords="314,486,622,513" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml#product_property_definition_schema.general_property" />
+<img.area shape="rect" coords="356,77,573,104" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation" />
+<img.area shape="rect" coords="454,810,671,837" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation" />
+<img.area shape="rect" coords="591,1008,815,1050" href="../../resources/product_structure_schema/product_structure_schema.xml#product_structure_schema.product_definition_specified_occurrence" />
+<img.area shape="rect" coords="491,175,638,232" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml#product_property_definition_schema.characterized_object" />
+<img.area shape="rect" coords="459,950,636,977" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="147,227,410,254" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation_context" />
+<img.area shape="rect" coords="250,269,467,296" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation" />
+<img.area shape="rect" coords="123,172,410,199" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation_relationship" />
+<img.area shape="rect" coords="314,544,703,571" href="../../resources/material_property_definition_schema/material_property_definition_schema.xml#material_property_definition_schema.property_definition_relationship" />
+<img.area shape="rect" coords="466,662,683,689" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation" />
+<img.area shape="rect" coords="314,452,583,479" href="../../resources/representation_schema/representation_schema.xml#representation_schema.set_representation_item" />
+<img.area shape="rect" coords="250,296,433,323" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="464,743,707,785" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml#product_property_definition_schema.property_definition" />
+<img.area shape="rect" coords="466,710,643,737" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text" />
+<img.area shape="rect" coords="314,424,583,451" href="../../resources/representation_schema/representation_schema.xml#representation_schema.list_representation_item" />
+<img.area shape="rect" coords="356,45,573,72" href="../../resources/representation_schema/representation_schema.xml#representation_schema.representation" />
+<img.area shape="rect" coords="314,573,604,600" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml#product_property_definition_schema.shape_aspect" />
+<img.area shape="rect" coords="314,602,674,629" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml#product_property_definition_schema.shape_aspect_relationship" />
+<img.area shape="rect" coords="141,1104,324,1146" href="../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute_select" />
+<img.area shape="rect" coords="466,686,649,713" href="../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label" />
+<img.area shape="rect" coords="725,11,824,170" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.characterized_chain_based_item_within_representation" />
+<img.area shape="rect" coords="134,1015,502,1044" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.specified_occurrence_context_dependent_shape_representation" />
+<img.area shape="rect" coords="177,663,269,735" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.property_definition_representation" />
+<img.area shape="rect" coords="567,257,720,308" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.characterized_item_within_representation" />
+<img.area shape="rect" coords="494,845,624,874" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.shape_representation" />
+<img.area shape="rect" coords="23,11,122,170" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.chain_based_item_identified_representation_usage" />
+<img.area shape="rect" coords="451,1108,637,1137" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.shape_representation_reference" />
+<img.area shape="rect" coords="22,269,122,349" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.item_identified_representation_usage" />
+<img.area shape="rect" coords="183,926,274,1000" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.context_dependent_shape_representation" />
+<img.area shape="rect" coords="152,752,295,800" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.shape_definition_representation" />
+<img.area shape="rect" coords="153,862,360,891" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml#product_property_representation_schema.shape_representation_relationship" />
+</img>
+</imgfile.content>
