@@ -56,9 +56,14 @@ If there is a likelihood of ambiguity, either the phrase "entity data type" or "
 Double quotation marks (" ") denote quoted text. Single quotation marks (' ') denote particular text string values.
 
 // TODO: Image map
+.The schemas of this part of ISO 10303
+image::../schema_diagexpg1.gif[]
+
+////
    <schema_diag>
       <express-g>
          <imgfile file="schema_diagexpg1.xml"
                   title="The schemas of this part of ISO 10303"/>
       </express-g>
    </schema_diag>
+////
