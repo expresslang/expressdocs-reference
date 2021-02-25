@@ -153,57 +153,57 @@ Only effectivities based on date, serial number, and lot number are considered i
 ====
 image::effectivity_schemaexpg1.svg[]
 
-* <<express:basic_attribute_schema,basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml
-* <<express:effectivity_schema,effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml
-* <<express:date_time_schema,date_time_schema>>; ../../resources/date_time_schema/date_time_schema.xml
-* <<express:action_schema,action_schema>>; ../../resources/action_schema/action_schema.xml
-* <<express:measure_schema,measure_schema>>; ../../resources/measure_schema/measure_schema.xml
-* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
+* <<express:basic_attribute_schema>>; 1
+* <<express:effectivity_schema>>; 2
+* <<express:date_time_schema>>; 3
+* <<express:action_schema>>; 4
+* <<express:measure_schema>>; 5
+* <<express:support_resource_schema>>; 6
 ====
 
 [.svgmap]
 ====
 image::effectivity_schemaexpg2.svg[]
 
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effs_name_attribute_select
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effs_description_attribute_select
-* <<express:action_schema.xml#action_schema,action_schema.xml#action_schema>>; ../../resources/action_schema/action_schema.xml#action_schema.action_method
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute_select
-* <<express:date_time_schema.xml#date_time_schema,date_time_schema.xml#date_time_schema>>; ../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_time_or_event_occurrence
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:date_time_schema.xml#date_time_schema,date_time_schema.xml#date_time_schema>>; ../../resources/date_time_schema/date_time_schema.xml#date_time_schema.time_interval
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:date_time_schema.xml#date_time_schema,date_time_schema.xml#date_time_schema>>; ../../resources/date_time_schema/date_time_schema.xml#date_time_schema.date_time_or_event_occurrence
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:measure_schema.xml#measure_schema,measure_schema.xml#measure_schema>>; ../../resources/measure_schema/measure_schema.xml#measure_schema.measure_with_unit
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.serial_numbered_effectivity
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.conditional_effectivity
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.dated_effectivity
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effectivity_relationship
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.lot_effectivity
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.time_interval_based_effectivity
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.effectivity
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.conditional_configuration
-* <<express:effectivity_schema.xml#effectivity_schema,effectivity_schema.xml#effectivity_schema>>; ../../resources/effectivity_schema/effectivity_schema.xml#effectivity_schema.condition
+* <<express:effectivity_schema.effs_name_attribute_select>>; 1
+* <<express:effectivity_schema.effs_description_attribute_select>>; 2
+* <<express:action_schema.action_method>>; 3
+* <<express:support_resource_schema.identifier>>; 4
+* <<express:basic_attribute_schema.name_attribute_select>>; 5
+* <<express:date_time_schema.date_time_or_event_occurrence>>; 6
+* <<express:support_resource_schema.text>>; 7
+* <<express:support_resource_schema.identifier>>; 8
+* <<express:support_resource_schema.text>>; 9
+* <<express:support_resource_schema.identifier>>; 10
+* <<express:basic_attribute_schema.description_attribute_select>>; 11
+* <<express:support_resource_schema.identifier>>; 12
+* <<express:date_time_schema.time_interval>>; 13
+* <<express:support_resource_schema.label>>; 14
+* <<express:date_time_schema.date_time_or_event_occurrence>>; 15
+* <<express:support_resource_schema.label>>; 16
+* <<express:measure_schema.measure_with_unit>>; 17
+* <<express:effectivity_schema.serial_numbered_effectivity>>; 18
+* <<express:effectivity_schema.conditional_effectivity>>; 19
+* <<express:effectivity_schema.dated_effectivity>>; 20
+* <<express:effectivity_schema.effectivity_relationship>>; 21
+* <<express:effectivity_schema.lot_effectivity>>; 22
+* <<express:effectivity_schema.time_interval_based_effectivity>>; 23
+* <<express:effectivity_schema.effectivity>>; 24
+* <<express:effectivity_schema.conditional_configuration>>; 25
+* <<express:effectivity_schema.condition>>; 26
 ====
 *)
 
 (*"effectivity_schema.condition"
-A *condition* is a type of <<express:action_schema:action_schema.action_method,action_method>> that must be fulfilled before a statement or relationship becomes valid.
+A *condition* is a type of <<express:action_schema.action_method,action_method>> that must be fulfilled before a statement or relationship becomes valid.
 *)
 
 (*"effectivity_schema.conditional_effectivity"
-A *conditional_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.condition,condition>> or <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined by an explicit condition.
+A *conditional_effectivity* is a type of <<express:effectivity_schema.condition,condition>> or <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined by an explicit condition.
 *)
 
 (*"effectivity_schema.conditional_configuration"
-A *conditional_configuration* is a type of <<express:effectivity_schema:effectivity_schema.conditional_effectivity,conditional_effectivity>> and represents an association of a <<express:product_concept_schema:product_concept_schema.product_concept_feature_association,product_concept_feature_association>> object with a design or process in order to define a valid usage of it in the context of a certain <<express:Product_class_mim:Product_class_mim.product_class,product_class>>.
+A *conditional_configuration* is a type of <<express:effectivity_schema.conditional_effectivity,conditional_effectivity>> and represents an association of a <<express:product_concept_schema.product_concept_feature_association,product_concept_feature_association>> object with a design or process in order to define a valid usage of it in the context of a certain <<express:Product_class_mim.product_class,product_class>>.
 *)
 
 (*"effectivity_schema.conditional_configuration.configuration_type"
@@ -219,15 +219,15 @@ the *inheritance_type* specifies the inheritance scheme for the configuration in
 *)
 
 (*"effectivity_schema.dated_effectivity"
-A *dated_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of time.
+A *dated_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of time.
 *)
 
 (*"effectivity_schema.dated_effectivity.effectivity_end_date"
-the <<express:date_time_schema:date_time_schema.date_time_or_event_occurrence,date_time_or_event_occurrence>> that defines the upper bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no upper limit.
+the <<express:date_time_schema.date_time_or_event_occurrence,date_time_or_event_occurrence>> that defines the upper bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no upper limit.
 *)
 
 (*"effectivity_schema.dated_effectivity.effectivity_start_date"
-the <<express:date_time_schema:date_time_schema.date_time_or_event_occurrence,date_time_or_event_occurrence>> that defines the lower bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no lower limit.
+the <<express:date_time_schema.date_time_or_event_occurrence,date_time_or_event_occurrence>> that defines the lower bound of the interval of applicability. If a value for this attribute is not defined, the interval of applicability has no lower limit.
 *)
 
 (*"effectivity_schema.dated_effectivity.wr:WR1"
@@ -242,11 +242,11 @@ An *effectivity* is the identification of a domain of applicability for product 
 A process is effective from 1998 March 1 through 1998 December 31.
 ====
 
- An *effectivity* may be either a <<express:effectivity_schema:effectivity_schema.serial_numbered_effectivity,serial_numbered_effectivity>> or a <<express:effectivity_schema:effectivity_schema.dated_effectivity,dated_effectivity>>, or a <<express:effectivity_schema:effectivity_schema.lot_effectivity,lot_effectivity>>, or a <<express:effectivity_schema:effectivity_schema.time_interval_based_effectivity,time_interval_based_effectivity>>.
+An *effectivity* may be either a <<express:effectivity_schema.serial_numbered_effectivity,serial_numbered_effectivity>> or a <<express:effectivity_schema.dated_effectivity,dated_effectivity>>, or a <<express:effectivity_schema.lot_effectivity,lot_effectivity>>, or a <<express:effectivity_schema.time_interval_based_effectivity,time_interval_based_effectivity>>.
 *)
 
 (*"effectivity_schema.effectivity.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *effectivity*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *effectivity*.
 
 [NOTE]
 --
@@ -260,7 +260,7 @@ The context in which id is used as a discriminating characteristic can be identi
 *)
 
 (*"effectivity_schema.effectivity.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *effectivity*.
+the <<express:support_resource_schema.text,text>> that characterizes the *effectivity*.
 
 [NOTE]
 --
@@ -269,7 +269,7 @@ This attribute is an upwardly compatible addition to *effectivity* as specified 
 *)
 
 (*"effectivity_schema.effectivity.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *effectivity* is known.
+the <<express:support_resource_schema.label,label>> by which the *effectivity* is known.
 
 [NOTE]
 --
@@ -278,30 +278,30 @@ This attribute is an upwardly compatible addition to *effectivity* as specified 
 *)
 
 (*"effectivity_schema.effectivity.wr:WR1"
-Each *effectivity* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>.
+Each *effectivity* shall be the <<express:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema.description_attribute,description_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 *)
 
 (*"effectivity_schema.effectivity.wr:WR2"
-Each *effectivity* shall be the <<express:basic_attribute_schema:basic_attribute_schema.name_attribute.named_item,named_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>>.
+Each *effectivity* shall be the <<express:basic_attribute_schema.name_attribute.named_item,named_item>> in at most one <<express:basic_attribute_schema.name_attribute,name_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.name_attribute,name_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"effectivity_schema.effectivity_relationship"
-An *effectivity_relationship* is a relationship between two instances of the entity data type <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> with a description of their relationship. 
+An *effectivity_relationship* is a relationship between two instances of the entity data type <<express:effectivity_schema.effectivity,effectivity>> with a description of their relationship. 
 
 [NOTE]
 --
@@ -315,16 +315,16 @@ Relationships represented using this entity may be parent child relationship. An
 
 [NOTE]
 --
-This entity, together with the <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:effectivity_schema.effectivity,effectivity>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"effectivity_schema.effectivity_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *effectivity_relationship* is known.
+the <<express:support_resource_schema.label,label>> by which the *effectivity_relationship* is known.
 *)
 
 (*"effectivity_schema.effectivity_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *effectivity_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *effectivity_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"effectivity_schema.effectivity_relationship.related_effectivity"
@@ -337,7 +337,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"effectivity_schema.effectivity_relationship.relating_effectivity"
-one of the instances of <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> that is a part of the relationship.
+one of the instances of <<express:effectivity_schema.effectivity,effectivity>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -346,7 +346,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"effectivity_schema.lot_effectivity"
-A *lot_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a given batch of items.
+A *lot_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a given batch of items.
 *)
 
 (*"effectivity_schema.lot_effectivity.effectivity_lot_id"
@@ -358,7 +358,7 @@ the size of the batch of items.
 *)
 
 (*"effectivity_schema.serial_numbered_effectivity"
-A *serial_numbered_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of serial numbers. 
+A *serial_numbered_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of serial numbers. 
 
 [NOTE]
 --
@@ -375,20 +375,20 @@ the last valid serial number. If a value for this attribute is not defined, the 
 *)
 
 (*"effectivity_schema.time_interval_based_effectivity"
-A *time_interval_based_effectivity* is a type of <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a <<express:date_time_schema:date_time_schema.time_interval,time_interval>>. 
+A *time_interval_based_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a <<express:date_time_schema.time_interval,time_interval>>. 
 
 [NOTE]
 --
-This entity data type provides greater functionalities than the entity data type <<express:effectivity_schema:effectivity_schema.dated_effectivity,dated_effectivity>>. In particular, it allows the specification of an effectivity period in which the period of time is defined by a date and a duration.
+This entity data type provides greater functionalities than the entity data type <<express:effectivity_schema.dated_effectivity,dated_effectivity>>. In particular, it allows the specification of an effectivity period in which the period of time is defined by a date and a duration.
 --
 *)
 
 (*"effectivity_schema.time_interval_based_effectivity.effectivity_period"
-the <<express:date_time_schema:date_time_schema.time_interval,time_interval>> defining the period of time when the associated product data are effective.
+the <<express:date_time_schema.time_interval,time_interval>> defining the period of time when the associated product data are effective.
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship"
-The *acyclic_effectivity_relationship* function determines whether the graph of instances of the entity data type <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:effectivity_schema:effectivity_schema.effectivity_relationship,effectivity_relationship>> or any of its subtypes. 
+The *acyclic_effectivity_relationship* function determines whether the graph of instances of the entity data type <<express:effectivity_schema.effectivity,effectivity>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:effectivity_schema.effectivity_relationship,effectivity_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -399,18 +399,18 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:effectivity_schema:effectivity_schema.effectivity_relationship,effectivity_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:effectivity_schema.effectivity_relationship,effectivity_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship.relation"
-(input) the candidate <<express:effectivity_schema:effectivity_schema.effectivity_relationship,effectivity_relationship>> to be checked.
+(input) the candidate <<express:effectivity_schema.effectivity_relationship,effectivity_relationship>> to be checked.
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship.relatives"
-(input) the set of instances of the entity data type <<express:effectivity_schema:effectivity_schema.effectivity,effectivity>> for which the function is searching in the <<express:effectivity_schema:effectivity_schema.effectivity_relationship.relating_effectivity,relating_effectivity>> parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:effectivity_schema.effectivity,effectivity>> for which the function is searching in the <<express:effectivity_schema.effectivity_relationship.relating_effectivity,relating_effectivity>> parameter of the *relation* argument.
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship.specific_relation"
-(input) the fully qualified entity name of a type of <<express:effectivity_schema:effectivity_schema.effectivity_relationship,effectivity_relationship>> entity.
+(input) the fully qualified entity name of a type of <<express:effectivity_schema.effectivity_relationship,effectivity_relationship>> entity.
 *)

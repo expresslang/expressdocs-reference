@@ -89,16 +89,16 @@ Product data items may have a label. The formats used to define labels are quite
 ====
 image::support_resource_schemaexpg1.svg[]
 
-* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
+* <<express:support_resource_schema>>; 1
 ====
 
 [.svgmap]
 ====
 image::support_resource_schemaexpg2.svg[]
 
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
+* <<express:support_resource_schema.text>>; 1
+* <<express:support_resource_schema.identifier>>; 2
+* <<express:support_resource_schema.label>>; 3
 ====
 *)
 

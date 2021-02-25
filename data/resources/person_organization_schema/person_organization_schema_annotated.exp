@@ -358,143 +358,143 @@ People and organizations are associated with product data to provide data concer
 ====
 image::person_organization_schemaexpg1.svg[]
 
-* <<express:support_resource_schema,support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml
-* <<express:basic_attribute_schema,basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml
-* <<express:person_organization_schema,person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml
+* <<express:support_resource_schema>>; 1
+* <<express:basic_attribute_schema>>; 2
+* <<express:person_organization_schema>>; 3
 ====
 
 [.svgmap]
 ====
 image::person_organization_schemaexpg2.svg[]
 
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_organization_select
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.pos_generic_attribute_select
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.pos_generic_attribute_list_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.generic_attribute_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.generic_attribute_list_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.personal_address
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organizational_project
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization_relationship
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organizational_project_relationship
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organizational_address
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_and_organization
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.address
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person
+* <<express:person_organization_schema.person_organization_select>>; 1
+* <<express:person_organization_schema.pos_generic_attribute_select>>; 2
+* <<express:person_organization_schema.pos_generic_attribute_list_select>>; 3
+* <<express:support_resource_schema.label>>; 4
+* <<express:basic_attribute_schema.generic_attribute_select>>; 5
+* <<express:support_resource_schema.label>>; 6
+* <<express:support_resource_schema.label>>; 7
+* <<express:support_resource_schema.label>>; 8
+* <<express:support_resource_schema.label>>; 9
+* <<express:support_resource_schema.label>>; 10
+* <<express:support_resource_schema.label>>; 11
+* <<express:support_resource_schema.label>>; 12
+* <<express:support_resource_schema.label>>; 13
+* <<express:support_resource_schema.label>>; 14
+* <<express:support_resource_schema.text>>; 15
+* <<express:support_resource_schema.label>>; 16
+* <<express:support_resource_schema.text>>; 17
+* <<express:basic_attribute_schema.generic_attribute_list_select>>; 18
+* <<express:support_resource_schema.label>>; 19
+* <<express:support_resource_schema.identifier>>; 20
+* <<express:support_resource_schema.label>>; 21
+* <<express:support_resource_schema.label>>; 22
+* <<express:support_resource_schema.label>>; 23
+* <<express:support_resource_schema.label>>; 24
+* <<express:support_resource_schema.text>>; 25
+* <<express:support_resource_schema.label>>; 26
+* <<express:support_resource_schema.label>>; 27
+* <<express:support_resource_schema.identifier>>; 28
+* <<express:support_resource_schema.label>>; 29
+* <<express:support_resource_schema.text>>; 30
+* <<express:support_resource_schema.label>>; 31
+* <<express:support_resource_schema.label>>; 32
+* <<express:support_resource_schema.label>>; 33
+* <<express:support_resource_schema.identifier>>; 34
+* <<express:support_resource_schema.text>>; 35
+* <<express:support_resource_schema.label>>; 36
+* <<express:support_resource_schema.text>>; 37
+* <<express:support_resource_schema.text>>; 38
+* <<express:support_resource_schema.identifier>>; 39
+* <<express:person_organization_schema.personal_address>>; 40
+* <<express:person_organization_schema.organizational_project>>; 41
+* <<express:person_organization_schema.organization_relationship>>; 42
+* <<express:person_organization_schema.organizational_project_relationship>>; 43
+* <<express:person_organization_schema.organizational_address>>; 44
+* <<express:person_organization_schema.person_and_organization>>; 45
+* <<express:person_organization_schema.organization>>; 46
+* <<express:person_organization_schema.address>>; 47
+* <<express:person_organization_schema.person>>; 48
 ====
 
 [.svgmap]
 ====
 image::person_organization_schemaexpg3.svg[]
 
-* <<express:person_organization_schemaexpg4,person_organization_schemaexpg4>>; ./person_organization_schemaexpg4.xml
-* <<express:person_organization_schemaexpg4,person_organization_schemaexpg4>>; ./person_organization_schemaexpg4.xml
-* <<express:person_organization_schemaexpg4,person_organization_schemaexpg4>>; ./person_organization_schemaexpg4.xml
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_type
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization_role
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_and_organization_role
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_type_definition
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization_type_relationship
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_role
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_type_definition_relationship
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.organization_type
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.person_type_definition_formation
+* <<express:person_organization_schemaexpg4>>; 1
+* <<express:person_organization_schemaexpg4>>; 2
+* <<express:person_organization_schemaexpg4>>; 3
+* <<express:support_resource_schema.label>>; 4
+* <<express:support_resource_schema.text>>; 5
+* <<express:support_resource_schema.text>>; 6
+* <<express:support_resource_schema.text>>; 7
+* <<express:support_resource_schema.label>>; 8
+* <<express:support_resource_schema.label>>; 9
+* <<express:support_resource_schema.label>>; 10
+* <<express:support_resource_schema.text>>; 11
+* <<express:support_resource_schema.identifier>>; 12
+* <<express:support_resource_schema.label>>; 13
+* <<express:support_resource_schema.label>>; 14
+* <<express:support_resource_schema.text>>; 15
+* <<express:support_resource_schema.label>>; 16
+* <<express:support_resource_schema.text>>; 17
+* <<express:support_resource_schema.identifier>>; 18
+* <<express:support_resource_schema.identifier>>; 19
+* <<express:support_resource_schema.label>>; 20
+* <<express:support_resource_schema.identifier>>; 21
+* <<express:support_resource_schema.text>>; 22
+* <<express:support_resource_schema.text>>; 23
+* <<express:support_resource_schema.text>>; 24
+* <<express:support_resource_schema.identifier>>; 25
+* <<express:support_resource_schema.label>>; 26
+* <<express:support_resource_schema.identifier>>; 27
+* <<express:person_organization_schema.person_type>>; 28
+* <<express:person_organization_schema.organization_role>>; 29
+* <<express:person_organization_schema.person_and_organization_role>>; 30
+* <<express:person_organization_schema.person_type_definition>>; 31
+* <<express:person_organization_schema.organization_type_relationship>>; 32
+* <<express:person_organization_schema.person_role>>; 33
+* <<express:person_organization_schema.person_type_definition_relationship>>; 34
+* <<express:person_organization_schema.organization_type>>; 35
+* <<express:person_organization_schema.person_type_definition_formation>>; 36
 ====
 
 [.svgmap]
 ====
 image::person_organization_schemaexpg4.svg[]
 
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.pos_description_attribute_select
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.pos_name_attribute_select
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.pos_id_attribute_select
-* <<express:person_organization_schemaexpg2,person_organization_schemaexpg2>>; ./person_organization_schemaexpg2.xml
-* <<express:person_organization_schemaexpg2,person_organization_schemaexpg2>>; ./person_organization_schemaexpg2.xml
-* <<express:person_organization_schemaexpg2,person_organization_schemaexpg2>>; ./person_organization_schemaexpg2.xml
-* <<express:person_organization_schemaexpg3,person_organization_schemaexpg3>>; ./person_organization_schemaexpg3.xml
-* <<express:person_organization_schemaexpg2,person_organization_schemaexpg2>>; ./person_organization_schemaexpg2.xml
-* <<express:person_organization_schemaexpg2,person_organization_schemaexpg2>>; ./person_organization_schemaexpg2.xml
-* <<express:person_organization_schemaexpg3,person_organization_schemaexpg3>>; ./person_organization_schemaexpg3.xml
-* <<express:person_organization_schemaexpg2,person_organization_schemaexpg2>>; ./person_organization_schemaexpg2.xml
-* <<express:person_organization_schemaexpg3,person_organization_schemaexpg3>>; ./person_organization_schemaexpg3.xml
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.name_attribute_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.label
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.description_attribute_select
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.text
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:support_resource_schema.xml#support_resource_schema,support_resource_schema.xml#support_resource_schema>>; ../../resources/support_resource_schema/support_resource_schema.xml#support_resource_schema.identifier
-* <<express:basic_attribute_schema.xml#basic_attribute_schema,basic_attribute_schema.xml#basic_attribute_schema>>; ../../resources/basic_attribute_schema/basic_attribute_schema.xml#basic_attribute_schema.id_attribute_select
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.position_in_organization_type
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.position_in_organization_relationship
-* <<express:person_organization_schema.xml#person_organization_schema,person_organization_schema.xml#person_organization_schema>>; ../../resources/person_organization_schema/person_organization_schema.xml#person_organization_schema.position_in_organization
+* <<express:person_organization_schema.pos_description_attribute_select>>; 1
+* <<express:person_organization_schema.pos_name_attribute_select>>; 2
+* <<express:person_organization_schema.pos_id_attribute_select>>; 3
+* <<express:person_organization_schemaexpg2>>; 4
+* <<express:person_organization_schemaexpg2>>; 5
+* <<express:person_organization_schemaexpg2>>; 6
+* <<express:person_organization_schemaexpg3>>; 7
+* <<express:person_organization_schemaexpg2>>; 8
+* <<express:person_organization_schemaexpg2>>; 9
+* <<express:person_organization_schemaexpg3>>; 10
+* <<express:person_organization_schemaexpg2>>; 11
+* <<express:person_organization_schemaexpg3>>; 12
+* <<express:support_resource_schema.text>>; 13
+* <<express:support_resource_schema.label>>; 14
+* <<express:basic_attribute_schema.name_attribute_select>>; 15
+* <<express:support_resource_schema.label>>; 16
+* <<express:support_resource_schema.text>>; 17
+* <<express:support_resource_schema.label>>; 18
+* <<express:basic_attribute_schema.description_attribute_select>>; 19
+* <<express:support_resource_schema.identifier>>; 20
+* <<express:support_resource_schema.text>>; 21
+* <<express:support_resource_schema.identifier>>; 22
+* <<express:support_resource_schema.identifier>>; 23
+* <<express:basic_attribute_schema.id_attribute_select>>; 24
+* <<express:person_organization_schema.position_in_organization_type>>; 25
+* <<express:person_organization_schema.position_in_organization_relationship>>; 26
+* <<express:person_organization_schema.position_in_organization>>; 27
 ====
 *)
 
 (*"person_organization_schema.person_organization_select"
-The *person_organization_select* type allows for the designation of an <<express:person_organization_schema:person_organization_schema.organization,organization>>, a <<express:person_organization_schema:person_organization_schema.person,person>> or a <<express:person_organization_schema:person_organization_schema.person_and_organization,person_and_organization>>.
+The *person_organization_select* type allows for the designation of an <<express:person_organization_schema.organization,organization>>, a <<express:person_organization_schema.person,person>> or a <<express:person_organization_schema.person_and_organization,person_and_organization>>.
 *)
 
 (*"person_organization_schema.address"
@@ -502,7 +502,7 @@ An *address* is the information necessary for communicating, using one or more c
 
 [NOTE]
 --
-In addition to the attributes defined in *address* additional generic attributes may be assigned using <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute_assignment,generic_attribute_assignment>>.
+In addition to the attributes defined in *address* additional generic attributes may be assigned using <<express:basic_attribute_schema.generic_attribute_assignment,generic_attribute_assignment>>.
 --
 
 [example]
@@ -565,7 +565,7 @@ the number at which telex messages may be received. The value of this attribute 
 *)
 
 (*"person_organization_schema.address.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> that specifies the name of the location identified by the *address*.
+the <<express:support_resource_schema.label,label>> that specifies the name of the location identified by the *address*.
 
 [example]
 ====
@@ -592,7 +592,7 @@ At least one of the attributes shall have a value.
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
 --
 *)
 
@@ -601,7 +601,7 @@ An *organization* is an administrative structure.
 *)
 
 (*"person_organization_schema.organization.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *organization*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *organization*. The value of this attribute need not be specified.
 
 [NOTE]
 --
@@ -610,15 +610,15 @@ The context in which id is used as a discriminating characteristic can be identi
 *)
 
 (*"person_organization_schema.organization.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *organization* is known.
+the <<express:support_resource_schema.label,label>> by which the *organization* is known.
 *)
 
 (*"person_organization_schema.organization.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organization*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organization*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.organization_relationship"
-An *organization_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema:person_organization_schema.organization,organization>> with a description of their relationship. 
+An *organization_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema.organization,organization>> with a description of their relationship. 
 
 [example]
 ====
@@ -637,20 +637,20 @@ Relationships represented using this entity may be parent child relationship. An
 
 [NOTE]
 --
-This entity, together with the <<express:person_organization_schema:person_organization_schema.organization,organization>> entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:person_organization_schema.organization,organization>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"person_organization_schema.organization_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *organization_relationship* is known.
+the <<express:support_resource_schema.label,label>> by which the *organization_relationship* is known.
 *)
 
 (*"person_organization_schema.organization_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organization_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organization_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"person_organization_schema.organization_relationship.relating_organization"
-one of the instances of <<express:person_organization_schema:person_organization_schema.organization,organization>> that is a part of the relationship.
+one of the instances of <<express:person_organization_schema.organization,organization>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -659,7 +659,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.organization_relationship.related_organization"
-the other instance of <<express:person_organization_schema:person_organization_schema.organization,organization>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:person_organization_schema.organization,organization>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -672,7 +672,7 @@ An *organization_role* is a purpose for an *organization* and provides identific
 *)
 
 (*"person_organization_schema.organization_role.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *organization_role* is known.
+the <<express:support_resource_schema.label,label>> by which the *organization_role* is known.
 
 [NOTE]
 --
@@ -681,7 +681,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.organization_role.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organization_role*. The value of the attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organization_role*. The value of the attribute need not be specified.
 
 [NOTE]
 --
@@ -690,16 +690,16 @@ This attribute is an upwardly compatible addition to *organization_role* as spec
 *)
 
 (*"person_organization_schema.organization_role.wr:WR1"
-Each *organization_role* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>.
+Each *organization_role* shall be the <<express:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema.description_attribute,description_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
 --
 *)
 
@@ -713,40 +713,40 @@ A national standards body is a type of organization.
 
 [NOTE]
 --
-A relationship between an *organization_type* object and one or more <<express:person_organization_schema:person_organization_schema.organization,organization>> objects is established by the declaration of a subtype of <<express:management_resources_schema:management_resources_schema.organization_type_assignment,organization_type_assignment>> that references an <<express:person_organization_schema:person_organization_schema.organization,organization>> via its items attribute.
+A relationship between an *organization_type* object and one or more <<express:person_organization_schema.organization,organization>> objects is established by the declaration of a subtype of <<express:management_resources_schema.organization_type_assignment,organization_type_assignment>> that references an <<express:person_organization_schema.organization,organization>> via its items attribute.
 --
 *)
 
 (*"person_organization_schema.organization_type.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *organization_type*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *organization_type*.
 *)
 
 (*"person_organization_schema.organization_type.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *organization_type* is known.
+the <<express:support_resource_schema.label,label>> by which the *organization_type* is known.
 *)
 
 (*"person_organization_schema.organization_type.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organization_type*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organization_type*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.organization_type_relationship"
-An *organization_type_relationship* is a relationship between two instances of the <<express:person_organization_schema:person_organization_schema.organization_type,organization_type>> entity data type and provides for the identification, naming, and description of that relationship.
+An *organization_type_relationship* is a relationship between two instances of the <<express:person_organization_schema.organization_type,organization_type>> entity data type and provides for the identification, naming, and description of that relationship.
 *)
 
 (*"person_organization_schema.organization_type_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organization_type_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organization_type_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.organization_type_relationship.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *organization_type_relationship*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *organization_type_relationship*.
 *)
 
 (*"person_organization_schema.organization_type_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *organization_type_relationship* is known.
+the <<express:support_resource_schema.label,label>> by which the *organization_type_relationship* is known.
 *)
 
 (*"person_organization_schema.organization_type_relationship.related_organization_type"
-the other instance of <<express:person_organization_schema:person_organization_schema.organization_type,organization_type>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:person_organization_schema.organization_type,organization_type>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -755,7 +755,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.organization_type_relationship.relating_organization_type"
-one of the instances of <<express:person_organization_schema:person_organization_schema.organization_type,organization_type>> that is a part of the relationship.
+one of the instances of <<express:person_organization_schema.organization_type,organization_type>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -764,35 +764,35 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.organizational_address"
-An *organizational_address* is a type of <<express:person_organization_schema:person_organization_schema.address,address>> for one or more organizations.
+An *organizational_address* is a type of <<express:person_organization_schema.address,address>> for one or more organizations.
 *)
 
 (*"person_organization_schema.organizational_address.organizations"
-the organizations located at the <<express:person_organization_schema:person_organization_schema.address,address>>.
+the organizations located at the <<express:person_organization_schema.address,address>>.
 *)
 
 (*"person_organization_schema.organizational_address.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organizational_address*. The value of the attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organizational_address*. The value of the attribute need not be specified.
 *)
 
 (*"person_organization_schema.organizational_project"
-An *organizational_project* is a project for which one or more <<express:person_organization_schema:person_organization_schema.organization,organization>> entity data types are responsible.
+An *organizational_project* is a project for which one or more <<express:person_organization_schema.organization,organization>> entity data types are responsible.
 *)
 
 (*"person_organization_schema.organizational_project.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *organizational_project* is known.
+the <<express:support_resource_schema.label,label>> by which the *organizational_project* is known.
 *)
 
 (*"person_organization_schema.organizational_project.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organizational_project*. The value of the attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organizational_project*. The value of the attribute need not be specified.
 *)
 
 (*"person_organization_schema.organizational_project.responsible_organizations"
-the <<express:person_organization_schema:person_organization_schema.organization,organization>> entity data types indicating who has project oversight.
+the <<express:person_organization_schema.organization,organization>> entity data types indicating who has project oversight.
 *)
 
 (*"person_organization_schema.organizational_project.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *organizational_project*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *organizational_project*.
 
 [NOTE]
 --
@@ -806,21 +806,21 @@ The context in which id is used as a discriminating characteristic can be identi
 *)
 
 (*"person_organization_schema.organizational_project.wr:WR1"
-Each *organizational_project* shall be the <<express:basic_attribute_schema:basic_attribute_schema.id_attribute.identified_item,identified_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.id_attribute,id_attribute>>.
+Each *organizational_project* shall be the <<express:basic_attribute_schema.id_attribute.identified_item,identified_item>> in at most one <<express:basic_attribute_schema.id_attribute,id_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.id_attribute,id_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.id_attribute,id_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
 --
 *)
 
 (*"person_organization_schema.organizational_project_relationship"
-An *organizational_project_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema:person_organization_schema.organizational_project,organizational_project>> with an identification and description of their relationship. 
+An *organizational_project_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema.organizational_project,organizational_project>> with an identification and description of their relationship. 
 
 [NOTE]
 --
@@ -834,20 +834,20 @@ Relationships represented using this entity may be parent child relationship. An
 
 [NOTE]
 --
-This entity, together with the <<express:person_organization_schema:person_organization_schema.organizational_project,organizational_project>> entity, is based on the relationship template that is described in annex E.3.
+This entity, together with the <<express:person_organization_schema.organizational_project,organizational_project>> entity, is based on the relationship template that is described in annex E.3.
 --
 *)
 
 (*"person_organization_schema.organizational_project_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *organizational_project_relationship* is known.
+the <<express:support_resource_schema.label,label>> by which the *organizational_project_relationship* is known.
 *)
 
 (*"person_organization_schema.organizational_project_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *organizational_project_relationship*. The value of the attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *organizational_project_relationship*. The value of the attribute need not be specified.
 *)
 
 (*"person_organization_schema.organizational_project_relationship.relating_organizational_project"
-one of the instances of <<express:person_organization_schema:person_organization_schema.organizational_project,organizational_project>> that is a part of the relationship.
+one of the instances of <<express:person_organization_schema.organizational_project,organizational_project>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -856,7 +856,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.organizational_project_relationship.related_organizational_project"
-the other instance of <<express:person_organization_schema:person_organization_schema.organizational_project,organizational_project>> that is a part of the relationship. If one element of the relationship is dependent up on the other, this attribute shall be the dependent one.
+the other instance of <<express:person_organization_schema.organizational_project,organizational_project>> that is a part of the relationship. If one element of the relationship is dependent up on the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -869,7 +869,7 @@ A *person* is an individual human being.
 
 [NOTE]
 --
-In addition to the attributes defined in *person* additional lists of attributes may be assigned using <<express:basic_attribute_schema:basic_attribute_schema.generic_attribute_list_assignment,generic_attribute_list_assignment>>.
+In addition to the attributes defined in *person* additional lists of attributes may be assigned using <<express:basic_attribute_schema.generic_attribute_list_assignment,generic_attribute_list_assignment>>.
 --
 
 [example]
@@ -879,7 +879,7 @@ For example a generic attribute list named "Previous name" with a value of ["Hon
 *)
 
 (*"person_organization_schema.person.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *person*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *person*.
 
 [NOTE]
 --
@@ -915,11 +915,11 @@ the *person*'s other forenames, if there are any. The value of this attribute ne
 *)
 
 (*"person_organization_schema.person.prefix_titles"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that specifies the *person*'s social or professional standing and appear before his or her names. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that specifies the *person*'s social or professional standing and appear before his or her names. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.person.suffix_titles"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that specifies the *person*'s social or professional standing and appear after his or her names. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that specifies the *person*'s social or professional standing and appear after his or her names. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.person.wr:WR1"
@@ -931,15 +931,15 @@ A *person_and_organization* is a person in an organization.
 *)
 
 (*"person_organization_schema.person_and_organization.the_person"
-the instance of the <<express:person_organization_schema:person_organization_schema.person,person>> entity data type who is related to an instance of <<express:person_organization_schema:person_organization_schema.organization,organization>>.
+the instance of the <<express:person_organization_schema.person,person>> entity data type who is related to an instance of <<express:person_organization_schema.organization,organization>>.
 *)
 
 (*"person_organization_schema.person_and_organization.the_organization"
-the instance of the <<express:person_organization_schema:person_organization_schema.organization,organization>> entity data type to which the instance of <<express:person_organization_schema:person_organization_schema.person,person>> is related.
+the instance of the <<express:person_organization_schema.organization,organization>> entity data type to which the instance of <<express:person_organization_schema.person,person>> is related.
 *)
 
 (*"person_organization_schema.person_and_organization.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *person_and_organization* is known.
+the <<express:support_resource_schema.label,label>> by which the *person_and_organization* is known.
 
 [NOTE]
 --
@@ -948,7 +948,7 @@ This attribute is an upwardly compatible addition to *person_and_organization* a
 *)
 
 (*"person_organization_schema.person_and_organization.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *person_and_organization*.
+the <<express:support_resource_schema.text,text>> that characterizes the *person_and_organization*.
 
 [NOTE]
 --
@@ -957,25 +957,25 @@ This attribute is an upwardly compatible addition to *person_and_organization* a
 *)
 
 (*"person_organization_schema.person_and_organization.wr:WR1"
-Each *person_and_organization* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>.
+Each *person_and_organization* shall be the <<express:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema.description_attribute,description_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 *)
 
 (*"person_organization_schema.person_and_organization.wr:WR2"
-Each *person_and_organization* shall be the <<express:basic_attribute_schema:basic_attribute_schema.name_attribute.named_item,named_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>>.
+Each *person_and_organization* shall be the <<express:basic_attribute_schema.name_attribute.named_item,named_item>> in at most one <<express:basic_attribute_schema.name_attribute,name_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.name_attribute,name_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.name_attribute,name_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
 --
 *)
 
@@ -984,12 +984,12 @@ A *person_and_organization_role* is a purpose for a *person_and_organization* an
 
 [example]
 ====
-The role of a <<express:person_organization_schema:person_organization_schema.person,person>> could be 'buyer' in the context of the <<express:person_organization_schema:person_organization_schema.organization,organization>> where he/she works and it could be 'customer' in the context of the <<express:person_organization_schema:person_organization_schema.organization,organization>> from which he/she purchases goods.
+The role of a <<express:person_organization_schema.person,person>> could be 'buyer' in the context of the <<express:person_organization_schema.organization,organization>> where he/she works and it could be 'customer' in the context of the <<express:person_organization_schema.organization,organization>> from which he/she purchases goods.
 ====
 *)
 
 (*"person_organization_schema.person_and_organization_role.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *person_and_organization_role* is known.
+the <<express:support_resource_schema.label,label>> by which the *person_and_organization_role* is known.
 
 [NOTE]
 --
@@ -998,7 +998,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.person_and_organization_role.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *person_and_organization_role*.
+the <<express:support_resource_schema.text,text>> that characterizes the *person_and_organization_role*.
 
 [NOTE]
 --
@@ -1007,16 +1007,16 @@ This attribute is an upwardly compatible addition to *person_and_organization_ro
 *)
 
 (*"person_organization_schema.person_and_organization_role.wr:WR1"
-Each *person_and_organization_role* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>.
+Each *person_and_organization_role* shall be the <<express:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema.description_attribute,description_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
 --
 *)
 
@@ -1025,7 +1025,7 @@ A *person_role* is a purpose for a person and provides identification and descri
 *)
 
 (*"person_organization_schema.person_role.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *person_role* is known.
+the <<express:support_resource_schema.label,label>> by which the *person_role* is known.
 
 [NOTE]
 --
@@ -1034,7 +1034,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.person_role.description"
-the <<express:support_resource_schema:support_resource_schema.label,label>> that characterizes the *person_role*.
+the <<express:support_resource_schema.label,label>> that characterizes the *person_role*.
 
 [NOTE]
 --
@@ -1043,16 +1043,16 @@ This attribute is an upwardly compatible addition to *person_role* as specified 
 *)
 
 (*"person_organization_schema.person_role.wr:WR1"
-Each *person_role* shall be the <<express:basic_attribute_schema:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>>.
+Each *person_role* shall be the <<express:basic_attribute_schema.description_attribute.described_item,described_item>> in at most one <<express:basic_attribute_schema.description_attribute,description_attribute>>.
 
 [NOTE]
 --
-The <<express:basic_attribute_schema:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
+The <<express:basic_attribute_schema.description_attribute,description_attribute>> data type is defined in <<express:basic_attribute_schema,basic_attribute_schema>> of this part of ISO 10303.
 --
 
 [NOTE]
 --
-A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
+A template for constraining the population of the entity data types defined in the <<express:basic_attribute_schema,basic_attribute_schema>> is described in annex E.
 --
 *)
 
@@ -1070,15 +1070,15 @@ A *person_type* is a category of people having common characteristics. // <note>
 *)
 
 (*"person_organization_schema.person_type.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *person_type*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *person_type*.
 *)
 
 (*"person_organization_schema.person_type.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *person_type* is known.
+the <<express:support_resource_schema.label,label>> by which the *person_type* is known.
 *)
 
 (*"person_organization_schema.person_type.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *person_type*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *person_type*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.person_type_definition"
@@ -1086,19 +1086,19 @@ A *person_type_definition* is a characterization of type of person.
 *)
 
 (*"person_organization_schema.person_type_definition.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *person_type_definition*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *person_type_definition*.
 *)
 
 (*"person_organization_schema.person_type_definition.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *person_type_definition* is known.
+the <<express:support_resource_schema.label,label>> by which the *person_type_definition* is known.
 *)
 
 (*"person_organization_schema.person_type_definition.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *person_type_definition*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *person_type_definition*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.person_type_definition.formation"
-the <<express:person_organization_schema:person_organization_schema.person_type_definition_formation,person_type_definition_formation>> to which the *person_type_definition* relates.
+the <<express:person_organization_schema.person_type_definition_formation,person_type_definition_formation>> to which the *person_type_definition* relates.
 *)
 
 (*"person_organization_schema.person_type_definition_formation"
@@ -1106,39 +1106,39 @@ A *person_type_definition_formation* is a collector of definitions of a type of 
 *)
 
 (*"person_organization_schema.person_type_definition_formation.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *person_type_definition_formation*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *person_type_definition_formation*.
 *)
 
 (*"person_organization_schema.person_type_definition_formation.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *person_type_definition_formation* is known.
+the <<express:support_resource_schema.label,label>> by which the *person_type_definition_formation* is known.
 *)
 
 (*"person_organization_schema.person_type_definition_formation.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *person_type_definition_formation*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *person_type_definition_formation*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.person_type_definition_formation.of_person_type"
-the <<express:person_organization_schema:person_organization_schema.person_type,person_type>> to which the *person_type_definition_formation* belongs.
+the <<express:person_organization_schema.person_type,person_type>> to which the *person_type_definition_formation* belongs.
 *)
 
 (*"person_organization_schema.person_type_definition_relationship"
-A *person_type_definition_relationship* is a relationship between two instances of the <<express:person_organization_schema:person_organization_schema.person_type_definition,person_type_definition>> entity data type and provides for the identification, naming, and description of that relationship.
+A *person_type_definition_relationship* is a relationship between two instances of the <<express:person_organization_schema.person_type_definition,person_type_definition>> entity data type and provides for the identification, naming, and description of that relationship.
 *)
 
 (*"person_organization_schema.person_type_definition_relationship.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *person_type_definition_relationship*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *person_type_definition_relationship*.
 *)
 
 (*"person_organization_schema.person_type_definition_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *person_type_definition_relationship* is known.
+the <<express:support_resource_schema.label,label>> by which the *person_type_definition_relationship* is known.
 *)
 
 (*"person_organization_schema.person_type_definition_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *person_type_definition_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *person_type_definition_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.person_type_definition_relationship.related_person_type_definition"
-the other instance of <<express:person_organization_schema:person_organization_schema.person_type_definition,person_type_definition>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:person_organization_schema.person_type_definition,person_type_definition>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -1147,7 +1147,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.person_type_definition_relationship.relating_person_type_definition"
-one of the instances of <<express:person_organization_schema:person_organization_schema.person_type_definition,person_type_definition>> that is a part of the relationship.
+one of the instances of <<express:person_organization_schema.person_type_definition,person_type_definition>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -1156,15 +1156,15 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.personal_address"
-A *personal_address* is a type of <<express:person_organization_schema:person_organization_schema.address,address>>, which is an address for one or more persons.
+A *personal_address* is a type of <<express:person_organization_schema.address,address>>, which is an address for one or more persons.
 *)
 
 (*"person_organization_schema.personal_address.people"
-the people who reside at the <<express:person_organization_schema:person_organization_schema.address,address>>.
+the people who reside at the <<express:person_organization_schema.address,address>>.
 *)
 
 (*"person_organization_schema.personal_address.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *personal_address*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *personal_address*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.position_in_organization"
@@ -1177,35 +1177,35 @@ The chairperson of SC4.
 *)
 
 (*"person_organization_schema.position_in_organization.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *position_in_organization*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *position_in_organization*.
 *)
 
 (*"person_organization_schema.position_in_organization.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *position_in_organization* is known.
+the <<express:support_resource_schema.label,label>> by which the *position_in_organization* is known.
 *)
 
 (*"person_organization_schema.position_in_organization.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *position_in_organization*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *position_in_organization*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.position_in_organization_relationship"
-A *position_in_organization_relationship* is a relationship between two instances of the <<express:person_organization_schema:person_organization_schema.position_in_organization,position_in_organization>> entity data type and provides for the identification, naming, and description of that relationship.
+A *position_in_organization_relationship* is a relationship between two instances of the <<express:person_organization_schema.position_in_organization,position_in_organization>> entity data type and provides for the identification, naming, and description of that relationship.
 *)
 
 (*"person_organization_schema.position_in_organization_relationship.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *position_in_organization_relationship*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *position_in_organization_relationship*.
 *)
 
 (*"person_organization_schema.position_in_organization_relationship.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *position_in_organization_relationship* is known.
+the <<express:support_resource_schema.label,label>> by which the *position_in_organization_relationship* is known.
 *)
 
 (*"person_organization_schema.position_in_organization_relationship.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *position_in_organization_relationship*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *position_in_organization_relationship*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.position_in_organization_relationship.related_position_in_organization"
-the other instance of <<express:person_organization_schema:person_organization_schema.position_in_organization,position_in_organization>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
+the other instance of <<express:person_organization_schema.position_in_organization,position_in_organization>> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.
 
 [NOTE]
 --
@@ -1214,7 +1214,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.position_in_organization_relationship.relating_position_in_organization"
-one of the instances of <<express:person_organization_schema:person_organization_schema.position_in_organization,position_in_organization>> that is a part of the relationship.
+one of the instances of <<express:person_organization_schema.position_in_organization,position_in_organization>> that is a part of the relationship.
 
 [NOTE]
 --
@@ -1232,24 +1232,24 @@ Technical Director is a position in a company.
 
 [NOTE]
 --
-A relationship between a *position_in_organization_type* object and one or more <<express:person_organization_schema:person_organization_schema.position_in_organization,position_in_organization>> objects is established by the declaration of a subtype of <<express:management_resources_schema:management_resources_schema.position_in_organization_type_assignment,position_in_organization_type_assignment>> that references a <<express:person_organization_schema:person_organization_schema.position_in_organization,position_in_organization>> via its items attribute.
+A relationship between a *position_in_organization_type* object and one or more <<express:person_organization_schema.position_in_organization,position_in_organization>> objects is established by the declaration of a subtype of <<express:management_resources_schema.position_in_organization_type_assignment,position_in_organization_type_assignment>> that references a <<express:person_organization_schema.position_in_organization,position_in_organization>> via its items attribute.
 --
 *)
 
 (*"person_organization_schema.position_in_organization_type.id"
-the <<express:support_resource_schema:support_resource_schema.identifier,identifier>> that distinguishes the *position_in_organization_type*.
+the <<express:support_resource_schema.identifier,identifier>> that distinguishes the *position_in_organization_type*.
 *)
 
 (*"person_organization_schema.position_in_organization_type.name"
-the <<express:support_resource_schema:support_resource_schema.label,label>> by which the *position_in_organization_type* is known.
+the <<express:support_resource_schema.label,label>> by which the *position_in_organization_type* is known.
 *)
 
 (*"person_organization_schema.position_in_organization_type.description"
-the <<express:support_resource_schema:support_resource_schema.text,text>> that characterizes the *position_in_organization_type*. The value of this attribute need not be specified.
+the <<express:support_resource_schema.text,text>> that characterizes the *position_in_organization_type*. The value of this attribute need not be specified.
 *)
 
 (*"person_organization_schema.acyclic_organization_relationship"
-The *acyclic_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema:person_organization_schema.organization,organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema:person_organization_schema.organization_relationship,organization_relationship>> or any of its subtypes. 
+The *acyclic_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organization,organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organization_relationship,organization_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1260,24 +1260,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema:person_organization_schema.organization_relationship,organization_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema.organization_relationship,organization_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"person_organization_schema.acyclic_organization_relationship.relation"
-(input) the candidate <<express:person_organization_schema:person_organization_schema.organization_relationship,organization_relationship>> to be checked.
+(input) the candidate <<express:person_organization_schema.organization_relationship,organization_relationship>> to be checked.
 *)
 
 (*"person_organization_schema.acyclic_organization_relationship.relatives"
-(input) the set of instances of the entity data type <<express:person_organization_schema:person_organization_schema.organization,organization>> for which the function is searching in the <<express:person_organization_schema:person_organization_schema.organization_relationship.relating_organization,relating_organization>> attribute of the *relation* argument.
+(input) the set of instances of the entity data type <<express:person_organization_schema.organization,organization>> for which the function is searching in the <<express:person_organization_schema.organization_relationship.relating_organization,relating_organization>> attribute of the *relation* argument.
 *)
 
 (*"person_organization_schema.acyclic_organization_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:person_organization_schema:person_organization_schema.organization_relationship,organization_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:person_organization_schema.organization_relationship,organization_relationship>> entity.
 *)
 
 (*"person_organization_schema.acyclic_organization_type_relationship"
-The *acyclic_organization_type_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema:person_organization_schema.organization_type,organization_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema:person_organization_schema.organization_type_relationship,organization_type_relationship>> or any of its subtypes. 
+The *acyclic_organization_type_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organization_type,organization_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organization_type_relationship,organization_type_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1288,24 +1288,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema:person_organization_schema.organization_type_relationship,organization_type_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema.organization_type_relationship,organization_type_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"person_organization_schema.acyclic_organization_type_relationship.relation"
-(input) the candidate <<express:person_organization_schema:person_organization_schema.organization_type_relationship,organization_type_relationship>> to be checked.
+(input) the candidate <<express:person_organization_schema.organization_type_relationship,organization_type_relationship>> to be checked.
 *)
 
 (*"person_organization_schema.acyclic_organization_type_relationship.relatives"
-(input) the set of instances of the entity data type <<express:person_organization_schema:person_organization_schema.organization_type,organization_type>> that the function is searching for in the <<express:person_organization_schema:person_organization_schema.organization_type_relationship.relating_organization_type,relating_organization_type>> parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:person_organization_schema.organization_type,organization_type>> that the function is searching for in the <<express:person_organization_schema.organization_type_relationship.relating_organization_type,relating_organization_type>> parameter of the *relation* argument.
 *)
 
 (*"person_organization_schema.acyclic_organization_type_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:person_organization_schema:person_organization_schema.organization_type_relationship,organization_type_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:person_organization_schema.organization_type_relationship,organization_type_relationship>> entity.
 *)
 
 (*"person_organization_schema.acyclic_organizational_project_relationship"
-The *acyclic_organizational_project_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema:person_organization_schema.organizational_project,organizational_project>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> or any of its subtypes. 
+The *acyclic_organizational_project_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organizational_project,organizational_project>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1316,24 +1316,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"person_organization_schema.acyclic_organizational_project_relationship.relation"
-(input) the candidate <<express:person_organization_schema:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> to be checked.
+(input) the candidate <<express:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> to be checked.
 *)
 
 (*"person_organization_schema.acyclic_organizational_project_relationship.relatives"
-(input) the set of instances of the entity data type <<express:person_organization_schema:person_organization_schema.organizational_project,organizational_project>> for which the function is searching in the <<express:person_organization_schema:person_organization_schema.organizational_project_relationship.relating_organizational_project,relating_organizational_project>> attribute of the *relation* argument.
+(input) the set of instances of the entity data type <<express:person_organization_schema.organizational_project,organizational_project>> for which the function is searching in the <<express:person_organization_schema.organizational_project_relationship.relating_organizational_project,relating_organizational_project>> attribute of the *relation* argument.
 *)
 
 (*"person_organization_schema.acyclic_organizational_project_relationship.specific_relation"
-(input) the fully qualified entity name of a type of <<express:person_organization_schema:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> entity.
+(input) the fully qualified entity name of a type of <<express:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> entity.
 *)
 
 (*"person_organization_schema.acyclic_person_type_definition_relationship"
-The *acyclic_person_type_definition_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema:person_organization_schema.person_type_definition,person_type_definition>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> or any of its subtypes. 
+The *acyclic_person_type_definition_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.person_type_definition,person_type_definition>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1344,24 +1344,24 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"person_organization_schema.acyclic_person_type_definition_relationship.relation"
-(input) the candidate <<express:person_organization_schema:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> to be checked.
+(input) the candidate <<express:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> to be checked.
 *)
 
 (*"person_organization_schema.acyclic_person_type_definition_relationship.relatives"
-(input) the set of instances of the entity data type <<express:person_organization_schema:person_organization_schema.person_type_definition,person_type_definition>> that the function is searching for in the <<express:person_organization_schema:person_organization_schema.person_type_definition_relationship.relating_person_type_definition,relating_person_type_definition>> parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:person_organization_schema.person_type_definition,person_type_definition>> that the function is searching for in the <<express:person_organization_schema.person_type_definition_relationship.relating_person_type_definition,relating_person_type_definition>> parameter of the *relation* argument.
 *)
 
 (*"person_organization_schema.acyclic_person_type_definition_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:person_organization_schema:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> entity.
 *)
 
 (*"person_organization_schema.acyclic_position_in_organization_relationship"
-The *acyclic_position_in_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema:person_organization_schema.position_in_organization,position_in_organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> or any of its subtypes. 
+The *acyclic_position_in_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.position_in_organization,position_in_organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1372,18 +1372,18 @@ The algorithm of the function is explained in annex E.2.
 
 [NOTE]
 --
-This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> entity include rules that use this function.
+This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <<express:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> entity include rules that use this function.
 --
 *)
 
 (*"person_organization_schema.acyclic_position_in_organization_relationship.relation"
-(input) the candidate <<express:person_organization_schema:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> to be checked.
+(input) the candidate <<express:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> to be checked.
 *)
 
 (*"person_organization_schema.acyclic_position_in_organization_relationship.relatives"
-(input) the set of instances of the entity data type <<express:person_organization_schema:person_organization_schema.position_in_organization,position_in_organization>> that the function is searching for in the <<express:person_organization_schema:person_organization_schema.position_in_organization_relationship.relating_position_in_organization,relating_position_in_organization>> parameter of the *relation* argument.
+(input) the set of instances of the entity data type <<express:person_organization_schema.position_in_organization,position_in_organization>> that the function is searching for in the <<express:person_organization_schema.position_in_organization_relationship.relating_position_in_organization,relating_position_in_organization>> parameter of the *relation* argument.
 *)
 
 (*"person_organization_schema.acyclic_position_in_organization_relationship.specific_relation"
-(input) the fully qualified name of a subtype of the <<express:person_organization_schema:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> entity.
+(input) the fully qualified name of a subtype of the <<express:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> entity.
 *)
