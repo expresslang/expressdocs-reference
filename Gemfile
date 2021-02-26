@@ -5,6 +5,6 @@ gem "byebug"
 gem "sassc"
 gem "rake"
 gem "nokogiri", "~> 1.10.0"
-gem "expressir"
+gem "expressir", git: "https://github.com/lutaml/expressir", submodules: true
 gem "metanorma-plugin-lutaml", "0.2.4-alpha.3"
 gem "lutaml", "0.4.1.pre.alpha.2"
