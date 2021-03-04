@@ -2,7 +2,7 @@
 [bibliography]
 == Bibliography
 
-* [[[ref8824-1, ISO 8824-1]]]
+* [[[ref8824-1, ISO/IEC 8824-1]]]
 
 * [[[ISO-IEC-10746-2, ISO/IEC 10746-2]]]
 
