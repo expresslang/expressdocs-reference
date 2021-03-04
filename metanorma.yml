@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - data/documents/resources/fundamentals_of_product_description_and_support/document.adoc
+
+  collection:
+    organization: "ISO/TC 184/SC 4/WG 12"
+    name: "ISO 10303 in Metanorma"
