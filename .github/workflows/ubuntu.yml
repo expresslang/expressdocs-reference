@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
-          repository: metanorma/stepmod
+          repository: metanorma/iso-10303-stepmod
           path: stepmod
 
       - name: Use Metanorma
