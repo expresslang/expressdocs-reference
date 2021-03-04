@@ -1,24 +1,103 @@
 GIT
-  remote: https://github.com/lutaml/expressir
-  revision: 32633ba45ff1110572f47aae8818a371f3016990
-  submodules: true
+  remote: https://github.com/metanorma/isodoc
+  revision: 169c3fae177949b6a0cf67d0ff39293147372c79
   specs:
-    expressir (0.2.15)
-      nokogiri (~> 1.10)
-      rice (~> 3)
+    isodoc (1.5.3)
+      asciimath
+      html2doc (~> 1.0.0)
+      htmlentities (~> 4.3.4)
+      liquid (~> 4)
+      metanorma (~> 1.2.0)
+      nokogiri (~> 1.10.4)
+      relaton-cli
+      roman-numerals
+      thread_safe
+      twitter_cldr
+      uuidtools
+
+GIT
+  remote: https://github.com/metanorma/metanorma
+  revision: 966f8a857f6a9ad62cd15d2c4f1daffcb2bd67b2
+  specs:
+    metanorma (1.2.6)
+      asciidoctor
+      fontist (~> 1.8)
+      htmlentities
+      metanorma-utils (~> 1.0.3)
+      mn2pdf (~> 1)
+      nokogiri
+      pry
+
+GIT
+  remote: https://github.com/metanorma/metanorma-cli
+  revision: b5d11415dd84a8fce6f510e3c4aa7ff88d3e96db
+  specs:
+    metanorma-cli (1.4.5)
+      git (~> 1.5)
+      isodoc (>= 1.5.0)
+      metanorma (~> 1.2.0)
+      metanorma-bipm (~> 1.0.0)
+      metanorma-cc (~> 1.6.0)
+      metanorma-csa (~> 1.7.0)
+      metanorma-generic (~> 1.9.0)
+      metanorma-iec (~> 1.2.0)
+      metanorma-ietf (~> 2.2.0)
+      metanorma-iho (~> 0.2.0)
+      metanorma-iso (~> 1.7.0)
+      metanorma-itu (~> 1.2.0)
+      metanorma-m3aawg (~> 1.6.0)
+      metanorma-nist (~> 1.2.0)
+      metanorma-ogc (~> 1.2.0)
+      metanorma-standoc (~> 1.8.0)
+      metanorma-un (~> 0.5.0)
+      relaton-cli (>= 0.8.2)
       thor (~> 1.0)
 
 GIT
-  remote: https://github.com/metanorma/metanorma-plugin-lutaml
-  revision: 6f1e7fe072f95fd387abf9f2f121573f0997abb7
-  branch: hotfix/dont-prefix-express-svgmap
+  remote: https://github.com/metanorma/metanorma-iso
+  revision: c0a474dcac60640926d718df1ebc2df4e9b2941a
   specs:
-    metanorma-plugin-lutaml (0.2.4.pre.alpha.3)
-      liquid
-      lutaml (= 0.4.1.pre.alpha.2)
-      lutaml-uml (~> 0.2.0)
-      metanorma
-      relaton-cli
+    metanorma-iso (1.7.2)
+      isodoc (~> 1.5.0)
+      metanorma-standoc (~> 1.8.0)
+      mn2sts (~> 1.5.0)
+      ruby-jing
+      tokenizer (~> 0.3.0)
+      twitter_cldr
+
+GIT
+  remote: https://github.com/metanorma/metanorma-standoc
+  revision: eba2d8b743aa935186640d2adae77e1c6cb19424
+  specs:
+    metanorma-standoc (1.8.4)
+      asciidoctor (~> 2.0.0)
+      asciimath2unitsml (~> 0.2.0)
+      concurrent-ruby
+      iev (~> 0.2.1)
+      isodoc (~> 1.5.0)
+      latexmath
+      mathml2asciimath
+      metanorma-plugin-datastruct
+      metanorma-plugin-lutaml (~> 0.2.1)
+      metanorma-utils (~> 1.0.2)
+      relaton-cli (~> 1.7.0)
+      relaton-iev (~> 1.1.0)
+      ruby-jing
+      unicode2latex (~> 0.0.1)
+
+GIT
+  remote: https://github.com/metanorma/metanorma-utils
+  revision: 3e758318dedb103504bbc0369b1ea28cf442a86e
+  branch: main
+  specs:
+    metanorma-utils (1.0.6)
+      asciidoctor (~> 2.0.0)
+      concurrent-ruby
+      mime-types
+      mimemagic
+      nokogiri (~> 1.10.4)
+      sterile (~> 1.0.14)
+      uuidtools
 
 GEM
   remote: https://rubygems.org/
@@ -29,7 +108,7 @@ GEM
       cabin (> 0)
     asciidoctor (2.0.12)
     asciimath (2.0.2)
-    asciimath2unitsml (0.1.3)
+    asciimath2unitsml (0.2.0)
       asciimath
       htmlentities
       nokogiri (~> 1.10.4)
@@ -54,6 +133,9 @@ GEM
       ruby-ole (~> 1.0)
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
+    expressir (0.2.15-x86_64-darwin)
+      nokogiri (~> 1.10)
+      thor (~> 1.0)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.14.2)
@@ -87,18 +169,6 @@ GEM
     image_size (2.1.0)
     iso-639 (0.3.5)
     iso639 (1.3.2)
-    isodoc (1.5.3)
-      asciimath
-      html2doc (~> 1.0.0)
-      htmlentities (~> 4.3.4)
-      liquid (~> 4)
-      metanorma (~> 1.2.0)
-      nokogiri (~> 1.10.4)
-      relaton-cli
-      roman-numerals
-      thread_safe
-      twitter_cldr
-      uuidtools
     isoics (0.1.9)
     latex-decode (0.3.2)
     latexmath (0.1.5)
@@ -122,38 +192,10 @@ GEM
     mathml2asciimath (0.0.10)
       htmlentities (~> 4.3.4)
       nokogiri (>= 1.10.4)
-    metanorma (1.2.6)
-      asciidoctor
-      fontist (~> 1.8)
-      htmlentities
-      metanorma-utils (~> 1.0.3)
-      mn2pdf (~> 1)
-      nokogiri
-      pry
     metanorma-bipm (1.0.5)
       metanorma-generic (~> 1.9.0)
     metanorma-cc (1.6.7)
       metanorma-generic (~> 1.9.0)
-    metanorma-cli (1.4.5)
-      git (~> 1.5)
-      isodoc (>= 1.5.0)
-      metanorma (~> 1.2.0)
-      metanorma-bipm (~> 1.0.0)
-      metanorma-cc (~> 1.6.0)
-      metanorma-csa (~> 1.7.0)
-      metanorma-generic (~> 1.9.0)
-      metanorma-iec (~> 1.2.0)
-      metanorma-ietf (~> 2.2.0)
-      metanorma-iho (~> 0.2.0)
-      metanorma-iso (~> 1.7.0)
-      metanorma-itu (~> 1.2.0)
-      metanorma-m3aawg (~> 1.6.0)
-      metanorma-nist (~> 1.2.0)
-      metanorma-ogc (~> 1.2.0)
-      metanorma-standoc (~> 1.8.0)
-      metanorma-un (~> 0.5.0)
-      relaton-cli (>= 0.8.2)
-      thor (~> 1.0)
     metanorma-csa (1.7.5)
       metanorma-generic (~> 1.9.0)
     metanorma-generic (1.9.0)
@@ -172,13 +214,6 @@ GEM
     metanorma-iho (0.2.14)
       htmlentities (~> 4.3.4)
       metanorma-generic (~> 1.9.0)
-    metanorma-iso (1.7.2)
-      isodoc (~> 1.5.0)
-      metanorma-standoc (~> 1.8.0)
-      mn2sts (~> 1.5.0)
-      ruby-jing
-      tokenizer (~> 0.3.0)
-      twitter_cldr
     metanorma-itu (1.2.14)
       htmlentities (~> 4.3.4)
       isodoc (~> 1.5.0)
@@ -208,35 +243,18 @@ GEM
       liquid
       metanorma
       relaton-cli
-    metanorma-standoc (1.8.4)
-      asciidoctor (~> 2.0.0)
-      asciimath2unitsml (~> 0.1.1)
-      concurrent-ruby
-      iev (~> 0.2.1)
-      isodoc (~> 1.5.0)
-      latexmath
-      mathml2asciimath
-      metanorma-plugin-datastruct
-      metanorma-plugin-lutaml (~> 0.2.1)
-      metanorma-utils (~> 1.0.2)
-      relaton-cli (~> 1.7.0)
-      relaton-iev (~> 1.1.0)
-      ruby-jing
-      unicode2latex (~> 0.0.1)
+    metanorma-plugin-lutaml (0.2.4.pre.alpha.4)
+      liquid
+      lutaml (= 0.4.1.pre.alpha.2)
+      lutaml-uml (~> 0.2.0)
+      metanorma
+      relaton-cli
     metanorma-un (0.5.14)
       iso-639
       isodoc (~> 1.5.0)
       metanorma-standoc (~> 1.8.0)
       roman-numerals
       twitter_cldr
-    metanorma-utils (1.0.5)
-      asciidoctor (~> 2.0.0)
-      concurrent-ruby
-      mime-types
-      mimemagic
-      nokogiri (~> 1.10.4)
-      sterile (~> 1.0.14)
-      uuidtools
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
@@ -331,7 +349,6 @@ GEM
     relaton-w3c (1.7.0)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
-    rice (3.0.0)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -364,17 +381,22 @@ GEM
     uuidtools (2.2.0)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   byebug
-  expressir!
+  expressir
+  isodoc!
   lutaml (= 0.4.1.pre.alpha.2)
-  metanorma-cli
-  metanorma-plugin-lutaml (= 0.2.4.pre.alpha.3)!
-  nokogiri (~> 1.10.0)
+  metanorma!
+  metanorma-cli!
+  metanorma-iso!
+  metanorma-plugin-lutaml (= 0.2.4.pre.alpha.4)
+  metanorma-standoc!
+  metanorma-utils!
+  nokogiri
   rake
   sassc
 
 BUNDLED WITH
-   2.1.4
+   2.2.1

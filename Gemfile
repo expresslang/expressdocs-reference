@@ -10,6 +10,6 @@ gem "byebug"
 gem "sassc"
 gem "rake"
 gem "nokogiri"
-gem "expressir", git: "https://github.com/lutaml/expressir", submodules: true
-gem "metanorma-plugin-lutaml", "0.2.4-alpha.3", git: "https://github.com/metanorma/metanorma-plugin-lutaml", branch: "hotfix/dont-prefix-express-svgmap"
+gem "expressir"
+gem "metanorma-plugin-lutaml", "0.2.4-alpha.4"
 gem "lutaml", "0.4.1.pre.alpha.2"
