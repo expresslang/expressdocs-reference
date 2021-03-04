@@ -24,11 +24,12 @@ jobs:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
           submodules: true
 
-      - uses: actions/cache@v2
+      - name: Checkout iso-10303-stepmod repo
+        uses: actions/checkout@v2
         with:
-          path: ~/.cache/xml2rfc
-          key: xml2rfc
-          restore-key: xml2rfc
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
+          repository: metanorma/stepmod
+          path: stepmod
 
       - name: Use Metanorma
         run: |
@@ -39,6 +40,12 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6
+
+      - name: Download stepmod2mn and convert SVGs
+        run: |
+          wget https://github.com/metanorma/stepmod2mn/releases/download/v1.5/stepmod2mn-1.5.jar
+          java -jar stepmod2mn-1.5.jar stepmod -svg
+          git ls-files -- *.svg | xargs -I '{}' cp stepmod/{} {}
 
       - run: metanorma site generate
         env:
