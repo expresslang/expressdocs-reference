@@ -30,6 +30,7 @@ jobs:
         with:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
           repository: metanorma/iso-10303-stepmod
+          ref: master
           path: stepmod
 
       - name: Install Metanorma
