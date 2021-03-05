@@ -949,7 +949,7 @@ A <<express:product_definition_schema.product,product>> is associated with one o
 *)
 
 (*"product_definition_schema.product_definition_formation.ur:UR1"
-The *id* of each *product_definition_formation* shall be unique within the collection of *product_definition_formations* that are related to the same product (through their attribute *of_product*).
+The *id* of each *product_definition_formation* shall be unique within the collection of *product_definition_formations* that are related to the same product (through their attribute *of_product*{blank}).
 *)
 
 (*"product_definition_schema.final_solution"

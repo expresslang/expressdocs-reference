@@ -127,12 +127,17 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     down (5.2.0)
       addressable (~> 2.5)
-    excavate (0.1.0)
+    excavate (0.1.1)
       arr-pm (~> 0.0)
       libmspack (~> 0.1)
       ruby-ole (~> 1.0)
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
+      thor (~> 1.0)
+    expressir (0.2.15)
+      nokogiri (~> 1.10)
+      rice (~> 3)
+      thor (~> 1.0)
     expressir (0.2.15-x86_64-darwin)
       nokogiri (~> 1.10)
       thor (~> 1.0)
@@ -349,6 +354,7 @@ GEM
     relaton-w3c (1.7.0)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
+    rice (3.0.0)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -381,6 +387,7 @@ GEM
     uuidtools (2.2.0)
 
 PLATFORMS
+  ruby
   x86_64-darwin-19
 
 DEPENDENCIES

@@ -1,5 +1,13 @@
 = Model-based SMRL build using Annotated EXPRESS with Metanorma
 
+== TO GENERATE
+
+. Update local copy of https://github.com/metanorma/iso-10303-stepmod[]
+. Copy updated annotated schema folders from iso-10303-stepmod/data/resources to annotate-express/data/resources
+. In annotate-express, `cd data/documents/resources/fundamentals_of_product_description_and_support`
+. `bundle update`
+. `bundle exec metanorma document.adoc`
+
 == Design requirements
 
 * Realize the SMRL as a model-based standard(s) library
