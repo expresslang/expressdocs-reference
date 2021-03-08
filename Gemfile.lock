@@ -17,7 +17,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma
-  revision: 966f8a857f6a9ad62cd15d2c4f1daffcb2bd67b2
+  revision: b2134a2a804f4208e40e11edc5a15dcf26e1b597
+  branch: features/relax-express-target
   specs:
     metanorma (1.2.6)
       asciidoctor
@@ -55,7 +56,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: e3c34a167c939682595f4490b7e1304402bcef72
+  revision: 5c2968fd1c93979f44a950357f96935979191b47
+  branch: features/index
   specs:
     metanorma-iso (1.7.2)
       isodoc (~> 1.5.0)
@@ -67,7 +69,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: eba2d8b743aa935186640d2adae77e1c6cb19424
+  revision: 00a496d85ee73f61b61deb9aa42c0f83db515ec4
+  branch: features/relax-express-target
   specs:
     metanorma-standoc (1.8.4)
       asciidoctor (~> 2.0.0)
@@ -87,8 +90,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-utils
-  revision: 3e758318dedb103504bbc0369b1ea28cf442a86e
-  branch: main
+  revision: 003f91c3b2210bc00f879cf1598e0c4a970920c3
+  branch: hotfix/localdir-ambig
   specs:
     metanorma-utils (1.0.6)
       asciidoctor (~> 2.0.0)
@@ -133,10 +136,6 @@ GEM
       ruby-ole (~> 1.0)
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
-      thor (~> 1.0)
-    expressir (0.2.16)
-      nokogiri (~> 1.10)
-      rice (~> 3)
       thor (~> 1.0)
     expressir (0.2.16-x86_64-darwin)
       nokogiri (~> 1.10)
@@ -248,7 +247,7 @@ GEM
       liquid
       metanorma
       relaton-cli
-    metanorma-plugin-lutaml (0.2.5)
+    metanorma-plugin-lutaml (0.2.4)
       liquid
       lutaml (~> 0.4.0)
       lutaml-uml (~> 0.2.0)
@@ -354,7 +353,6 @@ GEM
     relaton-w3c (1.7.0)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
-    rice (3.0.0)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -394,10 +392,11 @@ DEPENDENCIES
   byebug
   expressir
   isodoc!
+  lutaml
   metanorma!
   metanorma-cli!
   metanorma-iso!
-  metanorma-plugin-lutaml (~> 0.2.0)
+  metanorma-plugin-lutaml
   metanorma-standoc!
   metanorma-utils!
   nokogiri
