@@ -127,11 +127,11 @@ SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object
 END_SCHEMA;
 
 (*"external_reference_schema"
-== Introduction
+== General
 
 The subject of the *external_reference_schema* is the means of identifying information that is not explicitly represented in a given exchange.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 Product data may refer to information that is not explicitly represented in a given exchange. This information is either predefined, in the annotated EXPRESS schema to which the exchange conforms, or is defined elsewhere. If the information is defined in the annotated EXPRESS schema to which the exchange conforms, this requirement is satisfied by a reference that identifies the entity data type definitions in the annotated EXPRESS schema. Otherwise, this requirement is satisfied by a reference that identifies the record type definitions and exchange format.
 

@@ -349,7 +349,7 @@ FUNCTION acyclic_alternative_solution_relationship (relation : alternative_solut
 END_SCHEMA;
 
 (*"product_definition_schema"
-== Introduction
+== General
 
 The subject of the *product_definition_schema* is the identification of products, the categorization of products, definitions of products, and the relationships among them. This schema provides for the generic aspects of product definition. 
 
@@ -358,7 +358,7 @@ The subject of the *product_definition_schema* is the identification of products
 The identification of products and definitions of products, the grouping of products according to classification schemes and the definition of various kinds of relationship between products are all examples of generic aspects of product definition.
 ====
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 The use of the entity data types of this schema to represent products is specified in the viewpoint as defined by the requirements of an annotated EXPRESS schema that uses or specializes this part of ISO 10303. Every product need not be represented by an instance of the entity data type *product*. Some products may be represented by other constructs in the integrated resources.
 

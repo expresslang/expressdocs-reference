@@ -599,11 +599,11 @@ END_FUNCTION;
 END_SCHEMA;
 
 (*"management_resources_schema"
-== Introduction
+== General
 
 The subject of the *management_resources_schema* is the association of management data with other aspects of product data in specific application contexts.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 The relationship between management type data and other aspects of product data is application-specific. Management data may be assigned to various kinds of product data. The assignment of management data can be defined in a generic manner and then specialized according to each considered application context. 
 

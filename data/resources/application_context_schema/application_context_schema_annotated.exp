@@ -134,13 +134,12 @@ SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) objec
 END_SCHEMA;
 
 (*"application_context_schema"
-== Introduction
+== General
 
 The subject of the *application_context_schema* is the applicable usages of product data. This schema provides a mechanism for application protocols to define a frame of reference or context that applies to particular sets of product data.
 
 This schema also provides a means to identify application protocols.
 
-== Fundamental concerns
 
 The meaningful exchange of product data requires the identification of the application context in which that product data is defined. An application context may have several context elements. Each context element may be referenced by a different set of product data.
 
@@ -156,6 +155,7 @@ image::application_context_schemaexpg1.svg[]
 * <<express:date_time_schema>>; 6
 * <<express:management_resources_schema>>; 7
 ====
+== Fundamental concepts and assumptions
 
 [.svgmap]
 ====

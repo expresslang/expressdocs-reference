@@ -68,11 +68,11 @@ SCHEMA contract_schema '{iso standard 10303 part(41) version(3) object(1) contra
 END_SCHEMA;
 
 (*"contract_schema"
-== Introduction
+== General
 
 The subject of the *contract_schema* is the description of contract agreements.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 Contract information may be attached to any aspect of a product data.
 

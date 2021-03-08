@@ -360,11 +360,11 @@ END_FUNCTION;
 END_SCHEMA;
 
 (*"date_time_schema"
-== Introduction
+== General
 
 The subject of the *date_time_schema* is the definition of dates, both calendar and ordinal, time of day, combinations of date and time of day, and periods of time.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 Any kind of product data may have a date, time, or date and time associated with it.
 

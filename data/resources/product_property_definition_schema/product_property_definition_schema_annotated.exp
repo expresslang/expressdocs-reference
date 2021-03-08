@@ -304,11 +304,11 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
 END_SCHEMA;
 
 (*"product_property_definition_schema"
-== Introduction
+== General
 
 The subject of the *product_property_definition_schema* is the characteristics of an object.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 This schema provides resources for the identification of:
 

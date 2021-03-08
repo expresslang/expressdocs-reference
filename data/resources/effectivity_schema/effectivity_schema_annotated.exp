@@ -133,7 +133,7 @@ END_ENTITY;
 END_SCHEMA;
 
 (*"effectivity_schema"
-== Introduction
+== General
 
 The subject of the *effectivity_schema* is the validity of aspects of product data or product life cycle activity data specified against certain criteria. 
 
@@ -143,7 +143,7 @@ This schema supports the representation of effectivity according to the followin
 * selection of product data by serial number;
 * selection of product data by a date.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 Effectivity information can be attached to any aspect of product data or product life cycle activity data. 
 

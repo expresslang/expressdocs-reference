@@ -274,7 +274,7 @@ END_FUNCTION;
 END_SCHEMA;
 
 (*"action_schema"
-== Introduction
+== General
 
 The subject of the *action_schema* is the description of actions, the reasons for these actions, and the status of these actions. 
 
@@ -283,13 +283,13 @@ The subject of the *action_schema* is the description of actions, the reasons fo
 Reasons for action include evolving user requirements, manufacturing problems and difficulties that arise when a product is in use.
 ====
 
-== Fundamental concerns
 
 Action information can be attached to any aspect of product data.
 
 [.svgmap]
 ====
 image::action_schemaexpg1.svg[]
+== Fundamental concepts and assumptions
 
 * <<express:basic_attribute_schema>>; 1
 * <<express:action_schema>>; 2

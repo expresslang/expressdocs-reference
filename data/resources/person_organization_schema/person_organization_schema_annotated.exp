@@ -346,11 +346,11 @@ SCHEMA person_organization_schema '{iso standard 10303 part(41) version(8) objec
 END_SCHEMA;
 
 (*"person_organization_schema"
-== Introduction
+== General
 
 The subject of the *person_organization_schema* is the description of information that identifies people and organizations.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 People and organizations are associated with product data to provide data concerning administrative structures and individuals who serve as points of contact or have particular responsibility in those structures. People and organizations may be associated with any aspect of product data.
 

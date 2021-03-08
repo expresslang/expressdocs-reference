@@ -126,11 +126,11 @@ END_SCHEMA; -- end AIC_CURVE_SWEPT_SOLID SCHEMA
 (*"aic_curve_swept_solid"
 // Note schema EXPRESS are in ..\resources\resource_name name_of_schema.xml
 
-== Introduction
+== General
 
 This application interpreted construct provides a consistent set of geometric entities for the definition of a curve swept solid shape representation. Each solid in the representation is required to be a *surface_curve_swept_area_solid*, an *extruded_area_solid*, a *revolved_area_solid* or a *swept_disk_solid*. An instance of *surface curve_swept_area_solid* may be specialised as a *ruled_surface_swept_area_solid*. The highest level entity in this AIC is *curve_swept_solid_shape_representation* which is a specialised type of *shape_representation* (see ISO 10303-41). The rules on this entity ensure that the shapes included are swept solids or mapped copies of swept solids.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 An application protocol that uses this AIC shall ensure that the *shape_representation* entity is instantiated as a *curve_swept_solid_shape_representation*.
 

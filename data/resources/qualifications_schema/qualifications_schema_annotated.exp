@@ -95,7 +95,7 @@ SCHEMA qualifications_schema '{iso standard 10303 part(41) version(6) object(1) 
 END_SCHEMA;
 
 (*"qualifications_schema"
-== Introduction
+== General
 
 The subject of the *qualifications_schema* is the identification of types of qualifications and the relationships between them. This schema provides for the definition of generic data relating to types of qualifications. 
 
@@ -104,7 +104,7 @@ The subject of the *qualifications_schema* is the identification of types of qua
 The identification of types of qualifications and the definition of various kinds of relationship between types of qualifications are examples of generic data relating to types of qualification.
 ====
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 This schema provides resources for the identification, naming, and description of: 
 
