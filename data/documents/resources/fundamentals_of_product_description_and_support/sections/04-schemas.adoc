@@ -11,6 +11,16 @@
 
 {{ schema.remarks | join: newLine }}
 
+This clause defines the information requirements to which
+implementations shall conform using the EXPRESS language as defined
+in ISO 10303-11. The following EXPRESS declaration begins the
+*{{ schema.id }}* and identifies the necessary external references.
+
+Short names of entities defined in this schema are described in
+<<short_entity_names>>.
+Unambiguous identification of this schema is defined in
+<<info_object_reg>>.
+
 [underline]#EXPRESS specification:#
 
 [source%unnumbered]
