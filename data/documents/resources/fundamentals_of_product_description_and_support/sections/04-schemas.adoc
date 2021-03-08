@@ -25,7 +25,7 @@ Unambiguous identification of this schema is defined in
 
 [source%unnumbered]
 --
-{{ schema.head_source }}
+{{ schema.source }}
 --
 
 ////
