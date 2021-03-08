@@ -137,8 +137,9 @@ GEM
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
       thor (~> 1.0)
-    expressir (0.2.16-x86_64-darwin)
+    expressir (0.2.16)
       nokogiri (~> 1.10)
+      rice (~> 3)
       thor (~> 1.0)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
@@ -247,7 +248,7 @@ GEM
       liquid
       metanorma
       relaton-cli
-    metanorma-plugin-lutaml (0.2.4)
+    metanorma-plugin-lutaml (0.2.5)
       liquid
       lutaml (~> 0.4.0)
       lutaml-uml (~> 0.2.0)
@@ -353,6 +354,7 @@ GEM
     relaton-w3c (1.7.0)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
+    rice (3.0.0)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -386,13 +388,11 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-darwin-19
 
 DEPENDENCIES
   byebug
   expressir
   isodoc!
-  lutaml
   metanorma!
   metanorma-cli!
   metanorma-iso!
@@ -404,4 +404,4 @@ DEPENDENCIES
   sassc
 
 BUNDLED WITH
-   2.2.1
+   2.1.4
