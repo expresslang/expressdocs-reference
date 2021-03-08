@@ -137,9 +137,8 @@ GEM
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
       thor (~> 1.0)
-    expressir (0.2.16)
+    expressir (0.2.16-x86_64-darwin)
       nokogiri (~> 1.10)
-      rice (~> 3)
       thor (~> 1.0)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
@@ -354,7 +353,6 @@ GEM
     relaton-w3c (1.7.0)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
-    rice (3.0.0)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -388,6 +386,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   byebug
@@ -404,4 +403,4 @@ DEPENDENCIES
   sassc
 
 BUNDLED WITH
-   2.1.4
+   2.2.1
