@@ -137,16 +137,12 @@ GEM
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
       thor (~> 1.0)
-    expressir (0.2.15)
-      nokogiri (~> 1.10)
-      rice (~> 3)
-      thor (~> 1.0)
-    expressir (0.2.15-x86_64-darwin)
+    expressir (0.2.16-x86_64-darwin)
       nokogiri (~> 1.10)
       thor (~> 1.0)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.14.2)
+    ffi (1.15.0)
     ffi-compiler2 (2.0.1)
       ffi (>= 1.0.0)
       rake
@@ -396,11 +392,11 @@ DEPENDENCIES
   byebug
   expressir
   isodoc!
-  lutaml (>= 0.4.1.pre.alpha.2)
+  lutaml
   metanorma!
   metanorma-cli!
   metanorma-iso!
-  metanorma-plugin-lutaml (>= 0.2.4.pre.alpha.4)
+  metanorma-plugin-lutaml
   metanorma-standoc!
   metanorma-utils!
   nokogiri
