@@ -31,7 +31,7 @@ The relationships between these schemas are shown in Figure 1.
 
 === Function template for cycle detection
 
-=== acyclic_object_relationship
+==== acyclic_object_relationship
 
 The template described in this clause is used in various ISO 10303 integrated resources.
 It is a function that detects cyclic definitions.
