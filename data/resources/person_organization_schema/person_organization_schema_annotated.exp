@@ -356,6 +356,7 @@ People and organizations are associated with product data to provide data concer
 
 [.svgmap]
 ====
+[[person_organization_schemaexpg1]]
 image::person_organization_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -365,6 +366,7 @@ image::person_organization_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[person_organization_schemaexpg2]]
 image::person_organization_schemaexpg2.svg[]
 
 * <<express:person_organization_schema.person_organization_select>>; 1
@@ -419,6 +421,7 @@ image::person_organization_schemaexpg2.svg[]
 
 [.svgmap]
 ====
+[[person_organization_schemaexpg3]]
 image::person_organization_schemaexpg3.svg[]
 
 * <<express:person_organization_schemaexpg4>>; 1
@@ -461,6 +464,7 @@ image::person_organization_schemaexpg3.svg[]
 
 [.svgmap]
 ====
+[[person_organization_schemaexpg4]]
 image::person_organization_schemaexpg4.svg[]
 
 * <<express:person_organization_schema.pos_description_attribute_select>>; 1

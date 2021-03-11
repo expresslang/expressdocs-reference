@@ -1225,6 +1225,7 @@ The elements of a list of material properties are physical quantities. Each elem
 
 [.svgmap]
 ====
+[[measure_schemaexpg1]]
 image::measure_schemaexpg1.svg[]
 
 * <<express:representation_schema>>; 1
@@ -1235,6 +1236,7 @@ image::measure_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[measure_schemaexpg2]]
 image::measure_schemaexpg2.svg[]
 
 * <<express:measure_schema.unit>>; 1
@@ -1267,6 +1269,7 @@ image::measure_schemaexpg2.svg[]
 
 [.svgmap]
 ====
+[[measure_schemaexpg3]]
 image::measure_schemaexpg3.svg[]
 
 * <<express:measure_schema.s_name_attribute_select>>; 1
@@ -1322,6 +1325,7 @@ image::measure_schemaexpg3.svg[]
 
 [.svgmap]
 ====
+[[measure_schemaexpg4]]
 image::measure_schemaexpg4.svg[]
 
 * <<express:measure_schemaexpg2>>; 1
@@ -1367,6 +1371,7 @@ image::measure_schemaexpg4.svg[]
 
 [.svgmap]
 ====
+[[measure_schemaexpg5]]
 image::measure_schemaexpg5.svg[]
 
 * <<express:measure_schema.measure_value>>; 1

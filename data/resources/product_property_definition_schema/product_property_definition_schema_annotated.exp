@@ -360,6 +360,7 @@ The appearance of chair x is a unique property of that chair. The colour designa
 
 [.svgmap]
 ====
+[[product_property_definition_schemaexpg1]]
 image::product_property_definition_schemaexpg1.svg[]
 
 * <<express:shape_dimension_schema>>; 1
@@ -375,6 +376,7 @@ image::product_property_definition_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[product_property_definition_schemaexpg2]]
 image::product_property_definition_schemaexpg2.svg[]
 
 * <<express:product_property_definition_schema.characterized_definition>>; 1

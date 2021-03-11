@@ -140,6 +140,7 @@ All geometry imported into this AIC is used for the purpose of defining swept so
 
 [.svgmap]
 ====
+[[aic_curve_swept_solidexpg1]]
 image::aic_curve_swept_solidexpg1.svg[]
 
 * <<express:aic_curve_swept_solid>>; 1
@@ -152,6 +153,7 @@ image::aic_curve_swept_solidexpg1.svg[]
 
 [.svgmap]
 ====
+[[aic_curve_swept_solidexpg2]]
 image::aic_curve_swept_solidexpg2.svg[]
 
 * <<express:geometric_model_schema.surface_curve_swept_area_solid>>; 1

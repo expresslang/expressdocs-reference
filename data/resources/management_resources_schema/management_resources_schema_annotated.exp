@@ -614,6 +614,7 @@ In the following definitions, the expression "assigned product data" means "the 
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg1]]
 image::management_resources_schemaexpg1.svg[]
 
 * <<express:person_organization_schema>>; 1
@@ -638,6 +639,7 @@ image::management_resources_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg2]]
 image::management_resources_schemaexpg2.svg[]
 
 * <<express:management_resources_schema.mrs_role_select>>; 1
@@ -674,6 +676,7 @@ image::management_resources_schemaexpg2.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg3]]
 image::management_resources_schemaexpg3.svg[]
 
 * <<express:management_resources_schema.assignment_object_select>>; 1
@@ -702,6 +705,7 @@ image::management_resources_schemaexpg3.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg4]]
 image::management_resources_schemaexpg4.svg[]
 
 * <<express:management_resources_schemaexpg2>>; 1
@@ -733,6 +737,7 @@ image::management_resources_schemaexpg4.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg5]]
 image::management_resources_schemaexpg5.svg[]
 
 * <<express:management_resources_schemaexpg2>>; 1
@@ -767,6 +772,7 @@ image::management_resources_schemaexpg5.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg6]]
 image::management_resources_schemaexpg6.svg[]
 
 * <<express:support_resource_schema.label>>; 1
@@ -796,6 +802,7 @@ image::management_resources_schemaexpg6.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg7]]
 image::management_resources_schemaexpg7.svg[]
 
 * <<express:support_resource_schema.identifier>>; 1
@@ -838,6 +845,7 @@ image::management_resources_schemaexpg7.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg8]]
 image::management_resources_schemaexpg8.svg[]
 
 * <<express:management_resources_schema.attribute_type>>; 1
@@ -890,6 +898,7 @@ image::management_resources_schemaexpg8.svg[]
 
 [.svgmap]
 ====
+[[management_resources_schemaexpg9]]
 image::management_resources_schemaexpg9.svg[]
 
 * <<express:support_resource_schema.label>>; 1

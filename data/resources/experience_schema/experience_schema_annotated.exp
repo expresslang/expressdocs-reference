@@ -120,6 +120,7 @@ This schema provides resources for the identification, naming, and description o
 
 [.svgmap]
 ====
+[[experience_schemaexpg1]]
 image::experience_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -128,6 +129,7 @@ image::experience_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[experience_schemaexpg2]]
 image::experience_schemaexpg2.svg[]
 
 * <<express:support_resource_schema.label>>; 1

@@ -87,6 +87,7 @@ Product data items may have a label. The formats used to define labels are quite
 
 [.svgmap]
 ====
+[[support_resource_schemaexpg1]]
 image::support_resource_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -94,6 +95,7 @@ image::support_resource_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[support_resource_schemaexpg2]]
 image::support_resource_schemaexpg2.svg[]
 
 * <<express:support_resource_schema.text>>; 1
