@@ -2,56 +2,62 @@
 // From resource.xml/terms
 
 == Terms, definitions and abbreviations
-////
-   <normrefs>
-      <normref.inc normref="ref8601.2000">
-         <term.ref linkend="calendardate"/>
-         <term.ref linkend="term_calendar_week"/>
-         <term.ref linkend="term_calendar_year"/>
-         <term.ref linkend="term_common_year"/>
-         <term.ref linkend="utc"/>
-         <term.ref linkend="day"/>
-         <term.ref linkend="gregoriancalendar"/>
-         <term.ref linkend="hour"/>
-         <term.ref linkend="term_leap_year"/>
-         <term.ref linkend="term_local_time"/>
-         <term.ref linkend="minute"/>
-         <term.ref linkend="month"/>
-         <term.ref linkend="term_ordinal_day"/>
-         <term.ref linkend="second"/>
-         <term.ref linkend="term_week"/>
-         <term.ref linkend="year"/>
-      </normref.inc>
-      <normref.inc normref="ref10303-1">
-         <term.ref linkend="term_application"/>
-         <term.ref linkend="term_application_context"/>
-         <term.ref linkend="term_application_interpreted_model"/>
-         <term.ref linkend="term_application_protocol"/>
-         <term.ref linkend="term_application_reference_model"/>
-         <term.ref linkend="term_data"/>
-         <term.ref linkend="term_information"/>
-         <term.ref linkend="term_product"/>
-         <term.ref linkend="term_product_data"/>
-         <term.ref linkend="term_structure"/>
-      </normref.inc>
-      <normref.inc normref="ref10303-11.2004"/>
-      <normref.inc normref="ref10303-43"/>
-      <normref.inc normref="ref10303-44">
-         <term.ref linkend="term_child_node"/>
-         <term.ref linkend="term_descendent_node"/>
-         <term.ref linkend="term_directed_acyclic_graph"/>
-         <term.ref linkend="term_leaf_node"/>
-         <term.ref linkend="term_link"/>
-         <term.ref linkend="term_node"/>
-         <term.ref linkend="term_parent_node"/>
-         <term.ref linkend="term_root_node"/>
-         <term.ref linkend="term_tree"/>
-      </normref.inc>
-      <normref.inc normref="ref10303-49"/>
-      <normref.inc normref="ref80000"/>
-      <normref.inc normref="refIEC80000"/>
-   </normrefs>
-////
+
+[.nonterm]
+=== Terms defined in ISO 8601
+
+For the purposes of this document, the following terms defined in ISO 8601 apply:
+
+* calendar date;
+* calendar week;
+* calendar year;
+* common year;
+* coordinated universal time;
+* day;
+* Gregorian calendar;
+* hour;
+* leap year;
+* local time;
+* minute;
+* month;
+* ordinal day;
+* second;
+* week;
+* year.
+
+
+[.nonterm]
+=== Terms defined in ISO 10303-1
+
+For the purposes of this document, the following terms defined in ISO 10303-1 apply:
+
+* integrated resource;
+* application;
+* application context;
+* application interpreted model;
+* application protocol;
+* application reference model;
+* data;
+* information;
+* product;
+* product data;
+* structure.
+
+
+[.nonterm]
+=== Terms defined in ISO 10303-44
+
+For the purposes of this document, the following terms defined in ISO 10303-44 apply:
+
+* child node;
+* descendent node;
+* directed acyclic graph;
+* leaf node;
+* link;
+* node;
+* parent node;
+* root node;
+* tree.
 
 === Terms and definitions
 
