@@ -31,23 +31,25 @@
 :data-uri-image:
 
 ////
-          wg.number.supersedes="9562"
-          checklist.internal_review="10447"
-          checklist.project_leader="10448"
-          checklist.convener="10449"
-          previous.revision.year="2018-11"
-          previous.revision.cancelled="YES"
+wg.number.supersedes="9562"
+checklist.internal_review="10447"
+checklist.project_leader="10448"
+checklist.convener="10449"
+previous.revision.year="2018-11"
+previous.revision.cancelled="YES"
 ////
 
 [abstract]
 This part of ISO 10303 specifies the generic product description resources, the generic management resources, and the support resources.
 
 ////
-   <contacts>
-      <projlead ref="ap242.projlead"/>
-      <editor ref="ap242.editor"/>
-   </contacts>
+<contacts>
+  <projlead ref="ap242.projlead"/>
+  <editor ref="ap242.editor"/>
+</contacts>
 ////
+
+include::sections/00-foreword.adoc[]
 
 include::sections/00-introduction.adoc[]
 
