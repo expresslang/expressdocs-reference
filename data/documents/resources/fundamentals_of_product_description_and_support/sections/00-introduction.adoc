@@ -1,31 +1,15 @@
+== Introduction
+
 ISO 10303 is an International Standard for the computer-interpretable representation of product information and for the exchange of product data. The objective is to provide a neutral mechanism capable of describing products throughout their life cycle. This mechanism is suitable not only for neutral file exchange, but also as a basis for implementing and sharing product databases, and as a basis for retention and archiving.
 
 Major subdivisions of this part of ISO 10303 are:
 
-// TODO: generated from all included schemas declared in this document
-* action_schema;
-* application_context_schema;
-* approval_schema;
-* basic_attribute_schema;
-* certification_schema;
-* contract_schema;
-* date_time_schema;
-* document_schema;
-* effectivity_schema;
-* experience_schema;
-* external_reference_schema;
-* group_schema;
-* language_schema;
-* location_schema;
-* management_resources_schema;
-* measure_schema;
-* person_organization_schema;
-* product_definition_schema;
-* product_property_definition_schema;
-* product_property_representation_schema;
-* qualifications_schema;
-* security_classification_schema;
-* support_resource_schema.
+// TODO: We want to append ';' to every schema id except
+// the last one which should have a full stop.
+[lutaml, ../../../resources/action_schema/action_schema_annotated.exp;../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../resources/approval_schema/approval_schema_annotated.exp;../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../resources/certification_schema/certification_schema_annotated.exp;../../../resources/contract_schema/contract_schema_annotated.exp;../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../resources/document_schema/document_schema_annotated.exp;../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../resources/experience_schema/experience_schema_annotated.exp;../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../resources/group_schema/group_schema_annotated.exp;../../../resources/language_schema/language_schema_annotated.exp;../../../resources/location_schema/location_schema_annotated.exp;../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../resources/measure_schema/measure_schema_annotated.exp;../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../resources/product_definition_schema/product_definition_schema_annotated.exp;../../../resources/product_property_definition_schema/product_property_definition_schema_annotated.exp;../../../resources/product_property_representation_schema/product_property_representation_schema_annotated.exp;../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../resources/support_resource_schema/support_resource_schema_annotated.exp, schema, leveloffset=+1]
+---
+* {{ schema.id }}
+---
 
 // From resource.xml/purpose
 
@@ -58,12 +42,3 @@ Double quotation marks (" ") denote quoted text. Single quotation marks (' ') de
 // TODO: Image map
 .The schemas of this part of ISO 10303
 image::../schema_diagexpg1.gif[]
-
-////
-   <schema_diag>
-      <express-g>
-         <imgfile file="schema_diagexpg1.xml"
-                  title="The schemas of this part of ISO 10303"/>
-      </express-g>
-   </schema_diag>
-////

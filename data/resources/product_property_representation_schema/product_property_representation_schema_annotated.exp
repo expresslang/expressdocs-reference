@@ -335,7 +335,7 @@ END_ENTITY;
 END_SCHEMA;
 
 (*"product_property_representation_schema"
-== Introduction
+== General
 
 The subject of the *product_property_representation_schema* is the representation of properties. 
 
@@ -345,7 +345,7 @@ The requirements addressed by this schema are:
 * the ability to identify a *representation* as representing a shape;
 * the ability to identify relationships between the representations of shapes and to state that the identified relationships are the representations of zero, one or more instances of the entity data type *product_definition*.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 The following assumptions apply to the *product_property_representation_schema*:
 

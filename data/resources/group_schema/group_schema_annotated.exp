@@ -80,11 +80,11 @@ SCHEMA group_schema '{iso standard 10303 part(41) version(7) object(1) group_sch
 END_SCHEMA;
 
 (*"group_schema"
-== Introduction
+== General
 
 The subject of the *group_schema* is the definition of groups of items.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 Groups are collections of product data that have a common identity. Any kinds of product data may be grouped together. The structure specified in this schema enables the common identity to be captured; it does not specify, or allow the specification of, the meaning of the common identity or the criteria for the common identity.
 

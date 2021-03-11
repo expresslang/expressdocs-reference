@@ -159,7 +159,7 @@ SCHEMA basic_attribute_schema '{iso standard 10303 part(41) version(9) object(1)
 END_SCHEMA;
 
 (*"basic_attribute_schema"
-== Introduction
+== General
 
 The subject of the *basic_attribute_schema* is the assignment of id, name, description and role attributes to aspects of product data. This schema defines the mechanism to define a value for these attributes and associate it with product data. 
 
@@ -173,7 +173,7 @@ The concepts defined in this schema do not provide a generic capability to assoc
 The associated entities are defined in ISO 10303-41, ISO 10303-43 and ISO 10303-44.
 --
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 The following concepts are supported by this schema:
 

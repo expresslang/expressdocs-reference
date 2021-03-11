@@ -31,7 +31,7 @@ The relationships between these schemas are shown in Figure 1.
 
 === Function template for cycle detection
 
-=== acyclic_object_relationship
+==== acyclic_object_relationship
 
 The template described in this clause is used in various ISO 10303 integrated resources.
 It is a function that detects cyclic definitions.
@@ -60,7 +60,7 @@ NOTE: Calls to functions based on this template should be done as follows.
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 FUNCTION acyclic_object_relationship
 	(relation		   : object_relationship;
@@ -116,7 +116,7 @@ An *object_relationship* relates two objects with a description of their relatio
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 ENTITY object_relationship;
   name		  : label;
@@ -154,7 +154,7 @@ NOTE: Such a rule can only be specified in cases in which the referenced attribu
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 RULE  attribute_x_not_allowed FOR (entity_type) ;
 WHERE
@@ -177,7 +177,7 @@ that is used to associate approvals with product data.
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 ENTITY approval_assignment
   ABSTRACT SUPERTYPE;
@@ -204,7 +204,7 @@ data is to be associated with product data, in the following way:
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 TYPE approval_item = SELECT
      (drawing_sheet_revision,
@@ -217,7 +217,7 @@ sheet revisions and drawing revisions:
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 ENTITY applied_approval_assignment
     SUBTYPE OF (approval_assignment);

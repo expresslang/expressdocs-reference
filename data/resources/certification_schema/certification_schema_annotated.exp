@@ -43,7 +43,7 @@ SCHEMA certification_schema '{iso standard 10303 part(41) version(3) object(1) c
 END_SCHEMA;
 
 (*"certification_schema"
-== Introduction
+== General
 
 The subject of the *certification_schema* is the definition of certifications. A certification assures and validates product data. 
 
@@ -57,7 +57,7 @@ A material certificate states the chemical composition of one or more physical p
 A certified supplier can supply goods that do not require checking.
 ====
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 Certification information can be attached to any aspect of product data.
 

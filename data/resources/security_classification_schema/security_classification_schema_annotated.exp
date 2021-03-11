@@ -43,11 +43,11 @@ SCHEMA security_classification_schema '{iso standard 10303 part(41) version(3) o
 END_SCHEMA;
 
 (*"security_classification_schema"
-== Introduction
+== General
 
 The subject of the *security_classification_schema* is the definition of degrees of secrecy to be specified.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 A security classification is the level of confidentiality that is required for the purpose of product data protection. Security classifications are assigned by some authoritative agency. Security classification information can be attached to any aspect of product data.
 

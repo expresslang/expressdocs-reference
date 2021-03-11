@@ -1,5 +1,6 @@
 
 [appendix,obligation=normative]
+[[info_object_reg]]
 == Information object registration
 
 // TODO: Need to fully generate this clause, should work

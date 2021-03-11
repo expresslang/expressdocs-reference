@@ -1200,7 +1200,7 @@ END_ENTITY;
 END_SCHEMA;
 
 (*"measure_schema"
-== Introduction
+== General
 
 The subject of the *measure_schema* is the description of physical quantities. 
 
@@ -1211,7 +1211,7 @@ Density, length, force, and time are different kinds of physical quantities.
 
 The resource constructs defined in this schema are based upon material in ISO 31 and ISO 1000.
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 The following requirements are supported by this schema:
 

@@ -68,7 +68,7 @@ SCHEMA support_resource_schema '{iso standard 10303 part(41) version(7) object(1
 END_SCHEMA;
 
 (*"support_resource_schema"
-== Introduction
+== General
 
 The subject of the *support_resource_schema* is a description of EXPRESS declarations that are shared by more than one of the ISO 10303 integrated resource schemas. 
 
@@ -77,7 +77,7 @@ The subject of the *support_resource_schema* is a description of EXPRESS declara
 In contrast to elements of the generic product description resource schemas, which are also potentially referenced by more than one ISO 10303 integrated resource schema, the elements of this schema cannot exist without (that is, are existent-dependent upon) the entities that reference them.
 --
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 An identifier is a means that enables a processor to distinguish an information from other information of the same kind. A label is textual information assigned to an item of information in order to facilitate its access by a human being. 
 

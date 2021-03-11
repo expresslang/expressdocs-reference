@@ -274,7 +274,7 @@ END_FUNCTION;
 END_SCHEMA;
 
 (*"action_schema"
-== Introduction
+== General
 
 The subject of the *action_schema* is the description of actions, the reasons for these actions, and the status of these actions. 
 
@@ -283,20 +283,20 @@ The subject of the *action_schema* is the description of actions, the reasons fo
 Reasons for action include evolving user requirements, manufacturing problems and difficulties that arise when a product is in use.
 ====
 
-== Fundamental concerns
+NOTE: The schemas referenced above are specified in the following parts: +
++
+--
+basic_attribute_schema:: ISO 10303-41
+support_resource_schema:: ISO 10303-41
+--
+
+NOTE: See <<expg>> for a graphical representation of this schema.
+
+== Fundamental concepts and assumptions
 
 Action information can be attached to any aspect of product data.
 
-[.svgmap]
-====
-[[action_schemaexpg1]]
-image::action_schemaexpg1.svg[]
-
-* <<express:basic_attribute_schema>>; 1
-* <<express:action_schema>>; 2
-* <<express:support_resource_schema>>; 3
-====
-
+<<<<<<< HEAD
 [.svgmap]
 ====
 [[action_schemaexpg2]]
@@ -357,6 +357,8 @@ image::action_schemaexpg2.svg[]
 * <<express:action_schema.action_method>>; 53
 * <<express:action_schema.executed_action>>; 54
 ====
+=======
+>>>>>>> master
 *)
 
 (*"action_schema.supported_item"

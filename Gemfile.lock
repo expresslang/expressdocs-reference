@@ -17,7 +17,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma
-  revision: 966f8a857f6a9ad62cd15d2c4f1daffcb2bd67b2
+  revision: b2134a2a804f4208e40e11edc5a15dcf26e1b597
+  branch: features/relax-express-target
   specs:
     metanorma (1.2.6)
       asciidoctor
@@ -55,7 +56,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: c0a474dcac60640926d718df1ebc2df4e9b2941a
+  revision: 5c2968fd1c93979f44a950357f96935979191b47
+  branch: features/index
   specs:
     metanorma-iso (1.7.2)
       isodoc (~> 1.5.0)
@@ -67,7 +69,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: eba2d8b743aa935186640d2adae77e1c6cb19424
+  revision: 00a496d85ee73f61b61deb9aa42c0f83db515ec4
+  branch: features/relax-express-target
   specs:
     metanorma-standoc (1.8.4)
       asciidoctor (~> 2.0.0)
@@ -87,8 +90,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-utils
-  revision: 3e758318dedb103504bbc0369b1ea28cf442a86e
-  branch: main
+  revision: 003f91c3b2210bc00f879cf1598e0c4a970920c3
+  branch: hotfix/localdir-ambig
   specs:
     metanorma-utils (1.0.6)
       asciidoctor (~> 2.0.0)
@@ -134,16 +137,12 @@ GEM
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
       thor (~> 1.0)
-    expressir (0.2.15)
-      nokogiri (~> 1.10)
-      rice (~> 3)
-      thor (~> 1.0)
-    expressir (0.2.15-x86_64-darwin)
+    expressir (0.2.16-x86_64-darwin)
       nokogiri (~> 1.10)
       thor (~> 1.0)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.14.2)
+    ffi (1.15.0)
     ffi-compiler2 (2.0.1)
       ffi (>= 1.0.0)
       rake
@@ -183,7 +182,7 @@ GEM
       ffi
       ffi-compiler2 (>= 2.0.0)
     liquid (4.0.3)
-    lutaml (0.4.1.pre.alpha.2)
+    lutaml (0.4.1)
       lutaml-express (~> 0.1.3)
       lutaml-uml (~> 0.2.5)
       thor (~> 1.0)
@@ -248,9 +247,9 @@ GEM
       liquid
       metanorma
       relaton-cli
-    metanorma-plugin-lutaml (0.2.4.pre.alpha.4)
+    metanorma-plugin-lutaml (0.2.5)
       liquid
-      lutaml (= 0.4.1.pre.alpha.2)
+      lutaml (~> 0.4.0)
       lutaml-uml (~> 0.2.0)
       metanorma
       relaton-cli
@@ -272,7 +271,7 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     optout (0.0.2)
-    ox (2.14.1)
+    ox (2.14.2)
     parslet (1.7.1)
       blankslate (>= 2.0, <= 4.0)
     plane1converter (0.0.1)
@@ -308,8 +307,8 @@ GEM
     relaton-calconnect (1.7.0)
       faraday
       relaton-bib (~> 1.7.0)
-    relaton-cli (1.7.0)
-      liquid
+    relaton-cli (1.7.1)
+      liquid (~> 4)
       relaton (~> 1.7.0)
       thor
     relaton-ecma (1.7.pre1)
@@ -354,7 +353,6 @@ GEM
     relaton-w3c (1.7.0)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
-    rice (3.0.0)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -394,11 +392,10 @@ DEPENDENCIES
   byebug
   expressir
   isodoc!
-  lutaml (= 0.4.1.pre.alpha.2)
   metanorma!
   metanorma-cli!
   metanorma-iso!
-  metanorma-plugin-lutaml (= 0.2.4.pre.alpha.4)
+  metanorma-plugin-lutaml
   metanorma-standoc!
   metanorma-utils!
   nokogiri

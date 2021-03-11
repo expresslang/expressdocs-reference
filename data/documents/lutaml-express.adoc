@@ -30,14 +30,24 @@
 :local-cache-only:
 :data-uri-image:
 
-== Schemas
+== Scope
 
-[lutaml, ../../../resources/action_schema/action_schema.exp, repo, leveloffset=+2]
+Scope.
+
+[bibliography]
+== Normative references
+
+== Terms and definitions
+
+=== Test term
+
+Test definition
+
+[lutaml, ../resources/action_schema/action_schema_annotated.exp, schema, leveloffset=+1]
 ---
-{% for schema in repo.schemas %}
 [[{{schema.id}}]]
 [type="express-schema"]
-=== {{ schema.id }}
+== {{ schema.id }}
 
 [source%unnumbered]
 --
@@ -55,9 +65,9 @@
 
 {% if constant.sourcecode %}
 [source%unnumbered]
--- 
+--
 {{ constant.sourcecode  }}
--- 
+--
 {% endif %}
 
 {{ constant.remarks }}
@@ -74,9 +84,9 @@
 
 {% if type.sourcecode %}
 [source%unnumbered]
--- 
+--
 {{ type.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ type.remarks }}
@@ -115,7 +125,7 @@
 ===== {{ entity.id }}
 
 [source%unnumbered]
--- 
+--
 {{ entity.sourcecode }}
 --
 
@@ -131,9 +141,9 @@
 
 {% if attribute.sourcecode %}
 [source%unnumbered]
--- 
+--
 {{ attribute.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ attribute.remarks }}
@@ -154,9 +164,9 @@
 
 {% if constraint.sourcecode %}
 [source%unnumbered]
--- 
+--
 {{ constraint.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ constraint.remarks }}
@@ -171,7 +181,7 @@
 ===== {{ function.id }}
 
 [source%unnumbered]
--- 
+--
 {{ function.sourcecode }}
 --
 
@@ -211,7 +221,7 @@
 [source%unnumbered]
 --
 {{ type.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ type.remarks }}
@@ -228,7 +238,7 @@
 
 {% if item.sourcecode %}
 [source%unnumbered]
--- 
+--
 {{ item.sourcecode }}
 --
 {% endif %}
@@ -277,7 +287,7 @@
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ variable.remarks }}
@@ -313,7 +323,7 @@
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ statement.remarks }}
@@ -338,7 +348,7 @@
 
 
 [source%unnumbered]
--- 
+--
 {{ procedure.sourcecode }}
 --
 
@@ -378,7 +388,7 @@
 [source%unnumbered]
 --
 {{ type.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ type.remarks }}
@@ -395,7 +405,7 @@
 
 {% if item.sourcecode %}
 [source%unnumbered]
--- 
+--
 {{ item.sourcecode }}
 --
 {% endif %}
@@ -444,7 +454,7 @@
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ variable.remarks }}
@@ -468,7 +478,7 @@
 
 {% if statement.remarks  %}
 
-{% if statement.id %} 
+{% if statement.id %}
 {% assign statementid = statement.id %}
 {% else %}
 {% assign statementid = forloop.index %}
@@ -482,7 +492,7 @@
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ statement.remarks }}
@@ -504,7 +514,7 @@
 ===== {{ rule.id }}
 
 [source%unnumbered]
--- 
+--
 {{ rule.sourcecode }}
 --
 
@@ -525,7 +535,7 @@
 [source%unnumbered]
 --
 {{ type.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ type.remarks }}
@@ -542,7 +552,7 @@
 
 {% if item.sourcecode %}
 [source%unnumbered]
--- 
+--
 {{ item.sourcecode }}
 --
 {% endif %}
@@ -591,7 +601,7 @@
 [source%unnumbered]
 --
 {{ variable.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ variable.remarks }}
@@ -615,7 +625,7 @@
 
 {% for statement in rule.statements %}
 
-{% if statement.id %} 
+{% if statement.id %}
 {% assign statementid = statement.id %}
 {% else %}
 {% assign statementid = forloop.index %}
@@ -629,7 +639,7 @@
 [source%unnumbered]
 --
 {{ statement.sourcecode }}
--- 
+--
 {% endif %}
 
 {{ statement.remarks }}
@@ -667,56 +677,7 @@
 
 {% endfor %}
 {% endif %}
-
-
-{% endfor %}
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[bibliography]
+== Bibliography

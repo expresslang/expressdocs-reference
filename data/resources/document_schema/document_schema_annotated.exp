@@ -97,7 +97,7 @@ SCHEMA document_schema '{iso standard 10303 part(41) version(4) object(1) docume
 END_SCHEMA;
 
 (*"document_schema"
-== Introduction
+== General
 
 The subject of the *document_schema* is the citations of formal standards or documents that are outside the domain of this International Standard. These resource constructs are used to reference additional information that is relevant to the description of the product. 
 
@@ -106,7 +106,7 @@ The subject of the *document_schema* is the citations of formal standards or doc
 International, national, and organizational standards, catalogues, and tables of engineering data are examples of formal standards or documents.
 ====
 
-== Fundamental concerns
+== Fundamental concepts and assumptions
 
 Product data can include citations of other information sources. 
 

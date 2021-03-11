@@ -41,6 +41,10 @@ jobs:
         with:
           ruby-version: 2.6
 
+      - name: Bundle
+        run: |
+          bundle install -j 4
+
       - name: Download stepmod2mn and convert SVGs
         run: |
           wget https://github.com/metanorma/stepmod2mn/releases/download/v1.5/stepmod2mn-1.5.jar
@@ -51,4 +55,4 @@ jobs:
         env:
           JAVA_OPTS: "java.awt.headless=true"
         run: |
-          metanorma site generate
+          bundle exec metanorma site generate --agree-to-terms
