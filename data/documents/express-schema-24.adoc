@@ -1,0 +1,688 @@
+= Metanorma with LutaML and EXPRESS
+:docnumber: 10303
+:tc-docnumber: 10446
+:partnumber: 41
+:copyright-year: 2019
+:language: en
+:publish-date: 2029-01-01
+:edition: 6
+:title-intro-en: Industrial automation systems and integration
+:title-intro-fr: Systèmes d'automatisation industrielle et intégration
+:title-main-en: Product data representation and exchange
+:title-main-fr: Représentation et échange de données de produits
+:title-part-en: Integrated generic resource: Fundamentals of product description and support
+:title-part-fr: Ressources génériques intégrées: Principes de description et de support de produits
+:doctype: international-standard
+:docstage: 60
+:docsubstage: 60
+:technical-committee-number: 184
+:technical-committee: Industrial automation systems and integration
+:subcommittee-type: SC
+:subcommittee-number: 4
+:subcommittee: Industrial data
+:workgroup-type: WG
+:workgroup-number: 12
+:secretariat: ANSI
+:keywords: integrated generic resource, product definition, product property, measure, application context, product property representation, person, organization, experience, qualifications, location and position in organization
+:docfile: document.adoc
+:mn-document-class: iso
+:mn-output-extensions: xml,html,doc,pdf,html_alt,rxl
+:novalid:
+:local-cache-only:
+:data-uri-image:
+
+== Scope
+
+Scope.
+
+[bibliography]
+== Normative references
+
+== Terms and definitions
+
+=== Test term
+
+Test definition
+
+== Twenty-four schemas to follow!
+
+[lutaml, ../resources/action_schema/action_schema_annotated.exp;../resources/application_context_schema/application_context_schema_annotated.exp;../resources/approval_schema/approval_schema_annotated.exp;../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../resources/certification_schema/certification_schema_annotated.exp;../resources/contract_schema/contract_schema_annotated.exp;../resources/date_time_schema/date_time_schema_annotated.exp;../resources/document_schema/document_schema_annotated.exp;../resources/effectivity_schema/effectivity_schema_annotated.exp;../resources/experience_schema/experience_schema_annotated.exp;../resources/external_reference_schema/external_reference_schema_annotated.exp;../resources/group_schema/group_schema_annotated.exp;../resources/language_schema/language_schema_annotated.exp;../resources/location_schema/location_schema_annotated.exp;../resources/management_resources_schema/management_resources_schema_annotated.exp;../resources/measure_schema/measure_schema_annotated.exp;../resources/person_organization_schema/person_organization_schema_annotated.exp;../resources/process_property_schema/process_property_schema_annotated.exp;../resources/product_definition_schema/product_definition_schema_annotated.exp;../resources/product_property_definition_schema/product_property_definition_schema_annotated.exp;../resources/product_property_representation_schema/product_property_representation_schema_annotated.exp;../resources/qualifications_schema/qualifications_schema_annotated.exp;../resources/security_classification_schema/security_classification_schema_annotated.exp;../resources/support_resource_schema/support_resource_schema_annotated.exp, schema, leveloffset=+1]
+---
+[[{{schema.id}}]]
+[type="express-schema"]
+== {{ schema.id }}
+
+[underline]#EXPRESS specification:#
+
+[source%unnumbered]
+--
+{{ schema.source }}
+--
+
+{{ schema.remarks }}
+
+{% if schema.constants.size > 0 %}
+==== Constants
+
+{% for constant in schema.constants %}
+//[[{{schema.id}}.{{constant.id}}]]
+===== {{ constant.id }}
+
+{% if constant.sourcecode %}
+[source%unnumbered]
+--
+{{ constant.sourcecode  }}
+--
+{% endif %}
+
+{{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% if schema.types.size > 0 %}
+==== Types
+
+{% for type in schema.types %}
+//[[{{schema.id}}.{{type.id}}]]
+===== {{ type.id }}
+
+{% if type.sourcecode %}
+[source%unnumbered]
+--
+{{ type.sourcecode }}
+--
+{% endif %}
+
+{{ type.remarks }}
+
+{% if type.items.size > 0 %}
+[level=6]
+====== Items
+
+{% for item in type.items %}
+//[[{{schema.id}}.{{type.id}}.{{item.id}}]]
+[level=7]
+====== {{ item.id }}
+
+{% if item.sourcecode %}
+[source%unnumbered]
+--
+{{ item.sourcecode }}
+--
+{% endif %}
+
+{{ item.remarks }}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+
+{% if schema.entities.size > 0 %}
+==== Entities
+
+{% for entity in schema.entities %}
+//[[{{schema.id}}.{{entity.id}}]]
+===== {{ entity.id }}
+
+[source%unnumbered]
+--
+{{ entity.sourcecode }}
+--
+
+{{ entity.remarks }}
+
+{% if entity.attributes.size > 0 %}
+====== Attributes
+
+{% for attribute in entity.attributes %}
+//[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
+[level=6]
+====== {{ attribute.id }}
+
+{% if attribute.sourcecode %}
+[source%unnumbered]
+--
+{{ attribute.sourcecode }}
+--
+{% endif %}
+
+{{ attribute.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if schema.subtype_constraints.size > 0 %}
+==== Subtype Constraints
+{% for constraint in schema.subtype_constraints %}
+//[[{{schema.id}}.{{constraint.id}}]]
+===== {{ constraint.id }}
+
+{% if constraint.sourcecode %}
+[source%unnumbered]
+--
+{{ constraint.sourcecode }}
+--
+{% endif %}
+
+{{ constraint.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% if schema.functions.size > 0 %}
+==== Functions
+{% for function in schema.functions %}
+//[[{{schema.id}}.{{function.id}}]]
+===== {{ function.id }}
+
+[source%unnumbered]
+--
+{{ function.sourcecode }}
+--
+
+{{ function.remarks }}
+
+
+{% if function.parameters.size > 0 %}
+====== Parameters
+
+{% for parameter in function.parameters %}
+//[[{{schema.id}}.{{function.id}}.{{parameter.id}}]]
+[level=6]
+====== {{ parameter.id }}
+
+{% if parameter.sourcecode %}
+[source%unnumbered]
+--
+{{ parameter.sourcecode }}
+--
+{% endif %}
+
+{{ parameter.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% if function.types.size > 0 %}
+====== Types
+
+{% for type in function.types %}
+//[[{{schema.id}}.{{function.id}}.{{type.id}}]]
+[level=6]
+====== {{ type.id }}
+
+{% if type.sourcecode %}
+[source%unnumbered]
+--
+{{ type.sourcecode }}
+--
+{% endif %}
+
+{{ type.remarks }}
+
+
+{% if type.items.size > 0 %}
+[level=7]
+====== Items
+
+{% for item in type.items %}
+//[[{{schema.id}}.{{function.id}}.{{type.id}}.{{item.id}}]]
+[level=8]
+====== {{ item.id }}
+
+{% if item.sourcecode %}
+[source%unnumbered]
+--
+{{ item.sourcecode }}
+--
+{% endif %}
+
+{{ item.remarks }}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if function.constants.size > 0 %}
+====== Constants
+
+{% for constant in function.constants %}
+//[[{{schema.id}}.{{function.id}}.{{constant.id}}]]
+[level=6]
+====== {{ constant.id }}
+
+{% if constant.sourcecode %}
+[source%unnumbered]
+--
+{{ constant.sourcecode }}
+--
+{% endif %}
+
+{{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% if function.variables.size > 0 %}
+====== Variables
+
+{% for variable in function.variables %}
+//[[{{schema.id}}.{{function.id}}.{{variable.id}}]]
+[level=6]
+====== {{ variable.id }}
+
+{% if variable.sourcecode %}
+[source%unnumbered]
+--
+{{ variable.sourcecode }}
+--
+{% endif %}
+
+{{ variable.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% assign found = false %}
+{% for statement in function.statements %}
+{% if statement.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+====== Statements
+
+{% for statement in function.statements %}
+
+{% if statement.remarks %}
+
+{% if statement.id %}
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+//[[{{schema.id}}.{{function.id}}.{{ statementid }}]]
+[level=6]
+====== {{ statementid }}
+
+{% if statement.sourcecode %}
+[source%unnumbered]
+--
+{{ statement.sourcecode }}
+--
+{% endif %}
+
+{{ statement.remarks }}
+
+
+
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if schema.procedures.size > 0 %}
+==== Procedures
+{% for procedure in schema.procedures %}
+//[[{{schema.id}}.{{procedure.id}}]]
+===== {{ procedure.id }}
+
+
+[source%unnumbered]
+--
+{{ procedure.sourcecode }}
+--
+
+{{ procedure.remarks }}
+
+
+{% if procedure.parameters.size > 0 %}
+====== Parameters
+
+{% for parameter in procedure.parameters %}
+//[[{{schema.id}}.{{procedure.id}}.{{parameter.id}}]]
+[level=6]
+====== {{ parameter.id }}
+
+{% if parameter.sourcecode %}
+[source%unnumbered]
+--
+{{ parameter.sourcecode }}
+--
+{% endif %}
+
+{{ parameter.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% if procedure.types.size > 0 %}
+====== Types
+
+{% for type in procedure.types %}
+//[[{{schema.id}}.{{procedure.id}}.{{type.id}}]]
+[level=6]
+====== {{ type.id }}
+
+{% if type.sourcecode %}
+[source%unnumbered]
+--
+{{ type.sourcecode }}
+--
+{% endif %}
+
+{{ type.remarks }}
+
+
+{% if type.items.size > 0 %}
+[level=7]
+====== Items
+
+{% for item in type.items %}
+//[[{{schema.id}}.{{procedure.id}}.{{type.id}}.{{item.id}}]]
+[level=8]
+====== {{ item.id }}
+
+{% if item.sourcecode %}
+[source%unnumbered]
+--
+{{ item.sourcecode }}
+--
+{% endif %}
+
+{{ item.remarks }}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if procedure.constants.size > 0 %}
+====== Constants
+
+{% for constant in procedure.constants %}
+//[[{{schema.id}}.{{procedure.id}}.{{constant.id}}]]
+[level=6]
+====== {{ constant.id }}
+
+{% if constant.sourcecode %}
+[source%unnumbered]
+--
+{{ constant.sourcecode }}
+--
+{% endif %}
+
+{{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% if procedure.variables.size > 0 %}
+====== Variables
+
+{% for variable in procedure.variables %}
+//[[{{schema.id}}.{{procedure.id}}.{{variable.id}}]]
+[level=6]
+====== {{ variable.id }}
+
+{% if variable.sourcecode %}
+[source%unnumbered]
+--
+{{ variable.sourcecode }}
+--
+{% endif %}
+
+{{ variable.remarks }}
+
+{% endfor %}
+{% endif %}
+
+{% assign found = false %}
+{% for statement in procedure.statements %}
+{% if statement.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+
+
+{% if found %}
+====== Statements
+
+{% for statement in procedure.statements %}
+
+{% if statement.remarks  %}
+
+{% if statement.id %}
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+//[[{{schema.id}}.{{procedure.id}}.{{statementid }}]]
+[level=6]
+====== {{ statementid }}
+
+{% if statement.sourcecode %}
+[source%unnumbered]
+--
+{{ statement.sourcecode }}
+--
+{% endif %}
+
+{{ statement.remarks }}
+
+
+
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+{% if schema.rules.size > 0 %}
+==== Rules
+{% for rule in schema.rules %}
+//[[{{schema.id}}.{{rule.id}}]]
+===== {{ rule.id }}
+
+[source%unnumbered]
+--
+{{ rule.sourcecode }}
+--
+
+{{ rule.remarks }}
+
+
+
+
+{% if rule.types.size > 0 %}
+====== Types
+
+{% for type in rule.types %}
+//[[{{schema.id}}.{{rule.id}}.{{type.id}}]]
+[level=6]
+====== {{ type.id }}
+
+{% if type.sourcecode %}
+[source%unnumbered]
+--
+{{ type.sourcecode }}
+--
+{% endif %}
+
+{{ type.remarks }}
+
+
+{% if type.items.size > 0 %}
+[level=7]
+====== Items
+
+{% for item in type.items %}
+//[[{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
+[level=8]
+====== {{ item.id }}
+
+{% if item.sourcecode %}
+[source%unnumbered]
+--
+{{ item.sourcecode }}
+--
+{% endif %}
+
+{{ item.remarks }}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+
+
+{% if rule.constants.size > 0 %}
+====== Constants
+
+{% for constant in rule.constants %}
+//[[{{schema.id}}.{{rule.id}}.{{constant.id}}]]
+[level=6]
+====== {{ constant.id }}
+
+{% if constant.sourcecode %}
+[source%unnumbered]
+--
+{{ constant.sourcecode }}
+--
+{% endif %}
+
+{{ constant.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% if rule.variables.size > 0 %}
+====== Variables
+
+{% for variable in rule.variables %}
+//[[{{schema.id}}.{{rule.id}}.{{variable.id}}]]
+[level=6]
+====== {{ variable.id }}
+
+{% if variable.sourcecode %}
+[source%unnumbered]
+--
+{{ variable.sourcecode }}
+--
+{% endif %}
+
+{{ variable.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% assign found = false %}
+{% for statement in function.statements %}
+{% if statement.remarks  %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+====== Statements
+
+{% if statement.remarks  %}
+
+
+{% for statement in rule.statements %}
+
+{% if statement.id %}
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+//[[{{schema.id}}.{{rule.id}}.{{statementid }}]]
+[level=6]
+====== {{ statementid }}
+
+{% if statement.sourcecode %}
+[source%unnumbered]
+--
+{{ statement.sourcecode }}
+--
+{% endif %}
+
+{{ statement.remarks }}
+
+
+
+
+{% endfor %}
+{% endif %}
+{% endif %}
+
+
+
+
+{% if rule.where.size > 0 %}
+====== Where
+
+{% for where1 in rule.where %}
+//[[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
+[level=6]
+====== {{ where1.id }}
+
+{% if where1.sourcecode %}
+[source%unnumbered]
+--
+{{ where1.sourcecode }}
+--
+{% endif %}
+
+{{ where1.remarks }}
+
+{% endfor %}
+{% endif %}
+
+
+{% endfor %}
+{% endif %}
+---
+
+[bibliography]
+== Bibliography
