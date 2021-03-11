@@ -49,9 +49,11 @@ Test definition
 [type="express-schema"]
 == {{ schema.id }}
 
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ schema.sourcecode }}
+{{ schema.source }}
 --
 
 {{ schema.remarks }}
