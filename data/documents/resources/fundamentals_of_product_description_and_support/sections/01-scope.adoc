@@ -2,9 +2,11 @@
 // From resource.xml/scope
 == Scope
 
-The schemas that are specified in this part of ISO 10303 are organized as follows:
+=== General
 
-*Generic product description resources*
+The schemas that are specified in this part of ISO 10303 are organized as follows.
+
+=== Generic product description resources
 
 This part of ISO 10303 specifies the resource constructs for the high level structure for the
 representation of products and their properties.
@@ -25,8 +27,7 @@ A 3D geometric model or a table of numerical values are different representation
 
 * the description of the application context for which product data is defined.
 
-
-*Generic management resources*
+=== Generic management resources
 
 This part of ISO 1030 specifies the resource constructs to associate administrative data with product data.
 
@@ -35,7 +36,7 @@ The following are within scope in this part of ISO 10303:
 * the structure for associating product data with related administrative data.
 
 
-*Support resources*
+=== Support resources
 
 This part of ISO 10303 specifies the resource constructs for administrative data, physical quantities
 and their units, and basic data types.
