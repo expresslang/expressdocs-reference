@@ -156,7 +156,7 @@ using appropriate instances of the entity data types *property_definition*, *pro
 and *representation*.
 
 *EXPRESS specification*
-[source]
+[source%unnumbered]
 ----
 ENTITY document_file
 SUBTYPE OF (document, characterized_object);
@@ -176,7 +176,7 @@ To support the discussion the following instance data is provided for SI base un
 
 Base unit reference instances:
 
-[source]
+[source%unnumbered]
 ----
 #4  =(LENGTH_UNIT()              NAMED_UNIT(*)         SI_UNIT($,.METRE.));
 #14 =(MASS_UNIT()                NAMED_UNIT(*)     SI_UNIT(.KILO.,.GRAM.));
@@ -270,7 +270,7 @@ NOTE: If the *mass_unit* prefix is not provided, even though the newton is decla
 
 Recommended approach:
 
-[source]
+[source%unnumbered]
 ----
 /* establish system of units */
 #5=DERIVED_UNIT_ELEMENT(#4,1.0);
@@ -284,7 +284,7 @@ Definition of "pascal":
 
 A Pascal (Pa) is stem:[1 N·m^{-2}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish the multiplication by m^{-2}. */
 #550005=DERIVED_UNIT_ELEMENT(#4,-2.0);
@@ -297,7 +297,7 @@ Definition of "joule":
 
 A Joule (J) is stem:[1 N·m].
 
-[source]
+[source%unnumbered]
 ----
 /* establish the multiplication by m. */
 #650005=DERIVED_UNIT_ELEMENT(#4,1.0);
@@ -310,7 +310,7 @@ Definition of "watt":
 
 A Watt (W) is stem:[1 J·s^{-1}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish the division by sec. */
 #750005=DERIVED_UNIT_ELEMENT(#4,-1.0);
@@ -323,7 +323,7 @@ Definition of "coulomb":
 
 A Coulomb ( C) is stem:[1 A·s].
 
-[source]
+[source%unnumbered]
 ----
 /* establish system of units */
 #8500015=DERIVED_UNIT_ELEMENT(#24,1.0);
@@ -336,7 +336,7 @@ Definition of "volt":
 
 A Volt (V) is stem:[1 W·A^{-1}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish the division by amp. */
 #950005=DERIVED_UNIT_ELEMENT(#26,-1.0);
@@ -349,7 +349,7 @@ Definition of "farad":
 
 A Farad (F) is stem:[1 C·V^{-1}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish a reference to a coulomb already defined. */
 #860005=DERIVED_UNIT_ELEMENT(#1001,1.0);
@@ -362,7 +362,7 @@ Definition of "ohm":
 
 An Ohm (Ω) is stem:[1 V·A^{-1}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish a reference to a volt already defined. */
 #870005=DERIVED_UNIT_ELEMENT(#1001,1.0);
@@ -375,7 +375,7 @@ Definition of "siemens":
 
 A Siemens (S) is stem:[1 Ω^{-1}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish a reference to an ohm already defined. */
 #880005=DERIVED_UNIT_ELEMENT(#10099,-1.0);
@@ -386,7 +386,7 @@ Definition of "weber":
 
 A Weber (Wb) is stem:[1 V·s].
 
-[source]
+[source%unnumbered]
 ----
 /* establish a reference to a volt already defined. */
 #890005=DERIVED_UNIT_ELEMENT(#1001,1.0);
@@ -399,7 +399,7 @@ Definition of "tesla":
 
 A Tesla (T) is stem:[1 Wb·m^{-2}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish a reference to a weber already defined. */
 #900005=DERIVED_UNIT_ELEMENT(#10023,1.0);
@@ -412,7 +412,7 @@ Definition of "henry":
 
 A Henry (H) is stem:[1 Wb·A^{-1}].
 
-[source]
+[source%unnumbered]
 ----
 /* establish a reference to a weber already defined. */
 #910005=DERIVED_UNIT_ELEMENT(#10023,1.0);
@@ -429,7 +429,7 @@ Well-known are the definition of length, area and volume.
 Examples included are square millimeters, cubic millimeters, inches, square inches and cubic inches.
 
 Definition of Square Millimeter:
-[source]
+[source%unnumbered]
 ----
 #613=DERIVED_UNIT_ELEMENT(#4,2.0);
 #614=AREA_UNIT((#613));
@@ -441,7 +441,7 @@ In this example #614 defines an area unit of square millimeter.
 *Area_unit* is an instance of *derived_unit* but is not an instance of *si_unit* so *derived_unit.name* is populated.
 
 Definition of Cubic Millimeter:
-[source]
+[source%unnumbered]
 ----
 #610=DERIVED_UNIT_ELEMENT(#4,3.0);
 #611=VOLUME_UNIT((#610));
@@ -453,7 +453,7 @@ In this example #611 defines a volume unit of cubic millimeter.
 *Volume_unit* is an instance of *derived_unit* but is not an instance of *si_unit* so *derived_unit.name* is populated.
 
 Definition of Inch:
-[source]
+[source%unnumbered]
 ----
 #71 =DIMENSIONAL_EXPONENTS(1.,0.,0.,0.,0.,0.,0.) ;--length
 #2944=(LENGTH_UNIT() NAMED_UNIT(*) SI_UNIT(.MILLI.,.METRE.));
@@ -469,7 +469,7 @@ This example satisfies that rule because record #2946 references #71 directly an
 
 
 Definition of Square Inch:
-[source]
+[source%unnumbered]
 ----
 #6130=DERIVED_UNIT_ELEMENT(#2946,2.0);
 #6140=AREA_UNIT((#6130));
@@ -480,7 +480,7 @@ NOTE: In this example #6140 defines an area unit of square inch. *Area_unit* is 
 so *derived_unit.name* is populated.
 
 Definition of Cubic Inch:
-[source]
+[source%unnumbered]
 ----
 #6100=DERIVED_UNIT_ELEMENT(#2946,3.0);
 #6110=VOLUME_UNIT((#6100));
@@ -494,7 +494,7 @@ Definition of "pound force":
 
 Recommended approach using existing newton declaration (#4161100):
 
-[source]
+[source%unnumbered]
 ----
 /* conversion from newton to 'pound force' where ‘pounds force is defined per the English Gravitational System.  */
 #111=DIMENSIONAL_EXPONENTS(1.,1.,-2.,0.,0.,0.,0.) ;--force
@@ -505,31 +505,31 @@ Recommended approach using existing newton declaration (#4161100):
 
 ===== Example application of unit definitions to measure value
 
-[source]
+[source%unnumbered]
 ----
 #714=AREA_MEASURE_WITH_UNIT(AREA_MEASURE(150.0),#614);
 ----
 
 In this example #714 describes the surface area of a small cube with 5mm sides.
-[source]
+[source%unnumbered]
 ----
 #711=VOLUME_MEASURE_WITH_UNIT(VOLUME_MEASURE(125.0),#611);
 ----
 
 In this example #711 describes the volume of a small cube with 5mm sides.
-[source]
+[source%unnumbered]
 ----
 #7140=AREA_MEASURE_WITH_UNIT(AREA_MEASURE(150.0),#6140);
 ----
 
 In this example #7140 describes the surface area of a small cube with 5in sides.
-[source]
+[source%unnumbered]
 ----
 #7110=VOLUME_MEASURE_WITH_UNIT(VOLUME_MEASURE(125.0),#6110);
 ----
 
 In this example #7110 describes the volume of a small cube with 5in sides.
-[source]
+[source%unnumbered]
 ----
 #8000=FORCE_MEASURE_WITH_UNIT(FORCE_MEASURE(250.2),#103);
 ----
@@ -594,7 +594,7 @@ variable as defined in ISO 13584-20 and to describe the algebraic expression tha
 For example, if the reference unit is a *named_unit*, the following subtype will be created:
 
 *EXPRESS specification*
-[source]
+[source%unnumbered]
 ----
 ENTITY named_unit_variable
 SUBTYPE OF (named_unit, variable_semantics);
@@ -607,7 +607,7 @@ END_ENTITY;
 For the unit defined using the algebraic expression, the following subtype will be created:
 
 *EXPRESS specification*
-[source]
+[source%unnumbered]
 ----
 ENTITY expression_conversion_based_unit
 SUBTYPE OF (named_unit, variable_semantics);
@@ -626,7 +626,7 @@ stem:[T_{f} = 1.8 x T_{c} + 32]
 NOTE: The instances are expressed using the notation of ISO 10303-21 [2].
 
 *EXPRESS specification*
-[source]
+[source%unnumbered]
 ----
 /* definition of the unit Degree Celsius */
 
@@ -678,7 +678,7 @@ named 'square millimetre'.
 
 NOTE: The instances are expressed using the notation of ISO 10303-21 [2].
 
-[source]
+[source%unnumbered]
 ----
 #4=(LENGTH_UNIT() NAMED_UNIT(*) SI_UNIT(.MILLI.,.METRE.));
 #610=DERIVED_UNIT_ELEMENT(#4,3.0);
@@ -703,7 +703,7 @@ expressed in millimetres.
 NOTE: The instances are expressed using the notation of ISO 10303-21 [2].
 
 *EXPRESS specification*
-[source]
+[source%unnumbered]
 ----
 #3=(NAMED_UNIT(*)SI_UNIT($,.STERADIAN.)SOLID_ANGLE_UNIT());
 #4=(LENGTH_UNIT()NAMED_UNIT(*)SI_UNIT(.MILLI.,.METRE.));
@@ -729,7 +729,7 @@ An annotated EXPRESS schema that uses this part of ISO 10303 can create the foll
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 ENTITY persons_in_organization_address
 SUBTYPE OF (personal_address, organizational_address)
@@ -763,7 +763,7 @@ subtype of *person_assignment* called *applied_person_assignment*.
 
 *EXPRESS specification*
 
-[source]
+[source%unnumbered]
 ----
 TYPE product_data_select = SELECT (applied_person_assignment, product,
 ...);
@@ -781,7 +781,7 @@ he was later replaced by Tom Jones.
 NOTE: The instances are expressed using the notation of ISO 10303-21 [2].
 
 *EXPRESS specification*
-[source]
+[source%unnumbered]
 ----
 #1 = PERSON( ‘276 32 0402', ‘Smith’, ‘Jim’, ‘$’ , ‘$’, ‘$’);
 #2 = PERSON( ‘347 30 2476', ‘Jones’, ‘Tom’, ‘$’ , ‘$’, ‘$’);
