@@ -4,6 +4,8 @@
 
 === General
 
+This part of ISO 10303 specifies the integrated generic resource constructs for fundamentals of product description and support.
+
 The schemas that are specified in this part of ISO 10303 are organized as follows.
 
 === Generic product description resources
