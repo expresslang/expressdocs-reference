@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "metanorma-cli", git: "https://github.com/metanorma/metanorma-cli"
-gem "metanorma-iso", git: "https://github.com/metanorma/metanorma-iso", branch: "features/datauri-validation"
+gem "metanorma-iso", git: "https://github.com/metanorma/metanorma-iso", branch: "fix/datauri-validation"
 gem "metanorma-standoc", git: "https://github.com/metanorma/metanorma-standoc", branch: "features/relax-express-target"
 gem "metanorma-utils", git: "https://github.com/metanorma/metanorma-utils", branch: "hotfix/localdir-ambig"
 gem "metanorma", git: "https://github.com/metanorma/metanorma", branch: "features/relax-express-target"

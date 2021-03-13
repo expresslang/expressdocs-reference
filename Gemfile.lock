@@ -56,8 +56,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: 5c2968fd1c93979f44a950357f96935979191b47
-  branch: features/index
+  revision: c02b840f57a5c87c7ac9bef458bd66699275eec5
+  branch: fix/datauri-validation
   specs:
     metanorma-iso (1.7.2)
       isodoc (~> 1.5.0)
@@ -111,7 +111,7 @@ GEM
       cabin (> 0)
     asciidoctor (2.0.12)
     asciimath (2.0.2)
-    asciimath2unitsml (0.2.0)
+    asciimath2unitsml (0.2.1)
       asciimath
       htmlentities
       nokogiri (~> 1.10.4)
@@ -137,7 +137,7 @@ GEM
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
       thor (~> 1.0)
-    expressir (0.2.16-x86_64-darwin)
+    expressir (0.2.21-x86_64-darwin)
       nokogiri (~> 1.10)
       thor (~> 1.0)
     faraday (1.0.1)
@@ -146,12 +146,12 @@ GEM
     ffi-compiler2 (2.0.1)
       ffi (>= 1.0.0)
       rake
-    fontist (1.8.8)
+    fontist (1.8.9)
       down (~> 5.0)
       excavate (~> 0.1)
       git (~> 1.0)
       thor (~> 1.0.1)
-      ttfunk (~> 1.0)
+      ttfunk (~> 1.6.2)
     gb-agencies (0.0.7)
     git (1.8.1)
       rchardet (~> 1.8)
@@ -188,7 +188,7 @@ GEM
       thor (~> 1.0)
     lutaml-express (0.1.4)
       expressir (~> 0.2.1)
-    lutaml-uml (0.2.8)
+    lutaml-uml (0.2.9)
       hashie (~> 4.1.0)
       parslet (~> 1.7.1)
       ruby-graphviz (~> 1.2)
@@ -271,7 +271,7 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     optout (0.0.2)
-    ox (2.14.2)
+    ox (2.14.3)
     parslet (1.7.1)
       blankslate (>= 2.0, <= 4.0)
     plane1converter (0.0.1)
@@ -369,7 +369,7 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tokenizer (0.3.0)
-    ttfunk (1.7.0)
+    ttfunk (1.6.2.1)
     twitter_cldr (6.4.0)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.1)
@@ -386,6 +386,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-18
   x86_64-darwin-19
 
 DEPENDENCIES
