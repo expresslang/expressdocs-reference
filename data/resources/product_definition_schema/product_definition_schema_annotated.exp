@@ -418,6 +418,7 @@ An example of the way in which this schema may be used is given in annex F.1.
 
 [.svgmap]
 ====
+[[product_definition_schemaexpg1]]
 image::product_definition_schemaexpg1.svg[]
 
 * <<express:basic_attribute_schema>>; 1
@@ -432,6 +433,7 @@ image::product_definition_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[product_definition_schemaexpg2]]
 image::product_definition_schemaexpg2.svg[]
 
 * <<express:product_definition_schema.pds_id_attribute_select>>; 1
@@ -471,6 +473,7 @@ image::product_definition_schemaexpg2.svg[]
 
 [.svgmap]
 ====
+[[product_definition_schemaexpg3]]
 image::product_definition_schemaexpg3.svg[]
 
 * <<express:product_definition_schema.product_definition_or_reference>>; 1

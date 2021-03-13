@@ -28,6 +28,10 @@ Unambiguous identification of this schema is defined in
 {{ schema.source }}
 --
 
+{% for interface in schema.interfaces -%}
+((({{interface.schema.id}},Schema interface)))
+{%- endfor %}
+
 ////
 // constants not allowed for by SC 4
 {% if schema.constants.size > 0 %}
@@ -60,7 +64,7 @@ Unambiguous identification of this schema is defined in
 {% for type in schema.types %}
 [[{{schema.id}}.{{type.id}}]]
 [type="express"]
-==== {{ type.id }}
+==== {{ type.id }} ((({{ type.id }},Object definition)))
 
 {{ type.remarks | join: newLine }}
 
@@ -153,7 +157,7 @@ Unambiguous identification of this schema is defined in
 {% for entity in schema.entities %}
 [[{{schema.id}}.{{entity.id}}]]
 [type="express"]
-==== {{ entity.id }}
+==== {{ entity.id }} ((({{ entity.id }},Object definition)))
 
 {{ entity.remarks | join: newLine }}
 
@@ -243,7 +247,7 @@ Unambiguous identification of this schema is defined in
 {% if schema.rules.size > 1 %}
 [[{{schema.id}}.{{rule.id}}]]
 [type="express"]
-==== {{ rule.id }}
+==== {{ rule.id }}  ((({{ rule.id }},Object definition)))
 {% endif %}
 
 {{ rule.remarks | join: newLine }}
@@ -413,7 +417,7 @@ Unambiguous identification of this schema is defined in
 {% if schema.subtype_constraints.size > 1 %}
 [type="express"]
 [[{{schema.id}}.{{constraint.id}}]]
-==== {{ constraint.id }}
+==== {{ constraint.id }}  ((({{ constraint.id }},Object definition)))
 {% endif %}
 
 {{ constraint.remarks | join: newLine }}
@@ -446,7 +450,7 @@ Unambiguous identification of this schema is defined in
 {% if schema.functions.size > 1 %}
 [[{{schema.id}}.{{function.id}}]]
 [type="express"]
-==== {{ function.id }}
+==== {{ function.id }}  ((({{ function.id }},Object definition)))
 {% endif %}
 
 {{ function.remarks | join: newLine }}
@@ -578,7 +582,7 @@ Unambiguous identification of this schema is defined in
 {% for procedure in schema.procedures %}
 [[{{schema.id}}.{{procedure.id}}]]
 [type="express"]
-==== {{ procedure.id }}
+==== {{ procedure.id }}  ((({{ procedure.id }},Object definition)))
 
 {{ procedure.remarks | join: newLine }}
 
