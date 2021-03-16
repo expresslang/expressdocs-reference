@@ -917,7 +917,7 @@ A *time_interval* is the identification of an interval of time. This concept is 
 
 [example]
 ====
-'Strike duration', 'delay of production', and 'Christmas holidays' are examples for *time_interval*s.
+'Strike duration', 'delay of production', and 'Christmas holidays' are examples for **time_interval**s.
 ====
 *)
 
