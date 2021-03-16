@@ -17,10 +17,9 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma
-  revision: b2134a2a804f4208e40e11edc5a15dcf26e1b597
-  branch: features/relax-express-target
+  revision: ac9b89a38ac978a53c56220ce5803b4c727e27df
   specs:
-    metanorma (1.2.6)
+    metanorma (1.2.7)
       asciidoctor
       fontist (~> 1.8)
       htmlentities
@@ -56,10 +55,9 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: c02b840f57a5c87c7ac9bef458bd66699275eec5
-  branch: fix/datauri-validation
+  revision: 90db87ce7f53e9ae3b1c825d47008ac17214d190
   specs:
-    metanorma-iso (1.7.2)
+    metanorma-iso (1.7.3)
       isodoc (~> 1.5.0)
       metanorma-standoc (~> 1.8.0)
       mn2sts (~> 1.5.0)
@@ -69,10 +67,9 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: 00a496d85ee73f61b61deb9aa42c0f83db515ec4
-  branch: features/relax-express-target
+  revision: 9937666d2ab056168a4b0728df0d2b3bb1307946
   specs:
-    metanorma-standoc (1.8.4)
+    metanorma-standoc (1.8.5)
       asciidoctor (~> 2.0.0)
       asciimath2unitsml (~> 0.2.0)
       concurrent-ruby
@@ -90,10 +87,9 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-utils
-  revision: 003f91c3b2210bc00f879cf1598e0c4a970920c3
-  branch: hotfix/localdir-ambig
+  revision: fe6f1d50deba39654ef8fd1deffef68eba0e080b
   specs:
-    metanorma-utils (1.0.6)
+    metanorma-utils (1.0.9)
       asciidoctor (~> 2.0.0)
       concurrent-ruby
       mime-types
@@ -111,7 +107,7 @@ GEM
       cabin (> 0)
     asciidoctor (2.0.12)
     asciimath (2.0.2)
-    asciimath2unitsml (0.2.1)
+    asciimath2unitsml (0.2.3)
       asciimath
       htmlentities
       nokogiri (~> 1.10.4)
@@ -136,6 +132,10 @@ GEM
       ruby-ole (~> 1.0)
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
+      thor (~> 1.0)
+    expressir (0.2.21)
+      nokogiri (~> 1.10)
+      rice (~> 3)
       thor (~> 1.0)
     expressir (0.2.21-x86_64-darwin)
       nokogiri (~> 1.10)
@@ -353,6 +353,7 @@ GEM
     relaton-w3c (1.7.0)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
+    rice (3.0.0)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -404,4 +405,4 @@ DEPENDENCIES
   sassc
 
 BUNDLED WITH
-   2.2.1
+   2.2.14
