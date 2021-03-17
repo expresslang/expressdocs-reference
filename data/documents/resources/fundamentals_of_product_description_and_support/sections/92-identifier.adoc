@@ -3,8 +3,6 @@
 [[info_object_reg]]
 == Information object registration
 
-// TODO: Need to fully generate this clause, should work
-
 === Document Identification
 
 To provide for unambiguous identification of an information object in an open system, the object identifier
@@ -15,188 +13,16 @@ is assigned to this part of ISO 10303. The meaning of this value is defined in I
 
 === Schema identification
 
-==== action-schema schema identification
+[lutaml, schemas, context, leveloffset=+1]
+---
+{% for schema in context.schemas %}
+==== {{ schema.id }} schema identification
 
 To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
 
-{ iso standard 10303 part(41) version(8) object(1) action-schema(1) }
+{{ schema.version.value }}
 
 is assigned to the action-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
 
-==== application-context-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(8) object(1) application-context-schema(2) }
-
-is assigned to the application-context-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== approval-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(7) object(1) approval-schema(3) }
-
-is assigned to the approval-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== basic-attribute-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(9) object(1) basic-attribute-schema(4) }
-
-is assigned to the basic-attribute-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== certification-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(3) object(1) certification-schema(5) }
-
-is assigned to the certification-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== contract-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(3) object(1) contract-schema(6) }
-
-is assigned to the contract-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== date-time-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(7) object(1) date-time-schema(7) }
-
-is assigned to the date-time-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== document-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(4) object(1) document-schema(8) }
-
-is assigned to the document-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== effectivity-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(8) object(1) effectivity-schema(9) }
-
-is assigned to the effectivity-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== experience-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(4) object(1) experience-schema(10) }
-
-is assigned to the experience-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== external-reference-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(7) object(1) external-reference-schema(11) }
-
-is assigned to the external-reference-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== group-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(7) object(1) group-schema(12) }
-
-is assigned to the group-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== language-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(1) object(1) language-schema(13) }
-
-is assigned to the language-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== location-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(4) object(1) location-schema(14) }
-
-is assigned to the location-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== management-resources-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(8) object(1) management-resources-schema(15) }
-
-is assigned to the management-resources-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== measure-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(8) object(1) measure-schema(16) }
-
-is assigned to the measure-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== person-organization-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(8) object(1) person-organization-schema(17) }
-
-is assigned to the person-organization-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== product-definition-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(9) object(1) product-definition-schema(18) }
-
-is assigned to the product-definition-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== product-property-definition-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(9) object(1) product-property-definition-schema(19) }
-
-is assigned to the product-property-definition-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== product-property-representation-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(9) object(1) product-property-representation-schema(20) }
-
-is assigned to the product-property-representation-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== qualifications-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(6) object(1) qualifications-schema(21) }
-
-is assigned to the qualifications-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== security-classification-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(3) object(1) security-classification-schema(22) }
-
-is assigned to the security-classification-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-==== support-resource-schema schema identification
-
-To provide for unambiguous identification of the schema specifications given in this integrated resource in an open information system, the object identifiers are assigned as follows:
-
-{ iso standard 10303 part(41) version(7) object(1) support-resource-schema(23) }
-
-is assigned to the support-resource-schema schema. The meaning of this value is defined in ISO/IEC 8824-1, and is described in ISO 10303-1.
-
-
+{% endfor %}
+---
