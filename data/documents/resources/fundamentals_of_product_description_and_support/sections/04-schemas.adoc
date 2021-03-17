@@ -439,20 +439,12 @@ Unambiguous identification of this schema is defined in
 
 
 {% if schema.functions.size > 0 %}
-{% if schema.functions.size == 1 %}
-[[{{schema.id}}.{{schema.functions[0].id}}]]
-[type="express"]
-=== {{ schemaname }} function definition: {{ schema.functions[0].id }}
-{% else %}
 [type="express"]
 === {{ schemaname }} function definitions
-{% endif %}
 {% for function in schema.functions %}
-{% if schema.functions.size > 1 %}
 [[{{schema.id}}.{{function.id}}]]
 [type="express"]
 ==== {{ function.id }}  ((({{ function.id }},Object definition)))
-{% endif %}
 
 {{ function.remarks | join: newLine }}
 
