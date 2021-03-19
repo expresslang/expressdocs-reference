@@ -45,6 +45,34 @@ ENTITY language
 END_ENTITY; 
 
 END_SCHEMA;
+(*"language_schema"
+== General
+
+The subject of the *language_schema* specifies the data structure for the representation of language support.
+
+== Fundamental concepts and assumptions
+
+This specifies the representation of the language used in text attributes and the association of translations to these texts.
+
+[.svgmap]
+====
+[[language_schemaexpg1]]
+image::language_schemaexpg1.svg[]
+
+* <<express:group_schema>>; 1
+* <<express:language_schema>>; 2
+====
+
+[.svgmap]
+====
+[[language_schemaexpg2]]
+image::language_schemaexpg2.svg[]
+
+* <<express:group_schema.group>>; 1
+* <<express:language_schema.language>>; 2
+====
+*)
+
 (*"language_schema.language"
 A *language* is a type of <<express:group_schema.group,group>> that is a specification of the language in which an information is given. The group shall specify in its name a language code according to ISO 639-2, and, if present, in its description a country code according to ISO 3166-1.
 *)

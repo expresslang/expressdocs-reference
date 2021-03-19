@@ -137,6 +137,7 @@ Product data may refer to information that is not explicitly represented in a gi
 
 [.svgmap]
 ====
+[[external_reference_schemaexpg1]]
 image::external_reference_schemaexpg1.svg[]
 
 * <<express:external_reference_schema>>; 1
@@ -146,6 +147,7 @@ image::external_reference_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[external_reference_schemaexpg2]]
 image::external_reference_schemaexpg2.svg[]
 
 * <<express:external_reference_schema.source_item>>; 1

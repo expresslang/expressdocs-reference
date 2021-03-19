@@ -114,6 +114,7 @@ This schema provides resources for the identification, naming, and description o
 
 [.svgmap]
 ====
+[[qualifications_schemaexpg1]]
 image::qualifications_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -122,6 +123,7 @@ image::qualifications_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[qualifications_schemaexpg2]]
 image::qualifications_schemaexpg2.svg[]
 
 * <<express:support_resource_schema.text>>; 1

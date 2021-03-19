@@ -331,27 +331,21 @@ Each characteristic may be associated with a single *characterized_object* or *p
 
 This part of ISO 10303 distinguishes between the definition of a product and its possible usages. This part of ISO 10303 establishes the following assumptions:
 
-* 
-
-the definition of a given object is characterized by a set of unique properties.
+* the definition of a given object is characterized by a set of unique properties.
 
 [example]
 ====
 A product cannot have two shapes simultaneously.
 ====
 
-* 
-
-any usage of the object is characterized by a set of unique properties.
+* any usage of the object is characterized by a set of unique properties.
 
 [example]
 ====
 A product, like glue, may have different shapes depending on its usage.
 ====
 
-* 
-
-a property characterizes either the definition or one of the usages of an object.
+* a property characterizes either the definition or one of the usages of an object.
 
 [example]
 ====
@@ -360,6 +354,7 @@ The appearance of chair x is a unique property of that chair. The colour designa
 
 [.svgmap]
 ====
+[[product_property_definition_schemaexpg1]]
 image::product_property_definition_schemaexpg1.svg[]
 
 * <<express:shape_dimension_schema>>; 1
@@ -375,6 +370,7 @@ image::product_property_definition_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[product_property_definition_schemaexpg2]]
 image::product_property_definition_schemaexpg2.svg[]
 
 * <<express:product_property_definition_schema.characterized_definition>>; 1

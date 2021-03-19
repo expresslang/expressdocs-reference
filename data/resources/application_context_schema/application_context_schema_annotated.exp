@@ -140,23 +140,61 @@ The subject of the *application_context_schema* is the applicable usages of prod
 
 This schema also provides a means to identify application protocols.
 
-NOTE: The schemas referenced above are specified in the following parts: +
-+
---
-basic_attribute_schema::  ISO 10303-41
-date_time_schema::  ISO 10303-41
-language_schema::  ISO 10303-41
-management_resources_schema::  ISO 10303-41
-person_organization_schema::  ISO 10303-41
-support_resource_schema::  ISO 10303-41
---
-
-NOTE: See <<expg>> for a graphical representation of this schema.
-
 == Fundamental concepts and assumptions
 
 The meaningful exchange of product data requires the identification of the application context in which that product data is defined. An application context may have several context elements. Each context element may be referenced by a different set of product data.
 
+[.svgmap]
+====
+[[application_context_schemaexpg1]]
+image::application_context_schemaexpg1.svg[]
+
+* <<express:basic_attribute_schema>>; 1
+* <<express:support_resource_schema>>; 2
+* <<express:person_organization_schema>>; 3
+* <<express:language_schema>>; 4
+* <<express:application_context_schema>>; 5
+* <<express:date_time_schema>>; 6
+* <<express:management_resources_schema>>; 7
+====
+
+[.svgmap]
+====
+[[application_context_schemaexpg2]]
+image::application_context_schemaexpg2.svg[]
+
+* <<express:application_context_schema.exchange_identification_context_select>>; 1
+* <<express:application_context_schema.acs_description_attribute_select>>; 2
+* <<express:application_context_schema.acs_id_attribute_select>>; 3
+* <<express:support_resource_schema.label>>; 4
+* <<express:support_resource_schema.label>>; 5
+* <<express:support_resource_schema.identifier>>; 6
+* <<express:support_resource_schema.label>>; 7
+* <<express:support_resource_schema.text>>; 8
+* <<express:support_resource_schema.label>>; 9
+* <<express:support_resource_schema.label>>; 10
+* <<express:date_time_schema.year_number>>; 11
+* <<express:management_resources_schema.identification_assignment>>; 12
+* <<express:language_schema.language>>; 13
+* <<express:person_organization_schema.organization>>; 14
+* <<express:basic_attribute_schema.description_attribute_select>>; 15
+* <<express:support_resource_schema.label>>; 16
+* <<express:support_resource_schema.label>>; 17
+* <<express:support_resource_schema.text>>; 18
+* <<express:basic_attribute_schema.id_attribute_select>>; 19
+* <<express:support_resource_schema.label>>; 20
+* <<express:application_context_schema.product_context>>; 21
+* <<express:application_context_schema.application_context_element>>; 22
+* <<express:application_context_schema.dependent_product_definition_exchange_context>>; 23
+* <<express:application_context_schema.application_context_relationship>>; 24
+* <<express:application_context_schema.product_concept_context>>; 25
+* <<express:application_context_schema.library_context>>; 26
+* <<express:application_context_schema.application_protocol_definition>>; 27
+* <<express:application_context_schema.product_definition_context>>; 28
+* <<express:application_context_schema.application_context>>; 29
+* <<express:application_context_schema.identification_dependent_product_definition_exchange_context>>; 30
+* <<express:application_context_schema.language_dependent_product_definition_exchange_context>>; 31
+====
 *)
 
 (*"application_context_schema.exchange_identification_context_select"

@@ -90,6 +90,7 @@ Groups are collections of product data that have a common identity. Any kinds of
 
 [.svgmap]
 ====
+[[group_schemaexpg1]]
 image::group_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -99,6 +100,7 @@ image::group_schemaexpg1.svg[]
 
 [.svgmap]
 ====
+[[group_schemaexpg2]]
 image::group_schemaexpg2.svg[]
 
 * <<express:group_schema.gs_id_attribute_select>>; 1
