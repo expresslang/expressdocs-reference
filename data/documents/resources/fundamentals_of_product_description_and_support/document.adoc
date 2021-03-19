@@ -30,6 +30,8 @@
 :local-cache-only:
 :data-uri-image:
 :lutaml-express-index: schemas; schemas.yaml;
+:stepmod_doctype: igr
+:stepmod_docid: fundamentals_of_product_description_and_support
 
 ////
 wg.number.supersedes="9562"
