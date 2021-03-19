@@ -60,7 +60,7 @@ Unambiguous identification of this schema is defined in
 
 {% if schema.types.size > 0 %}
 [type="express"]
-=== {{ schemaname }} type definitions
+=== {{ schemaname }} type {% if schema.types.size == 1 %}definition{% else %}definitions{% endif %}
 
 {% for type in schema.types %}
 [[{{schema.id}}.{{type.id}}]]
