@@ -29,6 +29,7 @@
 :mn-output-extensions: xml,html,doc,pdf,html_alt,rxl
 :local-cache-only:
 :data-uri-image:
+:lutaml-express-index: schemas; schemas.yaml;
 
 ////
 wg.number.supersedes="9562"

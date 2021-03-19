@@ -1850,8 +1850,9 @@ The dimensional exponent of length shall be equal to one, the dimensional expone
 *)
 
 (*"measure_schema.amount_of_substance_measure_with_unit"
-An *amount_of_substance_measure_with_unit* is a type of <<express:measure_schema.measure_with_unit,measure_with_unit>>. // in which the physical quantity is an 
-// <express_ref linkend="measure_schema:ir_express:measure_schema.amount_of_substance"/> 
+An *amount_of_substance_measure_with_unit* is a type of <<express:measure_schema.measure_with_unit,measure_with_unit>>.
+// in which the physical quantity is an
+// <express_ref linkend="measure_schema:ir_express:measure_schema.amount_of_substance"/>
 // as defined in ISO 31.
 This entity data type shall only be used to characterize a number of particles.
 *)

@@ -1,5 +1,6 @@
-[lutaml, ../../../resources/action_schema/action_schema_annotated.exp;../../../resources/application_context_schema/application_context_schema_annotated.exp;../../../resources/approval_schema/approval_schema_annotated.exp;../../../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp;../../../resources/certification_schema/certification_schema_annotated.exp;../../../resources/contract_schema/contract_schema_annotated.exp;../../../resources/date_time_schema/date_time_schema_annotated.exp;../../../resources/document_schema/document_schema_annotated.exp;../../../resources/effectivity_schema/effectivity_schema_annotated.exp;../../../resources/experience_schema/experience_schema_annotated.exp;../../../resources/external_reference_schema/external_reference_schema_annotated.exp;../../../resources/group_schema/group_schema_annotated.exp;../../../resources/language_schema/language_schema_annotated.exp;../../../resources/location_schema/location_schema_annotated.exp;../../../resources/management_resources_schema/management_resources_schema_annotated.exp;../../../resources/measure_schema/measure_schema_annotated.exp;../../../resources/person_organization_schema/person_organization_schema_annotated.exp;../../../resources/process_property_schema/process_property_schema_annotated.exp;../../../resources/product_definition_schema/product_definition_schema_annotated.exp;../../../resources/product_property_definition_schema/product_property_definition_schema_annotated.exp;../../../resources/product_property_representation_schema/product_property_representation_schema_annotated.exp;../../../resources/qualifications_schema/qualifications_schema_annotated.exp;../../../resources/security_classification_schema/security_classification_schema_annotated.exp;../../../resources/support_resource_schema/support_resource_schema_annotated.exp, schema, leveloffset=+1]
+[lutaml, schemas, context, leveloffset=+1]
 ---
+{% for schema in context.schemas %}
 {% assign schemaname = schema.id | append: "$" | remove: "_schema$" | remove: "$" | replace: "_", " " | capitalize %}
 [[{{ schema.id }}]]
 [type="express"]
@@ -27,6 +28,10 @@ Unambiguous identification of this schema is defined in
 --
 {{ schema.source }}
 --
+
+{% for interface in schema.interfaces -%}
+((({{interface.schema.id}},Schema interface)))
+{%- endfor %}
 
 ////
 // constants not allowed for by SC 4
@@ -60,7 +65,78 @@ Unambiguous identification of this schema is defined in
 {% for type in schema.types %}
 [[{{schema.id}}.{{type.id}}]]
 [type="express"]
-==== {{ type.id }}
+==== {{ type.id }} ((({{ type.id }},Object definition)))
+
+{% if type.type._class == 'Expressir::Model::Types::Select' %}
+// output the boilerplate select descriptions for selects
+{% if type.type.extension_type %}
+
+// an extended and extensible SELECT type
+// and
+// an extended not extensible SELECT type
+
+// TODO: This should be express:{{ type.type.extension_type.schema_id }}.{{ type.type.extension_type }}
+The *{{ type.id }}* type is an extension of the
+*<<express:{{ schema.id }}.{{ type.type.extension_type.id }},{{ type.type.extension_type.id }}>>* type.
+
+{% if type.type.extension_items.size > 0 %}
+It adds the data {% if type.type.extension_items.size > 1 %}types{% else %}type{% endif %}
+// TODO: This should be express:{{ item.schema_id }}.{{ item }}
+{%- for item in type.type.extension_items %}
+*<<express:{{ schema.id }}.{{ item.id }},{{ item.id }}>>*{% if forloop.length > 1 %}{% if forloop.rindex0 == 1 %} and {% elsif forloop.rindex0 != 0 %}, {% endif %}{% endif %}
+{%- endfor %}
+to the list of alternate data types.
+{% endif %}
+
+{% if type.type.extensible %}
+NOTE: The list of entity data types will be
+extended in application resources that use the constructs of
+this resource.
+{% endif %}
+
+{% else %}
+
+{% if type.type.extensible %}
+// extensible SELECT type
+
+{% if type.type.extension_items.size > 0 %}
+// an extensible non-empty SELECT type
+The *{{ type.id }}* type is an extensible list of alternate
+data types. It provides a mechanism to refer to instances of
+the data types included in the *{{ type.id }}* type or in its
+extensions.
+
+NOTE: The list of entity data types will be
+extended in application resources that use the constructs of
+this resource.
+
+{% else %}
+// an extensible empty SELECT type
+
+The *{{ type.id }}* type is an extensible list of alternate
+data types. It provides a mechanism to refer to instances of
+the data types included in the types that extend the
+*{{ type.id }}* type.
+
+//The <b><xsl:value-of select="$typename"/></b> type shall be
+//extended in schemas that use the constructs of this
+//resource.
+
+NOTE: This empty extensible select requires extension in a further
+schema to ensure that entities that refer to it have at least one
+valid instantiation.
+
+{% endif %}
+
+{% else %}
+// a non extensible SELECT type
+The *{{ type.id }}* type is a list of alternate data types. It
+provides a mechanism to refer to an instance of one of these data
+types.
+
+{% endif %}
+{% endif %}
+{% endif %}
 
 {{ type.remarks | join: newLine }}
 
@@ -153,7 +229,7 @@ Unambiguous identification of this schema is defined in
 {% for entity in schema.entities %}
 [[{{schema.id}}.{{entity.id}}]]
 [type="express"]
-==== {{ entity.id }}
+==== {{ entity.id }} ((({{ entity.id }},Object definition)))
 
 {{ entity.remarks | join: newLine }}
 
@@ -243,7 +319,7 @@ Unambiguous identification of this schema is defined in
 {% if schema.rules.size > 1 %}
 [[{{schema.id}}.{{rule.id}}]]
 [type="express"]
-==== {{ rule.id }}
+==== {{ rule.id }}  ((({{ rule.id }},Object definition)))
 {% endif %}
 
 {{ rule.remarks | join: newLine }}
@@ -413,7 +489,7 @@ Unambiguous identification of this schema is defined in
 {% if schema.subtype_constraints.size > 1 %}
 [type="express"]
 [[{{schema.id}}.{{constraint.id}}]]
-==== {{ constraint.id }}
+==== {{ constraint.id }}  ((({{ constraint.id }},Object definition)))
 {% endif %}
 
 {{ constraint.remarks | join: newLine }}
@@ -434,20 +510,12 @@ Unambiguous identification of this schema is defined in
 
 
 {% if schema.functions.size > 0 %}
-{% if schema.functions.size == 1 %}
-[[{{schema.id}}.{{schema.functions[0].id}}]]
-[type="express"]
-=== {{ schemaname }} function definition: {{ schema.functions[0].id }}
-{% else %}
 [type="express"]
 === {{ schemaname }} function definitions
-{% endif %}
 {% for function in schema.functions %}
-{% if schema.functions.size > 1 %}
 [[{{schema.id}}.{{function.id}}]]
 [type="express"]
-==== {{ function.id }}
-{% endif %}
+==== {{ function.id }}  ((({{ function.id }},Object definition)))
 
 {{ function.remarks | join: newLine }}
 
@@ -578,7 +646,7 @@ Unambiguous identification of this schema is defined in
 {% for procedure in schema.procedures %}
 [[{{schema.id}}.{{procedure.id}}]]
 [type="express"]
-==== {{ procedure.id }}
+==== {{ procedure.id }}  ((({{ procedure.id }},Object definition)))
 
 {{ procedure.remarks | join: newLine }}
 
@@ -702,6 +770,6 @@ END_SCHEMA; -- {{ schema.id }}
 --
 
 
-
+{% endfor %}
 ---
 

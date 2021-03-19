@@ -4,6 +4,8 @@
 
 === General
 
+This part of ISO 10303 specifies the integrated generic resource constructs for fundamentals of product description and support.
+
 The schemas that are specified in this part of ISO 10303 are organized as follows.
 
 === Generic product description resources
@@ -22,8 +24,10 @@ The following are within scope in this part of ISO 10303:
 * the identification of the properties of a product or of a portion of a product;
 * the identification of a representation of a property; +
 +
+--
 [example]
 A 3D geometric model or a table of numerical values are different representations of properties of a product.
+--
 
 * the description of the application context for which product data is defined.
 
