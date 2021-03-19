@@ -4,7 +4,18 @@
 
 === General
 
-This part of ISO 10303 specifies the integrated generic resource constructs for fundamentals of product description and support.
+[liquid,sdt="{ stepmod_doctype }",sdi="{ stepmod_docid }"]
+---
+{% assign docname = sdi | replace: "_", " " %}
+{% case {{ sdt }} %}
+{% when "aic" %}
+This part of ISO 10303 specifies the interpretation of the integrated resources to satisfy requirements for the representation of {{ docname }}.
+{% when "igr" %}
+This part of ISO 10303 specifies the integrated generic resource constructs for {{ docname }}.
+{% when "iar" %}
+This part of ISO 10303 specifies the integrated application resource constructs for {{ docname }}.
+{% endcase %}
+---
 
 The schemas that are specified in this part of ISO 10303 are organized as follows.
 

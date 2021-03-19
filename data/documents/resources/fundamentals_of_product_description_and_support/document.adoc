@@ -31,6 +31,8 @@
 :data-uri-image:
 :lutaml-express-index: schemas; schemas.yaml;
 :htmlstylesheet-override: html_override.css
+:stepmod_doctype: igr
+:stepmod_docid: fundamentals_of_product_description_and_support
 
 ////
 wg.number.supersedes="9562"
