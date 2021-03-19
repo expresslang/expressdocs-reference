@@ -34,8 +34,6 @@ schemas:
     path: ../../../resources/measure_schema/measure_schema_annotated.exp
   person_organization_schema:
     path: ../../../resources/person_organization_schema/person_organization_schema_annotated.exp
-  process_property_schema:
-    path: ../../../resources/process_property_schema/process_property_schema_annotated.exp
   product_definition_schema:
     path: ../../../resources/product_definition_schema/product_definition_schema_annotated.exp
   product_property_definition_schema:
