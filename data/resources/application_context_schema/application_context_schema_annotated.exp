@@ -52,11 +52,11 @@ SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) objec
   TYPE acs_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     application_context);
   END_TYPE;
-  
+
   TYPE acs_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
     application_context);
   END_TYPE;
-  
+
    TYPE exchange_identification_context_select  = SELECT (identification_assignment,organization);
 	END_TYPE;
 
@@ -113,7 +113,7 @@ SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) objec
     SUBTYPE OF (application_context_element);
     life_cycle_stage : label;
   END_ENTITY;
-  
+
   ENTITY dependent_product_definition_exchange_context
     ABSTRACT SUPERTYPE
     SUBTYPE OF (product_definition_context);

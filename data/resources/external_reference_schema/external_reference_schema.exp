@@ -39,11 +39,11 @@ SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object
     text, 
     identifier, 
     bag_to_set);
-    
+
   TYPE ers_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     external_source);
   END_TYPE;
-    
+
   TYPE message = STRING;
   END_TYPE;
 
@@ -76,7 +76,7 @@ SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object
     relating_item : externally_defined_item;
     related_item : externally_defined_item;
   END_ENTITY;
-  
+
   ENTITY externally_defined_item_with_multiple_references
     SUBTYPE OF (externally_defined_item);
     references : LIST[1:?] OF UNIQUE source_item;

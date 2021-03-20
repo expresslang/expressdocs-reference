@@ -45,16 +45,16 @@ SCHEMA approval_schema '{iso standard 10303 part(41) version(7) object(1) approv
     bag_to_set, 
     label, 
     text);
-    
+
   TYPE apps_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     approval_role);
   END_TYPE;
-  
+
   TYPE apps_role_select = SELECT BASED_ON role_select WITH (
     approval_date_time);
   END_TYPE;
-  
-    
+
+
   ENTITY approval;
     status : approval_status;
     level : label;
