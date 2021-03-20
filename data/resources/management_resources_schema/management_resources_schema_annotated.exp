@@ -152,7 +152,7 @@ END_ENTITY;
     assigned_class : group;
     role : classification_role;
   END_ENTITY;
-  
+
   ENTITY classification_assignment_relationship;
     id 			: OPTIONAL identifier;
     description	: OPTIONAL text;
@@ -162,7 +162,7 @@ END_ENTITY;
    WHERE
     WR1: acyclic_classification_assignment_relationship(SELF, [related], 'MANAGEMENT_RESOURCES_SCHEMA.CLASSIFICATION_ASSIGNMENT_RELATIONSHIP');
   END_ENTITY;
-  
+
   ENTITY classification_role;
     name : label;
     description : OPTIONAL text;
@@ -277,7 +277,7 @@ END_ENTITY;
     SUBTYPE OF (identification_assignment);
     source : external_source;
   END_ENTITY;
-  
+
   ENTITY external_identification_assignment_relationship;
     id 			: OPTIONAL identifier;
     description	: OPTIONAL text;
@@ -532,7 +532,7 @@ FUNCTION acyclic_assignment_object_relationship (relation : assignment_object_re
   LOCAL
     x : SET OF assignment_object_relationship;
   END_LOCAL;
-  
+
   IF relation.relating IN relatives THEN
     RETURN (FALSE);
   END_IF;

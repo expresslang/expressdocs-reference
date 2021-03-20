@@ -58,7 +58,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
     identifier, 
     label, 
     text);
-    
+
   TYPE characterized_definition = SELECT (
     characterized_item,
     characterized_object, 
@@ -77,7 +77,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
     shape_aspect, 
     shape_aspect_relationship);
   END_TYPE;
-  
+
   TYPE characterized_product_definition = SELECT (
     product_definition, 
     product_definition_occurrence, 
@@ -96,7 +96,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
 
   TYPE shape_aspect_or_characterized_object = SELECT (shape_aspect, characterized_object);
   END_TYPE;
-  
+
   TYPE shape_definition = SELECT (product_definition_shape, shape_aspect, shape_aspect_relationship);
   END_TYPE;
 
@@ -136,7 +136,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
   DERIVE
    SELF\shape_aspect.of_shape : product_definition_shape := get_root_shape_aspect(SELF);
   END_ENTITY;
-  
+
   ENTITY general_property;
     id : identifier;
     name : label;
@@ -300,7 +300,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
     END_REPEAT;
     RETURN (current.of_shape);
   END_FUNCTION;
-  
+
 END_SCHEMA;
 
 (*"product_property_definition_schema"

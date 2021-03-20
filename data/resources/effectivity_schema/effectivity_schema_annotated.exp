@@ -49,7 +49,7 @@ SCHEMA effectivity_schema '{iso standard 10303 part(41) version(8) object(1) eff
     identifier, 
     label, 
     text);
-  
+
   TYPE effs_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     effectivity);
   END_TYPE;
@@ -57,7 +57,7 @@ SCHEMA effectivity_schema '{iso standard 10303 part(41) version(8) object(1) eff
   TYPE effs_name_attribute_select = SELECT BASED_ON name_attribute_select WITH (
     effectivity);
   END_TYPE;
- 
+
  ENTITY condition
 		  	SUBTYPE OF (action_method);
 		  END_ENTITY;
@@ -69,7 +69,7 @@ ENTITY conditional_configuration
 			configuration_type	: STRING;									
 			inheritance_type	: STRING;									
 END_ENTITY;  
-    
+
   ENTITY dated_effectivity
     SUBTYPE OF (effectivity);
     effectivity_end_date : OPTIONAL date_time_or_event_occurrence;

@@ -73,7 +73,7 @@ SCHEMA product_property_representation_schema '{iso standard 10303 part(41) vers
     context_dependent_shape_representation,
     property_definition_representation);
   END_TYPE;
-  
+
   TYPE pprs_name_attribute_select = SELECT BASED_ON name_attribute_select WITH (
     context_dependent_shape_representation,
     property_definition_representation);
@@ -93,7 +93,7 @@ SCHEMA product_property_representation_schema '{iso standard 10303 part(41) vers
   TYPE item_identified_representation_usage_definition = EXTENSIBLE GENERIC_ENTITY SELECT (
     represented_definition);
   END_TYPE;
-  
+
   TYPE item_identified_representation_usage_select = SELECT (
     representation_item,
     list_representation_item,
@@ -111,7 +111,7 @@ SCHEMA product_property_representation_schema '{iso standard 10303 part(41) vers
   WHERE
     WR1 : EXISTS(directed_link);
   END_ENTITY;
- 
+
   ENTITY characterized_chain_based_item_within_representation 
     SUBTYPE OF (characterized_item_within_representation);
     nodes : LIST[2:?] OF UNIQUE representation;
@@ -123,7 +123,7 @@ SCHEMA product_property_representation_schema '{iso standard 10303 part(41) vers
   WHERE
     WR1 : EXISTS(directed_link);
   END_ENTITY;
- 
+
   ENTITY characterized_item_within_representation
     SUBTYPE OF (characterized_object);
     item : representation_item;
@@ -217,7 +217,7 @@ END_ENTITY;
   THEN
    RETURN(?);
   END_IF;
-  
+
   REPEAT i := 1 to SIZEOF(undirected_link);
    CASE TRUE OF
     ('REPRESENTATION_SCHEMA.REPRESENTATION_CONTEXT' IN TYPEOF(undirected_link[i])) :
@@ -255,12 +255,12 @@ END_ENTITY;
     OTHERWISE : RETURN(?);
    END_CASE;
   END_REPEAT;
-  
+
   IF (value_unique(directed_link) = FALSE)
   THEN
    RETURN(?);
   END_IF;
-  
+
   RETURN(directed_link);
   END_FUNCTION;
 
