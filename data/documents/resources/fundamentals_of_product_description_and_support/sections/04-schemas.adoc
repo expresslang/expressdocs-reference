@@ -10,6 +10,8 @@
 
 {% endcapture %}
 
+=== General
+
 {{ schema.remarks | join: newLine }}
 
 This clause defines the information requirements to which
@@ -57,6 +59,28 @@ Unambiguous identification of this schema is defined in
 {% endif %}
 ////
 
+[NOTE]
+====
+The schemas referenced above are specified in the following parts:
+
+// TODO: Need to identify the document part where the schema is described
+// We can get this from the version string '{iso standard 10303 part(41) ...' of the schema
+{% assign reference_froms = schema.interfaces | where: "kind", :REFERENCE %}
+{% for from in reference_froms %}
+{{ from.schema.id }}:: ISO 10303-41
+{% endfor %}
+====
+
+NOTE: See <<expg>> for a graphical representation of this schema.
+
+{% assign remark_items = schema.remark_items | where: "id", "__fund_cons" %}
+{% for remark_block in remark_items %}
+{{ remark_block.remarks | join: newLine }}
+
+{% endfor %}
+
+// TODO: uncertain on how to link here, ping NN
+image::expg.gif[link=<<expg.{{ schema.id }}>>]
 
 {% if schema.types.size > 0 %}
 [type="express"]
@@ -224,7 +248,7 @@ types.
 
 {% if schema.entities.size > 0 %}
 [type="express"]
-=== {{ schemaname }} entity definitions
+=== {{ schemaname }} entity {% if schema.entities.size == 1 %}definition{% else %}definitions{% endif %}
 
 {% for entity in schema.entities %}
 [[{{schema.id}}.{{entity.id}}]]
@@ -511,7 +535,7 @@ types.
 
 {% if schema.functions.size > 0 %}
 [type="express"]
-=== {{ schemaname }} function definitions
+=== {{ schemaname }} function {% if schema.types.size == 1 %}definition{% else %}definitions{% endif %}
 {% for function in schema.functions %}
 [[{{schema.id}}.{{function.id}}]]
 [type="express"]
@@ -642,7 +666,7 @@ types.
 
 {% if schema.procedures.size > 0 %}
 [type="express"]
-=== {{ schemaname }} procedure definitions
+=== {{ schemaname }} procedure {% if schema.types.size == 1 %}definition{% else %}definitions{% endif %}
 {% for procedure in schema.procedures %}
 [[{{schema.id}}.{{procedure.id}}]]
 [type="express"]

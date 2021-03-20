@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8369
 EXPRESS Source:
 ISO 10303-41 ed4 Fundamentals of product description and support - Document schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -97,24 +97,28 @@ SCHEMA document_schema '{iso standard 10303 part(41) version(4) object(1) docume
 END_SCHEMA;
 
 (*"document_schema"
-== General
 
-The subject of the *document_schema* is the citations of formal standards or documents that are outside the domain of this International Standard. These resource constructs are used to reference additional information that is relevant to the description of the product. 
+The subject of the *document_schema* is the citations of formal standards or documents that are outside the domain of this International Standard. These resource constructs are used to reference additional information that is relevant to the description of the product.
 
 [example]
 ====
 International, national, and organizational standards, catalogues, and tables of engineering data are examples of formal standards or documents.
 ====
 
-== Fundamental concepts and assumptions
+*)
 
-Product data can include citations of other information sources. 
+(*"document_schema.__fund_cons"
+
+Product data can include citations of other information sources.
 
 [example]
 ====
 Heat treatment processes documentation can be specified using the resource constructs that are defined in this schema.
 ====
 
+*)
+
+(*"document_schema.__expressg"
 [.svgmap]
 ====
 [[document_schemaexpg1]]
@@ -125,6 +129,9 @@ image::document_schemaexpg1.svg[]
 * <<express:support_resource_schema>>; 3
 ====
 
+*)
+
+(*"document_schema.__expressg"
 [.svgmap]
 ====
 [[document_schemaexpg2]]
@@ -161,7 +168,7 @@ The *product_or_formation_or_definition* type allows for the designation of a <<
 *)
 
 (*"document_schema.document"
-A *document* is an identification of a collection of information. 
+A *document* is an identification of a collection of information.
 
 [NOTE]
 --
@@ -220,7 +227,7 @@ the set of <<express:document_schema.document_representation_type,document_repre
 *)
 
 (*"document_schema.document_product_association"
-A *document_product_association* is an association between a <<express:document_schema.document,document>> and a <<express:product_definition_schema.product,product>>, between a <<express:document_schema.document,document>> and a <<express:product_definition_schema.product_definition_formation,product_definition_formation>>, or between a <<express:document_schema.document,document>> and a <<express:product_definition_schema.product_definition,product_definition>>. 
+A *document_product_association* is an association between a <<express:document_schema.document,document>> and a <<express:product_definition_schema.product,product>>, between a <<express:document_schema.document,document>> and a <<express:product_definition_schema.product_definition_formation,product_definition_formation>>, or between a <<express:document_schema.document,document>> and a <<express:product_definition_schema.product_definition,product_definition>>.
 
 [NOTE]
 --
@@ -260,7 +267,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"document_schema.document_relationship"
-A *document_relationship* is a relationship between two instances of the entity data type <<express:document_schema.document,document>> and provides a description of their relationship. 
+A *document_relationship* is a relationship between two instances of the entity data type <<express:document_schema.document,document>> and provides a description of their relationship.
 
 [NOTE]
 --
@@ -322,7 +329,7 @@ the <<express:document_schema.document,document>> for which the kinds of represe
 *)
 
 (*"document_schema.document_type"
-A *document_type* is the kind of data that a formal standard or document may provide information about. 
+A *document_type* is the kind of data that a formal standard or document may provide information about.
 
 [NOTE]
 --
@@ -345,7 +352,7 @@ the name of the kind of data contained in a document.
 *)
 
 (*"document_schema.document_usage_constraint"
-A *document_usage_constraint* is an identification of a specific subject area or aspect from within a document and gives the relevant information or text that applies. The semantics of the reference can be found in the <<express:document_schema.document,document>> itself. 
+A *document_usage_constraint* is an identification of a specific subject area or aspect from within a document and gives the relevant information or text that applies. The semantics of the reference can be found in the <<express:document_schema.document,document>> itself.
 
 [NOTE]
 --
@@ -376,7 +383,7 @@ For references to a 'surface finish' source the *subject_element* may be a 'Clau
 *)
 
 (*"document_schema.document_with_class"
-A *document_with_class* is a type of <<express:document_schema.document,document>> for which a classification is specified. 
+A *document_with_class* is a type of <<express:document_schema.document,document>> for which a classification is specified.
 
 [example]
 ====
@@ -399,7 +406,7 @@ The value of this attribute would be 'A', 'B' or 'C' in the previous example.
 *)
 
 (*"document_schema.acyclic_document_relationship"
-The *acyclic_document_relationship* function determines whether the graph of instances of the entity data type <<express:document_schema.document,document>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:document_schema.document_relationship,document_relationship>> or any of its subtypes. 
+The *acyclic_document_relationship* function determines whether the graph of instances of the entity data type <<express:document_schema.document,document>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:document_schema.document_relationship,document_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

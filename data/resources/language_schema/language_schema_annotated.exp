@@ -46,14 +46,18 @@ END_ENTITY;
 
 END_SCHEMA;
 (*"language_schema"
-== General
 
 The subject of the *language_schema* specifies the data structure for the representation of language support.
 
-== Fundamental concepts and assumptions
+*)
+
+(*"language_schema.__fund_cons"
 
 This specifies the representation of the language used in text attributes and the association of translations to these texts.
 
+*)
+
+(*"language_schema.__expressg"
 [.svgmap]
 ====
 [[language_schemaexpg1]]
@@ -63,6 +67,9 @@ image::language_schemaexpg1.svg[]
 * <<express:language_schema>>; 2
 ====
 
+*)
+
+(*"language_schema.__expressg"
 [.svgmap]
 ====
 [[language_schemaexpg2]]

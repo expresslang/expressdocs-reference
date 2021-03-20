@@ -95,7 +95,6 @@ SCHEMA experience_schema '{iso standard 10303 part(41) version(4) object(1) expe
 END_SCHEMA;
 
 (*"experience_schema"
-== General
 
 The subject of the *experience_schema* is the identification and characterization of types of experience or particular episodes of experience gained by persons. This schema provides for the definition of generic data relating to particular episodes of experience.
 
@@ -109,7 +108,9 @@ The identification of a particular episode of experience is an example of generi
 The identification of a particular type of experience is an example of generic data relating to experience.
 ====
 
-== Fundamental concepts and assumptions
+*)
+
+(*"experience_schema.__fund_cons"
 
 This schema provides resources for the identification, naming, and description of:
 
@@ -118,6 +119,9 @@ This schema provides resources for the identification, naming, and description o
 * relationships between specific experiences;
 * relationships between types of experience.
 
+*)
+
+(*"experience_schema.__expressg"
 [.svgmap]
 ====
 [[experience_schemaexpg1]]
@@ -127,6 +131,9 @@ image::experience_schemaexpg1.svg[]
 * <<express:experience_schema>>; 2
 ====
 
+*)
+
+(*"experience_schema.__expressg"
 [.svgmap]
 ====
 [[experience_schemaexpg2]]
