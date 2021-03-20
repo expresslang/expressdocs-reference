@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N10230
 EXPRESS Source:
 ISO 10303-41 ed6 Fundamentals of product description and support - Action schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
 and derivations of the Schema:
 
 Copyright ISO 2019  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -30,13 +30,13 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 
 SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
   REFERENCE FROM basic_attribute_schema (	-- ISO 10303-41
-    description_attribute, 
+    description_attribute,
     description_attribute_select,
-    get_description_value, 
-    get_id_value, 
+    get_description_value,
+    get_id_value,
     get_name_value,
-    get_role, 
-    id_attribute, 
+    get_role,
+    id_attribute,
     id_attribute_select,
     name_attribute,
     name_attribute_select,
@@ -45,9 +45,9 @@ SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_s
     role_association);
 
   REFERENCE FROM support_resource_schema ( -- ISO 10303-41
-    bag_to_set, 
-    identifier, 
-    label, 
+    bag_to_set,
+    identifier,
+    label,
     text);
 
   TYPE as_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
@@ -178,11 +178,11 @@ SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_s
   END_ENTITY;
 
 ENTITY action_directive_relationship;
-	name			: label; 	
-	description 	: OPTIONAL STRING; 					
-	relating 		: action_directive;	
-	related 		: action_directive;										
-	relation_type 	: STRING; 									
+	name			: label;
+	description 	: OPTIONAL STRING;
+	relating 		: action_directive;
+	related 		: action_directive;
+	relation_type 	: STRING;
  WHERE
 	WR1 : acyclic_action_directive_relationship(SELF, [related], 'ACTION_SCHEMA.ACTION_DIRECTIVE_RELATIONSHIP');
 END_ENTITY;
@@ -256,15 +256,15 @@ END_ENTITY;
   END_FUNCTION;
 
 FUNCTION acyclic_action_directive_relationship (relation : action_directive_relationship; relatives : SET [1:?] of action_directive; specific_relation : STRING):BOOLEAN;
-	LOCAL 
+	LOCAL
 		x : SET of action_directive_relationship;
 	END_LOCAL;
-	IF relation.relating IN relatives THEN 
+	IF relation.relating IN relatives THEN
 		RETURN (FALSE);
 	END_IF;
 	x := QUERY(adr <* bag_to_set(USEDIN(relation.relating, 'ACTION_SCHEMA.' + 'ACTION_DIRECTIVE_RELATIONSHIP.' + 'RELATED')) | specific_relation IN TYPEOF(adr));
 	REPEAT i := 1 TO HIINDEX(x);
-		IF NOT acyclic_action_directive_relationship(x[i], relatives + relation.relating, specific_relation) THEN 
+		IF NOT acyclic_action_directive_relationship(x[i], relatives + relation.relating, specific_relation) THEN
 	 		RETURN (FALSE);
 		END_IF;
 	END_REPEAT;
@@ -274,19 +274,23 @@ END_FUNCTION;
 END_SCHEMA;
 
 (*"action_schema"
-== General
 
-The subject of the *action_schema* is the description of actions, the reasons for these actions, and the status of these actions. 
+The subject of the *action_schema* is the description of actions, the reasons for these actions, and the status of these actions.
 
 [example]
 ====
 Reasons for action include evolving user requirements, manufacturing problems and difficulties that arise when a product is in use.
 ====
 
-== Fundamental concepts and assumptions
+*)
+
+(*"action_schema.__fund_cons"
 
 Action information can be attached to any aspect of product data.
 
+*)
+
+(*"action_schema.__expressg"
 [.svgmap]
 ====
 [[action_schemaexpg1]]
@@ -297,6 +301,9 @@ image::action_schemaexpg1.svg[]
 * <<express:support_resource_schema>>; 3
 ====
 
+*)
+
+(*"action_schema.__expressg"
 [.svgmap]
 ====
 [[action_schemaexpg2]]
@@ -360,7 +367,7 @@ image::action_schemaexpg2.svg[]
 *)
 
 (*"action_schema.supported_item"
-The *supported_item* allows for the designation of an <<express:action_schema.action_directive,action_directive>>, an <<express:action_schema.action,action>>, or an <<express:action_schema.action_method,action_method>>. 
+The *supported_item* allows for the designation of an <<express:action_schema.action_directive,action_directive>>, an <<express:action_schema.action,action>>, or an <<express:action_schema.action_method,action_method>>.
 
 [NOTE]
 --
@@ -369,7 +376,7 @@ This specifies the use of an <<express:action_schema.action_resource,action_reso
 *)
 
 (*"action_schema.action"
-An *action* is the identification of the occurrence of an activity and a description of its result. 
+An *action* is the identification of the occurrence of an activity and a description of its result.
 
 An *action* identifies an activity that has taken place, is taking place, or is expected to take place in the future.
 
@@ -432,7 +439,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"action_schema.action_directive"
-An *action_directive* is an authoritative instrument that provides directions to achieve the specified results. 
+An *action_directive* is an authoritative instrument that provides directions to achieve the specified results.
 
 [example]
 ====
@@ -466,7 +473,7 @@ a set of <<express:action_schema.versioned_action_request,versioned_action_reque
 *)
 
 (*"action_schema.action_method"
-An *action_method* is the definition of an activity. This definition includes the activity’s objectives and effects. 
+An *action_method* is the definition of an activity. This definition includes the activity’s objectives and effects.
 
 [NOTE]
 --
@@ -496,7 +503,7 @@ an informal description of the objectives of the *action_method*.
 *)
 
 (*"action_schema.action_method_relationship"
-An *action_method_relationship* is a relationship between two instances of the entity data type <<express:action_schema.action_method,action_method>> and provides an identification and description of this relationship. 
+An *action_method_relationship* is a relationship between two instances of the entity data type <<express:action_schema.action_method,action_method>> and provides an identification and description of this relationship.
 
 [NOTE]
 --
@@ -541,7 +548,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"action_schema.action_relationship"
-An *action_relationship* is a relationship between two instances of the entity data type <<express:action_schema.action,action>> and provides an identification and description of this relationship. 
+An *action_relationship* is a relationship between two instances of the entity data type <<express:action_schema.action,action>> and provides an identification and description of this relationship.
 
 [NOTE]
 --
@@ -666,7 +673,7 @@ a set of <<express:action_schema.supported_item,supported_item>>s for which the 
 *)
 
 (*"action_schema.action_resource_relationship"
-An *action_resource_relationship* is a relationship between two instances of the entity data type <<express:action_schema.action_resource,action_resource>> and provides an identification and description of this relationship. 
+An *action_resource_relationship* is a relationship between two instances of the entity data type <<express:action_schema.action_resource,action_resource>> and provides an identification and description of this relationship.
 
 [NOTE]
 --
@@ -706,7 +713,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"action_schema.action_resource_type"
-An *action_resource_type* is the identification of the kind of <<express:action_schema.action_resource,action_resource>> needed to carry out an action. 
+An *action_resource_type* is the identification of the kind of <<express:action_schema.action_resource,action_resource>> needed to carry out an action.
 
 [example]
 ====
@@ -719,7 +726,7 @@ the <<express:support_resource_schema.label,label>> by which the *action_resourc
 *)
 
 (*"action_schema.action_status"
-An *action_status* is the association of a status with an <<express:action_schema.executed_action,executed_action>>. 
+An *action_status* is the association of a status with an <<express:action_schema.executed_action,executed_action>>.
 
 [NOTE]
 --
@@ -746,7 +753,7 @@ Terms such as 'pending', 'completed', or 'scheduled' are examples of status.
 *)
 
 (*"action_schema.directed_action"
-A *directed_action* is a type of <<express:action_schema.executed_action,executed_action>> that is governed by an <<express:action_schema.action_directive,action_directive>>. 
+A *directed_action* is a type of <<express:action_schema.executed_action,executed_action>> that is governed by an <<express:action_schema.action_directive,action_directive>>.
 
 [example]
 ====
@@ -775,7 +782,7 @@ Each *directed_action_assignment* shall be *item_with_role* in at most one <<exp
 *)
 
 (*"action_schema.executed_action"
-An *executed_action* is a type of <<express:action_schema.action,action>> that is completed, partially completed, or just identified. It may but need not have status information associated with it. 
+An *executed_action* is a type of <<express:action_schema.action,action>> that is completed, partially completed, or just identified. It may but need not have status information associated with it.
 
 [NOTE]
 --
@@ -794,7 +801,7 @@ An *executed_action* could be to 'paint the office' with a status of 'scheduled'
 *)
 
 (*"action_schema.versioned_action_request"
-A *versioned_action_request* is a specification of a desired result. 
+A *versioned_action_request* is a specification of a desired result.
 
 [NOTE]
 --
@@ -829,7 +836,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *versio
 *)
 
 (*"action_schema.versioned_action_request_relationship"
-A *versioned_action_request_relationship* is a relationship between two <<express:action_schema.versioned_action_request,versioned_action_request>> objects. 
+A *versioned_action_request_relationship* is a relationship between two <<express:action_schema.versioned_action_request,versioned_action_request>> objects.
 
 [example]
 ====
@@ -901,7 +908,7 @@ A *action_directive_relationship* shall not participate in its own definition.
 *)
 
 (*"action_schema.acyclic_action_method_relationship"
-The *acyclic_action_method_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.action_method,action_method>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_method_relationship,action_method_relationship>> or any of its subtypes. 
+The *acyclic_action_method_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.action_method,action_method>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_method_relationship,action_method_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -929,7 +936,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"action_schema.acyclic_action_relationship"
-The *acyclic_action_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.action,action>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_relationship,action_relationship>> or any of its subtypes. 
+The *acyclic_action_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.action,action>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_relationship,action_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -957,7 +964,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"action_schema.acyclic_action_resource_relationship"
-The *acyclic_action_resource_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.action_resource,action_resource>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_resource_relationship,action_resource_relationship>> or any of its subtypes. 
+The *acyclic_action_resource_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.action_resource,action_resource>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_resource_relationship,action_resource_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -985,7 +992,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"action_schema.acyclic_versioned_action_request_relationship"
-The *acyclic_versioned_action_request_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.versioned_action_request,versioned_action_request>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_resource_relationship,action_resource_relationship>> or any of its subtypes. 
+The *acyclic_versioned_action_request_relationship* function determines whether the graph of instances of the entity data type <<express:action_schema.versioned_action_request,versioned_action_request>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:action_schema.action_resource_relationship,action_resource_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1013,7 +1020,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"action_schema.acyclic_action_directive_relationship"
-The *acyclic_action_directive_relationship* function determines whether the graph of instance of the entity data type <<express:action_schema.action_directive,action_directive>> that contains relation as one of its links contains a cycle. this function may be used to evaluate either a <<express:action_schema.action_directive_relationship,action_directive_relationship>> or any of its subtypes. 
+The *acyclic_action_directive_relationship* function determines whether the graph of instance of the entity data type <<express:action_schema.action_directive,action_directive>> that contains relation as one of its links contains a cycle. this function may be used to evaluate either a <<express:action_schema.action_directive_relationship,action_directive_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

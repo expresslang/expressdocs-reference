@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8369
 EXPRESS Source:
 ISO 10303-41 ed4 Fundamentals of product description and support - Contract schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -68,14 +68,18 @@ SCHEMA contract_schema '{iso standard 10303 part(41) version(3) object(1) contra
 END_SCHEMA;
 
 (*"contract_schema"
-== General
 
 The subject of the *contract_schema* is the description of contract agreements.
 
-== Fundamental concepts and assumptions
+*)
+
+(*"contract_schema.__fund_cons"
 
 Contract information may be attached to any aspect of a product data.
 
+*)
+
+(*"contract_schema.__expressg"
 [.svgmap]
 ====
 [[contract_schemaexpg1]]
@@ -85,6 +89,9 @@ image::contract_schemaexpg1.svg[]
 * <<express:support_resource_schema>>; 2
 ====
 
+*)
+
+(*"contract_schema.__expressg"
 [.svgmap]
 ====
 [[contract_schemaexpg2]]
@@ -103,7 +110,7 @@ image::contract_schemaexpg2.svg[]
 *)
 
 (*"contract_schema.contract"
-A *contract* is a binding agreement. A *contract* is an incompletely modeled concept and requires population of related entity data types to form a complete contract. 
+A *contract* is a binding agreement. A *contract* is an incompletely modeled concept and requires population of related entity data types to form a complete contract.
 
 [NOTE]
 --
@@ -124,7 +131,7 @@ the *contract*'s type.
 *)
 
 (*"contract_schema.contract_relationship"
-A *contract_relationship* is a relationship between two instances of the entity data type <<express:contract_schema.contract,contract>>. 
+A *contract_relationship* is a relationship between two instances of the entity data type <<express:contract_schema.contract,contract>>.
 
 [NOTE]
 --
@@ -178,7 +185,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"contract_schema.contract_type"
-A *contract_type* is the kind of information that an instance of <<express:contract_schema.contract,contract>> conveys. 
+A *contract_type* is the kind of information that an instance of <<express:contract_schema.contract,contract>> conveys.
 
 [example]
 ====
@@ -196,7 +203,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"contract_schema.acyclic_contract_relationship"
-The *acyclic_contract_relationship* function determines whether the graph of instances of the entity data type <<express:contract_schema.contract,contract>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:contract_schema.contract_relationship,contract_relationship>> or any of its subtypes. 
+The *acyclic_contract_relationship* function determines whether the graph of instances of the entity data type <<express:contract_schema.contract,contract>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:contract_schema.contract_relationship,contract_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
