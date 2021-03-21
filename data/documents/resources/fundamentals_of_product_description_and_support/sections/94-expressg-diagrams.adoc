@@ -7,6 +7,19 @@ specified in this part of ISO 10303. The diagrams use the EXPRESS-G
 graphical notation for the EXPRESS language. EXPRESS-G is defined in
 ISO 10303-11.
 
+// Sample diagram
+[[action_schemaexpg1]]
+.EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.size }})
+[.svgmap]
+====
+image::../data/resources/action_schema/action_schemaexpg1.svg[]
+
+* <<express:basic_attribute_schema>>; 1
+* <<express:action_schema>>; 2
+* <<express:support_resource_schema>>; 3
+====
+
+
 [lutaml, schemas, context, leveloffset=+1]
 ---
 {% for schema in context.schemas %}
