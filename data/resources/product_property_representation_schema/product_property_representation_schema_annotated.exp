@@ -365,7 +365,6 @@ Representation schemas are defined in other parts of ISO 10303. This schema prov
 (*"product_property_representation_schema.__expressg"
 [.svgmap]
 ====
-[[product_property_representation_schemaexpg1]]
 image::product_property_representation_schemaexpg1.svg[]
 
 * <<express:representation_schema>>; 1
@@ -383,7 +382,6 @@ image::product_property_representation_schemaexpg1.svg[]
 (*"product_property_representation_schema.__expressg"
 [.svgmap]
 ====
-[[product_property_representation_schemaexpg2]]
 image::product_property_representation_schemaexpg2.svg[]
 
 * <<express:product_property_representation_schema.pprs_description_attribute_select>>; 1

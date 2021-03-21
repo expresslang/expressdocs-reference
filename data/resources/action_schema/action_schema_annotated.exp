@@ -293,7 +293,6 @@ Action information can be attached to any aspect of product data.
 (*"action_schema.__expressg"
 [.svgmap]
 ====
-[[action_schemaexpg1]]
 image::action_schemaexpg1.svg[]
 
 * <<express:basic_attribute_schema>>; 1
@@ -306,7 +305,6 @@ image::action_schemaexpg1.svg[]
 (*"action_schema.__expressg"
 [.svgmap]
 ====
-[[action_schemaexpg2]]
 image::action_schemaexpg2.svg[]
 
 * <<express:action_schema.as_name_attribute_select>>; 1

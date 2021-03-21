@@ -86,7 +86,6 @@ This schema provides resources for the identification, naming, and description o
 (*"location_schema.__expressg"
 [.svgmap]
 ====
-[[location_schemaexpg1]]
 image::location_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -98,7 +97,6 @@ image::location_schemaexpg1.svg[]
 (*"location_schema.__expressg"
 [.svgmap]
 ====
-[[location_schemaexpg2]]
 image::location_schemaexpg2.svg[]
 
 * <<express:support_resource_schema.label>>; 1

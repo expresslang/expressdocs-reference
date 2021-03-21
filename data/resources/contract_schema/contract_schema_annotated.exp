@@ -82,7 +82,6 @@ Contract information may be attached to any aspect of a product data.
 (*"contract_schema.__expressg"
 [.svgmap]
 ====
-[[contract_schemaexpg1]]
 image::contract_schemaexpg1.svg[]
 
 * <<express:contract_schema>>; 1
@@ -94,7 +93,6 @@ image::contract_schemaexpg1.svg[]
 (*"contract_schema.__expressg"
 [.svgmap]
 ====
-[[contract_schemaexpg2]]
 image::contract_schemaexpg2.svg[]
 
 * <<express:support_resource_schema.label>>; 1

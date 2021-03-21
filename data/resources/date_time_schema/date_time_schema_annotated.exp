@@ -374,7 +374,6 @@ Any kind of product data may have a date, time, or date and time associated with
 (*"date_time_schema.__expressg"
 [.svgmap]
 ====
-[[date_time_schemaexpg1]]
 image::date_time_schemaexpg1.svg[]
 
 * <<express:basic_attribute_schema>>; 1
@@ -388,7 +387,6 @@ image::date_time_schemaexpg1.svg[]
 (*"date_time_schema.__expressg"
 [.svgmap]
 ====
-[[date_time_schemaexpg2]]
 image::date_time_schemaexpg2.svg[]
 
 * <<express:date_time_schema.date_time_select>>; 1
@@ -418,7 +416,6 @@ image::date_time_schemaexpg2.svg[]
 (*"date_time_schema.__expressg"
 [.svgmap]
 ====
-[[date_time_schemaexpg3]]
 image::date_time_schemaexpg3.svg[]
 
 * <<express:date_time_schema.date_time_or_event_occurrence>>; 1

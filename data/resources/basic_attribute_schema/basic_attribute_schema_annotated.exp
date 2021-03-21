@@ -196,7 +196,6 @@ The assignment of a role corresponds to the *role_association* entity data type.
 (*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg1]]
 image::basic_attribute_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -208,7 +207,6 @@ image::basic_attribute_schemaexpg1.svg[]
 (*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg2]]
 image::basic_attribute_schemaexpg2.svg[]
 
 * <<express:basic_attribute_schema.name_attribute_select>>; 1
@@ -242,7 +240,6 @@ image::basic_attribute_schemaexpg2.svg[]
 (*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg3]]
 image::basic_attribute_schemaexpg3.svg[]
 
 * <<express:basic_attribute_schema.description_attribute_select>>; 1
@@ -271,7 +268,6 @@ image::basic_attribute_schemaexpg3.svg[]
 (*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg4]]
 image::basic_attribute_schemaexpg4.svg[]
 
 * <<express:basic_attribute_schema.name_attribute_select>>; 1
@@ -294,7 +290,6 @@ image::basic_attribute_schemaexpg4.svg[]
 (*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg5]]
 image::basic_attribute_schemaexpg5.svg[]
 
 * <<express:basic_attribute_schema.role_select>>; 1
