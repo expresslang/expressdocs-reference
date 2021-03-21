@@ -121,7 +121,6 @@ Heat treatment processes documentation can be specified using the resource const
 (*"document_schema.__expressg"
 [.svgmap]
 ====
-[[document_schemaexpg1]]
 image::document_schemaexpg1.svg[]
 
 * <<express:document_schema>>; 1
@@ -134,7 +133,6 @@ image::document_schemaexpg1.svg[]
 (*"document_schema.__expressg"
 [.svgmap]
 ====
-[[document_schemaexpg2]]
 image::document_schemaexpg2.svg[]
 
 * <<express:document_schema.product_or_formation_or_definition>>; 1

@@ -57,7 +57,6 @@ A security classification is the level of confidentiality that is required for t
 (*"security_classification_schema.__expressg"
 [.svgmap]
 ====
-[[security_classification_schemaexpg1]]
 image::security_classification_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -69,7 +68,6 @@ image::security_classification_schemaexpg1.svg[]
 (*"security_classification_schema.__expressg"
 [.svgmap]
 ====
-[[security_classification_schemaexpg2]]
 image::security_classification_schemaexpg2.svg[]
 
 * <<express:support_resource_schema.text>>; 1

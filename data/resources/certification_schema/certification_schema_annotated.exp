@@ -67,7 +67,6 @@ Certification information can be attached to any aspect of product data.
 (*"certification_schema.__expressg"
 [.svgmap]
 ====
-[[certification_schemaexpg1]]
 image::certification_schemaexpg1.svg[]
 
 * <<express:certification_schema>>; 1
@@ -79,7 +78,6 @@ image::certification_schemaexpg1.svg[]
 (*"certification_schema.__expressg"
 [.svgmap]
 ====
-[[certification_schemaexpg2]]
 image::certification_schemaexpg2.svg[]
 
 * <<express:support_resource_schema.text>>; 1

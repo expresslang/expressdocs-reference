@@ -155,7 +155,6 @@ Only effectivities based on date, serial number, and lot number are considered i
 (*"document_schema.__expressg"
 [.svgmap]
 ====
-[[effectivity_schemaexpg1]]
 image::effectivity_schemaexpg1.svg[]
 
 * <<express:basic_attribute_schema>>; 1
@@ -171,7 +170,6 @@ image::effectivity_schemaexpg1.svg[]
 (*"document_schema.__expressg"
 [.svgmap]
 ====
-[[effectivity_schemaexpg2]]
 image::effectivity_schemaexpg2.svg[]
 
 * <<express:effectivity_schema.effs_name_attribute_select>>; 1

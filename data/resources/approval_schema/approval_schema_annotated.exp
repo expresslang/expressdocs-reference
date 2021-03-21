@@ -133,7 +133,6 @@ Approval information can be attached to any aspect of product data.
 (*"approval_schema.__expressg"
 [.svgmap]
 ====
-[[approval_schemaexpg1]]
 image::approval_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -148,7 +147,6 @@ image::approval_schemaexpg1.svg[]
 (*"approval_schema.__expressg"
 [.svgmap]
 ====
-[[approval_schemaexpg2]]
 image::approval_schemaexpg2.svg[]
 
 * <<express:approval_schema.apps_role_select>>; 1
