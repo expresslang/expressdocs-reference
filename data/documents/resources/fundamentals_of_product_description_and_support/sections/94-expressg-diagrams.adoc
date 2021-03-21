@@ -7,34 +7,30 @@ specified in this part of ISO 10303. The diagrams use the EXPRESS-G
 graphical notation for the EXPRESS language. EXPRESS-G is defined in
 ISO 10303-11.
 
-// Sample diagram
-[[action_schemaexpg1]]
-.EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.size }})
-[.svgmap]
-====
-image::../data/resources/action_schema/action_schemaexpg1.svg[]
-
-* <<express:basic_attribute_schema>>; 1
-* <<express:action_schema>>; 2
-* <<express:support_resource_schema>>; 3
-====
-
-
 [lutaml, schemas, context, leveloffset=+1]
 ---
+{% capture newLine %}
+
+{% endcapture %}
 {% for schema in context.schemas %}
-{% assign remark_items = schema.remark_items | where: "id", "__expressg" %}
-{% for remark_block in remark_items %}
+
+{% assign expg_remark = schema.remark_items | where: "id", "__expressg" | first %}
+
 // schema level anchor for EXPRESS-G diagrams
 [[expg.{{schema.id}}]]
 
-{% for remark in remark_block %}
+{% for remark in expg_remark.remarks %}
+
+// TODO: remove once caption works
+EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.length }})
+
 // diagram level anchor for EXPRESS-G diagrams
 [[expg.{{schema.id}}.{{forloop.index}}]]
-.EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.size }})
-{{ remark_block.remarks | join: newLine }}
+.EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.length }})
+{{ remark }}
+
 
 {% endfor %}
 {% endfor %}
-{% endfor %}
+
 ---
