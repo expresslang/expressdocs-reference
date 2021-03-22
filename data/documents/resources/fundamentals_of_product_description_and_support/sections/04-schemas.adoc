@@ -75,12 +75,16 @@ The schemas referenced above are specified in the following parts:
 
 NOTE: See <<expg.{{ schema.id }}>> for a graphical representation of this schema.
 
-{% assign remark_items = schema.remark_items | where: "id", "__fund_cons" %}
-{% for remark_block in remark_items %}
-{{ remark_block.remarks | join: newLine }}
+
+{% assign remark_items = schema.remark_items | where: "id", "__fund_cons" | first %}
+{% if remark_items %}
+=== Fundamental concepts and assumptions
+
+{% for remark in remark_items.remarks %}
+{{ remark }}
 
 {% endfor %}
-
+{% endif %}
 
 {% if schema.types.size > 0 %}
 [type="express"]
