@@ -21,11 +21,24 @@ ISO 10303-11.
 
 {% for remark in expg_remark.remarks %}
 // diagram level anchor for EXPRESS-G diagrams
+
+// index term
+{% assign anchors = remark | remove: "<" | remove: ">" | remove: "=" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" | remove: "0" | remove: "* " | remove: "express:" | replace: "[]", "; "| strip_newlines | split: "; " | uniq %}
+
 [[expg.{{schema.id}}.{{forloop.index}}]]
 .EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.length }})
+--
 {{ remark }}
 
+{% for anchor in anchors %}
+// In index term generation, skip the first line as it is the "[.svgmap]image::.." line
+{% if forloop.index0 > 0 %}
+//DEBUG: anchor is ({{ anchor }}); last anchor component is ({{ anchor | split: "." | last }})
+((({{ anchor | split: "." | last }},Object EXPRESS-G)))
+{% endif %}
 {% endfor %}
-{% endfor %}
+--
 
+{% endfor %}
+{% endfor %}
 ---
