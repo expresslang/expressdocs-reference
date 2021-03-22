@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma
-  revision: ac9b89a38ac978a53c56220ce5803b4c727e27df
+  revision: 621de7af41fff128ed5cf84b7540e1516f0e9dba
   specs:
     metanorma (1.2.7)
       asciidoctor
@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-cli
-  revision: f10c3e9d8c2ee1c9c97f4c482c02c28605a46e16
+  revision: c54357803ee1a88844803c51a71b585bf07ccc55
   specs:
     metanorma-cli (1.4.6)
       git (~> 1.5)
@@ -55,7 +55,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: 90db87ce7f53e9ae3b1c825d47008ac17214d190
+  revision: 5693fdbe61d4663a1195fe867c97148a1e0334d1
   specs:
     metanorma-iso (1.7.3)
       isodoc (~> 1.5.0)
@@ -67,10 +67,10 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: 41f9fbbf4c6ef9ffaa4dcd77e81b93eb9ed36b30
-  branch: hotfix/metanorma-plugin-lutaml-version-bump
+  revision: e854da5503da8ab409157ec23153a718d5c1ca62
+  branch: fix/svgmap-name
   specs:
-    metanorma-standoc (1.8.5)
+    metanorma-standoc (1.8.6)
       asciidoctor (~> 2.0.0)
       asciimath2unitsml (~> 0.2.0)
       concurrent-ruby
@@ -79,25 +79,12 @@ GIT
       latexmath
       mathml2asciimath
       metanorma-plugin-datastruct
-      metanorma-plugin-lutaml
+      metanorma-plugin-lutaml (~> 0.3.0)
       metanorma-utils (~> 1.0.2)
       relaton-cli (~> 1.7.0)
       relaton-iev (~> 1.1.0)
       ruby-jing
       unicode2latex (~> 0.0.1)
-
-GIT
-  remote: https://github.com/metanorma/metanorma-utils
-  revision: fe6f1d50deba39654ef8fd1deffef68eba0e080b
-  specs:
-    metanorma-utils (1.0.9)
-      asciidoctor (~> 2.0.0)
-      concurrent-ruby
-      mime-types
-      mimemagic
-      nokogiri (~> 1.10.4)
-      sterile (~> 1.0.14)
-      uuidtools
 
 GEM
   remote: https://rubygems.org/
@@ -108,7 +95,7 @@ GEM
       cabin (> 0)
     asciidoctor (2.0.12)
     asciimath (2.0.2)
-    asciimath2unitsml (0.2.3)
+    asciimath2unitsml (0.2.5)
       asciimath
       htmlentities
       nokogiri (~> 1.10.4)
@@ -123,6 +110,7 @@ GEM
     cnccs (0.1.6)
     coderay (1.1.3)
     concurrent-ruby (1.1.8)
+    connection_pool (2.2.3)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     down (5.2.0)
@@ -134,16 +122,21 @@ GEM
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
       thor (~> 1.0)
-    expressir (0.2.21-x86_64-darwin)
+    expressir (0.2.24-x86_64-darwin)
       nokogiri (~> 1.10)
       thor (~> 1.0)
-    faraday (1.0.1)
+    faraday (1.3.0)
+      faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday-net_http (1.0.1)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     ffi (1.15.0)
     ffi-compiler2 (2.0.1)
       ffi (>= 1.0.0)
       rake
-    fontist (1.8.9)
+    fontist (1.8.10)
       down (~> 5.0)
       excavate (~> 0.1)
       git (~> 1.0)
@@ -185,7 +178,7 @@ GEM
       thor (~> 1.0)
     lutaml-express (0.1.4)
       expressir (~> 0.2.1)
-    lutaml-uml (0.2.9)
+    lutaml-uml (0.2.10)
       hashie (~> 4.1.0)
       parslet (~> 1.7.1)
       ruby-graphviz (~> 1.2)
@@ -193,6 +186,16 @@ GEM
     mathml2asciimath (0.0.10)
       htmlentities (~> 4.3.4)
       nokogiri (>= 1.10.4)
+    mechanize (2.7.7)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (>= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (>= 2.5.2)
+      nokogiri (~> 1.6)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrick (~> 1.7)
+      webrobots (>= 0.0.9, < 0.2)
     metanorma-bipm (1.0.6)
       metanorma-generic (~> 1.9.0)
     metanorma-cc (1.6.8)
@@ -256,6 +259,14 @@ GEM
       metanorma-standoc (~> 1.8.0)
       roman-numerals
       twitter_cldr
+    metanorma-utils (1.0.9)
+      asciidoctor (~> 2.0.0)
+      concurrent-ruby
+      mime-types
+      mimemagic
+      nokogiri (~> 1.10.4)
+      sterile (~> 1.0.14)
+      uuidtools
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
@@ -264,11 +275,16 @@ GEM
     mini_portile2 (2.4.0)
     mn2pdf (1.28)
     mn2sts (1.5.0)
+    multi_json (1.15.0)
     multipart-post (2.1.1)
+    net-http-digest_auth (1.4.1)
+    net-http-persistent (4.0.1)
+      connection_pool (~> 2.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    ntlm-http (0.1.1)
     optout (0.0.2)
-    ox (2.14.3)
+    ox (2.14.4)
     parslet (1.7.1)
       blankslate (>= 2.0, <= 4.0)
     plane1converter (0.0.1)
@@ -278,10 +294,11 @@ GEM
     public_suffix (4.0.6)
     rake (13.0.3)
     rchardet (1.8.0)
-    relaton (1.7.4)
+    relaton (1.7.6)
       relaton-bipm (~> 1.7.0)
       relaton-calconnect (~> 1.7.0)
-      relaton-ecma (= 1.7.pre1)
+      relaton-cie (~> 1.7.pre1)
+      relaton-ecma (~> 1.7.pre1)
       relaton-gb (~> 1.7.0)
       relaton-iec (>= 1.7.6)
       relaton-ieee (~> 1.7.0)
@@ -294,60 +311,64 @@ GEM
       relaton-omg (~> 1.7.0)
       relaton-un (~> 1.7.0)
       relaton-w3c (~> 1.7.0)
-    relaton-bib (1.7.3)
+    relaton-bib (1.7.4)
       addressable
       bibtex-ruby
       iso639
       nokogiri
-    relaton-bipm (1.7.0)
+    relaton-bipm (1.7.2)
+      mechanize (~> 2.7.6)
       relaton-bib (~> 1.7.0)
-    relaton-calconnect (1.7.0)
+      serrano (~> 1.0)
+    relaton-calconnect (1.7.2)
       faraday
       relaton-bib (~> 1.7.0)
-    relaton-cli (1.7.1)
+    relaton-cie (1.7.pre2)
+      relaton-bib (~> 1.7.0)
+    relaton-cli (1.7.2)
       liquid (~> 4)
       relaton (~> 1.7.0)
       thor
-    relaton-ecma (1.7.pre1)
+    relaton-ecma (1.7.pre4)
       relaton-bib (~> 1.7.0)
-    relaton-gb (1.7.0)
+    relaton-gb (1.7.2)
       cnccs (~> 0.1.1)
       gb-agencies (~> 0.0.1)
       relaton-iso-bib (>= 1.7.0)
-    relaton-iec (1.7.6)
+    relaton-iec (1.7.8)
       addressable
       relaton-iso-bib (~> 1.7.0)
-    relaton-ieee (1.7.1)
-      faraday (~> 1.0.0)
+    relaton-ieee (1.7.4)
+      faraday (~> 1.1)
       relaton-bib (~> 1.7.0)
-    relaton-ietf (1.7.2)
+    relaton-ietf (1.7.4)
       relaton-bib (~> 1.7.0)
     relaton-iev (1.1.0)
       relaton (>= 1.6)
-    relaton-iho (1.7.0)
+    relaton-iho (1.7.2)
       relaton-bib (~> 1.7.0)
-    relaton-iso (1.7.2)
+    relaton-iso (1.7.4)
       relaton-iec (~> 1.7.0)
       relaton-iso-bib (~> 1.7.0)
-    relaton-iso-bib (1.7.0)
+    relaton-iso-bib (1.7.1)
       isoics (~> 0.1.6)
       relaton-bib (~> 1.7.0)
-    relaton-itu (1.7.3)
+    relaton-itu (1.7.5)
       relaton-bib (~> 1.7.0)
-    relaton-nist (1.7.2)
+    relaton-nist (1.7.4)
       relaton-bib (~> 1.7.0)
       rubyzip
-    relaton-ogc (1.7.0)
-      faraday (~> 1.0.0)
+    relaton-ogc (1.7.3)
+      faraday (~> 1.1)
       relaton-iso-bib (~> 1.7.0)
-    relaton-omg (1.7.0)
+    relaton-omg (1.7.1)
       relaton-bib (~> 1.7.0)
-    relaton-un (1.7.0)
+    relaton-un (1.7.2)
       faraday
       http-cookie
       relaton-bib (~> 1.7.0)
       unf_ext (>= 0.0.7.7)
-    relaton-w3c (1.7.0)
+    relaton-w3c (1.7.2)
       relaton-bib (>= 1.7.0)
     rexml (3.2.4)
     roman-numerals (0.3.0)
@@ -357,9 +378,15 @@ GEM
     ruby-jing (0.0.1)
       optout (>= 0.0.2)
     ruby-ole (1.2.12.2)
+    ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
     sassc (2.4.0)
       ffi (~> 1.9)
+    serrano (1.0.0)
+      faraday (~> 1.1)
+      faraday_middleware (~> 1.0)
+      multi_json (~> 1.15)
+      thor (~> 1.0, >= 1.0.1)
     seven_zip_ruby (1.3.0)
     sterile (1.0.19)
       nokogiri (>= 1.10.8)
@@ -380,8 +407,11 @@ GEM
     unf_ext (0.0.7.7)
     unicode2latex (0.0.4)
     uuidtools (2.2.0)
+    webrick (1.7.0)
+    webrobots (0.1.2)
 
 PLATFORMS
+  x86_64-darwin-18
   x86_64-darwin-19
 
 DEPENDENCIES
@@ -393,7 +423,7 @@ DEPENDENCIES
   metanorma-iso!
   metanorma-plugin-lutaml (~> 0.3.0)
   metanorma-standoc!
-  metanorma-utils!
+  metanorma-utils
   nokogiri
   rake
   sassc

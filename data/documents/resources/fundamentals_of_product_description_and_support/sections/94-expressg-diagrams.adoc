@@ -20,15 +20,10 @@ ISO 10303-11.
 [[expg.{{schema.id}}]]
 
 {% for remark in expg_remark.remarks %}
-
-// TODO: remove once caption works
-EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.length }})
-
 // diagram level anchor for EXPRESS-G diagrams
 [[expg.{{schema.id}}.{{forloop.index}}]]
 .EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.length }})
 {{ remark }}
-
 
 {% endfor %}
 {% endfor %}
