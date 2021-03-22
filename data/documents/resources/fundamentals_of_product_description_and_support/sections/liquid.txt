@@ -1,0 +1,68 @@
+{% if typetype.generic_entity %}
+{% if typetype.extensible %}
+// an extended and extensible SELECT type
+
+The *{{ typetype.id }}* type is an extension of the
+*{{ typetype.generic_entity }}* typetype.
+
+{% else %}
+// an extended not extensible SELECT type
+
+The *{{ typetype.id }}* type is an
+extensible list of alternate data types. It provides a
+mechanism to refer to instances of the data types included in
+the *{{ typetype.id }}* type or in its
+extensions.
+{% endif %}
+
+{% if typetype.items.size > 0 %}
+It adds the data {% if typetype.items.size > 1 %}types{% else %}type{% endif %}
+{% for item in typetype.items %}
+* item: {{ item }}{% if !forloop.last %}, {% else %} and {% endif %}
+{% endfor %}
+to the list of alternate data types.
+{% endif %}
+
+{% if typetype.extensible %}
+NOTE: The list of entity data types will be
+extended in application resources that use the constructs of
+this resource.
+{% endif %}
+
+{% else %}
+
+{% if typetype.extensible %}
+// extensible SELECT type
+
+{% if typetype.items.size > 0 %}
+// an extensible non-empty SELECT type
+The *{{ typetype.id }}* type is an extensible list of alternate
+data types. It provides a mechanism to refer to instances of
+the data types included in the types that extend the
+*{{ typetype.id }}* typetype.
+
+NOTE: The list of entity data types will be
+extended in application resources that use the constructs of
+this resource.
+
+{% else %}
+// an extensible empty SELECT type
+
+//The <b><xsl:value-of select="$typename"/></b> type shall be
+//extended in schemas that use the constructs of this
+//resource.
+
+NOTE: This empty extensible select requires extension in a further
+schema to ensure that entities that refer to it have at least one
+valid instantiation.
+
+{% endif %}
+
+{% else %}
+// a non extensible SELECT type
+The *{{ typetype.id }}* type is a list of alternate data types. It
+provides a mechanism to refer to an instance of one of these data
+types.
+
+{% endif %}
+{% endif %}
