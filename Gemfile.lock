@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-cli
-  revision: c54357803ee1a88844803c51a71b585bf07ccc55
+  revision: 8ffb94a2b92f81c157ce7276067dccfc167b785b
   specs:
     metanorma-cli (1.4.6)
       git (~> 1.5)
@@ -67,8 +67,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: e854da5503da8ab409157ec23153a718d5c1ca62
-  branch: fix/svgmap-name
+  revision: 11a12a8e97083923acb1b080eda185ccb8a49369
   specs:
     metanorma-standoc (1.8.6)
       asciidoctor (~> 2.0.0)
@@ -122,7 +121,7 @@ GEM
       rubyzip (~> 2.3)
       seven_zip_ruby (~> 1.0)
       thor (~> 1.0)
-    expressir (0.2.24-x86_64-darwin)
+    expressir (0.2.25-x86_64-darwin)
       nokogiri (~> 1.10)
       thor (~> 1.0)
     faraday (1.3.0)
@@ -136,12 +135,12 @@ GEM
     ffi-compiler2 (2.0.1)
       ffi (>= 1.0.0)
       rake
-    fontist (1.8.10)
+    fontist (1.8.11)
       down (~> 5.0)
       excavate (~> 0.1)
       git (~> 1.0)
       thor (~> 1.0.1)
-      ttfunk (~> 1.6.2)
+      ttfunk (~> 1.6)
     gb-agencies (0.0.7)
     git (1.8.1)
       rchardet (~> 1.8)
@@ -393,7 +392,7 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tokenizer (0.3.0)
-    ttfunk (1.6.2.1)
+    ttfunk (1.7.0)
     twitter_cldr (6.4.0)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.1)
