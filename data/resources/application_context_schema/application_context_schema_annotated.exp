@@ -147,7 +147,7 @@ The meaningful exchange of product data requires the identification of the appli
 
 *)
 
-(*"aic_curve_swept_solid.__expressg"
+(*"application_context_schema.__expressg"
 [.svgmap]
 ====
 image::application_context_schemaexpg1.svg[]
@@ -163,7 +163,7 @@ image::application_context_schemaexpg1.svg[]
 
 *)
 
-(*"aic_curve_swept_solid.__expressg"
+(*"application_context_schema.__expressg"
 [.svgmap]
 ====
 image::application_context_schemaexpg2.svg[]
