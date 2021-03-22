@@ -12,6 +12,8 @@
 
 === General
 
+<<expg.{{ schema.id }},image:expg.gif[]>>
+
 {{ schema.remarks | join: newLine }}
 
 This clause defines the information requirements to which
@@ -71,7 +73,7 @@ The schemas referenced above are specified in the following parts:
 {% endfor %}
 ====
 
-NOTE: See <<expg>> for a graphical representation of this schema.
+NOTE: See <<expg.{{ schema.id }}>> for a graphical representation of this schema.
 
 {% assign remark_items = schema.remark_items | where: "id", "__fund_cons" %}
 {% for remark_block in remark_items %}
@@ -79,8 +81,6 @@ NOTE: See <<expg>> for a graphical representation of this schema.
 
 {% endfor %}
 
-// TODO: uncertain on how to link here, ping NN
-image::expg.gif[link=<<expg.{{ schema.id }}>>]
 
 {% if schema.types.size > 0 %}
 [type="express"]

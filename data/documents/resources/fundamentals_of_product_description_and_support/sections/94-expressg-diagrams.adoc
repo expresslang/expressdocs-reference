@@ -17,7 +17,7 @@ ISO 10303-11.
 {% assign expg_remark = schema.remark_items | where: "id", "__expressg" | first %}
 
 // schema level anchor for EXPRESS-G diagrams
-[[expg.{{schema.id}}]]
+[[expg.{{schema.id}}]]{blank}
 
 {% for remark in expg_remark.remarks %}
 // diagram level anchor for EXPRESS-G diagrams
