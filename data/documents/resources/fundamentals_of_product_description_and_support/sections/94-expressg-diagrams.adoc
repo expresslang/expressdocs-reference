@@ -31,10 +31,8 @@ ISO 10303-11.
 {%- if forloop.index0 > 0 -%}
 ((({{ anchor | split: "." | last }},Object EXPRESS-G)))
 {%- endif -%}
-{%- endfor -%}
---
+{%- endfor %}
 {{ remark }}
---
 
 {% endfor %}
 {% endfor %}
