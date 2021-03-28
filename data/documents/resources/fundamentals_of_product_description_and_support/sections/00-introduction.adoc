@@ -39,6 +39,31 @@ If there is a likelihood of ambiguity, either the phrase "entity data type" or "
 
 Double quotation marks (" ") denote quoted text. Single quotation marks (' ') denote particular text string values.
 
-// TODO: Image map
 .The schemas of this part of ISO 10303
+[.svgmap]
+====
 image::../schema_diagexpg1.gif[]
+
+* <<express:group_schema>>; 1
+* <<express:qualifications_schema>>; 2
+* <<express:location_schema>>; 3
+* <<express:management_resources_schema>>; 4
+* <<express:measure_schema>>; 5
+* <<express:person_organization_schema>>; 6
+* <<express:security_classification_schema>>; 7
+* <<express:experience_schema>>; 8
+* <<express:application_context_schema>>; 9
+* <<express:product_definition_schema>>; 10
+* <<express:product_property_definition_schema>>; 11
+* <<express:product_property_representation_schema>>; 12
+* <<express:action_schema>>; 13
+* <<express:approval_schema>>; 14
+* <<express:certification_schema>>; 15
+* <<express:date_time_schema>>; 16
+* <<express:contract_schema>>; 17
+* <<express:document_schema>>; 18
+* <<express:effectivity_schema>>; 19
+* <<express:external_reference_schema>>; 10
+* <<express:basic_attribute_schema>>; 11
+* <<express:support_resource_schema>>; 12
+====
