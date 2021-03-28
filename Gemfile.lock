@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/metanorma/isodoc
-  revision: 10d6780ee7bfb56563f62d8ba9446317bf00636b
+  revision: 5ad4657cda35996bc4392f7744450f8700ca5bac
   specs:
     isodoc (1.5.4)
       asciimath
@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma
-  revision: 621de7af41fff128ed5cf84b7540e1516f0e9dba
+  revision: ecc9518d6985936d12a5de14e86a055cd2b48918
   specs:
     metanorma (1.2.7)
       asciidoctor
@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-cli
-  revision: 8ffb94a2b92f81c157ce7276067dccfc167b785b
+  revision: 80c8d6251700b42ac6fd8968956cc8f2e2073fbd
   specs:
     metanorma-cli (1.4.6)
       git (~> 1.5)
@@ -55,7 +55,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: 5693fdbe61d4663a1195fe867c97148a1e0334d1
+  revision: aff5bc604f956b02f4032cba83c371bc6497077f
+  branch: feature/bookmark-xref
   specs:
     metanorma-iso (1.7.3)
       isodoc (~> 1.5.0)
@@ -67,7 +68,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: 11a12a8e97083923acb1b080eda185ccb8a49369
+  revision: 7d62b4192ab661150ab4aa7b63cda27c4810c673
   specs:
     metanorma-standoc (1.8.6)
       asciidoctor (~> 2.0.0)
@@ -135,7 +136,7 @@ GEM
     ffi-compiler2 (2.0.1)
       ffi (>= 1.0.0)
       rake
-    fontist (1.8.11)
+    fontist (1.8.12)
       down (~> 5.0)
       excavate (~> 0.1)
       git (~> 1.0)
@@ -177,7 +178,7 @@ GEM
       thor (~> 1.0)
     lutaml-express (0.1.4)
       expressir (~> 0.2.1)
-    lutaml-uml (0.2.10)
+    lutaml-uml (0.2.12)
       hashie (~> 4.1.0)
       parslet (~> 1.7.1)
       ruby-graphviz (~> 1.2)
@@ -270,9 +271,11 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0225)
-    mimemagic (0.3.5)
+    mimemagic (0.4.3)
+      nokogiri (~> 1)
+      rake
     mini_portile2 (2.4.0)
-    mn2pdf (1.28)
+    mn2pdf (1.29)
     mn2sts (1.5.0)
     multi_json (1.15.0)
     multipart-post (2.1.1)
@@ -387,13 +390,13 @@ GEM
       multi_json (~> 1.15)
       thor (~> 1.0, >= 1.0.1)
     seven_zip_ruby (1.3.0)
-    sterile (1.0.19)
+    sterile (1.0.20)
       nokogiri (>= 1.10.8)
     thor (1.0.1)
     thread_safe (0.3.6)
     tokenizer (0.3.0)
     ttfunk (1.7.0)
-    twitter_cldr (6.4.0)
+    twitter_cldr (6.6.0)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.1)
       tzinfo
@@ -428,4 +431,4 @@ DEPENDENCIES
   sassc
 
 BUNDLED WITH
-   2.2.14
+   2.2.15
