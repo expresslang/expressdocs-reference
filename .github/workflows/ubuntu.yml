@@ -49,8 +49,8 @@ jobs:
 
       - name: Download stepmod2mn and convert SVGs
         run: |
-          wget https://github.com/metanorma/stepmod2mn/releases/download/v1.5/stepmod2mn-1.5.jar
-          java -jar stepmod2mn-1.5.jar stepmod -svg
+          wget https://github.com/metanorma/stepmod2mn/releases/download/v1.6/stepmod2mn-1.6.jar
+          java -jar stepmod2mn-1.6.jar stepmod -svg
           git ls-files -- *.svg | xargs -I '{}' cp stepmod/{} {}
 
       - name: Metanorma compile
