@@ -51,7 +51,15 @@ jobs:
         run: |
           wget https://github.com/metanorma/stepmod2mn/releases/download/v1.6/stepmod2mn-1.6.jar
           java -jar stepmod2mn-1.6.jar stepmod -svg
-          git ls-files -- *.svg | xargs -I '{}' cp stepmod/{} {}
+
+          # copy over per-schema EXPRESS-G files
+          git ls-files -- 'data/resources/*/*.svg' | xargs -I '{}' cp stepmod/{} {}
+
+          # copy over per-part EXPRESS-G files
+          for f in $(git ls-files -- 'data/documents/*/*.svg'); do \
+            OLDPATH=${f//documents\/resources/resource_docs}; \
+            cp stepmod/$OLDPATH $f; \
+          done
 
       - name: Metanorma compile
         env:
