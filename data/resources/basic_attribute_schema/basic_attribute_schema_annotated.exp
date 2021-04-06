@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N10466
 EXPRESS Source:
 ISO 10303-41 ed6 Fundamentals of product description and support - Basic attribute schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
 and derivations of the Schema:
 
 Copyright ISO 2019  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -31,12 +31,12 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 SCHEMA basic_attribute_schema '{iso standard 10303 part(41) version(9) object(1) basic_attribute_schema(4)}';
 
   REFERENCE FROM support_resource_schema (identifier, label, text);   -- ISO 10303-41
- 
+
   TYPE description_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;
   END_TYPE;
 
   TYPE generic_attribute_list_select = EXTENSIBLE GENERIC_ENTITY SELECT;
-  END_TYPE; 
+  END_TYPE;
 
   TYPE generic_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;
   END_TYPE;
@@ -46,7 +46,7 @@ SCHEMA basic_attribute_schema '{iso standard 10303 part(41) version(9) object(1)
 
   TYPE name_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;
   END_TYPE;
- 
+
   TYPE role_select = EXTENSIBLE GENERIC_ENTITY SELECT;
   END_TYPE;
 
@@ -159,9 +159,8 @@ SCHEMA basic_attribute_schema '{iso standard 10303 part(41) version(9) object(1)
 END_SCHEMA;
 
 (*"basic_attribute_schema"
-== General
 
-The subject of the *basic_attribute_schema* is the assignment of id, name, description and role attributes to aspects of product data. This schema defines the mechanism to define a value for these attributes and associate it with product data. 
+The subject of the *basic_attribute_schema* is the assignment of id, name, description and role attributes to aspects of product data. This schema defines the mechanism to define a value for these attributes and associate it with product data.
 
 [NOTE]
 --
@@ -173,7 +172,9 @@ The concepts defined in this schema do not provide a generic capability to assoc
 The associated entities are defined in ISO 10303-41, ISO 10303-43 and ISO 10303-44.
 --
 
-== Fundamental concepts and assumptions
+*)
+
+(*"basic_attribute_schema.__fund_cons"
 
 The following concepts are supported by this schema:
 
@@ -190,18 +191,22 @@ The assignment of a descriptive text corresponds to the *description_attribute* 
 
 The assignment of a role corresponds to the *role_association* entity data type. The entities to which a role may be assigned are specified in the *role_select* data type. These entities have a derived attribute role. The corresponding *object_role* is provided by the *get_role* function. A constraint ensures that there is at most one instance of *role_association* assigned to an instance of an entity in the *role_select* type.
 
+*)
+
+(*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg1]]
 image::basic_attribute_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
 * <<express:basic_attribute_schema>>; 2
 ====
 
+*)
+
+(*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg2]]
 image::basic_attribute_schemaexpg2.svg[]
 
 * <<express:basic_attribute_schema.name_attribute_select>>; 1
@@ -230,9 +235,11 @@ image::basic_attribute_schemaexpg2.svg[]
 * <<express:basic_attribute_schema.generic_attribute_list_assignment>>; 24
 ====
 
+*)
+
+(*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg3]]
 image::basic_attribute_schemaexpg3.svg[]
 
 * <<express:basic_attribute_schema.description_attribute_select>>; 1
@@ -256,9 +263,11 @@ image::basic_attribute_schemaexpg3.svg[]
 * <<express:basic_attribute_schema.description_attribute>>; 19
 ====
 
+*)
+
+(*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg4]]
 image::basic_attribute_schemaexpg4.svg[]
 
 * <<express:basic_attribute_schema.name_attribute_select>>; 1
@@ -276,9 +285,11 @@ image::basic_attribute_schemaexpg4.svg[]
 * <<express:basic_attribute_schema.name_attribute>>; 13
 ====
 
+*)
+
+(*"basic_attribute_schema.__expressg"
 [.svgmap]
 ====
-[[basic_attribute_schemaexpg5]]
 image::basic_attribute_schemaexpg5.svg[]
 
 * <<express:basic_attribute_schema.role_select>>; 1
@@ -326,7 +337,7 @@ A *role_select* specifies those objects that may be assigned a role.
 *)
 
 (*"basic_attribute_schema.aggregate_id_attribute"
-An *aggregate_id_attribute* is used for the case where there is more than one product data element for a specific identifier. 
+An *aggregate_id_attribute* is used for the case where there is more than one product data element for a specific identifier.
 
 [NOTE]
 --
@@ -348,7 +359,7 @@ the collection of items that are identified.
 *)
 
 (*"basic_attribute_schema.description_attribute"
-A *description_attribute* is the assignment of a descriptive text string to product data. 
+A *description_attribute* is the assignment of a descriptive text string to product data.
 
 [NOTE]
 --
@@ -365,7 +376,7 @@ the item that is described.
 *)
 
 (*"basic_attribute_schema.generic_attribute"
-A *generic_attribute* is the declaration of a named attribute as a text string to enable it to be associated with product data. This capability shall not be used to replace more specific assignment capabilities if both are available to a specified target. 
+A *generic_attribute* is the declaration of a named attribute as a text string to enable it to be associated with product data. This capability shall not be used to replace more specific assignment capabilities if both are available to a specified target.
 
 [NOTE]
 --
@@ -387,7 +398,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *generi
 *)
 
 (*"basic_attribute_schema.generic_attribute_assignment"
-A *generic_attribute_assignment* is the assignment of a generic attribute to element of product data. 
+A *generic_attribute_assignment* is the assignment of a generic attribute to element of product data.
 
 [NOTE]
 --
@@ -404,7 +415,7 @@ the item to which the attribute is assigned.
 *)
 
 (*"basic_attribute_schema.generic_attribute_list_assignment"
-A *generic_attribute_list_assignment* is the assignment of a named list of generic attributes to element of product data. 
+A *generic_attribute_list_assignment* is the assignment of a named list of generic attributes to element of product data.
 
 [NOTE]
 --
@@ -425,7 +436,7 @@ the item to which the attributes are assigned.
 *)
 
 (*"basic_attribute_schema.id_attribute"
-An *id_attribute* is the assignment of an identifier to product data. 
+An *id_attribute* is the assignment of an identifier to product data.
 
 [NOTE]
 --
@@ -447,7 +458,7 @@ the item that is identified.
 *)
 
 (*"basic_attribute_schema.name_attribute"
-A *name_attribute* is the assignment of a label by which the product data is known. 
+A *name_attribute* is the assignment of a label by which the product data is known.
 
 [NOTE]
 --
@@ -464,7 +475,7 @@ the item to which the name is applied.
 *)
 
 (*"basic_attribute_schema.object_role"
-An *object_role* is a specification of a role for the association of management type data with other aspects of product data and a description of that role. 
+An *object_role* is a specification of a role for the association of management type data with other aspects of product data and a description of that role.
 
 [NOTE]
 --
@@ -481,7 +492,7 @@ the <<express:support_resource_schema.label,label>> by which the *object_role* i
 *)
 
 (*"basic_attribute_schema.role_association"
-A *role_association* is the assignment of an <<express:basic_attribute_schema.object_role,object_role>> to an association of management type data with other aspects of product data. 
+A *role_association* is the assignment of an <<express:basic_attribute_schema.object_role,object_role>> to an association of management type data with other aspects of product data.
 
 [NOTE]
 --
@@ -498,7 +509,7 @@ the <<express:basic_attribute_schema.object_role,object_role>> that specifies th
 *)
 
 (*"basic_attribute_schema.get_description_value"
-The *get_description_value* function accepts an object to which a descriptive text string may be assigned and returns this description if present. 
+The *get_description_value* function accepts an object to which a descriptive text string may be assigned and returns this description if present.
 
 If a <<express:basic_attribute_schema.description_attribute,description_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.description_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.description_attribute,description_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
@@ -508,7 +519,7 @@ If a <<express:basic_attribute_schema.description_attribute,description_attribut
 *)
 
 (*"basic_attribute_schema.get_aggregate_id_value"
-The *get_aggregate_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
+The *get_aggregate_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present.
 
 If an <<express:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.aggregate_id_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
@@ -518,7 +529,7 @@ If an <<express:basic_attribute_schema.aggregate_id_attribute,aggregate_id_attri
 *)
 
 (*"basic_attribute_schema.get_id_value"
-The *get_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present. 
+The *get_id_value* function accepts an object to which an identifier may be assigned and returns this identifier if present.
 
 If an <<express:basic_attribute_schema.id_attribute,id_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.id_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.id_attribute,id_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
@@ -528,7 +539,7 @@ If an <<express:basic_attribute_schema.id_attribute,id_attribute>> references th
 *)
 
 (*"basic_attribute_schema.get_name_value"
-The *get_name_value* function accepts an object to which a label may be assigned and returns this label if present. 
+The *get_name_value* function accepts an object to which a label may be assigned and returns this label if present.
 
 If a <<express:basic_attribute_schema.name_attribute,name_attribute>> references the object, the function will return the value of the <<express:basic_attribute_schema.name_attribute.attribute_value,attribute_value>> attribute of this <<express:basic_attribute_schema.name_attribute,name_attribute>>. Otherwise, the indeterminate value will be returned.
 *)
@@ -538,7 +549,7 @@ the object for which a <<express:support_resource_schema.label,label>> is determ
 *)
 
 (*"basic_attribute_schema.get_role"
-The *get_role* function accepts an object to which a role may be assigned and returns this role if present. 
+The *get_role* function accepts an object to which a role may be assigned and returns this role if present.
 
 If a <<express:basic_attribute_schema.role_association,role_association>> references the object, the function will return the <<express:basic_attribute_schema.object_role,object_role>> of the <<express:basic_attribute_schema.role_association.role,role>> attribute of this <<express:basic_attribute_schema.role_association,role_association>>. Otherwise, the indeterminate value will be returned.
 *)

@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N9834
 EXPRESS Source:
 ISO 10303-41 ed5 Fundamentals of product description and support - Person organization schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
 and derivations of the Schema:
 
 Copyright ISO 2017  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -31,33 +31,33 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 SCHEMA person_organization_schema '{iso standard 10303 part(41) version(8) object(1) person_organization_schema(17)}';
 
   REFERENCE FROM basic_attribute_schema (   -- ISO 10303-41
-    description_attribute, 
+    description_attribute,
     description_attribute_select,
     generic_attribute,
     generic_attribute_assignment,
     generic_attribute_list_assignment,
     generic_attribute_list_select,
     generic_attribute_select,
-    get_description_value, 
-    get_id_value, 
-    get_name_value, 
-    get_role, 
-    id_attribute, 
+    get_description_value,
+    get_id_value,
+    get_name_value,
+    get_role,
+    id_attribute,
     id_attribute_select,
-    name_attribute, 
+    name_attribute,
     name_attribute_select,
-    object_role, 
+    object_role,
     role_association);
 
   REFERENCE FROM support_resource_schema (   -- ISO 10303-41
-    bag_to_set, 
-    identifier, 
-    label, 
+    bag_to_set,
+    identifier,
+    label,
     text);
 
   TYPE person_organization_select = SELECT (
-    person, 
-    organization, 
+    person,
+    organization,
     person_and_organization);
   END_TYPE;
 
@@ -68,15 +68,15 @@ SCHEMA person_organization_schema '{iso standard 10303 part(41) version(8) objec
     organization_role,
     organizational_project);
   END_TYPE;
-  
+
   TYPE pos_generic_attribute_select = SELECT BASED_ON generic_attribute_select WITH (
     address);
-  END_TYPE; 
+  END_TYPE;
 
   TYPE pos_generic_attribute_list_select = SELECT BASED_ON generic_attribute_list_select WITH (
     address,
     person);
-  END_TYPE; 
+  END_TYPE;
 
   TYPE pos_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
     address,
@@ -346,17 +346,20 @@ SCHEMA person_organization_schema '{iso standard 10303 part(41) version(8) objec
 END_SCHEMA;
 
 (*"person_organization_schema"
-== General
 
 The subject of the *person_organization_schema* is the description of information that identifies people and organizations.
 
-== Fundamental concepts and assumptions
+*)
+
+(*"person_organization_schema.__fund_cons"
 
 People and organizations are associated with product data to provide data concerning administrative structures and individuals who serve as points of contact or have particular responsibility in those structures. People and organizations may be associated with any aspect of product data.
 
+*)
+
+(*"person_organization_schema.__expressg"
 [.svgmap]
 ====
-[[person_organization_schemaexpg1]]
 image::person_organization_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -364,9 +367,11 @@ image::person_organization_schemaexpg1.svg[]
 * <<express:person_organization_schema>>; 3
 ====
 
+*)
+
+(*"person_organization_schema.__expressg"
 [.svgmap]
 ====
-[[person_organization_schemaexpg2]]
 image::person_organization_schemaexpg2.svg[]
 
 * <<express:person_organization_schema.person_organization_select>>; 1
@@ -419,9 +424,11 @@ image::person_organization_schemaexpg2.svg[]
 * <<express:person_organization_schema.person>>; 48
 ====
 
+*)
+
+(*"person_organization_schema.__expressg"
 [.svgmap]
 ====
-[[person_organization_schemaexpg3]]
 image::person_organization_schemaexpg3.svg[]
 
 * <<express:person_organization_schemaexpg4>>; 1
@@ -462,9 +469,11 @@ image::person_organization_schemaexpg3.svg[]
 * <<express:person_organization_schema.person_type_definition_formation>>; 36
 ====
 
+*)
+
+(*"person_organization_schema.__expressg"
 [.svgmap]
 ====
-[[person_organization_schemaexpg4]]
 image::person_organization_schemaexpg4.svg[]
 
 * <<express:person_organization_schema.pos_description_attribute_select>>; 1
@@ -502,7 +511,7 @@ The *person_organization_select* type allows for the designation of an <<express
 *)
 
 (*"person_organization_schema.address"
-An *address* is the information necessary for communicating, using one or more communication methods. 
+An *address* is the information necessary for communicating, using one or more communication methods.
 
 [NOTE]
 --
@@ -622,7 +631,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *organi
 *)
 
 (*"person_organization_schema.organization_relationship"
-An *organization_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema.organization,organization>> with a description of their relationship. 
+An *organization_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema.organization,organization>> with a description of their relationship.
 
 [example]
 ====
@@ -708,7 +717,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"person_organization_schema.organization_type"
-An *organization_type* is a recognized kind of organization. 
+An *organization_type* is a recognized kind of organization.
 
 [example]
 ====
@@ -824,7 +833,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"person_organization_schema.organizational_project_relationship"
-An *organizational_project_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema.organizational_project,organizational_project>> with an identification and description of their relationship. 
+An *organizational_project_relationship* is a relationship between two instances of the entity data type <<express:person_organization_schema.organizational_project,organizational_project>> with an identification and description of their relationship.
 
 [NOTE]
 --
@@ -869,7 +878,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.person"
-A *person* is an individual human being. 
+A *person* is an individual human being.
 
 [NOTE]
 --
@@ -984,7 +993,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"person_organization_schema.person_and_organization_role"
-A *person_and_organization_role* is a purpose for a *person_and_organization* and provides identification and description of the purpose. 
+A *person_and_organization_role* is a purpose for a *person_and_organization* and provides identification and description of the purpose.
 
 [example]
 ====
@@ -1062,12 +1071,12 @@ A template for constraining the population of the entity data types defined in t
 
 (*"person_organization_schema.person_type"
 A *person_type* is a category of people having common characteristics. // <note>
-// A relationship between a <b>person_type</b> object and one or more 
-// <express_ref linkend="person_organization_schema:ir_express:person_organization_schema.person"/> 
-// objects is established by the declaration of a 
-// person_type_organization_assignment 
-// subtype of 
-// <express_ref linkend="management_resources_schema:ir_express:management_resources_schema.person_type_assignment"/>person_type_assignment. 
+// A relationship between a <b>person_type</b> object and one or more
+// <express_ref linkend="person_organization_schema:ir_express:person_organization_schema.person"/>
+// objects is established by the declaration of a
+// person_type_organization_assignment
+// subtype of
+// <express_ref linkend="management_resources_schema:ir_express:management_resources_schema.person_type_assignment"/>person_type_assignment.
 // The person_type_person_assignment contains an items attribute that references a set of a person_item SELECT type containing a
 // <express_ref linkend="person_organization_schema:ir_express:person_organization_schema.person"/>.
 // </note>
@@ -1172,7 +1181,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *person
 *)
 
 (*"person_organization_schema.position_in_organization"
-A *position_in_organization* is a specific function or job performed by a person in a particular organization. It is defined by responsibilities and activities. A position that is not fulfilled by a person is a vacancy. 
+A *position_in_organization* is a specific function or job performed by a person in a particular organization. It is defined by responsibilities and activities. A position that is not fulfilled by a person is a vacancy.
 
 [example]
 ====
@@ -1227,7 +1236,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"person_organization_schema.position_in_organization_type"
-A *position_in_organization_type* is a generic function or job that is performed in organizations. 
+A *position_in_organization_type* is a generic function or job that is performed in organizations.
 
 [example]
 ====
@@ -1253,7 +1262,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *positi
 *)
 
 (*"person_organization_schema.acyclic_organization_relationship"
-The *acyclic_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organization,organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organization_relationship,organization_relationship>> or any of its subtypes. 
+The *acyclic_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organization,organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organization_relationship,organization_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1281,7 +1290,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"person_organization_schema.acyclic_organization_type_relationship"
-The *acyclic_organization_type_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organization_type,organization_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organization_type_relationship,organization_type_relationship>> or any of its subtypes. 
+The *acyclic_organization_type_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organization_type,organization_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organization_type_relationship,organization_type_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1309,7 +1318,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"person_organization_schema.acyclic_organizational_project_relationship"
-The *acyclic_organizational_project_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organizational_project,organizational_project>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> or any of its subtypes. 
+The *acyclic_organizational_project_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.organizational_project,organizational_project>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:person_organization_schema.organizational_project_relationship,organizational_project_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1337,7 +1346,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"person_organization_schema.acyclic_person_type_definition_relationship"
-The *acyclic_person_type_definition_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.person_type_definition,person_type_definition>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> or any of its subtypes. 
+The *acyclic_person_type_definition_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.person_type_definition,person_type_definition>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema.person_type_definition_relationship,person_type_definition_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1365,7 +1374,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"person_organization_schema.acyclic_position_in_organization_relationship"
-The *acyclic_position_in_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.position_in_organization,position_in_organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> or any of its subtypes. 
+The *acyclic_position_in_organization_relationship* function determines whether the graph of instances of the entity data type <<express:person_organization_schema.position_in_organization,position_in_organization>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:person_organization_schema.position_in_organization_relationship,position_in_organization_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

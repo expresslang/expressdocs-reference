@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N10235
 EXPRESS Source:
 ISO 10303-41 ed6 Fundamentals of product description and support - Product definition schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
 and derivations of the Schema:
 
 Copyright ISO 2019  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -31,11 +31,11 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 SCHEMA product_definition_schema '{iso standard 10303 part(41) version(9) object(1) product_definition_schema(18)}';
 
   REFERENCE FROM application_context_schema (   -- ISO 10303-41
-    product_context, 
+    product_context,
     product_definition_context);
   REFERENCE FROM basic_attribute_schema (   -- ISO 10303-41
-    get_id_value, 
-    get_name_value, 
+    get_id_value,
+    get_name_value,
     id_attribute,
     id_attribute_select,
     name_attribute,
@@ -49,17 +49,17 @@ SCHEMA product_definition_schema '{iso standard 10303 part(41) version(9) object
   REFERENCE FROM product_property_definition_schema (   -- ISO 10303-41
     characterized_object);
   REFERENCE FROM support_resource_schema (   -- ISO 10303-41
-    bag_to_set, 
-    identifier, 
-    label, 
+    bag_to_set,
+    identifier,
+    label,
     text);
 
-    
+
   TYPE product_definition_or_reference = EXTENSIBLE GENERIC_ENTITY SELECT (
-    product_definition, 
+    product_definition,
     generic_product_definition_reference);
   END_TYPE;
-    
+
   TYPE pds_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
     product_category);
   END_TYPE;
@@ -67,13 +67,13 @@ SCHEMA product_definition_schema '{iso standard 10303 part(41) version(9) object
     product_definition,
     product_definition_substitute);
   END_TYPE;
-  
+
   TYPE source = ENUMERATION OF (made, bought, not_known);
   END_TYPE;
 
   ENTITY alternative_solution_relationship
   	SUBTYPE of (product_definition_formation_relationship);
-  	relation_type	: STRING;									
+  	relation_type	: STRING;
   WHERE
 	WR1: acyclic_alternative_solution_relationship(SELF, [SELF\product_definition_formation_relationship.related_product_definition_formation], 'PRODUCT_DEFINITION_SCHEMA.ALTERNATIVE_SOLUTION_RELATIONSHIP');
   END_ENTITY;
@@ -86,7 +86,7 @@ SCHEMA product_definition_schema '{iso standard 10303 part(41) version(9) object
     ABSTRACT SUPERTYPE OF ( ONEOF ( product_definition_reference, product_definition_reference_with_local_representation) );
     source : external_source;
   END_ENTITY;
- 
+
   ENTITY product;
     id : identifier;
     name : label;
@@ -148,7 +148,7 @@ SCHEMA product_definition_schema '{iso standard 10303 part(41) version(9) object
   UNIQUE
     UR1: id, of_product;
   END_ENTITY;
-  
+
 ENTITY final_solution
 	SUBTYPE OF (product_definition_formation);
 	status			: STRING;
@@ -184,7 +184,7 @@ END_ENTITY;
     relating : product_definition_relationship;
     related : product_definition_relationship;
   END_ENTITY;
-  
+
   ENTITY product_definition_reference
     SUBTYPE OF (generic_product_definition_reference);
     product_id : identifier;
@@ -192,11 +192,11 @@ END_ENTITY;
     product_definition_id : identifier;
     id_owning_organization_name : OPTIONAL label;
   END_ENTITY;
- 
+
   ENTITY product_definition_reference_with_local_representation
     SUBTYPE OF (generic_product_definition_reference, product_definition);
   END_ENTITY;
-  
+
   ENTITY product_definition_substitute;
     description : OPTIONAL text;
     context_relationship : product_definition_relationship;
@@ -318,7 +318,7 @@ FUNCTION acyclic_alternative_solution_relationship (relation : alternative_solut
   END_FUNCTION;
 
   FUNCTION categories_of_product
-   (obj : product) : SET OF STRING; 
+   (obj : product) : SET OF STRING;
   LOCAL
     category_assignments: BAG OF product_category;
     categories: SET OF STRING:=[];
@@ -328,7 +328,7 @@ FUNCTION acyclic_alternative_solution_relationship (relation : alternative_solut
       categories := categories + category_assignments[i].name;
     END_REPEAT;
     RETURN(categories);
-  END_FUNCTION; 
+  END_FUNCTION;
 
   FUNCTION get_product_definitions (c_def_instance : product):SET OF product_definition;
     LOCAL
@@ -349,16 +349,17 @@ FUNCTION acyclic_alternative_solution_relationship (relation : alternative_solut
 END_SCHEMA;
 
 (*"product_definition_schema"
-== General
 
-The subject of the *product_definition_schema* is the identification of products, the categorization of products, definitions of products, and the relationships among them. This schema provides for the generic aspects of product definition. 
+The subject of the *product_definition_schema* is the identification of products, the categorization of products, definitions of products, and the relationships among them. This schema provides for the generic aspects of product definition.
 
 [example]
 ====
 The identification of products and definitions of products, the grouping of products according to classification schemes and the definition of various kinds of relationship between products are all examples of generic aspects of product definition.
 ====
 
-== Fundamental concepts and assumptions
+*)
+
+(*"product_definition_schema.__fund_cons"
 
 The use of the entity data types of this schema to represent products is specified in the viewpoint as defined by the requirements of an annotated EXPRESS schema that uses or specializes this part of ISO 10303. Every product need not be represented by an instance of the entity data type *product*. Some products may be represented by other constructs in the integrated resources.
 
@@ -395,14 +396,14 @@ The ball-point pen cap would be related in an assembly relationship to the ball-
 
 There are two ways to represent the concept of real object:
 
-* a real object can be represented by an instance of *product* if the subject of an annotated Express schema is concerned with real objects or if it is needed to describe a real object at various life-cycle stages and in various configurations; in this case, if an real object is identified by a serial number, this serial number can be stored in the id attribute of the *product*; 
+* a real object can be represented by an instance of *product* if the subject of an annotated Express schema is concerned with real objects or if it is needed to describe a real object at various life-cycle stages and in various configurations; in this case, if an real object is identified by a serial number, this serial number can be stored in the id attribute of the *product*;
 
 [example]
 ====
 An airplane, in service during 30 years, may have different configurations during its life.
 ====
 
-* a real object can be represented by an instance of *product_definition* if the subject of an annotated Express schema is primarily concerned with the design phase of products and if the concept of real object is considered as a particular stage in the design phase of a product; in this case, if a real object is identified by a serial number, this *serial_number* can be stored in the id attribute of the *product_definition*. 
+* a real object can be represented by an instance of *product_definition* if the subject of an annotated Express schema is primarily concerned with the design phase of products and if the concept of real object is considered as a particular stage in the design phase of a product; in this case, if a real object is identified by a serial number, this *serial_number* can be stored in the id attribute of the *product_definition*.
 
 [example]
 ====
@@ -416,9 +417,11 @@ Product definition facts are independent of properties. The ways in which these 
 An example of the way in which this schema may be used is given in annex F.1.
 --
 
+*)
+
+(*"product_definition_schema.__expressg"
 [.svgmap]
 ====
-[[product_definition_schemaexpg1]]
 image::product_definition_schemaexpg1.svg[]
 
 * <<express:basic_attribute_schema>>; 1
@@ -431,9 +434,11 @@ image::product_definition_schemaexpg1.svg[]
 * <<express:external_reference_schema>>; 8
 ====
 
+*)
+
+(*"product_definition_schema.__expressg"
 [.svgmap]
 ====
-[[product_definition_schemaexpg2]]
 image::product_definition_schemaexpg2.svg[]
 
 * <<express:product_definition_schema.pds_id_attribute_select>>; 1
@@ -471,9 +476,11 @@ image::product_definition_schemaexpg2.svg[]
 * <<express:product_definition_schema.product_definition_formation_relationship>>; 33
 ====
 
+*)
+
+(*"product_definition_schema.__expressg"
 [.svgmap]
 ====
-[[product_definition_schemaexpg3]]
 image::product_definition_schemaexpg3.svg[]
 
 * <<express:product_definition_schema.product_definition_or_reference>>; 1
@@ -519,7 +526,7 @@ image::product_definition_schemaexpg3.svg[]
 *)
 
 (*"product_definition_schema.characterized_product"
-A *characterized_product* is a type of <<express:product_property_definition_schema.characterized_object,characterized_object>> and a type of <<express:product_definition_schema.product,product>> for the purpose of characterizing a product. 
+A *characterized_product* is a type of <<express:product_property_definition_schema.characterized_object,characterized_object>> and a type of <<express:product_definition_schema.product,product>> for the purpose of characterizing a product.
 
 [NOTE]
 --
@@ -556,7 +563,7 @@ An *alternative_solution_relationship* shall not participate in its own definiti
 *)
 
 (*"product_definition_schema.product"
-A *product* is a representation of a product or a type of product 
+A *product* is a representation of a product or a type of product
 
 [NOTE]
 --
@@ -652,7 +659,7 @@ a set of <<express:application_context_schema.product_context,product_context>> 
 *)
 
 (*"product_definition_schema.product_category"
-A *product_category* is a classification that applies to products. 
+A *product_category* is a classification that applies to products.
 
 [example]
 ====
@@ -765,7 +772,7 @@ A graph of <<express:product_definition_schema.product_category,product_category
 *)
 
 (*"product_definition_schema.product_definition"
-A *product_definition* is a representation of an aspect of a product, or of a class of products, for an identified life cycle stage. The life cycle stage for which a *product_definition* exists may be further characterized by discipline, by usage, or by both. 
+A *product_definition* is a representation of an aspect of a product, or of a class of products, for an identified life cycle stage. The life cycle stage for which a *product_definition* exists may be further characterized by discipline, by usage, or by both.
 
 [NOTE]
 --
@@ -1421,7 +1428,7 @@ the <<express:product_definition_schema.product,product>> whose categories are s
 *)
 
 (*"product_definition_schema.get_product_definitions"
-The *get_product_definitions* function returns for any instance of <<express:product_definition_schema.product,product>> the set of instances of <<express:product_definition_schema.product_definition,product_definition>> that refer to the product through an instance of <<express:product_definition_schema.product_definition_formation,product_definition_formation>>. 
+The *get_product_definitions* function returns for any instance of <<express:product_definition_schema.product,product>> the set of instances of <<express:product_definition_schema.product_definition,product_definition>> that refer to the product through an instance of <<express:product_definition_schema.product_definition_formation,product_definition_formation>>.
 
 [NOTE]
 --
@@ -1434,7 +1441,7 @@ the candidate <<express:product_definition_schema.product,product>> to be checke
 *)
 
 (*"product_definition_schema.acyclic_alternative_solution_relationship"
-The *acyclic_alternative_solution_relationship* function determines whether the graph of instance of the entity data type <<express:product_definition_schema.product_definition_formation,product_definition_formation>> that contains relation as one of its links contains a cycle. this function may be used to evaluate either a <<express:product_definition_schema.alternative_solution_relationship,alternative_solution_relationship>> or any of its subtypes. 
+The *acyclic_alternative_solution_relationship* function determines whether the graph of instance of the entity data type <<express:product_definition_schema.product_definition_formation,product_definition_formation>> that contains relation as one of its links contains a cycle. this function may be used to evaluate either a <<express:product_definition_schema.alternative_solution_relationship,alternative_solution_relationship>> or any of its subtypes.
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
