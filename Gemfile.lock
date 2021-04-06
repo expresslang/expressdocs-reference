@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/metanorma/isodoc
-  revision: 34fe7e0ee0453a3ab10f7760cc616eabbd938aa0
+  revision: f178a2d91d32c7b1796a34cd515d37547421eb12
+  branch: fix/a-name
   specs:
     isodoc (1.5.5)
       asciimath
@@ -17,7 +18,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma
-  revision: 636754309eb9e63980267712e4dc31ccceba5a1b
+  revision: 7d8a37e729d815f4f9afdf8e472e89b745ab746a
+  branch: fix/css-override
   specs:
     metanorma (1.2.8)
       asciidoctor
@@ -67,7 +69,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: a1dec7910a8cf19aee1965b05ee2e90608094567
+  revision: 12b87830e4783abf479cbdc7a898d8df156f6bfe
   specs:
     metanorma-standoc (1.8.8)
       asciidoctor (~> 2.0.0)
