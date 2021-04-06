@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8369
 EXPRESS Source:
 ISO 10303-41 ed4 Fundamentals of product description and support - Approval schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -30,11 +30,11 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 
 SCHEMA approval_schema '{iso standard 10303 part(41) version(7) object(1) approval_schema(3)}';
   REFERENCE FROM basic_attribute_schema (
-    description_attribute,
+    description_attribute, 
     description_attribute_select,
-    get_description_value,
-    get_role,
-    object_role,
+    get_description_value, 
+    get_role, 
+    object_role, 
     role_association,
     role_select);
   REFERENCE FROM date_time_schema (
@@ -42,19 +42,19 @@ SCHEMA approval_schema '{iso standard 10303 part(41) version(7) object(1) approv
   REFERENCE FROM person_organization_schema (
     person_organization_select);
   REFERENCE FROM support_resource_schema (
-    bag_to_set,
-    label,
+    bag_to_set, 
+    label, 
     text);
-
+    
   TYPE apps_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     approval_role);
   END_TYPE;
-
+  
   TYPE apps_role_select = SELECT BASED_ON role_select WITH (
     approval_date_time);
   END_TYPE;
-
-
+  
+    
   ENTITY approval;
     status : approval_status;
     level : label;
@@ -114,25 +114,22 @@ SCHEMA approval_schema '{iso standard 10303 part(41) version(7) object(1) approv
 END_SCHEMA;
 
 (*"approval_schema"
+== General
 
-The subject of the *approval_schema* is the description of authorization data. Approval information concerns the acceptance of product data.
+The subject of the *approval_schema* is the description of authorization data. Approval information concerns the acceptance of product data. 
 
 [example]
 ====
 One version of a product may be approved for manufacture whilst another may still be undergoing design.
 ====
 
-*)
-
-(*"approval_schema.__fund_cons"
+== Fundamental concepts and assumptions
 
 Approval information can be attached to any aspect of product data.
 
-*)
-
-(*"approval_schema.__expressg"
 [.svgmap]
 ====
+[[approval_schemaexpg1]]
 image::approval_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -142,11 +139,9 @@ image::approval_schemaexpg1.svg[]
 * <<express:date_time_schema>>; 5
 ====
 
-*)
-
-(*"approval_schema.__expressg"
 [.svgmap]
 ====
+[[approval_schemaexpg2]]
 image::approval_schemaexpg2.svg[]
 
 * <<express:approval_schema.apps_role_select>>; 1
@@ -172,7 +167,7 @@ image::approval_schemaexpg2.svg[]
 *)
 
 (*"approval_schema.approval"
-An *approval* is a confirmation of the product data for its intended use. An *approval* is an incompletely modelled concept and requires population of related entity data types to form a complete approval.
+An *approval* is a confirmation of the product data for its intended use. An *approval* is an incompletely modelled concept and requires population of related entity data types to form a complete approval. 
 
 [NOTE]
 --
@@ -240,7 +235,7 @@ the <<express:approval_schema.approval_role,approval_role>> that specifies the p
 *)
 
 (*"approval_schema.approval_relationship"
-An *approval_relationship* is a relationship between two instances of the entity data type <<express:approval_schema.approval,approval>> with a description of their relationship.
+An *approval_relationship* is a relationship between two instances of the entity data type <<express:approval_schema.approval,approval>> with a description of their relationship. 
 
 [NOTE]
 --
@@ -316,7 +311,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"approval_schema.approval_status"
-An *approval_status* specifies the state of an <<express:approval_schema.approval,approval>>.
+An *approval_status* specifies the state of an <<express:approval_schema.approval,approval>>. 
 
 [example]
 ====
@@ -334,7 +329,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"approval_schema.acyclic_approval_relationship"
-The *acyclic_approval_relationship* function determines whether the graph of instances of the entity data type <<express:approval_schema.approval,approval>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:approval_schema.approval_relationship,approval_relationship>> or any of its subtypes.
+The *acyclic_approval_relationship* function determines whether the graph of instances of the entity data type <<express:approval_schema.approval,approval>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:approval_schema.approval_relationship,approval_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

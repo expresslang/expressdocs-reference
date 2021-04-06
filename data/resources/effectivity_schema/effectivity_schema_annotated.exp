@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N10232
 EXPRESS Source:
 ISO 10303-41 ed6 Fundamentals of product description and support - Effectivity schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2019  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -33,23 +33,23 @@ SCHEMA effectivity_schema '{iso standard 10303 part(41) version(8) object(1) eff
   REFERENCE FROM action_schema   -- ISO 10303-41
   	(action_method);
   REFERENCE FROM basic_attribute_schema ( -- ISO 10303-41
-    description_attribute,
+    description_attribute, 
     description_attribute_select,
-    get_description_value,
-    get_name_value,
+    get_description_value, 
+    get_name_value, 
     name_attribute,
     name_attribute_select);
   REFERENCE FROM date_time_schema (	-- ISO 10303-41
-    date_time_or_event_occurrence,
+    date_time_or_event_occurrence, 
     time_interval);
   REFERENCE FROM measure_schema (	-- ISO 10303-41
     measure_with_unit);
   REFERENCE FROM support_resource_schema (	-- ISO 10303-41
-    bag_to_set,
-    identifier,
-    label,
+    bag_to_set, 
+    identifier, 
+    label, 
     text);
-
+  
   TYPE effs_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     effectivity);
   END_TYPE;
@@ -57,19 +57,19 @@ SCHEMA effectivity_schema '{iso standard 10303 part(41) version(8) object(1) eff
   TYPE effs_name_attribute_select = SELECT BASED_ON name_attribute_select WITH (
     effectivity);
   END_TYPE;
-
+ 
  ENTITY condition
 		  	SUBTYPE OF (action_method);
 		  END_ENTITY;
 ENTITY conditional_effectivity
 		  	SUBTYPE OF (condition, effectivity);
 END_ENTITY;
-ENTITY conditional_configuration
+ENTITY conditional_configuration											
 			SUBTYPE OF (conditional_effectivity);
-			configuration_type	: STRING;
-			inheritance_type	: STRING;
-END_ENTITY;
-
+			configuration_type	: STRING;									
+			inheritance_type	: STRING;									
+END_ENTITY;  
+    
   ENTITY dated_effectivity
     SUBTYPE OF (effectivity);
     effectivity_end_date : OPTIONAL date_time_or_event_occurrence;
@@ -133,8 +133,9 @@ END_ENTITY;
 END_SCHEMA;
 
 (*"effectivity_schema"
+== General
 
-The subject of the *effectivity_schema* is the validity of aspects of product data or product life cycle activity data specified against certain criteria.
+The subject of the *effectivity_schema* is the validity of aspects of product data or product life cycle activity data specified against certain criteria. 
 
 This schema supports the representation of effectivity according to the following criteria:
 
@@ -142,19 +143,15 @@ This schema supports the representation of effectivity according to the followin
 * selection of product data by serial number;
 * selection of product data by a date.
 
-*)
+== Fundamental concepts and assumptions
 
-(*"effectivity_schema.__fund_cons"
-
-Effectivity information can be attached to any aspect of product data or product life cycle activity data.
+Effectivity information can be attached to any aspect of product data or product life cycle activity data. 
 
 Only effectivities based on date, serial number, and lot number are considered in this schema.
 
-*)
-
-(*"document_schema.__expressg"
 [.svgmap]
 ====
+[[effectivity_schemaexpg1]]
 image::effectivity_schemaexpg1.svg[]
 
 * <<express:basic_attribute_schema>>; 1
@@ -165,11 +162,9 @@ image::effectivity_schemaexpg1.svg[]
 * <<express:support_resource_schema>>; 6
 ====
 
-*)
-
-(*"document_schema.__expressg"
 [.svgmap]
 ====
+[[effectivity_schemaexpg2]]
 image::effectivity_schemaexpg2.svg[]
 
 * <<express:effectivity_schema.effs_name_attribute_select>>; 1
@@ -242,7 +237,7 @@ One or both of the *effectivity_start_date* or *effectivity_end_date* shall be s
 *)
 
 (*"effectivity_schema.effectivity"
-An *effectivity* is the identification of a domain of applicability for product data.
+An *effectivity* is the identification of a domain of applicability for product data. 
 
 [example]
 ====
@@ -308,7 +303,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"effectivity_schema.effectivity_relationship"
-An *effectivity_relationship* is a relationship between two instances of the entity data type <<express:effectivity_schema.effectivity,effectivity>> with a description of their relationship.
+An *effectivity_relationship* is a relationship between two instances of the entity data type <<express:effectivity_schema.effectivity,effectivity>> with a description of their relationship. 
 
 [NOTE]
 --
@@ -365,7 +360,7 @@ the size of the batch of items.
 *)
 
 (*"effectivity_schema.serial_numbered_effectivity"
-A *serial_numbered_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of serial numbers.
+A *serial_numbered_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a possibly open-ended interval of serial numbers. 
 
 [NOTE]
 --
@@ -382,7 +377,7 @@ the last valid serial number. If a value for this attribute is not defined, the 
 *)
 
 (*"effectivity_schema.time_interval_based_effectivity"
-A *time_interval_based_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a <<express:date_time_schema.time_interval,time_interval>>.
+A *time_interval_based_effectivity* is a type of <<express:effectivity_schema.effectivity,effectivity>> for which the domain of applicability is defined as a <<express:date_time_schema.time_interval,time_interval>>. 
 
 [NOTE]
 --
@@ -395,7 +390,7 @@ the <<express:date_time_schema.time_interval,time_interval>> defining the period
 *)
 
 (*"effectivity_schema.acyclic_effectivity_relationship"
-The *acyclic_effectivity_relationship* function determines whether the graph of instances of the entity data type <<express:effectivity_schema.effectivity,effectivity>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:effectivity_schema.effectivity_relationship,effectivity_relationship>> or any of its subtypes.
+The *acyclic_effectivity_relationship* function determines whether the graph of instances of the entity data type <<express:effectivity_schema.effectivity,effectivity>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:effectivity_schema.effectivity_relationship,effectivity_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

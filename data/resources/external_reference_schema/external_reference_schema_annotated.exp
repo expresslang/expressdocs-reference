@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8369
 EXPRESS Source:
 ISO 10303-41 ed4 Fundamentals of product description and support - External reference schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -31,19 +31,19 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object(1) external_reference_schema(11)}';
 
   REFERENCE FROM basic_attribute_schema (
-    description_attribute,
+    description_attribute, 
     description_attribute_select,
     get_description_value);
   REFERENCE FROM support_resource_schema (
-    label,
-    text,
-    identifier,
+    label, 
+    text, 
+    identifier, 
     bag_to_set);
-
+    
   TYPE ers_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     external_source);
   END_TYPE;
-
+    
   TYPE message = STRING;
   END_TYPE;
 
@@ -76,7 +76,7 @@ SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object
     relating_item : externally_defined_item;
     related_item : externally_defined_item;
   END_ENTITY;
-
+  
   ENTITY externally_defined_item_with_multiple_references
     SUBTYPE OF (externally_defined_item);
     references : LIST[1:?] OF UNIQUE source_item;
@@ -84,7 +84,7 @@ SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object
     UR1: references;
   WHERE
     WR1: NOT(SELF\externally_defined_item.item_id IN references);
-  END_ENTITY;
+  END_ENTITY;  
 
   ENTITY pre_defined_item;
     name : label;
@@ -127,20 +127,17 @@ SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object
 END_SCHEMA;
 
 (*"external_reference_schema"
+== General
 
 The subject of the *external_reference_schema* is the means of identifying information that is not explicitly represented in a given exchange.
 
-*)
-
-(*"external_reference_schema.__fund_cons"
+== Fundamental concepts and assumptions
 
 Product data may refer to information that is not explicitly represented in a given exchange. This information is either predefined, in the annotated EXPRESS schema to which the exchange conforms, or is defined elsewhere. If the information is defined in the annotated EXPRESS schema to which the exchange conforms, this requirement is satisfied by a reference that identifies the entity data type definitions in the annotated EXPRESS schema. Otherwise, this requirement is satisfied by a reference that identifies the record type definitions and exchange format.
 
-*)
-
-(*"external_reference_schema.__expressg"
 [.svgmap]
 ====
+[[external_reference_schemaexpg1]]
 image::external_reference_schemaexpg1.svg[]
 
 * <<express:external_reference_schema>>; 1
@@ -148,11 +145,9 @@ image::external_reference_schemaexpg1.svg[]
 * <<express:basic_attribute_schema>>; 3
 ====
 
-*)
-
-(*"external_reference_schema.__expressg"
 [.svgmap]
 ====
+[[external_reference_schemaexpg2]]
 image::external_reference_schemaexpg2.svg[]
 
 * <<express:external_reference_schema.source_item>>; 1
@@ -176,7 +171,7 @@ image::external_reference_schemaexpg2.svg[]
 *)
 
 (*"external_reference_schema.message"
-A message is a communication that is addressed to a system in order to trigger some action. The result of such an action is an external item or identification.
+A message is a communication that is addressed to a system in order to trigger some action. The result of such an action is an external item or identification. 
 
 [NOTE]
 --
@@ -189,7 +184,7 @@ A *source_item* type allows for the designation of an <<express:support_resource
 *)
 
 (*"external_reference_schema.external_source"
-An *external_source* is the identification of a source of product data that is not the EXPRESS schema to which the exchange conforms.
+An *external_source* is the identification of a source of product data that is not the EXPRESS schema to which the exchange conforms. 
 
 [NOTE]
 --
@@ -225,7 +220,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"external_reference_schema.external_source_relationship"
-An *external_source_relationship* is a relationship between two instances of the entity data type <<express:external_reference_schema.external_source,external_source>> with a description of their relationship.
+An *external_source_relationship* is a relationship between two instances of the entity data type <<express:external_reference_schema.external_source,external_source>> with a description of their relationship. 
 
 [NOTE]
 --
@@ -282,7 +277,7 @@ an <<express:external_reference_schema.external_source,external_source>> that co
 *)
 
 (*"external_reference_schema.externally_defined_item_relationship"
-An *externally_defined_item_relationship* is a relationship between two instances of the entity data type <<express:external_reference_schema.externally_defined_item,externally_defined_item>> with an identification and description of their relationship.
+An *externally_defined_item_relationship* is a relationship between two instances of the entity data type <<express:external_reference_schema.externally_defined_item,externally_defined_item>> with an identification and description of their relationship. 
 
 [NOTE]
 --
@@ -343,7 +338,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"external_reference_schema.pre_defined_item"
-A *pre_defined_item* is the identification of information that is not explicitly represented in a given exchange but that is defined in the annotated EXPRESS schema to which the exchange conforms.
+A *pre_defined_item* is the identification of information that is not explicitly represented in a given exchange but that is defined in the annotated EXPRESS schema to which the exchange conforms. 
 
 [example]
 ====
@@ -356,7 +351,7 @@ the <<express:support_resource_schema.label,label>> by which the *pre_defined_it
 *)
 
 (*"external_reference_schema.acyclic_external_source_relationship"
-The *acyclic_external_source_relationship* function determines whether the graph of instances of the entity data type <<express:external_reference_schema.external_source,external_source>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:external_reference_schema.external_source_relationship,external_source_relationship>> or any of its subtypes.
+The *acyclic_external_source_relationship* function determines whether the graph of instances of the entity data type <<express:external_reference_schema.external_source,external_source>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:external_reference_schema.external_source_relationship,external_source_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -384,7 +379,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"external_reference_schema.acyclic_externally_defined_item_relationship"
-The *acyclic_externally_defined_item_relationship* function determines whether the graph of instances of the entity data type <<express:external_reference_schema.externally_defined_item,externally_defined_item>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:external_reference_schema.externally_defined_item_relationship,externally_defined_item_relationship>> or any of its subtypes.
+The *acyclic_externally_defined_item_relationship* function determines whether the graph of instances of the entity data type <<express:external_reference_schema.externally_defined_item,externally_defined_item>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:external_reference_schema.externally_defined_item_relationship,externally_defined_item_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

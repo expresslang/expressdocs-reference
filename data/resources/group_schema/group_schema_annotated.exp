@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8369
 EXPRESS Source:
 ISO 10303-41 ed4 Fundamentals of product description and support - Group schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -31,19 +31,19 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 SCHEMA group_schema '{iso standard 10303 part(41) version(7) object(1) group_schema(12)}';
 
   REFERENCE FROM support_resource_schema (
-    label,
-    bag_to_set,
-    identifier,
+    label, 
+    bag_to_set, 
+    identifier, 
     text);
   REFERENCE FROM basic_attribute_schema (
-    get_id_value,
+    get_id_value, 
     id_attribute,
     id_attribute_select);
-
+    
   TYPE gs_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
     group);
   END_TYPE;
-
+    
   ENTITY group;
     name : label;
     description : OPTIONAL text;
@@ -80,20 +80,17 @@ SCHEMA group_schema '{iso standard 10303 part(41) version(7) object(1) group_sch
 END_SCHEMA;
 
 (*"group_schema"
+== General
 
 The subject of the *group_schema* is the definition of groups of items.
 
-*)
-
-(*"group_schema.__fund_cons"
+== Fundamental concepts and assumptions
 
 Groups are collections of product data that have a common identity. Any kinds of product data may be grouped together. The structure specified in this schema enables the common identity to be captured; it does not specify, or allow the specification of, the meaning of the common identity or the criteria for the common identity.
 
-*)
-
-(*"group_schema.__expressg"
 [.svgmap]
 ====
+[[group_schemaexpg1]]
 image::group_schemaexpg1.svg[]
 
 * <<express:support_resource_schema>>; 1
@@ -101,11 +98,9 @@ image::group_schemaexpg1.svg[]
 * <<express:group_schema>>; 3
 ====
 
-*)
-
-(*"group_schema.__expressg"
 [.svgmap]
 ====
+[[group_schemaexpg2]]
 image::group_schemaexpg2.svg[]
 
 * <<express:group_schema.gs_id_attribute_select>>; 1
@@ -171,7 +166,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"group_schema.group_relationship"
-A *group_relationship* is a relationship between two instances of the entity data type <<express:group_schema.group,group>> with a description of their relationship.
+A *group_relationship* is a relationship between two instances of the entity data type <<express:group_schema.group,group>> with a description of their relationship. 
 
 [NOTE]
 --
@@ -216,7 +211,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"group_schema.acyclic_group_relationship"
-The *acyclic_group_relationship* function determines whether the graph of instances of the entity data type <<express:group_schema.group,group>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:group_schema.group_relationship,group_relationship>> or any of its subtypes.
+The *acyclic_group_relationship* function determines whether the graph of instances of the entity data type <<express:group_schema.group,group>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:group_schema.group_relationship,group_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

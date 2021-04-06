@@ -69,16 +69,16 @@ TYPE amount_of_substance_measure = REAL;
 
   TYPE descriptive_measure = STRING;
   END_TYPE;
-
+  
   TYPE capacitance_measure = REAL;
   END_TYPE;
-
+  
   TYPE dose_equivalent_measure = REAL;
   END_TYPE;
 
   TYPE electric_charge_measure = REAL;
   END_TYPE;
-
+  
   TYPE electric_current_measure = REAL;
   END_TYPE;
 
@@ -87,16 +87,16 @@ TYPE amount_of_substance_measure = REAL;
 
   TYPE electric_potential_measure = REAL;
   END_TYPE;
-
+  
   TYPE energy_measure = REAL;
   END_TYPE;  
-
+  
   TYPE force_measure = REAL;
   END_TYPE;  
-
+  
   TYPE frequency_measure = REAL;
   END_TYPE; 
-
+  
   TYPE magnetic_flux_density_measure = REAL;
   END_TYPE;
 
@@ -105,7 +105,7 @@ TYPE amount_of_substance_measure = REAL;
 
   TYPE inductance_measure = REAL;
   END_TYPE;
-
+  
   TYPE length_measure = REAL;
   END_TYPE;
 
@@ -227,7 +227,7 @@ TYPE amount_of_substance_measure = REAL;
 
   TYPE velocity_measure = REAL;
   END_TYPE;
-
+  
   TYPE volume_measure = REAL;
   END_TYPE;
 
@@ -255,7 +255,7 @@ END_ENTITY;
   WHERE
     WR1: 'MEASURE_SCHEMA.ACCELERATION_UNIT' IN TYPEOF (SELF\measure_with_unit.unit_component);
   END_ENTITY;
-
+  
   ENTITY acceleration_unit
     SUBTYPE OF (derived_unit);
   WHERE
@@ -427,7 +427,7 @@ END_ENTITY;
     WR1: SELF\si_unit.name = si_unit_name.coulomb;
     WR2: NOT EXISTS(SELF\derived_unit.name);
   END_ENTITY;
-
+  
   ENTITY electric_current_measure_with_unit
     SUBTYPE OF (measure_with_unit);
   WHERE
@@ -439,7 +439,7 @@ END_ENTITY;
   WHERE
     WR1: (SELF\named_unit.dimensions.length_exponent = 0.0) AND (SELF\named_unit.dimensions.mass_exponent = 0.0) AND (SELF\named_unit.dimensions.time_exponent = 0.0) AND (SELF\named_unit.dimensions.electric_current_exponent = 1.0) AND (SELF\named_unit.dimensions.thermodynamic_temperature_exponent = 0.0) AND (SELF\named_unit.dimensions.amount_of_substance_exponent = 0.0) AND (SELF\named_unit.dimensions.luminous_intensity_exponent = 0.0);
   END_ENTITY;
-
+  
    ENTITY conductance_unit
     SUBTYPE OF(derived_unit);
   WHERE
@@ -553,7 +553,7 @@ END_ENTITY;
     WR1: SELF\si_unit.name = si_unit_name.hertz;
     WR2: NOT EXISTS(SELF\derived_unit.name);
   END_ENTITY;
-
+ 
   ENTITY global_unit_assigned_context
     SUBTYPE OF (representation_context);
     units : SET [1:?] OF unit;
@@ -596,7 +596,7 @@ END_ENTITY;
     WR1: SELF\si_unit.name = si_unit_name.henry;
     WR2: NOT EXISTS(SELF\derived_unit.name);
   END_ENTITY;
-
+ 
   ENTITY length_measure_with_unit
     SUBTYPE OF (measure_with_unit);
   WHERE
@@ -760,7 +760,7 @@ END_ENTITY;
     WR1: SELF\si_unit.name = si_unit_name.watt;
     WR2: NOT EXISTS(SELF\derived_unit.name);
   END_ENTITY;
-
+ 
   ENTITY pressure_unit
     SUBTYPE OF(derived_unit);
   WHERE
@@ -811,7 +811,7 @@ END_ENTITY;
     WR2: NOT EXISTS(SELF\derived_unit.name);
   END_ENTITY;
 
-
+  
   ENTITY si_unit
     SUBTYPE OF (named_unit);
     prefix : OPTIONAL si_prefix;
@@ -865,7 +865,7 @@ END_ENTITY;
   WHERE
    WR1: 'MEASURE_SCHEMA.VELOCITY_UNIT' IN TYPEOF (SELF\measure_with_unit.unit_component);
   END_ENTITY;
-
+  
   ENTITY velocity_unit
   SUBTYPE OF (derived_unit);
   WHERE

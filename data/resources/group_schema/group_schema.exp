@@ -39,11 +39,11 @@ SCHEMA group_schema '{iso standard 10303 part(41) version(7) object(1) group_sch
     get_id_value, 
     id_attribute,
     id_attribute_select);
-
+    
   TYPE gs_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
     group);
   END_TYPE;
-
+    
   ENTITY group;
     name : label;
     description : OPTIONAL text;

@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N10467
 EXPRESS Source:
 ISO 10303-41 ed6 Fundamentals of product description and support - Product property definition schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2019  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -31,14 +31,14 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(9) object(1) product_property_definition_schema(19)}';
 
   REFERENCE FROM basic_attribute_schema (   -- ISO 10303-41
-    get_id_value,
+    get_id_value, 
     id_attribute,
     id_attribute_select);
   REFERENCE FROM process_property_schema (   -- ISO 10303-49
-    action_property,
+    action_property, 
     resource_property);
   REFERENCE FROM product_definition_schema (   -- ISO 10303-41
-    product_definition,
+    product_definition, 
     product_definition_relationship,
     product_definition_relationship_relationship);
   REFERENCE FROM product_property_representation_schema (   -- ISO 10303-41
@@ -54,15 +54,15 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
   REFERENCE FROM shape_tolerance_schema (   -- ISO 10303-47
     geometric_tolerance);
   REFERENCE FROM support_resource_schema (   -- ISO 10303-41
-    bag_to_set,
-    identifier,
-    label,
+    bag_to_set, 
+    identifier, 
+    label, 
     text);
-
+    
   TYPE characterized_definition = SELECT (
     characterized_item,
-    characterized_object,
-    characterized_product_definition,
+    characterized_object, 
+    characterized_product_definition, 
     shape_definition);
   END_TYPE;
 
@@ -74,20 +74,20 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
 
   TYPE ppds_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
     property_definition,
-    shape_aspect,
+    shape_aspect, 
     shape_aspect_relationship);
   END_TYPE;
-
+  
   TYPE characterized_product_definition = SELECT (
-    product_definition,
-    product_definition_occurrence,
+    product_definition, 
+    product_definition_occurrence, 
     product_definition_relationship,
     product_definition_relationship_relationship);
   END_TYPE;
 
   TYPE derived_property_select = SELECT (
-  	property_definition,
-  	action_property,
+  	property_definition, 
+  	action_property, 
   	resource_property,
   	dimensional_location,
   	dimensional_size,
@@ -96,7 +96,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
 
   TYPE shape_aspect_or_characterized_object = SELECT (shape_aspect, characterized_object);
   END_TYPE;
-
+  
   TYPE shape_definition = SELECT (product_definition_shape, shape_aspect, shape_aspect_relationship);
   END_TYPE;
 
@@ -136,7 +136,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
   DERIVE
    SELF\shape_aspect.of_shape : product_definition_shape := get_root_shape_aspect(SELF);
   END_ENTITY;
-
+  
   ENTITY general_property;
     id : identifier;
     name : label;
@@ -192,7 +192,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
   DERIVE
     id : identifier := get_id_value(SELF);
   UNIQUE
-    UR1: id, of_shape;
+    UR1: id, of_shape;    
   WHERE
     WR1: SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.IDENTIFIED_ITEM')) <= 1;
   END_ENTITY;
@@ -258,7 +258,7 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
       RETURN  (FALSE);
     ELSE RETURN(acyclic_shape_aspect_occurrence(sao, definition\shape_aspect_occurrence.definition));
     END_IF;
-  END_FUNCTION;
+  END_FUNCTION; 
 
   FUNCTION acyclic_shape_aspect_relationship (relation : shape_aspect_relationship; relatives : SET [1:?] OF shape_aspect; specific_relation : STRING):BOOLEAN;
     LOCAL
@@ -300,16 +300,15 @@ SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(
     END_REPEAT;
     RETURN (current.of_shape);
   END_FUNCTION;
-
+  
 END_SCHEMA;
 
 (*"product_property_definition_schema"
+== General
 
 The subject of the *product_property_definition_schema* is the characteristics of an object.
 
-*)
-
-(*"product_property_definition_schema.__fund_cons"
+== Fundamental concepts and assumptions
 
 This schema provides resources for the identification of:
 
@@ -353,11 +352,9 @@ A product, like glue, may have different shapes depending on its usage.
 The appearance of chair x is a unique property of that chair. The colour designating that the chair is white is a single item in a representation for the appearance property of chair x. This colour is shareable among many representations for the properties of many different objects.
 ====
 
-*)
-
-(*"product_property_definition_schema.__expressg"
 [.svgmap]
 ====
+[[product_property_definition_schemaexpg1]]
 image::product_property_definition_schemaexpg1.svg[]
 
 * <<express:shape_dimension_schema>>; 1
@@ -371,11 +368,9 @@ image::product_property_definition_schemaexpg1.svg[]
 * <<express:product_property_definition_schema>>; 9
 ====
 
-*)
-
-(*"product_property_definition_schema.__expressg"
 [.svgmap]
 ====
+[[product_property_definition_schemaexpg2]]
 image::product_property_definition_schemaexpg2.svg[]
 
 * <<express:product_property_definition_schema.characterized_definition>>; 1
@@ -447,7 +442,7 @@ The *characterized_item* type allows for the designation of an <<express:product
 *)
 
 (*"product_property_definition_schema.characterized_product_definition"
-The *characterized_product_definition* type allows for the designation of a <<express:product_definition_schema.product_definition,product_definition>>, or a <<express:product_definition_schema.product_definition_relationship,product_definition_relationship>>, or a <<express:product_definition_schema.product_definition_relationship_relationship,product_definition_relationship_relationship>>, or a <<express:product_structure_schema.product_definition_occurrence,product_definition_occurrence>> to which properties may be assigned.
+The *characterized_product_definition* type allows for the designation of a <<express:product_definition_schema.product_definition,product_definition>>, or a <<express:product_definition_schema.product_definition_relationship,product_definition_relationship>>, or a <<express:product_definition_schema.product_definition_relationship_relationship,product_definition_relationship_relationship>>, or a <<express:product_structure_schema.product_definition_occurrence,product_definition_occurrence>> to which properties may be assigned. 
 
 Selection of a <<express:product_definition_schema.product_definition_relationship,product_definition_relationship>> means that the property is applied to the <<express:product_definition_schema.product_definition_relationship.related_product_definition,related_product_definition>> attribute in the context of its <<express:product_definition_schema.product_definition_relationship.relating_product_definition,relating_product_definition>> attribute. Selection of a <<express:product_definition_schema.product_definition_relationship_relationship,product_definition_relationship_relationship>> means that the property is applied to the <<express:product_definition_schema.product_definition_relationship_relationship.related,related>> attribute in the context of its <<express:product_definition_schema.product_definition_relationship_relationship.relating,relating>> attribute.
 
@@ -479,13 +474,13 @@ The *derived_property_select* type allows for the selection of an <<express:proc
 *)
 
 (*"product_property_definition_schema.shape_definition"
-The *shape_definition* type allows for the designation of a <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>, a <<express:product_property_definition_schema.shape_aspect,shape_aspect>>, or a <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>>.
+The *shape_definition* type allows for the designation of a <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>, a <<express:product_property_definition_schema.shape_aspect,shape_aspect>>, or a <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>>. 
 
 References to a <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> are references to the relationship itself and not to one of the associated <<express:product_property_definition_schema.shape_aspect,shape_aspect>>.
 *)
 
 (*"product_property_definition_schema.characterized_object"
-A *characterized_object* is the identification of an item that has associated property information.
+A *characterized_object* is the identification of an item that has associated property information. 
 
 [NOTE]
 --
@@ -512,7 +507,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *charac
 *)
 
 (*"product_property_definition_schema.characterized_object_relationship"
-A *characterized_object_relationship* is a relationship between two instances of the entity data type <<express:product_property_definition_schema.characterized_object,characterized_object>> and provides an identification and description of this relationship.
+A *characterized_object_relationship* is a relationship between two instances of the entity data type <<express:product_property_definition_schema.characterized_object,characterized_object>> and provides an identification and description of this relationship. 
 
 [NOTE]
 --
@@ -573,7 +568,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"product_property_definition_schema.general_property"
-A *general_property* is an identification of a type of property.
+A *general_property* is an identification of a type of property. 
 
 [NOTE]
 --
@@ -619,7 +614,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *genera
 *)
 
 (*"product_property_definition_schema.general_property_association"
-A *general_property_association* is an association of an instance of one of the types listed in <<express:product_property_definition_schema.derived_property_select,derived_property_select>> with a <<express:product_property_definition_schema.general_property,general_property>>. The <<express:product_property_definition_schema.general_property,general_property>> serves as the reference definition for the considered property.
+A *general_property_association* is an association of an instance of one of the types listed in <<express:product_property_definition_schema.derived_property_select,derived_property_select>> with a <<express:product_property_definition_schema.general_property,general_property>>. The <<express:product_property_definition_schema.general_property,general_property>> serves as the reference definition for the considered property. 
 
 [example]
 ====
@@ -652,7 +647,7 @@ In the case that the *derived_definition* is of type <<express:product_property_
 *)
 
 (*"product_property_definition_schema.general_property_relationship"
-A *general_property_relationship* is a relationship between two instances of the entity data type <<express:product_property_definition_schema.general_property,general_property>> and provides an identification and description of this relationship.
+A *general_property_relationship* is a relationship between two instances of the entity data type <<express:product_property_definition_schema.general_property,general_property>> and provides an identification and description of this relationship. 
 
 [NOTE]
 --
@@ -692,7 +687,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"product_property_definition_schema.product_definition_shape"
-A *product_definition_shape* is a type of <<express:product_property_definition_schema.property_definition,property_definition>>. It identifies the shape of an object. A *product_definition_shape* identifies the shape of a <<express:product_property_definition_schema.characterized_object,characterized_object>> or of one of the types reachable as <<express:product_property_definition_schema.characterized_product_definition,characterized_product_definition>>.
+A *product_definition_shape* is a type of <<express:product_property_definition_schema.property_definition,property_definition>>. It identifies the shape of an object. A *product_definition_shape* identifies the shape of a <<express:product_property_definition_schema.characterized_object,characterized_object>> or of one of the types reachable as <<express:product_property_definition_schema.characterized_product_definition,characterized_product_definition>>. 
 
 [NOTE]
 --
@@ -719,7 +714,7 @@ The definition attribute shall not refer to a <<express:product_property_definit
 *)
 
 (*"product_property_definition_schema.property_definition"
-A *property_definition* is a property that characterizes a single object.
+A *property_definition* is a property that characterizes a single object. 
 
 [NOTE]
 --
@@ -778,7 +773,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"product_property_definition_schema.shape_aspect"
-A *shape_aspect* is an identified element of the shape of an object or is part of another *shape_aspect*.
+A *shape_aspect* is an identified element of the shape of an object or is part of another *shape_aspect*. 
 
 [NOTE]
 --
@@ -871,7 +866,7 @@ In the case that a *shape_aspect_occurrence* is defined by another *shape_aspect
 *)
 
 (*"product_property_definition_schema.shape_aspect_relationship"
-A *shape_aspect_relationship* is a relationship between two instances of the entity data type <<express:product_property_definition_schema.shape_aspect,shape_aspect>> and provides an identification and description of their relationship.
+A *shape_aspect_relationship* is a relationship between two instances of the entity data type <<express:product_property_definition_schema.shape_aspect,shape_aspect>> and provides an identification and description of their relationship. 
 
 [NOTE]
 --
@@ -974,7 +969,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"product_property_definition_schema.acyclic_characterized_object_relationship"
-The *acyclic_characterized_object_relationship* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.characterized_object,characterized_object>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:product_property_definition_schema.characterized_object_relationship,characterized_object_relationship>> or any of its subtypes.
+The *acyclic_characterized_object_relationship* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.characterized_object,characterized_object>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:product_property_definition_schema.characterized_object_relationship,characterized_object_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1002,7 +997,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"product_property_definition_schema.acyclic_general_property_relationship"
-The *acyclic_general_property_relationship* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.general_property,general_property>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:product_property_definition_schema.general_property_relationship,general_property_relationship>> or any of its subtypes.
+The *acyclic_general_property_relationship* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.general_property,general_property>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:product_property_definition_schema.general_property_relationship,general_property_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1030,7 +1025,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"product_property_definition_schema.acyclic_shape_aspect"
-The *acyclic_shape_aspect* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that are linked by the attribute <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> contains a cycle.
+The *acyclic_shape_aspect* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that are linked by the attribute <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> contains a cycle. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1049,7 +1044,7 @@ The algorithm of the function is explained in annex E.2.
 *)
 
 (*"product_property_definition_schema.acyclic_shape_aspect_occurrence"
-The *acyclic_shape_aspect_occurrence* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.shape_aspect_occurrence,shape_aspect_occurrence>> that are linked by the attribute <<express:product_property_definition_schema.shape_aspect_occurrence.definition,definition>> contains a cycle.
+The *acyclic_shape_aspect_occurrence* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.shape_aspect_occurrence,shape_aspect_occurrence>> that are linked by the attribute <<express:product_property_definition_schema.shape_aspect_occurrence.definition,definition>> contains a cycle. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1068,7 +1063,7 @@ The algorithm of the function is explained in annex E.2.
 *)
 
 (*"product_property_definition_schema.acyclic_shape_aspect_relationship"
-The *acyclic_shape_aspect_relationship* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> or any of its subtypes.
+The *acyclic_shape_aspect_relationship* function determines whether the graph of instances of the entity data type <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1096,7 +1091,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"product_property_definition_schema.get_shape_aspects"
-The *get_shape_aspects* function returns for any instance of <<express:product_property_definition_schema.characterized_definition,characterized_definition>> the set of instances of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that refer to the instance of <<express:product_property_definition_schema.characterized_definition,characterized_definition>> through an instance of <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+The *get_shape_aspects* function returns for any instance of <<express:product_property_definition_schema.characterized_definition,characterized_definition>> the set of instances of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that refer to the instance of <<express:product_property_definition_schema.characterized_definition,characterized_definition>> through an instance of <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>. 
 
 [NOTE]
 --

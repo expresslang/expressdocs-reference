@@ -43,13 +43,13 @@ SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_s
     object_role,
     role_select,
     role_association);
-
+    
   REFERENCE FROM support_resource_schema ( -- ISO 10303-41
     bag_to_set, 
     identifier, 
     label, 
     text);
-
+  
   TYPE as_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     action_request_solution);
   END_TYPE;
@@ -62,7 +62,7 @@ SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_s
   TYPE as_role_select = SELECT BASED_ON role_select WITH (
     directed_action_assignment);
   END_TYPE;
-
+  
   TYPE supported_item = SELECT (action_directive, action, action_method);
   END_TYPE;
 
@@ -148,7 +148,7 @@ SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_s
     SUBTYPE OF (executed_action);
     directive : action_directive;
   END_ENTITY;
-
+  
   	ENTITY directed_action_assignment
 		ABSTRACT SUPERTYPE ;
 		assigned_directed_action : directed_action;
@@ -254,7 +254,7 @@ END_ENTITY;
     END_REPEAT;
     RETURN (TRUE);
   END_FUNCTION;
-
+  
 FUNCTION acyclic_action_directive_relationship (relation : action_directive_relationship; relatives : SET [1:?] of action_directive; specific_relation : STRING):BOOLEAN;
 	LOCAL 
 		x : SET of action_directive_relationship;

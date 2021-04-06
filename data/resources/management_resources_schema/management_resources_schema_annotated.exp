@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N10233
 EXPRESS Source:
 ISO 10303-41 ed6 Fundamentals of product description and support - Management resources schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2019  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -33,8 +33,8 @@ SCHEMA management_resources_schema '{iso standard 10303 part(41) version(8) obje
   REFERENCE FROM application_context_schema (library_context);	-- ISO 10303-41
   REFERENCE FROM approval_schema;		-- ISO 10303-41
   REFERENCE FROM basic_attribute_schema (	-- ISO 10303-41
-    get_role,
-    object_role,
+    get_role, 
+    object_role, 
     role_association,
     role_select);
   REFERENCE FROM certification_schema; 	-- ISO 10303-41
@@ -115,7 +115,7 @@ ENTITY assignment_object_relationship;
 	relating		: assignment_object_select;
 	related			: assignment_object_select;
 	relation_type	: STRING;
- WHERE
+ WHERE 
   WR1: acyclic_assignment_object_relationship(SELF, [related], 'MANAGEMENT_RESOURCES_SCHEMA.ASSIGNMENT_OBJECT_RELATIONSHIP');
 END_ENTITY;
 
@@ -152,7 +152,7 @@ END_ENTITY;
     assigned_class : group;
     role : classification_role;
   END_ENTITY;
-
+  
   ENTITY classification_assignment_relationship;
     id 			: OPTIONAL identifier;
     description	: OPTIONAL text;
@@ -162,7 +162,7 @@ END_ENTITY;
    WHERE
     WR1: acyclic_classification_assignment_relationship(SELF, [related], 'MANAGEMENT_RESOURCES_SCHEMA.CLASSIFICATION_ASSIGNMENT_RELATIONSHIP');
   END_ENTITY;
-
+  
   ENTITY classification_role;
     name : label;
     description : OPTIONAL text;
@@ -277,7 +277,7 @@ END_ENTITY;
     SUBTYPE OF (identification_assignment);
     source : external_source;
   END_ENTITY;
-
+  
   ENTITY external_identification_assignment_relationship;
     id 			: OPTIONAL identifier;
     description	: OPTIONAL text;
@@ -532,7 +532,7 @@ FUNCTION acyclic_assignment_object_relationship (relation : assignment_object_re
   LOCAL
     x : SET OF assignment_object_relationship;
   END_LOCAL;
-
+  
   IF relation.relating IN relatives THEN
     RETURN (FALSE);
   END_IF;
@@ -599,25 +599,22 @@ END_FUNCTION;
 END_SCHEMA;
 
 (*"management_resources_schema"
+== General
 
 The subject of the *management_resources_schema* is the association of management data with other aspects of product data in specific application contexts.
 
-*)
+== Fundamental concepts and assumptions
 
-(*"management_resources_schema.__fund_cons"
-
-The relationship between management type data and other aspects of product data is application-specific. Management data may be assigned to various kinds of product data. The assignment of management data can be defined in a generic manner and then specialized according to each considered application context.
+The relationship between management type data and other aspects of product data is application-specific. Management data may be assigned to various kinds of product data. The assignment of management data can be defined in a generic manner and then specialized according to each considered application context. 
 
 [NOTE]
 --
 In the following definitions, the expression "assigned product data" means "the product data that are referenced by subtypes of the generic abstract supertypes of this schema". Use of these generic constructs is defined in annex E.5.
 --
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg1]]
 image::management_resources_schemaexpg1.svg[]
 
 * <<express:person_organization_schema>>; 1
@@ -640,11 +637,9 @@ image::management_resources_schemaexpg1.svg[]
 * <<express:effectivity_schema>>; 18
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg2]]
 image::management_resources_schemaexpg2.svg[]
 
 * <<express:management_resources_schema.mrs_role_select>>; 1
@@ -679,11 +674,9 @@ image::management_resources_schemaexpg2.svg[]
 * <<express:management_resources_schema.approval_assignment>>; 30
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg3]]
 image::management_resources_schemaexpg3.svg[]
 
 * <<express:management_resources_schema.assignment_object_select>>; 1
@@ -710,11 +703,9 @@ image::management_resources_schemaexpg3.svg[]
 * <<express:management_resources_schema.experience_type_role>>; 22
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg4]]
 image::management_resources_schemaexpg4.svg[]
 
 * <<express:management_resources_schemaexpg2>>; 1
@@ -744,11 +735,9 @@ image::management_resources_schemaexpg4.svg[]
 * <<express:management_resources_schema.event_occurrence_assignment>>; 25
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg5]]
 image::management_resources_schemaexpg5.svg[]
 
 * <<express:management_resources_schemaexpg2>>; 1
@@ -781,11 +770,9 @@ image::management_resources_schemaexpg5.svg[]
 * <<express:management_resources_schema.document_usage_constraint_assignment>>; 28
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg6]]
 image::management_resources_schemaexpg6.svg[]
 
 * <<express:support_resource_schema.label>>; 1
@@ -813,11 +800,9 @@ image::management_resources_schemaexpg6.svg[]
 * <<express:management_resources_schema.organizational_project_role>>; 23
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg7]]
 image::management_resources_schemaexpg7.svg[]
 
 * <<express:support_resource_schema.identifier>>; 1
@@ -858,11 +843,9 @@ image::management_resources_schemaexpg7.svg[]
 * <<express:management_resources_schema.person_type_definition_role>>; 36
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg8]]
 image::management_resources_schemaexpg8.svg[]
 
 * <<express:management_resources_schema.attribute_type>>; 1
@@ -913,11 +896,9 @@ image::management_resources_schemaexpg8.svg[]
 * <<express:management_resources_schema.external_referent_assignment>>; 46
 ====
 
-*)
-
-(*"management_resources_schema.__expressg"
 [.svgmap]
 ====
+[[management_resources_schemaexpg9]]
 image::management_resources_schemaexpg9.svg[]
 
 * <<express:support_resource_schema.label>>; 1
@@ -1495,7 +1476,7 @@ the <<express:date_time_schema.event_occurrence_role,event_occurrence_role>> tha
 *)
 
 (*"management_resources_schema.event_occurrence_context_assignment"
-An *event_occurrence_context_assignment* is an identification of a context for the association of an <<express:management_resources_schema.event_occurrence_assignment,event_occurrence_assignment>> with product data.
+An *event_occurrence_context_assignment* is an identification of a context for the association of an <<express:management_resources_schema.event_occurrence_assignment,event_occurrence_assignment>> with product data. 
 
 [example]
 ====
@@ -1512,7 +1493,7 @@ the <<express:date_time_schema.event_occurrence_context_role,event_occurrence_co
 *)
 
 (*"management_resources_schema.experience_assignment"
-An *experience_assignment* is a mechanism for associating an <<express:experience_schema.experience,experience>> with product data.
+An *experience_assignment* is a mechanism for associating an <<express:experience_schema.experience,experience>> with product data. 
 
 [example]
 ====
@@ -1557,7 +1538,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *experi
 *)
 
 (*"management_resources_schema.experience_type_assignment"
-An *experience_type_assignment* is a mechanism for associating an <<express:experience_schema.experience_type,experience_type>> with product data.
+An *experience_type_assignment* is a mechanism for associating an <<express:experience_schema.experience_type,experience_type>> with product data. 
 
 [example]
 ====
@@ -1736,7 +1717,7 @@ the <<express:management_resources_schema.identification_role,identification_rol
 *)
 
 (*"management_resources_schema.identification_assignment_relationship"
-An *identification_assignment_relationship* is a relationship between two instances of the entity data type <<express:management_resources_schema.identification_assignment,identification_assignment>> and provides an identification and description of their relationship.
+An *identification_assignment_relationship* is a relationship between two instances of the entity data type <<express:management_resources_schema.identification_assignment,identification_assignment>> and provides an identification and description of their relationship. 
 
 [NOTE]
 --
@@ -1810,7 +1791,7 @@ The *frame_of_reference* shall be unique.
 *)
 
 (*"management_resources_schema.location_assignment"
-A *location_assignment* is a mechanism for associating a <<express:location_schema.location,location>> with product data.
+A *location_assignment* is a mechanism for associating a <<express:location_schema.location,location>> with product data. 
 
 [example]
 ====
@@ -1839,7 +1820,7 @@ the <<express:management_resources_schema.location_role,location_role>> that spe
 *)
 
 (*"management_resources_schema.location_representation_assignment"
-A *location_representation_assignment* is a mechanism for associating a <<express:location_schema.location,location>> with its representation.
+A *location_representation_assignment* is a mechanism for associating a <<express:location_schema.location,location>> with its representation. 
 
 [example]
 ====
@@ -1943,7 +1924,7 @@ the <<express:person_organization_schema.organization_role,organization_role>> t
 *)
 
 (*"management_resources_schema.organization_type_assignment"
-An *organization_type_assignment* is a mechanism for associating an <<express:person_organization_schema.organization_type,organization_type>> with product data.
+An *organization_type_assignment* is a mechanism for associating an <<express:person_organization_schema.organization_type,organization_type>> with product data. 
 
 [example]
 ====
@@ -2051,7 +2032,7 @@ The function of the <<express:person_organization_schema.person,person>> with re
 *)
 
 (*"management_resources_schema.person_type_assignment"
-A *person_type_assignment* is a mechanism for associating a <<express:person_organization_schema.person_type,person_type>> with product data.
+A *person_type_assignment* is a mechanism for associating a <<express:person_organization_schema.person_type,person_type>> with product data. 
 
 [example]
 ====
@@ -2080,7 +2061,7 @@ the instance of the <<express:person_organization_schema.person_type,person_type
 *)
 
 (*"management_resources_schema.person_type_definition_assignment"
-A *person_type_definition_assignment* is a mechanism for associating a <<express:person_organization_schema.person_type_definition,person_type_definition>> with product data.
+A *person_type_definition_assignment* is a mechanism for associating a <<express:person_organization_schema.person_type_definition,person_type_definition>> with product data. 
 
 [example]
 ====
@@ -2141,7 +2122,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *person
 *)
 
 (*"management_resources_schema.position_in_organization_assignment"
-A *position_in_organization_assignment* is a mechanism for associating a <<express:person_organization_schema.position_in_organization,position_in_organization>> with product data.
+A *position_in_organization_assignment* is a mechanism for associating a <<express:person_organization_schema.position_in_organization,position_in_organization>> with product data. 
 
 [example]
 ====
@@ -2186,7 +2167,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *positi
 *)
 
 (*"management_resources_schema.position_in_organization_type_assignment"
-A *position_in_organization_type_assignment* is a mechanism for associating a <<express:person_organization_schema.position_in_organization_type,position_in_organization_type>> with product data.
+A *position_in_organization_type_assignment* is a mechanism for associating a <<express:person_organization_schema.position_in_organization_type,position_in_organization_type>> with product data. 
 
 [example]
 ====
@@ -2231,7 +2212,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *positi
 *)
 
 (*"management_resources_schema.qualification_assignment"
-A *qualification_assignment* is a mechanism for associating a <<express:qualifications_schema.qualification,qualification>> with product data.
+A *qualification_assignment* is a mechanism for associating a <<express:qualifications_schema.qualification,qualification>> with product data. 
 
 [example]
 ====
@@ -2276,7 +2257,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *qualif
 *)
 
 (*"management_resources_schema.qualification_type_assignment"
-A *qualification_type_assignment* is a mechanism for associating a <<express:qualifications_schema.qualification_type,qualification_type>> with product data.
+A *qualification_type_assignment* is a mechanism for associating a <<express:qualifications_schema.qualification_type,qualification_type>> with product data. 
 
 [example]
 ====
@@ -2401,7 +2382,7 @@ the <<express:date_time_schema.time_interval_role,time_interval_role>> that spec
 *)
 
 (*"management_resources_schema.acyclic_identification_assignment_relationship"
-The *acyclic_identification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.identification_assignment,identification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:management_resources_schema.identification_assignment_relationship,identification_assignment_relationship>> or any of its subtypes.
+The *acyclic_identification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.identification_assignment,identification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:management_resources_schema.identification_assignment_relationship,identification_assignment_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -2429,7 +2410,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"management_resources_schema.acyclic_assignment_object_relationship"
-The *acyclic_assignment_object_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.assignment_object_select,assignment_object_select>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:management_resources_schema.assignment_object_relationship,assignment_object_relationship>> or any of its subtypes.
+The *acyclic_assignment_object_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.assignment_object_select,assignment_object_select>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:management_resources_schema.assignment_object_relationship,assignment_object_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -2452,7 +2433,7 @@ The algorithm of the function is explained in annex E.2.
 *)
 
 (*"management_resources_schema.acyclic_classification_assignment_relationship"
-The *acyclic_classification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.classification_assignment,classification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:management_resources_schema.classification_assignment_relationship,classification_assignment_relationship>> or any of its subtypes.
+The *acyclic_classification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.classification_assignment,classification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:management_resources_schema.classification_assignment_relationship,classification_assignment_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -2475,7 +2456,7 @@ The algorithm of the function is explained in annex E.2.
 *)
 
 (*"management_resources_schema.acyclic_external_identification_assignment_relationship"
-The *acyclic_external_identification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.external_identification_assignment,external_identification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:management_resources_schema.external_identification_assignment_relationship,external_identification_assignment_relationship>> or any of its subtypes.
+The *acyclic_external_identification_assignment_relationship* function determines whether the graph of instances of the entity data type <<express:management_resources_schema.external_identification_assignment,external_identification_assignment>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:management_resources_schema.external_identification_assignment_relationship,external_identification_assignment_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

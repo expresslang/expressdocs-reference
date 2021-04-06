@@ -4,9 +4,9 @@
 
 . Update local copy of https://github.com/metanorma/iso-10303-stepmod[]
 . Copy updated annotated schema folders from iso-10303-stepmod/data/resources to annotate-express/data/resources
-. In annotate-express, `cd data/documents/resources/fundamentals_of_product_description_and_support`
+// . In annotate-express, `cd data/documents/resources/fundamentals_of_product_description_and_support`
 . `bundle update`
-. `bundle exec metanorma document.adoc`
+. `bundle exec metanorma site generate`
 
 == Design requirements
 
