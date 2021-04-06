@@ -69,7 +69,12 @@ The schemas referenced above are specified in the following parts:
 // We can get this from the version string '{iso standard 10303 part(41) ...' of the schema
 {% assign reference_froms = schema.interfaces | where: "kind", :REFERENCE %}
 {% for from in reference_froms %}
-{{ from.schema.id }}:: ISO 10303-41
+{% assign from_schema = context.schemas | where: "id", from.schema.id | first %}
+{% assign version = from_schema.version %}
+{% assign version_number = version.items[2].value %}
+{% assign version_part = version.items[3].value %}
+
+{{ from_schema.id }}:: ISO {{ version_number }}-{{ version_part }}
 {% endfor %}
 ====
 
