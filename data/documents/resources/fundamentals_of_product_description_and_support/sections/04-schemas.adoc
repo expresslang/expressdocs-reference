@@ -12,7 +12,8 @@
 
 === General
 
-<<expg.{{ schema.id }},image:expg.gif[]>>
+// NOTE: Disabled upon request: Keith Hunten at WG12/21 2021-03-31 meeting
+// <<expg.{{ schema.id }},image:expg.gif[]>>
 
 {{ schema.remarks | join: newLine }}
 
@@ -65,8 +66,6 @@ Unambiguous identification of this schema is defined in
 ====
 The schemas referenced above are specified in the following parts:
 
-// TODO: Need to identify the document part where the schema is described
-// We can get this from the version string '{iso standard 10303 part(41) ...' of the schema
 {% assign reference_froms = schema.interfaces | where: "kind", :REFERENCE %}
 {% for from in reference_froms %}
 {% assign from_schema = context.schemas | where: "id", from.schema.id | first %}
