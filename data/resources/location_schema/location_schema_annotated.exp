@@ -64,7 +64,6 @@ SCHEMA location_schema '{iso standard 10303 part(41) version(4) object(1) locati
 END_SCHEMA;
 
 (*"location_schema"
-
 The subject of the *location_schema* is the identification and characterization of different representations of places or positions in space at which something can take place or exist. 
 
 [example]

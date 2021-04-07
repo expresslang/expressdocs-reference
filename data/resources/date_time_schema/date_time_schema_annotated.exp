@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8369
 EXPRESS Source:
 ISO 10303-41 ed4 Fundamentals of product description and support - Date time schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -360,10 +360,7 @@ END_FUNCTION;
 END_SCHEMA;
 
 (*"date_time_schema"
-
-The subject of the *date_time_schema* is the definition of dates, both calendar and ordinal, time of day, combinations of date and time of day, and periods of time.
-
-*)
+The subject of the *date_time_schema* is the definition of dates, both calendar and ordinal, time of day, combinations of date and time of day, and periods of time. *)
 
 (*"date_time_schema.__fund_cons"
 
@@ -446,7 +443,7 @@ image::date_time_schemaexpg3.svg[]
 *)
 
 (*"date_time_schema.ahead_or_behind"
-The *ahead_or_behind* type is used to specify whether a given time is ahead of coordinated universal time, behind coordinated universal time or is coordinated universal time.
+The *ahead_or_behind* type is used to specify whether a given time is ahead of coordinated universal time, behind coordinated universal time or is coordinated universal time. 
 
 [NOTE]
 --
@@ -483,7 +480,7 @@ The value of the integer shall be between 1 and 31 inclusive.
 *)
 
 (*"date_time_schema.day_in_week_number"
-A *day_in_week_number* is the position of the specified day in a week as defined in ISO 8601.
+A *day_in_week_number* is the position of the specified day in a week as defined in ISO 8601. 
 
 [NOTE]
 --
@@ -496,7 +493,7 @@ The value of the integer shall be between 1 and 7 inclusive.
 *)
 
 (*"date_time_schema.day_in_year_number"
-A *day_in_year_number* is the position of the specified day in a year.
+A *day_in_year_number* is the position of the specified day in a year. 
 
 [example]
 ====
@@ -509,7 +506,7 @@ The value of the integer shall be between 1 and 366 inclusive.
 *)
 
 (*"date_time_schema.hour_in_day"
-An *hour_in_day* is the hour element of a specified time on a 24-hour clock. Midnight shall be represented by the value zero.
+An *hour_in_day* is the hour element of a specified time on a 24-hour clock. Midnight shall be represented by the value zero. 
 
 [example]
 ====
@@ -535,7 +532,7 @@ The value of the integer shall be between 0 and 59 inclusive.
 *)
 
 (*"date_time_schema.month_in_year_number"
-A *month_in_year_number* is the position of the specified month in a year as defined in ISO 8601.
+A *month_in_year_number* is the position of the specified month in a year as defined in ISO 8601. 
 
 [NOTE]
 --
@@ -566,7 +563,7 @@ The mean solar time is determined by the rotation of the earth. Leap seconds are
 *)
 
 (*"date_time_schema.week_in_year_number"
-A *week_in_year_number* is the position of the specified calendar week as defined in ISO 8601.
+A *week_in_year_number* is the position of the specified calendar week as defined in ISO 8601. 
 
 [NOTE]
 --
@@ -579,7 +576,7 @@ The value of the integer shall be between 1 and 53.
 *)
 
 (*"date_time_schema.year_number"
-A *year_number* is the year as defined in the Gregorian calendar. The *year_number* shall be completely and explicitly specified using as many digits as necessary to unambiguously convey the century and year within the century. Truncated year numbers shall not be used.
+A *year_number* is the year as defined in the Gregorian calendar. The *year_number* shall be completely and explicitly specified using as many digits as necessary to unambiguously convey the century and year within the century. Truncated year numbers shall not be used. 
 
 [NOTE]
 --
@@ -618,7 +615,7 @@ If the *month_component* is 'April', 'June', 'August', or 'November' the *day_co
 *)
 
 (*"date_time_schema.coordinated_universal_time_offset"
-A *coordinated_universal_time_offset* is the oriented offset (specified in hours and possibly minutes) from the coordinated universal time. The offset is defined in ISO 8601 The offset value shall be positive.
+A *coordinated_universal_time_offset* is the oriented offset (specified in hours and possibly minutes) from the coordinated universal time. The offset is defined in ISO 8601 The offset value shall be positive. 
 
 [NOTE]
 --
@@ -680,7 +677,7 @@ the time element of the date time combination.
 *)
 
 (*"date_time_schema.date_role"
-A *date_role* is a role for a <<express:date_time_schema.date,date>> A *date_role* is an incompletely modeled concept and requires population related entity data types to form a complete *date_role*.
+A *date_role* is a role for a <<express:date_time_schema.date,date>> A *date_role* is an incompletely modeled concept and requires population related entity data types to form a complete *date_role*. 
 
 [NOTE]
 --
@@ -762,7 +759,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"date_time_schema.event_occurrence"
-An *event_occurrence* is the fact of a transition between states at some point in time. The description of the *event_occurrrnece* can provide an implicit representation of either the state preceeding the *event_occurrence* or the state after the *event_occurrence*.
+An *event_occurrence* is the fact of a transition between states at some point in time. The description of the *event_occurrrnece* can provide an implicit representation of either the state preceeding the *event_occurrence* or the state after the *event_occurrence*. 
 
 [NOTE]
 --
@@ -810,7 +807,7 @@ the <<express:support_resource_schema.label,label>> by which the *event_occurren
 *)
 
 (*"date_time_schema.event_occurrence_relationship"
-An *event_occurrence_relationship* is a relationship between two <<express:date_time_schema.event_occurrence,event_occurrence>>s with a description of their relationship.
+An *event_occurrence_relationship* is a relationship between two <<express:date_time_schema.event_occurrence,event_occurrence>>s with a description of their relationship. 
 
 [NOTE]
 --
@@ -862,7 +859,7 @@ the <<express:support_resource_schema.label,label>> by which the *event_occurren
 *)
 
 (*"date_time_schema.local_time"
-A *local_time* is an instance of time represented on a 24-hour clock by hour, minute, and second. The instance is expressed in the local time zone and the offset with the coordinate universal time shall be specified. This concept is defined in ISO 8601.
+A *local_time* is an instance of time represented on a 24-hour clock by hour, minute, and second. The instance is expressed in the local time zone and the offset with the coordinate universal time shall be specified. This concept is defined in ISO 8601. 
 
 [NOTE]
 --
@@ -903,7 +900,7 @@ The *day_component* shall be between 1 and 365 if the <<express:date_time_schema
 *)
 
 (*"date_time_schema.relative_event_occurrence"
-A *relative_event_occurrence* is a type of <<express:date_time_schema.event_occurrence,event_occurrence>> that takes place with an offset to an <<express:date_time_schema.event_occurrence,event_occurrence>>.
+A *relative_event_occurrence* is a type of <<express:date_time_schema.event_occurrence,event_occurrence>> that takes place with an offset to an <<express:date_time_schema.event_occurrence,event_occurrence>>. 
 
 [example]
 ====
@@ -920,7 +917,7 @@ the amount of time that passes between the occurrence of the *base_event* and th
 *)
 
 (*"date_time_schema.time_interval"
-A *time_interval* is the identification of an interval of time. This concept is defined in ISO 8601.
+A *time_interval* is the identification of an interval of time. This concept is defined in ISO 8601. 
 
 [example]
 ====
@@ -946,7 +943,7 @@ the <<express:support_resource_schema.text,text>> that characterizes the *time_i
 *)
 
 (*"date_time_schema.time_interval_relationship"
-A *time_interval_relationship* is a relationship between two <<express:date_time_schema.time_interval,time_interval>>s with a description of their relationship.
+A *time_interval_relationship* is a relationship between two <<express:date_time_schema.time_interval,time_interval>>s with a description of their relationship. 
 
 [NOTE]
 --
@@ -986,7 +983,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"date_time_schema.time_interval_role"
-A *time_interval_role* is a role that may be assigned to a *time_interval* and includes a description of that role.
+A *time_interval_role* is a role that may be assigned to a *time_interval* and includes a description of that role. 
 
 [NOTE]
 --
@@ -1008,7 +1005,7 @@ the <<express:support_resource_schema.label,label>> by which the *time_interval_
 *)
 
 (*"date_time_schema.time_interval_with_bounds"
-A *time_interval_with_bounds* is a type of <<express:date_time_schema.time_interval,time_interval>>. The *time_interval_with_bounds* is bounded either on one side or both sides. If neither *secondary_bound* nor *duration* are specified, the time interval begins at the point in time identified by *primary_bound* and has no specified end point.
+A *time_interval_with_bounds* is a type of <<express:date_time_schema.time_interval,time_interval>>. The *time_interval_with_bounds* is bounded either on one side or both sides. If neither *secondary_bound* nor *duration* are specified, the time interval begins at the point in time identified by *primary_bound* and has no specified end point. 
 
 [example]
 ====
@@ -1045,7 +1042,7 @@ If *primary_bound* is not specified and *secondary_bound* is specified, *duratio
 *)
 
 (*"date_time_schema.time_role"
-A *time_role* is a definition of a role for a *local_time*.
+A *time_role* is a definition of a role for a *local_time*. 
 
 [NOTE]
 --
@@ -1114,7 +1111,7 @@ the month element of the <<express:date_time_schema.date,date>>.
 *)
 
 (*"date_time_schema.acyclic_event_occurrence_relationship"
-The *acyclic_event_occurrence_relationship* function determines whether the graph of instances of the entity data type <<express:date_time_schema.event_occurrence,event_occurrence>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:date_time_schema.event_occurrence_relationship,event_occurrence_relationship>> or any of its subtypes.
+The *acyclic_event_occurrence_relationship* function determines whether the graph of instances of the entity data type <<express:date_time_schema.event_occurrence,event_occurrence>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:date_time_schema.event_occurrence_relationship,event_occurrence_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1142,7 +1139,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"date_time_schema.acyclic_time_interval_relationship"
-The *acyclic_time_interval_relationship* function determines whether the graph of instances of the entity data type <<express:date_time_schema.time_interval,time_interval>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:date_time_schema.time_interval_relationship,time_interval_relationship>> or any of its subtypes.
+The *acyclic_time_interval_relationship* function determines whether the graph of instances of the entity data type <<express:date_time_schema.time_interval,time_interval>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either a <<express:date_time_schema.time_interval_relationship,time_interval_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -1186,7 +1183,7 @@ The *duration_is_positive* function determines whether a given <<express:date_ti
 *)
 
 (*"date_time_schema.leap_year"
-The *leap_year* function checks whether or not a particular year contains 366 days instead of 365 days, known as a leap year.
+The *leap_year* function checks whether or not a particular year contains 366 days instead of 365 days, known as a leap year. 
 
 [NOTE]
 --

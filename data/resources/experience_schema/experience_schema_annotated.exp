@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8369
 EXPRESS Source:
 ISO 10303-41 ed4 Fundamentals of product description and support - Experience schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -95,8 +95,7 @@ SCHEMA experience_schema '{iso standard 10303 part(41) version(4) object(1) expe
 END_SCHEMA;
 
 (*"experience_schema"
-
-The subject of the *experience_schema* is the identification and characterization of types of experience or particular episodes of experience gained by persons. This schema provides for the definition of generic data relating to particular episodes of experience.
+The subject of the *experience_schema* is the identification and characterization of types of experience or particular episodes of experience gained by persons. This schema provides for the definition of generic data relating to particular episodes of experience. 
 
 [example]
 ====
@@ -157,7 +156,7 @@ image::experience_schemaexpg2.svg[]
 *)
 
 (*"experience_schema.experience"
-An *experience* is an episode of practice, undertaken by a person or organization, that contributes to the accumulation of knowledge or a skill.
+An *experience* is an episode of practice, undertaken by a person or organization, that contributes to the accumulation of knowledge or a skill. 
 
 [example]
 ====
@@ -332,7 +331,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"experience_schema.acyclic_experience_relationship"
-The *acyclic_experience_relationship* function determines whether the graph of instances of the entity data type <<express:experience_schema.experience,experience>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:experience_schema.experience_relationship,experience_relationship>> or any of its subtypes.
+The *acyclic_experience_relationship* function determines whether the graph of instances of the entity data type <<express:experience_schema.experience,experience>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:experience_schema.experience_relationship,experience_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 
@@ -360,7 +359,7 @@ This function is not used in this schema. It is defined here because other ISO 1
 *)
 
 (*"experience_schema.acyclic_experience_type_relationship"
-The *acyclic_experience_type_relationship* function determines whether the graph of instances of the entity data type <<express:experience_schema.experience_type,experience_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:experience_schema.experience_type_relationship,experience_type_relationship>> or any of its subtypes.
+The *acyclic_experience_type_relationship* function determines whether the graph of instances of the entity data type <<express:experience_schema.experience_type,experience_type>> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <<express:experience_schema.experience_type_relationship,experience_type_relationship>> or any of its subtypes. 
 
 The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.
 

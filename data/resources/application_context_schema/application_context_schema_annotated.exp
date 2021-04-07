@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N10231
 EXPRESS Source:
 ISO 10303-41 ed6 Fundamentals of product description and support - Application context schema
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2019  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -31,10 +31,10 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) object(1) application_context_schema(2)}';
 
   REFERENCE FROM basic_attribute_schema ( -- ISO 10303-41
-    description_attribute,
+    description_attribute, 
     description_attribute_select,
-    get_description_value,
-    get_id_value,
+    get_description_value, 
+    get_id_value, 
     id_attribute,
     id_attribute_select);
   REFERENCE FROM date_time_schema (	-- ISO 10303-41
@@ -43,25 +43,25 @@ SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) objec
   REFERENCE FROM management_resources_schema (identification_assignment);	-- ISO 10303-41
   REFERENCE FROM person_organization_schema (organization);	-- ISO 10303-41
   REFERENCE FROM support_resource_schema (	-- ISO 10303-41
-    identifier,
-    label,
-    text);
-
+    identifier, 
+    label, 
+    text);		
+		
 
 
   TYPE acs_description_attribute_select = SELECT BASED_ON description_attribute_select WITH (
     application_context);
   END_TYPE;
-
+  
   TYPE acs_id_attribute_select = SELECT BASED_ON id_attribute_select WITH (
     application_context);
   END_TYPE;
-
+  
    TYPE exchange_identification_context_select  = SELECT (identification_assignment,organization);
 	END_TYPE;
 
 
-
+		
   ENTITY application_context;
     application : label;
   DERIVE
@@ -113,7 +113,7 @@ SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) objec
     SUBTYPE OF (application_context_element);
     life_cycle_stage : label;
   END_ENTITY;
-
+  
   ENTITY dependent_product_definition_exchange_context
     ABSTRACT SUPERTYPE
     SUBTYPE OF (product_definition_context);
@@ -134,7 +134,6 @@ SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) objec
 END_SCHEMA;
 
 (*"application_context_schema"
-
 The subject of the *application_context_schema* is the applicable usages of product data. This schema provides a mechanism for application protocols to define a frame of reference or context that applies to particular sets of product data.
 
 This schema also provides a means to identify application protocols.
@@ -275,7 +274,7 @@ A template for constraining the population of the entity data types defined in t
 *)
 
 (*"application_context_schema.application_context_element"
-An *application_context_element* is an aspect of an application context that contains information about the context in which product data is defined. This aspect contains information about the conditions in which the product data exists.
+An *application_context_element* is an aspect of an application context that contains information about the context in which product data is defined. This aspect contains information about the conditions in which the product data exists. 
 
 An *application_context_element* may be either a <<express:application_context_schema.library_context,library_context>> or a <<express:application_context_schema.product_concept_context,product_concept_context>>, or a <<express:application_context_schema.product_context,product_context>>, or a <<express:application_context_schema.product_definition_context,product_definition_context>>.
 *)
@@ -294,7 +293,7 @@ the <<express:application_context_schema.application_context,application_context
 *)
 
 (*"application_context_schema.application_context_relationship"
-An *application_context_relationship* is a relationship between two instances of <<express:application_context_schema.application_context,application_context>> and provides a description of their relationship.
+An *application_context_relationship* is a relationship between two instances of <<express:application_context_schema.application_context,application_context>> and provides a description of their relationship. 
 
 [NOTE]
 --
@@ -393,7 +392,7 @@ specifies the default language of the exchange context.
 *)
 
 (*"application_context_schema.library_context"
-A *library_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that defines a context for elements of a library.
+A *library_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that defines a context for elements of a library. 
 
 The inherited attribute <<express:application_context_schema.application_context_element.name,name>> identifies or characterizes the type of library.
 
@@ -427,7 +426,7 @@ the <<express:support_resource_schema.label,label>> that identifies the library.
 *)
 
 (*"application_context_schema.product_concept_context"
-A *product_concept_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that defines a context for a <<express:product_concept_schema.product_concept,product_concept>> (see ISO 10303-44).
+A *product_concept_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that defines a context for a <<express:product_concept_schema.product_concept,product_concept>> (see ISO 10303-44). 
 
 A *product_concept_context* represents information that relates to the characterization of potential purchasers of a product. Such information may affect the meaning and usage of the product data.
 *)
@@ -442,7 +441,7 @@ the <<express:support_resource_schema.label,label>> that identifies the kind of 
 *)
 
 (*"application_context_schema.product_context"
-A *product_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that represents life cycle independent information about a <<express:product_definition_schema.product,product>>. This information describes the discipline in which data about the product are created.
+A *product_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that represents life cycle independent information about a <<express:product_definition_schema.product,product>>. This information describes the discipline in which data about the product are created. 
 
 [NOTE]
 --
@@ -482,7 +481,7 @@ The meaning of this attribute can be defined in the annotated EXPRESS schemas th
 *)
 
 (*"application_context_schema.product_definition_context"
-A *product_definition_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that represents information about the stage in the product life cycle for which a <<express:product_definition_schema.product_definition,product_definition>> is created or used.
+A *product_definition_context* is a type of <<express:application_context_schema.application_context_element,application_context_element>> that represents information about the stage in the product life cycle for which a <<express:product_definition_schema.product_definition,product_definition>> is created or used. 
 
 [NOTE]
 --

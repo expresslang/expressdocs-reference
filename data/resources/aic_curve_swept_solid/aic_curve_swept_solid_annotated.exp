@@ -5,20 +5,20 @@ ISO 10303 TC184/SC4/WG12 N8492
 EXPRESS Source:
 ISO 10303-523 ed2 Curve swept solid - Aic curve swept solid
 
-The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"), 
 and derivations of the Schema:
 
 Copyright ISO 2014  All rights reserved
 Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
-to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
-implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing, 
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so, 
 subject to the following conditions:
 
-THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE 
 USE OR OTHER DEALINGS IN THE SCHEMA.
 
 In addition, any modified copy of the Schema shall include the following notice:
@@ -29,7 +29,7 @@ AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
 *)
 
 SCHEMA aic_curve_swept_solid '{iso standard 10303 part(523) version(2) object(1) aic_curve_swept_solid(1)}';
-
+ 
   USE FROM measure_schema; -- ISO 10303-41
 
   USE FROM geometry_schema  -- ISO 10303-42
@@ -65,7 +65,7 @@ SCHEMA aic_curve_swept_solid '{iso standard 10303 part(523) version(2) object(1)
     surface_of_linear_extrusion,
     surface_of_revolution,
     swept_surface,
-	trimmed_curve,
+	trimmed_curve,		
     toroidal_surface,
     uniform_curve,
     uniform_surface,
@@ -113,7 +113,7 @@ SCHEMA aic_curve_swept_solid '{iso standard 10303 part(523) version(2) object(1)
     SUBTYPE OF(surface_curve_swept_area_solid);
   WHERE
   WR1: ('AIC_CURVE_SWEPT_SOLID.B_SPLINE_SURFACE' IN TYPEOF(SELF.reference_surface)) AND
-         (SELF.reference_surface\b_spline_surface.u_degree = 1);
+         (SELF.reference_surface\b_spline_surface.u_degree = 1);         
   WR2: ('AIC_CURVE_SWEPT_SOLID.PCURVE' IN TYPEOF(SELF.directrix)) OR
         (('AIC_CURVE_SWEPT_SOLID.B_SPLINE_CURVE' IN TYPEOF(SELF.directrix\surface_curve.curve_3d))
          AND
@@ -125,17 +125,13 @@ END_SCHEMA; -- end AIC_CURVE_SWEPT_SOLID SCHEMA
 
 (*"aic_curve_swept_solid"
 // Note schema EXPRESS are in ..\resources\resource_name name_of_schema.xml
-
-This application interpreted construct provides a consistent set of geometric entities for the definition of a curve swept solid shape representation. Each solid in the representation is required to be a *surface_curve_swept_area_solid*, an *extruded_area_solid*, a *revolved_area_solid* or a *swept_disk_solid*. An instance of *surface curve_swept_area_solid* may be specialised as a *ruled_surface_swept_area_solid*. The highest level entity in this AIC is *curve_swept_solid_shape_representation* which is a specialised type of *shape_representation* (see ISO 10303-41). The rules on this entity ensure that the shapes included are swept solids or mapped copies of swept solids.
-
-*)
+This application interpreted construct provides a consistent set of geometric entities for the definition of a curve swept solid shape representation. Each solid in the representation is required to be a *surface_curve_swept_area_solid*, an *extruded_area_solid*, a *revolved_area_solid* or a *swept_disk_solid*. An instance of *surface curve_swept_area_solid* may be specialised as a *ruled_surface_swept_area_solid*. The highest level entity in this AIC is *curve_swept_solid_shape_representation* which is a specialised type of *shape_representation* (see ISO 10303-41). The rules on this entity ensure that the shapes included are swept solids or mapped copies of swept solids. *)
 
 (*"aic_curve_swept_solid.__fund_cons"
 
 An application protocol that uses this AIC shall ensure that the *shape_representation* entity is instantiated as a *curve_swept_solid_shape_representation*.
 
 All geometry imported into this AIC is used for the purpose of defining swept solids.
-
 // EXPRESS-G
 
 *)
@@ -168,7 +164,7 @@ image::aic_curve_swept_solidexpg2.svg[]
 *)
 
 (*"aic_curve_swept_solid.curve_swept_solid_shape_representation"
-A *curve_swept_solid_shape_representation* is a type of <<express:product_property_representation_schema.shape_representation,shape_representation>> in which the shape of a product is represented by specialisations of <<express:geometric_model_schema.swept_area_solid,swept_area_solid>> or <<express:geometric_model_schema.swept_disk_solid,swept_disk_solid>> entities.
+A *curve_swept_solid_shape_representation* is a type of <<express:product_property_representation_schema.shape_representation,shape_representation>> in which the shape of a product is represented by specialisations of <<express:geometric_model_schema.swept_area_solid,swept_area_solid>> or <<express:geometric_model_schema.swept_disk_solid,swept_disk_solid>> entities. 
 
 Each <<express:geometric_model_schema.solid_model,solid_model>> in the <<express:representation_schema.representation,representation>> is required to be a <<express:geometric_model_schema.swept_area_solid,swept_area_solid>> or a <<express:geometric_model_schema.swept_disk_solid,swept_disk_solid>>.
 
@@ -192,7 +188,7 @@ If there is a <<express:geometric_model_schema.surface_curve_swept_area_solid,su
 *)
 
 (*"aic_curve_swept_solid.ruled_surface_swept_area_solid"
-A *ruled_surface_swept_area_solid* is a type of <<express:geometric_model_schema.surface_curve_swept_area_solid,surface_curve_swept_area_solid>> in which the surface used to control the orientation of the <<express:geometric_model_schema.swept_area_solid.swept_area,swept_area>> as it is swept along the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>> is a ruled surface. The ruled surface is required to be defined as a <<express:geometry_schema.b_spline_surface,b_spline_surface>> of degree 1 in the first parameter direction.
+A *ruled_surface_swept_area_solid* is a type of <<express:geometric_model_schema.surface_curve_swept_area_solid,surface_curve_swept_area_solid>> in which the surface used to control the orientation of the <<express:geometric_model_schema.swept_area_solid.swept_area,swept_area>> as it is swept along the <<express:geometric_model_schema.surface_curve_swept_area_solid.directrix,directrix>> is a ruled surface. The ruled surface is required to be defined as a <<express:geometry_schema.b_spline_surface,b_spline_surface>> of degree 1 in the first parameter direction. 
 
 [NOTE]
 --
