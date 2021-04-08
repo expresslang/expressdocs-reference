@@ -240,7 +240,7 @@ types.
 {% for where1 in type.informal_propositions %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{type.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks | join: newLine }}
+*{{ where1.id }}*: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 
@@ -323,7 +323,7 @@ types.
 {% for where1 in entity.informal_propositions %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks | join: newLine }}
+*{{ where1.id }}*: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
@@ -492,7 +492,7 @@ types.
 {% for where1 in rule.informal_propositions %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
-{{ where1.id }}: {{ where1.remarks | join: newLine }}
+*{{ where1.id }}*: {{ where1.remarks | join: newLine }}
 {% endif %}
 
 {% endfor %}
