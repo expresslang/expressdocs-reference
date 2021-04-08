@@ -14,10 +14,10 @@ ISO 10303-11.
 {% endcapture %}
 {% for schema in context.schemas %}
 
-{% assign expg_remark = schema.remark_items | where: "id", "__expressg" | first %}
-
 // schema level anchor for EXPRESS-G diagrams
 [[expg.{{schema.id}}]]{blank}
+
+{% assign expg_remark = schema.remark_items | where: "id", "__expressg" | first %}
 
 {% for remark in expg_remark.remarks %}
 // diagram level anchor for EXPRESS-G diagrams
@@ -26,7 +26,7 @@ ISO 10303-11.
 {% assign anchors = remark | remove: "<" | remove: ">" | remove: "=" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" | remove: "0" | remove: "* " | remove: "express:" | replace: "[]", "; "| strip_newlines | split: "; " | uniq %}
 
 [[expg.{{schema.id}}.{{forloop.index}}]]
-.EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.length }}) 
+.EXPRESS-G diagram of the {{ schema.id }} ({{ forloop.index }} of {{ forloop.length }})
 {%- for anchor in anchors -%}
 {%- if forloop.index0 > 0 -%}
 ((({{ anchor | split: "." | last }},Object EXPRESS-G)))
