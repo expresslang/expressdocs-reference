@@ -13,7 +13,7 @@
 === General
 
 // NOTE: Disabled upon request: Keith Hunten at WG12/21 2021-03-31 meeting
-// <<expg.{{ schema.id }},image:expg.gif[]>>
+// === General <<expg.{{ schema.id }},image:expg.gif[]>>
 
 {{ schema.remarks | join: newLine }}
 
@@ -97,7 +97,7 @@ NOTE: See <<expg.{{ schema.id }}>> for a graphical representation of this schema
 {% for type in schema.types %}
 [[{{schema.id}}.{{type.id}}]]
 [type="express"]
-==== {{ type.id }} ((({{ type.id }},Object definition)))
+==== {{ type.id }} <<expg.{{ schema.id }},image:expg.gif[]>> ((({{ type.id }},Object definition)))
 
 {% if type.type._class == 'Expressir::Model::Types::Select' %}
 // output the boilerplate select descriptions for selects
@@ -261,7 +261,7 @@ types.
 {% for entity in schema.entities %}
 [[{{schema.id}}.{{entity.id}}]]
 [type="express"]
-==== {{ entity.id }} ((({{ entity.id }},Object definition)))
+==== {{ entity.id }} <<expg.{{ schema.id }},image:expg.gif[]>> ((({{ entity.id }},Object definition)))
 
 {{ entity.remarks | join: newLine }}
 
@@ -351,7 +351,7 @@ types.
 {% if schema.rules.size > 1 %}
 [[{{schema.id}}.{{rule.id}}]]
 [type="express"]
-==== {{ rule.id }}  ((({{ rule.id }},Object definition)))
+==== {{ rule.id }} ((({{ rule.id }},Object definition)))
 {% endif %}
 
 {{ rule.remarks | join: newLine }}
@@ -521,7 +521,7 @@ types.
 {% if schema.subtype_constraints.size > 1 %}
 [type="express"]
 [[{{schema.id}}.{{constraint.id}}]]
-==== {{ constraint.id }}  ((({{ constraint.id }},Object definition)))
+==== {{ constraint.id }} ((({{ constraint.id }},Object definition)))
 {% endif %}
 
 {{ constraint.remarks | join: newLine }}
@@ -547,7 +547,7 @@ types.
 {% for function in schema.functions %}
 [[{{schema.id}}.{{function.id}}]]
 [type="express"]
-==== {{ function.id }}  ((({{ function.id }},Object definition)))
+==== {{ function.id }} ((({{ function.id }},Object definition)))
 
 {{ function.remarks | join: newLine }}
 
@@ -678,7 +678,7 @@ types.
 {% for procedure in schema.procedures %}
 [[{{schema.id}}.{{procedure.id}}]]
 [type="express"]
-==== {{ procedure.id }}  ((({{ procedure.id }},Object definition)))
+==== {{ procedure.id }} ((({{ procedure.id }},Object definition)))
 
 {{ procedure.remarks | join: newLine }}
 
