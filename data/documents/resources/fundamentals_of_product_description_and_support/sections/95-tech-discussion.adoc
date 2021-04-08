@@ -58,7 +58,7 @@ NOTE: Calls to functions based on this template should be done as follows.
 
 *WR1*: `acyclic_object_relation (SELF, [SELF.related_object], '....' )`;
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----
@@ -116,7 +116,7 @@ It supports the description of graphs of like objects.
 
 An *object_relationship* relates two objects with a description of their relationship.
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----
@@ -156,7 +156,7 @@ The rule *attribute_x_not_allowed* enforces the restriction that the attribute x
 
 NOTE: Such a rule can only be specified in cases in which the referenced attribute is optional.
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----
@@ -179,7 +179,7 @@ The *approval_assignment* entity from the *management_resource_schema* defines a
 that is used to associate approvals with product data.
 
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----
@@ -206,7 +206,7 @@ data is to be associated with product data, in the following way:
 
 * If approvals are assigned to drawing sheet revisions and drawing revisions, the following SELECT type would be defined:
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----
@@ -219,7 +219,7 @@ END_TYPE;
 The following *applied_approval_assignment* entity could be used to associate *approval* with drawing
 sheet revisions and drawing revisions:
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----

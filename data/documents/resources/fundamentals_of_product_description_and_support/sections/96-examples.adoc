@@ -155,7 +155,8 @@ The file size will then be assigned to the documents,
 using appropriate instances of the entity data types *property_definition*, *property_definition_representation*
 and *representation*.
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 ----
 ENTITY document_file
@@ -593,7 +594,8 @@ variable as defined in ISO 13584-20 and to describe the algebraic expression tha
 
 For example, if the reference unit is a *named_unit*, the following subtype will be created:
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 ----
 ENTITY named_unit_variable
@@ -606,7 +608,8 @@ END_ENTITY;
 
 For the unit defined using the algebraic expression, the following subtype will be created:
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 ----
 ENTITY expression_conversion_based_unit
@@ -625,7 +628,8 @@ stem:[T_{f} = 1.8 x T_{c} + 32]
 
 NOTE: The instances are expressed using the notation of ISO 10303-21 [2].
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 ----
 /* definition of the unit Degree Celsius */
@@ -702,7 +706,8 @@ expressed in millimetres.
 
 NOTE: The instances are expressed using the notation of ISO 10303-21 [2].
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 ----
 #3=(NAMED_UNIT(*)SI_UNIT($,.STERADIAN.)SOLID_ANGLE_UNIT());
@@ -727,7 +732,7 @@ Such a requirement may be accomplished by a complex entity instance of a subtype
 
 An annotated EXPRESS schema that uses this part of ISO 10303 can create the following subtype to address this requirement.
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----
@@ -761,7 +766,7 @@ to identify the originator and the successor.
 In the following example, it is assumed that an annotated EXPRESS schema that uses this part of ISO 10303 has created a
 subtype of *person_assignment* called *applied_person_assignment*.
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 ----
@@ -780,7 +785,8 @@ he was later replaced by Tom Jones.
 
 NOTE: The instances are expressed using the notation of ISO 10303-21 [2].
 
-*EXPRESS specification*
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 ----
 #1 = PERSON( ‘276 32 0402', ‘Smith’, ‘Jim’, ‘$’ , ‘$’, ‘$’);
