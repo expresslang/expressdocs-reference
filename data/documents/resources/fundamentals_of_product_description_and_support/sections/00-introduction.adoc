@@ -35,14 +35,14 @@ bold typeface, the referent is the EXPRESS data type. Names of EXPRESS schemas a
 The name of an EXPRESS data type may be used to refer to the data type itself, or to an instance of the
 data type.
 The distinction between these uses is normally clear from the context.
-If there is a likelihood of ambiguity, either the phrase "entity data type" or "instance(s) of" is included in the text.
+If there is a likelihood of ambiguity, either the phrase "`entity data type`" or "`instance(s) of`" is included in the text.
 
-Double quotation marks (" ") denote quoted text. Single quotation marks (' ') denote particular text string values.
+Double quotation marks ("`{blank}`") denote quoted text. Single quotation marks ('`{blank}`') denote particular text string values.
 
 .The schemas of this part of ISO 10303
 [.svgmap]
 ====
-image::../schema_diagexpg1.gif[]
+image::../schema_diagexpg1.svg[]
 
 * <<express:group_schema>>; 1
 * <<express:qualifications_schema>>; 2
