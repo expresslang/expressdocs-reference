@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma
-  revision: 7d8a37e729d815f4f9afdf8e472e89b745ab746a
+  revision: 0e78b460765ff20e43360a940a13fe30f6cdd14a
   branch: fix/css-override
   specs:
     metanorma (1.2.8)
@@ -56,7 +56,8 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: 4905fc247d1088e787483cf88ae66296fe93110e
+  revision: f45b2cb631675135b88ce89983e422b260642a1b
+  branch: fix/scripts-html
   specs:
     metanorma-iso (1.7.4)
       isodoc (~> 1.5.0)

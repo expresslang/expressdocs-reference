@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "metanorma-cli", git: "https://github.com/metanorma/metanorma-cli"
-gem "metanorma-iso", git: "https://github.com/metanorma/metanorma-iso"
+gem "metanorma-iso", git: "https://github.com/metanorma/metanorma-iso", branch: "fix/scripts-html"
 gem "metanorma-standoc", git: "https://github.com/metanorma/metanorma-standoc"
 gem "metanorma-utils"
 gem "metanorma", git: "https://github.com/metanorma/metanorma", branch: "fix/css-override"
