@@ -99,7 +99,7 @@ NOTE: See <<expg.{{ schema.id }}>> for a graphical representation of this schema
 [type="express"]
 ==== {{ type.id }} <<expg.{{ schema.id }},image:expg.gif[]>> ((({{ type.id }},Object definition)))
 
-{% if type.type._class == 'Expressir::Model::Types::Select' %}
+{% if type.type._class == 'Expressir::Model::DataTypes::Select' %}
 // output the boilerplate select descriptions for selects
 {% if type.type.extension_type %}
 
