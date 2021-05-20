@@ -32,6 +32,8 @@
 :lutaml-express-index: schemas; schemas.yaml;
 :htmlstylesheet-override: html_override.css
 
+//:sectionsplit: true
+
 ////
 wg.number.supersedes="9562"
 checklist.internal_review="10447"
