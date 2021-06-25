@@ -25,6 +25,7 @@ manifest:
       docref:
         - fileref: document.xml
           identifier: iso10303-41
+          sectionsplit: true
     - level: attachments
       title: Attachments
       docref:
