@@ -98,6 +98,75 @@ manifest:
         - fileref: ../../../resources/support_resource_schema/support_resource_schema.exp
           identifier: support_resource_schema.exp
           attachment: true
+        - fileref: sections/schemadocs/action_schema.htm
+          identifier: action_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/application_context_schema.htm
+          identifier: application_context_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/approval_schema.htm
+          identifier: approval_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/basic_attribute_schema.htm
+          identifier: basic_attribute_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/certification_schema.htm
+          identifier: certification_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/contract_schema.htm
+          identifier: contract_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/date_time_schema.htm
+          identifier: date_time_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/document_schema.htm
+          identifier: document_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/effectivity_schema.htm
+          identifier: effectivity_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/experience_schema.htm
+          identifier: experience_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/external_reference_schema.htm
+          identifier: external_reference_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/group_schema.htm
+          identifier: group_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/language_schema.htm
+          identifier: language_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/location_schema.htm
+          identifier: location_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/management_resources_schema.htm
+          identifier: management_resources_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/measure_schema.htm
+          identifier: measure_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/person_organization_schema.htm
+          identifier: person_organization_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/product_definition_schema.htm
+          identifier: product_definition_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/product_property_definition_schema.htm
+          identifier: product_property_definition_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/product_property_representation_schema.htm
+          identifier: product_property_representation_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/qualifications_schema.htm
+          identifier: qualifications_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/security_classification_schema.htm
+          identifier: security_classification_schema.htm
+          attachment: true
+        - fileref: sections/schemadocs/support_resource_schema.htm
+          identifier: support_resource_schema.htm
+          attachment: true
 
     
     

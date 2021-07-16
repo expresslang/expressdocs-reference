@@ -1,0 +1,25 @@
+= X
+:lutaml-express-index: schemas; schemas.yaml;
+:bare: true
+:mn-document-class: iso
+:mn-output-extensions: html
+
+= Schema
+xxxx
+
+[lutaml, schemas, context, leveloffset=+1]
+---
+{% for schema in context.schemas %}
+== {{ schema.id}}
+{% if schema.id == "certification_schema" %}
+{% assign schemaname = schema.id | append: "$" | remove: "_schema$" | remove: "$" | replace: "_", " " | capitalize %}
+
+= {{schemaname }}
+
+[source%unnumbered]
+--
+{{ schema.sourcecode }}
+--
+{% endif %}
+{% endfor %}
+---
