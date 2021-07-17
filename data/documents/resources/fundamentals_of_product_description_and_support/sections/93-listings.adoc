@@ -2,10 +2,6 @@
 [appendix]
 == Computer interpretable listings
 
-////
-TODO: generate html items
-////
-
 This annex references a listing of the EXPRESS entity names and corresponding short names as specified or referenced in this part of ISO 10303. It also provides a listing of each EXPRESS schema specified in this part of ISO 10303 without comments or other explanatory text. These listings are available in computer-interpretable form in <<tablec1>> and can be found at the following URLs:
 
 Short names::	http://standards.iso.org/iso/10303/tech/short_names/short-names.txt
@@ -15,29 +11,29 @@ EXPRESS::	http://standards.iso.org/iso/10303/smrl/v8/tech/smrlv8.zip
 |===
 |HTML file	|ASCII file
 
-|action_schema.htm	|<<action_schema.exp>>
-|application_context_schema.htm	|<<application_context_schema.exp>>
-|approval_schema.htm	|<<approval_schema.exp>>
-|basic_attribute_schema.htm	|<<basic_attribute_schema.exp>>
-|certification_schema.htm	|<<certification_schema.exp>>
-|contract_schema.htm	|<<contract_schema.exp>>
-|date_time_schema.htm	|<<date_time_schema.exp>>
-|document_schema.htm	|<<document_schema.exp>>
-|effectivity_schema.htm	|<<effectivity_schema.exp>>
-|experience_schema.htm	|<<experience_schema.exp>>
-|external_reference_schema.htm	|<<external_reference_schema.exp>>
-|group_schema.htm	|<<group_schema.exp>>
-|language_schema.htm	|<<language_schema.exp>>
-|location_schema.htm	|<<location_schema.exp>>
-|management_resources_schema.htm	|<<management_resources_schema.exp>>
-|measure_schema.htm	|<<measure_schema.exp>>
-|person_organization_schema.htm	|<<person_organization_schema.exp>>
-|product_definition_schema.htm	|<<product_definition_schema.exp>>
-|product_property_definition_schema.htm	|<<product_property_definition_schema.exp>>
-|product_property_representation_schema.htm	|<<product_property_representation_schema.exp>>
-|qualifications_schema.htm	|<<qualifications_schema.exp>>
-|security_classification_schema.htm	|<<security_classification_schema.exp>>
-|support_resource_schema.htm	|<<support_resource_schema.exp>>
+|<<action_schema.htm>>	|<<action_schema.exp>>
+|<<application_context_schema.htm>>	|<<application_context_schema.exp>>
+|<<approval_schema.htm>>	|<<approval_schema.exp>>
+|<<basic_attribute_schema.htm>>	|<<basic_attribute_schema.exp>>
+|<<certification_schema.htm>>	|<<certification_schema.exp>>
+|<<contract_schema.htm>>	|<<contract_schema.exp>>
+|<<date_time_schema.htm>>	|<<date_time_schema.exp>>
+|<<document_schema.htm>>	|<<document_schema.exp>>
+|<<effectivity_schema.htm>>	|<<effectivity_schema.exp>>
+|<<experience_schema.htm>>	|<<experience_schema.exp>>
+|<<external_reference_schema.htm>>	|<<external_reference_schema.exp>>
+|<<group_schema.htm>>	|<<group_schema.exp>>
+|<<language_schema.htm>>	|<<language_schema.exp>>
+|<<location_schema.htm>>	|<<location_schema.exp>>
+|<<management_resources_schema.htm>>	|<<management_resources_schema.exp>>
+|<<measure_schema.htm>>	|<<measure_schema.exp>>
+|<<person_organization_schema.htm>>	|<<person_organization_schema.exp>>
+|<<product_definition_schema.htm>>	|<<product_definition_schema.exp>>
+|<<product_property_definition_schema.htm>>	|<<product_property_definition_schema.exp>>
+|<<product_property_representation_schema.htm>>	|<<product_property_representation_schema.exp>>
+|<<qualifications_schema.htm>>	|<<qualifications_schema.exp>>
+|<<security_classification_schema.htm>>	|<<security_classification_schema.exp>>
+|<<support_resource_schema.htm>>	|<<support_resource_schema.exp>>
 |===
 
 NOTE:  The information provided in computer-interpretable form at the above URLs is informative. The information that is contained in the body of this part of ISO 10303 is normative.
