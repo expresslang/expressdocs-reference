@@ -41,7 +41,7 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.0
 
       - name: Bundle
         run: |
@@ -66,6 +66,9 @@ jobs:
           JAVA_OPTS: "java.awt.headless=true"
         run: |
           bundle exec metanorma site generate --agree-to-terms
+
+          cd data/documents/resources/fundamentals_of_product_description_and_support
+          ./collection.sh
 
       - uses: actions/upload-artifact@master
         if: github.ref == 'refs/heads/master'
