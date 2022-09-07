@@ -1,11 +1,13 @@
 {% for schema in repo.schemas %}
-[[{{schema.id}}]]
+[[{{anchor-prefix}}{{schema.id}}]]
 [type="express-schema"]
 === {{ schema.id }}
 
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ schema.sourcecode }}
+{{ schema.source }}
 --
 
 {{ schema.remarks }}
@@ -19,19 +21,30 @@
 {{note}}
 --
 {% endfor %}
+
+{% assign example = schema.remark_items | where: "id", "__example" | first %}
+{% for example in example.remarks %}
+[example]
+--
+{{example}}
+--
+{% endfor %}
+
 {% endif %}
 
 {% if schema.constants.size > 0 %}
 ==== Constants
 
 {% for constant in schema.constants %}
-[[{{schema.id}}.{{constant.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{constant.id}}]]
 ===== {{ constant.id }}
 
-{% if constant.sourcecode %}
+{% if constant.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ constant.sourcecode  }}
+{{ constant.source  }}
 --
 {% endif %}
 
@@ -44,13 +57,15 @@
 ==== Types
 
 {% for type in schema.types %}
-[[{{schema.id}}.{{type.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{type.id}}]]
 ===== {{ type.id }}
 
-{% if type.sourcecode %}
+{% if type.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ type.sourcecode }}
+{{ type.source }}
 --
 {% endif %}
 
@@ -61,14 +76,16 @@
 ====== Items
 
 {% for item in type.items %}
-[[{{schema.id}}.{{type.id}}.{{item.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{type.id}}.{{item.id}}]]
 [level=7]
 ====== {{ item.id }}
 
-{% if item.sourcecode %}
+{% if item.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ item.sourcecode }}
+{{ item.source }}
 --
 {% endif %}
 
@@ -86,12 +103,14 @@
 ==== Entities
 
 {% for entity in schema.entities %}
-[[{{schema.id}}.{{entity.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{entity.id}}]]
 ===== {{ entity.id }}
+
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
-{{ entity.sourcecode }}
+{{ entity.source }}
 --
 
 {{ entity.remarks }}
@@ -100,14 +119,16 @@
 ====== Attributes
 
 {% for attribute in entity.attributes %}
-[[{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{entity.id}}.{{attribute.id}}]]
 [level=6]
 ====== {{ attribute.id }}
 
-{% if attribute.sourcecode %}
+{% if attribute.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ attribute.sourcecode }}
+{{ attribute.source }}
 --
 {% endif %}
 
@@ -124,13 +145,15 @@
 {% if schema.subtype_constraints.size > 0 %}
 ==== Subtype Constraints
 {% for constraint in schema.subtype_constraints %}
-[[{{schema.id}}.{{constraint.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{constraint.id}}]]
 ===== {{ constraint.id }}
 
-{% if constraint.sourcecode %}
+{% if constraint.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ constraint.sourcecode }}
+{{ constraint.source }}
 --
 {% endif %}
 
@@ -142,12 +165,14 @@
 {% if schema.functions.size > 0 %}
 ==== Functions
 {% for function in schema.functions %}
-[[{{schema.id}}.{{function.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{function.id}}]]
 ===== {{ function.id }}
+
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
-{{ function.sourcecode }}
+{{ function.source }}
 --
 
 {{ function.remarks }}
@@ -157,14 +182,16 @@
 ====== Parameters
 
 {% for parameter in function.parameters %}
-[[{{schema.id}}.{{function.id}}.{{parameter.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{function.id}}.{{parameter.id}}]]
 [level=6]
 ====== {{ parameter.id }}
 
-{% if parameter.sourcecode %}
+{% if parameter.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ parameter.sourcecode }}
+{{ parameter.source }}
 --
 {% endif %}
 
@@ -178,14 +205,16 @@
 ====== Types
 
 {% for type in function.types %}
-[[{{schema.id}}.{{function.id}}.{{type.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{function.id}}.{{type.id}}]]
 [level=6]
 ====== {{ type.id }}
 
-{% if type.sourcecode %}
+{% if type.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ type.sourcecode }}
+{{ type.source }}
 --
 {% endif %}
 
@@ -197,14 +226,16 @@
 ====== Items
 
 {% for item in type.items %}
-[[{{schema.id}}.{{function.id}}.{{type.id}}.{{item.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{function.id}}.{{type.id}}.{{item.id}}]]
 [level=8]
 ====== {{ item.id }}
 
-{% if item.sourcecode %}
+{% if item.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ item.sourcecode }}
+{{ item.source }}
 --
 {% endif %}
 
@@ -223,14 +254,16 @@
 ====== Constants
 
 {% for constant in function.constants %}
-[[{{schema.id}}.{{function.id}}.{{constant.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{function.id}}.{{constant.id}}]]
 [level=6]
 ====== {{ constant.id }}
 
-{% if constant.sourcecode %}
+{% if constant.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ constant.sourcecode }}
+{{ constant.source }}
 --
 {% endif %}
 
@@ -244,14 +277,16 @@
 ====== Variables
 
 {% for variable in function.variables %}
-[[{{schema.id}}.{{function.id}}.{{variable.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{function.id}}.{{variable.id}}]]
 [level=6]
 ====== {{ variable.id }}
 
-{% if variable.sourcecode %}
+{% if variable.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ variable.sourcecode }}
+{{ variable.source }}
 --
 {% endif %}
 
@@ -280,14 +315,16 @@
 {% assign statementid = forloop.index %}
 {% endif %}
 
-[[{{schema.id}}.{{function.id}}.{{ statementid }}]]
+[[{{anchor-prefix}}{{schema.id}}.{{function.id}}.{{ statementid }}]]
 [level=6]
 ====== {{ statementid }}
 
-{% if statement.sourcecode %}
+{% if statement.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ statement.sourcecode }}
+{{ statement.source }}
 --
 {% endif %}
 
@@ -308,13 +345,15 @@
 {% if schema.procedures.size > 0 %}
 ==== Procedures
 {% for procedure in schema.procedures %}
-[[{{schema.id}}.{{procedure.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{procedure.id}}]]
 ===== {{ procedure.id }}
 
 
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ procedure.sourcecode }}
+{{ procedure.source }}
 --
 
 {{ procedure.remarks }}
@@ -324,14 +363,16 @@
 ====== Parameters
 
 {% for parameter in procedure.parameters %}
-[[{{schema.id}}.{{procedure.id}}.{{parameter.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{procedure.id}}.{{parameter.id}}]]
 [level=6]
 ====== {{ parameter.id }}
 
-{% if parameter.sourcecode %}
+{% if parameter.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ parameter.sourcecode }}
+{{ parameter.source }}
 --
 {% endif %}
 
@@ -345,14 +386,16 @@
 ====== Types
 
 {% for type in procedure.types %}
-[[{{schema.id}}.{{procedure.id}}.{{type.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{procedure.id}}.{{type.id}}]]
 [level=6]
 ====== {{ type.id }}
 
-{% if type.sourcecode %}
+{% if type.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ type.sourcecode }}
+{{ type.source }}
 --
 {% endif %}
 
@@ -364,14 +407,16 @@
 ====== Items
 
 {% for item in type.items %}
-[[{{schema.id}}.{{procedure.id}}.{{type.id}}.{{item.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{procedure.id}}.{{type.id}}.{{item.id}}]]
 [level=8]
 ====== {{ item.id }}
 
-{% if item.sourcecode %}
+{% if item.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ item.sourcecode }}
+{{ item.source }}
 --
 {% endif %}
 
@@ -390,14 +435,16 @@
 ====== Constants
 
 {% for constant in procedure.constants %}
-[[{{schema.id}}.{{procedure.id}}.{{constant.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{procedure.id}}.{{constant.id}}]]
 [level=6]
 ====== {{ constant.id }}
 
-{% if constant.sourcecode %}
+{% if constant.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ constant.sourcecode }}
+{{ constant.source }}
 --
 {% endif %}
 
@@ -411,14 +458,16 @@
 ====== Variables
 
 {% for variable in procedure.variables %}
-[[{{schema.id}}.{{procedure.id}}.{{variable.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{procedure.id}}.{{variable.id}}]]
 [level=6]
 ====== {{ variable.id }}
 
-{% if variable.sourcecode %}
+{% if variable.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ variable.sourcecode }}
+{{ variable.source }}
 --
 {% endif %}
 
@@ -449,14 +498,16 @@
 {% assign statementid = forloop.index %}
 {% endif %}
 
-[[{{schema.id}}.{{procedure.id}}.{{statementid }}]]
+[[{{anchor-prefix}}{{schema.id}}.{{procedure.id}}.{{statementid }}]]
 [level=6]
 ====== {{ statementid }}
 
-{% if statement.sourcecode %}
+{% if statement.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ statement.sourcecode }}
+{{ statement.source }}
 --
 {% endif %}
 
@@ -475,12 +526,14 @@
 {% if schema.rules.size > 0 %}
 ==== Rules
 {% for rule in schema.rules %}
-[[{{schema.id}}.{{rule.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{rule.id}}]]
 ===== {{ rule.id }}
+
+[underline]#EXPRESS specification:#
 
 [source%unnumbered]
 --
-{{ rule.sourcecode }}
+{{ rule.source }}
 --
 
 {{ rule.remarks }}
@@ -492,14 +545,16 @@
 ====== Types
 
 {% for type in rule.types %}
-[[{{schema.id}}.{{rule.id}}.{{type.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{rule.id}}.{{type.id}}]]
 [level=6]
 ====== {{ type.id }}
 
-{% if type.sourcecode %}
+{% if type.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ type.sourcecode }}
+{{ type.source }}
 --
 {% endif %}
 
@@ -511,14 +566,16 @@
 ====== Items
 
 {% for item in type.items %}
-[[{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
 [level=8]
 ====== {{ item.id }}
 
-{% if item.sourcecode %}
+{% if item.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ item.sourcecode }}
+{{ item.source }}
 --
 {% endif %}
 
@@ -537,14 +594,16 @@
 ====== Constants
 
 {% for constant in rule.constants %}
-[[{{schema.id}}.{{rule.id}}.{{constant.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{rule.id}}.{{constant.id}}]]
 [level=6]
 ====== {{ constant.id }}
 
-{% if constant.sourcecode %}
+{% if constant.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ constant.sourcecode }}
+{{ constant.source }}
 --
 {% endif %}
 
@@ -558,14 +617,16 @@
 ====== Variables
 
 {% for variable in rule.variables %}
-[[{{schema.id}}.{{rule.id}}.{{variable.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{rule.id}}.{{variable.id}}]]
 [level=6]
 ====== {{ variable.id }}
 
-{% if variable.sourcecode %}
+{% if variable.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ variable.sourcecode }}
+{{ variable.source }}
 --
 {% endif %}
 
@@ -596,14 +657,16 @@
 {% assign statementid = forloop.index %}
 {% endif %}
 
-[[{{schema.id}}.{{rule.id}}.{{statementid }}]]
+[[{{anchor-prefix}}{{schema.id}}.{{rule.id}}.{{statementid }}]]
 [level=6]
 ====== {{ statementid }}
 
-{% if statement.sourcecode %}
+{% if statement.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ statement.sourcecode }}
+{{ statement.source }}
 --
 {% endif %}
 
@@ -623,14 +686,16 @@
 ====== Where
 
 {% for where1 in rule.where %}
-[[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
+[[{{anchor-prefix}}{{schema.id}}.{{rule.id}}.{{where1.id}}]]
 [level=6]
 ====== {{ where1.id }}
 
-{% if where1.sourcecode %}
+{% if where1.source %}
+[underline]#EXPRESS specification:#
+
 [source%unnumbered]
 --
-{{ where1.sourcecode }}
+{{ where1.source }}
 --
 {% endif %}
 

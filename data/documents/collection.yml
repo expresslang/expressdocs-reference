@@ -1,0 +1,60 @@
+directives:
+  - documents-inline
+bibdata:
+  title: LutaML Annotated EXPRESS sample collection
+  type: collection
+  docid:
+    type: iso
+    id: ISO 10303
+  copyright:
+    owner:
+      name: International Standards Organization
+      abbreviation: ISO
+    from: 2021
+
+output_folder: collection
+
+coverpage: collection_cover.html
+
+format:
+  - xml
+  - html
+  - presentation
+  - pdf
+
+manifest:
+  level: brochure
+  title: Documents
+
+  docref:
+    - fileref: express-schema-2.xml
+      identifier: ISO 10303-1
+
+    - fileref: express-schema-1.xml
+      identifier: ISO 10303-41
+
+  # # TODO, not yet supported
+  #
+  # These options needs to be supported in the core library. We aren't
+  # doing anything with this attributes on the site generation. Metanorma
+  # itself usages this internally. This could be breaking changes.
+  #
+  # # Option 1, specify built files
+  # # Option 2, specify source if not built
+  # documents:  # was `docref`
+  #   - source: si-brochure-fr.adoc
+  #     identifier: si-brochure-fr
+  #
+  #     # was `fileref`
+  #     rendered: site/documents/si-brochure-fr.xml
+  #
+  #   - identifier: si-brochure-en
+  #     source: si-brochure-en.adoc
+  #     rendered: site/documents/si-brochure-en.xml
+
+prefatory-content:
+|
+
+
+final-content:
+|
