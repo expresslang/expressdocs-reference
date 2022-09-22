@@ -1,4 +1,3 @@
-{% for schema in repo.schemas %}
 [[{{anchor-prefix}}{{schema.id}}]]
 [type="express-schema"]
 === {{ schema.id }}
@@ -20,5 +19,3 @@
 {% include "procedures", things: schema.procedures, schema_id: schema.id %}
 
 {% include "rules", things: schema.rules, schema_id: schema.id %}
-
-{% endfor %}

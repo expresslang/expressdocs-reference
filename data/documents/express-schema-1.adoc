@@ -51,7 +51,7 @@ Test definition
 
 [lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
 ----
-include::_schema.liquid[]
+include::_schemas.liquid[]
 ----
 
 [bibliography]
