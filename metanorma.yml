@@ -2,6 +2,12 @@
 metanorma:
   source:
     files:
+      - data/documents/express-schema-1.adoc
+      - data/documents/express-schema-2.adoc
+      - data/documents/express-schema-24.adoc
+      - data/documents/express-schema-3.adoc
+      - data/documents/express-schema-duplicated.adoc
+      - data/documents/express-simple-statement.adoc
       - data/documents/resources/fundamentals_of_product_description_and_support/document.adoc
 
   collection:

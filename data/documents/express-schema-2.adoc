@@ -53,12 +53,12 @@ Test definition
 
 [lutaml, ../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp, repo, leveloffset=+2]
 ---
-include::_schema.liquid[]
+include::_schemas.liquid[]
 ---
 
 
 [lutaml, ../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+2]
 ---
-include::_schema.liquid[]
+include::_schemas.liquid[]
 ---
 
