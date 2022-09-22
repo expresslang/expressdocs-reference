@@ -1,10 +1,12 @@
 {% if things.size > 0 %}
-==== Subtype Constraints
 
-{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}{% endcapture %}
+{% include "basic_title", thing_prefix: thing_prefix, anchor: "subtype_constraints", title: "Subtype Constraints", depth: depth %}
 
+{% assign sc_nested_depth = depth | plus: 1 %}
 {% for thing in things %}
-{% include "basic_thing", depth: 4, thing_prefix: thing_prefix, thing: thing %}
+
+{% include "basic_thing", thing: thing, thing_prefix: thing_prefix, depth: sc_nested_depth %}
+
 {% endfor %}
 
 {% endif %}

@@ -1,26 +1,12 @@
 {% if things.size > 0 %}
-==== Entities
 
-{% for entity in things %}
-{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{entity.id}}{% endcapture %}
+{% include "basic_title", thing_prefix: thing_prefix, anchor: "entities", title: "Entities", depth: depth %}
 
-[[{{thing_prefix}}]]
-===== {{ entity.id }}
+{% for thing in things %}
+{% assign entity_nested_depth = depth | plus: 1 %}
 
-{% include "source_code", source: entity.source %}
-
-{{ entity.remarks }}
-
-{% include "remarks", remark_items: entity.remark_items %}
-
-{% if entity.attributes.size > 0 %}
-====== Attributes
-
-{% for thing in entity.attributes %}
-{% include "basic_thing", depth: 6, thing_prefix: thing_prefix, thing: thing %}
-{% endfor %}
-
-{% endif %}
+{% include "entity", thing: thing, thing_prefix: thing_prefix, depth: entity_nested_depth %}
 
 {% endfor %}
+
 {% endif %}

@@ -7,29 +7,16 @@
 {% endfor %}
 
 {% if found %}
-====== Statements
 
-{% for statement in things %}
+{% assign statement_nested_depth = depth %}
 
-{% if statement.remarks %}
+{% include "basic_title", thing_prefix: thing_prefix, anchor: "statements", title: "Statements", depth: statement_nested_depth %}
 
-{% if statement.id %}
-{% assign statementid = statement.id %}
-{% else %}
-{% assign statementid = forloop.index %}
-{% endif %}
+{% for thing in things %}
+{% assign ss_nested_depth = statement_nested_depth | plus: 1 %}
 
-[[{{thing_prefix}}.{{statementid}}]]
-[level=6]
-====== {{ statementid }}
+{% include "statement", thing: thing, thing_prefix: thing_prefix, depth: ss_nested_depth %}
 
-{% include "source_code", source: statement.source %}
-
-{{ statement.remarks }}
-
-{% include "remarks", remark_items: statement.remark_items %}
-
-{% endif %}
 {% endfor %}
 
 {% endif %}

@@ -1,17 +1,4 @@
-{% if depth %}
-{% assign nested_depth = depth | plus: 1 %}
-{% if nested_depth > 6 %}
-{% capture equalsigns %}======{% endcapture %}
-{% else %}
-{% capture equalsigns %}{% for count in (1..nested_depth) %}={% endfor %}{% endcapture %}
-{% endif %}
-{% endif %}
-[[{{thing_prefix}}.{{thing.id}}]]
-[level={{nested_depth}}]
-{{equalsigns}} {{ thing.id }}
 
-{% include "source_code", source: thing.source %}
+{% include "basic_title", thing_prefix: thing_prefix, anchor: thing.id, title: thing.id, depth: depth %}
 
-{{ thing.remarks }}
-
-{% include "remarks", remark_items: thing.remark_items %}
+{% include "body", thing: thing %}

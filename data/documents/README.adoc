@@ -18,7 +18,7 @@ of the resulting ISO standards:
 
 * `express-schema-3.adoc`: demonstrates inclusion of two Annotated EXPRESS schemas using a single inclusion block
 
-* `express-schema-24.adoc`: demonstrates incusion of 24 Annotated EXPRESS schemas using a single inclusion block
+* `express-schema-24.adoc`: demonstrates inclusion of 24 Annotated EXPRESS schemas using a single inclusion block
 
 * `express-schema-duplicated.adoc`: demonstrates how two duplicated Annotated EXPRESS blocks can co-exist with a different prefix
 
