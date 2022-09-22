@@ -1,0 +1,54 @@
+== SMRL prototype with Annotated EXPRESS
+
+=== Purpose
+
+This prototype is developed using Metanorma to create model-driven documentation
+via Annotated EXPRESS.
+
+=== Structure
+
+The structure is as follows.
+
+The following Metanorma AsciiDoc files are used to demonstrate representation
+of the resulting ISO standards:
+
+* `express-schema-1.adoc`: demonstrates inclusion of one Annotated EXPRESS schema
+
+* `express-schema-2.adoc`: demonstrates inclusion of two Annotated EXPRESS schemas using separate inclusion blocks
+
+* `express-schema-3.adoc`: demonstrates inclusion of two Annotated EXPRESS schemas using a single inclusion block
+
+* `express-schema-24.adoc`: demonstrates incusion of 24 Annotated EXPRESS schemas using a single inclusion block
+
+* `express-schema-duplicated.adoc`: demonstrates how two duplicated Annotated EXPRESS blocks can co-exist with a different prefix
+
+* `express-simple-statement.adoc`: demonstrates the simplest LutaML statement that can iterate through a set of Annotated EXPRESS schemas
+
+=== Templates
+
+The files are built on top of a set of Liquid templates that are used by
+Metanorma.
+
+* Root template: `_schema.liquid` is the root for a set of schemas (it reads from `repo.schemas`)
+
+* Base templates:
+
+** `_source_code.liquid` renders a block of EXPRESS code with the line "EXPRESS Specification:"
+
+** `_remarks.liquid` renders the `__note` and `__express` annotations provided as Annotated EXPRESS
+
+* Collection templates:
+
+** `_types.liquid` renders a subclause about "Types" and its constituents.
+
+** `_entities.liquid` renders a subclause about "Entities" and Attributes.
+
+** `_subtype_constraints.liquid` renders a subclause about "Subtype Constraints".
+
+** `_functions.liquid` renders a subclause about "Functions" and its constituents.
+
+** `_procedures.liquid` renders a subclause about "Procedures" and its constituents.
+
+** `_rules.liquid` renders a subclause about "Rules" (Where, Informal Propositions), and its constituents.
+
+The collection templates at the end also call the base templates.
