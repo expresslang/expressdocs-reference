@@ -1,0 +1,87 @@
+{% if things.size > 0 %}
+==== Rules
+
+{% for rule in things %}
+[[{{anchor-prefix}}{{schema_id}}.{{rule.id}}]]
+===== {{ rule.id }}
+
+{% include "source_code", source: rule.source %}
+
+{{ rule.remarks }}
+
+{% include "remarks", remark_items: rule.remark_items %}
+
+
+{% if rule.types.size > 0 %}
+====== Types
+
+{% for type in rule.types %}
+[[{{anchor-prefix}}{{schema_id}}.{{rule.id}}.{{type.id}}]]
+[level=6]
+====== {{ type.id }}
+
+{% include "source_code", source: type.source %}
+
+{{ type.remarks }}
+
+{% include "remarks", remark_items: type.remark_items %}
+
+
+
+{% if type.items.size > 0 %}
+[level=7]
+====== Items
+
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{rule.id}}.{{type.id}}{% endcapture %}
+
+{% for thing in type.items %}
+{% include "basic_thing", depth: 7, thing_prefix: thing_prefix, thing: thing %}
+{% endfor %}
+
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+
+{% if rule.constants.size > 0 %}
+====== Constants
+
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{rule.id}}{% endcapture %}
+
+{% for thing in rule.constants %}
+{% include "basic_thing", depth: 5, thing_prefix: thing_prefix, thing: thing %}
+{% endfor %}
+
+{% endif %}
+
+
+{% if rule.variables.size > 0 %}
+====== Variables
+
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{rule.id}}{% endcapture %}
+
+{% for thing in rule.variables %}
+{% include "basic_thing", depth: 5, thing_prefix: thing_prefix, thing: thing %}
+{% endfor %}
+
+{% endif %}
+
+
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{rule.id}}{% endcapture %}
+{% include "statements", thing_prefix: thing_prefix, things: rule.statements %}
+
+
+{% if rule.where.size > 0 %}
+====== Where
+
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{rule.id}}{% endcapture %}
+
+{% for thing in procedure.variables %}
+{% include "basic_thing", depth: 5, thing_prefix: thing_prefix, thing: thing %}
+{% endfor %}
+
+{% endif %}
+
+{% endfor %}
+{% endif %}

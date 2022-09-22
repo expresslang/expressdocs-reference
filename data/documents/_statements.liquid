@@ -1,0 +1,35 @@
+
+{% assign found = false %}
+{% for statement in things %}
+{% if statement.remarks %}
+{% assign found = true %}
+{% endif %}
+{% endfor %}
+
+{% if found %}
+====== Statements
+
+{% for statement in things %}
+
+{% if statement.remarks %}
+
+{% if statement.id %}
+{% assign statementid = statement.id %}
+{% else %}
+{% assign statementid = forloop.index %}
+{% endif %}
+
+[[{{thing_prefix}}.{{statementid}}]]
+[level=6]
+====== {{ statementid }}
+
+{% include "source_code", source: statement.source %}
+
+{{ statement.remarks }}
+
+{% include "remarks", remark_items: statement.remark_items %}
+
+{% endif %}
+{% endfor %}
+
+{% endif %}

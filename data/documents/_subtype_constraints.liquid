@@ -1,0 +1,10 @@
+{% if things.size > 0 %}
+==== Subtype Constraints
+
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}{% endcapture %}
+
+{% for thing in things %}
+{% include "basic_thing", depth: 4, thing_prefix: thing_prefix, thing: thing %}
+{% endfor %}
+
+{% endif %}

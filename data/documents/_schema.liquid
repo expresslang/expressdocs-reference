@@ -1,0 +1,24 @@
+{% for schema in repo.schemas %}
+[[{{anchor-prefix}}{{schema.id}}]]
+[type="express-schema"]
+=== {{ schema.id }}
+
+{% include "source_code", source: schema.source %}
+
+{{ schema.remarks }}
+
+{% include "remarks", remark_items: schema.remark_items %}
+
+{% include "types", things: schema.types, schema_id: schema.id %}
+
+{% include "entities", things: schema.entities, schema_id: schema.id %}
+
+{% include "subtype_constraints", things: schema.subtype_constraints, schema_id: schema.id %}
+
+{% include "functions", things: schema.functions, schema_id: schema.id %}
+
+{% include "procedures", things: schema.procedures, schema_id: schema.id %}
+
+{% include "rules", things: schema.rules, schema_id: schema.id %}
+
+{% endfor %}

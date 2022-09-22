@@ -51,13 +51,13 @@ Test definition
 
 [lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
 ---
-include::_schema_basic.liquid[]
+include::_schema.liquid[]
 ---
 
 [lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
 ---
 {% assign anchor-prefix = "a-" %}
-include::_schema_basic.liquid[]
+include::_schema.liquid[]
 ---
 
 [bibliography]

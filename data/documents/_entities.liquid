@@ -1,0 +1,26 @@
+{% if things.size > 0 %}
+==== Entities
+
+{% for entity in things %}
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{entity.id}}{% endcapture %}
+
+[[{{thing_prefix}}]]
+===== {{ entity.id }}
+
+{% include "source_code", source: entity.source %}
+
+{{ entity.remarks }}
+
+{% include "remarks", remark_items: entity.remark_items %}
+
+{% if entity.attributes.size > 0 %}
+====== Attributes
+
+{% for thing in entity.attributes %}
+{% include "basic_thing", depth: 6, thing_prefix: thing_prefix, thing: thing %}
+{% endfor %}
+
+{% endif %}
+
+{% endfor %}
+{% endif %}

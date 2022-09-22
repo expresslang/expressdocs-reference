@@ -1,0 +1,28 @@
+
+{% if things.size > 0 %}
+==== Types
+
+{% for type in things %}
+{% capture thing_prefix %}{{anchor-prefix}}{{schema_id}}.{{type.id}}{% endcapture %}
+
+[[{{thing_prefix}}]]
+===== {{ type.id }}
+
+{% include "source_code", source: type.source %}
+
+{{ type.remarks }}
+
+{% include "remarks", remark_items: type.remark_items %}
+
+{% if type.items.size > 0 %}
+[level=6]
+====== Items
+
+{% for thing in type.items %}
+{% include "basic_thing", depth: 6, thing_prefix: thing_prefix, thing: thing %}
+{% endfor %}
+
+{% endif %}
+
+{% endfor %}
+{% endif %}
