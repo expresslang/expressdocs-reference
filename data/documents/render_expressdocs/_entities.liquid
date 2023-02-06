@@ -1,6 +1,7 @@
 {% if things.size > 0 %}
+{% assign entities_title = schema_id | append: " entity definitions" %}
 
-{% include "basic_title", thing_prefix: thing_prefix, anchor: "entities", title: "Entities", depth: depth %}
+{% include "basic_title", thing_prefix: thing_prefix, anchor: "entities", title: entities_title, depth: depth %}
 
 {% for thing in things %}
 {% assign entity_nested_depth = depth | plus: 1 %}

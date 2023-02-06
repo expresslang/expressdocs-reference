@@ -1,6 +1,7 @@
 {% if things.size > 0 %}
+{% assign types_title = schema_id | append: " type definitions" %}
 
-{% include "basic_title", thing_prefix: thing_prefix, anchor: "types", title: "Types", depth: depth %}
+{% include "basic_title", thing_prefix: thing_prefix, anchor: "types", title: types_title, depth: depth %}
 
 {% for thing in things %}
 {% assign type_nested_depth = depth | plus: 1 %}

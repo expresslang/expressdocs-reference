@@ -1,0 +1,13 @@
+{% if things.size > 0 %}
+{% assign fc_nested_depth = depth %}
+
+{% include "basic_title", thing_prefix: thing_prefix, anchor: "constants", title: "Constants", depth: fc_nested_depth %}
+
+{% for thing in things %}
+{% assign fcc_nested_depth = fc_nested_depth | plus: 1 %}
+
+{% include "basic_thing", thing: thing, thing_prefix: thing_prefix, depth: fcc_nested_depth %}
+
+{% endfor %}
+
+{% endif %}
