@@ -1,0 +1,1478 @@
+(*
+$Id: shape_aspect_definition_schema.exp,v 1.70 2021/08/26 12:27:29 tom Exp $
+ISO 10303 TC184/SC4/WG12 N10695
+
+EXPRESS Source:
+ISO 10303-47 ed5 Shape variation tolerances - Shape aspect definition schema
+
+The following permission notice and disclaimer shall be included in all copies of this EXPRESS schema ("the Schema"),
+and derivations of the Schema:
+
+Copyright ISO 2021 All rights reserved
+Permission is hereby granted, free of charge in perpetuity, to any person obtaining a copy of the Schema,
+to use, copy, modify, merge and distribute free of charge, copies of the Schema for the purposes of developing,
+implementing, installing and using software based on the Schema, and to permit persons to whom the Schema is furnished to do so,
+subject to the following conditions:
+
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE
+USE OR OTHER DEALINGS IN THE SCHEMA.
+
+In addition, any modified copy of the Schema shall include the following notice:
+
+THIS SCHEMA HAS BEEN MODIFIED FROM THE SCHEMA DEFINED IN
+ISO 10303-47 ed5 Shape variation tolerances - Shape aspect definition schema
+AND SHOULD NOT BE INTERPRETED AS COMPLYING WITH THAT STANDARD
+*)
+
+SCHEMA shape_aspect_definition_schema '{iso standard 10303 part(47) version(5) object(1) shape_aspect_definition_schema(1)}';
+
+REFERENCE FROM geometry_schema   -- ISO 10303-42
+  (axis2_placement,
+   cartesian_point,
+   direction,
+   geometric_representation_context,
+   line,
+   placement,
+   plane);
+
+REFERENCE FROM measure_schema   -- ISO 10303-41
+  (length_measure_with_unit,
+   measure_with_unit);
+
+REFERENCE FROM product_definition_schema -- ISO 10303-41
+  (product_definition);
+
+REFERENCE FROM product_property_definition_schema   -- ISO 10303-41
+  (characterized_object,
+   product_definition_shape,
+   property_definition,
+   shape_aspect,
+   shape_aspect_occurrence,
+   shape_aspect_relationship);
+
+REFERENCE FROM product_property_representation_schema   -- ISO 10303-41
+  (shape_representation);
+
+REFERENCE FROM qualified_measure_schema   -- ISO 10303-45
+  (descriptive_representation_item,
+   measure_representation_item);
+
+REFERENCE FROM representation_schema   -- ISO 10303-43
+  (representation,
+   using_representations);
+
+REFERENCE FROM shape_dimension_schema   -- ISO 10303-47
+  (dimensional_location,
+   dimensional_size);
+
+REFERENCE FROM support_resource_schema   -- ISO 10303-41
+  (bag_to_set,
+   label,
+   identifier);
+
+TYPE common_datum_list = LIST[2:?] OF datum_reference_element;
+WHERE
+  WR1: SIZEOF( QUERY(dre <* SELF | dre\shape_aspect.of_shape <> SELF[1]\shape_aspect.of_shape)) = 0;
+END_TYPE;
+
+TYPE datum_or_common_datum = SELECT
+   (common_datum_list,
+    datum);
+END_TYPE;
+
+TYPE datum_reference_modifier = EXTENSIBLE SELECT
+   (datum_reference_modifier_with_value,
+    simple_datum_reference_modifier);
+END_TYPE;
+
+TYPE datum_reference_modifier_type = EXTENSIBLE ENUMERATION OF
+   (circular_or_cylindrical,
+    spherical,
+    distance,
+    projected);
+END_TYPE;
+
+TYPE limit_condition = ENUMERATION OF
+   (maximum_material_condition,
+    least_material_condition,
+    regardless_of_feature_size);
+END_TYPE;
+
+TYPE shape_aspect_or_feature_definition = SELECT
+   (feature_definition,
+    shape_aspect);
+END_TYPE;
+
+TYPE shape_representation_with_parameters_items = EXTENSIBLE GENERIC_ENTITY SELECT
+   (descriptive_representation_item,
+    direction,
+    measure_representation_item,
+    placement);
+END_TYPE;
+
+TYPE simple_datum_reference_modifier = EXTENSIBLE ENUMERATION OF
+   (free_state,
+    basic,
+    translation,
+    least_material_requirement,
+    maximum_material_requirement,
+    point,
+    line,
+    plane,
+    orientation,
+    any_cross_section,
+    any_longitudinal_section,
+    contacting_feature,
+    distance_variable,
+    degree_of_freedom_constraint_x,
+    degree_of_freedom_constraint_y,
+    degree_of_freedom_constraint_z,
+    degree_of_freedom_constraint_u,
+    degree_of_freedom_constraint_v,
+    degree_of_freedom_constraint_w,
+    minor_diameter,
+    major_diameter,
+    pitch_diameter);
+END_TYPE;
+
+ENTITY all_around_shape_aspect
+  SUBTYPE OF (continuous_shape_aspect);
+END_ENTITY;
+
+ENTITY apex
+  SUBTYPE OF (derived_shape_aspect);
+END_ENTITY;
+
+ENTITY between_shape_aspect
+  SUBTYPE OF (continuous_shape_aspect);
+ WHERE
+  WR1: SIZEOF(query(sar <* SELF\composite_shape_aspect.component_relationships |
+               sar\shape_aspect_relationship.name = 'start feature')) = 1;
+  WR2: SIZEOF(query(sar <* SELF\composite_shape_aspect.component_relationships |
+               sar\shape_aspect_relationship.name = 'end feature')) = 1;
+END_ENTITY;
+
+ENTITY centre_of_symmetry
+  SUBTYPE OF (derived_shape_aspect);
+END_ENTITY;
+
+ENTITY common_datum
+  SUBTYPE OF (composite_shape_aspect, datum);
+WHERE
+  WR1: SIZEOF (SELF\composite_shape_aspect.component_relationships) = 2;
+  WR2: SIZEOF (QUERY ( sar <* SELF\composite_shape_aspect.component_relationships| NOT (('SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM' IN TYPEOF (sar.related_shape_aspect)) AND NOT ('SHAPE_ASPECT_DEFINITION_SCHEMA.COMMON_DATUM' IN TYPEOF (sar.related_shape_aspect))) )) = 0;
+END_ENTITY;
+
+ENTITY composite_group_shape_aspect
+  SUBTYPE OF (composite_shape_aspect);
+END_ENTITY;
+
+ENTITY composite_shape_aspect
+  SUPERTYPE OF (ONEOF (continuous_shape_aspect,
+                       common_datum,
+                       composite_group_shape_aspect))
+  SUBTYPE OF (shape_aspect);
+INVERSE
+  component_relationships : SET[2:?] OF shape_aspect_relationship FOR relating_shape_aspect;
+END_ENTITY;
+
+ENTITY contacting_feature
+  SUBTYPE OF (shape_aspect);
+WHERE
+  WR1: SELF\shape_aspect.product_definitional = FALSE;
+END_ENTITY;
+
+ENTITY continuous_shape_aspect
+  SUPERTYPE OF ( ONEOF (between_shape_aspect, all_around_shape_aspect) )
+  SUBTYPE OF (composite_shape_aspect);
+END_ENTITY;
+
+ENTITY datum
+  SUBTYPE OF (shape_aspect);
+  identification : identifier;
+INVERSE
+  established_by_relationships : SET[1:?] OF shape_aspect_relationship FOR related_shape_aspect;
+UNIQUE
+  UR1: identification,SELF\shape_aspect.of_shape;
+WHERE
+  WR1: ('SHAPE_ASPECT_DEFINITION_SCHEMA.COMMON_DATUM' IN TYPEOF(SELF))
+   XOR ((SIZEOF(QUERY(x <* SELF\datum.established_by_relationships |
+          SIZEOF(['SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM_FEATURE',
+             'SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM_TARGET'] *
+           TYPEOF(x\shape_aspect_relationship.relating_shape_aspect)) = 1)) >= 1));
+  WR2: SIZEOF(QUERY(x <* SELF\datum.established_by_relationships |
+          ('SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM_FEATURE' IN TYPEOF(x\shape_aspect_relationship.relating_shape_aspect)))) <= 1;
+  WR3: SELF\shape_aspect.product_definitional = FALSE;
+  WR4: SELF\shape_aspect.name = '';
+END_ENTITY;
+
+ENTITY datum_feature
+  SUPERTYPE OF (ONEOF (dimensional_location_with_datum_feature, dimensional_size_with_datum_feature))
+  SUBTYPE OF (shape_aspect);
+INVERSE
+  feature_basis_relationship : SET[1:?] OF shape_aspect_relationship FOR relating_shape_aspect;
+WHERE
+  WR1: SIZEOF(QUERY(sar <* SELF\datum_feature.feature_basis_relationship | ('SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM' IN TYPEOF (sar\shape_aspect_relationship.related_shape_aspect)))) = 1;
+  WR2: SELF\shape_aspect.product_definitional = TRUE;
+END_ENTITY;
+
+ENTITY datum_reference;
+  precedence : INTEGER;
+  referenced_datum : datum;
+WHERE
+  WR1: precedence > 0;
+END_ENTITY;
+
+ENTITY datum_reference_compartment
+  SUBTYPE OF (general_datum_reference);
+INVERSE
+  owner : datum_system FOR constituents;
+END_ENTITY;
+
+ENTITY datum_reference_element
+  SUBTYPE OF (general_datum_reference);
+DERIVE
+  owner : general_datum_reference := sts_get_general_datum_reference(SELF);
+WHERE
+  WR1: SELF <> owner;
+  WR2: EXISTS(owner);
+  WR3: SELF\shape_aspect.of_shape = owner\shape_aspect.of_shape;
+END_ENTITY;
+
+ENTITY datum_reference_modifier_with_value;
+  modifier_type : datum_reference_modifier_type;
+  modifier_value : length_measure_with_unit;
+WHERE
+  WR1: modifier_value\measure_with_unit.value_component > 0.0;
+END_ENTITY;
+
+ENTITY datum_system
+  SUBTYPE OF (shape_aspect);
+  constituents : LIST[1:3] OF UNIQUE datum_reference_compartment;
+UNIQUE
+  UR1: SELF\shape_aspect.of_shape,SELF\shape_aspect.name;
+WHERE
+  WR1: SELF\shape_aspect.product_definitional = FALSE;
+END_ENTITY;
+
+ENTITY datum_target
+  SUBTYPE OF (shape_aspect);
+  target_id : identifier;
+DERIVE
+  the_datum : SET [1:?] OF datum := QUERY(sar <* SELF\datum_target.target_basis_relationship | ('SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM' IN TYPEOF (sar\shape_aspect_relationship.related_shape_aspect)));
+  combined_datum_target_string : string := the_datum[1]\datum.identification + target_id;
+INVERSE
+  target_basis_relationship : SET[1:?] OF shape_aspect_relationship FOR relating_shape_aspect;
+UNIQUE
+  UR1: combined_datum_target_string, self\shape_aspect.of_shape;
+WHERE
+  WR1: SIZEOF(the_datum) = 1;
+  WR2: SELF\shape_aspect.product_definitional = TRUE;
+  WR3: 0 < value(target_id);
+  WR4: SELF\shape_aspect.name = '';
+  WR5: NOT EXISTS(SELF\shape_aspect.description);
+END_ENTITY;
+
+ENTITY derived_shape_aspect
+  SUPERTYPE OF (ONEOF (apex,
+                       centre_of_symmetry,
+                       geometric_alignment,
+                       geometric_contact,
+                       geometric_intersection,
+                       parallel_offset,
+                       perpendicular_to,
+                       extension,
+                       tangent))
+  SUBTYPE OF (shape_aspect);
+INVERSE
+  deriving_relationships : SET[1:?] OF shape_aspect_deriving_relationship FOR relating_shape_aspect;
+END_ENTITY;
+
+ENTITY dimensional_location_with_datum_feature
+  SUBTYPE OF (datum_feature, dimensional_location);
+END_ENTITY;
+
+ENTITY dimensional_size_with_datum_feature
+  SUBTYPE OF (datum_feature, dimensional_size);
+  WHERE
+   WR1: SELF\dimensional_size.applies_to :=: SELF;
+END_ENTITY;
+
+ENTITY extension
+  SUBTYPE OF (derived_shape_aspect);
+WHERE
+  WR1: SIZEOF (SELF\derived_shape_aspect.deriving_relationships)= 1;
+END_ENTITY;
+
+ENTITY face_surface_shape_aspect
+  SUBTYPE OF (shape_aspect);
+WHERE
+  WR1: 'PRODUCT_DEFINITION_SCHEMA.PRODUCT_DEFINITION' IN TYPEOF (SELF\shape_aspect.of_shape\property_definition.definition);
+  WR2: SELF\shape_aspect.product_definitional;
+--IP1 : A face_surface_shape_aspect shall be the identification of a face_surface in a geometric model of the product.
+--IP2 : A face_surface_shape_aspect shall not be in a complex instance with any other subtype of shape_aspect.
+END_ENTITY;
+
+ENTITY feature_definition
+  SUBTYPE OF (characterized_object);
+END_ENTITY;
+
+ENTITY general_datum_reference
+  ABSTRACT SUPERTYPE OF (ONEOF (datum_reference_compartment,
+                                datum_reference_element))
+  SUBTYPE OF (shape_aspect);
+  base : datum_or_common_datum;
+  modifiers : OPTIONAL SET[1:?] OF datum_reference_modifier;
+WHERE
+  WR1: SELF\shape_aspect.name = '';
+  WR2: NOT EXISTS(SELF\shape_aspect.description);
+  WR3: NOT EXISTS(SELF\shape_aspect.id);
+  WR4: SELF\shape_aspect.product_definitional = FALSE;
+  WR5: NOT('SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM' IN TYPEOF(base)) OR (SELF\shape_aspect.of_shape = base\shape_aspect.of_shape);
+  WR6: NOT('SHAPE_ASPECT_DEFINITION_SCHEMA.COMMON_DATUM_LIST' IN TYPEOF(base)) OR (SELF\shape_aspect.of_shape = base[1]\shape_aspect.of_shape);
+END_ENTITY;
+
+ENTITY geometric_alignment
+  SUBTYPE OF (derived_shape_aspect);
+WHERE
+  WR1: SIZEOF (SELF\derived_shape_aspect.deriving_relationships)> 1;
+END_ENTITY;
+
+ENTITY geometric_contact
+  SUBTYPE OF (derived_shape_aspect);
+WHERE
+  WR1: SIZEOF (SELF\derived_shape_aspect.deriving_relationships)= 2;
+END_ENTITY;
+
+ENTITY geometric_intersection
+  SUBTYPE OF (derived_shape_aspect);
+WHERE
+  WR1: SIZEOF (SELF\derived_shape_aspect.deriving_relationships)> 1;
+END_ENTITY;
+
+ENTITY instanced_feature
+  SUBTYPE OF (feature_definition, shape_aspect);
+WHERE
+  WR1: 'PRODUCT_DEFINITION_SCHEMA.PRODUCT_DEFINITION' IN TYPEOF (SELF.of_shape.definition);
+  WR2: SELF.product_definitional;
+END_ENTITY;
+
+ENTITY parallel_offset
+  SUBTYPE OF (derived_shape_aspect);
+  offset : measure_with_unit;
+WHERE
+  WR1: SIZEOF (SELF\derived_shape_aspect.deriving_relationships)= 1;
+END_ENTITY;
+
+ENTITY perpendicular_to
+  SUBTYPE OF (derived_shape_aspect);
+WHERE
+  WR1: SIZEOF (SELF\derived_shape_aspect.deriving_relationships)= 1;
+END_ENTITY;
+
+ENTITY referenced_modified_datum
+  SUBTYPE OF (datum_reference);
+  modifier : limit_condition;
+END_ENTITY;
+
+ENTITY shape_aspect_deriving_relationship
+  SUBTYPE OF (shape_aspect_relationship);
+  SELF\shape_aspect_relationship.relating_shape_aspect : derived_shape_aspect;
+END_ENTITY;
+
+ENTITY shape_representation_with_parameters
+  SUBTYPE OF (shape_representation);
+  SELF\representation.items : SET[1:?] OF shape_representation_with_parameters_items;
+END_ENTITY;
+
+ENTITY symmetric_shape_aspect
+  SUBTYPE OF (shape_aspect);
+INVERSE
+  basis_relationships : SET[1:?] OF shape_aspect_deriving_relationship FOR related_shape_aspect;
+END_ENTITY;
+
+ENTITY surface_shape_aspect
+  SUBTYPE OF (shape_aspect);
+WHERE
+  WR1: 'PRODUCT_DEFINITION_SCHEMA.PRODUCT_DEFINITION' IN TYPEOF (SELF\shape_aspect.of_shape\property_definition.definition);
+  WR2: SELF\shape_aspect.product_definitional;
+--IP1 : A surface_shape_aspect shall be the identification of a surface in a geometric model of the product.
+--IP2 : A surface_shape_aspect shall not be in a complex instance with any other subtype of shape_aspect.
+END_ENTITY;
+
+ENTITY tangent
+  SUBTYPE OF (derived_shape_aspect);
+WHERE
+  WR1: SIZEOF (SELF\derived_shape_aspect.deriving_relationships)= 1;
+END_ENTITY;
+
+SUBTYPE_CONSTRAINT sads_shape_aspect_subtypes FOR shape_aspect;
+  ONEOF (contacting_feature,
+         datum,
+         datum_feature,
+         datum_target,
+         datum_system,
+         general_datum_reference);
+END_SUBTYPE_CONSTRAINT;
+
+RULE unique_datum_system for (
+                                          product_definition_shape,
+                                          datum_system);
+LOCAL
+ ds   : SET OF datum_system := [];
+ sa  : SET OF shape_aspect := [];
+ pass : BOOLEAN := TRUE;
+END_LOCAL;
+
+REPEAT ii := 1 TO SIZEOF (product_definition_shape) WHILE pass;
+ sa := bag_to_set(USEDIN(product_definition_shape[ii], 'PRODUCT_PROPERTY_DEFINITION_SCHEMA.' + 'SHAPE_ASPECT.' + 'OF_SHAPE'));
+ REPEAT iii := 1 to SIZEOF (sa) WHILE pass;
+  ds := QUERY(ds <* sa | 'SHAPE_ASPECT_DEFINITION_SCHEMA.DATUM_SYSTEM' IN TYPEOF(ds));
+
+  REPEAT i := 1 TO SIZEOF(ds);
+   REPEAT j := 1 TO SIZEOF(ds);
+    IF (i <> j) THEN
+     IF ds[i]\datum_system.constituents =
+        ds[j]\datum_system.constituents  THEN
+      pass := FALSE;
+     END_IF;
+    END_IF;
+   END_REPEAT;
+  END_REPEAT;
+
+ END_REPEAT;
+END_REPEAT;
+
+WHERE
+  WR1: pass;
+END_RULE;
+
+FUNCTION sts_get_general_datum_reference
+ (input : datum_reference_element) : general_datum_reference;
+LOCAL
+      general_datum_reference_bag : BAG OF general_datum_reference :=
+(USEDIN(input,
+      'SHAPE_ASPECT_DEFINITION_SCHEMA.' + 'GENERAL_DATUM_REFERENCE.' + 'BASE'));
+    END_LOCAL;
+
+    IF SIZEOF(general_datum_reference_bag) = 1 THEN
+      RETURN (general_datum_reference_bag[1]);
+    ELSE
+      RETURN (?);
+    END_IF;END_FUNCTION;
+
+END_SCHEMA;  -- shape_aspect_definition_schema
+
+(*"shape_aspect_definition_schema"
+// Note schema EXPRESS are in ..\resources\resource_name name_of_schema.xml
+
+The subject of the *shape_aspect_definition_schema* is to provide definitions of the spatial characteristics of a shape that are required for dimensioning and tolerancing. This schema provides representations for a *derived_shape_aspect* and a *datum_system*. A *derived_shape_aspect* is a *shape_aspect* that is developed from the defined shape of the product, but is not required for defining the product shape. A *datum_system* is a *shape_aspect* that provides the origin from where geometric tolerances are referenced. A *derived_shape_aspect* and a *datum_system* are aspects of the shape that are required for dimensioning and tolerancing the form, size, orientation, and location of a product shape.
+
+*)
+(*"shape_aspect_definition_schema.__fund_cons"
+
+The product shape is the concept of shape as a property that characterizes a product. Geometric models and engineering drawings are formal methods used to represent the product shape. Dimensions and tolerances are elements of the product shape definition which are independent from how the shape is represented. Dimensions may be explicitly identified as part of the shape characteristics, implicitly included in a geometric model that represents the shape, or explicitly presented in a two-dimensional drawing or on an annotated 2D or 3D model.
+
+A *shape_aspect* and all its subtypes such as *derived_shape_aspect* are elements of a product shape, represented by *product_definition_shape*. A *product_definition_shape* may represent the nominal model of a product or the extracted surfaces of a workpiece as specified in application protocols or application modules using these concepts. For the purpose of this part of ISO 10303, the following mapping to concepts of ISO 14660-1 and ISO/TS 17450-1 apply:
+
+* a *shape_aspect* for a nominal model with the definitional attribute set to TRUE represents a nominal integral feature;
+* a *derived_shape_aspect* for a nominal model represents a nominal derived feature;
+* a *shape_aspect* for an extracted surface of a workpiece with the definitional attribute set to TRUE represents either an extracted integral or a associated integral feature;
+* a *derived_shape_aspect* for an extracted surface of a workpiece represents either an extracted derived or a associated derived feature.
+
+[NOTE]
+--
+The real surface of a workpiece and its real integral features are not available for computer processing.
+--
+
+Dimensions may be specified for both the entire product shape and aspects of the shape. This schema augments the *shape_aspect*s and the relationships among them as the definitional mechanism for specifying dimensions and tolerances. A *shape_aspect*, relationships between *shape_aspect* elements, and their specified dimensions and tolerances are always defined in the context of the *product_definition_shape*. These dimensions and tolerances can be represented as elements of geometric models or engineering drawings.
+
+A *datum_system* represents the last compartments of a tolerance frame that reference datums and specify modifiers. A *datum_system* is composed by a list of one to three *datum_reference_compartment*s. A *datum_reference_compartment* either references a *datum* directly, or it references a list of *datum_reference_elements* to establish a common datum. A *datum* is either defined by a *datum_feature* or established by one or more *datum_targets*. Unless otherwise specified the rules governing datum system, datum, datum feature and datum target defined in ISO 5459 shall apply.
+
+[NOTE]
+--
+Alternatively datum system, datum feature and datum target can be used according to the specifications given in ASME Y14.5-2009 [11].
+--
+
+For the purpose of identifying dimensions and tolerances, this schema specifies the concept of a *derived_shape_aspect*. A *derived_shape_aspect* is a *shape_aspect* that is defined based on the specific way in which it relates to another shape aspect. The *derived_shape_aspect* is used in conjunction with related *shape_aspect* elements to specify dimensions and tolerances. The specific geometry that can represent the *derived_shape_aspect* and a *shape_aspect* that provide the definitional relationship are not in the scope of this schema. The geometry, the representation structure, and their association to the dimension and tolerance elements specified in this part are defined in ISO 10303-41, ISO 10303-42, and ISO 10303-43. Only the generic concept of *derived_shape_aspect* is specified here. Application protocols may specify other *derived_shape_aspect* elements in addition to those provided.
+
+Different types of collection mechanisms of *shape_aspect*s are provided by *composite_shape_aspect* and its subtypes. Dimension tolerances and geometrical tolerances applied to a *composite_group_shape_aspect* apply individually to all its members. When applying dimensions and geometric tolerances to a *continuous_shape_aspect*, a *between_shape_aspect* or an *all_around_shape_aspect* they apply to the collection as a whole only.
+
+// EXPRESS-G
+
+*)
+(*"shape_aspect_definition_schema.__expressg"
+[.svgmap]
+====
+image::shape_aspect_definition_schemaexpg1.svg[]
+
+* <<express:product_property_definition_schema>>; 1
+* <<express:geometry_schema>>; 2
+* <<express:shape_dimension_schema>>; 3
+* <<express:qualified_measure_schema>>; 4
+* <<express:representation_schema>>; 5
+* <<express:product_property_representation_schema>>; 6
+* <<express:support_resource_schema>>; 7
+* <<express:measure_schema>>; 8
+* <<express:shape_aspect_definition_schema>>; 9
+====
+
+*)
+(*"shape_aspect_definition_schema.__expressg"
+[.svgmap]
+====
+image::shape_aspect_definition_schemaexpg2.svg[]
+
+* <<express:shape_aspect_definition_schema.datum_or_common_datum>>; 1
+* <<express:shape_aspect_definition_schema.datum_reference_modifier>>; 2
+* <<express:shape_aspect_definition_schema.shape_aspect_or_feature_definition>>; 3
+* <<express:shape_aspect_definition_schema.shape_representation_with_parameters_items>>; 4
+* <<express:geometry_schema.placement>>; 5
+* <<express:qualified_measure_schema.descriptive_representation_item>>; 6
+* <<express:measure_schema.length_measure_with_unit>>; 7
+* <<express:geometry_schema.direction>>; 8
+* <<express:product_property_definition_schema.shape_aspect_relationship>>; 9
+* <<express:product_property_definition_schema.shape_aspect_relationship>>; 10
+* <<express:shape_dimension_schema.dimensional_location>>; 11
+* <<express:qualified_measure_schema.measure_representation_item>>; 12
+* <<express:measure_schema.measure_with_unit>>; 13
+* <<express:product_property_definition_schema.shape_aspect>>; 14
+* <<express:support_resource_schema.identifier>>; 15
+* <<express:product_property_representation_schema.shape_representation>>; 16
+* <<express:shape_dimension_schema.dimensional_size>>; 17
+* <<express:product_property_definition_schema.characterized_object>>; 18
+* <<express:product_property_definition_schema.shape_aspect>>; 19
+* <<express:shape_aspect_definition_schema.datum_reference_modifier_type>>; 20
+* <<express:shape_aspect_definition_schema.limit_condition>>; 21
+* <<express:shape_aspect_definition_schema.simple_datum_reference_modifier>>; 22
+* <<express:shape_aspect_definition_schema.datum_reference_compartment>>; 23
+* <<express:shape_aspect_definition_schema.dimensional_location_with_datum_feature>>; 24
+* <<express:shape_aspect_definition_schema.instanced_feature>>; 25
+* <<express:shape_aspect_definition_schema.geometric_intersection>>; 26
+* <<express:shape_aspect_definition_schema.shape_representation_with_parameters>>; 27
+* <<express:shape_aspect_definition_schema.referenced_modified_datum>>; 28
+* <<express:shape_aspect_definition_schema.datum_target>>; 29
+* <<express:shape_aspect_definition_schema.shape_aspect_deriving_relationship>>; 30
+* <<express:shape_aspect_definition_schema.composite_shape_aspect>>; 31
+* <<express:shape_aspect_definition_schema.composite_group_shape_aspect>>; 32
+* <<express:shape_aspect_definition_schema.centre_of_symmetry>>; 33
+* <<express:shape_aspect_definition_schema.contacting_feature>>; 34
+* <<express:shape_aspect_definition_schema.general_datum_reference>>; 35
+* <<express:shape_aspect_definition_schema.datum_reference>>; 36
+* <<express:shape_aspect_definition_schema.geometric_contact>>; 37
+* <<express:shape_aspect_definition_schema.extension>>; 38
+* <<express:shape_aspect_definition_schema.datum_feature>>; 39
+* <<express:shape_aspect_definition_schema.symmetric_shape_aspect>>; 40
+* <<express:shape_aspect_definition_schema.datum>>; 41
+* <<express:shape_aspect_definition_schema.all_around_shape_aspect>>; 42
+* <<express:shape_aspect_definition_schema.datum_system>>; 43
+* <<express:shape_aspect_definition_schema.between_shape_aspect>>; 44
+* <<express:shape_aspect_definition_schema.tangent>>; 45
+* <<express:shape_aspect_definition_schema.geometric_alignment>>; 46
+* <<express:shape_aspect_definition_schema.continuous_shape_aspect>>; 47
+* <<express:shape_aspect_definition_schema.parallel_offset>>; 48
+* <<express:shape_aspect_definition_schema.apex>>; 49
+* <<express:shape_aspect_definition_schema.dimensional_size_with_datum_feature>>; 50
+* <<express:shape_aspect_definition_schema.perpendicular_to>>; 51
+* <<express:shape_aspect_definition_schema.common_datum>>; 52
+* <<express:shape_aspect_definition_schema.feature_definition>>; 53
+* <<express:shape_aspect_definition_schema.datum_reference_modifier_with_value>>; 54
+* <<express:shape_aspect_definition_schema.derived_shape_aspect>>; 55
+* <<express:shape_aspect_definition_schema.datum_reference_element>>; 56
+* <<express:shape_aspect_definition_schema.common_datum_list>>; 57
+* <<express:shape_aspect_definition_schema.sads_shape_aspect_subtypes>>; 58
+====
+*)
+
+(*"shape_aspect_definition_schema.common_datum_list"
+The **common_datum_list** is a list of <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>>s. Unless otherwise specified, a **common_datum_list** shall be used in accordance with common datum as defined in ISO 5459.
+*)
+
+
+(*"shape_aspect_definition_schema.common_datum_list.wr:WR1"
+All members shall be for the same underlying <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_type"
+The **datum_reference_modifier_type** is an extensible list of modifier types that is used by <<express:shape_aspect_definition_schema.datum_reference_modifier_with_value,datum_reference_modifier_with_value>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_type.circular_or_cylindrical"
+the shape of the associated feature used to establish a datum is circular or cylindrical;
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_type.spherical"
+the shape of the associated feature used to establish a datum is spherical;
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_type.distance"
+the shape of the associated feature used to establish a datum is two parallel planes;
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_type.projected"
+the shape of the associated feature used to establish a datum is extended by a projected length as defined in ISO 5459.
+*)
+
+
+(*"shape_aspect_definition_schema.limit_condition"
+A **limit_condition** type indicates that a tolerance may have a material modifier condition applied. This modifier allows for the addition of material to, or for the reduction of material from a feature. The use of **limit_condition** applies only to toleranced features and datum features that have size characteristics.
+*)
+
+(*"shape_aspect_definition_schema.limit_condition.__example"
+The diameter of a hole or of a shaft or the width of a slot are size characteristics which may have a *limit_condition* applied.
+*)
+(*"shape_aspect_definition_schema.limit_condition.__note"
+The defined type *limit_condition* is deprecated. For new implementations it is recommended to use <<express:shape_aspect_definition_schema.simple_datum_reference_modifier,simple_datum_reference_modifier>>.
+*)
+
+(*"shape_aspect_definition_schema.limit_condition.maximum_material_condition"
+the state of a feature when it contains its maximum material with respect to its specified limit of size. Maximum material condition is defined in ISO 2692. The methods described in ISO 2692 for applying **maximum_material_condition** to datums and toleranced features shall be followed.
+*)
+
+(*"shape_aspect_definition_schema.limit_condition.maximum_material_condition.__note"
+For a <<express:product_property_definition_schema.shape_aspect,shape_aspect>> which is void of material, the *maximum_material_condition* is the smallest measure of this feature of size, e.g., the smallest diameter of a hole.
+*)
+
+(*"shape_aspect_definition_schema.limit_condition.least_material_condition"
+the state of a feature when it contains its least material with respect to its specified limit of size. Least material condition is defined in ISO 2692. The methods described in ISO 2692 for applying **least_material_condition** to datums and toleranced features shall be followed.
+*)
+
+(*"shape_aspect_definition_schema.limit_condition.least_material_condition.__note"
+For a <<express:product_property_definition_schema.shape_aspect,shape_aspect>> which is void of material, the *least_material_condition* is the largest measure of this feature of size, e.g., the largest diameter of a hole.
+*)
+
+(*"shape_aspect_definition_schema.limit_condition.regardless_of_feature_size"
+the state of a feature when the specified tolerance or datum reference applies to any increment of size within the specified limits of the feature.
+*)
+
+(*"shape_aspect_definition_schema.limit_condition.regardless_of_feature_size.__note"
+Unlike *maximum_material_condition* and *least_material_condition*, *regardless_of_feature_size* is not dependent on the quantity of material the feature of size contains. A *regardless_of_feature_size* means that when geometric tolerance is specified for a feature of size, the specified tolerance is independent of size changes in that feature of size. It does not matter if the feature of size is at its upper tolerance measure, at its lower tolerance measure or any measure between, the specified tolerance or datum reference applies.
+*)
+(*"shape_aspect_definition_schema.limit_condition.regardless_of_feature_size.__note"
+The principle of *regardless_of_feature_size* is explained in ASME Y14.5-2009 or later editions of that standard.
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier"
+The **simple_datum_reference_modifier** is an extensible list of modifier symbols, which can be associated to the datum letter.
+*)
+
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.free_state"
+indicates that free state applies in accordance with ISO 10579 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.free_state.__note"
+The symbol for free state is Ⓕ.
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.basic"
+indicates that the datum feature is simulated at the boundary defined by TEDs;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.basic.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by "BSC" or "BASIC."
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.translation"
+indicates that the datum feature simulator is not fixed as its theoretically exact location and shall be free to translate;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.translation.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by ▷.
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.least_material_requirement"
+indicates that least material requirement applies in accordance with ISO 2692 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.least_material_requirement.__note"
+The symbol for least material requirement is Ⓛ.
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.maximum_material_requirement"
+indicates that maximum material requirement applies in accordance with ISO 2692 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.maximum_material_requirement.__note"
+The symbol for maximum material requirement is Ⓜ.
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.point"
+indicates that a point situation feature applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.point.__note"
+The symbol for point is [SP].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.line"
+indicates that a line situation feature applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.line.__note"
+The symbol for line is [SL].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.plane"
+indicates that a plane situation feature applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.plane.__note"
+The symbol for plane is [PL].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.orientation"
+indicates that "orientation constraint only" applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.orientation.__note"
+The symbol for orientation is [\>\<].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.any_cross_section"
+indicates that any cross section applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.any_cross_section.__note"
+The symbol for any cross section is [ACS].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.any_longitudinal_section"
+indicates that any longitudinal section applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.any_longitudinal_section.__note"
+The symbol for any longitudinal section is [ALS].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.contacting_feature"
+indicates that contacting feature applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.contacting_feature.__note"
+The symbol for contacting feature is [CF].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.distance_variable"
+indicates that distance variable applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.distance_variable.__note"
+The symbol for distance variable is [DV].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_x"
+indicates that the degree of freedom in the _x_ direction is constrained;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_x.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by "[x]."
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_y"
+indicates that the degree of freedom in the _y_ direction is constrained;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_y.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by "[y]."
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_z"
+indicates that the degree of freedom in the _z_ direction is constrained;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_z.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by "[z]."
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_u"
+indicates that the degree of freedom in the _u_ direction is constrained;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_u.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by "[u]."
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_v"
+indicates that the degree of freedom in the _v_ direction is constrained;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_v.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by "[v]."
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_w"
+indicates that the degree of freedom in the _w_ direction is constrained.
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.degree_of_freedom_constraint_w.__note"
+For ASME Y14.5-2009, or later editions of that standard, this is indicated by "[w]."
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.minor_diameter"
+indicates that minor diameter applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.minor_diameter.__note"
+The symbol for minor diameter is [LD].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.major_diameter"
+indicates that major diameter applies in accordance with ISO 5459 unless otherwise specified;
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.major_diameter.__note"
+The symbol for major diameter is [MD].
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.pitch_diameter"
+indicates that pitch diameter applies in accordance with ISO 5459 unless otherwise specified.
+*)
+
+(*"shape_aspect_definition_schema.simple_datum_reference_modifier.pitch_diameter.__note"
+The symbol for pitch diameter is [PD].
+*)
+
+(*"shape_aspect_definition_schema.all_around_shape_aspect"
+An **all_around_shape_aspect** is a type of <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>> for a continuous, closed toleranced feature. Unless otherwise specified, the rules governing all around defined in ISO 1101 shall apply.
+*)
+
+
+(*"shape_aspect_definition_schema.apex"
+An **apex** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that defines the point corresponding to the common apex (the location where a plane and conical element intersect at a single point) of one or more conical <<express:product_property_definition_schema.shape_aspect,shape_aspect>> elements. The common intersection of three or more planes or two curves shall be treated as a <<express:shape_aspect_definition_schema.geometric_intersection,geometric_intersection>> rather than as an **apex**.
+*)
+
+
+(*"shape_aspect_definition_schema.between_shape_aspect"
+A **between_shape_aspect** is a type of <<express:shape_aspect_definition_schema.continuous_shape_aspect,continuous_shape_aspect>> where some of the composing members are marked as forming elements of the borders of the continuous region.
+*)
+
+
+(*"shape_aspect_definition_schema.between_shape_aspect.wr:WR1"
+The inherited attribute <<express:shape_aspect_definition_schema.composite_shape_aspect.component_relationships,component_relationships>> of <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>> shall be referred to by one <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> that has the name 'start feature'.
+*)
+
+
+(*"shape_aspect_definition_schema.between_shape_aspect.wr:WR2"
+The inherited attribute <<express:shape_aspect_definition_schema.composite_shape_aspect.component_relationships,component_relationships>> of <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>> shall be referred to by one <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> that has the name 'end feature'.
+*)
+
+
+(*"shape_aspect_definition_schema.centre_of_symmetry"
+A **centre_of_symmetry** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that defines the geometric centre of symmetry of one or more <<express:shape_aspect_definition_schema.symmetric_shape_aspect,symmetric_shape_aspect>>.
+*)
+
+(*"shape_aspect_definition_schema.centre_of_symmetry.__figure"
+//[[figure-shape_aspect_definition_schema-fig_symmetry_shape_aspect_and_centre_of_symmetry]]
+//====
+//image::symmetry_shape_aspect_and_centre_of_symmetry.gif[]
+//====
+*)
+(*"shape_aspect_definition_schema.centre_of_symmetry.__example"
+Types of geometric representation for a *centre_of_symmetry* may be an axis of an axially-symmetrical feature, a center point of a spherical feature, or a centre plane of parallel opposing planes or of wedge feature. In (a) of figure 1, the centre plane is the *centre_of_symmetry* for the two parallel opposing planes. In (b) of figure 1, the axis is the *centre_of_symmetry* for both cylinders.
+*)
+
+(*"shape_aspect_definition_schema.centre_of_symmetry.wr:WR1"
+A **centre_of_symmetry** shall have at least one <<express:shape_aspect_definition_schema.symmetric_shape_aspect,symmetric_shape_aspect>>.
+*)
+
+
+(*"shape_aspect_definition_schema.common_datum"
+A **common_datum** is a type of <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>> and of <<express:shape_aspect_definition_schema.datum,datum>> that is established by two other <<express:product_property_definition_schema.shape_aspect,shape_aspect>> of type <<express:shape_aspect_definition_schema.datum,datum>>.
+*)
+
+(*"shape_aspect_definition_schema.common_datum.__note"
+The entity *common_datum* is deprecated. For new implementations it is recommended that <<express:shape_aspect_definition_schema.datum_reference_compartment,datum_reference_compartment>> with <<express:shape_aspect_definition_schema.general_datum_reference.base,base>> being a <<express:shape_aspect_definition_schema.common_datum_list,common_datum_list>> be used.
+*)
+
+(*"shape_aspect_definition_schema.common_datum.wr:WR1"
+The **common_datum** shall have exactly two <<express:shape_aspect_definition_schema.composite_shape_aspect.component_relationships,component_relationships>>.
+*)
+
+
+(*"shape_aspect_definition_schema.common_datum.wr:WR2"
+The datums, a **common_datum** is established by, shall be of type <<express:shape_aspect_definition_schema.datum,datum>> but not of type **common_datum**.
+*)
+
+
+(*"shape_aspect_definition_schema.composite_group_shape_aspect"
+A **composite_group_shape_aspect** is a type of <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>>. Dimension tolerances and geometrical tolerances applied to a **composite_group_shape_aspect** apply to each member of the group individually. On a technical drawing grouping is indicate by a number followed by "X". The group designation may be followed by a dimension tolerance, geometric tolerance, or it may be used to indicate another requirement.
+*)
+
+
+(*"shape_aspect_definition_schema.composite_shape_aspect"
+A **composite_shape_aspect** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that associates aspects of the product shape for a specific purpose. A **composite_shape_aspect** may be either an <<express:shape_aspect_definition_schema.all_around_shape_aspect,all_around_shape_aspect>>, a <<express:shape_aspect_definition_schema.continuous_shape_aspect,continuous_shape_aspect>>, a <<express:shape_aspect_definition_schema.common_datum,common_datum>>, or a <<express:shape_aspect_definition_schema.composite_group_shape_aspect,composite_group_shape_aspect>>.
+*)
+
+
+(*"shape_aspect_definition_schema.composite_shape_aspect.component_relationships"
+the set of member <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that form the **composite_shape_aspect**. The <<express:product_property_definition_schema.shape_aspect_relationship.relating_shape_aspect,relating_shape_aspect>> is the **composite_shape_aspect**, and the <<express:product_property_definition_schema.shape_aspect_relationship.related_shape_aspect,related_shape_aspect>> are members of the set. Two or more <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> shall be defined for the **composite_shape_aspect**.
+*)
+
+(*"shape_aspect_definition_schema.composite_shape_aspect.component_relationships.__example"
+Datum targets are related into a set to establish a <<express:shape_aspect_definition_schema.datum,datum>>.
+*)
+(*"shape_aspect_definition_schema.composite_shape_aspect.component_relationships.__example"
+Figure 2 illustrates two instances of *composite_shape_aspect*. First, the *composite_shape_aspect* that contains cylindrical face components may represent a pattern of holes in which a pattern-controlling positional geometrical tolerance may be applied. The hole pattern is the *composite_shape_aspect*. Second, the *composite_shape_aspect* that contains connected face components may represent a profile group feature to which a single surface profile geometrical tolerance may be applied.
+
+
+
+//[[figure-shape_aspect_definition_schema-fig_composite_shape_aspect]]
+//====
+//ximage::composite_shape_aspect.gif[]
+//====
+*)
+
+(*"shape_aspect_definition_schema.contacting_feature"
+A **contacting_feature** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> used to establish a <<express:shape_aspect_definition_schema.datum,datum>> The rules governing contacting features defined in ISO 5459 shall apply.
+*)
+
+
+(*"shape_aspect_definition_schema.contacting_feature.wr:WR1"
+A **contacting_feature** is not part of the physical boundary of the <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.continuous_shape_aspect"
+A **continuous_shape_aspect** is a type of <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>> wherein the geometric elements associated with the underlying <<express:product_property_definition_schema.shape_aspect,shape_aspect>> members are touching and thus establish a continuous region.
+*)
+
+
+(*"shape_aspect_definition_schema.datum"
+A **datum** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> used to establish an origin for theoretically exact dimensions and geometrical tolerances. This <<express:product_property_definition_schema.shape_aspect,shape_aspect>> may, but need not, coincide with the boundary defining the product. A datum is established by associating to datum feature, a set of datum targets, a group of features, or one or more contacting features.
+*)
+
+(*"shape_aspect_definition_schema.datum.__note"
+The use and application of a group of features to establish a datum is identified in ISO 5459. The group of features is established through the use of <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> objects. The concept of a group of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> elements is defined in <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>>.
+*)
+
+(*"shape_aspect_definition_schema.datum.identification"
+the name of the **datum**.
+*)
+
+
+(*"shape_aspect_definition_schema.datum.established_by_relationships"
+the <<express:shape_aspect_definition_schema.datum_feature,datum_feature>>, the set of <<express:shape_aspect_definition_schema.datum_target,datum_target>>, or the group of derived <<express:product_property_definition_schema.shape_aspect,shape_aspect>>s that establish the **datum**.
+*)
+
+
+(*"shape_aspect_definition_schema.datum.ur:UR1"
+The combination of **identification** and <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> shall be unique within a population of **datum**.
+*)
+
+
+(*"shape_aspect_definition_schema.datum.wr:WR1"
+A **datum** is a <<express:shape_aspect_definition_schema.common_datum,common_datum>> or a **datum** and shall be related to one or more <<express:shape_aspect_definition_schema.datum_feature,datum_feature>>s or <<express:shape_aspect_definition_schema.datum_target,datum_target>>s through <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum.wr:WR2"
+There shall be at most one <<express:shape_aspect_definition_schema.datum_feature,datum_feature>> in the **established_by_relationships** set.
+*)
+
+
+(*"shape_aspect_definition_schema.datum.wr:WR3"
+A **datum** is not part of the physical boundary of the <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum.wr:WR4"
+The <<express:product_property_definition_schema.shape_aspect.name,name>> shall be an empty string.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_feature"
+A **datum_feature** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> on the boundary of the product. A **datum_feature** may be used to establish a <<express:shape_aspect_definition_schema.datum,datum>>. Each **datum_feature** may be either a <<express:shape_aspect_definition_schema.dimensional_location_with_datum_feature,dimensional_location_with_datum_feature>> or a <<express:shape_aspect_definition_schema.dimensional_size_with_datum_feature,dimensional_size_with_datum_feature>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_feature.feature_basis_relationship"
+the set of <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> that relate members of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> to the **datum_feature**.
+*)
+
+(*"shape_aspect_definition_schema.datum_feature.feature_basis_relationship.__note"
+One member of feature_basis_relationship will specify a datum.
+*)
+
+(*"shape_aspect_definition_schema.datum_feature.wr:WR1"
+A **datum_feature** shall be referenced by exactly one <<express:shape_aspect_definition_schema.datum,datum>> through a <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_feature.wr:WR2"
+A **datum_feature** shall lie on the physical boundary of the shape that defines the product.
+*)
+
+(*"shape_aspect_definition_schema.datum_feature.wr:WR2.__example"
+Figure 3 illustrates two cases of *datum_feature*. The *datum_feature* that is a cylindrical feature establishes the <<express:shape_aspect_definition_schema.datum,datum>> identified as A. This <<express:shape_aspect_definition_schema.datum,datum>> is the axis of an associated cylinder. The <<express:shape_aspect_definition_schema.datum,datum>> identified as B is established from the *datum_feature* that is a planar surface of the product. This <<express:shape_aspect_definition_schema.datum,datum>> is an associated plane that is contacts the *datum_feature*.
+
+
+
+//[[figure-shape_aspect_definition_schema-fig_example_of_datum_and_datum_fetaure]]
+//====
+//image::example_of_datum_and_datum_feature.gif[]
+/====
+*)
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_with_value"
+A **datum_reference_modifier_with_value** is an association between a **modifier_type** and a **modifier_value** that defines the specific boundary size of the associated feature for establishing a datum. In the case of a circular, cylindrical, or spherical boundary type the value represents the diameter of the boundary. In the case of a distance the value represents the distance between two parallel planes.
+*)
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_with_value.__note"
+When used for ASME Y14.5-2009 a *datum_reference_modifier_with_value* represents the datum feature simulator boundary.
+*)
+(*"shape_aspect_definition_schema.datum_reference_modifier_with_value.__note"
+When used for ASME Y14.5-2018 a *datum_reference_modifier_with_value* represents the true geometric counterpart boundary.
+*)
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_with_value.modifier_type"
+specifies the role of the <<express:shape_aspect_definition_schema.datum_reference_modifier_type,datum_reference_modifier_type>> for the **datum_reference_modifier_with_value**.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_with_value.modifier_value"
+specifies the role of the <<express:measure_schema.length_measure_with_unit,length_measure_with_unit>> for the **datum_reference_modifier_with_value**.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_modifier_with_value.wr:WR1"
+The <<express:measure_schema.measure_with_unit.value_component,value_component>> shall be greater than zero.
+*)
+
+
+(*"shape_aspect_definition_schema.dimensional_location_with_datum_feature"
+A **dimensional_location_with_datum_feature** is a type of <<express:shape_aspect_definition_schema.datum_feature,datum_feature>> and of <<express:shape_dimension_schema.dimensional_location,dimensional_location>> that shall be used when the datum is established from two opposing <<express:product_property_definition_schema.shape_aspect,shape_aspect>>s that define a feature of size.
+*)
+
+
+(*"shape_aspect_definition_schema.dimensional_size_with_datum_feature"
+A **dimensional_size_with_datum_feature** is a type of <<express:shape_aspect_definition_schema.datum_feature,datum_feature>> and of <<express:shape_dimension_schema.dimensional_size,dimensional_size>>. The spatial characteristic provided is that of the <<express:shape_aspect_definition_schema.datum_feature,datum_feature>> that is part of the **dimensional_size_with_datum_feature** itself.
+*)
+
+
+(*"shape_aspect_definition_schema.dimensional_size_with_datum_feature.wr:WR1"
+The inherited attribute <<express:shape_dimension_schema.dimensional_size.applies_to,applies_to>> shall specify the **dimensional_size_with_datum_feature** itself.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference"
+A **datum_reference** is the specification of the use of a <<express:shape_aspect_definition_schema.datum,datum>>.
+*)
+
+(*"shape_aspect_definition_schema.datum_reference.__note"
+The entity *datum_reference* is deprecated. For new implementations it is recommended that <<express:shape_aspect_definition_schema.datum_system,datum_system>> together with <<express:shape_aspect_definition_schema.datum_reference_compartment,datum_reference_compartment>> and as needed <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>> be used.
+*)
+
+(*"shape_aspect_definition_schema.datum_reference.precedence"
+the priority that is assigned to a <<express:shape_aspect_definition_schema.datum,datum>> for a specific use.
+*)
+
+(*"shape_aspect_definition_schema.datum_reference.precedence.__note"
+A <<express:shape_aspect_definition_schema.datum,datum>> may have multiple and distinct uses and have different *precedence* for each use.
+*)
+
+(*"shape_aspect_definition_schema.datum_reference.referenced_datum"
+the <<express:shape_aspect_definition_schema.datum,datum>> that participates in a geometrical tolerance of a product feature.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference.wr:WR1"
+The value of **precedence** shall be greater than zero.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_compartment"
+A **datum_reference_compartment** is a type of <<express:shape_aspect_definition_schema.general_datum_reference,general_datum_reference>> that represents the compartment of either the primary, secondary or tertiary datum in a feature control frame.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_compartment.owner"
+specifies an inverse relationship indicating that the existence of the **datum_reference_compartment** is dependent on the existence of the <<express:shape_aspect_definition_schema.datum_system,datum_system>> that specifies the **datum_reference_compartment** as its <<express:shape_aspect_definition_schema.datum_system.constituents,constituents>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_element"
+A **datum_reference_element** is a type of <<express:shape_aspect_definition_schema.general_datum_reference,general_datum_reference>> that represents a single datum reference of a common datum with a <<express:shape_aspect_definition_schema.datum_reference_compartment,datum_reference_compartment>>. The rules governing common datum defined in ISO 5459, or ASME Y14.5-2009 or later editions of that standard shall apply.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_element.owner"
+specifies an inverse relationship indicating that the existence of the **datum_reference_element** is dependent on the existence of the <<express:shape_aspect_definition_schema.datum_reference_compartment,datum_reference_compartment>> or <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>> that specifieds the **datum_reference_element** as its <<express:shape_aspect_definition_schema.general_datum_reference.base,base>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_element.wr:WR1"
+The **owner** shall not be the same instance of <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_element.wr:WR2"
+The **owner** shall exist.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_reference_element.wr:WR3"
+The inherited attribute <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> of this and the owning instance shall refer to the same <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_system"
+A **datum_system** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that represents the ordered collection of one to three datum reference compartments within a geometric tolerance frame. A **datum_system** shall be used in accordance to the ISO 5459 definitions for single datum and datum system.
+*)
+
+(*"shape_aspect_definition_schema.datum_system.__note"
+Alternatively, *datum_system* can be used for the corresponding concept in ASME Y14.5-2009 or any later edition of this standard.
+*)
+(*"shape_aspect_definition_schema.datum_system.__note"
+A *datum_system* can be associated with a model coordinate system and can be shared by several <<express:shape_tolerance_schema.geometric_tolerance,geometric_tolerance>>s.
+*)
+
+(*"shape_aspect_definition_schema.datum_system.constituents"
+the ordered list of one to three <<express:shape_aspect_definition_schema.datum_reference_compartment,datum_reference_compartment>>s representing the primary and the optional secondary and tertiary datums of a tolerance frame.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_system.ur:UR1"
+The combination of <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> and <<express:product_property_definition_schema.shape_aspect.name,name>> shall be unique within a population of **datum_system**.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_system.wr:WR1"
+A **datum_system** is not part of the physical boundary of the <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_target"
+A **datum_target** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that indicates a datum target on the boundary of a product shape. The <<express:product_property_definition_schema.shape_aspect,shape_aspect>> may be a point, line, or an area. The **datum_target** is defined in addition to the <<express:product_property_definition_schema.shape_aspect,shape_aspect>> elements that define the product shape.
+*)
+
+(*"shape_aspect_definition_schema.datum_target.__note"
+The use and application of datum targets is described in ISO 5459. Alternatively, *datum_target* can be used according to the specifications given in ASME Y14.5-2009 or later editions of that standard.
+*)
+
+(*"shape_aspect_definition_schema.datum_target.target_id"
+the name by which the identification of the datum target number is referred.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_target.target_basis_relationship"
+the relationship to the <<express:shape_aspect_definition_schema.datum,datum>> that the **datum_target** defines; it is achieved through the <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>>. There shall exist one or more <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> for the **datum_target**.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_target.wr:WR1"
+A **datum_target** shall be referenced by exactly one <<express:shape_aspect_definition_schema.datum,datum>> through a <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>>.
+*)
+
+
+(*"shape_aspect_definition_schema.datum_target.wr:WR2"
+A **datum_target** lies on the physical boundary of the shape that defines the product.
+*)
+
+
+(*"shape_aspect_definition_schema.derived_shape_aspect"
+A **derived_shape_aspect** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that depends on the definition of one or more specific shapes. The existence of the **derived_shape_aspect** depends on and relates to other <<express:product_property_definition_schema.shape_aspect,shape_aspect>>.
+
+A **derived_shape_aspect** may be either an <<express:shape_aspect_definition_schema.apex,apex>> or a <<express:shape_aspect_definition_schema.centre_of_symmetry,centre_of_symmetry>>, or a <<express:shape_aspect_definition_schema.geometric_alignment,geometric_alignment>>, or a <<express:shape_aspect_definition_schema.geometric_contact,geometric_contact>>, or a <<express:shape_aspect_definition_schema.geometric_intersection,geometric_intersection>>, or a <<express:shape_aspect_definition_schema.parallel_offset,parallel_offset>>, or a <<express:shape_aspect_definition_schema.perpendicular_to,perpendicular_to>>, or an <<express:shape_aspect_definition_schema.extension,extension>>, or a <<express:shape_aspect_definition_schema.tangent,tangent>>.
+*)
+
+(*"shape_aspect_definition_schema.derived_shape_aspect.__example"
+Consider the <<express:product_property_definition_schema.shape_aspect,shape_aspect>> of a cylindrical hole. It is symmetric about an axis, and this axis exists only when the hole exists. The axis is a *derived_shape_aspect*.
+*)
+(*"shape_aspect_definition_schema.derived_shape_aspect.__note"
+A *derived_shape_aspect* might not be on the physical boundary of the product. Its intended purpose is to relate product dimensions and tolerances with the <<express:product_property_definition_schema.shape_aspect,shape_aspect>> or features of the part.
+*)
+
+(*"shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships"
+the identification of <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> that define the **derived_shape_aspect**. There shall exist one or more <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> for the **derived_shape_aspect**.
+*)
+
+
+(*"shape_aspect_definition_schema.extension"
+An **extension** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that corresponds to the extension of a curve or surface <<express:product_property_definition_schema.shape_aspect,shape_aspect>> element.
+*)
+
+(*"shape_aspect_definition_schema.extension.__example"
+Consider the rounded edge of a block as shown in figure 5. To define the square corner at this edge, the two adjacent faces are extended until they intersect. Each of these is an *extension*.
+*)
+
+(*"shape_aspect_definition_schema.extension.wr:WR1"
+There shall be one member in the set of <<express:shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships,deriving_relationships>>.
+*)
+
+
+(*"shape_aspect_definition_schema.feature_definition"
+A **feature_definition** is a type of <<express:product_property_definition_schema.characterized_object,characterized_object>> that is a preconceived form pattern.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference"
+A **general_datum_reference** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that represents the occurrence of a <<express:shape_aspect_definition_schema.datum,datum>> within a <<express:shape_aspect_definition_schema.datum_system,datum_system>>. A **general_datum_reference** is either a <<express:shape_aspect_definition_schema.datum_reference_compartment,datum_reference_compartment>> or a <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>>.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.base"
+specifies the used <<express:shape_aspect_definition_schema.datum,datum>> or <<express:shape_aspect_definition_schema.common_datum_list,common_datum_list>>.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.modifiers"
+specifies the role of the <<express:shape_aspect_definition_schema.datum_reference_modifier,datum_reference_modifier>> for the **general_datum_reference**. There shall exist more than one <<express:shape_aspect_definition_schema.datum_reference_modifier,datum_reference_modifier>> for the **general_datum_reference**. The value of this attribute need not be specified.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.ur:UR1"
+The combination of <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> and <<express:product_property_definition_schema.shape_aspect.name,name>> shall be unique within a population of **general_datum_reference**.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.wr:WR1"
+The <<express:product_property_definition_schema.shape_aspect.name,name>> shall be an empty string.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.wr:WR2"
+The <<express:product_property_definition_schema.shape_aspect.description,description>> shall not be populated.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.wr:WR3"
+The <<express:product_property_definition_schema.shape_aspect.id,id>> shall not be populated.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.wr:WR4"
+A **general_datum_reference** is not part of the physical boundary of the <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.wr:WR5"
+If **base** is a <<express:shape_aspect_definition_schema.datum,datum>> the inherited attribute <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> of this instance and base shall refer to the same <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.general_datum_reference.wr:WR6"
+If **base** is a <<express:shape_aspect_definition_schema.common_datum_list,common_datum_list>> the inherited attribute <<express:product_property_definition_schema.shape_aspect.of_shape,of_shape>> of this instance and the first element of base shall refer to the same <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.geometric_alignment"
+A **geometric_alignment** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that defines a planar or linear feature that requires two or more features lying in the same plane or along the same line.
+*)
+
+
+(*"shape_aspect_definition_schema.geometric_alignment.wr:WR1"
+There shall be two or more elements in the set of <<express:shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships,deriving_relationships>>.
+*)
+
+(*"shape_aspect_definition_schema.geometric_alignment.wr:WR1.__figure"
+//[[figure-shape_aspect_definition_schema-fig_geometric_alignment]]
+//====
+//image::geometric_alignment.gif[]
+//====
+*)
+(*"shape_aspect_definition_schema.geometric_alignment.wr:WR1.__example"
+Figure 4 illustrates an axis of a cylinder as a linear feature and the face of a cutout as a planar feature. When two or more aligned parallel axes are used for the purpose of dimensioning, a plane may be established to which a dimension is attached, as shown in figure 4.
+*)
+
+(*"shape_aspect_definition_schema.geometric_contact"
+A **geometric_contact** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that represents the common contact region between two <<express:product_property_definition_schema.shape_aspect,shape_aspect>>s. The involved <<express:product_property_definition_schema.shape_aspect,shape_aspect>>s shall not intersect with each other.
+*)
+
+
+(*"shape_aspect_definition_schema.geometric_contact.wr:WR1"
+There shall be exactly two members in the set of <<express:shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships,deriving_relationships>>.
+*)
+
+
+(*"shape_aspect_definition_schema.geometric_intersection"
+A **geometric_intersection** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that is the common intersection of two or more <<express:product_property_definition_schema.shape_aspect,shape_aspect>> elements.
+*)
+
+(*"shape_aspect_definition_schema.geometric_intersection.__figure"
+//[[figure-shape_aspect_definition_schema-fig_geometric_intersection]]
+//====
+//image::geometric_intersection.gif[]
+//====
+*)
+(*"shape_aspect_definition_schema.geometric_intersection.__example"
+A *geometric_intersection* is established by the intersection of two planar extensions from the adjacent sides of the block. This *geometric_intersection* may be used as the participating <<express:product_property_definition_schema.shape_aspect,shape_aspect>> in dimensioning the location of the right or bottom planar surfaces as shown in figure 5.
+*)
+(*"shape_aspect_definition_schema.geometric_intersection.__note"
+Since a *geometric_intersection* is a derived shape, the use of intersection here is independent of any specific representation.
+*)
+
+(*"shape_aspect_definition_schema.geometric_intersection.wr:WR1"
+There shall be two or more members in the set of <<express:shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships,deriving_relationships>>.
+*)
+
+
+(*"shape_aspect_definition_schema.geometric_intersection.wr:IP1"
+The <<express:product_property_definition_schema.shape_aspect,shape_aspect>>s that participate as <<express:product_property_definition_schema.shape_aspect_relationship.relating_shape_aspect,relating_shape_aspect>> shall intersect.
+*)
+
+
+(*"shape_aspect_definition_schema.instanced_feature"
+An **instanced_feature** is a type of <<express:shape_aspect_definition_schema.feature_definition,feature_definition>> and of a <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that is the identification of a preconceived form pattern on a <<express:product_definition_schema.product_definition,product_definition>>.
+*)
+
+
+(*"shape_aspect_definition_schema.instanced_feature.wr:WR1"
+The **instanced_feature** shall be an aspect of the shape of a <<express:product_definition_schema.product_definition,product_definition>>.
+*)
+
+
+(*"shape_aspect_definition_schema.instanced_feature.wr:WR2"
+A **instanced_feature** shall lie on the physical boundary of the shape that defines the product.
+*)
+
+
+(*"shape_aspect_definition_schema.parallel_offset"
+A **parallel_offset** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that is located at a constant distance from a <<express:product_property_definition_schema.shape_aspect_relationship.related_shape_aspect,related_shape_aspect>>. If the basis is two dimensional, then all associated <<express:product_property_definition_schema.shape_aspect,shape_aspect>> elements (the parallel offset and the basis shape aspect) lie in some common plane. If the basis is a surface, then all <<express:product_property_definition_schema.shape_aspect,shape_aspect>> elements are embedded in three-dimensional space.
+
+The **parallel_offset** is formed by the offset of each point of the basis, in a direction perpendicular to the basis by the offset distance (See figure 6).
+*)
+
+(*"shape_aspect_definition_schema.parallel_offset.__figure"
+//[[figure-shape_aspect_definition_schema-fig_parallel_offset]]
+//====
+//image::parallel_offset.gif[]
+//====
+*)
+(*"shape_aspect_definition_schema.parallel_offset.__example"
+Figure 6 is a partial view of apart; not all details are shown. The <<express:product_property_definition_schema.shape_aspect,shape_aspect>> is the basis <<express:product_property_definition_schema.shape_aspect_relationship.related_shape_aspect,related_shape_aspect>> for the parallel-offset. The *offset* is the distance the *parallel_offset* is positioned from its basis.
+*)
+(*"shape_aspect_definition_schema.parallel_offset.__note"
+The basis shape aspect of a surface divides the space in which it is embedded into two half-spaces.
+*)
+
+(*"shape_aspect_definition_schema.parallel_offset.offset"
+the distance between the **parallel_offset** and its basis.
+*)
+
+
+(*"shape_aspect_definition_schema.parallel_offset.wr:WR1"
+There shall be one member in the set of <<express:shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships,deriving_relationships>>.
+*)
+
+
+(*"shape_aspect_definition_schema.perpendicular_to"
+A **perpendicular_to** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that is oriented orthogonally to another <<express:product_property_definition_schema.shape_aspect,shape_aspect>>.
+*)
+
+(*"shape_aspect_definition_schema.perpendicular_to.__note"
+The *perpendicular_to* need not intersect the <<express:product_property_definition_schema.shape_aspect,shape_aspect>> from which it is established.
+*)
+
+(*"shape_aspect_definition_schema.perpendicular_to.wr:WR1"
+There shall be one member in the set of <<express:shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships,deriving_relationships>>.
+*)
+
+
+(*"shape_aspect_definition_schema.referenced_modified_datum"
+A **referenced_modified_datum** is a type of <<express:shape_aspect_definition_schema.datum_reference,datum_reference>> where the referenced datum may vary within the specified limits of size.
+*)
+
+(*"shape_aspect_definition_schema.referenced_modified_datum.__note"
+A <<express:shape_aspect_definition_schema.datum,datum>> may be modified if the <<express:shape_aspect_definition_schema.datum_feature,datum_feature>> that produced it is a product feature which has size characteristics.
+*)
+(*"shape_aspect_definition_schema.referenced_modified_datum.__note"
+The use and application of a modified <<express:shape_aspect_definition_schema.datum,datum>> are described in ISO 2692.
+*)
+(*"shape_aspect_definition_schema.referenced_modified_datum.__note"
+The entity *referenced_modified_datum* is deprecated. For new implementations it is recommended that <<express:shape_aspect_definition_schema.datum_reference_compartment,datum_reference_compartment>> or <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>> be used.
+*)
+
+(*"shape_aspect_definition_schema.referenced_modified_datum.modifier"
+the <<express:shape_aspect_definition_schema.limit_condition,limit_condition>> that is assigned to the <<express:shape_aspect_definition_schema.datum,datum>> for a specific use of that <<express:shape_aspect_definition_schema.datum,datum>>.
+*)
+
+
+(*"shape_aspect_definition_schema.shape_aspect_deriving_relationship"
+A **shape_aspect_deriving_relationship** is a type of <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> that defines the specific association between a <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> and one or more <<express:product_property_definition_schema.shape_aspect,shape_aspect>>.
+*)
+
+(*"shape_aspect_definition_schema.shape_aspect_deriving_relationship.__note"
+The <<express:product_property_definition_schema.shape_aspect_relationship.relating_shape_aspect,relating_shape_aspect>> is the <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>>. The <<express:product_property_definition_schema.shape_aspect_relationship.related_shape_aspect,related_shape_aspect>> are the other <<express:product_property_definition_schema.shape_aspect,shape_aspect>> that are the basis for the <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>>.
+*)
+
+(*"shape_aspect_definition_schema.shape_aspect_deriving_relationship.relating_shape_aspect"
+an attribute inherited from the <<express:product_property_definition_schema.shape_aspect_relationship,shape_aspect_relationship>> shall be redeclared as the <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> for the **shape_aspect_deriving_relationship**.
+*)
+
+
+(*"shape_aspect_definition_schema.shape_representation_with_parameters"
+A **shape_representation_with_parameters** is a type of <<express:product_property_representation_schema.shape_representation,shape_representation>>.
+*)
+
+
+(*"shape_aspect_definition_schema.shape_representation_with_parameters.items"
+an attribute inherited from the <<express:representation_schema.representation,representation>> shall be redeclared as the <<express:shape_aspect_definition_schema.shape_representation_with_parameters_items,shape_representation_with_parameters_items>> for the **shape_representation_with_parameters**. There shall exist one or more <<express:shape_aspect_definition_schema.shape_representation_with_parameters_items,shape_representation_with_parameters_items>> for the **shape_representation_with_parameters**.
+*)
+
+
+(*"shape_aspect_definition_schema.symmetric_shape_aspect"
+A **symmetric_shape_aspect** is a type of <<express:product_property_definition_schema.shape_aspect,shape_aspect>> of a product that is symmetrical about a geometric element. It may also be a <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>>.
+*)
+
+(*"shape_aspect_definition_schema.symmetric_shape_aspect.__figure"
+//[[figure-shape_aspect_definition_schema-fig_symmetric_shape_aspect_and_composite_shape_aspect]]
+//====
+//image::symmetric_shape_aspect_and_composite_shape_aspect.gif[]
+//====
+*)
+(*"shape_aspect_definition_schema.symmetric_shape_aspect.__example"
+A cylinder is symmetric about its axis. A bolt hole pattern is a <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>> that is symmetric about the axis of the common cylinder that intersects the centre of each hole. See figure 7.
+*)
+(*"shape_aspect_definition_schema.symmetric_shape_aspect.__note"
+Figure 7 illustrates a bolt hole circle pattern of four cylinders that is a <<express:shape_aspect_definition_schema.composite_shape_aspect,composite_shape_aspect>>. Coincidentally, the bolt hole circle pattern is also a *symmetric_shape_aspect* that has a <<express:shape_aspect_definition_schema.centre_of_symmetry,centre_of_symmetry>> about the axis of the common cylinder that intersects the centre of each hole. Furthermore, each hole can be as *symmetric_shape_aspect* when it is necessary to capture the relationship to the hole’s <<express:shape_aspect_definition_schema.centre_of_symmetry,centre_of_symmetry>>.
+*)
+
+(*"shape_aspect_definition_schema.symmetric_shape_aspect.basis_relationships"
+identifies relationships to one or more features that are symmetric about centres of symmetry, e.g., point, axis, or median plane. The <<express:product_property_definition_schema.shape_aspect_relationship.relating_shape_aspect,relating_shape_aspect>> is a <<express:shape_aspect_definition_schema.centre_of_symmetry,centre_of_symmetry>>. The <<express:product_property_definition_schema.shape_aspect_relationship.related_shape_aspect,related_shape_aspect>> is the **symmetric_shape_aspect**. There shall exist one or more <<express:shape_aspect_definition_schema.shape_aspect_deriving_relationship,shape_aspect_deriving_relationship>> for the **symmetric_shape_aspect**.
+*)
+
+
+(*"shape_aspect_definition_schema.symmetric_shape_aspect.wr:WR1"
+A **symmetric_shape_aspect** shall have at least one <<express:shape_aspect_definition_schema.centre_of_symmetry,centre_of_symmetry>>.
+*)
+
+
+(*"shape_aspect_definition_schema.tangent"
+A **tangent** is a type of <<express:shape_aspect_definition_schema.derived_shape_aspect,derived_shape_aspect>> that contacts a curve or surface <<express:product_property_definition_schema.shape_aspect,shape_aspect>> at a single point or line.
+*)
+
+
+(*"shape_aspect_definition_schema.tangent.wr:WR1"
+There shall be one member in the set of <<express:shape_aspect_definition_schema.derived_shape_aspect.deriving_relationships,deriving_relationships>>.
+*)
+
+
+(*"shape_aspect_definition_schema.sts_get_general_datum_reference"
+The **sts_get_general_datum_reference** function returns the <<express:shape_aspect_definition_schema.general_datum_reference,general_datum_reference>> associated with the <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>> as an **input**.
+*)
+
+
+(*"shape_aspect_definition_schema.sts_get_general_datum_reference.input"
+the specified <<express:shape_aspect_definition_schema.datum_reference_element,datum_reference_element>>.
+*)
+
+
+(*"shape_aspect_definition_schema.unique_datum_system"
+The **unique_datum_system** rule specified that all instances of <<express:shape_aspect_definition_schema.datum_system,datum_system>>s are different from each other in respect to the order of the referenced <<express:shape_aspect_definition_schema.datum,datum>>s and their possible combination with modifiers, within the context of a specific <<express:product_property_definition_schema.product_definition_shape,product_definition_shape>>.
+*)
+
+
+(*"shape_aspect_definition_schema.unique_datum_system.wr:WR1"
+The list of constituents shall be unique for a <<express:shape_aspect_definition_schema.datum_system,datum_system>>.
+*)
+
