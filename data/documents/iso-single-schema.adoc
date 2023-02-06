@@ -1,0 +1,85 @@
+= Metanorma with LutaML and EXPRESS (test schemas)
+:docnumber: 10303
+:tc-docnumber: 10446
+:partnumber: 999
+:copyright-year: 2030
+:language: en
+:publish-date: 2030-01-01
+:edition: 1
+:title-intro-en: Industrial automation systems and integration
+:title-intro-fr: Systèmes d'automatisation industrielle et intégration
+:title-main-en: Product data representation and exchange
+:title-main-fr: Représentation et échange de données de produits
+:title-part-en: Integrated generic resource: Testing a single schema
+:title-part-fr: Ressources génériques intégrées: Tester un seul schéma
+:doctype: international-standard
+:docstage: 60
+:docsubstage: 60
+:technical-committee-number: 184
+:technical-committee: Industrial automation systems and integration
+:subcommittee-type: SC
+:subcommittee-number: 4
+:subcommittee: Industrial data
+:workgroup-type: WG
+:workgroup-number: 12
+:secretariat: ANSI
+:keywords: integrated generic resource, product definition, product property, measure, application context, product property representation, person, organization, experience, qualifications, location and position in organization
+:mn-document-class: iso
+:mn-output-extensions: xml,pdf,html,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+
+Some foreword.
+
+== Scope
+
+Scope.
+
+[bibliography]
+== Normative references
+
+== Terms and definitions
+
+// [xlutaml, ../resources/action_schema/action_schema_annotated.exp, repo]
+// [xlutaml, ../resources/results_schema/results_schema_annotated.exp, repo]
+// [xlutaml, ../resources/mathematical_functions_schema/mathematical_functions_schema_annotated.exp, repo]
+// [xlutaml, ../resources/quantities_and_units_schema/quantities_and_units_schema.exp, repo]
+// TO TEST CONSTANTS [xlutaml, ../resources/iso13584_iec61360_dictionary_schema/iso13584_iec61360_dictionary_schema.exp, repo]
+// shape_tolerance has RULE
+
+// action_schema has ENTITY, FUNCTION, WHERE
+[lutaml, ../resources/action_schema/action_schema_annotated.exp, repo]
+----
+include::_schemas.liquid[]
+----
+
+// results_schema has SUBTYPE_CONSTRAINT
+[lutaml, ../resources/results_schema/results_schema_annotated.exp, repo]
+----
+include::_schemas.liquid[]
+----
+
+// language_schema has Informal propositions (IP)
+[lutaml, ../resources/language_schema/language_schema_annotated.exp, repo]
+----
+include::_schemas.liquid[]
+----
+
+// shape_aspect_definition_schema has all 7 subclauses:
+// 4 Shape aspect definition
+// 4.1 General
+// 4.2 Fundamental concepts and assumptions
+// 4.3 Shape aspect definition type definitions
+// 4.4 Shape aspect definition entity definitions
+// 4.5 Shape aspect definition subtype constraint definitions
+// 4.6 Shape aspect definition function definitions
+// 4.7 Shape aspect definition rule definitions
+[lutaml, ../resources/shape_aspect_definition_schema/shape_aspect_definition_schema_annotated.exp, repo]
+----
+include::_schemas.liquid[]
+----
+
+[bibliography]
+== Bibliography

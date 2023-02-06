@@ -15,3 +15,18 @@
 
 {% endif %}
 
+{% if thing.unique_rules.size > 0 %}
+{% capture entity_thing_prefix %}{{thing_prefix}}.{{thing.id}}{% endcapture %}
+
+{% include "entity_unique_rules", things: thing.unique_rules, thing_prefix: entity_thing_prefix, depth: entity_nested_depth %}
+
+{% endif %}
+
+{% if thing.informal_propositions.size > 0 %}
+{% capture entity_thing_prefix %}{{thing_prefix}}.{{thing.id}}{% endcapture %}
+
+{% include "entity_informal_propositions", things: thing.informal_propositions, thing_prefix: entity_thing_prefix, depth: entity_nested_depth %}
+
+{% endif %}
+
+

@@ -10,7 +10,7 @@
 {% endif %}
 
 {% if thing.types.size > 0 %}
-{% include "types", things: thing.types, thing_prefix: function_thing_prefix, depth: function_nested_depth %}
+{% include "function_parameters", things: thing.types, thing_prefix: function_thing_prefix, depth: function_nested_depth %}
 
 {% endif %}
 
@@ -21,10 +21,5 @@
 
 {% if thing.variables.size > 0 %}
 {% include "function_variables", things: thing.variables, thing_prefix: function_thing_prefix, depth: function_nested_depth %}
-
-{% endif %}
-
-{% if thing.statements.size > 0 %}
-{% include "statements", things: thing.statements, thing_prefix: function_thing_prefix, depth: function_nested_depth %}
 
 {% endif %}
