@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../../xsl/res_doc/imgfile.xsl"?>
+<!DOCTYPE imgfile.content SYSTEM "../../../dtd/text.ent">
+<imgfile.content module="shape_variation_tolerances" file="shape_aspect_definition_schemaexpg1.xml">
+<img src="shape_aspect_definition_schemaexpg1.gif">
+<img.area shape="rect" coords="293,294,499,335" href="../../resources/product_property_definition_schema/product_property_definition_schema.xml" />
+<img.area shape="rect" coords="293,153,396,194" href="../../resources/geometry_schema/geometry_schema.xml" />
+<img.area shape="rect" coords="293,503,440,544" href="../../resources/shape_dimension_schema/shape_dimension_schema.xml" />
+<img.area shape="rect" coords="293,394,443,435" href="../../resources/qualified_measure_schema/qualified_measure_schema.xml" />
+<img.area shape="rect" coords="293,448,423,489" href="../../resources/representation_schema/representation_schema.xml" />
+<img.area shape="rect" coords="293,341,525,382" href="../../resources/product_property_representation_schema/product_property_representation_schema.xml" />
+<img.area shape="rect" coords="293,569,441,610" href="../../resources/support_resource_schema/support_resource_schema.xml" />
+<img.area shape="rect" coords="293,202,390,243" href="../../resources/measure_schema/measure_schema.xml" />
+<img.area shape="rect" coords="10,10,195,51" href="../../resources/shape_aspect_definition_schema/shape_aspect_definition_schema.xml" />
+</img>
+</imgfile.content>
