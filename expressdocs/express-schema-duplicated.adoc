@@ -48,12 +48,12 @@ Test definition
 
 == Two identical schemas to follow, with different anchors
 
-[lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
+[lutaml, ../data/resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
 ---
 include::_schemas.liquid[]
 ---
 
-[lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
+[lutaml, ../data/resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
 ---
 {% assign anchor-prefix = "a-" %}
 include::_schemas.liquid[]

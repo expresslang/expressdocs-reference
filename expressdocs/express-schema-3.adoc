@@ -44,7 +44,7 @@ Test definition
 
 == Two different schemas in the same block (action_schema, application_context_schema)
 
-[lutaml_express, ../resources/action_schema/action_schema_annotated.exp;../resources/application_context_schema/application_context_schema_annotated.exp, repo, leveloffset=+1]
+[lutaml_express, ../data/resources/action_schema/action_schema_annotated.exp;../resources/application_context_schema/application_context_schema_annotated.exp, repo, leveloffset=+1]
 ---
 include::_schemas.liquid[]
 ---
