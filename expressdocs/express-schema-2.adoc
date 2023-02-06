@@ -1,7 +1,7 @@
 = Metanorma with LutaML and EXPRESS
 :docnumber: 10303
 :tc-docnumber: 10446
-:partnumber: 41
+:partnumber: 1
 :copyright-year: 2019
 :language: en
 :publish-date: 2029-01-01
@@ -10,8 +10,8 @@
 :title-intro-fr: Systèmes d'automatisation industrielle et intégration
 :title-main-en: Product data representation and exchange
 :title-main-fr: Représentation et échange de données de produits
-:title-part-en: Integrated generic resource: Fundamentals of product description and support
-:title-part-fr: Ressources génériques intégrées: Principes de description et de support de produits
+:title-part-en: Basic stuff
+:title-part-fr: Chose basiques
 :doctype: international-standard
 :docstage: 60
 :docsubstage: 60
@@ -24,7 +24,6 @@
 :workgroup-number: 12
 :secretariat: ANSI
 :keywords: integrated generic resource, product definition, product property, measure, application context, product property representation, person, organization, experience, qualifications, location and position in organization
-:docfile: document.adoc
 :mn-document-class: iso
 :mn-output-extensions: xml,pdf,rxl
 :local-cache-only:
@@ -32,7 +31,7 @@
 
 .Foreword
 
-Some foreword.
+Foreword.
 
 == Scope
 
@@ -47,12 +46,18 @@ Scope.
 
 Test definition
 
-== One schema to follow
+== Two different schemas in the separate block (basic_attribute_schema, support_resource_schema)
 
-[lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
-----
+== Schemas
+
+[lutaml, ../resources/basic_attribute_schema/basic_attribute_schema_annotated.exp, repo, leveloffset=+2]
+---
 include::_schemas.liquid[]
-----
+---
 
-[bibliography]
-== Bibliography
+
+[lutaml, ../resources/support_resource_schema/support_resource_schema_annotated.exp, repo, leveloffset=+2]
+---
+include::_schemas.liquid[]
+---
+

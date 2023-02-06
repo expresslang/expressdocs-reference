@@ -1,4 +1,4 @@
-= Metanorma with LutaML and EXPRESS
+= Metanorma with LutaML and EXPRESS (one schema)
 :docnumber: 10303
 :tc-docnumber: 10446
 :partnumber: 41
@@ -24,15 +24,14 @@
 :workgroup-number: 12
 :secretariat: ANSI
 :keywords: integrated generic resource, product definition, product property, measure, application context, product property representation, person, organization, experience, qualifications, location and position in organization
-:docfile: document.adoc
 :mn-document-class: iso
-:mn-output-extensions: xml,html,doc,pdf,html_alt,rxl
+:mn-output-extensions: xml,pdf,html,rxl
 :local-cache-only:
 :data-uri-image:
 
 .Foreword
 
-Foreword.
+Some foreword.
 
 == Scope
 
@@ -43,22 +42,15 @@ Scope.
 
 == Terms and definitions
 
-=== Test term
-
-Test definition
-
-== Two identical schemas to follow, with different anchors
-
-[lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
----
+// [xlutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
+// [xlutaml, ../resources/results_schema/results_schema_annotated.exp, repo, leveloffset=+1]
+// [xlutaml, ../resources/mathematical_functions_schema/mathematical_functions_schema_annotated.exp, repo, leveloffset=+1]
+// [xlutaml, ../resources/quantities_and_units_schema/quantities_and_units_schema.exp, repo, leveloffset=+1]
+// TO TEST CONSTANTS [xlutaml, ../resources/iso13584_iec61360_dictionary_schema/iso13584_iec61360_dictionary_schema.exp, repo, leveloffset=+1]
+[lutaml, ../data/resources/action_schema/action_schema_annotated.exp, repo]
+----
 include::_schemas.liquid[]
----
-
-[lutaml, ../resources/action_schema/action_schema_annotated.exp, repo, leveloffset=+1]
----
-{% assign anchor-prefix = "a-" %}
-include::_schemas.liquid[]
----
+----
 
 [bibliography]
 == Bibliography

@@ -24,7 +24,6 @@
 :workgroup-number: 12
 :secretariat: ANSI
 :keywords: integrated generic resource, product definition, product property, measure, application context, product property representation, person, organization, experience, qualifications, location and position in organization
-:docfile: document.adoc
 :mn-document-class: iso
 :mn-output-extensions: xml,html,doc,pdf,html_alt,rxl
 :novalid:
