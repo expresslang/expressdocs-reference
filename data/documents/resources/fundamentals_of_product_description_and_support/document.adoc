@@ -26,7 +26,7 @@
 :keywords: integrated generic resource, product definition, product property, measure, application context, product property representation, person, organization, experience, qualifications, location and position in organization
 :imagesdir: images
 :mn-document-class: iso
-:mn-output-extensions: xml,html,doc,pdf,html_alt,rxl
+:mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
 :lutaml-express-index: schemas; schemas.yaml;
