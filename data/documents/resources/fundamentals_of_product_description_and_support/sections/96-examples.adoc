@@ -749,7 +749,7 @@ WR2:  SIZEOF(QUERY(pers &lt;* SELF\personal_address.people |
 END_ENTITY;
 ----
 
-*Formal propositions*
+[underline]#Formal propositions#
 
 *WR1*:: The address of only one organization shall be considered;
 
