@@ -99,28 +99,28 @@ NOTE: See <<expg.{{ schema.id }}>> for a graphical representation of this schema
 [type="express"]
 ==== {{ type.id }} <<expg.{{ schema.id }},image:expg.gif[]>> ((({{ type.id }},Object definition)))
 
-{% if type.type._class == 'Expressir::Model::DataTypes::Select' %}
+{% if type.underlying_type._class == 'Expressir::Model::DataTypes::Select' %}
 // output the boilerplate select descriptions for selects
-{% if type.type.extension_type %}
+{% if type.underlying_type.extension_type %}
 
 // an extended and extensible SELECT type
 // and
 // an extended not extensible SELECT type
 
-// TODO: This should be express:{{ type.type.extension_type.schema_id }}.{{ type.type.extension_type }}
+// TODO: This should be express:{{ type.underlying_type.extension_type.schema_id }}.{{ type.underlying_type.extension_type }}
 The *{{ type.id }}* type is an extension of the
-*<<express:{{ type.type.extension_type.base_path }},{{ type.type.extension_type.id }}>>* type.
+*<<express:{{ type.underlying_type.extension_type.base_path }},{{ type.underlying_type.extension_type.id }}>>* type.
 
-{% if type.type.extension_items.size > 0 %}
-It adds the data {% if type.type.extension_items.size > 1 %}types{% else %}type{% endif %}
+{% if type.underlying_type.extension_items.size > 0 %}
+It adds the data {% if type.underlying_type.extension_items.size > 1 %}types{% else %}type{% endif %}
 // TODO: This should be express:{{ item.schema_id }}.{{ item }}
-{%- for item in type.type.extension_items %}
+{%- for item in type.underlying_type.extension_items %}
 *<<express:{{ item.base_path }},{{ item.id }}>>*{% if forloop.length > 1 %}{% if forloop.rindex0 == 1 %} and {% elsif forloop.rindex0 != 0 %}, {% endif %}{% endif %}
 {%- endfor %}
 to the list of alternate data types.
 {% endif %}
 
-{% if type.type.extensible %}
+{% if type.underlying_type.extensible %}
 NOTE: The list of entity data types will be
 extended in application resources that use the constructs of
 this resource.
@@ -128,10 +128,10 @@ this resource.
 
 {% else %}
 
-{% if type.type.extensible %}
+{% if type.underlying_type.extensible %}
 // extensible SELECT type
 
-{% if type.type.extension_items.size > 0 %}
+{% if type.underlying_type.extension_items.size > 0 %}
 // an extensible non-empty SELECT type
 The *{{ type.id }}* type is an extensible list of alternate
 data types. It provides a mechanism to refer to instances of
@@ -181,44 +181,35 @@ types.
 --
 {% endif %}
 
-{% if type.first %}
-{% if type.type %}
-{% if type.type.items %}
-{% if type.type.items.size > 0 %}
+{% if type.underlying_type._class == 'Expressir::Model::DataTypes::Enumeration' %}
 
-{% assign found = false %}
-{% for item in type.type.items %}
-{% if item.remarks.size > 0 %}
-{% assign found = true %}
-{% endif %}
-{% endfor %}
-
-{% if found %}
+{% if type.underlying_type.items.size > 0 %}
 [underline]#Enumerated item definitions:#
-{% for item in type.type.items %}
-[[{{schema.id}}.{{type.id}}.{{item.id}}]]
 
+{% for item in type.underlying_type.items %}
+
+[[{{schema.id}}.{{type.id}}.{{item.id}}]]
 {% if item.remarks.size > 0 %}
-*{{ item.id }}*: {{ item.remarks | join: newLine }}
+*{{ item.id }}*:: {{ item.remarks | join: newLine }}
 {% endif %}
+
 {% endfor %}
+
 {% endif %}
 {% endif %}
-{% endif %}
-{% endif %}
-{% endif %}
+
 
 {% assign found = false %}
-{% for where1 in type.where %}
+{% for where1 in type.where_rules %}
 {% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
 
-{% if found and type.where.size > 0 %}
+{% if found and type.where_rules.size > 0 %}
 [underline]#Formal propositions:#
 
-{% for where1 in type.where %}
+{% for where1 in type.where_rules %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{type.id}}.{{where1.id}}]]
 *{{ where1.id }}*: {{ where1.remarks | join: newLine }}
@@ -292,16 +283,16 @@ types.
 {% endif %}
 
 {% assign found = false %}
-{% for where1 in entity.where %}
+{% for where1 in entity.where_rules %}
 {% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
 
-{% if found and entity.where.size > 0 %}
+{% if found and entity.where_rules.size > 0 %}
 [underline]#Formal propositions:#
 
-{% for where1 in entity.where %}
+{% for where1 in entity.where_rules %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{entity.id}}.{{where1.id}}]]
 *{{ where1.id }}*: {{ where1.remarks | join: newLine }}
@@ -368,7 +359,7 @@ types.
 
 {% for entity in rule.applies_to %}
 [[{{schema.id}}.{{rule.id}}.{{entity.id}}]]
-{{ entity.id }}: {{ entity.remarks | join: newLine }}
+{{ entity.id }}:: {{ entity.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
@@ -380,7 +371,7 @@ types.
 
 {% for constant in rule.constants %}
 [[{{schema.id}}.{{rule.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks | join: newLine }}
+{{ constant.id }}:: {{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
@@ -391,15 +382,15 @@ types.
 
 {% for type in rule.types %}
 [[{{schema.id}}.{{rule.id}}.{{type.id}}]]
-{{ type.id }}: {{ type.remarks | join: newLine }}
+{{ type.id }}:: {{ type.remarks | join: newLine }}
 
 
-{% if type.type and type.type.items and type.type.items.size > 0 %}
+{% if type.underlying_type and type.underlying_type.items and type.underlying_type.items.size > 0 %}
 
-{% for item in type.type.items %}
+{% for item in type.underlying_type.items %}
 [[{{schema.id}}.{{rule.id}}.{{type.id}}.{{item.id}}]]
 {% if item.remarks.size > 0 %}
-* Item {{ item.id }}: {{ item.remarks | join: newLine }}
+* Item {{ item.id }}:: {{ item.remarks | join: newLine }}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -451,8 +442,8 @@ types.
 {% assign statementid = forloop.index %}
 {% endif %}
 
-[[{{schema.id}}.{{rule.id}}.{{statementid }}]]
-{{ statementid }}: {{ statement.remarks | join: newLine }}
+[[{{schema.id}}.{{rule.id}}.{{statementid}}]]
+{{ statementid }}:: {{ statement.remarks | join: newLine }}
 
 
 {% endfor %}
@@ -461,16 +452,16 @@ types.
 
 
 {% assign found = false %}
-{% for where1 in rule.where %}
+{% for where1 in rule.where_rules %}
 {% if where1.remarks.size > 0 %}
 {% assign found = true %}
 {% endif %}
 {% endfor %}
 
-{% if found and rule.where.size > 0 %}
+{% if found and rule.where_rules.size > 0 %}
 [underline]#Formal propositions:#
 
-{% for where1 in rule.where %}
+{% for where1 in rule.where_rules %}
 {% if where1.remarks.size > 0 %}
 [[{{schema.id}}.{{rule.id}}.{{where1.id}}]]
 *{{ where1.id }}*: {{ where1.remarks | join: newLine }}
@@ -582,7 +573,7 @@ types.
 
 {% for constant in function.constants %}
 [[{{schema.id}}.{{function.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks | join: newLine }}
+{{ constant.id }}:: {{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
@@ -593,12 +584,12 @@ types.
 
 {% for type in function.types %}
 [[{{schema.id}}.{{function.id}}.{{type.id}}]]
-{{ type.id }}: {{ type.remarks | join: newLine }}
+{{ type.id }}:: {{ type.remarks | join: newLine }}
 
 
-{% if type.type and type.type.items and type.type.items.size > 0 %}
+{% if type.underlying_type and type.underlying_type.items and type.underlying_type.items.size > 0 %}
 
-{% for item in type.type.items %}
+{% for item in type.underlying_type.items %}
 [[{{schema.id}}.{{function.id}}.{{type.id}}.{{item.id}}]]
 {% if item.remarks.size > 0 %}
 * Item {{ item.id }}: {{ item.remarks | join: newLine }}
@@ -626,7 +617,7 @@ types.
 {% if variable.remarks.size > 0 %}
 
 [[{{schema.id}}.{{function.id}}.{{variable.id}}]]
-{{ variable.id }}: {{ variable.remarks | join: newLine }}
+{{ variable.id }}:: {{ variable.remarks | join: newLine }}
 
 {% endif %}
 {% endfor %}
@@ -653,7 +644,7 @@ types.
 {% endif %}
 
 [[{{schema.id}}.{{function.id}}.{{ statementid }}]]
-{{ statementid }}: {{ statement.remarks | join: newLine }}
+{{ statementid }}:: {{ statement.remarks | join: newLine }}
 
 
 
@@ -714,12 +705,12 @@ _Procedure types:_
 
 {% for type in procedure.types %}
 [[{{schema.id}}.{{procedure.id}}.{{type.id}}]]
-{{ type.id }}: {{ type.remarks | join: newLine }}
+{{ type.id }}:: {{ type.remarks | join: newLine }}
 
 
-{% if type.type and type.type.items and type.type.items.size > 0 %}
+{% if type.underlying_type and type.underlying_type.items and type.underlying_type.items.size > 0 %}
 
-{% for item in type.type.items %}
+{% for item in type.underlying_type.items %}
 [[{{schema.id}}.{{procedure.id}}.{{type.id}}.{{item.id}}]]
 {% if item.remarks.size > 0 %}
 * Item {{ item.id }}: {{ item.remarks | join: newLine }}
@@ -737,7 +728,7 @@ _Procedure constants:_
 
 {% for constant in procedure.constants %}
 [[{{schema.id}}.{{procedure.id}}.{{constant.id}}]]
-{{ constant.id }}: {{ constant.remarks | join: newLine }}
+{{ constant.id }}:: {{ constant.remarks | join: newLine }}
 
 {% endfor %}
 {% endif %}
@@ -755,7 +746,7 @@ _Procedure variables:_
 {% for variable in procedure.variables %}
 {% if variable.remarks.size > 0 %}
 [[{{schema.id}}.{{procedure.id}}.{{variable.id}}]]
-{{ variable.id }}: {{ variable.remarks | join: newLine }}
+{{ variable.id }}:: {{ variable.remarks | join: newLine }}
 
 {% endif %}
 {% endfor %}
@@ -784,7 +775,7 @@ _Procedure statements:_
 {% endif %}
 
 [[{{schema.id}}.{{procedure.id}}.{{statementid }}]]
-{{ statementid }}: {{ statement.remarks | join: newLine }}
+{{ statementid }}:: {{ statement.remarks | join: newLine }}
 
 
 
