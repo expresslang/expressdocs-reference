@@ -4,7 +4,7 @@
 {% assign schemaname = schema.id | append: "$" | remove: "_schema$" | remove: "$" | replace: "_", " " | capitalize %}
 [[{{ schema.id }}]]
 [type="express"]
-== {{ schemaname }}
+== {{ schemaname }} schema
 
 {% capture newLine %}
 
