@@ -4,7 +4,7 @@ GEM
     RubyInline (3.12.6)
       ZenTest (~> 4.3)
     ZenTest (4.12.1)
-    activesupport (7.0.3.1)
+    activesupport (7.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -36,7 +36,7 @@ GEM
     cliver (0.3.2)
     cnccs (0.1.6)
     coderay (1.1.3)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.2)
     connection_pool (2.2.5)
     css_parser (1.11.0)
       addressable
@@ -57,6 +57,8 @@ GEM
       ffi (~> 1.0)
     emf2svg (1.4.2-x86_64-darwin)
       ffi (~> 1.0)
+    emf2svg (1.4.2-x86_64-linux)
+      ffi (~> 1.0)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
     excavate (0.3.1)
@@ -67,9 +69,8 @@ GEM
       rubyzip (~> 2.3)
       seven-zip (~> 1.4)
       thor (~> 1.0)
-    expressir (1.2.7-arm64-darwin)
-      thor (~> 1.0)
-    expressir (1.2.7-x86_64-darwin)
+    expressir (1.2.7)
+      rice (~> 4.0.3)
       thor (~> 1.0)
     extract_ttc (0.1.0)
       ffi
@@ -108,6 +109,8 @@ GEM
       ffi-libarchive (~> 1.0)
     ffi-libarchive-binary (0.2.6-x86_64-darwin)
       ffi-libarchive (~> 1.0)
+    ffi-libarchive-binary (0.2.6-x86_64-linux)
+      ffi-libarchive (~> 1.0)
     fontist (1.14.4)
       down (~> 5.0)
       excavate (~> 0.3.1)
@@ -145,7 +148,7 @@ GEM
     htmlentities (4.3.4)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
-    i18n (1.12.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     iev (0.3.1)
       nokogiri (~> 1)
@@ -389,7 +392,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mini_portile2 (2.8.0)
-    minitest (5.16.3)
+    minitest (5.19.0)
     mn-requirements (0.1.3.2)
       isodoc-i18n (~> 1.0.7)
       metanorma-utils (~> 1.4.0)
@@ -405,9 +408,8 @@ GEM
       connection_pool (~> 2.2)
     net-protocol (0.1.3)
       timeout
-    nokogiri (1.13.8-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-darwin)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     nokogiri-styles (0.1.2)
       nokogiri
@@ -633,6 +635,7 @@ GEM
     reverse_markdown (1.4.0)
       nokogiri
     rexml (3.2.5)
+    rice (4.0.4)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -702,7 +705,7 @@ GEM
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.1)
       tzinfo
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.3)
       tzinfo (>= 1.0.0)
@@ -726,6 +729,7 @@ PLATFORMS
   arm64-darwin-21
   x86_64-darwin-19
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   metanorma-cli
