@@ -1,9 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    RubyInline (3.12.6)
-      ZenTest (~> 4.3)
-    ZenTest (4.12.1)
     activesupport (7.0.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
@@ -57,6 +54,8 @@ GEM
       ffi (~> 1.0)
     emf2svg (1.4.2-x86_64-darwin)
       ffi (~> 1.0)
+    emf2svg (1.4.2-x86_64-linux)
+      ffi (~> 1.0)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
     excavate (0.3.1)
@@ -67,9 +66,8 @@ GEM
       rubyzip (~> 2.3)
       seven-zip (~> 1.4)
       thor (~> 1.0)
-    expressir (1.2.7-arm64-darwin)
-      thor (~> 1.0)
-    expressir (1.2.7-x86_64-darwin)
+    expressir (1.2.7)
+      rice (~> 4.0.3)
       thor (~> 1.0)
     extract_ttc (0.1.0)
       ffi
@@ -107,6 +105,8 @@ GEM
     ffi-libarchive-binary (0.2.6-arm64-darwin)
       ffi-libarchive (~> 1.0)
     ffi-libarchive-binary (0.2.6-x86_64-darwin)
+      ffi-libarchive (~> 1.0)
+    ffi-libarchive-binary (0.2.6-x86_64-linux)
       ffi-libarchive (~> 1.0)
     fontist (1.14.4)
       down (~> 5.0)
@@ -175,13 +175,13 @@ GEM
       twitter_cldr
     isoics (0.1.11)
     json-canonicalization (0.3.0)
-    json-ld (3.2.3)
+    json-ld (3.2.4)
       htmlentities (~> 4.3)
       json-canonicalization (~> 0.3)
       link_header (~> 0.0, >= 0.0.8)
       multi_json (~> 1.15)
-      rack (~> 2.2)
-      rdf (~> 3.2, >= 3.2.9)
+      rack (>= 2.2, < 4)
+      rdf (~> 3.2, >= 3.2.10)
     json-ld-preloaded (3.2.0)
       json-ld (~> 3.2)
       rdf (~> 3.2)
@@ -227,7 +227,7 @@ GEM
       shex (~> 0.6, >= 0.6.4)
       sparql (~> 3.1, >= 3.1.8)
       sparql-client (~> 3.1, >= 3.1.2)
-    liquid (4.0.3)
+    liquid (4.0.4)
     logger (1.5.1)
     lutaml (0.7.4)
       lutaml-express
@@ -352,7 +352,7 @@ GEM
       lutaml
       relaton-cli
       reverse_adoc
-    metanorma-standoc (2.2.2.1)
+    metanorma-standoc (2.2.3.1)
       asciidoctor (~> 2.0.0)
       asciimath2unitsml (~> 0.4.0)
       concurrent-ruby
@@ -364,7 +364,6 @@ GEM
       metanorma-plugin-datastruct (~> 0.2.0)
       metanorma-plugin-lutaml
       mn-requirements (~> 0.1.3)
-      png
       pngcheck
       relaton-cli (~> 1.13.0)
       relaton-iev (~> 1.1.0)
@@ -405,9 +404,8 @@ GEM
       connection_pool (~> 2.2)
     net-protocol (0.1.3)
       timeout
-    nokogiri (1.13.8-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-darwin)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     nokogiri-styles (0.1.2)
       nokogiri
@@ -416,8 +414,6 @@ GEM
     parslet (2.0.0)
     plane1converter (0.0.1)
     plist (3.6.0)
-    png (1.2.1)
-      RubyInline (~> 3.9)
     pngcheck (0.1.0)
       ffi (~> 1.0)
       mini_portile2 (~> 2.7)
@@ -438,10 +434,10 @@ GEM
       thor
     public_suffix (5.0.0)
     racc (1.6.0)
-    rack (2.2.4)
+    rack (3.0.8)
     rake (13.0.6)
     rchardet (1.8.0)
-    rdf (3.2.9)
+    rdf (3.2.11)
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (3.2.1)
       rdf (~> 3.2)
@@ -528,16 +524,16 @@ GEM
       net-ftp (~> 0.1.0)
       relaton-bib (~> 1.13.0)
       rubyzip (~> 2.3.0)
-    relaton-bib (1.13.1)
+    relaton-bib (1.13.15)
       addressable
       bibtex-ruby
       htmlentities
       iso639
       nokogiri (~> 1.13.0)
-    relaton-bipm (1.13.4)
+    relaton-bipm (1.13.12)
       faraday (~> 1.0)
       mechanize (~> 2.8.0)
-      relaton-bib (~> 1.13.0)
+      relaton-bib (~> 1.13.13)
       rubyzip (~> 2.3.0)
       serrano (~> 1.0)
     relaton-bsi (1.13.0)
@@ -545,7 +541,7 @@ GEM
       graphql (= 1.13.6)
       graphql-client (~> 0.16.0)
       relaton-iso-bib (~> 1.13.0)
-    relaton-calconnect (1.13.0)
+    relaton-calconnect (1.13.1)
       faraday (~> 1.0)
       relaton-bib (~> 1.13.0)
     relaton-cen (1.13.0)
@@ -565,26 +561,27 @@ GEM
       cnccs (~> 0.1.1)
       gb-agencies (~> 0.0.1)
       relaton-iso-bib (~> 1.13.0)
-    relaton-iana (1.13.0)
+    relaton-iana (1.13.1)
       faraday (~> 1.0)
       relaton-bib (~> 1.13.0)
     relaton-iec (1.13.0)
       addressable
       relaton-iso-bib (~> 1.13.0)
-    relaton-ieee (1.13.0)
+    relaton-ieee (1.13.1)
       faraday (~> 1.0)
+      mini_portile2
       relaton-bib (~> 1.13.0)
       rubyzip (~> 2.3.0)
-    relaton-ietf (1.13.1)
-      relaton-bib (~> 1.13.0)
+    relaton-ietf (1.13.10)
+      relaton-bib (~> 1.13.11)
     relaton-iev (1.1.4)
       nokogiri (~> 1.13.0)
       relaton (>= 1.6)
     relaton-iho (1.13.0)
       relaton-bib (~> 1.13.0)
-    relaton-iso (1.13.2)
+    relaton-iso (1.13.3)
       algolia
-      pubid-iso (~> 0.1.8)
+      pubid-iso (= 0.1.10)
       relaton-iso-bib (~> 1.13.0)
     relaton-iso-bib (1.13.0)
       isoics (~> 0.1.6)
@@ -615,7 +612,7 @@ GEM
       http-cookie
       relaton-bib (~> 1.13.0)
       unf_ext (>= 0.0.7.7)
-    relaton-w3c (1.13.0)
+    relaton-w3c (1.13.1)
       linkeddata (~> 3.1.0)
       mechanize (~> 2.8.0)
       rdf (~> 3.2.0)
@@ -633,6 +630,7 @@ GEM
     reverse_markdown (1.4.0)
       nokogiri
     rexml (3.2.5)
+    rice (4.0.4)
     roman-numerals (0.3.0)
     rsec (1.0.0)
     ruby-graphviz (1.2.5)
@@ -726,6 +724,7 @@ PLATFORMS
   arm64-darwin-21
   x86_64-darwin-19
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   metanorma-cli
