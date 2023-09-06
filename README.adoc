@@ -1,5 +1,7 @@
 == Annotated EXPRESS
 
+image:https://github.com/metanorma/annotated-express/actions/workflows/docker.yml/badge.svg["Build Status", link="https://github.com/metanorma/annotated-express/actions/workflows/docker.yml"]
+
 === Introduction
 
 Annotated EXPRESS is a method for documenting EXPRESS code. It was developed
