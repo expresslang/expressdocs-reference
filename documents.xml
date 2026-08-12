@@ -1,0 +1,1257 @@
+<relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>ISO 10303 in Metanorma</title><contributor><role type='author'/><organization><name>ISO/TC 184/SC 4/WG 12</name></organization></contributor><relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Testing a single schema</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Integrated generic resource: Testing a single schema</title>
+  <title language="en" type="title-part-prefix">Part 999</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Tester un seul schéma</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Ressources génériques intégrées: Tester un seul schéma</title>
+  <title language="fr" type="title-part-prefix">Partie 999</title>
+  <uri type="xml">./documents/data/documents/iso-smrl-style-validation.xml</uri>
+  <uri type="pdf">./documents/data/documents/iso-smrl-style-validation.pdf</uri>
+  <uri type="html">./documents/data/documents/iso-smrl-style-validation.html</uri>
+  <uri type="rxl">./documents/data/documents/iso-smrl-style-validation.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-999:2030</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-999:2030(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-999:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-999</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-999:2030(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2030</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="999">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+<relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-part-prefix">Part 41</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-part-prefix">Partie 41</title>
+  <uri type="xml">./documents/data/documents/resources/fundamentals_of_product_description_and_support/document.xml</uri>
+  <uri type="pdf">./documents/data/documents/resources/fundamentals_of_product_description_and_support/document.pdf</uri>
+  <uri type="html">./documents/data/documents/resources/fundamentals_of_product_description_and_support/document.html</uri>
+  <uri type="rxl">./documents/data/documents/resources/fundamentals_of_product_description_and_support/document.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="41">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+<relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-part-prefix">Part 41</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-part-prefix">Partie 41</title>
+  <uri type="xml">./documents/expressdocs/express-schema-1.xml</uri>
+  <uri type="pdf">./documents/expressdocs/express-schema-1.pdf</uri>
+  <uri type="html">./documents/expressdocs/express-schema-1.html</uri>
+  <uri type="rxl">./documents/expressdocs/express-schema-1.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="41">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+<relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Basic stuff</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Basic stuff</title>
+  <title language="en" type="title-part-prefix">Part 1</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Chose basiques</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Chose basiques</title>
+  <title language="fr" type="title-part-prefix">Partie 1</title>
+  <uri type="xml">./documents/expressdocs/express-schema-2.xml</uri>
+  <uri type="pdf">./documents/expressdocs/express-schema-2.pdf</uri>
+  <uri type="html">./documents/expressdocs/express-schema-2.html</uri>
+  <uri type="rxl">./documents/expressdocs/express-schema-2.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-1:2019</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-1:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-1:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-1</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-1:2019(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="1">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+<relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-part-prefix">Part 41</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-part-prefix">Partie 41</title>
+  <uri type="xml">./documents/expressdocs/express-schema-24.xml</uri>
+  <uri type="pdf">./documents/expressdocs/express-schema-24.pdf</uri>
+  <uri type="html">./documents/expressdocs/express-schema-24.html</uri>
+  <uri type="rxl">./documents/expressdocs/express-schema-24.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="41">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+<relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-part-prefix">Part 41</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-part-prefix">Partie 41</title>
+  <uri type="xml">./documents/expressdocs/express-schema-3.xml</uri>
+  <uri type="pdf">./documents/expressdocs/express-schema-3.pdf</uri>
+  <uri type="html">./documents/expressdocs/express-schema-3.html</uri>
+  <uri type="rxl">./documents/expressdocs/express-schema-3.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="41">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+<relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-part-prefix">Part 41</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-part-prefix">Partie 41</title>
+  <uri type="xml">./documents/expressdocs/express-schema-duplicated.xml</uri>
+  <uri type="pdf">./documents/expressdocs/express-schema-duplicated.pdf</uri>
+  <uri type="html">./documents/expressdocs/express-schema-duplicated.html</uri>
+  <uri type="rxl">./documents/expressdocs/express-schema-duplicated.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="41">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+<relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-intro">Industrial automation systems and integration</title>
+  <title language="en" type="title-main">Product data representation and exchange</title>
+  <title language="en" type="title-part">Integrated generic resource: Fundamentals of product description and support</title>
+  <title language="en" type="title-part-prefix">Part 41</title>
+  <title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+  <title language="fr" type="title-main">Représentation et échange de données de produits</title>
+  <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
+  <title language="fr" type="title-part-prefix">Partie 41</title>
+  <uri type="xml">./documents/expressdocs/express-simple-statement.xml</uri>
+  <uri type="pdf">./documents/expressdocs/express-simple-statement.pdf</uri>
+  <uri type="html">./documents/expressdocs/express-simple-statement.html</uri>
+  <uri type="rxl">./documents/expressdocs/express-simple-statement.rxl</uri>
+  <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
+  <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-tc">10446</docidentifier>
+  <docnumber>10303</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>Agency</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>secretariat</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Secretariat">
+        <name>ANSI</name>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <subdivision type="Technical committee" subtype="TC">
+        <name>Industrial automation systems and integration</name>
+        <identifier>TC 184</identifier>
+        <identifier type="full">TC 184/SC 4/WG 12</identifier>
+      </subdivision>
+      <subdivision type="Subcommittee" subtype="SC">
+        <name>Industrial data</name>
+        <identifier>SC 4</identifier>
+      </subdivision>
+      <subdivision type="Workgroup" subtype="WG">
+        <identifier>WG 12</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>6</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage abbreviation="IS">60</stage>
+    <substage>60</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <keyword>
+    <vocab>integrated generic resource</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product definition</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property</vocab>
+  </keyword>
+  <keyword>
+    <vocab>measure</vocab>
+  </keyword>
+  <keyword>
+    <vocab>application context</vocab>
+  </keyword>
+  <keyword>
+    <vocab>product property representation</vocab>
+  </keyword>
+  <keyword>
+    <vocab>person</vocab>
+  </keyword>
+  <keyword>
+    <vocab>organization</vocab>
+  </keyword>
+  <keyword>
+    <vocab>experience</vocab>
+  </keyword>
+  <keyword>
+    <vocab>qualifications</vocab>
+  </keyword>
+  <keyword>
+    <vocab>location and position in organization</vocab>
+  </keyword>
+  <ext schema-version="v1.1.2">
+    <doctype>international-standard</doctype>
+    <flavor>iso</flavor>
+    <structuredidentifier>
+      <project-number part="41">ISO 10303</project-number>
+    </structuredidentifier>
+    <stagename abbreviation="IS">International Standard</stagename>
+  </ext>
+</bibdata></relation>
+</relaton-collection>
