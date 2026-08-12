@@ -56,10 +56,13 @@ include::_schemas.liquid[]
 ----
 
 // results_schema has SUBTYPE_CONSTRAINT
-[lutaml, ../resources/results_schema/results_schema_annotated.exp, repo]
-----
-include::_schemas.liquid[]
-----
+// DISABLED: results_schema_annotated.exp has never been present in this
+// repository, and current metanorma-plugin-lutaml fails hard on a missing
+// schema. Re-enable when the annotated schema is generated from the SMRL.
+// [lutaml, ../resources/results_schema/results_schema_annotated.exp, repo]
+// ----
+// include::_schemas.liquid[]
+// ----
 
 // language_schema has Informal propositions (IP)
 [lutaml, ../resources/language_schema/language_schema_annotated.exp, repo]
@@ -76,10 +79,14 @@ include::_schemas.liquid[]
 // 4.5 Shape aspect definition subtype constraint definitions
 // 4.6 Shape aspect definition function definitions
 // 4.7 Shape aspect definition rule definitions
-[lutaml, ../resources/shape_aspect_definition_schema/shape_aspect_definition_schema_annotated.exp, repo]
-----
-include::_schemas.liquid[]
-----
+// DISABLED: shape_aspect_definition_schema_annotated.exp has never been
+// present in this repository, and current metanorma-plugin-lutaml fails
+// hard on a missing schema. Re-enable when the annotated schema is
+// generated from the SMRL.
+// [lutaml, ../resources/shape_aspect_definition_schema/shape_aspect_definition_schema_annotated.exp, repo]
+// ----
+// include::_schemas.liquid[]
+// ----
 
 [bibliography]
 == Bibliography
