@@ -1,5 +1,5 @@
 <bibdata type="standard">
-<title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Basic stuff</title>
+<title language="en" type="main">Industrial automation systems and integration&#x2009;&#x2014;&#x2009;Product data representation and exchange&#x2009;&#x2014;&#x2009;Basic stuff</title>
 
 <title language="en" type="title-intro">Industrial automation systems and integration</title>
 
@@ -7,18 +7,18 @@
 
 <title language="en" type="title-part">Basic stuff</title>
 
-<title language="en" type="title-part-prefix">Part 1</title>
+<title language="en" type="title-part-prefix">Part&#xA0;1</title>
 
-<title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Chose basiques</title>
+<title language="fr" type="main">Syst&#xE8;mes d&#x2019;automatisation industrielle et int&#xE9;gration&#x2009;&#x2014;&#x2009;Repr&#xE9;sentation et &#xE9;change de donn&#xE9;es de produits&#x2009;&#x2014;&#x2009;Chose basiques</title>
 
-<title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+<title language="fr" type="title-intro">Syst&#xE8;mes d&#x2019;automatisation industrielle et int&#xE9;gration</title>
 
-<title language="fr" type="title-main">Représentation et échange de données de produits</title>
+<title language="fr" type="title-main">Repr&#xE9;sentation et &#xE9;change de donn&#xE9;es de produits</title>
 
 <title language="fr" type="title-part">Chose basiques</title>
 
-<title language="fr" type="title-part-prefix">Partie 1</title>
-<docidentifier type="ISO" primary="true">ISO 10303-1:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-1:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-1:stage-60.60:en</docidentifier><docidentifier type="iso-undated">ISO 10303-1</docidentifier><docidentifier type="iso-with-lang">ISO 10303-1:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<title language="fr" type="title-part-prefix">Partie&#xA0;1</title>
+<docidentifier type="ISO" primary="true">ISO 10303-1:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-1:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-1:en</docidentifier><docidentifier type="iso-undated">ISO 10303-1</docidentifier><docidentifier type="iso-with-lang">ISO 10303-1:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
 <name>International Organization for Standardization</name>
 <abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>International Organization for Standardization</name>

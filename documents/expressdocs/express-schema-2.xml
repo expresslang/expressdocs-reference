@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.4.10" schema-version="v2.2.0" flavor="iso">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.5.4" schema-version="v2.3.0" flavor="iso">
 <bibdata type="standard">
 <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Basic stuff</title>
 
@@ -20,7 +20,7 @@
 <title language="fr" type="title-part">Chose basiques</title>
 
 <title language="fr" type="title-part-prefix">Partie 1</title>
-<docidentifier type="ISO" primary="true">ISO 10303-1:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-1:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-1:stage-60.60:en</docidentifier><docidentifier type="iso-undated">ISO 10303-1</docidentifier><docidentifier type="iso-with-lang">ISO 10303-1:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<docidentifier type="ISO" primary="true">ISO 10303-1:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-1:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-1:en</docidentifier><docidentifier type="iso-undated">ISO 10303-1</docidentifier><docidentifier type="iso-with-lang">ISO 10303-1:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
 <name>International Organization for Standardization</name>
 <abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>International Organization for Standardization</name>
@@ -702,7 +702,7 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_af44adeb-bcf4-d3b0-b138-b8135dc3a700" anchor="support_resource_schema" type="express-schema" inline-header="false" obligation="normative">
+<clause id="_63ecc454-85aa-7864-bbb5-509ea7f452ad" anchor="support_resource_schema" type="express-schema" inline-header="false" obligation="normative">
 <title id="_d2342ca6-736c-b3a5-0fb0-0d0b69c1bb95">support_resource_schema</title>
 <clause id="_ae3e6fea-9aeb-f5fc-3c82-ed945aa401f3" inline-header="false" obligation="normative">
 <title id="_1d0a0e6e-9129-6d18-fb0a-a14109f5544f">General</title>
@@ -771,9 +771,9 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_5a972bdf-c218-d6a2-668d-a1124fa59d12" anchor="support_resource_schema.functions" inline-header="false" level="3" obligation="normative">
+<clause id="_d2343f84-c042-8171-821d-c50a7475b51b" anchor="support_resource_schema.functions" inline-header="false" level="3" obligation="normative">
 <title id="_d3ad7942-00ae-0414-91ff-0c342a0b09f4">support_resource_schema function definitions</title>
-<clause id="_53b72109-78a3-627d-fda6-7f7c93e1fb89" anchor="support_resource_schema.bag_to_set.bag_to_set" inline-header="false" level="4" obligation="normative">
+<clause id="_35630cd5-242a-ef10-8072-7bf21703cd8e" anchor="support_resource_schema.bag_to_set.bag_to_set" inline-header="false" level="4" obligation="normative">
 <title id="_61134d14-0dc6-3024-a976-3dd5fa184e07">bag_to_set</title>
 <p id="_ad330a06-016f-e3cf-b0ad-0dc8fa1cfa86">The <strong>bag_to_set</strong> function converts BAGs into SETs.</p>
 
@@ -782,9 +782,9 @@ END_TYPE;</body></sourcecode>
 
 <p id="_d9c0a3ab-cca3-277e-4277-3a628ccffccb"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_43a0c01d-383b-37d6-2a48-169680f8d1d0" unnumbered="true"><body>FUNCTION bag_to_set(the_bag : BAG OF GENERIC) : SET OF GENERIC;
+<sourcecode id="_fc09fc6a-d035-22a8-fac5-264c50eed1f7" unnumbered="true"><body>FUNCTION bag_to_set(the_bag : BAG OF GENERIC : intype) : SET OF GENERIC : intype;
   LOCAL
-    the_set : SET OF GENERIC := [];
+    the_set : SET OF GENERIC : intype := [];
   END_LOCAL;
   IF SIZEOF(the_bag) &gt; 0 THEN
     REPEAT i := 1 TO HIINDEX(the_bag);
@@ -795,27 +795,27 @@ END_TYPE;</body></sourcecode>
 END_FUNCTION;</body></sourcecode>
 
 
-<clause id="_f9df99e6-68f8-dac8-5066-9e920d26cec4" anchor="support_resource_schema.bag_to_set.parameters" inline-header="false" level="5" obligation="normative">
+<clause id="_8e507848-1e2d-1f2d-ebf0-a443e7a41f9c" anchor="support_resource_schema.bag_to_set.parameters" inline-header="false" level="5" obligation="normative">
 <title id="_5bdebe27-2831-ca09-bafd-bf8eb45dab14">Parameters</title>
-<clause id="_1858e57c-592c-359c-9ed2-b68715d60d91" anchor="support_resource_schema.bag_to_set.the_bag" inline-header="false" obligation="normative">
+<clause id="_007341a8-f28d-d4af-d23c-796d42efc90e" anchor="support_resource_schema.bag_to_set.the_bag" inline-header="false" obligation="normative">
 <title id="_a91562cc-4d73-11a4-b97e-faf5eedfd76d">the_bag</title>
 <p id="_02693ccd-3dcb-8cf7-0f94-bf4f323f273b">(input) the BAG that is to be converted into a SET.</p>
 
 <p id="_caa67c0d-c6b5-0ffc-4c56-918d7efb37cc"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_0f77fde7-c54b-6e40-04e2-03a9b5cf0383" unnumbered="true"><body>the_bag : BAG OF GENERIC</body></sourcecode>
+<sourcecode id="_4a1b29d8-3d8d-e61d-23ba-5db9cc3dc878" unnumbered="true"><body>the_bag : BAG OF GENERIC : intype</body></sourcecode>
 
 </clause></clause>
 
 
 
-<clause id="_ab7993e8-bcc0-42a9-ed2f-7366ae6ce781" anchor="support_resource_schema.bag_to_set.variables" inline-header="false" level="5" obligation="normative">
+<clause id="_3139fe9e-be6b-5356-fef7-559af4a78bf8" anchor="support_resource_schema.bag_to_set.variables" inline-header="false" level="5" obligation="normative">
 <title id="_69b10302-a5e5-9c39-18d1-9214f8003def">Variables</title>
-<clause id="_1d177c64-6a89-9148-f250-017592d5098f" anchor="support_resource_schema.bag_to_set.the_set" inline-header="false" obligation="normative">
+<clause id="_bd779a2c-b5bd-4e0b-5750-ab7672cd2043" anchor="support_resource_schema.bag_to_set.the_set" inline-header="false" obligation="normative">
 <title id="_7c34b741-8016-345a-375a-d400a7019712">the_set</title>
 <p id="_a768c18d-6753-82ad-952e-f30c670bc970"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_e90d8e51-9e27-97f0-7d17-086d8027d7a8" unnumbered="true"><body>the_set : SET OF GENERIC := [];</body></sourcecode>
+<sourcecode id="_75f2c15f-c81e-b2ca-aad0-22ae494caa21" unnumbered="true"><body>the_set : SET OF GENERIC : intype := [];</body></sourcecode>
 
 </clause></clause>
 

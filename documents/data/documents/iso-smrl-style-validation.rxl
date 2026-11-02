@@ -1,5 +1,5 @@
 <bibdata type="standard">
-<title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Testing a single schema</title>
+<title language="en" type="main">Industrial automation systems and integration&#x2009;&#x2014;&#x2009;Product data representation and exchange&#x2009;&#x2014;&#x2009;Integrated generic resource: Testing a single schema</title>
 
 <title language="en" type="title-intro">Industrial automation systems and integration</title>
 
@@ -7,18 +7,18 @@
 
 <title language="en" type="title-part">Integrated generic resource: Testing a single schema</title>
 
-<title language="en" type="title-part-prefix">Part 999</title>
+<title language="en" type="title-part-prefix">Part&#xA0;999</title>
 
-<title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Tester un seul schéma</title>
+<title language="fr" type="main">Syst&#xE8;mes d&#x2019;automatisation industrielle et int&#xE9;gration&#x2009;&#x2014;&#x2009;Repr&#xE9;sentation et &#xE9;change de donn&#xE9;es de produits&#x2009;&#x2014;&#x2009;Ressources g&#xE9;n&#xE9;riques int&#xE9;gr&#xE9;es: Tester un seul sch&#xE9;ma</title>
 
-<title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+<title language="fr" type="title-intro">Syst&#xE8;mes d&#x2019;automatisation industrielle et int&#xE9;gration</title>
 
-<title language="fr" type="title-main">Représentation et échange de données de produits</title>
+<title language="fr" type="title-main">Repr&#xE9;sentation et &#xE9;change de donn&#xE9;es de produits</title>
 
-<title language="fr" type="title-part">Ressources génériques intégrées: Tester un seul schéma</title>
+<title language="fr" type="title-part">Ressources g&#xE9;n&#xE9;riques int&#xE9;gr&#xE9;es: Tester un seul sch&#xE9;ma</title>
 
-<title language="fr" type="title-part-prefix">Partie 999</title>
-<docidentifier type="ISO" primary="true">ISO 10303-999:2030</docidentifier><docidentifier type="iso-reference">ISO 10303-999:2030(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-999:stage-60.60:en</docidentifier><docidentifier type="iso-undated">ISO 10303-999</docidentifier><docidentifier type="iso-with-lang">ISO 10303-999:2030(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<title language="fr" type="title-part-prefix">Partie&#xA0;999</title>
+<docidentifier type="ISO" primary="true">ISO 10303-999:2030</docidentifier><docidentifier type="iso-reference">ISO 10303-999:2030(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-999:en</docidentifier><docidentifier type="iso-undated">ISO 10303-999</docidentifier><docidentifier type="iso-with-lang">ISO 10303-999:2030(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
 <name>International Organization for Standardization</name>
 <abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>International Organization for Standardization</name>

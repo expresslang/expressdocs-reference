@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.4.10" schema-version="v2.2.0" flavor="iso">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.5.4" schema-version="v2.3.0" flavor="iso">
 <bibdata type="standard">
 <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
 
@@ -20,7 +20,7 @@
 <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
 
 <title language="fr" type="title-part-prefix">Partie 41</title>
-<docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier><docidentifier type="iso-undated">ISO 10303-41</docidentifier><docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier><docidentifier type="iso-undated">ISO 10303-41</docidentifier><docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
 <name>International Organization for Standardization</name>
 <abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>International Organization for Standardization</name>
@@ -159,7 +159,7 @@
 <clause id="_0bb94cbf-829b-6ab3-9a40-366a2d24c287" inline-header="false" obligation="normative">
 <title id="_917955c1-7e75-5fad-982e-70ebd4b7acee">General</title>
 <hr/>
-<p id="_8b32dc9f-b3b1-2528-5a70-23f3671995cb">{% assign docname = sdi | replace: “_”, ” ” %} {% case  <concept><strong>term <tt>sdt</tt> not resolved via ID <tt>sdt</tt></strong></concept> %} {% when “aic” %} This part of ISO 10303 specifies the interpretation of the integrated resources to satisfy requirements for the representation of  <concept><strong>term <tt>docname</tt> not resolved via ID <tt>docname</tt></strong></concept>. {% when “igr” %} This part of ISO 10303 specifies the integrated generic resource constructs for  <concept><strong>term <tt>docname</tt> not resolved via ID <tt>docname</tt></strong></concept>. {% when “iar” %} This part of ISO 10303 specifies the integrated application resource constructs for  <concept><strong>term <tt>docname</tt> not resolved via ID <tt>docname</tt></strong></concept>. {% endcase %} —-</p>
+<p id="_8b32dc9f-b3b1-2528-5a70-23f3671995cb">{% assign docname = sdi | replace: “_”, ” ” %} {% case  <concept><errormsg>term <tt>sdt</tt> not resolved via ID <tt>sdt</tt></errormsg></concept> %} {% when “aic” %} This part of ISO 10303 specifies the interpretation of the integrated resources to satisfy requirements for the representation of  <concept><errormsg>term <tt>docname</tt> not resolved via ID <tt>docname</tt></errormsg></concept>. {% when “igr” %} This part of ISO 10303 specifies the integrated generic resource constructs for  <concept><errormsg>term <tt>docname</tt> not resolved via ID <tt>docname</tt></errormsg></concept>. {% when “iar” %} This part of ISO 10303 specifies the integrated application resource constructs for  <concept><errormsg>term <tt>docname</tt> not resolved via ID <tt>docname</tt></errormsg></concept>. {% endcase %} —-</p>
 
 <p id="_34e9d08f-a31b-7753-b0ea-aa3e1a631b65">The schemas that are specified in this part of ISO 10303 are organized as follows.</p>
 </clause>
@@ -458,9 +458,9 @@
 </dd></dl>
 </definitions></clause>
 
-<clause id="_f1ea9060-5f29-baa0-9ecf-5fc56a26f023" anchor="action_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_4a216d07-7ec8-c286-7565-3d49b5d29fc8" anchor="action_schema" type="express" inline-header="false" obligation="normative">
 <title id="_26c09ed1-b137-971e-797d-c2ed6ea77d19">Action schema</title>
-<clause id="_fc31e00c-ae2e-a93c-edec-3af4a086cafa" inline-header="false" obligation="normative">
+<clause id="_659a9546-759d-fb64-4f01-7fd390f55d66" inline-header="false" obligation="normative">
 <title id="_0175f76d-716b-304d-d5e0-55b2c2c71130">General</title>
 <p id="_3f5959b8-67bb-1f1f-5182-07e6114772c6">The subject of the <strong>action_schema</strong> is the description of actions, the reasons for these actions, and the status of these actions.</p>
 
@@ -470,7 +470,7 @@
 
 <p id="_09c31ba8-d834-2407-3bed-66f6ce971317"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_4b8e283b-47ab-3287-9948-0c46b883bc31" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
+<sourcecode id="_1977991b-a1a7-0cf5-a74c-3764954edfc2" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -486,6 +486,7 @@ REFERENCE FROM basic_attribute_schema
    object_role,
    role_select,
    role_association);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -1193,9 +1194,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_83bdd409-29a3-1913-0f7d-63fbe2edebb5" anchor="application_context_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_13724e6d-f96e-d13f-7f0f-4cc556844e95" anchor="application_context_schema" type="express" inline-header="false" obligation="normative">
 <title id="_8759161c-2dde-3fd3-4954-66ce985084e8">Application context schema</title>
-<clause id="_28839ff6-a08b-519e-89a9-6876566043c0" inline-header="false" obligation="normative">
+<clause id="_f3a233d2-9884-cd36-1d98-2d333185cec5" inline-header="false" obligation="normative">
 <title id="_24abdf30-6d12-8734-45d3-cd1948186a03">General</title>
 <p id="_3dc008d7-2cb6-b645-1fc2-0b3b8c86837c">The subject of the <strong>application_context_schema</strong> is the applicable usages of product data. This schema provides a mechanism for application protocols to define a frame of reference or context that applies to particular sets of product data.</p>
 
@@ -1207,7 +1208,7 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_8f272121-9479-616f-4e5d-c4e626002e48"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_533ff4b7-8f66-0b3a-c2f5-d60408d44639" unnumbered="true"><body>SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) object(1) application_context_schema(2)}';
+<sourcecode id="_e6479b1b-d904-a1c1-6fbc-c28d1f9fed5d" unnumbered="true"><body>SCHEMA application_context_schema '{iso standard 10303 part(41) version(8) object(1) application_context_schema(2)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -1216,14 +1217,19 @@ REFERENCE FROM basic_attribute_schema
    get_id_value,
    id_attribute,
    id_attribute_select);
+
 REFERENCE FROM date_time_schema
   (year_number);
+
 REFERENCE FROM language_schema
   (language);
+
 REFERENCE FROM management_resources_schema
   (identification_assignment);
+
 REFERENCE FROM person_organization_schema
   (organization);
+
 REFERENCE FROM support_resource_schema
   (identifier,
    label,
@@ -1646,9 +1652,9 @@ END_ENTITY;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_c2ab873e-7b1e-1b8a-d196-d5b38b6c581a" anchor="approval_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_6194a07a-eaf4-9aac-0cb9-0ae4ea96c123" anchor="approval_schema" type="express" inline-header="false" obligation="normative">
 <title id="_3b04619e-067c-53d4-4f48-10863156ddff">Approval schema</title>
-<clause id="_7ffeef6c-d1d8-60ed-5b7e-86033aaa3fd2" inline-header="false" obligation="normative">
+<clause id="_40535f9c-b83b-37bc-7fba-26d0cf3bf65a" inline-header="false" obligation="normative">
 <title id="_1d0a0e6e-9129-6d18-fb0a-a14109f5544f">General</title>
 <p id="_ad9d3c27-33e5-fc21-2413-a2bf9d6c6ba1">The subject of the <strong>approval_schema</strong> is the description of authorization data. Approval information concerns the acceptance of product data. </p>
 
@@ -1661,7 +1667,7 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_0a7a284a-db03-9b87-7962-02e3785a04af"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_d8cdaef2-5d0a-bdea-3156-67f8bdc72e1d" unnumbered="true"><body>SCHEMA approval_schema '{iso standard 10303 part(41) version(7) object(1) approval_schema(3)}';
+<sourcecode id="_1ae26eb5-a32b-1910-4f7f-433e7a3c58a9" unnumbered="true"><body>SCHEMA approval_schema '{iso standard 10303 part(41) version(7) object(1) approval_schema(3)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -1671,10 +1677,13 @@ REFERENCE FROM basic_attribute_schema
    object_role,
    role_association,
    role_select);
+
 REFERENCE FROM date_time_schema
   (date_time_select);
+
 REFERENCE FROM person_organization_schema
   (person_organization_select);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    label,
@@ -2739,9 +2748,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_1b103f22-cd75-9219-679b-d324bf8223dc" anchor="date_time_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_decd368d-3d9e-d40b-56ba-a72133529700" anchor="date_time_schema" type="express" inline-header="false" obligation="normative">
 <title id="_a1d0e53d-5766-8035-177e-29824505a7be">Date time schema</title>
-<clause id="_74054e8b-7c8a-c578-7757-33e82b3ed396" inline-header="false" obligation="normative">
+<clause id="_463634d3-b494-7915-31bb-de58eb839599" inline-header="false" obligation="normative">
 <title id="_77b7a2c9-ae4d-263c-0aa7-58b5dea5ee0e">General</title>
 <p id="_1da16001-d40d-ecfb-d671-a0d373959b23">The subject of the <strong>date_time_schema</strong> is the definition of dates, both calendar and ordinal, time of day, combinations of date and time of day, and periods of time.</p>
 
@@ -2751,15 +2760,17 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_9ea32c8a-3a5c-30f2-e22f-4a6e38a4606d"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_2de8d9ed-9a1d-d4c4-711d-7ab40f06e841" unnumbered="true"><body>SCHEMA date_time_schema '{iso standard 10303 part(41) version(7) object(1) date_time_schema(7)}';
+<sourcecode id="_316db3cb-0e1b-38c8-60c8-35e0a342f5c6" unnumbered="true"><body>SCHEMA date_time_schema '{iso standard 10303 part(41) version(7) object(1) date_time_schema(7)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
    description_attribute_select,
    get_description_value);
+
 REFERENCE FROM measure_schema
   (measure_with_unit,
    time_measure_with_unit);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -3880,9 +3891,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_2c5baac8-b9ec-6afe-ee5a-b149f0f236eb" anchor="document_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_7f88b44d-7af9-0030-600e-a1c0e24eefdc" anchor="document_schema" type="express" inline-header="false" obligation="normative">
 <title id="_5ec3411d-e560-809f-b51a-53e04f41951a">Document schema</title>
-<clause id="_74116e52-5b92-4877-5a34-83ddc91fe6ae" inline-header="false" obligation="normative">
+<clause id="_fbbada8d-1004-a1a0-3966-1dee8ec89cb6" inline-header="false" obligation="normative">
 <title id="_5ecf2af2-ed51-64e1-68b1-18421de3dc88">General</title>
 <p id="_dbffb426-3268-6bd7-2186-6fa6e0e4a330">The subject of the <strong>document_schema</strong> is the citations of formal standards or documents that are outside the domain of this International Standard. These resource constructs are used to reference additional information that is relevant to the description of the product. </p>
 
@@ -3895,12 +3906,13 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_e538b553-7e7c-6adc-dcb1-e1ca18437516"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_55b7587c-47d8-91d5-c96f-b2b27eea1156" unnumbered="true"><body>SCHEMA document_schema '{iso standard 10303 part(41) version(4) object(1) document_schema(8)}';
+<sourcecode id="_8749bcb4-86cf-d7e0-1a58-e0b77f7bafcc" unnumbered="true"><body>SCHEMA document_schema '{iso standard 10303 part(41) version(4) object(1) document_schema(8)}';
 
 REFERENCE FROM product_definition_schema
   (product,
    product_definition,
    product_definition_formation);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -4235,9 +4247,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_16d2f484-6f0e-b4f0-a047-15c7c4e54dc0" anchor="effectivity_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_34e0c8dc-9d32-943b-2bf0-0542b15e7e9b" anchor="effectivity_schema" type="express" inline-header="false" obligation="normative">
 <title id="_4a155ecc-4e8e-a08e-c803-ae4271ea5a5a">Effectivity schema</title>
-<clause id="_7fc7aa15-f113-aeaf-87f8-8f4ccddd9aeb" inline-header="false" obligation="normative">
+<clause id="_ee1a1a6a-10fd-713d-66a5-52e80fa8c223" inline-header="false" obligation="normative">
 <title id="_510dfe68-ccc0-083d-47f6-bcc43b374f03">General</title>
 <p id="_d310f6ca-6240-1494-8ead-36f85f523da6">The subject of the <strong>effectivity_schema</strong> is the validity of aspects of product data or product life cycle activity data specified against certain criteria. </p>
 
@@ -4257,10 +4269,11 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_b41418d7-3bfb-c720-e215-417d13634dfe"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_d1f7ecfc-02e3-cf31-2bee-65c4ef895edf" unnumbered="true"><body>SCHEMA effectivity_schema '{iso standard 10303 part(41) version(8) object(1) effectivity_schema(9)}';
+<sourcecode id="_9215bcbb-968c-e85e-15f3-422ae53c7c73" unnumbered="true"><body>SCHEMA effectivity_schema '{iso standard 10303 part(41) version(8) object(1) effectivity_schema(9)}';
 
 REFERENCE FROM action_schema
   (action_method);
+
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
    description_attribute_select,
@@ -4268,11 +4281,14 @@ REFERENCE FROM basic_attribute_schema
    get_name_value,
    name_attribute,
    name_attribute_select);
+
 REFERENCE FROM date_time_schema
   (date_time_or_event_occurrence,
    time_interval);
+
 REFERENCE FROM measure_schema
   (measure_with_unit);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -4340,7 +4356,7 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_abb5dcf6-321f-bc0e-ef1f-fc9c7203a72c" type="express" inline-header="false" obligation="normative">
+<clause id="_b9a096be-ccfc-e3c5-912f-b1d2c6e59869" type="express" inline-header="false" obligation="normative">
 <title id="_99b400f7-77d8-2454-83f5-a64f8ddbd5a9">Effectivity entity definitions</title>
 <clause id="_886d3081-906b-00b2-31b0-2b10e3e7dc30" anchor="effectivity_schema.condition" type="express" inline-header="false" obligation="normative">
 <title id="_4080657a-fd74-1391-6845-e6d9bcf6963f">condition <xref target="expg.effectivity_schema"><display-text><image id="_c55d3ba0-63bd-338a-79a0-e5ead9ed8077" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>condition</primary><secondary>Object definition</secondary></index></title>
@@ -4354,13 +4370,14 @@ END_ENTITY;</body></sourcecode>
 
 </clause>
 
-<clause id="_9f807548-0ff2-113f-72df-3b97a4bb07ea" anchor="effectivity_schema.conditional_effectivity" type="express" inline-header="false" obligation="normative">
+<clause id="_1bc0efca-d4ca-edd7-5cf0-98b8684ac049" anchor="effectivity_schema.conditional_effectivity" type="express" inline-header="false" obligation="normative">
 <title id="_59922ced-0f68-6eec-58b7-fee86c873eca">conditional_effectivity <xref target="expg.effectivity_schema"><display-text><image id="_59036b23-028a-4afc-6f3b-4a3d30ee816d" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>conditional_effectivity</primary><secondary>Object definition</secondary></index></title>
 <p id="_85809727-62e6-14d8-3c57-f5f3ad2aa012">A <strong>conditional_effectivity</strong> is a type of <xref target="effectivity_schema.condition"><display-text>condition</display-text></xref> or <xref target="effectivity_schema.effectivity"><display-text>effectivity</display-text></xref> for which the domain of applicability is defined by an explicit condition.</p>
 
 <p id="_0a9c95d1-5a05-1b63-82ee-d4be28d8f365"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_5face2c3-f3ad-a3d1-9060-fb049cc286cd" unnumbered="true"><body>ENTITY conditional_effectivity;
+<sourcecode id="_f6c6247a-ff06-c988-bd91-aeaba503fcc2" unnumbered="true"><body>ENTITY conditional_effectivity
+  SUBTYPE OF (condition, effectivity);
 END_ENTITY;</body></sourcecode>
 
 </clause>
@@ -4938,9 +4955,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_c529e453-4283-24a1-8b1f-c62e8eee42e7" anchor="external_reference_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_7e8d780b-1db7-fbec-1323-f4f08e73fc20" anchor="external_reference_schema" type="express" inline-header="false" obligation="normative">
 <title id="_4bfc0ab7-aa37-e981-1954-64f77ff592a0">External reference schema</title>
-<clause id="_40fbaf42-91e0-a242-1a51-ce9ad8870197" inline-header="false" obligation="normative">
+<clause id="_48a38bf9-70e7-beb0-be0d-3289c526097b" inline-header="false" obligation="normative">
 <title id="_a1520fdb-f7c0-a1d2-3cc3-4f2d3bb760e5">General</title>
 <p id="_92513684-9e96-0d19-66e9-6cd0bb094121">The subject of the <strong>external_reference_schema</strong> is the means of identifying information that is not explicitly represented in a given exchange.</p>
 
@@ -4950,12 +4967,13 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_803ea109-8d03-9907-994d-8fbd6dd8415a"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_d7519138-cf64-ed42-8110-1382436374c6" unnumbered="true"><body>SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object(1) external_reference_schema(11)}';
+<sourcecode id="_3eb7d40e-74a2-9b72-7c19-89cf8d497b30" unnumbered="true"><body>SCHEMA external_reference_schema '{iso standard 10303 part(41) version(7) object(1) external_reference_schema(11)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
    description_attribute_select,
    get_description_value);
+
 REFERENCE FROM support_resource_schema
   (label,
    text,
@@ -5029,7 +5047,7 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_294f951e-8494-7bad-b577-ee1690286dd7" type="express" inline-header="false" obligation="normative">
+<clause id="_cd2b4ee6-9d8d-1ad7-a5c0-05f0fdd35f9e" type="express" inline-header="false" obligation="normative">
 <title id="_39ac5548-faaf-bf68-bc35-4ace36dae025">External reference entity definitions</title>
 <clause id="_7220bd7e-c009-6b69-c5df-fe13419a78ec" anchor="external_reference_schema.external_source" type="express" inline-header="false" obligation="normative">
 <title id="_5c9d2d12-e4c1-07a1-eafb-84924616dabe">external_source <xref target="expg.external_reference_schema"><display-text><image id="_73dbabac-c412-c181-a340-d48973d3407a" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>external_source</primary><secondary>Object definition</secondary></index></title>
@@ -5168,15 +5186,15 @@ END_ENTITY;</body></sourcecode>
 
 </clause>
 
-<clause id="_8e2e3935-7109-4fe5-35e7-d0407d241996" anchor="external_reference_schema.externally_defined_item_with_multiple_references" type="express" inline-header="false" obligation="normative">
+<clause id="_31a8b570-edaa-5f8d-7a34-d186037af4a8" anchor="external_reference_schema.externally_defined_item_with_multiple_references" type="express" inline-header="false" obligation="normative">
 <title id="_e0739b0a-bf07-5064-9a9d-4dd76e13b4ce">externally_defined_item_with_multiple_references <xref target="expg.external_reference_schema"><display-text><image id="_b392da03-31bd-1e2f-efd6-ec5ef77c2fba" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>externally_defined_item_with_multiple_references</primary><secondary>Object definition</secondary></index></title>
 <p id="_6a57a68c-0529-d1c8-2a32-48afee697304">An <strong>externally_defined_item_with_multiple_references</strong> is a type of <xref target="external_reference_schema.externally_defined_item"><display-text>externally_defined_item</display-text></xref> that allows to define additional references providing information on the context and location of the target item within the source.</p>
 
 <p id="_74094f2b-8360-975d-970f-101b66f2fe0f"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_e075a951-b5d8-5a3e-3400-8ff4116a26ac" unnumbered="true"><body>ENTITY externally_defined_item_with_multiple_references
+<sourcecode id="_8825f7e2-8c7a-9446-cbda-52a07e1c09b8" unnumbered="true"><body>ENTITY externally_defined_item_with_multiple_references
   SUBTYPE OF (externally_defined_item);
-  references : LIST [1:?] OF source_item;
+  references : LIST [1:?] OF UNIQUE source_item;
 UNIQUE
   UR1: references;
 WHERE
@@ -5304,9 +5322,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_09516da4-29e2-0fc8-4f80-67c314ed979c" anchor="group_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_1ea3c02d-a403-8f5e-4394-9aa94e25c272" anchor="group_schema" type="express" inline-header="false" obligation="normative">
 <title id="_bd96f9ba-2a2e-b341-7b36-5405de0645da">Group schema</title>
-<clause id="_e6398817-7a1a-2815-9e94-e785bb7d9f2f" inline-header="false" obligation="normative">
+<clause id="_ec124e9b-c1d5-1245-ff9a-106579e0cb3f" inline-header="false" obligation="normative">
 <title id="_634be367-f84a-64ee-f156-7cdb5dcb6113">General</title>
 <p id="_77fb5027-16ba-d620-e607-2d5d8c64122a">The subject of the <strong>group_schema</strong> is the definition of groups of items.</p>
 
@@ -5316,13 +5334,14 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_15bbeff0-bb6d-6da3-3cc6-e377a55a6240"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_0d1a6102-6c43-7a3e-5d5a-c071a98b3ba7" unnumbered="true"><body>SCHEMA group_schema '{iso standard 10303 part(41) version(7) object(1) group_schema(12)}';
+<sourcecode id="_274d9fbb-23f8-4867-4e81-7250d8b7062c" unnumbered="true"><body>SCHEMA group_schema '{iso standard 10303 part(41) version(7) object(1) group_schema(12)}';
 
 REFERENCE FROM support_resource_schema
   (label,
    bag_to_set,
    identifier,
    text);
+
 REFERENCE FROM basic_attribute_schema
   (get_id_value,
    id_attribute,
@@ -5505,7 +5524,7 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_fb78f2f8-1c7c-fc75-3310-4d92bb9328b2" anchor="language_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_5f700e24-1103-7712-8c87-a89b8d1a7fb1" anchor="language_schema" type="express" inline-header="false" obligation="normative">
 <title id="_43b8e231-ad92-a2a0-720b-1b53faa99d56">Language schema</title>
 <clause id="_3cabc7ff-20ac-6701-9e68-5f8b8d6b520c" inline-header="false" obligation="normative">
 <title id="_89212685-a1bf-fd8a-61d2-bc69431d69c1">General</title>
@@ -5548,9 +5567,9 @@ REFERENCE FROM group_schema
 <p id="_1a96b14a-2644-84af-eef0-202ddd6060f7">This specifies the representation of the language used in text attributes and the association of translations to these texts.</p>
 </clause>
 
-<clause id="_b2c03cce-7013-1495-c1b5-e5e6c15773c3" type="express" inline-header="false" obligation="normative">
+<clause id="_8098592c-6b91-7ee1-fd71-58a0a02ce674" type="express" inline-header="false" obligation="normative">
 <title id="_18babdd2-2be4-8774-7b27-3a5902f98013">Language entity definition</title>
-<clause id="_f668f016-aaa8-78de-7b16-7f3671c37029" anchor="language_schema.language" type="express" inline-header="false" obligation="normative">
+<clause id="_71ccae9c-29ed-00e3-9de0-95ec94c67592" anchor="language_schema.language" type="express" inline-header="false" obligation="normative">
 <title id="_3ebde8e4-2c44-e2c8-bf3b-5ced3e060d6f">language <xref target="expg.language_schema"><display-text><image id="_80077f4f-f45c-cba2-cc51-3c33135b5af6" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>language</primary><secondary>Object definition</secondary></index></title>
 <p id="_2ea32592-3aee-e119-6f7b-7279482551f5">A <strong>language</strong> is a type of <xref target="group_schema.group"><display-text>group</display-text></xref> that is a specification of the language in which an information is given. The group shall specify in its name a language code according to ISO 639-2, and, if present, in its description a country code according to ISO 3166-1.</p>
 
@@ -5558,11 +5577,11 @@ REFERENCE FROM group_schema
 
 <p id="_404e095c-89ea-c462-57b9-36304aba74e1"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_6b0bdb5e-69d9-c8c5-934a-3b967f8380ee" unnumbered="true"><body>ENTITY language
+<sourcecode id="_2e579b89-0ee9-8aa3-5ba4-528766253865" unnumbered="true"><body>ENTITY language
   SUBTYPE OF (group);
 WHERE
   WR1: SELF\group.name &lt;&gt; '';
-END_ENTITY; -- Informal proposition</body></sourcecode>
+END_ENTITY;</body></sourcecode>
 
 
 <p id="_4141ff7b-67b5-f11c-25e1-0aac94c9b638"><underline>Formal propositions:</underline></p>
@@ -5741,9 +5760,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_eb871967-425b-5962-698a-b3a28e9c420f" anchor="management_resources_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_8dd0539e-8f67-ac4f-062f-c966350e03c7" anchor="management_resources_schema" type="express" inline-header="false" obligation="normative">
 <title id="_fba8a850-4aec-60fc-67a2-76b28a0c8beb">Management resources schema</title>
-<clause id="_6d9e1143-5cb6-c07a-a1d0-48a86f27f58e" inline-header="false" obligation="normative">
+<clause id="_d47fb976-db85-285a-c103-929d7353846a" inline-header="false" obligation="normative">
 <title id="_7f3ebf84-1d16-0f3d-27bc-8b5f5eb1fefd">General</title>
 <p id="_4f8d4036-a1d3-7f39-58f3-e96585b7d8a4">The subject of the <strong>management_resources_schema</strong> is the association of management data with other aspects of product data in specific application contexts.</p>
 
@@ -5753,30 +5772,46 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_5f5e00d8-08f2-10e2-4a0a-9bfe0311298b"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_d93178f0-5996-4bd6-20b8-789b8ef8d64b" unnumbered="true"><body>SCHEMA management_resources_schema '{iso standard 10303 part(41) version(8) object(1) management_resources_schema(15)}';
+<sourcecode id="_331c2e49-14be-023f-c78a-a47a788c9d54" unnumbered="true"><body>SCHEMA management_resources_schema '{iso standard 10303 part(41) version(8) object(1) management_resources_schema(15)}';
 
 REFERENCE FROM action_schema;
+
 REFERENCE FROM application_context_schema
   (library_context);
+
 REFERENCE FROM approval_schema;
+
 REFERENCE FROM basic_attribute_schema
   (get_role,
    object_role,
    role_association,
    role_select);
+
 REFERENCE FROM certification_schema;
+
 REFERENCE FROM contract_schema;
+
 REFERENCE FROM date_time_schema;
+
 REFERENCE FROM document_schema;
+
 REFERENCE FROM effectivity_schema;
+
 REFERENCE FROM experience_schema;
+
 REFERENCE FROM external_reference_schema
   (external_source);
+
 REFERENCE FROM group_schema;
+
 REFERENCE FROM location_schema;
+
 REFERENCE FROM person_organization_schema;
+
 REFERENCE FROM qualifications_schema;
+
 REFERENCE FROM security_classification_schema;
+
 REFERENCE FROM support_resource_schema;</body></sourcecode>
 
 
@@ -7813,9 +7848,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_e0b72e7b-37d9-31c8-3abc-482c6bd83e78" anchor="measure_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_96ec83cf-3db4-3ba1-d3b0-c37ae6c16983" anchor="measure_schema" type="express" inline-header="false" obligation="normative">
 <title id="_c5b99c8b-56d1-1602-dd9c-1fb709a7fcc4">Measure schema</title>
-<clause id="_cc85f091-fb0d-cdc4-561c-2a5f26c060b2" inline-header="false" obligation="normative">
+<clause id="_737d0525-ee03-9a3f-8e3e-f0ef7e38adff" inline-header="false" obligation="normative">
 <title id="_305e7586-d0a4-6327-5126-81c26d46123b">General</title>
 <p id="_c011baad-97df-bf22-2bca-a30aa97357af">The subject of the <strong>measure_schema</strong> is the description of physical quantities. </p>
 
@@ -7830,14 +7865,16 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_60e12386-35d4-34f2-ef08-562fc7c0515e"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_06bebfaa-202f-b1ea-8464-e2afbf155851" unnumbered="true"><body>SCHEMA measure_schema '{iso standard 10303 part(41) version(8) object(1) measure_schema(16)}';
+<sourcecode id="_d1a0a037-4d4a-616a-5e85-8425deb613ac" unnumbered="true"><body>SCHEMA measure_schema '{iso standard 10303 part(41) version(8) object(1) measure_schema(16)}';
 
 REFERENCE FROM basic_attribute_schema
   (get_name_value,
    name_attribute,
    name_attribute_select);
+
 REFERENCE FROM representation_schema
   (representation_context);
+
 REFERENCE FROM support_resource_schema;</body></sourcecode>
 
 
@@ -8749,7 +8786,7 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_40f90a2a-ef62-6a32-3e6a-b3e39b251124" type="express" inline-header="false" obligation="normative">
+<clause id="_e990fc5f-d16f-1a73-cba1-3d2b1833d85c" type="express" inline-header="false" obligation="normative">
 <title id="_9e49f911-4cde-c985-422b-eeb74594399f">Measure entity definitions</title>
 <clause id="_9db7a417-a623-a4c6-50e6-4c7fe8aec6e7" anchor="measure_schema.absorbed_dose_measure_with_unit" type="express" inline-header="false" obligation="normative">
 <title id="_98b9f0bd-bf4f-8574-18ef-abd6769d8044">absorbed_dose_measure_with_unit <xref target="expg.measure_schema"><display-text><image id="_35687224-4b2f-09b9-fd31-fcd3dff11538" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>absorbed_dose_measure_with_unit</primary><secondary>Object definition</secondary></index></title>
@@ -8787,13 +8824,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_bfe3edf0-5ae9-6945-58db-cc28b647043a" anchor="measure_schema.absorbed_dose_unit.WR1"><strong>WR1</strong>: The dimensional exponents shall be equal to those of the Gray as defined in ISO 31.</p>
 </clause>
 
-<clause id="_8919a938-8ae0-5c45-dc75-68357eab6b37" anchor="measure_schema.si_absorbed_dose_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_6fedb72a-6e54-f815-45fd-6351f79f37e3" anchor="measure_schema.si_absorbed_dose_unit" type="express" inline-header="false" obligation="normative">
 <title id="_c1d2ecdd-a236-10d6-3e50-8f223911d2d6">si_absorbed_dose_unit <xref target="expg.measure_schema"><display-text><image id="_a1b362c4-8b8c-122e-89ed-f69ba1247d1b" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_absorbed_dose_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_dbff1067-ab19-f03d-456e-889ee7ab06e4">A <strong>si_absorbed_dose_unit</strong> is a type of <xref target="measure_schema.absorbed_dose_unit"><display-text>absorbed_dose_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the absorbed dose is expressed in SI units.</p>
 
 <p id="_7d67b81b-9847-4b07-4ac9-624822ecbfe6"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_9a2d695d-4e42-48b2-db39-5a5906e73627" unnumbered="true"><body>ENTITY si_absorbed_dose_unit;
+<sourcecode id="_074c4660-2b1e-a6b7-0257-d98495942053" unnumbered="true"><body>ENTITY si_absorbed_dose_unit
+  SUBTYPE OF (absorbed_dose_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.gray;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -8879,13 +8917,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_19bcf51d-7909-c25d-bbcc-f058a8a83b00" anchor="measure_schema.radioactivity_unit.WR1"><strong>WR1</strong>: The dimensional exponents shall be equal to those of the becquerel as defined in ISO 31.</p>
 </clause>
 
-<clause id="_10e914b7-14aa-89c5-c50f-4df12296a2dc" anchor="measure_schema.si_radioactivity_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_e84b72d9-4abe-ee3a-c2d2-b78715cfb06e" anchor="measure_schema.si_radioactivity_unit" type="express" inline-header="false" obligation="normative">
 <title id="_6a23f5d9-d7a6-7dae-c93c-12920834ebd3">si_radioactivity_unit <xref target="expg.measure_schema"><display-text><image id="_754524aa-3393-cf34-d213-4690418fdb92" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_radioactivity_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_5c6043f0-b81e-d4e0-1e1c-66e6ca12de75">A <strong>si_radioactivity_unit</strong> is a type of <xref target="measure_schema.radioactivity_unit"><display-text>radioactivity_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the radioactivity is expressed in SI units.</p>
 
 <p id="_31bd2742-3c14-d334-a18f-d4b927e429e9"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_2cbbc888-b254-ec6d-e808-653ba4e93a9f" unnumbered="true"><body>ENTITY si_radioactivity_unit;
+<sourcecode id="_97b62ac6-32c8-2999-b10c-56b2750ad7cd" unnumbered="true"><body>ENTITY si_radioactivity_unit
+  SUBTYPE OF (radioactivity_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.becquerel;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9201,13 +9240,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_39ddb14e-b044-69a0-b1b8-c068e04d0b34" anchor="measure_schema.capacitance_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> be of type <xref target="measure_schema.capacitance_unit"><display-text>capacitance_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_9e4701d9-b4d5-1cd1-e0be-0b3539c7dc91" anchor="measure_schema.si_capacitance_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_db74f28a-9ce8-bf87-eb61-bd43def9cc64" anchor="measure_schema.si_capacitance_unit" type="express" inline-header="false" obligation="normative">
 <title id="_cbc264b7-336b-f05c-8c48-94043f5b1552">si_capacitance_unit <xref target="expg.measure_schema"><display-text><image id="_9097dddc-fcac-7781-e99a-0f5f9ffecf4f" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_capacitance_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_0fa0cf20-c494-d77d-fe7c-1aead74ea4da">A <strong>si_capacitance_unit</strong> is a type of <xref target="measure_schema.capacitance_unit"><display-text>capacitance_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the electric capacitance is expressed in SI units.</p>
 
 <p id="_41efd6bc-06a8-eab7-1bb8-52f39eb09fb5"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_4c8a0ab8-20bd-6f98-cdd4-56733151dbd4" unnumbered="true"><body>ENTITY si_capacitance_unit;
+<sourcecode id="_423f57aa-1fa4-6ff7-2e76-eba776c467fe" unnumbered="true"><body>ENTITY si_capacitance_unit
+  SUBTYPE OF (capacitance_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.farad;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9257,13 +9297,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_6aaa3a27-9259-1645-451d-4a12ef062dda" anchor="measure_schema.dose_equivalent_unit.WR1"><strong>WR1</strong>: The dimensional exponents shall be equal to those of the sievert as defined in ISO 31.</p>
 </clause>
 
-<clause id="_2fcdec9f-d2f0-6442-6008-b36d89f22f6a" anchor="measure_schema.si_dose_equivalent_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_fd014374-ad0d-1472-d3ce-2a86279bd443" anchor="measure_schema.si_dose_equivalent_unit" type="express" inline-header="false" obligation="normative">
 <title id="_f90a952d-b91f-bd17-ffd7-38a7c5d76537">si_dose_equivalent_unit <xref target="expg.measure_schema"><display-text><image id="_9e054408-1e16-2731-ba5f-bdaa057f4764" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_dose_equivalent_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_8a5d4a5f-9cf5-e57d-b178-f873ad7ea6b6">A <strong>si_dose_equivalent_unit</strong> is a type of <xref target="measure_schema.dose_equivalent_unit"><display-text>dose_equivalent_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the radiation dose equivalent is expressed in SI units.</p>
 
 <p id="_daed1720-5f1f-677e-2917-e0f043e05ed2"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_c9ee1c79-2f02-ad77-e68a-9bb374c21640" unnumbered="true"><body>ENTITY si_dose_equivalent_unit;
+<sourcecode id="_c554b321-ebee-49b6-52cc-b842a5010f20" unnumbered="true"><body>ENTITY si_dose_equivalent_unit
+  SUBTYPE OF (dose_equivalent_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.sievert;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9313,13 +9354,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_88d408bc-0dd1-57d7-03d6-d2f58b800c19" anchor="measure_schema.electric_charge_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.electric_charge_unit"><display-text>electric_charge_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_54ffb405-6ac9-fe69-1897-0db8cb352f81" anchor="measure_schema.si_electric_charge_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_540d5f7a-fc93-b496-a8d9-547a0a5b5ebf" anchor="measure_schema.si_electric_charge_unit" type="express" inline-header="false" obligation="normative">
 <title id="_96ff52b8-e2f1-d8d3-01ef-57be4b76d367">si_electric_charge_unit <xref target="expg.measure_schema"><display-text><image id="_e4f8f256-3d47-5763-7cf4-6459983d04cb" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_electric_charge_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_01a47b10-951d-92cb-2624-c169c045d928">A <strong>si_electric_charge_unit</strong> is a type of <xref target="measure_schema.electric_charge_unit"><display-text>electric_charge_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the electric charge is expressed in SI units.</p>
 
 <p id="_89b66c8f-3fb6-4e7c-247e-f5e4598cfcff"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_38e39f01-8165-2490-bfc8-7a77a2d84c22" unnumbered="true"><body>ENTITY si_electric_charge_unit;
+<sourcecode id="_0379709f-8114-0252-19d1-a64e36a26d5f" unnumbered="true"><body>ENTITY si_electric_charge_unit
+  SUBTYPE OF (electric_charge_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.coulomb;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9408,13 +9450,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_90552428-12aa-fd48-b1d4-e83cf4e88295" anchor="measure_schema.conductance_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.conductance_unit"><display-text>conductance_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_a01bc980-fa39-67c5-81b4-f1191610840e" anchor="measure_schema.si_conductance_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_4f8c7c56-917c-da22-a844-1cac0cfd070c" anchor="measure_schema.si_conductance_unit" type="express" inline-header="false" obligation="normative">
 <title id="_670b4ca2-53c8-1a7e-9a89-b8a212e1b4b2">si_conductance_unit <xref target="expg.measure_schema"><display-text><image id="_0c51847e-c817-e08e-c6dc-af2b515d9866" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_conductance_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_29100cb5-be1e-e766-17b7-fd88d0b4dcae">A <strong>si_conductance_unit</strong> is a type of <xref target="measure_schema.conductance_unit"><display-text>conductance_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the electrical conductance is expressed in SI units.</p>
 
 <p id="_24815a9a-9853-3a0b-8c2c-60ccf9d5bbc1"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_3f09e54a-ea6a-e387-11ab-28da4e90a021" unnumbered="true"><body>ENTITY si_conductance_unit;
+<sourcecode id="_400a2b94-3a2d-50e4-0c84-db9518f0434f" unnumbered="true"><body>ENTITY si_conductance_unit
+  SUBTYPE OF (conductance_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.siemens;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9464,13 +9507,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_5b08cba0-dc4c-b8a5-549c-079f0eba0d08" anchor="measure_schema.electric_potential_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.electric_potential_unit"><display-text>electric_potential_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_63ea9048-ad44-4dcc-1d5a-b517689a0ec4" anchor="measure_schema.si_electric_potential_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_3527a55d-e17f-3f53-4327-ffddfac9b182" anchor="measure_schema.si_electric_potential_unit" type="express" inline-header="false" obligation="normative">
 <title id="_1647916a-0d9b-f619-c2a9-2b061cfb3c96">si_electric_potential_unit <xref target="expg.measure_schema"><display-text><image id="_981b8fac-9db5-0106-2d3e-08435a8d7afc" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_electric_potential_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_da8235ac-68b3-805f-3eca-059289a34410">A <strong>si_electric_potential_unit</strong> is a type of <xref target="measure_schema.electric_potential_unit"><display-text>electric_potential_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the electric potential is expressed in SI units.</p>
 
 <p id="_15bb2be2-0971-443e-adc4-cf389caf6c27"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_0158638b-3c7b-fba2-0257-bad40e9ad96d" unnumbered="true"><body>ENTITY si_electric_potential_unit;
+<sourcecode id="_a2508406-703b-61e8-5cd0-9988da17f3a2" unnumbered="true"><body>ENTITY si_electric_potential_unit
+  SUBTYPE OF (electric_potential_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.volt;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9520,13 +9564,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_505504dd-7890-8c97-a8d6-e24267a0aa6d" anchor="measure_schema.energy_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.energy_unit"><display-text>energy_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_ab9cca0a-0316-2e7f-237e-bf16b9dfc470" anchor="measure_schema.si_energy_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_eb9ffa0e-6141-ead7-3746-53e1bb45378d" anchor="measure_schema.si_energy_unit" type="express" inline-header="false" obligation="normative">
 <title id="_bf764492-1f5b-dd63-59c8-b4c9dc28379c">si_energy_unit <xref target="expg.measure_schema"><display-text><image id="_e623c5ae-446d-9e0f-f6c2-74f87d6ce7af" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_energy_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_8d59f0fc-059b-017c-abd5-c82c7c2691d7">A <strong>si_energy_unit</strong> is a type of <xref target="measure_schema.energy_unit"><display-text>energy_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the energy is expressed in SI units.</p>
 
 <p id="_6dc14367-f73b-ba28-58f1-29d59d8ddd6e"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_bd3d7a56-71ca-f1bd-0fa2-8ac6ac9648f2" unnumbered="true"><body>ENTITY si_energy_unit;
+<sourcecode id="_96501238-8962-a499-133a-7dfff5806cfc" unnumbered="true"><body>ENTITY si_energy_unit
+  SUBTYPE OF (energy_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.joule;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9576,13 +9621,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_195fcb86-2d76-735b-726d-86953b92dbc4" anchor="measure_schema.magnetic_flux_density_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.magnetic_flux_density_unit"><display-text>magnetic_flux_density_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_0d2105f0-58c5-4d8b-e2fc-9d36d111b70d" anchor="measure_schema.si_magnetic_flux_density_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_8403911c-5f89-bc26-f5ce-f1eef8d76b77" anchor="measure_schema.si_magnetic_flux_density_unit" type="express" inline-header="false" obligation="normative">
 <title id="_534d504a-468d-acab-184b-cafd099a28c0">si_magnetic_flux_density_unit <xref target="expg.measure_schema"><display-text><image id="_3af09da6-5b3e-48b8-ef3d-3e19c059822c" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_magnetic_flux_density_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_3d65f7e5-3dd8-8934-e13b-686ece4cf280">A <strong>si_magnetic_flux_density_unit</strong> is a type of <xref target="measure_schema.magnetic_flux_density_unit"><display-text>magnetic_flux_density_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the magnetic flux density is expressed in SI units.</p>
 
 <p id="_b21a77e3-9179-3dd9-a842-0cb88f60970c"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_614ede4f-56de-6c24-9037-bbcb05c4fc9c" unnumbered="true"><body>ENTITY si_magnetic_flux_density_unit;
+<sourcecode id="_6b8bc8f9-3909-b5c3-9f54-4c2b17ef24b4" unnumbered="true"><body>ENTITY si_magnetic_flux_density_unit
+  SUBTYPE OF (magnetic_flux_density_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.tesla;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9632,13 +9678,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_6e315852-c114-ae79-aaf3-1675e80e5186" anchor="measure_schema.force_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.force_unit"><display-text>force_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_d33154a3-0389-c2a4-bcfa-822c4de2f6fe" anchor="measure_schema.si_force_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_5da4a898-09fd-1ae1-39e3-5395cf92a944" anchor="measure_schema.si_force_unit" type="express" inline-header="false" obligation="normative">
 <title id="_a5cd713c-93e3-f30f-3e60-32aeafd38a08">si_force_unit <xref target="expg.measure_schema"><display-text><image id="_b5602f07-dd24-790a-9462-1b3cb545bb6a" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_force_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_abf95c0a-64a1-a901-eb51-18e68f62ed77">A <strong>si_force_unit</strong> is a type of <xref target="measure_schema.force_unit"><display-text>force_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the force is expressed in SI units.</p>
 
 <p id="_717d0cf0-4286-3c8f-a416-15d638a2389b"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_e5383492-0846-45d6-5086-5373b7bc7824" unnumbered="true"><body>ENTITY si_force_unit;
+<sourcecode id="_7df1bc15-e32b-1e8f-2fa9-8ca23fb183be" unnumbered="true"><body>ENTITY si_force_unit
+  SUBTYPE OF (force_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.newton;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9688,13 +9735,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_2136c7fd-9609-1920-f3f9-64f4b5be23e1" anchor="measure_schema.frequency_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.frequency_unit"><display-text>frequency_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_27608a07-3f77-3a44-2d23-2e22b1dd5f73" anchor="measure_schema.si_frequency_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_87a00bf9-3473-19e2-7622-7bd75b1fee3a" anchor="measure_schema.si_frequency_unit" type="express" inline-header="false" obligation="normative">
 <title id="_fa2d4736-753f-e09c-d680-f58f266315ae">si_frequency_unit <xref target="expg.measure_schema"><display-text><image id="_476bd80f-c85c-e7ee-6972-621cdea33b36" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_frequency_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_78eec940-7b87-20cf-320e-dc60dbf1c16a">A <strong>si_frequency_unit</strong> is a type of <xref target="measure_schema.frequency_unit"><display-text>frequency_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the frequency is expressed in SI units.</p>
 
 <p id="_4f813ce3-76c7-e8da-d9fa-e1ad36484baa"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_d13fb4dc-c07d-4d85-dd1b-402a89d855a8" unnumbered="true"><body>ENTITY si_frequency_unit;
+<sourcecode id="_484de043-fa93-a04e-3ed8-456542a86781" unnumbered="true"><body>ENTITY si_frequency_unit
+  SUBTYPE OF (frequency_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.hertz;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9764,13 +9812,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_e1186810-8c71-476d-9803-5c8dc2fe965c" anchor="measure_schema.illuminance_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.illuminance_unit"><display-text>illuminance_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_bf5660eb-8648-9e9b-0d79-12e9b7852ce6" anchor="measure_schema.si_illuminance_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_286d7701-9e6e-7db6-3440-cf7f497f0c7c" anchor="measure_schema.si_illuminance_unit" type="express" inline-header="false" obligation="normative">
 <title id="_bae34373-e3a6-ed14-6bcf-916abd8a890a">si_illuminance_unit <xref target="expg.measure_schema"><display-text><image id="_783cf5e3-06ef-5632-82c5-830c01dc2ca1" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_illuminance_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_e1188aae-d101-ca6f-3492-fc6bd5674291">A <strong>si_illuminance_unit</strong> is a type of <xref target="measure_schema.illuminance_unit"><display-text>illuminance_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the illuminance is expressed in SI units.</p>
 
 <p id="_79a67a10-973a-23c6-f25b-7cbb3cc28f39"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_8ef91f85-3854-aeff-e908-47dd5f90eeca" unnumbered="true"><body>ENTITY si_illuminance_unit;
+<sourcecode id="_19b1c39d-f0b8-ed97-134d-11125c2792e6" unnumbered="true"><body>ENTITY si_illuminance_unit
+  SUBTYPE OF (illuminance_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.lux;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -9820,13 +9869,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_58af0cf2-d799-bafd-e9a5-b11641bfb7aa" anchor="measure_schema.inductance_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.inductance_unit"><display-text>inductance_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_930bbbd5-9216-b211-dedf-014fd08d39c9" anchor="measure_schema.si_inductance_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_a493f857-73db-7132-864f-beecde68b848" anchor="measure_schema.si_inductance_unit" type="express" inline-header="false" obligation="normative">
 <title id="_8ef80a00-51e7-320e-8aad-8012c3f4d9bf">si_inductance_unit <xref target="expg.measure_schema"><display-text><image id="_682d2dde-a593-74e6-f8f8-d8b9b37c5f61" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_inductance_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_168b6e55-ff96-389b-7bfc-7803d8b92d4f">A <strong>si_inductance_unit</strong> is a type of <xref target="measure_schema.inductance_unit"><display-text>inductance_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the inductance is expressed in SI units.</p>
 
 <p id="_d4b6fa6a-9079-f86e-4bfb-1c3961c1a481"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_8cb1e08d-7924-fc39-0045-a8481c07b8bc" unnumbered="true"><body>ENTITY si_inductance_unit;
+<sourcecode id="_28cc02b0-027c-6312-ea37-beab5b8f642a" unnumbered="true"><body>ENTITY si_inductance_unit
+  SUBTYPE OF (inductance_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.henry;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -10008,13 +10058,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_f068df1c-8573-e134-2732-ab0edacd9984" anchor="measure_schema.magnetic_flux_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.magnetic_flux_unit"><display-text>magnetic_flux_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_dda31a43-2fb1-0669-4ff6-3a10a490514a" anchor="measure_schema.si_magnetic_flux_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_9e0bf3b2-c980-a928-7de4-a1f6ba883d43" anchor="measure_schema.si_magnetic_flux_unit" type="express" inline-header="false" obligation="normative">
 <title id="_c7f90ead-bd22-1d75-e00f-03bfde9c18b3">si_magnetic_flux_unit <xref target="expg.measure_schema"><display-text><image id="_c84d194b-d1c2-4135-8e12-10c6c3d67980" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_magnetic_flux_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_d3a02968-b7df-84d8-0d47-5c3fb07b563a">A <strong>si_magnetic_flux_unit</strong> is a type of <xref target="measure_schema.magnetic_flux_unit"><display-text>magnetic_flux_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the magnetic flux is expressed in SI units.</p>
 
 <p id="_7ba3e20f-39a6-be8f-915d-5a7740585369"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_2226de69-2ea5-40cd-b942-ee8f005cdb0d" unnumbered="true"><body>ENTITY si_magnetic_flux_unit;
+<sourcecode id="_66f01807-f8fc-02bc-5f45-b39c329d1ab5" unnumbered="true"><body>ENTITY si_magnetic_flux_unit
+  SUBTYPE OF (magnetic_flux_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.weber;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -10200,13 +10251,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_b607726e-898c-a887-5c99-d9db4b5d192f" anchor="measure_schema.power_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.power_unit"><display-text>power_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_180ad650-fe27-f4f6-565e-4fed2494b835" anchor="measure_schema.si_power_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_0fcf35a2-70cd-fa24-1807-7094ccac3e85" anchor="measure_schema.si_power_unit" type="express" inline-header="false" obligation="normative">
 <title id="_18bf47bc-d8ed-bc90-7dc2-103ac1c5f600">si_power_unit <xref target="expg.measure_schema"><display-text><image id="_13854ffc-358d-7852-9241-11a87e824b5d" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_power_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_1412efc1-62d8-722e-4cf0-fbda6e70bbfb">A <strong>si_power_unit</strong> is a type of <xref target="measure_schema.power_unit"><display-text>power_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the power is expressed in SI units.</p>
 
 <p id="_fb3a82b1-1600-791c-bc60-55602de1beb3"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_581657c0-be2f-3fc7-b1ea-6c4ec187219f" unnumbered="true"><body>ENTITY si_power_unit;
+<sourcecode id="_c2b2bf29-5059-b0d0-fdff-54c6441da0c6" unnumbered="true"><body>ENTITY si_power_unit
+  SUBTYPE OF (power_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.watt;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -10256,13 +10308,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_44f4e48a-efae-2f44-8c49-0fa0fc4884ff" anchor="measure_schema.pressure_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.pressure_unit"><display-text>pressure_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_c54d01c2-20ea-9fc8-8db2-2e7a227d6089" anchor="measure_schema.si_pressure_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_56e996d1-a89f-87ed-602c-d31d3d4f2632" anchor="measure_schema.si_pressure_unit" type="express" inline-header="false" obligation="normative">
 <title id="_ea42f4a0-41b8-e113-36ee-929aff3cc8ad">si_pressure_unit <xref target="expg.measure_schema"><display-text><image id="_ba52a9e4-cfa6-6dc7-ff2f-a8a27953ee69" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_pressure_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_789a75ec-2321-8b1f-fff4-2de62577bff7">A <strong>si_pressure_unit</strong> is a type of <xref target="measure_schema.pressure_unit"><display-text>pressure_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the pressure is expressed in SI units.</p>
 
 <p id="_ccf8348e-1606-e541-ec81-642b3e930a19"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_2f0e1fbe-5744-48f9-bc3f-51f2d8409b20" unnumbered="true"><body>ENTITY si_pressure_unit;
+<sourcecode id="_db41f2ec-78ec-946b-71e0-6f39471c3f8c" unnumbered="true"><body>ENTITY si_pressure_unit
+  SUBTYPE OF (pressure_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.pascal;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -10348,13 +10401,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_8a41dd8d-13c7-d7bb-65cf-4458e69e97d1" anchor="measure_schema.resistance_measure_with_unit.WR1"><strong>WR1</strong>: The <xref target="measure_schema.measure_with_unit.unit_component"><display-text>unit_component</display-text></xref> shall be of type <xref target="measure_schema.resistance_unit"><display-text>resistance_unit</display-text></xref>.</p>
 </clause>
 
-<clause id="_9862428a-966e-deaa-f87d-3c9b22623e98" anchor="measure_schema.si_resistance_unit" type="express" inline-header="false" obligation="normative">
+<clause id="_aeec93fa-f28e-73e0-a6d1-42982b5bf8d0" anchor="measure_schema.si_resistance_unit" type="express" inline-header="false" obligation="normative">
 <title id="_5ac39acc-4199-744f-0410-ec732fd4c415">si_resistance_unit <xref target="expg.measure_schema"><display-text><image id="_a7841f54-3fe3-4745-6d05-9ac32b2fadfe" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>si_resistance_unit</primary><secondary>Object definition</secondary></index></title>
 <p id="_7ad9c624-a95b-e5ec-147d-3868bfc24a59">A <strong>si_resistance_unit</strong> is a type of <xref target="measure_schema.resistance_unit"><display-text>resistance_unit</display-text></xref> and a type of <xref target="measure_schema.si_unit"><display-text>si_unit</display-text></xref> in which the resistance is expressed in SI units.</p>
 
 <p id="_472021b0-a5ed-acbf-2f44-371344495f02"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_040c9274-66ab-7106-8df7-24424d92c025" unnumbered="true"><body>ENTITY si_resistance_unit;
+<sourcecode id="_c4023dec-0f21-167a-8449-0c2aa0bbbea8" unnumbered="true"><body>ENTITY si_resistance_unit
+  SUBTYPE OF (resistance_unit, si_unit);
 WHERE
   WR1: SELF\si_unit.name = si_unit_name.ohm;
   WR2: NOT EXISTS(SELF\derived_unit.name);
@@ -10890,9 +10944,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_dad36395-b99a-039a-db9d-08478e7397b5" anchor="person_organization_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_7bcc7151-2ceb-b924-252f-98e9257b0754" anchor="person_organization_schema" type="express" inline-header="false" obligation="normative">
 <title id="_f0903526-4935-7553-a726-8dbdbc562768">Person organization schema</title>
-<clause id="_a5062019-6209-861b-c693-80c8b5d7ad73" inline-header="false" obligation="normative">
+<clause id="_abb3ba42-235b-dc83-be3a-503dfb33f873" inline-header="false" obligation="normative">
 <title id="_70fd69a5-2941-5e52-87e9-bf16d7c8fa0c">General</title>
 <p id="_76a7d63d-b4fe-e37b-b491-02f245df1e57">The subject of the <strong>person_organization_schema</strong> is the description of information that identifies people and organizations.</p>
 
@@ -10902,7 +10956,7 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_092aaf86-0eb8-f600-4681-f9f2fa916901"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_f491fbc2-105c-15ce-ea57-297d043d65b4" unnumbered="true"><body>SCHEMA person_organization_schema '{iso standard 10303 part(41) version(8) object(1) person_organization_schema(17)}';
+<sourcecode id="_9dc59166-1d6b-cba6-880d-563cf554b4c5" unnumbered="true"><body>SCHEMA person_organization_schema '{iso standard 10303 part(41) version(8) object(1) person_organization_schema(17)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -10922,6 +10976,7 @@ REFERENCE FROM basic_attribute_schema
    name_attribute_select,
    object_role,
    role_association);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -12009,9 +12064,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_ac2427e5-fcd3-ec8d-ba1e-0336dbc84847" anchor="product_definition_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_84c450e6-07dc-40f8-d7dd-374fb8fc77e8" anchor="product_definition_schema" type="express" inline-header="false" obligation="normative">
 <title id="_a7003aa0-adad-467a-9514-9cfc66a50528">Product definition schema</title>
-<clause id="_caa0b43f-502c-7e10-aaa0-159eb093f7a7" inline-header="false" obligation="normative">
+<clause id="_80ca1703-e003-0a79-659e-306a38242991" inline-header="false" obligation="normative">
 <title id="_8daf565d-d115-ccf6-133f-ce655fb64253">General</title>
 <p id="_e3c84edf-72f2-b67f-b989-e6bfc7e5aac1">The subject of the <strong>product_definition_schema</strong> is the identification of products, the categorization of products, definitions of products, and the relationships among them. This schema provides for the generic aspects of product definition. </p>
 
@@ -12024,11 +12079,12 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_d2b2f751-da60-f864-38ad-62affb22f947"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_1ab3d31a-a1fa-0d97-bae1-312b7aad7446" unnumbered="true"><body>SCHEMA product_definition_schema '{iso standard 10303 part(41) version(9) object(1) product_definition_schema(18)}';
+<sourcecode id="_3aa1a310-9de9-edcf-bfff-b8e2d111c321" unnumbered="true"><body>SCHEMA product_definition_schema '{iso standard 10303 part(41) version(9) object(1) product_definition_schema(18)}';
 
 REFERENCE FROM application_context_schema
   (product_context,
    product_definition_context);
+
 REFERENCE FROM basic_attribute_schema
   (get_id_value,
    get_name_value,
@@ -12036,14 +12092,19 @@ REFERENCE FROM basic_attribute_schema
    id_attribute_select,
    name_attribute,
    name_attribute_select);
+
 REFERENCE FROM document_schema
   (document);
+
 REFERENCE FROM effectivity_schema
   (effectivity);
+
 REFERENCE FROM external_reference_schema
   (external_source);
+
 REFERENCE FROM product_property_definition_schema
   (characterized_object);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -12208,7 +12269,7 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_66cb4c01-b815-7eb5-bdc2-638c40adc07a" type="express" inline-header="false" obligation="normative">
+<clause id="_08e062f7-eb65-71da-bcb9-114f8e9671d8" type="express" inline-header="false" obligation="normative">
 <title id="_4afd61f9-689d-4c26-ada5-7264facecbd5">Product definition entity definitions</title>
 <clause id="_4e573539-4062-121c-6c51-5b57f9fd5105" anchor="product_definition_schema.alternative_solution_relationship" type="express" inline-header="false" obligation="normative">
 <title id="_4afc98bf-dea6-4e90-4900-c37b96288854">alternative_solution_relationship <xref target="expg.product_definition_schema"><display-text><image id="_d82b1794-fda4-22e5-e9e5-e2fab727ef2e" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>alternative_solution_relationship</primary><secondary>Object definition</secondary></index></title>
@@ -12233,7 +12294,7 @@ END_ENTITY;</body></sourcecode>
 <p id="_0a9c4a38-4428-6c8d-ba47-b593d326cc10" anchor="product_definition_schema.alternative_solution_relationship.WR1"><strong>WR1</strong>: An <strong>alternative_solution_relationship</strong> shall not participate in its own definition.</p>
 </clause>
 
-<clause id="_200f77f6-e1b8-68f5-14e8-4d52ca76ee29" anchor="product_definition_schema.characterized_product" type="express" inline-header="false" obligation="normative">
+<clause id="_c0d2c7aa-52d2-4d16-186d-5a54e8d6b0d4" anchor="product_definition_schema.characterized_product" type="express" inline-header="false" obligation="normative">
 <title id="_f4f0d808-932c-960a-8460-baff5e3ea83b">characterized_product <xref target="expg.product_definition_schema"><display-text><image id="_cf926506-4b41-d779-a832-12e04b4d0103" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>characterized_product</primary><secondary>Object definition</secondary></index></title>
 <p id="_0422b4d8-5464-5038-6b9d-c505b055184b">A <strong>characterized_product</strong> is a type of <xref target="product_property_definition_schema.characterized_object"><display-text>characterized_object</display-text></xref> and a type of <xref target="product_definition_schema.product"><display-text>product</display-text></xref> for the purpose of characterizing a product. <note id="_dbe58ab8-2ac9-d719-33d3-3378d337ca77"><p id="_d2f461ad-7cc2-3bdd-324b-2c419116d2ab">Properties that are assigned using <strong>characterized_object</strong> are outside version control, whereas properties added via <strong>product_definition</strong> are under version control.</p>
 </note></p>
@@ -12242,7 +12303,8 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_5c72756e-9368-df83-3fa7-b651d67b3112"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_2f0aadfc-50a5-7cd9-3bd5-07d9126990b6" unnumbered="true"><body>ENTITY characterized_product;
+<sourcecode id="_4caeb580-6b12-30b1-dc38-fd6aaef79d35" unnumbered="true"><body>ENTITY characterized_product
+  SUBTYPE OF (characterized_object, product);
 END_ENTITY;</body></sourcecode>
 
 </clause>
@@ -12838,13 +12900,14 @@ END_ENTITY;</body></sourcecode>
 <p id="_14115ff9-f7b5-41c1-8369-68ed2aa368b9" anchor="product_definition_schema.product_definition_reference.id_owning_organization_name"><strong>id_owning_organization_name</strong>: specifies the id owner of the externally defined product, realised by an applied <xref target="management_resources_schema.organization_assignment"><display-text>organization_assignment</display-text></xref> with the role ‘id owner’.</p>
 </clause>
 
-<clause id="_b505b520-bd2a-4ccd-fcb5-2dc98ac53f86" anchor="product_definition_schema.product_definition_reference_with_local_representation" type="express" inline-header="false" obligation="normative">
+<clause id="_b9702b9c-8ddd-0ed0-260a-6f88634e63b0" anchor="product_definition_schema.product_definition_reference_with_local_representation" type="express" inline-header="false" obligation="normative">
 <title id="_d468b7ba-972e-2bb0-6207-3e21dd88f5bd">product_definition_reference_with_local_representation <xref target="expg.product_definition_schema"><display-text><image id="_4f106a2d-9634-d930-60e0-093d6c323e63" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>product_definition_reference_with_local_representation</primary><secondary>Object definition</secondary></index></title>
 <p id="_67833e4c-b15c-9f35-009d-b99e2cba4489">A <strong>product_definition_reference_with_local_representation</strong> is a type of <xref target="product_definition_schema.generic_product_definition_reference"><display-text>generic_product_definition_reference</display-text></xref> that represents an externally defined <xref target="product_definition_schema.product_definition"><display-text>product_definition</display-text></xref> by a local <xref target="product_definition_schema.product_definition"><display-text>product_definition</display-text></xref>.</p>
 
 <p id="_a399912c-e7b4-b842-db27-d367642b62bf"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_395fbbc4-2860-98a3-96f3-618341e058ad" unnumbered="true"><body>ENTITY product_definition_reference_with_local_representation;
+<sourcecode id="_cec2dfbf-3c40-a38d-d6a0-e54d4898f7fe" unnumbered="true"><body>ENTITY product_definition_reference_with_local_representation
+  SUBTYPE OF (generic_product_definition_reference, product_definition);
 END_ENTITY;</body></sourcecode>
 
 </clause>
@@ -13246,9 +13309,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_45653edb-4e74-2f47-0533-7ef78ea1ed74" anchor="product_property_definition_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_3fd652ac-87d7-6c10-fd70-6136487e4f3b" anchor="product_property_definition_schema" type="express" inline-header="false" obligation="normative">
 <title id="_104a178b-ebff-253c-d041-0c97a3715227">Product property definition schema</title>
-<clause id="_78dcb7f6-e70a-48e8-98ce-5364d595960a" inline-header="false" obligation="normative">
+<clause id="_a9f96304-9119-f8ca-cf92-67157275070b" inline-header="false" obligation="normative">
 <title id="_2ea7796a-28c9-0e99-1f33-a04a4ca03846">General</title>
 <p id="_e2ad5321-b006-1aa1-4b1a-b1f8ed566693">The subject of the <strong>product_property_definition_schema</strong> is the characteristics of an object.</p>
 
@@ -13258,31 +13321,38 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_8b443e45-c01a-e22e-baa0-c9afe7a09a8c"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_241c9a23-9b23-5982-8894-e7594ed75e2f" unnumbered="true"><body>SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(9) object(1) product_property_definition_schema(19)}';
+<sourcecode id="_b94cf6e8-d3db-dbdf-4106-a4f9b59bf755" unnumbered="true"><body>SCHEMA product_property_definition_schema '{iso standard 10303 part(41) version(9) object(1) product_property_definition_schema(19)}';
 
 REFERENCE FROM basic_attribute_schema
   (get_id_value,
    id_attribute,
    id_attribute_select);
+
 REFERENCE FROM process_property_schema
   (action_property,
    resource_property);
+
 REFERENCE FROM product_definition_schema
   (product_definition,
    product_definition_relationship,
    product_definition_relationship_relationship);
+
 REFERENCE FROM product_property_representation_schema
   (item_identified_representation_usage);
+
 REFERENCE FROM product_structure_schema
   (assembly_component_usage,
    multi_level_reference_designator,
    next_assembly_usage_occurrence,
    product_definition_occurrence);
+
 REFERENCE FROM shape_dimension_schema
   (dimensional_location,
    dimensional_size);
+
 REFERENCE FROM shape_tolerance_schema
   (geometric_tolerance);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -14211,9 +14281,9 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_bddfa0d3-27c5-aef9-c919-95a7c7d06d2e" anchor="product_property_representation_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_b9c920bf-d560-ef44-0aa6-8fc88e3e2900" anchor="product_property_representation_schema" type="express" inline-header="false" obligation="normative">
 <title id="_8c846b96-4459-7875-c573-17ccce157662">Product property representation schema</title>
-<clause id="_e51a5a9a-c093-2695-5d0b-ded20d63c705" inline-header="false" obligation="normative">
+<clause id="_a7f24e3a-052a-1b43-e0ab-0ba11f0aecd7" inline-header="false" obligation="normative">
 <title id="_969acc25-aabc-d5ce-a860-ee07741d58aa">General</title>
 <p id="_30b4e5aa-34ac-732b-2432-be815ea06976">The subject of the <strong>product_property_representation_schema</strong> is the representation of properties. </p>
 
@@ -14233,7 +14303,7 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_1a049c33-ebbc-9c8a-33f8-55e023fcd2a6"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_44d0a501-085b-4cf0-e951-947bbcd59ce0" unnumbered="true"><body>SCHEMA product_property_representation_schema '{iso standard 10303 part(41) version(9) object(1) product_property_representation_schema(20)}';
+<sourcecode id="_2bb8493f-12c4-c29d-30c9-97a0667be704" unnumbered="true"><body>SCHEMA product_property_representation_schema '{iso standard 10303 part(41) version(9) object(1) product_property_representation_schema(20)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -14242,11 +14312,14 @@ REFERENCE FROM basic_attribute_schema
    get_name_value,
    name_attribute,
    name_attribute_select);
+
 REFERENCE FROM material_property_definition_schema
   (property_definition_relationship);
+
 REFERENCE FROM product_definition_schema
   (product_definition,
    product_definition_relationship);
+
 REFERENCE FROM product_property_definition_schema
   (characterized_object,
    characterized_definition,
@@ -14255,8 +14328,10 @@ REFERENCE FROM product_property_definition_schema
    property_definition,
    shape_aspect,
    shape_aspect_relationship);
+
 REFERENCE FROM product_structure_schema
   (product_definition_specified_occurrence);
+
 REFERENCE FROM representation_schema
   (representation,
    representation_item,
@@ -14269,6 +14344,7 @@ REFERENCE FROM representation_schema
    list_representation_item,
    set_representation_item,
    get_representations_for_items);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    label,
@@ -14421,17 +14497,17 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_58150065-2f35-28fc-f03f-97d091c8005d" type="express" inline-header="false" obligation="normative">
+<clause id="_109c7f36-8ef3-eb71-67df-602a93df620a" type="express" inline-header="false" obligation="normative">
 <title id="_0e983893-3332-6260-e575-7c212c2794ae">Product property representation entity definitions</title>
-<clause id="_5ad9de94-1e5a-ff8f-dab3-2a7f4c5999a3" anchor="product_property_representation_schema.chain_based_item_identified_representation_usage" type="express" inline-header="false" obligation="normative">
+<clause id="_3ba666df-2802-c633-64df-470c3889696b" anchor="product_property_representation_schema.chain_based_item_identified_representation_usage" type="express" inline-header="false" obligation="normative">
 <title id="_46c64ba4-cdc2-aae8-82ed-4cc246e3d4a7">chain_based_item_identified_representation_usage <xref target="expg.product_property_representation_schema"><display-text><image id="_90adb8ea-b2d5-fdd2-fa38-a6133c3eab2d" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>chain_based_item_identified_representation_usage</primary><secondary>Object definition</secondary></index></title>
 <p id="_c8f2342a-f7b9-ada1-21ad-e0d1ce79d30f">A <strong>chain_based_item_identified_representation_usage</strong> is a type of <xref target="product_property_representation_schema.item_identified_representation_usage"><display-text>item_identified_representation_usage</display-text></xref> that represents a chain of representations in a graph of representations, where the undirected links in the graph can be instances of entity data types <eref bibitemid="express_representation_schema.representation_context" citeas=""><display-text>representation_context</display-text></eref>, <eref bibitemid="express_representation_schema.representation_relationship" citeas=""><display-text>representation_relationship</display-text></eref>, or <eref bibitemid="express_representation_schema.mapped_item" citeas=""><display-text>mapped_item</display-text></eref>. The directed links are derived from the nodes and undirected links and consist solely of instances of the entity data type <eref bibitemid="express_representation_schema.representation_relationship" citeas=""><display-text>representation_relationship</display-text></eref>. The attribute <eref bibitemid="express_representation_schema.representation_relationship.rep_2" citeas=""><display-text>rep_2</display-text></eref> of the derived instances is directed towards the root, while the attribute <eref bibitemid="express_representation_schema.representation_relationship.rep_1" citeas=""><display-text>rep_1</display-text></eref> is directed towards the leaf.</p>
 
 <p id="_e3d4df44-e941-7123-4896-5752b29d804e"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_e70209cb-e57a-48fb-9052-5f63507e41e9" unnumbered="true"><body>ENTITY chain_based_item_identified_representation_usage
+<sourcecode id="_baeb1287-3a84-72ea-7df4-20b53268b1ed" unnumbered="true"><body>ENTITY chain_based_item_identified_representation_usage
   SUBTYPE OF (item_identified_representation_usage);
-  nodes : LIST [2:?] OF representation;
+  nodes : LIST [2:?] OF UNIQUE representation;
   undirected_link : LIST [1:?] OF chained_representation_link;
 DERIVE
   root : representation := nodes[1];
@@ -14465,15 +14541,15 @@ END_ENTITY;</body></sourcecode>
 
 </clause>
 
-<clause id="_b6b84733-be1a-119d-84f6-f6bce8a81932" anchor="product_property_representation_schema.characterized_chain_based_item_within_representation" type="express" inline-header="false" obligation="normative">
+<clause id="_c4aacb5e-62bb-4212-4ac5-1c59192d62c3" anchor="product_property_representation_schema.characterized_chain_based_item_within_representation" type="express" inline-header="false" obligation="normative">
 <title id="_c7d5abf8-6df5-6290-6c7a-b5356e5fcf22">characterized_chain_based_item_within_representation <xref target="expg.product_property_representation_schema"><display-text><image id="_4fcafb60-43d4-b033-61f0-c12722e24f8e" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>characterized_chain_based_item_within_representation</primary><secondary>Object definition</secondary></index></title>
 <p id="_95bcf6c6-b010-5bc0-fb19-abfc0d5087fb">A <strong>characterized_chain_based_item_within_representation</strong> is a type of <xref target="product_property_representation_schema.characterized_item_within_representation"><display-text>characterized_item_within_representation</display-text></xref> that represents a chain of representations in a graph of representations, where the undirected links in the graph can be instances of entity data types <eref bibitemid="express_representation_schema.representation_context" citeas=""><display-text>representation_context</display-text></eref>, <eref bibitemid="express_representation_schema.representation_relationship" citeas=""><display-text>representation_relationship</display-text></eref>, or <eref bibitemid="express_representation_schema.mapped_item" citeas=""><display-text>mapped_item</display-text></eref>. The directed links are derived from the nodes and undirected links and consist solely of instances of the entity data type <eref bibitemid="express_representation_schema.representation_relationship" citeas=""><display-text>representation_relationship</display-text></eref>. The attribute <eref bibitemid="express_representation_schema.representation_relationship.rep_2" citeas=""><display-text>rep_2</display-text></eref> of the derived instances is directed towards the root, while the attribute <eref bibitemid="express_representation_schema.representation_relationship.rep_1" citeas=""><display-text>rep_1</display-text></eref> is directed towards the leaf.</p>
 
 <p id="_f0729ee5-15c1-1d2a-94a4-e8cc1f5102cf"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_13b503f8-a5f7-9a16-0151-d63e1b9002d1" unnumbered="true"><body>ENTITY characterized_chain_based_item_within_representation
+<sourcecode id="_1405d8af-5e3e-2c2e-8a3e-bf0923d679d1" unnumbered="true"><body>ENTITY characterized_chain_based_item_within_representation
   SUBTYPE OF (characterized_item_within_representation);
-  nodes : LIST [2:?] OF representation;
+  nodes : LIST [2:?] OF UNIQUE representation;
   undirected_link : LIST [1:?] OF chained_representation_link;
 DERIVE
   root : representation := nodes[1];
@@ -14597,7 +14673,7 @@ END_ENTITY;</body></sourcecode>
 
 </clause>
 
-<clause id="_33cea9f2-3011-ce75-3124-05a5a9e0ca3f" anchor="product_property_representation_schema.item_identified_representation_usage" type="express" inline-header="false" obligation="normative">
+<clause id="_a2d9ba27-18fb-92c4-95f6-d07d2189b283" anchor="product_property_representation_schema.item_identified_representation_usage" type="express" inline-header="false" obligation="normative">
 <title id="_171a9acc-9213-bf6b-8dd5-5f1ab38d909f">item_identified_representation_usage <xref target="expg.product_property_representation_schema"><display-text><image id="_551bf781-ec12-d4e6-5953-ffffad09610b" src="data:image/gif;base64,R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIzAB9+RIGjNivgcB+AQuWkJgvYL4ABPNH8Z/Ff/ss6rNo718/XwF+9QNGsqTJk4EAAPu3kCSAlzBVluxjYKVJmSVxAtujkt/NkzoHqdx3M+ZLk4JUsjwJTGdJQAFWMhwWbJhLYFRN/om6FCjWk1ttujQKs2RYoleZ4gy7VBhOggTXcm1q1K1RYGH9Nf2pU+XZvTkBX2VLN2bhsoZU6mXKGBifAsCIEmxMkqFQm1Ypl0z5q1CgQH0A7flMuvQfPwACwBQAoABrsgAEDAgQEAA7" mimetype="image/gif" height="auto" width="auto" filename="images/expg.gif"/></display-text></xref> <index><primary>item_identified_representation_usage</primary><secondary>Object definition</secondary></index></title>
 <p id="_94425dd2-8f9c-a61f-0345-508607b86b23">An <strong>item_identified_representation_usage</strong> is an identification of a single or a set or a list of <eref bibitemid="express_representation_schema.representation_item" citeas=""><display-text>representation_item</display-text></eref>(s) within a <eref bibitemid="express_representation_schema.representation" citeas=""><display-text>representation</display-text></eref> as being the element(s) that describes a particular component or part of the property that is described by the <eref bibitemid="express_representation_schema.representation" citeas=""><display-text>representation</display-text></eref>. More than one <eref bibitemid="express_representation_schema.representation" citeas=""><display-text>representation</display-text></eref>. may be bound to a product data item by members of <strong>item_identified_representation_usage</strong> and more than one member of <eref bibitemid="express_representation_schema.representation_item" citeas=""><display-text>representation_item</display-text></eref>(s) may be bound to a product data item by members of <strong>item_identified_representation_usage</strong>. The same item of product data shall not be bound to more than one member of <eref bibitemid="express_representation_schema.representation_item" citeas=""><display-text>representation_item</display-text></eref> within a member of <eref bibitemid="express_representation_schema.representation" citeas=""><display-text>representation</display-text></eref>. </p>
 
@@ -14609,7 +14685,7 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_6c3ccb26-8305-39cd-8bee-4924db6192f7"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_1163b7ad-68f0-12ad-893b-c6a66b0e7cf8" unnumbered="true"><body>ENTITY item_identified_representation_usage;
+<sourcecode id="_d7d2e166-10a0-fd89-2828-12340c8b9797" unnumbered="true"><body>ENTITY item_identified_representation_usage;
   name : label;
   description : OPTIONAL text;
   definition : item_identified_representation_usage_definition;
@@ -14617,7 +14693,6 @@ END_ENTITY;</body></sourcecode>
   identified_item : item_identified_representation_usage_select;
 UNIQUE
   UR1: used_representation, identified_item;
-  ;
   UR2: used_representation, definition;
 WHERE
   WR1: NOT (SIZEOF(identified_item) = 1) OR (used_representation IN using_representations(identified_item));
@@ -15335,7 +15410,7 @@ END_ENTITY;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_aa9e972c-cedc-53ab-12ba-e79083e05556" anchor="support_resource_schema" type="express" inline-header="false" obligation="normative">
+<clause id="_359b6db8-50f4-d746-f819-ded7c5c9bceb" anchor="support_resource_schema" type="express" inline-header="false" obligation="normative">
 <title id="_1e6d10da-7ced-3e08-ebdf-4abfc7e5c6db">Support resource schema</title>
 <clause id="_120e4742-0a73-f204-be73-10b67ed0dd37" inline-header="false" obligation="normative">
 <title id="_d49d5650-7603-ff4f-a425-183628c8adb5">General</title>
@@ -15402,17 +15477,17 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_aabfbad6-5bc4-9cf8-2b10-5ec453ce00a4" type="express" inline-header="false" obligation="normative">
+<clause id="_3ac18104-747b-53a7-bc9f-fdb277b8a347" type="express" inline-header="false" obligation="normative">
 <title id="_9198dee3-e36d-0a1e-4593-072c1261c215">Support resource function definitions</title>
-<clause id="_c23b87d0-2239-b930-9a2d-d2a5a3d3b28d" anchor="support_resource_schema.bag_to_set" type="express" inline-header="false" obligation="normative">
+<clause id="_8ab2edea-ce3b-c3ed-19ea-e62fd3db0585" anchor="support_resource_schema.bag_to_set" type="express" inline-header="false" obligation="normative">
 <title id="_66350c17-fdc8-f9e9-38da-fed60352dce0">bag_to_set <index><primary>bag_to_set</primary><secondary>Object definition</secondary></index></title>
 <p id="_ae6a3419-34f8-5302-6eb1-077b3a8746a6">The <strong>bag_to_set</strong> function converts BAGs into SETs.</p>
 
 <p id="_7ab01603-46d0-0612-8ba9-e61f308a2b38"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_00ec1f50-2c71-c31b-1ea2-98e8cdb6aaf9" unnumbered="true"><body>FUNCTION bag_to_set(the_bag : BAG OF GENERIC) : SET OF GENERIC;
+<sourcecode id="_b27fdca5-d97d-d6bc-dd0c-cff1a653e926" unnumbered="true"><body>FUNCTION bag_to_set(the_bag : BAG OF GENERIC : intype) : SET OF GENERIC : intype;
   LOCAL
-    the_set : SET OF GENERIC := [];
+    the_set : SET OF GENERIC : intype := [];
   END_LOCAL;
   IF SIZEOF(the_bag) &gt; 0 THEN
     REPEAT i := 1 TO HIINDEX(the_bag);
@@ -17464,10 +17539,10 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
 
 </clause>
 </clause>
-</annex><bibliography><references id="_b47b9054-766b-a47e-ee74-c0190cb5e89e" normative="true" obligation="informative">
+</annex><bibliography><references id="_1dd8f4fb-ed66-00ca-2525-ec4258301b19" normative="true" obligation="informative">
 <title id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><p id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
-<bibitem id="_49d20668-03b0-25ba-8e67-64d9b6b4e3f3" type="standard" schema-version="v1.5.6" anchor="ref8601.2000">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_d5427aab-ad75-190c-ecd8-cba26477a4cb" type="standard" schema-version="v1.5.6" anchor="ref8601.2000">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Data elements and interchange formats</title>
 
@@ -17496,6 +17571,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:26780:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/02/67/26780.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 8601:2000</docidentifier>
+  <docidentifier type="iso-undated">ISO 8601</docidentifier>
   <docidentifier type="iso-reference">ISO 8601:2000(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso:8601:stage-95.99</docidentifier>
   <docnumber>8601</docnumber>
@@ -17587,8 +17663,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <city>Geneva</city>
   </place>
 </bibitem>
-<bibitem id="_587157b1-9300-340d-c5f0-43db0fbe7513" type="standard" schema-version="v1.5.6" anchor="ref10303-1">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_a1a57914-af4f-78a2-ca7b-fbd86fa67b03" type="standard" schema-version="v1.5.6" anchor="ref10303-1">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Industrial automation systems and integration</title>
 
@@ -17708,6 +17784,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:20579:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/02/05/20579.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO 10303-1:1994</docidentifier>
+      <docidentifier type="iso-undated">ISO 10303-1</docidentifier>
       <docidentifier type="iso-reference">ISO 10303-1:1994(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso:10303:-1:stage-95.99</docidentifier>
       <docnumber>10303</docnumber>
@@ -17783,8 +17860,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <city>Geneva</city>
   </place>
 </bibitem>
-<bibitem id="_6540e57f-2f85-baf2-3e72-1ee4776f7637" type="standard" schema-version="v1.5.6" anchor="ref10303-11.2004">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_1bb1914e-5440-0199-adf9-49be3fd733c7" type="standard" schema-version="v1.5.6" anchor="ref10303-11.2004">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Industrial automation systems and integration</title>
 
@@ -17813,6 +17890,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:38047:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/03/80/38047.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-11:2004</docidentifier>
+  <docidentifier type="iso-undated">ISO 10303-11</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-11:2004(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso:10303:-11:stage-90.93</docidentifier>
   <docnumber>10303</docnumber>
@@ -17888,8 +17966,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <city>Geneva</city>
   </place>
 </bibitem>
-<bibitem id="_69b36491-9575-0190-49ff-5fe51164808e" type="standard" schema-version="v1.5.6" anchor="ref10303-43">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_604898bd-64f8-fcd0-73ee-8bd9208c7f01" type="standard" schema-version="v1.5.6" anchor="ref10303-43">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Industrial automation systems and integration</title>
 
@@ -18005,6 +18083,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:76129:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/07/61/76129.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO 10303-43:2018</docidentifier>
+      <docidentifier type="iso-undated">ISO 10303-43</docidentifier>
       <docidentifier type="iso-reference">ISO 10303-43:2018(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso:10303:-43:stage-95.99</docidentifier>
       <docnumber>10303</docnumber>
@@ -18076,8 +18155,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <city>Geneva</city>
   </place>
 </bibitem>
-<bibitem id="_586dd68b-a634-c288-6acb-94782f01a72a" type="standard" schema-version="v1.5.6" anchor="ref10303-44">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_2519ded3-80d4-4348-f3fa-fd863621db92" type="standard" schema-version="v1.5.6" anchor="ref10303-44">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Industrial automation systems and integration</title>
 
@@ -18193,6 +18272,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:78580:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/07/85/78580.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO 10303-44:2019</docidentifier>
+      <docidentifier type="iso-undated">ISO 10303-44</docidentifier>
       <docidentifier type="iso-reference">ISO 10303-44:2019(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso:10303:-44:stage-95.99</docidentifier>
       <docnumber>10303</docnumber>
@@ -18264,8 +18344,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <city>Geneva</city>
   </place>
 </bibitem>
-<bibitem id="_6357710e-1763-279e-264c-05af4e83ea0e" type="standard" schema-version="v1.5.6" anchor="ref10303-49">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_a5577175-802b-d5ff-e633-e323b90a90f6" type="standard" schema-version="v1.5.6" anchor="ref10303-49">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Industrial automation systems and integration</title>
 
@@ -18371,6 +18451,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:25101:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/02/51/25101.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO 10303-49:1998</docidentifier>
+      <docidentifier type="iso-undated">ISO 10303-49</docidentifier>
       <docidentifier type="iso-reference">ISO 10303-49:1998(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso:10303:-49:stage-90.93</docidentifier>
       <docnumber>10303</docnumber>
@@ -18432,8 +18513,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <city>Geneva</city>
   </place>
 </bibitem>
-<bibitem id="_721c0da2-8de0-158e-f1c3-25fd339c8dff" type="standard" schema-version="v1.5.6" anchor="ref80000">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_2a4f1a9f-b931-7af2-93c5-f3307b497567" type="standard" schema-version="v1.5.6" anchor="ref80000">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-main">Quantities and units</title>
 
@@ -18592,6 +18673,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:30669:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/03/06/30669.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO 80000-1:2009</docidentifier>
+      <docidentifier type="iso-undated">ISO 80000-1</docidentifier>
       <docidentifier type="iso-reference">ISO 80000-1:2009(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso:80000:-1:stage-95.99</docidentifier>
       <docnumber>80000</docnumber>
@@ -18743,8 +18825,22 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   </relation>
   <relation type="instanceOf">
     <bibitem>
+      <formattedref>ISO 80000-9</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-9</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
       <formattedref>ISO 80000-8:2007</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-8:2007</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO 80000-8</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-8</docidentifier>
     </bibitem>
 
   </relation>
@@ -18764,6 +18860,13 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   </relation>
   <relation type="instanceOf">
     <bibitem>
+      <formattedref>ISO 80000-7</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-7</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
       <formattedref>ISO 80000-5:2019</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-5:2019</docidentifier>
     </bibitem>
@@ -18773,6 +18876,13 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <bibitem>
       <formattedref>ISO 80000-5:2007</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-5:2007</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO 80000-5</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-5</docidentifier>
     </bibitem>
 
   </relation>
@@ -18792,6 +18902,13 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   </relation>
   <relation type="instanceOf">
     <bibitem>
+      <formattedref>ISO 80000-4</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-4</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
       <formattedref>ISO 80000-3:2019</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-3:2019</docidentifier>
     </bibitem>
@@ -18801,6 +18918,13 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <bibitem>
       <formattedref>ISO 80000-3:2006</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-3:2006</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO 80000-3</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-3</docidentifier>
     </bibitem>
 
   </relation>
@@ -18820,6 +18944,13 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   </relation>
   <relation type="instanceOf">
     <bibitem>
+      <formattedref>ISO 80000-2</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-2</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
       <formattedref>ISO 80000-12:2019</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-12:2019</docidentifier>
     </bibitem>
@@ -18829,6 +18960,13 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <bibitem>
       <formattedref>ISO 80000-12:2009</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-12:2009</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO 80000-12</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-12</docidentifier>
     </bibitem>
 
   </relation>
@@ -18848,6 +18986,13 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   </relation>
   <relation type="instanceOf">
     <bibitem>
+      <formattedref>ISO 80000-11</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-11</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
       <formattedref>ISO 80000-10:2019</formattedref>
       <docidentifier type="ISO" primary="true">ISO 80000-10:2019</docidentifier>
     </bibitem>
@@ -18860,12 +19005,187 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     </bibitem>
 
   </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO 80000-10</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 80000-10</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDR 80000-4</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDR 80000-4</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDR 80000-2</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDR 80000-2</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-9</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-9</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-8</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-8</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-7</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-7</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-5</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-5</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-4</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-4</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-3</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-3</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-2</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-2</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-12</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-12</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-11</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-11</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDAR 80000-10</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDAR 80000-10</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-9</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-9</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-8</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-8</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-7</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-7</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-5</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-5</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-3</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-3</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-12</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-12</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-11</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-11</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/WDA 80000-10</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/WDA 80000-10</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/NP 80000-15</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/NP 80000-15</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/CD 80000-8</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/CD 80000-8</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/AWI 80000-4</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/AWI 80000-4</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="instanceOf">
+    <bibitem>
+      <formattedref>ISO/AWI 80000-2</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/AWI 80000-2</docidentifier>
+    </bibitem>
+
+  </relation>
   <place>
     <city>Geneva</city>
   </place>
 </bibitem>
-<bibitem id="_eb26b528-0b75-f414-b4a8-7c2c169160cf" type="standard" schema-version="v1.5.6" anchor="refIEC80000">
-  <fetched>2026-08-12</fetched>
+<bibitem id="_ed294aa7-3bbf-b1b2-02e4-6970938555c4" type="standard" schema-version="v1.5.6" anchor="refIEC80000">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-main">Quantities and units</title>
 
@@ -19062,9 +19382,9 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
     <city>Geneva</city>
   </place>
 </bibitem>
-</references><references id="_4640f9b0-ba65-28bd-2085-6bb4a59f0906" normative="false" obligation="informative">
-<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_421a59f9-71f3-dad2-7500-f4af5f117abb" type="standard" schema-version="v1.5.6" anchor="ISO_10303-21">
-  <fetched>2026-08-12</fetched>
+</references><references id="_a6016018-79f2-bde3-cbc2-e0b4a20925ce" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_e0e79e42-c34b-6c21-491b-cbc0d79df05a" type="standard" schema-version="v1.5.6" anchor="ISO_10303-21">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Industrial automation systems and integration</title>
 
@@ -19180,6 +19500,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:63141:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/06/31/63141.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO 10303-21:2016</docidentifier>
+      <docidentifier type="iso-undated">ISO 10303-21</docidentifier>
       <docidentifier type="iso-reference">ISO 10303-21:2016(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso:10303:-21:stage-90.93</docidentifier>
       <docnumber>10303</docnumber>
@@ -19250,8 +19571,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="_7c06b0b1-d517-311a-b2ca-6e6e6cc1e6da" type="standard" schema-version="v1.5.6" anchor="ISO_10303-22">
-  <fetched>2026-08-12</fetched>
+</bibitem><bibitem id="_ef39efd3-00f2-541d-da3d-2bc7ac349f1e" type="standard" schema-version="v1.5.6" anchor="ISO_10303-22">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Industrial automation systems and integration</title>
 
@@ -19357,6 +19678,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:25097:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/02/50/25097.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO 10303-22:1998</docidentifier>
+      <docidentifier type="iso-undated">ISO 10303-22</docidentifier>
       <docidentifier type="iso-reference">ISO 10303-22:1998(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso:10303:-22:stage-90.93</docidentifier>
       <docnumber>10303</docnumber>
@@ -19416,8 +19738,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="_c3654859-0e13-4a7e-0a41-2b956645259f" type="standard" schema-version="v1.5.6" anchor="ref8824-1">
-  <fetched>2026-08-12</fetched>
+</bibitem><bibitem id="_a054c8eb-850a-8285-0bce-1bb73be83f05" type="standard" schema-version="v1.5.6" anchor="ref8824-1">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Information technology</title>
 
@@ -19603,6 +19925,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:68350:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/06/83/68350.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO/IEC 8824-1:2015</docidentifier>
+      <docidentifier type="iso-undated">ISO/IEC 8824-1</docidentifier>
       <docidentifier type="iso-reference">ISO/IEC 8824-1:2015(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso-iec:8824:-1:stage-95.99</docidentifier>
       <docnumber>8824</docnumber>
@@ -19743,8 +20066,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="_ea105aa1-4b19-9a40-1641-9e3378a9f731" type="standard" schema-version="v1.5.6" anchor="ISO-IEC-10746-2">
-  <fetched>2026-08-12</fetched>
+</bibitem><bibitem id="_81c27935-c069-f0e4-249b-f8915e57521a" type="standard" schema-version="v1.5.6" anchor="ISO-IEC-10746-2">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn" type="title-intro">Information technology</title>
 
@@ -19877,6 +20200,7 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
       <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:55723:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/05/57/55723.detail.rss</uri>
       <docidentifier type="ISO" primary="true">ISO/IEC 10746-2:2009</docidentifier>
+      <docidentifier type="iso-undated">ISO/IEC 10746-2</docidentifier>
       <docidentifier type="iso-reference">ISO/IEC 10746-2:2009(E)</docidentifier>
       <docidentifier type="URN">urn:iso:std:iso-iec:10746:-2:stage-90.93</docidentifier>
       <docnumber>10746</docnumber>
@@ -20240,8 +20564,8 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
   <docidentifier type="repository">current-metanorma-collection/support_resource_schema.htm</docidentifier>
   <language>en</language>
   <script>Latn</script>
-</bibitem><bibitem id="_5203758b-b90a-2bcf-2656-8649901131a8" type="standard" schema-version="v1.5.6" anchor="IETF-RFC-1738">
-  <fetched>2026-08-12</fetched>
+</bibitem><bibitem id="_630f797b-9c8a-5286-2f09-6dc1b17ada48" type="standard" schema-version="v1.5.6" anchor="IETF-RFC-1738">
+  <fetched>2026-11-02</fetched>
   
 <title type="main">Uniform Resource Locators (URL)</title>
 
@@ -20321,16 +20645,11 @@ he was later replaced by Tom Jones.<note id="_aa84ff07-99e0-85fd-d330-6d98060e6b
 
     <number>1738</number>
   </series>
-  <series type="stream">
-    
-<title>Legacy</title>
-
-  </series>
   <keyword>
     <vocab>URL</vocab>
   </keyword>
-</bibitem><bibitem id="_dfd07cdf-c312-9caa-0fdd-e4a0ac55230a" type="standard" schema-version="v1.5.6" anchor="HTML">
-  <fetched>2026-08-12</fetched>
+</bibitem><bibitem id="_367ab8df-7383-057e-b872-7b32aa615cdc" type="standard" schema-version="v1.5.6" anchor="HTML">
+  <fetched>2026-11-02</fetched>
   
 <title language="en" script="Latn">HTML</title>
 

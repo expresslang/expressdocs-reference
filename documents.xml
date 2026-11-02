@@ -15,9 +15,9 @@
   <uri type="rxl">./documents/data/documents/iso-smrl-style-validation.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-999:2030</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-999:2030(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-999:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-999:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-999</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-999:2030(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-999:2030(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>
@@ -172,9 +172,9 @@
   <uri type="rxl">./documents/data/documents/resources/fundamentals_of_product_description_and_support/document.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>
@@ -329,9 +329,9 @@
   <uri type="rxl">./documents/expressdocs/express-schema-1.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>
@@ -486,9 +486,9 @@
   <uri type="rxl">./documents/expressdocs/express-schema-2.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-1:2019</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-1:2019(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-1:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-1:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-1</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-1:2019(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-1:2019(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>
@@ -643,9 +643,9 @@
   <uri type="rxl">./documents/expressdocs/express-schema-24.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>
@@ -800,9 +800,9 @@
   <uri type="rxl">./documents/expressdocs/express-schema-3.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>
@@ -957,9 +957,9 @@
   <uri type="rxl">./documents/expressdocs/express-schema-duplicated.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>
@@ -1114,9 +1114,9 @@
   <uri type="rxl">./documents/expressdocs/express-simple-statement.rxl</uri>
   <docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier>
   <docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier>
   <docidentifier type="iso-undated">ISO 10303-41</docidentifier>
-  <docidentifier type="iso-with-lang">ISO 10303-41:2019(E)</docidentifier>
+  <docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier>
   <docidentifier type="iso-tc">10446</docidentifier>
   <docnumber>10303</docnumber>
   <contributor>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.4.10" schema-version="v2.2.0" flavor="iso">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.5.4" schema-version="v2.3.0" flavor="iso">
 <bibdata type="standard">
 <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
 
@@ -20,7 +20,7 @@
 <title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
 
 <title language="fr" type="title-part-prefix">Partie 41</title>
-<docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-41:stage-60.60:en</docidentifier><docidentifier type="iso-undated">ISO 10303-41</docidentifier><docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier><docidentifier type="iso-undated">ISO 10303-41</docidentifier><docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
 <name>International Organization for Standardization</name>
 <abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>International Organization for Standardization</name>
@@ -90,9 +90,9 @@
 <title id="_0f8348fe-156e-4ffd-8c7d-ce7d5a68b7cc">Two identical schemas to follow, with different anchors</title>
 </clause>
 
-<clause id="_232c56d0-65f4-da5f-a55a-f965ca3f6f76" anchor="action_schema" type="express-schema" inline-header="false" obligation="normative">
+<clause id="_f51822c0-f6cc-70a2-710d-960371a20608" anchor="action_schema" type="express-schema" inline-header="false" obligation="normative">
 <title id="_cb5eaffd-4075-6aa0-e852-3e5859975ae9">action_schema</title>
-<clause id="_ac259342-20f2-c227-e7f3-261a7c8a32f1" inline-header="false" obligation="normative">
+<clause id="_72fbfe8c-e682-2bef-da60-533a3c50f622" inline-header="false" obligation="normative">
 <title id="_0175f76d-716b-304d-d5e0-55b2c2c71130">General</title>
 <p id="_3f5959b8-67bb-1f1f-5182-07e6114772c6">The subject of the <strong>action_schema</strong> is the description of actions, the reasons for these actions, and the status of these actions.</p>
 
@@ -101,7 +101,7 @@
 
 <p id="_81a6ad20-f8cc-83ec-fbee-49cdad4d8621"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_4b8e283b-47ab-3287-9948-0c46b883bc31" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
+<sourcecode id="_1977991b-a1a7-0cf5-a74c-3764954edfc2" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -117,6 +117,7 @@ REFERENCE FROM basic_attribute_schema
    object_role,
    role_select,
    role_association);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -190,9 +191,9 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_bd466012-fa08-d43d-4e97-997e39a98f38" anchor="action_schema.entities" inline-header="false" level="3" obligation="normative">
+<clause id="_c17451ec-6f54-00c6-5dac-65af9601a04a" anchor="action_schema.entities" inline-header="false" level="3" obligation="normative">
 <title id="_937fd8ca-88a6-c83a-81e4-2a7febd933a0">action_schema entity definitions</title>
-<clause id="_00d16e50-d827-37d5-9764-384d5cfa7c2b" anchor="action_schema.action" inline-header="false" level="4" obligation="normative">
+<clause id="_8d0c97b4-2661-7ac4-b05d-b1cf972157d9" anchor="action_schema.action" inline-header="false" level="4" obligation="normative">
 <title id="_41004583-c078-20aa-5568-f9f8d07aa023">action</title>
 <p id="_40b9a045-de9a-2a44-6a07-3dff69aaa8e2">An <strong>action</strong> is the identification of the occurrence of an activity and a description of its result.</p>
 
@@ -246,10 +247,16 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_ecbe4f39-0b65-afba-37b0-13704971a0fc"><underline>Attribute definitions:</underline></p>
 
-<dl id="_11588a1f-18bf-c7ed-f871-2ce87105a564"><dt><strong>WR1</strong></dt>
+<dl id="_fb9a6f34-68c6-ccf3-cbe0-eadd4e1f45f7"><dt><strong>WR1</strong></dt>
 <dd id="_33dedee8-e9ca-7014-526e-51273654bd84"><p id="_0ddc9a8f-9038-d04b-ab74-a2a29dff0d04">Each <strong>action</strong> shall be the <eref bibitemid="express_basic_attribute_schema.id_attribute.identified_item" citeas=""><display-text>identified_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref>.</p>
 </dd>
-</dl>
+<note id="_154b048f-e96e-b413-32ed-8bdee1df7d40"><p id="_fad4e66f-4c3e-9493-e66f-c9a84f99a741">The <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_acce0097-9d03-0a66-01c4-1bf89bb6025f"><p id="_31aec78e-02c4-1e0d-8ed8-551a1756fea2">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
 </clause>
 
 <clause id="_522b738d-edad-81e1-d2f2-db403d60be60" anchor="action_schema.action_directive" inline-header="false" level="4" obligation="normative">
@@ -422,7 +429,7 @@ END_ENTITY;</body></sourcecode>
 
 </clause>
 
-<clause id="_73d2b1ce-b647-21f4-dc21-3c98d198b3de" anchor="action_schema.action_request_solution" inline-header="false" level="4" obligation="normative">
+<clause id="_c8272141-6263-2f22-b7d3-b863d89a3861" anchor="action_schema.action_request_solution" inline-header="false" level="4" obligation="normative">
 <title id="_d62f8ab1-8f53-02c0-8bb1-49a5d0f1d442">action_request_solution</title>
 <p id="_da09acc3-0361-e1e1-ffb8-5a92be9269d5">An <strong>action_request_solution</strong> is an association between a <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> and an <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that is a potential solution for the request.</p>
 
@@ -466,13 +473,24 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_e27c485c-09e9-bb95-8aa6-b5eca0aff6f2"><underline>Attribute definitions:</underline></p>
 
-<dl id="_8d2ab6ca-59cc-d845-095e-f65afaf3ed90"><dt><strong>WR1</strong></dt>
-<dd id="_42d8cef9-d453-7eb3-ea1a-039b85374ed8"><p id="_36e8df71-4d8a-0363-71a3-49fbcff64caf">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.description_attribute.described_item" citeas=""><display-text>described_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>.</p>
+<dl id="_c4a74eff-c803-8dcc-e489-c53a72dafb63"><dt><strong>WR1</strong></dt>
+<dd id="_91aaec61-d3c4-7d11-cc23-f8cb88463f56"><p id="_50f1a388-0971-454c-2e4d-e291f36ff560">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.description_attribute.described_item" citeas=""><display-text>described_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>.</p>
 </dd>
-<dt><strong>WR2</strong></dt>
-<dd id="_c2049fb2-9db2-cb91-6330-b3db5b68d1a7"><p id="_6474a801-a3fc-2ff4-92b4-cc9df5841553">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.name_attribute.named_item" citeas=""><display-text>named_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>.</p>
+<note id="_8ce62272-f963-e58e-0295-ab47a847b64e"><p id="_a42d4df7-6556-c3f6-fcf5-024507578c59">The <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note></dl>
+
+
+
+<dl id="_6e9cead9-dcac-bb4a-dff4-1be0d1db96e3"><dt><strong>WR2</strong></dt>
+<dd id="_1cf59c0d-f101-bad5-9688-086f6ddf9e21"><p id="_30453c66-8bc0-c4fa-5429-86c597450296">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.name_attribute.named_item" citeas=""><display-text>named_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>.</p>
 </dd>
-</dl>
+<note id="_6082fb95-880f-6098-eafc-0faa42f8c1ce"><p id="_ed5492ff-a3f8-45dd-2b66-7ef451a53d5e">The <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_0711403b-b26b-535d-2e99-796414f4fcc7"><p id="_805d9817-43c1-b96e-931f-af5c4ebebb15">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
 </clause>
 
 <clause id="_c6068a88-0a6d-d031-b0ab-15ccbb4f484a" anchor="action_schema.action_request_status" inline-header="false" level="4" obligation="normative">
@@ -849,9 +867,9 @@ END_ENTITY;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_176fd264-6e7b-a1d3-8cda-80d9aea6e8e9" anchor="action_schema.functions" inline-header="false" level="3" obligation="normative">
+<clause id="_f81bd736-2c7d-c148-4181-fd2fdb6a5c91" anchor="action_schema.functions" inline-header="false" level="3" obligation="normative">
 <title id="_6ba03cf9-f505-ea14-2b79-3f00ec39c093">action_schema function definitions</title>
-<clause id="_98f83b59-4010-5d36-05b7-08fe63aa4c8d" anchor="action_schema.acyclic_action_method_relationship.acyclic_action_method_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_67f5168a-217d-4c94-9780-51710593ffab" anchor="action_schema.acyclic_action_method_relationship.acyclic_action_method_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_fdf9a647-568c-0c77-b964-39adc8477fe3">acyclic_action_method_relationship</title>
 <p id="_ad183db8-3984-0c56-0108-8fe5be266d1e">The <strong>acyclic_action_method_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_method_relationship" citeas=""><display-text>action_method_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -929,9 +947,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_638266ec-d38f-8e75-0a4e-aef7a4b82775" anchor="action_schema.acyclic_action_method_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_2150cfc6-bdfe-2d17-b7b0-841ad6704c31">Statements</title>
+<clause id="_15f92972-d7b8-055a-a95f-b6595c10c0e3" anchor="action_schema.acyclic_action_method_relationship.i" inline-header="false" obligation="normative">
+<title id="_bb842b85-d814-2b07-e210-9f3393d165c7">i</title>
+<p id="_1a48427b-5deb-494f-81f3-dd4829ceb1d2"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_494405f2-cd6b-0a41-7361-2173c3578fef" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_method_relationship(x[i], relatives + relation.relating_method, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_df73bddc-129d-aa5b-86b3-7242a73db7db" anchor="action_schema.acyclic_action_relationship.acyclic_action_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_60fce548-66d3-f939-5b9b-8e56e0dcf118" anchor="action_schema.acyclic_action_relationship.acyclic_action_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_d9f688ca-1c5a-2db9-7de8-b35106b86f21">acyclic_action_relationship</title>
 <p id="_1a22e5e0-5e5f-d1b5-c2d7-fe0ad2f36846">The <strong>acyclic_action_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_relationship" citeas=""><display-text>action_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -1009,9 +1043,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_82e580be-ea5b-958e-e5e5-89c6e7d8e24e" anchor="action_schema.acyclic_action_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_b1d9095c-ea40-44e8-c787-9935afe62722">Statements</title>
+<clause id="_c4a3a615-8b14-9bec-5875-3d56f214499e" anchor="action_schema.acyclic_action_relationship.i" inline-header="false" obligation="normative">
+<title id="_1fa20b97-432a-a2b4-4cbc-f94957ebd14d">i</title>
+<p id="_b49856ba-99a7-5c3a-71ba-7f70ec76b2ab"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_8ccddc92-2746-ea6c-b6b3-4a2e693b0e0d" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_relationship(x[i], relatives + relation.relating_action, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_6754baff-b373-b607-4af4-dc5bfdbbf871" anchor="action_schema.acyclic_action_resource_relationship.acyclic_action_resource_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_407df4f2-1d9b-f6cc-b44b-12211e30c9b3" anchor="action_schema.acyclic_action_resource_relationship.acyclic_action_resource_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_9feff4f8-ad63-ca55-0950-37fe1188b1e0">acyclic_action_resource_relationship</title>
 <p id="_712be0a4-29c7-86f9-c488-2a0b862b8d9a">The <strong>acyclic_action_resource_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -1089,9 +1139,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_3a95eb3b-ae22-a68d-de87-adb4bc589675" anchor="action_schema.acyclic_action_resource_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_d2e87bdc-00b2-3be1-f116-1029dc1594c3">Statements</title>
+<clause id="_e6d09390-c93d-12b7-d96b-8dfe6b64325c" anchor="action_schema.acyclic_action_resource_relationship.i" inline-header="false" obligation="normative">
+<title id="_d360467d-2192-f09e-2380-5317b50afd37">i</title>
+<p id="_1f77a31c-c570-880a-4502-ddc089107c44"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_ac84d5dd-b207-4088-4a2e-55ed9ce0b336" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_resource_relationship(x[i], relatives + relation.relating_resource, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_a41dd923-202d-ef5e-055d-d9a3c0e400f9" anchor="action_schema.acyclic_versioned_action_request_relationship.acyclic_versioned_action_request_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_d3de8cdc-fe0d-5a96-e66f-5dd299097030" anchor="action_schema.acyclic_versioned_action_request_relationship.acyclic_versioned_action_request_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_366cc2d0-dc38-4d39-5092-329f09e5d3b9">acyclic_versioned_action_request_relationship</title>
 <p id="_0e41bce0-0401-9a4a-2895-85bd356ad754">The <strong>acyclic_versioned_action_request_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -1169,9 +1235,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_b46bfbcb-d096-b437-30e4-1d4e95c20d01" anchor="action_schema.acyclic_versioned_action_request_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_e9fa8fdc-df17-f7ad-4c2a-faf9deda4eb3">Statements</title>
+<clause id="_f512c278-be06-fdb3-11c8-4628223e0c04" anchor="action_schema.acyclic_versioned_action_request_relationship.i" inline-header="false" obligation="normative">
+<title id="_dafb6d54-0d15-72fb-7db4-10287fbfbf68">i</title>
+<p id="_266d122b-453c-d863-a55f-a6efa3efafa2"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_a3c81e36-3716-a220-d983-56399fbb7313" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_versioned_action_request_relationship(x[i], relatives + relation.relating_versioned_action_request, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_4f40cb21-7e62-b204-aea1-ce39ea55fb8a" anchor="action_schema.acyclic_action_directive_relationship.acyclic_action_directive_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_7bf0c9eb-dd8d-2361-cfbc-dbbc6e5185eb" anchor="action_schema.acyclic_action_directive_relationship.acyclic_action_directive_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_8eca7d54-d1d8-81ad-255f-1dcdd818fb22">acyclic_action_directive_relationship</title>
 <p id="_8ae19a69-bd01-1e99-5b1b-38dfbc66025c">The <strong>acyclic_action_directive_relationship</strong> function determines whether the graph of instance of the entity data type <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> that contains relation as one of its links contains a cycle. this function may be used to evaluate either a <eref bibitemid="express_action_schema.action_directive_relationship" citeas=""><display-text>action_directive_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -1246,13 +1328,29 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_785da331-7e3e-a6fb-3f91-9c381e81e805" anchor="action_schema.acyclic_action_directive_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_0b93fbd1-e0d2-4fa0-6bf5-ddb9cb65d01e">Statements</title>
+<clause id="_c74099fb-0228-1566-1faf-82a24d5e7263" anchor="action_schema.acyclic_action_directive_relationship.i" inline-header="false" obligation="normative">
+<title id="_b83c1bac-9e19-a8f0-b672-3c74b2e1ea0a">i</title>
+<p id="_87ae466e-5451-a1f7-7579-736ce9b35fea"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_e50754c3-eac4-375e-2598-d8beeda5da5a" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_directive_relationship(x[i], relatives + relation.relating, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 </clause>
 </clause>
 
-<clause id="_39ce36e7-5937-85d7-9e8e-e29d4ff64908" anchor="a-action_schema" type="express-schema" inline-header="false" obligation="normative">
+<clause id="_c11360a9-06c0-7539-f1d5-e03ff506b0d5" anchor="a-action_schema" type="express-schema" inline-header="false" obligation="normative">
 <title id="_3041d994-b6e7-0305-f414-558631b09819">action_schema</title>
-<clause id="_5a5af71a-5eca-a1e9-44c1-231a7e07aef9" inline-header="false" obligation="normative">
+<clause id="_d2b14516-f351-4160-015d-4fe0036bff24" inline-header="false" obligation="normative">
 <title id="_24abdf30-6d12-8734-45d3-cd1948186a03">General</title>
 <p id="_581f2fcf-6ffb-3b2d-bba1-c334b2a446cc">The subject of the <strong>action_schema</strong> is the description of actions, the reasons for these actions, and the status of these actions.</p>
 
@@ -1261,7 +1359,7 @@ END_FUNCTION;</body></sourcecode>
 
 <p id="_a1d858b9-a8c7-326e-1cc4-7c5772039daf"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_fe40adc8-c070-3675-bbaa-136271f11f06" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
+<sourcecode id="_4dda108d-a3a8-efac-15de-916643ad0cf2" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -1277,6 +1375,7 @@ REFERENCE FROM basic_attribute_schema
    object_role,
    role_select,
    role_association);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -1350,9 +1449,9 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_d1c0f4d9-7216-9468-5d93-d8eed962e9f6" anchor="a-action_schema.entities" inline-header="false" level="3" obligation="normative">
+<clause id="_606c0c12-97cd-8f4d-3f46-4033b19a4f6e" anchor="a-action_schema.entities" inline-header="false" level="3" obligation="normative">
 <title id="_c5954d76-e124-17cc-bd46-b2fdb06b1d03">action_schema entity definitions</title>
-<clause id="_1612c065-f50b-92bf-10c5-14ef6b49d4b6" anchor="a-action_schema.action" inline-header="false" level="4" obligation="normative">
+<clause id="_1d3d6d90-0b88-b841-7ee7-79547b8d7fb3" anchor="a-action_schema.action" inline-header="false" level="4" obligation="normative">
 <title id="_ce270b4a-61a2-b88c-62bf-48ba9f43c2ad">action</title>
 <p id="_35bcbdb5-02ea-8419-ac3d-249459a617ae">An <strong>action</strong> is the identification of the occurrence of an activity and a description of its result.</p>
 
@@ -1406,10 +1505,16 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_908029e1-c3dc-2f57-f9a9-729e11a95ec3"><underline>Attribute definitions:</underline></p>
 
-<dl id="_6a5f6e9f-6276-dd8c-2a91-ca81112f6f87"><dt><strong>WR1</strong></dt>
+<dl id="_2711f22d-9bba-7a48-d21c-5ae99f99bc95"><dt><strong>WR1</strong></dt>
 <dd id="_23884cd0-2d4b-5797-e2be-2984d5b6c205"><p id="_e2a835c2-f1dc-09b2-d609-d133a3c9df6d">Each <strong>action</strong> shall be the <eref bibitemid="express_basic_attribute_schema.id_attribute.identified_item" citeas=""><display-text>identified_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref>.</p>
 </dd>
-</dl>
+<note id="_2efa2a75-62c5-8aa5-6647-601df79fdaff"><p id="_280ac301-8b34-da8b-b001-1c9d70bca4ce">The <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_6fec49a5-d32c-1509-0bef-7ad503f2f5f2"><p id="_5966befc-9c3b-299e-9b91-056e3a3a7bef">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
 </clause>
 
 <clause id="_ec69354d-75fb-882d-9b9f-0cc6c1c52d70" anchor="a-action_schema.action_directive" inline-header="false" level="4" obligation="normative">
@@ -1582,7 +1687,7 @@ END_ENTITY;</body></sourcecode>
 
 </clause>
 
-<clause id="_4a24688f-bd3f-b349-ce4c-fc02eb2c5102" anchor="a-action_schema.action_request_solution" inline-header="false" level="4" obligation="normative">
+<clause id="_0ed96876-6e86-2aa7-8d39-6472b2f31814" anchor="a-action_schema.action_request_solution" inline-header="false" level="4" obligation="normative">
 <title id="_855eaa11-b8e4-8dae-f8bf-a42d9b242909">action_request_solution</title>
 <p id="_b907bd92-1381-2ed4-c57b-0205256659e7">An <strong>action_request_solution</strong> is an association between a <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> and an <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that is a potential solution for the request.</p>
 
@@ -1626,13 +1731,24 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_2542e57a-d162-c4fe-a257-54c4a6ccd7e6"><underline>Attribute definitions:</underline></p>
 
-<dl id="_05716560-6693-31b7-501a-0353673ea978"><dt><strong>WR1</strong></dt>
-<dd id="_dc5975c2-3afc-23fc-e98a-1fc8280c5bd4"><p id="_5aeefca7-ddb0-aff6-f6f8-737a35f4e5e6">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.description_attribute.described_item" citeas=""><display-text>described_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>.</p>
+<dl id="_41a2dced-2ebb-32bb-0f6d-b540f554e9da"><dt><strong>WR1</strong></dt>
+<dd id="_5d96a310-ab44-497d-c3e7-852ae5a0f67c"><p id="_aed31ff0-7b8c-8e7d-9dce-c7280209af3b">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.description_attribute.described_item" citeas=""><display-text>described_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>.</p>
 </dd>
-<dt><strong>WR2</strong></dt>
-<dd id="_3cac9cd7-9361-7cee-8a1e-4d32ddab08b2"><p id="_61bc8e12-04a3-e022-dcc1-5790d391d705">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.name_attribute.named_item" citeas=""><display-text>named_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>.</p>
+<note id="_6c710942-df85-72b0-2b3a-0946e887ba41"><p id="_90a1ae39-48bd-d406-ccca-23c0d3af06c3">The <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note></dl>
+
+
+
+<dl id="_3d9129c3-9172-31a7-0866-4aeec08ab1ae"><dt><strong>WR2</strong></dt>
+<dd id="_dc95b14d-f2f4-f8f9-000e-b1a542665e70"><p id="_c864c32a-79e7-af75-ad5d-0ecd8e550348">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.name_attribute.named_item" citeas=""><display-text>named_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>.</p>
 </dd>
-</dl>
+<note id="_b4c9287b-8906-3588-598e-8a8990bd8204"><p id="_ea731f4e-0227-d63d-3d9f-e9defd45661d">The <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_11c9e939-5851-70dd-7a1a-5d17742a5ac8"><p id="_c05e4136-03e0-c494-7f91-d054d854304f">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
 </clause>
 
 <clause id="_a659515d-bd84-f07d-5dce-9d64ecfbec3a" anchor="a-action_schema.action_request_status" inline-header="false" level="4" obligation="normative">
@@ -2009,9 +2125,9 @@ END_ENTITY;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_d55c9ef9-8910-8339-2712-2cd022d48dfd" anchor="a-action_schema.functions" inline-header="false" level="3" obligation="normative">
+<clause id="_d98c52e3-773c-7294-bd1d-3e7566a09092" anchor="a-action_schema.functions" inline-header="false" level="3" obligation="normative">
 <title id="_4124f50b-4b53-6966-555a-593922a1bfce">action_schema function definitions</title>
-<clause id="_806f92e5-c485-aa4b-3f45-539e6d798ed0" anchor="a-action_schema.acyclic_action_method_relationship.acyclic_action_method_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_cef86320-758d-2d8f-3c6a-8e3c83345a9c" anchor="a-action_schema.acyclic_action_method_relationship.acyclic_action_method_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_df171b16-1bba-4a6d-a9a5-b44f65c2a461">acyclic_action_method_relationship</title>
 <p id="_6058256c-2737-f4a8-260c-d6961c25806c">The <strong>acyclic_action_method_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_method_relationship" citeas=""><display-text>action_method_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -2089,9 +2205,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_682294df-a664-3b0a-0264-5e4deafd13fb" anchor="a-action_schema.acyclic_action_method_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_e919d5a2-7a58-6c87-1275-d3f2e1bf825a">Statements</title>
+<clause id="_a1dcd77c-663f-a2e5-c525-a3a5bb0f7942" anchor="a-action_schema.acyclic_action_method_relationship.i" inline-header="false" obligation="normative">
+<title id="_48b086ee-9c30-d4d8-6ed8-3c69d78ba4f6">i</title>
+<p id="_259170ad-606d-93e2-93ac-fc796219acbd"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_09f89cb5-f4d6-4cfc-c79e-886c69f9762f" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_method_relationship(x[i], relatives + relation.relating_method, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_ced18cb1-70a1-176b-5867-c1853da75970" anchor="a-action_schema.acyclic_action_relationship.acyclic_action_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_31c4bd04-063f-76d8-3bb9-07bcf3efc97f" anchor="a-action_schema.acyclic_action_relationship.acyclic_action_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_3a689bfa-3a9f-cd97-d1db-7ff949d2c588">acyclic_action_relationship</title>
 <p id="_12ee334c-5167-6cd1-0727-8ca48640f118">The <strong>acyclic_action_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_relationship" citeas=""><display-text>action_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -2169,9 +2301,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_a5e4b41e-02c0-ce6d-129f-a233a6ae4359" anchor="a-action_schema.acyclic_action_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_7388027b-9489-4ca1-a436-710bd2fdad37">Statements</title>
+<clause id="_6d33cc79-4f9b-a6a5-508e-6d6b93875645" anchor="a-action_schema.acyclic_action_relationship.i" inline-header="false" obligation="normative">
+<title id="_f95bf076-0639-0e73-979b-c15bae0ac5ca">i</title>
+<p id="_d9e9c16e-df61-8bfa-68e6-23f9258881ba"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_540684e6-3b81-a109-6e21-9a38b21778f3" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_relationship(x[i], relatives + relation.relating_action, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_69c598d9-ff86-f2f1-a0c8-3cc58c8b5f15" anchor="a-action_schema.acyclic_action_resource_relationship.acyclic_action_resource_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_b77c3513-9fe5-7fc5-f0f1-e52d94e6a725" anchor="a-action_schema.acyclic_action_resource_relationship.acyclic_action_resource_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_ccfa65db-4f3d-b21a-6a5c-3ff717fef1f7">acyclic_action_resource_relationship</title>
 <p id="_57ab5981-27f2-1178-3f8f-0058a5ad71a7">The <strong>acyclic_action_resource_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -2249,9 +2397,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_47d8db3e-5231-4d4e-a505-d88a3c8cc828" anchor="a-action_schema.acyclic_action_resource_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_dd125844-b9cf-a42d-1963-8c0fa12c24b9">Statements</title>
+<clause id="_b3897505-4677-9ca6-83d7-3e3638e44c65" anchor="a-action_schema.acyclic_action_resource_relationship.i" inline-header="false" obligation="normative">
+<title id="_acc2b03f-d6f5-6e38-6c89-b07f01ac15fd">i</title>
+<p id="_b92fcd76-be60-f018-c246-faa5bd63ead8"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_bf28f30d-da5c-4295-6f17-737bc3b6e17b" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_resource_relationship(x[i], relatives + relation.relating_resource, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_bf5a846f-ed5b-8624-919a-3f6264192d3d" anchor="a-action_schema.acyclic_versioned_action_request_relationship.acyclic_versioned_action_request_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_b27554e6-ddda-531c-ccb2-589f3c7a9871" anchor="a-action_schema.acyclic_versioned_action_request_relationship.acyclic_versioned_action_request_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_7d3566bb-581f-81f7-b391-c648c4db3eba">acyclic_versioned_action_request_relationship</title>
 <p id="_e157b80d-4374-3cc2-5f2e-3c6c52fffbee">The <strong>acyclic_versioned_action_request_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -2329,9 +2493,25 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_65cd1026-154c-e66d-bbe6-7f04ea79fe4a" anchor="a-action_schema.acyclic_versioned_action_request_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_1678b854-468e-6fab-52f5-a96d8927123d">Statements</title>
+<clause id="_56b4a01d-cbc8-eb2d-d8d1-10117b3ebd61" anchor="a-action_schema.acyclic_versioned_action_request_relationship.i" inline-header="false" obligation="normative">
+<title id="_49eed879-7fad-4dcc-ce2d-1b421f1432b8">i</title>
+<p id="_d9191ec4-bbe0-a627-87d9-822ad1d5032a"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_7a302bab-0545-8d3d-12ec-efa4503b12d4" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_versioned_action_request_relationship(x[i], relatives + relation.relating_versioned_action_request, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 
-<clause id="_dae03281-edf2-5ae5-ebc9-f5809bde87e2" anchor="a-action_schema.acyclic_action_directive_relationship.acyclic_action_directive_relationship" inline-header="false" level="4" obligation="normative">
+<clause id="_de74bae2-2d80-917b-c47d-95f863d9b793" anchor="a-action_schema.acyclic_action_directive_relationship.acyclic_action_directive_relationship" inline-header="false" level="4" obligation="normative">
 <title id="_baf51372-7831-6e50-3dc8-ef768d44422e">acyclic_action_directive_relationship</title>
 <p id="_6877c0a9-a6d4-e547-5ed1-f23f7347a820">The <strong>acyclic_action_directive_relationship</strong> function determines whether the graph of instance of the entity data type <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> that contains relation as one of its links contains a cycle. this function may be used to evaluate either a <eref bibitemid="express_action_schema.action_directive_relationship" citeas=""><display-text>action_directive_relationship</display-text></eref> or any of its subtypes.</p>
 
@@ -2406,6 +2586,22 @@ END_FUNCTION;</body></sourcecode>
 </clause></clause>
 
 
+
+<clause id="_b0d05248-892b-8216-fd73-4ffc9c91ae59" anchor="a-action_schema.acyclic_action_directive_relationship.statements" inline-header="false" level="5" obligation="normative">
+<title id="_695696f5-e1c9-855c-66b3-09f261ef54b1">Statements</title>
+<clause id="_2c82e216-837b-c184-8019-41c736e3cb58" anchor="a-action_schema.acyclic_action_directive_relationship.i" inline-header="false" obligation="normative">
+<title id="_9a0275c0-1d2a-15f1-d3c4-4516a0159676">i</title>
+<p id="_438a17f2-bc69-7d8e-46c0-2df87d0d1304"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_1d1041f4-a677-0113-7ab6-3f0dcb544c35" unnumbered="true"><body>REPEAT i := 1 TO HIINDEX(x);
+  IF NOT acyclic_action_directive_relationship(x[i], relatives + relation.relating, specific_relation) THEN
+    RETURN (FALSE);
+  END_IF;
+END_REPEAT;</body></sourcecode>
+
+</clause></clause>
+
+
 </clause>
 </clause>
 </clause>
@@ -2442,82 +2638,85 @@ END_FUNCTION;</body></sourcecode>
 <bibitem anchor="express_basic_attribute_schema.id_attribute" id="_3e954eb6-b145-a734-d04e-7b44c92419cd" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.id_attribute</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.versioned_action_request" id="_93eeac74-977f-4410-7b3b-eab5b82f286c" type="internal">
+<bibitem anchor="express_basic_attribute_schema" id="_64a82555-ce69-fde0-f7ec-c14b1e44dbdb" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.versioned_action_request" id="_a9c1fdd3-a923-7207-8aa7-7218322cdb33" type="internal">
 <docidentifier type="repository">express/action_schema.versioned_action_request</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.description_attribute.described_item" id="_5a14b086-16ae-18d8-4d0e-ac542e9a7ad9" type="internal">
+<bibitem anchor="express_basic_attribute_schema.description_attribute.described_item" id="_4c3b6b58-64b7-5b3a-3467-20e872d36c4a" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.description_attribute.described_item</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.description_attribute" id="_b032c93b-c5af-0488-c671-e0f0196de86e" type="internal">
+<bibitem anchor="express_basic_attribute_schema.description_attribute" id="_1ec457af-b3e1-ff22-2fca-9a80ccac09ed" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.description_attribute</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.name_attribute.named_item" id="_be692b52-daf0-8f67-74f0-f7a20857712f" type="internal">
+<bibitem anchor="express_basic_attribute_schema.name_attribute.named_item" id="_83502884-ce62-47b3-6926-ef11422e0bf2" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.name_attribute.named_item</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.name_attribute" id="_716da74e-07b3-16b0-7093-80976e387144" type="internal">
+<bibitem anchor="express_basic_attribute_schema.name_attribute" id="_02465830-9eaf-ffbc-0e0d-fb1631f6323b" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.name_attribute</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.supported_item" id="_9a9e28a6-0923-01ed-8ed8-1ef514540ddd" type="internal">
+<bibitem anchor="express_action_schema.supported_item" id="_4ae4b090-d7ff-08c5-0805-a7233dd50766" type="internal">
 <docidentifier type="repository">express/action_schema.supported_item</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_resource_type" id="_49ec284a-1626-8c2c-09a5-23b8c50e7382" type="internal">
+<bibitem anchor="express_action_schema.action_resource_type" id="_364f6cbd-ec44-f4cc-2041-272d52dc6c66" type="internal">
 <docidentifier type="repository">express/action_schema.action_resource_type</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.executed_action" id="_91a8ef4e-147b-3a66-e92e-34a022479da5" type="internal">
+<bibitem anchor="express_action_schema.executed_action" id="_2293ddab-de9a-3e11-454a-ecfb7937bfde" type="internal">
 <docidentifier type="repository">express/action_schema.executed_action</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.date_assignment" id="_783c59b6-568d-7e96-48c0-6ae8fce736f8" type="internal">
+<bibitem anchor="express_management_resources_schema.date_assignment" id="_1b0d3dbb-1c3b-9f74-119c-00f6afa29982" type="internal">
 <docidentifier type="repository">express/management_resources_schema.date_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.date_and_time_assignment" id="_a5970971-fa87-c57e-233b-a9ba1b7bbaf6" type="internal">
+<bibitem anchor="express_management_resources_schema.date_and_time_assignment" id="_4087c818-31a4-2968-fa35-3aede9b88bed" type="internal">
 <docidentifier type="repository">express/management_resources_schema.date_and_time_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.time_assignment" id="_f498a4fc-0b52-af61-eaee-02280e969e6e" type="internal">
+<bibitem anchor="express_management_resources_schema.time_assignment" id="_0f57f728-e378-92fa-1c5f-7c69fa5e5e2b" type="internal">
 <docidentifier type="repository">express/management_resources_schema.time_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.organization_assignment" id="_c978b25c-9e28-a4e7-15d6-2ff7ee8aac49" type="internal">
+<bibitem anchor="express_management_resources_schema.organization_assignment" id="_533a86d2-ae07-d215-fbbe-8c8ad4ea4c14" type="internal">
 <docidentifier type="repository">express/management_resources_schema.organization_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.document_reference" id="_d88512bc-2b64-fb94-8c61-853e1c122cbf" type="internal">
+<bibitem anchor="express_management_resources_schema.document_reference" id="_96e8e3dd-2521-a00f-4346-104f8a9334ac" type="internal">
 <docidentifier type="repository">express/management_resources_schema.document_reference</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.directed_action" id="_7f9db528-50eb-f415-31c6-e1bd80f90a53" type="internal">
+<bibitem anchor="express_action_schema.directed_action" id="_0522ce37-a941-c4fd-aba9-8b5f446d7621" type="internal">
 <docidentifier type="repository">express/action_schema.directed_action</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.role_association" id="_2d52cfef-ff8e-49b2-e779-9b604d326d87" type="internal">
+<bibitem anchor="express_basic_attribute_schema.role_association" id="_6d4e5fef-3f24-db18-f941-44fa0a6b8b81" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.role_association</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_status" id="_d19de698-bbe0-fa17-7e71-26c869971f3e" type="internal">
+<bibitem anchor="express_action_schema.action_status" id="_a2f7d75b-c8d7-0505-c830-f6499598c5ac" type="internal">
 <docidentifier type="repository">express/action_schema.action_status</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_method_relationship" id="_cd9287d2-cf19-1e73-6f08-1a6443da8d08" type="internal">
+<bibitem anchor="express_action_schema.action_method_relationship" id="_de984ac7-ea95-8768-bc68-e5a4dcedbd27" type="internal">
 <docidentifier type="repository">express/action_schema.action_method_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_method_relationship.relating_method" id="_9b98da95-ebf2-3a68-562e-9dab91db6b5f" type="internal">
+<bibitem anchor="express_action_schema.action_method_relationship.relating_method" id="_5f491e18-90a9-de01-393b-70fd5e1df606" type="internal">
 <docidentifier type="repository">express/action_schema.action_method_relationship.relating_method</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_relationship" id="_bbb8162c-3bda-1b53-9a22-6ec61c73b11c" type="internal">
+<bibitem anchor="express_action_schema.action_relationship" id="_6883898b-f02d-9aa5-60df-36cf046d33a4" type="internal">
 <docidentifier type="repository">express/action_schema.action_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_relationship.relating_action" id="_fb40a12c-efd8-e00b-3689-514bda5d3b1b" type="internal">
+<bibitem anchor="express_action_schema.action_relationship.relating_action" id="_5b74b028-057c-67e6-c545-8491039f8448" type="internal">
 <docidentifier type="repository">express/action_schema.action_relationship.relating_action</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_resource_relationship" id="_0affb3b7-d978-4dff-292a-7b3332f7f0a3" type="internal">
+<bibitem anchor="express_action_schema.action_resource_relationship" id="_70f80cf3-80ad-f925-aaa0-e4efc4775dd7" type="internal">
 <docidentifier type="repository">express/action_schema.action_resource_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_resource_relationship.relating_resource" id="_fc28da6b-9239-f19b-d607-2ff5b8c39d7d" type="internal">
+<bibitem anchor="express_action_schema.action_resource_relationship.relating_resource" id="_cdb173fe-ce1e-7d75-88a5-231c3b6fa15a" type="internal">
 <docidentifier type="repository">express/action_schema.action_resource_relationship.relating_resource</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.versioned_action_request_relationship" id="_51e29eba-5bbd-1bfa-a8e3-33b757a26557" type="internal">
+<bibitem anchor="express_action_schema.versioned_action_request_relationship" id="_0d336774-c14b-b987-402c-5063443bbbd3" type="internal">
 <docidentifier type="repository">express/action_schema.versioned_action_request_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.versioned_action_request_relationship.relating_versioned_action_request" id="_d2e29d09-2333-0ed9-b307-15e356f79cb6" type="internal">
+<bibitem anchor="express_action_schema.versioned_action_request_relationship.relating_versioned_action_request" id="_4d21462a-fd3e-5405-d120-6d7b14eca9e5" type="internal">
 <docidentifier type="repository">express/action_schema.versioned_action_request_relationship.relating_versioned_action_request</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_directive_relationship" id="_579bb5fa-2800-6e52-584b-56f0cb75a4c6" type="internal">
+<bibitem anchor="express_action_schema.action_directive_relationship" id="_7003e54a-8a83-9172-4419-11f04c554e1c" type="internal">
 <docidentifier type="repository">express/action_schema.action_directive_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_directive_relationship.relating" id="_17c4afce-88be-fb86-034b-e85dae0259d9" type="internal">
+<bibitem anchor="express_action_schema.action_directive_relationship.relating" id="_2296ca7d-5633-17e1-9733-1e8282243bc6" type="internal">
 <docidentifier type="repository">express/action_schema.action_directive_relationship.relating</docidentifier>
 </bibitem>
 </references></bibliography>

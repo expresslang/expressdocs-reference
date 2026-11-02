@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.4.10" schema-version="v2.2.0" flavor="iso">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.5.4" schema-version="v2.3.0" flavor="iso">
 <bibdata type="standard">
 <title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Testing a single schema</title>
 
@@ -20,7 +20,7 @@
 <title language="fr" type="title-part">Ressources génériques intégrées: Tester un seul schéma</title>
 
 <title language="fr" type="title-part-prefix">Partie 999</title>
-<docidentifier type="ISO" primary="true">ISO 10303-999:2030</docidentifier><docidentifier type="iso-reference">ISO 10303-999:2030(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-999:stage-60.60:en</docidentifier><docidentifier type="iso-undated">ISO 10303-999</docidentifier><docidentifier type="iso-with-lang">ISO 10303-999:2030(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<docidentifier type="ISO" primary="true">ISO 10303-999:2030</docidentifier><docidentifier type="iso-reference">ISO 10303-999:2030(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-999:en</docidentifier><docidentifier type="iso-undated">ISO 10303-999</docidentifier><docidentifier type="iso-with-lang">ISO 10303-999:2030(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
 <name>International Organization for Standardization</name>
 <abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>International Organization for Standardization</name>
@@ -80,9 +80,9 @@
 </ul>
 </terms>
 
-<clause id="_d507b159-ab1f-9e92-38ca-dc917eb9bbf6" anchor="action_schema" type="express-schema" inline-header="false" obligation="normative">
+<clause id="_76ada126-8058-64e2-99bd-d99ad3adb248" anchor="action_schema" type="express-schema" inline-header="false" obligation="normative">
 <title id="_0866864f-9938-c995-6e79-b39dd340fb6c">action_schema</title>
-<clause id="_8b683195-8ca8-7394-4500-e242b65ea331" inline-header="false" obligation="normative">
+<clause id="_9259e38a-b3a7-d038-24a8-980168bd1495" inline-header="false" obligation="normative">
 <title id="_53d82e48-1024-e16a-9901-40ceda1ab9b0">General</title>
 <p id="_2457d82b-281e-ac2c-f99c-ac6f214444f3">The subject of the <strong>action_schema</strong> is the description of actions, the reasons for these actions, and the status of these actions.</p>
 
@@ -91,7 +91,7 @@
 
 <p id="_4333abbd-f640-8995-9141-aceedd91af0c"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_b3c49a90-33bf-3399-a783-106cff0bdf87" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
+<sourcecode id="_eb6081fd-a6c8-b3bd-930f-05b49a01a5e1" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
 
 REFERENCE FROM basic_attribute_schema
   (description_attribute,
@@ -107,6 +107,7 @@ REFERENCE FROM basic_attribute_schema
    object_role,
    role_select,
    role_association);
+
 REFERENCE FROM support_resource_schema
   (bag_to_set,
    identifier,
@@ -180,9 +181,9 @@ END_TYPE;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_cbdf409c-421c-bd7a-84e0-4b4a1144cabb" anchor="action_schema.entities" inline-header="false" level="3" obligation="normative">
+<clause id="_d2a6bce5-0d2e-5309-2182-1a6788383fbd" anchor="action_schema.entities" inline-header="false" level="3" obligation="normative">
 <title id="_c9f4d2e3-20f0-a6cc-283f-f03063bcc5bb">action_schema entity definitions</title>
-<clause id="_c12c7146-476e-b4fa-4a1b-259f453da35e" anchor="action_schema.action" inline-header="false" level="4" obligation="normative">
+<clause id="_5bb4c148-692b-962e-caf3-78345fea6362" anchor="action_schema.action" inline-header="false" level="4" obligation="normative">
 <title id="_fec4e21b-d7db-b484-07ff-ea2d548ba332">action</title>
 <p id="_98a8140a-02d4-ef74-62e1-98deb416f30c">An <strong>action</strong> is the identification of the occurrence of an activity and a description of its result.</p>
 
@@ -236,10 +237,16 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_f868cf12-90f5-0008-6875-f7bc1c319fbb"><underline>Formal propositions:</underline></p>
 
-<dl id="_01f3fd58-3cb8-0fce-7274-05879d373840"><dt><strong>WR1</strong></dt>
+<dl id="_d9450546-e209-5964-ffa7-7b0de7e97d5e"><dt><strong>WR1</strong></dt>
 <dd id="_16eba531-c19c-613f-a54c-4a395fd5c6bc"><p id="_3d1adbd6-837c-b37c-b314-620fa8584597">Each <strong>action</strong> shall be the <eref bibitemid="express_basic_attribute_schema.id_attribute.identified_item" citeas=""><display-text>identified_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref>.</p>
 </dd>
-</dl>
+<note id="_b4873430-dc9a-c191-bd90-a733f2b312a6"><p id="_e3480602-675e-1888-43a2-eea007894172">The <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_d1bd61bf-a58e-de16-b077-71073bf0f471"><p id="_20fb0094-e2f5-1f65-bae2-c7b4280b938b">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
 </clause>
 
 <clause id="_96ffb864-6e38-fe61-dbcd-3435c6d423b0" anchor="action_schema.action_directive" inline-header="false" level="4" obligation="normative">
@@ -412,7 +419,7 @@ END_ENTITY;</body></sourcecode>
 
 </clause>
 
-<clause id="_a85be126-5856-93f3-58f0-0dbb3d8d2e65" anchor="action_schema.action_request_solution" inline-header="false" level="4" obligation="normative">
+<clause id="_03c3ff83-ad0a-aa7b-278a-e7c0d6969419" anchor="action_schema.action_request_solution" inline-header="false" level="4" obligation="normative">
 <title id="_def8810a-8f8b-e829-0df1-4bd9bed6776b">action_request_solution</title>
 <p id="_5da40f76-3c4c-a431-f993-028a0ab255ef">An <strong>action_request_solution</strong> is an association between a <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> and an <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that is a potential solution for the request.</p>
 
@@ -456,13 +463,24 @@ END_ENTITY;</body></sourcecode>
 
 <p id="_aafb4dee-d004-a5ab-6292-359d83550e9a"><underline>Formal propositions:</underline></p>
 
-<dl id="_56b20b03-e3b6-7a80-421b-9bde2f6eb80c"><dt><strong>WR1</strong></dt>
-<dd id="_bf1fad62-a502-aaf3-b288-3fe526408603"><p id="_da83e8ad-0fe0-818b-11ac-07c4ea757579">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.description_attribute.described_item" citeas=""><display-text>described_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>.</p>
+<dl id="_9efa61ce-d872-1664-61b8-62a0e942efe8"><dt><strong>WR1</strong></dt>
+<dd id="_aa03295d-9a0f-8505-8af6-2edef7a65baa"><p id="_c1a913ef-f5f9-2d26-8291-5df6a52249ba">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.description_attribute.described_item" citeas=""><display-text>described_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>.</p>
 </dd>
-<dt><strong>WR2</strong></dt>
-<dd id="_7c63e858-b5a9-be18-eac8-da5b59937a82"><p id="_872ed151-0214-60d7-8d3c-5ee6f6db7a29">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.name_attribute.named_item" citeas=""><display-text>named_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>.</p>
+<note id="_78983fc5-ca41-dd31-9197-56e1f2fe647d"><p id="_eb923b36-cfc7-f704-0184-a987f7e8c042">The <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note></dl>
+
+
+
+<dl id="_d9196b3b-a2cc-9a52-26a7-2ec66c75647b"><dt><strong>WR2</strong></dt>
+<dd id="_a565ce39-6d7b-e03e-64d2-4d75bb2b61b5"><p id="_1fbb4e13-3974-2cc1-6cc8-3990703991e2">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.name_attribute.named_item" citeas=""><display-text>named_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>.</p>
 </dd>
-</dl>
+<note id="_22a83f4e-9318-c825-00df-1a490983a7b3"><p id="_8be5208a-936d-1b61-d5ab-70d0c6b8d980">The <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_746d7377-2976-3ec5-eacf-8e7b817509cd"><p id="_35c90459-6bf2-705d-13c4-1cad593963c5">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
 </clause>
 
 <clause id="_7c0b05e0-9eff-9237-d3fd-9ae39896e263" anchor="action_schema.action_request_status" inline-header="false" level="4" obligation="normative">
@@ -1100,7 +1118,7 @@ END_FUNCTION;</body></sourcecode>
 </clause>
 </clause>
 
-<clause id="_8fa99f29-a147-f4c0-5197-05e9a2f70479" anchor="language_schema" type="express-schema" inline-header="false" obligation="normative">
+<clause id="_49c9591e-1283-7094-04e5-d4f8645a38f3" anchor="language_schema" type="express-schema" inline-header="false" obligation="normative">
 <title id="_190d21be-8270-7602-96db-d4b4a8e22888">language_schema</title>
 <clause id="_8394c735-e156-c8e4-ab07-096d78090fbe" inline-header="false" obligation="normative">
 <title id="_0175f76d-716b-304d-d5e0-55b2c2c71130">General</title>
@@ -1120,27 +1138,33 @@ REFERENCE FROM group_schema
 <p id="_ef8a239b-a8a1-febd-44be-123e8cf27988">This specifies the representation of the language used in text attributes and the association of translations to these texts.</p>
 </clause>
 
-<clause id="_0195132e-3541-7331-8476-e04376883a7f" anchor="language_schema.entities" inline-header="false" level="3" obligation="normative">
+<clause id="_1e496a39-c6b8-5492-0848-cbb3009dc808" anchor="language_schema.entities" inline-header="false" level="3" obligation="normative">
 <title id="_d8ddbd33-4a13-a034-b590-8be1cce6d1f2">language_schema entity definitions</title>
-<clause id="_57884a48-1353-f92f-26ab-c892dba415c6" anchor="language_schema.language" inline-header="false" level="4" obligation="normative">
+<clause id="_978efc4f-4691-3860-8c5b-b03c02d832ad" anchor="language_schema.language" inline-header="false" level="4" obligation="normative">
 <title id="_c17494f8-ea20-3cd5-4caf-d7b066f75d08">language</title>
 <p id="_79e2c2ec-3e58-aa50-93ab-5301ba4ff59d">A <strong>language</strong> is a type of <eref bibitemid="express_group_schema.group" citeas=""><display-text>group</display-text></eref> that is a specification of the language in which an information is given. The group shall specify in its name a language code according to ISO 639-2, and, if present, in its description a country code according to ISO 3166-1.Informal proposition</p>
 
 <p id="_1bdd3177-408b-5974-12c7-c5fe752761d0"><underline>EXPRESS specification:</underline></p>
 
-<sourcecode id="_90eaedd2-bbcf-87a0-7a08-7a5003f09c72" unnumbered="true"><body>ENTITY language
+<sourcecode id="_9cbe1d52-8338-574c-d50a-436148932f83" unnumbered="true"><body>ENTITY language
   SUBTYPE OF (group);
 WHERE
   WR1: SELF\group.name &lt;&gt; '';
-END_ENTITY; -- Informal proposition</body></sourcecode>
+END_ENTITY;</body></sourcecode>
 
 
 <p id="_2b006e0e-d377-c541-cd03-2713b4f200f1"><underline>Formal propositions:</underline></p>
 
-<dl id="_ae33dbe2-7237-b5ac-593d-e9dfd4c60ad7"><dt><strong>WR1</strong></dt>
-<dd id="_f2bd5fb4-cb24-bd46-7f3e-51cab0d9a737"><p id="_f9851f22-fd8d-9593-d96f-1061adf4c2ce">The name attribute of the language shall be specified.</p>
+<dl id="_f7810624-9226-b7cb-65d3-f7f8e4f696e1"><dt><strong>WR1</strong></dt>
+<dd id="_c6e02d45-1320-f47a-28b1-f5194fafd8e7"><p id="_a09d7be6-7afe-5837-1414-7c15c687b4e5">The name attribute of the language shall be specified.</p>
 </dd>
 </dl>
+
+<p id="_fa536215-5765-90b6-69f4-27f18eba49f5"><underline>Informal propositions:</underline></p>
+
+<dl id="_e801fd6b-6345-7d56-5c4f-7abea5423a89"><dt><strong>IP1</strong></dt>
+<dd/><dt><strong>IP2</strong></dt>
+<dd/></dl>
 </clause>
 </clause>
 </clause>
@@ -1177,85 +1201,88 @@ END_ENTITY; -- Informal proposition</body></sourcecode>
 <bibitem anchor="express_basic_attribute_schema.id_attribute" id="_3e954eb6-b145-a734-d04e-7b44c92419cd" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.id_attribute</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.versioned_action_request" id="_93eeac74-977f-4410-7b3b-eab5b82f286c" type="internal">
+<bibitem anchor="express_basic_attribute_schema" id="_64a82555-ce69-fde0-f7ec-c14b1e44dbdb" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.versioned_action_request" id="_a9c1fdd3-a923-7207-8aa7-7218322cdb33" type="internal">
 <docidentifier type="repository">express/action_schema.versioned_action_request</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.description_attribute.described_item" id="_5a14b086-16ae-18d8-4d0e-ac542e9a7ad9" type="internal">
+<bibitem anchor="express_basic_attribute_schema.description_attribute.described_item" id="_4c3b6b58-64b7-5b3a-3467-20e872d36c4a" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.description_attribute.described_item</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.description_attribute" id="_b032c93b-c5af-0488-c671-e0f0196de86e" type="internal">
+<bibitem anchor="express_basic_attribute_schema.description_attribute" id="_1ec457af-b3e1-ff22-2fca-9a80ccac09ed" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.description_attribute</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.name_attribute.named_item" id="_be692b52-daf0-8f67-74f0-f7a20857712f" type="internal">
+<bibitem anchor="express_basic_attribute_schema.name_attribute.named_item" id="_83502884-ce62-47b3-6926-ef11422e0bf2" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.name_attribute.named_item</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.name_attribute" id="_716da74e-07b3-16b0-7093-80976e387144" type="internal">
+<bibitem anchor="express_basic_attribute_schema.name_attribute" id="_02465830-9eaf-ffbc-0e0d-fb1631f6323b" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.name_attribute</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.supported_item" id="_9a9e28a6-0923-01ed-8ed8-1ef514540ddd" type="internal">
+<bibitem anchor="express_action_schema.supported_item" id="_4ae4b090-d7ff-08c5-0805-a7233dd50766" type="internal">
 <docidentifier type="repository">express/action_schema.supported_item</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_resource_type" id="_49ec284a-1626-8c2c-09a5-23b8c50e7382" type="internal">
+<bibitem anchor="express_action_schema.action_resource_type" id="_364f6cbd-ec44-f4cc-2041-272d52dc6c66" type="internal">
 <docidentifier type="repository">express/action_schema.action_resource_type</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.executed_action" id="_91a8ef4e-147b-3a66-e92e-34a022479da5" type="internal">
+<bibitem anchor="express_action_schema.executed_action" id="_2293ddab-de9a-3e11-454a-ecfb7937bfde" type="internal">
 <docidentifier type="repository">express/action_schema.executed_action</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.date_assignment" id="_783c59b6-568d-7e96-48c0-6ae8fce736f8" type="internal">
+<bibitem anchor="express_management_resources_schema.date_assignment" id="_1b0d3dbb-1c3b-9f74-119c-00f6afa29982" type="internal">
 <docidentifier type="repository">express/management_resources_schema.date_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.date_and_time_assignment" id="_a5970971-fa87-c57e-233b-a9ba1b7bbaf6" type="internal">
+<bibitem anchor="express_management_resources_schema.date_and_time_assignment" id="_4087c818-31a4-2968-fa35-3aede9b88bed" type="internal">
 <docidentifier type="repository">express/management_resources_schema.date_and_time_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.time_assignment" id="_f498a4fc-0b52-af61-eaee-02280e969e6e" type="internal">
+<bibitem anchor="express_management_resources_schema.time_assignment" id="_0f57f728-e378-92fa-1c5f-7c69fa5e5e2b" type="internal">
 <docidentifier type="repository">express/management_resources_schema.time_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.organization_assignment" id="_c978b25c-9e28-a4e7-15d6-2ff7ee8aac49" type="internal">
+<bibitem anchor="express_management_resources_schema.organization_assignment" id="_533a86d2-ae07-d215-fbbe-8c8ad4ea4c14" type="internal">
 <docidentifier type="repository">express/management_resources_schema.organization_assignment</docidentifier>
 </bibitem>
-<bibitem anchor="express_management_resources_schema.document_reference" id="_d88512bc-2b64-fb94-8c61-853e1c122cbf" type="internal">
+<bibitem anchor="express_management_resources_schema.document_reference" id="_96e8e3dd-2521-a00f-4346-104f8a9334ac" type="internal">
 <docidentifier type="repository">express/management_resources_schema.document_reference</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.directed_action" id="_7f9db528-50eb-f415-31c6-e1bd80f90a53" type="internal">
+<bibitem anchor="express_action_schema.directed_action" id="_0522ce37-a941-c4fd-aba9-8b5f446d7621" type="internal">
 <docidentifier type="repository">express/action_schema.directed_action</docidentifier>
 </bibitem>
-<bibitem anchor="express_basic_attribute_schema.role_association" id="_2d52cfef-ff8e-49b2-e779-9b604d326d87" type="internal">
+<bibitem anchor="express_basic_attribute_schema.role_association" id="_6d4e5fef-3f24-db18-f941-44fa0a6b8b81" type="internal">
 <docidentifier type="repository">express/basic_attribute_schema.role_association</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_status" id="_d19de698-bbe0-fa17-7e71-26c869971f3e" type="internal">
+<bibitem anchor="express_action_schema.action_status" id="_a2f7d75b-c8d7-0505-c830-f6499598c5ac" type="internal">
 <docidentifier type="repository">express/action_schema.action_status</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_method_relationship" id="_cd9287d2-cf19-1e73-6f08-1a6443da8d08" type="internal">
+<bibitem anchor="express_action_schema.action_method_relationship" id="_de984ac7-ea95-8768-bc68-e5a4dcedbd27" type="internal">
 <docidentifier type="repository">express/action_schema.action_method_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_method_relationship.relating_method" id="_9b98da95-ebf2-3a68-562e-9dab91db6b5f" type="internal">
+<bibitem anchor="express_action_schema.action_method_relationship.relating_method" id="_5f491e18-90a9-de01-393b-70fd5e1df606" type="internal">
 <docidentifier type="repository">express/action_schema.action_method_relationship.relating_method</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_relationship" id="_bbb8162c-3bda-1b53-9a22-6ec61c73b11c" type="internal">
+<bibitem anchor="express_action_schema.action_relationship" id="_6883898b-f02d-9aa5-60df-36cf046d33a4" type="internal">
 <docidentifier type="repository">express/action_schema.action_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_relationship.relating_action" id="_fb40a12c-efd8-e00b-3689-514bda5d3b1b" type="internal">
+<bibitem anchor="express_action_schema.action_relationship.relating_action" id="_5b74b028-057c-67e6-c545-8491039f8448" type="internal">
 <docidentifier type="repository">express/action_schema.action_relationship.relating_action</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_resource_relationship" id="_0affb3b7-d978-4dff-292a-7b3332f7f0a3" type="internal">
+<bibitem anchor="express_action_schema.action_resource_relationship" id="_70f80cf3-80ad-f925-aaa0-e4efc4775dd7" type="internal">
 <docidentifier type="repository">express/action_schema.action_resource_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_resource_relationship.relating_resource" id="_fc28da6b-9239-f19b-d607-2ff5b8c39d7d" type="internal">
+<bibitem anchor="express_action_schema.action_resource_relationship.relating_resource" id="_cdb173fe-ce1e-7d75-88a5-231c3b6fa15a" type="internal">
 <docidentifier type="repository">express/action_schema.action_resource_relationship.relating_resource</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.versioned_action_request_relationship" id="_51e29eba-5bbd-1bfa-a8e3-33b757a26557" type="internal">
+<bibitem anchor="express_action_schema.versioned_action_request_relationship" id="_0d336774-c14b-b987-402c-5063443bbbd3" type="internal">
 <docidentifier type="repository">express/action_schema.versioned_action_request_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.versioned_action_request_relationship.relating_versioned_action_request" id="_d2e29d09-2333-0ed9-b307-15e356f79cb6" type="internal">
+<bibitem anchor="express_action_schema.versioned_action_request_relationship.relating_versioned_action_request" id="_4d21462a-fd3e-5405-d120-6d7b14eca9e5" type="internal">
 <docidentifier type="repository">express/action_schema.versioned_action_request_relationship.relating_versioned_action_request</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_directive_relationship" id="_579bb5fa-2800-6e52-584b-56f0cb75a4c6" type="internal">
+<bibitem anchor="express_action_schema.action_directive_relationship" id="_7003e54a-8a83-9172-4419-11f04c554e1c" type="internal">
 <docidentifier type="repository">express/action_schema.action_directive_relationship</docidentifier>
 </bibitem>
-<bibitem anchor="express_action_schema.action_directive_relationship.relating" id="_17c4afce-88be-fb86-034b-e85dae0259d9" type="internal">
+<bibitem anchor="express_action_schema.action_directive_relationship.relating" id="_2296ca7d-5633-17e1-9733-1e8282243bc6" type="internal">
 <docidentifier type="repository">express/action_schema.action_directive_relationship.relating</docidentifier>
 </bibitem>
-<bibitem anchor="express_group_schema.group" id="_4cf7f817-4986-2812-8c2a-6482d2489735" type="internal">
+<bibitem anchor="express_group_schema.group" id="_fe23aa15-3f47-8328-4ba3-6d1cab0aff2c" type="internal">
 <docidentifier type="repository">express/group_schema.group</docidentifier>
 </bibitem>
 </references></bibliography>
