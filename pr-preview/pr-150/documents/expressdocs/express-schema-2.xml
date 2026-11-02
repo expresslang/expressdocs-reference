@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.5.4" schema-version="v2.3.0" flavor="iso">
+<bibdata type="standard">
+<title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Basic stuff</title>
+
+<title language="en" type="title-intro">Industrial automation systems and integration</title>
+
+<title language="en" type="title-main">Product data representation and exchange</title>
+
+<title language="en" type="title-part">Basic stuff</title>
+
+<title language="en" type="title-part-prefix">Part 1</title>
+
+<title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Chose basiques</title>
+
+<title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+
+<title language="fr" type="title-main">Représentation et échange de données de produits</title>
+
+<title language="fr" type="title-part">Chose basiques</title>
+
+<title language="fr" type="title-part-prefix">Partie 1</title>
+<docidentifier type="ISO" primary="true">ISO 10303-1:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-1:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-1:en</docidentifier><docidentifier type="iso-undated">ISO 10303-1</docidentifier><docidentifier type="iso-with-lang">ISO 10303-1:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Technical committee" subtype="TC">
+<name>Industrial automation systems and integration</name>
+<identifier>TC 184</identifier><identifier type="full">TC 184/SC 4/WG 12</identifier></subdivision><subdivision type="Subcommittee" subtype="SC">
+<name>Industrial data</name>
+<identifier>SC 4</identifier></subdivision><subdivision type="Workgroup" subtype="WG"><identifier>WG 12</identifier></subdivision><abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="authorizer"><description>Agency</description></role><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>secretariat</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Secretariat">
+<name>ANSI</name>
+</subdivision><abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="authorizer"><description>committee</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Technical committee" subtype="TC">
+<name>Industrial automation systems and integration</name>
+<identifier>TC 184</identifier><identifier type="full">TC 184/SC 4/WG 12</identifier></subdivision><subdivision type="Subcommittee" subtype="SC">
+<name>Industrial data</name>
+<identifier>SC 4</identifier></subdivision><subdivision type="Workgroup" subtype="WG"><identifier>WG 12</identifier></subdivision><abbreviation>ISO</abbreviation></organization></contributor><edition>6</edition><language>en</language><script>Latn</script><status><stage abbreviation="IS">60</stage><substage>60</substage></status><copyright><from>2019</from><owner><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></owner></copyright><keyword><vocab>integrated generic resource</vocab></keyword><keyword><vocab>product definition</vocab></keyword><keyword><vocab>product property</vocab></keyword><keyword><vocab>measure</vocab></keyword><keyword><vocab>application context</vocab></keyword><keyword><vocab>product property representation</vocab></keyword><keyword><vocab>person</vocab></keyword><keyword><vocab>organization</vocab></keyword><keyword><vocab>experience</vocab></keyword><keyword><vocab>qualifications</vocab></keyword><keyword><vocab>location and position in organization</vocab></keyword><ext><doctype>international-standard</doctype><flavor>iso</flavor><structuredidentifier><project-number part="1">ISO 10303</project-number></structuredidentifier><stagename abbreviation="IS">International Standard</stagename></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<presentation-metadata><document-scheme>2013</document-scheme><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>3</doc-toc-heading-levels><pdf-toc-heading-levels>3</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_aa705764-de78-2c83-46a4-9e648d4472ef" anchor="boilerplate-copyright-default" inline-header="false" obligation="normative">
+<title id="_129fe8d3-7b32-3da5-a270-59bb0ef8173e">COPYRIGHT PROTECTED DOCUMENT</title>
+<p id="_bd17e37d-7be9-266b-bfab-a8520b16f3bb" anchor="boilerplate-year">© <span class="std_publisher">ISO </span><span class="date">2019</span></p>
+
+<p id="_dcd0efd0-9c2b-bcfd-6dcd-ce36b8143916" anchor="boilerplate-message">All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.</p>
+
+<p id="_9b279b29-6760-9714-7fb3-2ca2038acedf" anchor="boilerplate-address" align="left">ISO copyright office<br/> CP 401 • Ch. de Blandonnet 8<br/> CH-1214 Vernier, Geneva<br/> Phone: +41 22 749 01 11<br/> Email:  <link target="mailto:copyright@iso.org"/><br/> Website: www.iso.org</p>
+
+<p id="_93a0bcfe-1edb-b952-e8f5-db8ed91f8e23" anchor="boilerplate-place">Published in Switzerland</p>
+</clause>
+</copyright-statement>
+</boilerplate><preface><foreword id="_0ee2d3c3-6880-4c7c-0a0d-79231f94f799" obligation="informative">
+<title id="_41c9fad3-d4c1-eecc-4fad-f91704acc026">Foreword</title>
+<p id="_214b535e-379a-a65f-87a6-1a0a4fcf28bb">Foreword.</p>
+</foreword></preface><sections>
+<clause id="_518f07ca-e040-523f-dd94-ac3463f37092" type="scope" inline-header="false" obligation="normative">
+<title id="_f70b6ff6-6131-0e24-81e1-850dbe94b63d">Scope</title>
+<p id="_8fd3cacc-7522-a0af-6dc4-0a78e66b26f3">Scope.</p>
+</clause>
+
+
+
+<terms id="_629c52e2-2204-253f-68e6-b78b08939e92" obligation="normative">
+<title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_dcc01114-4d03-3550-1347-4ba901bda94c">For the purposes of this document, the following terms and definitions apply.</p><p id="_1df4aedb-297d-0c69-967f-f6a60db009d2">ISO and IEC maintain terminology databases for use in standardization at the following addresses:</p>
+
+<ul id="_e6ddc246-88cc-2222-8452-b939a5cefa0e"><li><p id="_93880b15-0e52-9141-f887-d290dce89ffd">ISO Online browsing platform: available at <link target="https://www.iso.org/obp"/></p>
+</li>
+<li><p id="_8a7ecb99-412c-1138-ae9d-76c4ac7b7d43">IEC Electropedia: available at <link target="https://www.electropedia.org"/></p>
+</li>
+</ul>
+<term id="_c37cfef8-8af4-245c-8857-8690d4ee392e" anchor="term-Test-term"><preferred><expression>
+<name>Test term</name>
+</expression>
+</preferred>
+<definition id="_1a59da2c-321a-a6a2-dd12-f9788f4d09fa"><verbal-definition id="_d2e4fedf-227f-d375-8358-2a3e03714998"><p id="_8477fbff-7197-aa99-a271-f9ea74717fd7">Test definition</p></verbal-definition></definition>
+ </term>
+</terms>
+
+<clause id="_48dea77e-8415-0631-0d03-9476cdbe1ed3" inline-header="false" obligation="normative">
+<title id="_1e3a4cff-ef13-1832-4e95-b09bc6095d3f">Two different schemas in the separate block (basic_attribute_schema, support_resource_schema)</title>
+</clause>
+
+<clause id="_7057db2f-5d5e-5e59-8e82-c6debc2fcb71" inline-header="false" obligation="normative">
+<title id="_09e8df70-783e-9ba7-1449-4e9f615c9207">Schemas</title>
+</clause>
+
+<clause id="_b6e23f24-8b24-3c6b-4ec8-4ff893ded667" anchor="basic_attribute_schema" type="express-schema" inline-header="false" obligation="normative">
+<title id="_87d82680-02ba-a2ab-b0a0-b511e05ab113">basic_attribute_schema</title>
+<clause id="_9d71dcf4-b3f8-19bd-f61a-f4fbe014db54" inline-header="false" obligation="normative">
+<title id="_24abdf30-6d12-8734-45d3-cd1948186a03">General</title>
+<p id="_1b9e7cd7-5cdd-b5c9-91c9-a349c7e4f7e1">The subject of the <strong>basic_attribute_schema</strong> is the assignment of id, name, description and role attributes to aspects of product data. This schema defines the mechanism to define a value for these attributes and associate it with product data.<note id="_2caa7e7c-6b6b-5aa9-300f-02127095869f"><p id="_bbaf338d-b214-f5dc-b707-d514fac1e0a8">The concepts defined in this schema do not provide a generic capability to associate an identification, a name, a description, or a role to product data. They are applied, in order to ensure upward compatibility, in the case where a requirement to add one or more of these kinds of attributes to a particular entity data type has been identified during the revision or amendment process of the standard document in which this entity data type is defined.</p>
+</note><note id="_ca0de5e9-6b0c-323a-ece6-3b39c996808a"><p id="_878a3683-9c75-0215-1d7f-003942c53f16">The associated entities are defined in ISO 10303-41, ISO 10303-43 and ISO 10303-44.</p>
+</note></p>
+
+
+
+
+
+<p id="_a1d858b9-a8c7-326e-1cc4-7c5772039daf"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_56c307db-8b2e-5726-6894-23bba523bf1a" unnumbered="true"><body>SCHEMA basic_attribute_schema '{iso standard 10303 part(41) version(9) object(1) basic_attribute_schema(4)}';
+
+REFERENCE FROM support_resource_schema
+  (identifier,
+   label,
+   text);</body></sourcecode>
+
+</clause>
+
+<clause id="_3d5e1dd0-1f25-95b0-2895-dc659010cfbe" anchor="basic_attribute_schema." inline-header="false" level="3" obligation="normative">
+<title id="_53e4c3cb-6a6f-7b92-c04f-9ade4468ba74">Fundamental concepts and assumptions</title>
+<p id="_8c952b09-a814-9a5a-990e-386d0e8fdcef">The following concepts are supported by this schema:</p>
+
+<ul id="_fd8e7ed4-c209-6cea-ab90-119a13a639fb"><li><p id="_87d89048-eeec-4a8a-b9f3-71e032465236">the assignment of an identifier to product data;</p>
+</li>
+<li><p id="_01aee773-aa3e-f6b3-fcf1-9cd09e924b3f">the assignment of a label to product data;</p>
+</li>
+<li><p id="_d6b23de3-da87-7afe-e016-4e258b96f438">the assignment of a descriptive text to product data;</p>
+</li>
+<li><p id="_2c6654b1-a822-e49f-9bc3-116c72025b88">the assignment of a role to an association of management type data with other aspects of product data.</p>
+</li>
+</ul>
+
+<p id="_83e6d4a6-ed68-6518-d9ce-ee3f5b51bf48">The assignment of an identifier corresponds to the <strong>id_attribute</strong> entity data type. The entities to which an identifier may be assigned are specified in the <strong>id_attribute_select</strong> data type. These entities have a derived attribute <strong>id</strong>. The corresponding identifier value is provided by the <strong>get_id_value</strong> function. A constraint ensures that there is at most one instance of <strong>id_attribute</strong> assigned to an instance of an entity in the <strong>id_attribute_select</strong> type.</p>
+
+<p id="_faacce0c-151f-cfb3-1932-bb2bfcd20bcb">The assignment of a name corresponds to the <strong>name_attribute</strong> entity data type. The entities to which a name may be assigned are specified in the <strong>name_attribute_select</strong> data type. These entities have a derived attribute name. The corresponding label value is provided by the <strong>get_name_value</strong> function. A constraint ensures that there is at most one instance of <strong>name_attribute</strong> assigned to an instance of an entity in the <strong>name_attribute_select</strong> type.</p>
+
+<p id="_623ac8c2-933e-0335-c624-744db49ef9da">The assignment of a descriptive text corresponds to the <strong>description_attribute</strong> entity data type. The entities to which a description may be assigned are specified in the <strong>description_attribute_select</strong> data type. These entities have a derived attribute description. The corresponding text value is provided by the <strong>get_description_value</strong> function. A constraint ensures that there is at most one instance of <strong>description_attribute</strong> assigned to an instance of an entity in the <strong>description_attribute_select</strong> type.</p>
+
+<p id="_400a8d86-68eb-97f2-4488-86a97a3b67b5">The assignment of a role corresponds to the <strong>role_association</strong> entity data type. The entities to which a role may be assigned are specified in the <strong>role_select</strong> data type. These entities have a derived attribute role. The corresponding <strong>object_role</strong> is provided by the <strong>get_role</strong> function. A constraint ensures that there is at most one instance of <strong>role_association</strong> assigned to an instance of an entity in the <strong>role_select</strong> type.</p>
+</clause>
+
+<clause id="_e506cbd1-09a5-d40f-c3a0-d92acf835a5f" anchor="basic_attribute_schema.types" inline-header="false" level="3" obligation="normative">
+<title id="_258ff99a-4d86-0596-ce59-339d1fc2f1bf">basic_attribute_schema type definitions</title>
+<clause id="_2b1c09bc-f276-0cbf-05af-d76e746db5dc" anchor="basic_attribute_schema.description_attribute_select" inline-header="false" level="4" obligation="normative">
+<title id="_9b88e4c6-2cbd-5903-36f0-92857bfe6020">description_attribute_select</title>
+<p id="_08c696ca-32c5-118e-e0c8-15261acd402e">A <strong>description_attribute_select</strong> specifies those objects that may be assigned a descriptive text.</p>
+
+<p id="_be2e4d5f-a890-2710-c1ad-517315b1da5e"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_9813b7e4-3075-f7d9-5af0-43548a87c2b8" unnumbered="true"><body>TYPE description_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_8bc24a18-2402-9d72-27f7-c9b7fff380a8" anchor="basic_attribute_schema.generic_attribute_list_select" inline-header="false" level="4" obligation="normative">
+<title id="_7286baa2-d543-17db-1ba0-e97df3e5ff31">generic_attribute_list_select</title>
+<p id="_37bc2fa9-6335-12f3-403e-08edb27d2856">A <strong>generic_attribute_list_select</strong> specifies those objects that may be assigned a generic attribute list.</p>
+
+<p id="_f1c73e38-4a74-558b-0e1b-501ed382636f"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_1f4eaafb-06d6-7d75-6a0f-314755bdd606" unnumbered="true"><body>TYPE generic_attribute_list_select = EXTENSIBLE GENERIC_ENTITY SELECT;
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_1d07102e-b9e7-f85f-f8e9-91320fd25fb8" anchor="basic_attribute_schema.generic_attribute_select" inline-header="false" level="4" obligation="normative">
+<title id="_887e7b45-27dd-22b1-2696-29d6508ff63c">generic_attribute_select</title>
+<p id="_684c78ac-c1ac-c23a-0940-924fe3a53b0b">A <strong>generic_attribute_select</strong> specifies those objects that may be assigned a generic attribute.</p>
+
+<p id="_88d2c171-4184-56f5-0a3f-a7013c742575"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_fdcab5d4-2d8d-deb6-5681-70de0c2c4106" unnumbered="true"><body>TYPE generic_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_2ad4a1e6-ef4b-5636-c61e-9d165aa1fea4" anchor="basic_attribute_schema.id_attribute_select" inline-header="false" level="4" obligation="normative">
+<title id="_ed9bed1b-90dd-38ca-a69d-6dd22801f344">id_attribute_select</title>
+<p id="_f81f178b-a0fc-349d-7bef-5b40b0566481">An <strong>id_attribute_select</strong> specifies those objects that may be assigned an identifier.</p>
+
+<p id="_00a04f85-81b4-84da-4da6-3e7bc62c5e58"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_efd9c69b-3db7-c176-5658-c3283fbb278a" unnumbered="true"><body>TYPE id_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_bf7670cd-15a7-5c5f-daa5-97d375f58771" anchor="basic_attribute_schema.name_attribute_select" inline-header="false" level="4" obligation="normative">
+<title id="_796c4777-c577-44c0-4f11-dc647f48247c">name_attribute_select</title>
+<p id="_a0bd36f7-bfdd-4d82-ff42-cbaf7291b1e4">A <strong>name_attribute_select</strong> specifies those objects that may be assigned a name.</p>
+
+<p id="_a636922e-b0fe-fb45-47fe-edc5386d11f4"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_98b74ed7-00ec-5359-2262-b7270bbec60b" unnumbered="true"><body>TYPE name_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_676669a3-91e8-945f-7321-b47bc3b4d8fa" anchor="basic_attribute_schema.role_select" inline-header="false" level="4" obligation="normative">
+<title id="_8b331e38-1a1d-0a17-7124-c2894063abd1">role_select</title>
+<p id="_64d73175-1ee9-5089-caa8-3350493cce01">A <strong>role_select</strong> specifies those objects that may be assigned a role.</p>
+
+<p id="_63228fc1-d7fc-3104-1047-84bcdf88d035"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_9d5d7082-212a-39fd-362a-7c24f82a2c0e" unnumbered="true"><body>TYPE role_select = EXTENSIBLE GENERIC_ENTITY SELECT;
+END_TYPE;</body></sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_228b6ae3-25a1-4d70-e169-f835dcc29c9b" anchor="basic_attribute_schema.entities" inline-header="false" level="3" obligation="normative">
+<title id="_f7825d13-688e-8951-7792-48141afb2d80">basic_attribute_schema entity definitions</title>
+<clause id="_11e2aed6-ee61-2ed4-b631-8f5c82987741" anchor="basic_attribute_schema.aggregate_id_attribute" inline-header="false" level="4" obligation="normative">
+<title id="_5339f879-f430-0756-db51-c8a4f54a1798">aggregate_id_attribute</title>
+<p id="_e2ce9dff-8a89-c236-204b-cfd67995dcab">An <strong>aggregate_id_attribute</strong> is used for the case where there is more than one product data element for a specific identifier.<note id="_9cf5c102-47d2-2dc6-1487-fb2dcdcbec92"><p id="_31fd88a7-3b65-7d1f-1164-387a3fc9e3b8">This entity provides the capability to add an aggregate id attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-43:1994.</p>
+</note></p>
+
+
+
+<p id="_a1263716-dc55-1823-d192-d583623a4217"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_ee74e8ac-5995-e9a9-50e9-d22e2a6e2176" unnumbered="true"><body>ENTITY aggregate_id_attribute;
+  attribute_value : identifier;
+  identified_item : SET [1:?] OF id_attribute_select;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_32ecffab-366e-0614-e652-1738055eb037"><underline>Attribute definitions:</underline></p>
+
+<dl id="_a5cd8abe-f05f-4528-9554-76cca04c8b74"><dt><strong>attribute_value</strong></dt>
+<dd id="_0291f3c6-d4e7-9df6-2f0b-102c0d3c9c56"><p id="_55c9bbad-2497-ac4a-332c-0019d4df0c85">the <eref bibitemid="express_support_resource_schema.identifier" citeas=""><display-text>identifier</display-text></eref> that distinguishes the <strong>identified_item</strong>.</p>
+</dd>
+<note id="_e575ccdd-1b2e-000d-e189-ccbacc7ccee2"><p id="_3b9d3faa-a1fb-2e6a-d8cf-17266eb38ec6">The context in which <strong>attribute_value</strong> is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.</p>
+</note></dl>
+
+
+
+<dl id="_2c221022-f8cc-e417-dd9b-3d4fbfb93a60"><dt><strong>identified_item</strong></dt>
+<dd id="_ed3c38e8-2190-fd97-2f65-502d93911608"><p id="_432e3b1f-e9ce-0bed-6492-1beb6d21bcfe">the collection of items that are identified.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_5e74ce0f-2961-113b-dae9-1a2a4ebdda0f" anchor="basic_attribute_schema.description_attribute" inline-header="false" level="4" obligation="normative">
+<title id="_bcd1b9de-6c9d-b6b4-c479-ba58ee41cd09">description_attribute</title>
+<p id="_17b89741-69ed-2cbe-359a-5a42341d658a">A <strong>description_attribute</strong> is the assignment of a descriptive text string to product data.<note id="_f7eb5c8e-0f4f-e68e-9a68-1d776ebffbbd"><p id="_d63fe033-c6f7-b98b-eb0c-3969e835e999">This entity provides the capability to add a description attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.</p>
+</note></p>
+
+
+
+<p id="_84c7cbee-f9fa-620d-ca59-42c57d0dcae9"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_c380029a-1efb-036b-dbd6-56816198941a" unnumbered="true"><body>ENTITY description_attribute;
+  attribute_value : text;
+  described_item : description_attribute_select;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_7f136060-9229-2d38-13a9-6ac85451346f"><underline>Attribute definitions:</underline></p>
+
+<dl id="_74062be8-e0f9-8ed6-7854-82a875279e20"><dt><strong>attribute_value</strong></dt>
+<dd id="_bd539f6a-130b-746b-7665-282f57c90906"><p id="_3ebabc97-b8c6-85c3-7c99-72cfc9ba05f5">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>described_item</strong>.</p>
+</dd>
+<dt><strong>described_item</strong></dt>
+<dd id="_fe0c4032-0dbb-d0af-2df3-410d435c8375"><p id="_327d66dd-ef5f-c20f-71e6-92fd4b704ca1">the item that is described.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_48d9fc4c-776b-e73a-68dc-96f9139525a9" anchor="basic_attribute_schema.generic_attribute" inline-header="false" level="4" obligation="normative">
+<title id="_c2e8c5e6-a4f0-698c-61e3-b7bf1d126886">generic_attribute</title>
+<p id="_e5d2cce4-38b0-94d4-b7cf-53a0641f5501">A <strong>generic_attribute</strong> is the declaration of a named attribute as a text string to enable it to be associated with product data. This capability shall not be used to replace more specific assignment capabilities if both are available to a specified target.<note id="_89028a41-4ff4-c122-67bd-d8df2c4a8844"><p id="_097fe46a-1980-d37f-6e4a-0c8452e60cbd">This entity provides the capability to define a generic attribute associated with product data using a method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.</p>
+</note></p>
+
+
+
+<example id="_9724f1d3-209b-d9f5-8c38-77d8ff3f5fe6"><p id="_93aa7377-7d43-671d-aff6-3e718af9d807">A person entity data type instance is included in both <eref bibitemid="express_basic_attribute_schema.generic_attribute_select" citeas=""><display-text>generic_attribute_select</display-text></eref> and <eref bibitemid="express_basic_attribute_schema.name_attribute_select" citeas=""><display-text>name_attribute_select</display-text></eref>. The name attribute of person is provided for the name value.</p>
+</example>
+
+<p id="_e1312a9f-db54-dabf-39bb-5c11340234e8"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_40ca9ff6-df3c-a71e-19c0-5a7ceca349e4" unnumbered="true"><body>ENTITY generic_attribute;
+  attribute_name : label;
+  attribute_value : text;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_bd7927aa-519b-a81a-9046-5e566cf9be27"><underline>Attribute definitions:</underline></p>
+
+<dl id="_beacec16-a229-5b14-3239-d9538aa87b93"><dt><strong>attribute_name</strong></dt>
+<dd id="_1481f898-de50-3dcd-fb4f-0ae1a1f205a9"><p id="_79da78cb-9bc3-b774-07ea-f2308dca8f01">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> used to name the <strong>generic_attribute</strong>.</p>
+</dd>
+<dt><strong>attribute_value</strong></dt>
+<dd id="_1d123dfd-101a-3699-dc10-4faa91035ea2"><p id="_40bd300b-d954-240f-4d6a-3d8020d85daa">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>generic_attribute</strong>.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_bef1c0a6-6c30-6a58-145f-b47da50ba777" anchor="basic_attribute_schema.generic_attribute_assignment" inline-header="false" level="4" obligation="normative">
+<title id="_901cf31c-f7ed-6d1a-ca0a-34112994d6d9">generic_attribute_assignment</title>
+<p id="_735f0057-f091-1eac-be7e-ad0f15bf6e7d">A <strong>generic_attribute_assignment</strong> is the assignment of a generic attribute to element of product data.<note id="_76c8bb94-21a2-f13f-e881-c693bbabf1b7"><p id="_aedb17fd-76c1-c9e5-196d-da373ec31f7f">This entity provides the capability to add a generic attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-43:1994.</p>
+</note></p>
+
+
+
+<p id="_a5f2e347-a4a4-bcf1-8dee-d632d92cf08e"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_c275a9de-2d87-a4d8-e1ca-c59c3b6107e4" unnumbered="true"><body>ENTITY generic_attribute_assignment;
+  attribute : generic_attribute;
+  item_with_attribute : generic_attribute_select;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_a0af40d2-ed6b-d37c-70ee-45400fd4698e"><underline>Attribute definitions:</underline></p>
+
+<dl id="_b45d7a79-b06e-48d7-c041-27059680c31d"><dt><strong>attribute</strong></dt>
+<dd id="_2707b82b-fae2-59b8-b3c2-4118bf853b22"><p id="_070ef00f-1d75-778e-da3c-80ad5cc83030">the <eref bibitemid="express_basic_attribute_schema.generic_attribute" citeas=""><display-text>generic_attribute</display-text></eref> to be associated with the product data.</p>
+</dd>
+<dt><strong>item_with_attribute</strong></dt>
+<dd id="_e5120a12-30da-768b-69ee-b7832e03b6b4"><p id="_a83b8879-13f6-eea6-4d10-df58f6f62647">the item to which the attribute is assigned.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_86041502-bec1-1742-8b58-dbf620359524" anchor="basic_attribute_schema.generic_attribute_list_assignment" inline-header="false" level="4" obligation="normative">
+<title id="_f3cd20c1-6429-a78a-1a81-c569d78ef6ba">generic_attribute_list_assignment</title>
+<p id="_c6239955-02de-86bb-646e-1576cf6a6b2c">A <strong>generic_attribute_list_assignment</strong> is the assignment of a named list of generic attributes to element of product data.<note id="_b064c53c-80a0-4d61-760c-9eb841513086"><p id="_725bd3b0-d21d-ef8d-6e4e-4b78fe00f055">This entity data type provides a capability to add a named list of generic attributes to certain product data entity data types using a method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.</p>
+</note></p>
+
+
+
+<p id="_94d5162a-805d-0ead-4801-59980ce0ce48"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_7073f754-513f-291b-a41d-67f023b45846" unnumbered="true"><body>ENTITY generic_attribute_list_assignment;
+  attribute_name : label;
+  attributes : LIST [1:?] OF generic_attribute;
+  item_with_attribute : generic_attribute_list_select;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_f836a83c-1ac5-ec6b-b697-b2dbb339bc5c"><underline>Attribute definitions:</underline></p>
+
+<dl id="_1a2e86c6-f022-5b4e-1061-328eb97a5edc"><dt><strong>attribute_name</strong></dt>
+<dd id="_8d136804-254f-83c9-b47b-b0d4c8512b05"><p id="_f786b5cc-772b-c796-3795-3f64179a55ce">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> used to name the list of generic attributes.</p>
+</dd>
+<dt><strong>attributes</strong></dt>
+<dd id="_0b757eb9-7c9c-ecb0-d571-ccdab3265d29"><p id="_8903a382-ea97-e069-df7f-a14fbe39c159">the list of <eref bibitemid="express_basic_attribute_schema.generic_attribute" citeas=""><display-text>generic_attribute</display-text></eref>s that are assigned to the element of product data.</p>
+</dd>
+<dt><strong>item_with_attribute</strong></dt>
+<dd id="_a0706ee0-60f4-b69b-00b7-0ef8fb55c6ba"><p id="_8bba6315-cfcc-2d16-24f5-f14b4cbd2bec">the item to which the attributes are assigned.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_bccbc9e2-0401-c391-5ef6-26461b01481a" anchor="basic_attribute_schema.id_attribute" inline-header="false" level="4" obligation="normative">
+<title id="_27cac098-70af-2e9a-741b-632a409b918a">id_attribute</title>
+<p id="_982f9ba2-a3b7-a7fb-2a6b-b4915cb5b2d0">An <strong>id_attribute</strong> is the assignment of an identifier to product data.<note id="_0e149c28-4e0c-2f1c-a1c3-4b59b3ccb4de"><p id="_743aa687-3a41-3dca-6b51-f86eb68e64a1">This entity provides the capability to add an id attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-43:1994.</p>
+</note></p>
+
+
+
+<p id="_013f741b-9c93-f006-6de2-1475fbe451ee"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_6571b1a2-a21d-f207-840c-d04d32c47009" unnumbered="true"><body>ENTITY id_attribute;
+  attribute_value : identifier;
+  identified_item : id_attribute_select;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_968803df-7440-228a-f587-85d4c9cfcb7d"><underline>Attribute definitions:</underline></p>
+
+<dl id="_aa23c8ef-9f8e-2ea0-26db-e609817e277f"><dt><strong>attribute_value</strong></dt>
+<dd id="_ee8e901f-24d3-3bd2-e0a7-34cf029b4fd7"><p id="_67ccabcf-f099-16b4-2e23-77f99f009cd6">the <eref bibitemid="express_support_resource_schema.identifier" citeas=""><display-text>identifier</display-text></eref> that distinguishes the <strong>identified_item</strong>.</p>
+</dd>
+<note id="_e3831093-bb76-d95f-5072-3e5e75951baf"><p id="_9b05c455-aac2-8403-8580-7ad08f157f09">The context in which <strong>attribute_value</strong> is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.</p>
+</note></dl>
+
+
+
+<dl id="_90d34a65-8eef-3b51-eddd-25f51625567e"><dt><strong>identified_item</strong></dt>
+<dd id="_30461b16-1359-0c3d-1467-154bdeda1e5b"><p id="_c39f6099-a3c8-2dd7-fa2d-b9212ae4e5f2">the item that is identified.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_996a8d1f-567a-3327-4385-fce967bb40ac" anchor="basic_attribute_schema.name_attribute" inline-header="false" level="4" obligation="normative">
+<title id="_a3e5a4dd-ed37-31c5-1bd0-64b06ffe9dcd">name_attribute</title>
+<p id="_9238c531-aab9-7d18-9dbb-8843f7fc8de5">A <strong>name_attribute</strong> is the assignment of a label by which the product data is known.<note id="_65975f81-6353-3f2d-35d1-4ad9c66df23f"><p id="_8802f77c-7c0a-a3eb-57e8-1068b8a35c01">This entity provides the capability to add a name attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-44:1994.</p>
+</note></p>
+
+
+
+<p id="_8dfeda6a-1d21-3706-5739-5bc74cf0b2a5"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_078ac172-4459-7644-bdd9-4876bccfcd2c" unnumbered="true"><body>ENTITY name_attribute;
+  attribute_value : label;
+  named_item : name_attribute_select;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_6589e7e1-1b36-9138-ab1a-6c47eea89e88"><underline>Attribute definitions:</underline></p>
+
+<dl id="_d6256d12-e29b-7584-5e30-a3e1dd8aac03"><dt><strong>attribute_value</strong></dt>
+<dd id="_00cc48a6-b3ef-3a3c-30f1-e91a8d226994"><p id="_79b0d379-2667-3381-ec3f-b93cdc55993b">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>named_item</strong> is known.</p>
+</dd>
+<dt><strong>named_item</strong></dt>
+<dd id="_ace1da8e-ae5a-2b39-aeea-9d9b3bdee707"><p id="_72c441cf-adf7-9fb8-011c-1e5ee4ab0300">the item to which the name is applied.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_4f5f10d4-ee86-7cda-cf7d-2eb6d2d64cd7" anchor="basic_attribute_schema.object_role" inline-header="false" level="4" obligation="normative">
+<title id="_bb6e6bc2-aa15-35b6-2a50-0cfb58b79de8">object_role</title>
+<p id="_c4297de6-ab46-0480-b1f1-0a64df389dd6">An <strong>object_role</strong> is a specification of a role for the association of management type data with other aspects of product data and a description of that role.<note id="_2ebfb1e0-1dad-6dd6-9d14-160e4dc4b9f4"><p id="_1894bbbc-511b-8dcc-9896-4c770dd8e3b1">This entity provides the capability to add a role attribute to an association of management type data with other aspects of product data using a method that is upwardly compatible with ISO 10303-41:1994.</p>
+</note></p>
+
+
+
+<p id="_c1c69593-aa2f-dd59-036b-d4d156b48be5"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_baf0b6a5-24d4-b03f-523e-2c940f6cd327" unnumbered="true"><body>ENTITY object_role;
+  name : label;
+  description : OPTIONAL text;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_79e0fef5-df7b-5d6c-b7bf-30e15d1bf0c9"><underline>Attribute definitions:</underline></p>
+
+<dl id="_b3e2f662-9ddf-4b2c-b368-a445ab1ab38a"><dt><strong>name</strong></dt>
+<dd id="_93f667c4-957b-97aa-253d-079fee7e6933"><p id="_0665d000-89d1-066c-507d-1b274a885fe6">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>object_role</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_af4ffaf0-5bd4-dc74-6ca0-914af426a66f"><p id="_dcdd5a4d-3527-503a-0369-994211fdf54a">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>object_role</strong>. The value of the attribute need not be specified.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_9ac9b251-b526-0006-71b7-455e84303b57" anchor="basic_attribute_schema.role_association" inline-header="false" level="4" obligation="normative">
+<title id="_c2077369-6fa0-f591-65d3-d7bf34760ee0">role_association</title>
+<p id="_c38686c0-1297-b174-7fba-158c0161b315">A <strong>role_association</strong> is the assignment of an <eref bibitemid="express_basic_attribute_schema.object_role" citeas=""><display-text>object_role</display-text></eref> to an association of management type data with other aspects of product data.<note id="_a9e529f7-3bac-2f5e-5a97-369edad0207f"><p id="_31763c10-648c-a225-16f1-32f210bfaaaf">This entity data type provides a capability to add a role attribute to certain entity data types that specify associations between product data and administrative or management data. Such entity data types are specified in the <eref bibitemid="express_management_resources_schema" citeas=""><display-text>management_resources_schema</display-text></eref>.</p>
+</note></p>
+
+
+
+<p id="_ff844d2e-a061-5690-5659-573eb6e4de18"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_312456ac-99b3-4bc3-9d23-534436067345" unnumbered="true"><body>ENTITY role_association;
+  role : object_role;
+  item_with_role : role_select;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_daf9c5a8-f771-893f-3318-cbea90b60d20"><underline>Attribute definitions:</underline></p>
+
+<dl id="_b608ad64-0e63-ba89-0b24-000ab8074cf4"><dt><strong>role</strong></dt>
+<dd id="_92aa8468-3e92-d580-b67d-ce70cdad8bc2"><p id="_e81844cc-c9f6-02bf-0d0f-6cf2a3965e45">the <eref bibitemid="express_basic_attribute_schema.object_role" citeas=""><display-text>object_role</display-text></eref> that specifies the purpose of the association of the <strong>role_association</strong> with product data.</p>
+</dd>
+<dt><strong>item_with_role</strong></dt>
+<dd id="_8336f35b-4f08-5564-5a48-77bc1eaf5d41"><p id="_9b2c90eb-a060-9f20-5600-2aa3a883d107">the item to which a role is assigned.</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_884bf977-3b00-2534-1d5b-ffa0df1e4ca3" anchor="basic_attribute_schema.functions" inline-header="false" level="3" obligation="normative">
+<title id="_de38f93f-df25-f7cb-a591-da28c6aa138f">basic_attribute_schema function definitions</title>
+<clause id="_f43b8e15-218d-af40-dfa1-c0ddc79752ef" anchor="basic_attribute_schema.get_description_value.get_description_value" inline-header="false" level="4" obligation="normative">
+<title id="_0c5b2625-4502-aebe-036d-a911679dfd14">get_description_value</title>
+<p id="_de8ce6b3-3e57-0217-dbe8-ff00797e22ee">The <strong>get_description_value</strong> function accepts an object to which a descriptive text string may be assigned and returns this description if present.</p>
+
+<p id="_5af11ae9-43ad-faae-5e8e-9ed08fd07bf2">If a <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref> references the object, the function will return the value of the <eref bibitemid="express_basic_attribute_schema.description_attribute.attribute_value" citeas=""><display-text>attribute_value</display-text></eref> attribute of this <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_700f49d3-036b-cc0b-6744-cfd8554d297a"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_917b4f8f-5bee-3f4a-0349-0ec21fe51dc3" unnumbered="true"><body>FUNCTION get_description_value(obj : description_attribute_select) : text;
+  LOCAL
+    description_bag : BAG OF description_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'DESCRIPTION_ATTRIBUTE.') + 'DESCRIBED_ITEM');
+  END_LOCAL;
+  IF SIZEOF(description_bag) = 1 THEN
+    RETURN (description_bag[1].attribute_value);
+  ELSE
+    RETURN (?);
+  END_IF;
+END_FUNCTION;</body></sourcecode>
+
+
+<clause id="_405eb087-e42f-b33f-ba39-9c58775e218f" anchor="basic_attribute_schema.get_description_value.parameters" inline-header="false" level="5" obligation="normative">
+<title id="_7bec388f-fd08-6653-d247-bf51dabd80b7">Parameters</title>
+<clause id="_8e5dc36a-43c3-a58f-4406-39528ef6cd07" anchor="basic_attribute_schema.get_description_value.obj" inline-header="false" obligation="normative">
+<title id="_8c0a5df3-dc91-be86-57d9-f2a403ddb92a">obj</title>
+<p id="_0947e3d3-084e-2695-65cf-5fec13f60327">(input) the object for which a <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> is determined. This is an input to the function.</p>
+
+<p id="_6c462427-4e5d-7a40-bae5-d4511b7f648a"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_e48ea153-4351-45f2-94df-5ef61d153368" unnumbered="true"><body>obj : description_attribute_select</body></sourcecode>
+
+</clause></clause>
+
+
+
+<clause id="_e32ed533-63d3-f9e4-0003-3ca2857a6582" anchor="basic_attribute_schema.get_description_value.variables" inline-header="false" level="5" obligation="normative">
+<title id="_6d80c395-b36d-5308-693f-da05a15e78cc">Variables</title>
+<clause id="_d6b7f201-3a95-3209-8572-3602d6fd5586" anchor="basic_attribute_schema.get_description_value.description_bag" inline-header="false" obligation="normative">
+<title id="_332a7393-6b86-92f0-366b-164b262651bd">description_bag</title>
+<p id="_009847a9-f59f-89df-7b57-e8f958b5952c"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_5a25b44a-6310-09c5-c5e6-191286412260" unnumbered="true"><body>description_bag : BAG OF description_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'DESCRIPTION_ATTRIBUTE.') + 'DESCRIBED_ITEM');</body></sourcecode>
+
+</clause></clause>
+
+
+</clause>
+
+<clause id="_93318125-4840-199b-600a-0196c55e2662" anchor="basic_attribute_schema.get_id_value.get_id_value" inline-header="false" level="4" obligation="normative">
+<title id="_c01cc51a-98bb-097d-fef5-a558e755335d">get_id_value</title>
+<p id="_d1cb0ce8-0dd8-1a16-cce2-080883f90a84">The <strong>get_id_value</strong> function accepts an object to which an identifier may be assigned and returns this identifier if present.</p>
+
+<p id="_5ea18f35-356c-a083-7bd1-c7d16ce69d3f">If an <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref> references the object, the function will return the value of the <eref bibitemid="express_basic_attribute_schema.id_attribute.attribute_value" citeas=""><display-text>attribute_value</display-text></eref> attribute of this <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_e66db192-38f1-d510-c48b-1b5d029f9ed9"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_93fd6424-1e3c-7b32-67ec-d5f8bac17ece" unnumbered="true"><body>FUNCTION get_id_value(obj : id_attribute_select) : identifier;
+  LOCAL
+    id_bag : BAG OF id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');
+  END_LOCAL;
+  IF SIZEOF(id_bag) = 1 THEN
+    RETURN (id_bag[1].attribute_value);
+  ELSE
+    RETURN (?);
+  END_IF;
+END_FUNCTION;</body></sourcecode>
+
+
+<clause id="_0c21f24d-2d1f-991d-0caf-cd1d512ae598" anchor="basic_attribute_schema.get_id_value.parameters" inline-header="false" level="5" obligation="normative">
+<title id="_366f1092-7800-9ff6-cec2-1e5ab59bd2c7">Parameters</title>
+<clause id="_be65d44c-b23b-72a7-9390-a3d4c5fea6a1" anchor="basic_attribute_schema.get_id_value.obj" inline-header="false" obligation="normative">
+<title id="_6c5197e6-7395-3b89-6675-b3dabba9d86e">obj</title>
+<p id="_471975b9-2cc2-27d4-76d6-b0442c400b73">(input) the object for which an <eref bibitemid="express_support_resource_schema.identifier" citeas=""><display-text>identifier</display-text></eref> is determined. This is an input to the function.</p>
+
+<p id="_8d93c98f-089a-8434-ccc1-5a1199360548"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_b7a4353d-300e-a2cd-1f1a-700cef301572" unnumbered="true"><body>obj : id_attribute_select</body></sourcecode>
+
+</clause></clause>
+
+
+
+<clause id="_3ccfdbcc-800f-f3fc-3144-ff6f3b40407b" anchor="basic_attribute_schema.get_id_value.variables" inline-header="false" level="5" obligation="normative">
+<title id="_c727201e-81c6-caeb-bcab-15ac025ce815">Variables</title>
+<clause id="_5238410c-70d5-9d36-2551-5279e87ba1c6" anchor="basic_attribute_schema.get_id_value.id_bag" inline-header="false" obligation="normative">
+<title id="_ea3ecf98-d496-8dfc-6a38-64af4326dafd">id_bag</title>
+<p id="_b0993385-7f05-7318-5b14-5be5a4b87b06"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_5ee6f69e-0292-1ec2-a8e6-653e84599199" unnumbered="true"><body>id_bag : BAG OF id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');</body></sourcecode>
+
+</clause></clause>
+
+
+</clause>
+
+<clause id="_75eb6618-ab16-83be-9081-bd88dfd5e004" anchor="basic_attribute_schema.get_aggregate_id_value.get_aggregate_id_value" inline-header="false" level="4" obligation="normative">
+<title id="_5f24e3f8-fc69-2305-bd19-a4e96a3902d1">get_aggregate_id_value</title>
+<p id="_2174eb09-53dd-6328-bbb8-fe917f274855">The <strong>get_aggregate_id_value</strong> function accepts an object to which an identifier may be assigned and returns this identifier if present.</p>
+
+<p id="_48296ee3-ab35-f222-1669-4f5133677da2">If an <eref bibitemid="express_basic_attribute_schema.aggregate_id_attribute" citeas=""><display-text>aggregate_id_attribute</display-text></eref> references the object, the function will return the value of the <eref bibitemid="express_basic_attribute_schema.aggregate_id_attribute.attribute_value" citeas=""><display-text>attribute_value</display-text></eref> attribute of this <eref bibitemid="express_basic_attribute_schema.aggregate_id_attribute" citeas=""><display-text>aggregate_id_attribute</display-text></eref>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_41366040-e531-8d63-d1d3-b847181d8154"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_30358a81-eccb-d412-63e3-a400d1878582" unnumbered="true"><body>FUNCTION get_aggregate_id_value(obj : id_attribute_select) : identifier;
+  LOCAL
+    aggregate_id_bag : BAG OF aggregate_id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'AGGREGATE_ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');
+  END_LOCAL;
+  IF SIZEOF(aggregate_id_bag) = 1 THEN
+    RETURN (aggregate_id_bag[1].attribute_value);
+  ELSE
+    RETURN (?);
+  END_IF;
+END_FUNCTION;</body></sourcecode>
+
+
+<clause id="_ef3534a9-d0e4-3e21-4b8e-f2e50c6a3086" anchor="basic_attribute_schema.get_aggregate_id_value.parameters" inline-header="false" level="5" obligation="normative">
+<title id="_91b12307-d4b8-0d2b-50c1-990f86a408dd">Parameters</title>
+<clause id="_d7f4d25a-0218-9370-807d-2b01f9f81a24" anchor="basic_attribute_schema.get_aggregate_id_value.obj" inline-header="false" obligation="normative">
+<title id="_bc79b5bd-329a-299c-d3f9-873aa6435d0d">obj</title>
+<p id="_c7427ef2-0e9e-7a4c-eaed-5d100b2dfb23">(input) the object for which an <eref bibitemid="express_support_resource_schema.identifier" citeas=""><display-text>identifier</display-text></eref> is determined. This is an input to the function.</p>
+
+<p id="_b942445e-0cdf-65ba-73a7-d53dbadd497c"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_d63389cf-01b8-1bb5-f389-3ed99e51ee74" unnumbered="true"><body>obj : id_attribute_select</body></sourcecode>
+
+</clause></clause>
+
+
+
+<clause id="_af0ff96a-03d3-c207-3f64-14ff63fe999d" anchor="basic_attribute_schema.get_aggregate_id_value.variables" inline-header="false" level="5" obligation="normative">
+<title id="_311931ca-1e9c-3bc3-6686-d5764a98eb03">Variables</title>
+<clause id="_f9f1b0a6-a152-a216-1c30-6d57f295904f" anchor="basic_attribute_schema.get_aggregate_id_value.aggregate_id_bag" inline-header="false" obligation="normative">
+<title id="_83c34f47-67f9-8137-06aa-bd1a2be672fa">aggregate_id_bag</title>
+<p id="_8c8ae76c-55b3-5c64-f331-99f0400f6001"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_4aeeb2ba-8d8c-2fb0-ea96-7573af10b39c" unnumbered="true"><body>aggregate_id_bag : BAG OF aggregate_id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'AGGREGATE_ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');</body></sourcecode>
+
+</clause></clause>
+
+
+</clause>
+
+<clause id="_b8c12a47-b0e1-183e-8312-59ae3365c73c" anchor="basic_attribute_schema.get_name_value.get_name_value" inline-header="false" level="4" obligation="normative">
+<title id="_491180b8-17ee-a1b0-a436-45e023f1214b">get_name_value</title>
+<p id="_2e63e3d5-b97b-ee09-e315-c2e4cd4fac30">The <strong>get_name_value</strong> function accepts an object to which a label may be assigned and returns this label if present.</p>
+
+<p id="_1914fa63-acd4-6307-eb66-ed3aeec7380a">If a <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref> references the object, the function will return the value of the <eref bibitemid="express_basic_attribute_schema.name_attribute.attribute_value" citeas=""><display-text>attribute_value</display-text></eref> attribute of this <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_505c1ace-77cf-9716-2c9c-24c4280bfd04"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_66cef85b-d73b-4783-9f4d-0d9bc5b63eae" unnumbered="true"><body>FUNCTION get_name_value(obj : name_attribute_select) : label;
+  LOCAL
+    name_bag : BAG OF name_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'NAME_ATTRIBUTE.') + 'NAMED_ITEM');
+  END_LOCAL;
+  IF SIZEOF(name_bag) = 1 THEN
+    RETURN (name_bag[1].attribute_value);
+  ELSE
+    RETURN (?);
+  END_IF;
+END_FUNCTION;</body></sourcecode>
+
+
+<clause id="_2596aaa5-b566-264f-eaab-1b819ee4ac92" anchor="basic_attribute_schema.get_name_value.parameters" inline-header="false" level="5" obligation="normative">
+<title id="_d5d6aaa9-02a9-1992-4d53-b4bd008f1909">Parameters</title>
+<clause id="_05647616-817d-e213-020e-deb92fb883c9" anchor="basic_attribute_schema.get_name_value.obj" inline-header="false" obligation="normative">
+<title id="_1638b316-f8f4-0163-3134-7e8683738be7">obj</title>
+<p id="_bf8c9966-8807-bac8-7191-97adbde434fc">the object for which a <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> is determined. This is an input to the function.</p>
+
+<p id="_3cb4baf2-f2d1-246f-d107-37baca39f842"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_d1c56977-dcc6-08ce-5038-db4731506994" unnumbered="true"><body>obj : name_attribute_select</body></sourcecode>
+
+</clause></clause>
+
+
+
+<clause id="_09ecde27-2dd1-cbb3-540e-fe2ce5759aca" anchor="basic_attribute_schema.get_name_value.variables" inline-header="false" level="5" obligation="normative">
+<title id="_acb15ee3-d3ea-c23c-ac0a-bd6d6b3cd393">Variables</title>
+<clause id="_0a285e23-7be7-6bdd-d7b0-182638e0fd20" anchor="basic_attribute_schema.get_name_value.name_bag" inline-header="false" obligation="normative">
+<title id="_f7822b1d-7bd6-b849-4fb7-a357f6978f93">name_bag</title>
+<p id="_f056757a-37db-bb5a-f82f-d3c23e4dc5a0"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_d4103d95-66d9-4f8c-5c11-aa0bf0cd562d" unnumbered="true"><body>name_bag : BAG OF name_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'NAME_ATTRIBUTE.') + 'NAMED_ITEM');</body></sourcecode>
+
+</clause></clause>
+
+
+</clause>
+
+<clause id="_ca865cb4-6741-b233-e3e2-0d365f07fb82" anchor="basic_attribute_schema.get_role.get_role" inline-header="false" level="4" obligation="normative">
+<title id="_a933c36c-0abe-4e61-d196-0866c8efde6c">get_role</title>
+<p id="_b59ce644-c15b-c807-07a1-868506502ee3">The <strong>get_role</strong> function accepts an object to which a role may be assigned and returns this role if present.</p>
+
+<p id="_d705fc9d-e8c3-2e57-870c-19a2558b5ae2">If a <eref bibitemid="express_basic_attribute_schema.role_association" citeas=""><display-text>role_association</display-text></eref> references the object, the function will return the <eref bibitemid="express_basic_attribute_schema.object_role" citeas=""><display-text>object_role</display-text></eref> of the <eref bibitemid="express_basic_attribute_schema.role_association.role" citeas=""><display-text>role</display-text></eref> attribute of this <eref bibitemid="express_basic_attribute_schema.role_association" citeas=""><display-text>role_association</display-text></eref>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_3077d6d2-7d80-7adb-50ff-451bd7e0320b"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_ff990d37-2f87-99a2-9e10-f3a9d03b82c0" unnumbered="true"><body>FUNCTION get_role(obj : role_select) : object_role;
+  LOCAL
+    role_bag : BAG OF role_association := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ROLE_ASSOCIATION.') + 'ITEM_WITH_ROLE');
+  END_LOCAL;
+  IF SIZEOF(role_bag) = 1 THEN
+    RETURN (role_bag[1].role);
+  ELSE
+    RETURN (?);
+  END_IF;
+END_FUNCTION;</body></sourcecode>
+
+
+<clause id="_f37cb960-0dda-9c43-0782-019adb079268" anchor="basic_attribute_schema.get_role.parameters" inline-header="false" level="5" obligation="normative">
+<title id="_bdbac8fd-14eb-b624-717a-81dc4977082e">Parameters</title>
+<clause id="_9a06be99-bf23-9cdf-6719-7281b0857185" anchor="basic_attribute_schema.get_role.obj" inline-header="false" obligation="normative">
+<title id="_774599ee-36c3-b3c5-8783-ea3b848939a3">obj</title>
+<p id="_f298bc22-e3a1-6ee0-1dff-809c5af26fcf">(input) the object for which an <eref bibitemid="express_basic_attribute_schema.object_role" citeas=""><display-text>object_role</display-text></eref> is determined. This is an input to the function.</p>
+
+<p id="_3753e661-6a62-13f9-aaf8-0acb7ad538c3"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_cdf3a76b-1f6d-b760-47c7-99ba07250da8" unnumbered="true"><body>obj : role_select</body></sourcecode>
+
+</clause></clause>
+
+
+
+<clause id="_90bcc4aa-aa1b-b648-ab94-e01c1f067147" anchor="basic_attribute_schema.get_role.variables" inline-header="false" level="5" obligation="normative">
+<title id="_acbc64ae-27aa-11f3-f4fc-9ad9f44c75ea">Variables</title>
+<clause id="_d72425d8-a026-65ed-eaf6-e46280feb21e" anchor="basic_attribute_schema.get_role.role_bag" inline-header="false" obligation="normative">
+<title id="_d28ca5c6-2cdd-2c36-b305-abb53a6306f7">role_bag</title>
+<p id="_df694e8e-d01f-e40b-21fc-d62151b0a656"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_aef4f400-ccb1-fe9e-f267-8e2fbdc51603" unnumbered="true"><body>role_bag : BAG OF role_association := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ROLE_ASSOCIATION.') + 'ITEM_WITH_ROLE');</body></sourcecode>
+
+</clause></clause>
+
+
+</clause>
+</clause>
+</clause>
+
+<clause id="_63ecc454-85aa-7864-bbb5-509ea7f452ad" anchor="support_resource_schema" type="express-schema" inline-header="false" obligation="normative">
+<title id="_d2342ca6-736c-b3a5-0fb0-0d0b69c1bb95">support_resource_schema</title>
+<clause id="_ae3e6fea-9aeb-f5fc-3c82-ed945aa401f3" inline-header="false" obligation="normative">
+<title id="_1d0a0e6e-9129-6d18-fb0a-a14109f5544f">General</title>
+<p id="_25e9bb3b-ee61-1af8-0f10-0ddff4605b31">The subject of the <strong>support_resource_schema</strong> is a description of EXPRESS declarations that are shared by more than one of the ISO 10303 integrated resource schemas.<note id="_b8b2e5be-cc59-4826-b1bf-2e21b7806c23"><p id="_0afd7916-6ae4-3b2c-be17-231e7ddc4291">In contrast to elements of the generic product description resource schemas, which are also potentially referenced by more than one ISO 10303 integrated resource schema, the elements of this schema cannot exist without (that is, are existent-dependent upon) the entities that reference them.</p>
+</note></p>
+
+
+
+<p id="_2940a3dd-4329-af12-52c2-a5949597faf4"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_79fa6c0b-9f51-ae1a-919e-6e4a43901ce1" unnumbered="true"><body>SCHEMA support_resource_schema '{iso standard 10303 part(41) version(7) object(1) support_resource_schema(23)}';</body></sourcecode>
+
+</clause>
+
+<clause id="_5495ce04-67fc-fcf1-c3b7-0509c37f5135" anchor="support_resource_schema." inline-header="false" level="3" obligation="normative">
+<title id="_101db433-f37c-6ecc-7566-b4e387c0af2f">Fundamental concepts and assumptions</title>
+<p id="_be799ada-3c20-b84e-d0bf-cefacfe9c69f">An identifier is a means that enables a processor to distinguish an information from other information of the same kind. A label is textual information assigned to an item of information in order to facilitate its access by a human being.</p>
+
+<p id="_9aaea8fc-bbad-8c88-a0fc-dd9870180de4">Product data items may have an identification. The formats used to define identifiers are quite various. This International Standard defines identifiers as strings. It does not specify the internal structure and content of these strings.</p>
+
+<p id="_86ef5170-2c40-c0f6-236a-9b86296c0699">Product data items may have a label. The formats used to define labels are quite various. This International Standard defines identifiers as strings. It does not specify the internal structure and content of these strings.</p>
+</clause>
+
+<clause id="_40e4c080-3a40-1f25-24bf-6d1997a572c9" anchor="support_resource_schema.types" inline-header="false" level="3" obligation="normative">
+<title id="_2c99f15b-55b3-d422-8094-418e47785d33">support_resource_schema type definitions</title>
+<clause id="_0693ebf8-d3f7-1072-8891-968d2780af0b" anchor="support_resource_schema.identifier" inline-header="false" level="4" obligation="normative">
+<title id="_c44dde8e-7fee-1e5b-3e49-bad03c8517ea">identifier</title>
+<p id="_300c2666-395e-61f7-75f0-49ad7a355f55">An <strong>identifier</strong> is a string suitable for identifying some product data.<note id="_4c813161-4f0c-d021-8fc0-04a47f95d1c1"><p id="_9df37256-8660-e83e-f6cd-f41ce55249f0">An identifier may or may not have a natural-language meaning.</p>
+</note></p>
+
+
+
+<example id="_0befe28f-e789-5362-85e6-e018f82dba09"><p id="_beeed06c-43f9-3a4c-d59c-480015c81c63">In the context of a product, a part number or serial number would be an example of an identifier.</p>
+</example>
+
+<p id="_11252144-dc85-2963-ed92-13c346bd7676"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_c8c07dff-29d7-bbc9-7f4e-9f66504fa974" unnumbered="true"><body>TYPE identifier = STRING;
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_ee229ebd-1f9e-1848-c562-4dafaed0bbbc" anchor="support_resource_schema.label" inline-header="false" level="4" obligation="normative">
+<title id="_bce30f6b-19d0-9a06-b2a3-d95b64a736a2">label</title>
+<p id="_16547bbf-a354-aa0c-d451-1ca714526a7f">A <strong>label</strong> is an alphanumeric string that represents the human-interpretable name of something and shall have a natural-language meaning.</p>
+
+<example id="_834f934d-13e9-78b7-4cc1-bd7042285b6e"><p id="_6ce50540-8558-d8b8-8834-d7e7a8d6b551">‘Smith’, ‘Widget Inc.’, and ‘Materials Test Laboratory’ are examples of labels.</p>
+</example>
+
+<p id="_7212c69f-abe7-24b8-4ad0-11e902c918b7"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_31cbaccb-4436-896d-f15f-020b7008fa03" unnumbered="true"><body>TYPE label = STRING;
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_353b40dc-da6b-c396-5da3-8a94b8d89c2c" anchor="support_resource_schema.text" inline-header="false" level="4" obligation="normative">
+<title id="_195b7973-341c-c2ae-fe53-f77168672ceb">text</title>
+<p id="_fbd6c14a-1ccc-8743-84a0-7fbec20a2217">A <strong>text</strong> is an alphanumeric string intended to be read and understood by a human being. It is for information purposes only.</p>
+
+<p id="_a2183e34-96de-cf93-6d7e-21cb539f743b"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_aad7de9f-01e7-8f8e-4be5-6e27de0f8fd8" unnumbered="true"><body>TYPE text = STRING;
+END_TYPE;</body></sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_d2343f84-c042-8171-821d-c50a7475b51b" anchor="support_resource_schema.functions" inline-header="false" level="3" obligation="normative">
+<title id="_d3ad7942-00ae-0414-91ff-0c342a0b09f4">support_resource_schema function definitions</title>
+<clause id="_35630cd5-242a-ef10-8072-7bf21703cd8e" anchor="support_resource_schema.bag_to_set.bag_to_set" inline-header="false" level="4" obligation="normative">
+<title id="_61134d14-0dc6-3024-a976-3dd5fa184e07">bag_to_set</title>
+<p id="_ad330a06-016f-e3cf-b0ad-0dc8fa1cfa86">The <strong>bag_to_set</strong> function converts BAGs into SETs.</p>
+
+<example id="_bd222ef5-1b0d-c61d-f059-2359e9dcad9b"><p id="_be519af8-e133-7cb0-e703-0ef40987773b">This function can be used to convert the BAGs returned by the USEDIN function into SETs.</p>
+</example>
+
+<p id="_d9c0a3ab-cca3-277e-4277-3a628ccffccb"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_fc09fc6a-d035-22a8-fac5-264c50eed1f7" unnumbered="true"><body>FUNCTION bag_to_set(the_bag : BAG OF GENERIC : intype) : SET OF GENERIC : intype;
+  LOCAL
+    the_set : SET OF GENERIC : intype := [];
+  END_LOCAL;
+  IF SIZEOF(the_bag) &gt; 0 THEN
+    REPEAT i := 1 TO HIINDEX(the_bag);
+      the_set := the_set + the_bag[i];
+    END_REPEAT;
+  END_IF;
+  RETURN (the_set);
+END_FUNCTION;</body></sourcecode>
+
+
+<clause id="_8e507848-1e2d-1f2d-ebf0-a443e7a41f9c" anchor="support_resource_schema.bag_to_set.parameters" inline-header="false" level="5" obligation="normative">
+<title id="_5bdebe27-2831-ca09-bafd-bf8eb45dab14">Parameters</title>
+<clause id="_007341a8-f28d-d4af-d23c-796d42efc90e" anchor="support_resource_schema.bag_to_set.the_bag" inline-header="false" obligation="normative">
+<title id="_a91562cc-4d73-11a4-b97e-faf5eedfd76d">the_bag</title>
+<p id="_02693ccd-3dcb-8cf7-0f94-bf4f323f273b">(input) the BAG that is to be converted into a SET.</p>
+
+<p id="_caa67c0d-c6b5-0ffc-4c56-918d7efb37cc"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_4a1b29d8-3d8d-e61d-23ba-5db9cc3dc878" unnumbered="true"><body>the_bag : BAG OF GENERIC : intype</body></sourcecode>
+
+</clause></clause>
+
+
+
+<clause id="_3139fe9e-be6b-5356-fef7-559af4a78bf8" anchor="support_resource_schema.bag_to_set.variables" inline-header="false" level="5" obligation="normative">
+<title id="_69b10302-a5e5-9c39-18d1-9214f8003def">Variables</title>
+<clause id="_bd779a2c-b5bd-4e0b-5750-ab7672cd2043" anchor="support_resource_schema.bag_to_set.the_set" inline-header="false" obligation="normative">
+<title id="_7c34b741-8016-345a-375a-d400a7019712">the_set</title>
+<p id="_a768c18d-6753-82ad-952e-f30c670bc970"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_75f2c15f-c81e-b2ca-aad0-22ae494caa21" unnumbered="true"><body>the_set : SET OF GENERIC : intype := [];</body></sourcecode>
+
+</clause></clause>
+
+
+</clause>
+
+<clause id="_06c7f7d0-430a-5e3d-96b2-76f0b4348e06" anchor="support_resource_schema.type_check_function.type_check_function" inline-header="false" level="4" obligation="normative">
+<title id="_fed1565f-ea81-b8f1-1c80-c448e70cf2b5">type_check_function</title>
+<p id="_f5a0c167-63d5-ce23-6aaf-e7ee49c267a8">The <strong>type_check_function</strong> function compares the names of the data types of the instance that is referred to by the parameter <strong>the_type</strong> with the set of entity names specified by <strong>sub_names</strong>.</p>
+
+<p id="_cd4094a5-ed41-479a-74bb-cb9f01332079">Depending on the value of <strong>criterion</strong>, it returns TRUE if:</p>
+
+<ul id="_bed1bea8-53a0-0746-cb4c-4a4ae54a3c78"><li><p id="_8cd0edf1-acad-b582-e2c6-f59b524c9ff5">case 0: the intersection of the two aggregates is not empty.</p>
+</li>
+<note id="_355665c2-2d1f-a474-96c6-29d63af493ae"><p id="_741eef82-38e3-fd1e-ad87-e625cb516a65">If <strong>sub_names</strong> contains the entity names of all the subtypes of a particular entity data type, this case can be used to ensure that no instance of the supertype exists.</p>
+</note></ul>
+
+
+
+<ul id="_e480a1d9-cc48-4890-6fee-b36ca85847fd"><li><p id="_824b29f4-0f10-33ae-cb7c-8a831c489189">case 1: the intersection of the two aggregates is empty.</p>
+</li>
+<note id="_5d463e53-b6b6-711f-a918-bd36a2ca8810"><p id="_b0d9f416-2323-66a9-d9f4-741159a466d3">If <strong>sub_names</strong> contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no instance of these subtypes exists.</p>
+</note></ul>
+
+
+
+<ul id="_91015116-a366-7f82-7d95-c18a9f7aaaf9"><li><p id="_d5a931cf-f31d-2b00-39de-265b2a9caa96">case 2: the intersection of the two aggregates contains exactly one name.</p>
+</li>
+<note id="_ad3e4d1a-2787-5beb-7ada-e633cf22547f"><p id="_19474b2d-e374-569f-2783-fced7997c431">If <strong>sub_names</strong> contains the entity names of all the subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of subtypes of the entity exists and that only instances of subtypes of the entity exist.</p>
+</note><note id="_c50ae34f-6edd-4a65-6671-a5c962da2166"><p id="_5df90ab8-eddc-1c29-2ec2-1bfb4ea2852c">The concept of complex entity instance is defined in ISO 10303-11.</p>
+</note></ul>
+
+
+
+
+
+<ul id="_2319625e-3988-8762-c0b1-b0a6b9a561ae"><li><p id="_60b4c867-9963-71bc-b966-03959da361ac">case 3: the intersection of the two aggregates contains at most one name.</p>
+</li>
+<note id="_b664503b-e7a8-f06a-1d6c-cba11fadabb7"><p id="_655220eb-875b-1872-79c0-94629e44effe">If <strong>sub_names</strong> contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of these subtypes of the entity exists.</p>
+</note></ul>
+
+
+
+<p id="_c3ac898a-61bc-b4d2-6697-ab8bd19b8837"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_7d02ee72-91ec-55d6-394b-e165ec6edfa0" unnumbered="true"><body>FUNCTION type_check_function(the_type : GENERIC;
+                             sub_names : SET OF STRING;
+                             criterion : INTEGER) : LOGICAL;
+  IF NOT EXISTS(the_type) OR (SIZEOF(sub_names) = 0) THEN
+    RETURN (UNKNOWN);
+  ELSE
+    CASE criterion OF
+    0 :
+      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) &gt; 0);
+    1 :
+      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) = 0);
+    2 :
+      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) = 1);
+    3 :
+      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) &lt;= 1);
+    OTHERWISE :
+      RETURN (UNKNOWN);
+    END_CASE;
+  END_IF;
+END_FUNCTION;</body></sourcecode>
+
+
+<clause id="_637dba39-03f6-0cc2-108c-a288aeea2eaf" anchor="support_resource_schema.type_check_function.parameters" inline-header="false" level="5" obligation="normative">
+<title id="_647ce059-9e85-a7d5-267b-6ac37a351fac">Parameters</title>
+<clause id="_ea2ab109-399a-f164-3cba-406395338e42" anchor="support_resource_schema.type_check_function.the_type" inline-header="false" obligation="normative">
+<title id="_c52b3873-e1e4-1801-85bd-ef60cce18435">the_type</title>
+<p id="_0d066f9f-e75e-551f-3bcc-1bd51aa836e8">(input) the instance whose data type is checked.</p>
+
+<p id="_262034b9-23f7-eb8d-93f5-8314702d5a53"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_3e09fe96-b429-4ab8-0135-c03341d5fa49" unnumbered="true"><body>the_type : GENERIC</body></sourcecode>
+
+</clause><clause id="_f8c658e6-1ad7-ff82-5f03-43f4dbee1122" anchor="support_resource_schema.type_check_function.sub_names" inline-header="false" obligation="normative">
+<title id="_8918a117-feea-fcf7-0e5d-a36d107cd0c1">sub_names</title>
+<p id="_a6e8b4f8-e65c-5e60-bccd-7d67af1d3df9">(input) the set of names of the entity data types that are candidates for the type of <strong>the_type</strong>.</p>
+
+<p id="_141a5640-4807-5251-a002-4c51029864a9"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_5ce79302-545d-3290-c267-ec842ea62b43" unnumbered="true"><body>sub_names : SET OF STRING</body></sourcecode>
+
+</clause><clause id="_469474b4-8878-9ee0-c520-4663fae8b8c4" anchor="support_resource_schema.type_check_function.criterion" inline-header="false" obligation="normative">
+<title id="_084fa07c-e5c8-1521-d91c-94d391c3fab2">criterion</title>
+<p id="_afc6ffd9-0dab-08a5-9663-1e4505a0c14a">(input) the integer number value between 0 and 3.</p>
+
+<p id="_7da360b8-deaa-8a19-65ef-29ea11f83cf7"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_eea1e93f-394d-c9c9-8fc2-d09fb2d12d06" unnumbered="true"><body>criterion : INTEGER</body></sourcecode>
+
+</clause></clause>
+
+
+
+
+
+
+</clause>
+</clause>
+</clause>
+</sections><bibliography><references id="_08e4a7cd-1a73-9a2a-4dac-fc841681bf21" normative="true" obligation="informative">
+<title id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><p id="_1e0e85f2-a241-464a-90af-046b5883d60f">There are no normative references in this document.</p>
+</references><references hidden="true" normative="false"><bibitem anchor="express_support_resource_schema.identifier" id="_f0ed2c06-3fba-e880-6e4a-c3551bea23a6" type="internal">
+<docidentifier type="repository">express/support_resource_schema.identifier</docidentifier>
+</bibitem>
+<bibitem anchor="express_support_resource_schema.text" id="_20728dc9-b1d8-8516-b610-ac557c4f2813" type="internal">
+<docidentifier type="repository">express/support_resource_schema.text</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.generic_attribute_select" id="_47d840c7-39a9-3cd9-e84d-ffdc3e3d7769" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.generic_attribute_select</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.name_attribute_select" id="_79575dbe-9fce-bff9-f7a0-919f558ca1ee" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.name_attribute_select</docidentifier>
+</bibitem>
+<bibitem anchor="express_support_resource_schema.label" id="_d036316d-dd03-53c3-df6d-cc136b003847" type="internal">
+<docidentifier type="repository">express/support_resource_schema.label</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.generic_attribute" id="_13d1b9f4-a1c8-0c76-7391-31344fa41b19" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.generic_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.object_role" id="_429b7035-81f5-fcd9-1465-e85eae8722e0" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.object_role</docidentifier>
+</bibitem>
+<bibitem anchor="express_management_resources_schema" id="_d9d617c8-cf74-5542-7bcb-fb9873f033db" type="internal">
+<docidentifier type="repository">express/management_resources_schema</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.description_attribute" id="_1bd106a6-b308-d4ee-47d1-ab53d9c098be" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.description_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.description_attribute.attribute_value" id="_428537a3-a34e-f013-3ce7-01ebfc53747a" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.description_attribute.attribute_value</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.id_attribute" id="_31c799a5-ee3c-2c00-59e8-03a8624a7eb0" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.id_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.id_attribute.attribute_value" id="_008711b6-aceb-2760-f112-cff44047df6d" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.id_attribute.attribute_value</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.aggregate_id_attribute" id="_1634bedd-084f-7312-9d40-855762ab07b3" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.aggregate_id_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.aggregate_id_attribute.attribute_value" id="_0ae52849-845b-02a3-ee4c-3ea61f0243c1" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.aggregate_id_attribute.attribute_value</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.name_attribute" id="_15e9c233-acb5-a90d-3b7d-0a935d0a95e8" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.name_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.name_attribute.attribute_value" id="_7951a75f-0a50-37d3-48d6-b52b3db15fdb" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.name_attribute.attribute_value</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.role_association" id="_61d69247-778f-2108-749f-b071110f6bd5" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.role_association</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.role_association.role" id="_c0ebc9e5-c4f9-c97a-a9c4-c844e5089619" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.role_association.role</docidentifier>
+</bibitem>
+</references></bibliography>
+</metanorma>

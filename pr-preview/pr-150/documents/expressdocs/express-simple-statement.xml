@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.5.4" schema-version="v2.3.0" flavor="iso">
+<bibdata type="standard">
+<title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Fundamentals of product description and support</title>
+
+<title language="en" type="title-intro">Industrial automation systems and integration</title>
+
+<title language="en" type="title-main">Product data representation and exchange</title>
+
+<title language="en" type="title-part">Integrated generic resource: Fundamentals of product description and support</title>
+
+<title language="en" type="title-part-prefix">Part 41</title>
+
+<title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Principes de description et de support de produits</title>
+
+<title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+
+<title language="fr" type="title-main">Représentation et échange de données de produits</title>
+
+<title language="fr" type="title-part">Ressources génériques intégrées: Principes de description et de support de produits</title>
+
+<title language="fr" type="title-part-prefix">Partie 41</title>
+<docidentifier type="ISO" primary="true">ISO 10303-41:2019</docidentifier><docidentifier type="iso-reference">ISO 10303-41:2019(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-41:en</docidentifier><docidentifier type="iso-undated">ISO 10303-41</docidentifier><docidentifier type="iso-with-lang">ISO 10303-41:2019(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Technical committee" subtype="TC">
+<name>Industrial automation systems and integration</name>
+<identifier>TC 184</identifier><identifier type="full">TC 184/SC 4/WG 12</identifier></subdivision><subdivision type="Subcommittee" subtype="SC">
+<name>Industrial data</name>
+<identifier>SC 4</identifier></subdivision><subdivision type="Workgroup" subtype="WG"><identifier>WG 12</identifier></subdivision><abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="authorizer"><description>Agency</description></role><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>secretariat</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Secretariat">
+<name>ANSI</name>
+</subdivision><abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="authorizer"><description>committee</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Technical committee" subtype="TC">
+<name>Industrial automation systems and integration</name>
+<identifier>TC 184</identifier><identifier type="full">TC 184/SC 4/WG 12</identifier></subdivision><subdivision type="Subcommittee" subtype="SC">
+<name>Industrial data</name>
+<identifier>SC 4</identifier></subdivision><subdivision type="Workgroup" subtype="WG"><identifier>WG 12</identifier></subdivision><abbreviation>ISO</abbreviation></organization></contributor><edition>6</edition><language>en</language><script>Latn</script><status><stage abbreviation="IS">60</stage><substage>60</substage></status><copyright><from>2019</from><owner><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></owner></copyright><keyword><vocab>integrated generic resource</vocab></keyword><keyword><vocab>product definition</vocab></keyword><keyword><vocab>product property</vocab></keyword><keyword><vocab>measure</vocab></keyword><keyword><vocab>application context</vocab></keyword><keyword><vocab>product property representation</vocab></keyword><keyword><vocab>person</vocab></keyword><keyword><vocab>organization</vocab></keyword><keyword><vocab>experience</vocab></keyword><keyword><vocab>qualifications</vocab></keyword><keyword><vocab>location and position in organization</vocab></keyword><ext><doctype>international-standard</doctype><flavor>iso</flavor><structuredidentifier><project-number part="41">ISO 10303</project-number></structuredidentifier><stagename abbreviation="IS">International Standard</stagename></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<presentation-metadata><document-scheme>2013</document-scheme><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>3</doc-toc-heading-levels><pdf-toc-heading-levels>3</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_aa705764-de78-2c83-46a4-9e648d4472ef" anchor="boilerplate-copyright-default" inline-header="false" obligation="normative">
+<title id="_129fe8d3-7b32-3da5-a270-59bb0ef8173e">COPYRIGHT PROTECTED DOCUMENT</title>
+<p id="_bd17e37d-7be9-266b-bfab-a8520b16f3bb" anchor="boilerplate-year">© <span class="std_publisher">ISO </span><span class="date">2019</span></p>
+
+<p id="_dcd0efd0-9c2b-bcfd-6dcd-ce36b8143916" anchor="boilerplate-message">All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.</p>
+
+<p id="_9b279b29-6760-9714-7fb3-2ca2038acedf" anchor="boilerplate-address" align="left">ISO copyright office<br/> CP 401 • Ch. de Blandonnet 8<br/> CH-1214 Vernier, Geneva<br/> Phone: +41 22 749 01 11<br/> Email:  <link target="mailto:copyright@iso.org"/><br/> Website: www.iso.org</p>
+
+<p id="_93a0bcfe-1edb-b952-e8f5-db8ed91f8e23" anchor="boilerplate-place">Published in Switzerland</p>
+</clause>
+</copyright-statement>
+</boilerplate><preface><foreword id="_3890b112-6bcc-1d67-8f1e-67e8d2394067" obligation="informative">
+<title id="_41c9fad3-d4c1-eecc-4fad-f91704acc026">Foreword</title>
+<p id="_ae895acc-69ef-6bca-9cad-7d41a8406414">Some foreword.</p>
+</foreword></preface><sections>
+<clause id="_7da811e9-1751-6699-72bf-ab8d125e6c40" type="scope" inline-header="false" obligation="normative">
+<title id="_f70b6ff6-6131-0e24-81e1-850dbe94b63d">Scope</title>
+<p id="_4e3a0f29-9932-c530-05ba-6f4a861b5d99">This document describes the following EXPRESS schemas:</p>
+
+<ul id="_7577695f-0474-a576-afb5-2658e555bec3"><li><p id="_0b4e6a52-0ba4-2e8c-9286-50b31672cf3f">action_schema</p>
+</li>
+</ul>
+
+<p id="_3137c5f4-309a-f59c-3b87-973dbabc6890">And all 24 schemas at once:</p>
+
+<ul id="_46c9a421-443c-dfe6-57fc-7886c5802a61"><li><p id="_4dccb323-3e12-d4f5-5f57-0a5c6717e71d">action_schema</p>
+</li>
+<li><p id="_32195576-3965-dd43-3f8d-480ce71c901f">application_context_schema</p>
+</li>
+<li><p id="_5539d10f-f4b5-e93f-afa2-0601198ab4c6">approval_schema</p>
+</li>
+<li><p id="_8114d5aa-bffe-5198-da91-aa42c5abb667">basic_attribute_schema</p>
+</li>
+<li><p id="_134e8a56-fae5-2c14-af38-4aebe2f30b88">certification_schema</p>
+</li>
+<li><p id="_e0169968-f932-8dd7-2cdb-51a3b3f59423">contract_schema</p>
+</li>
+<li><p id="_6e3e67a2-8b60-1e69-a4ff-4b1ee4951d50">date_time_schema</p>
+</li>
+<li><p id="_62efede6-be7b-da34-5da2-d7e834cc454e">document_schema</p>
+</li>
+<li><p id="_253bd0f7-efb9-3af8-278f-c45bf7709080">effectivity_schema</p>
+</li>
+<li><p id="_38eaf54d-c861-e8a3-4855-540e5942805d">experience_schema</p>
+</li>
+<li><p id="_8cea7e24-c0ea-ce40-dbe2-0d8de68c8dc5">external_reference_schema</p>
+</li>
+<li><p id="_0aa96181-bd32-2f01-5ee5-1f24dce55374">group_schema</p>
+</li>
+<li><p id="_d7c2a33b-fefd-6a51-3d3b-3a388defda1a">language_schema</p>
+</li>
+<li><p id="_214e6fae-641a-e225-be60-cadfa91cdbf9">location_schema</p>
+</li>
+<li><p id="_cc476011-ba94-0b30-82cd-311a93f23ccb">management_resources_schema</p>
+</li>
+<li><p id="_b68823c3-95ca-318d-2715-56a6c862d04a">measure_schema</p>
+</li>
+<li><p id="_27821796-b998-a683-24da-8d01d8bfbec4">person_organization_schema</p>
+</li>
+<li><p id="_a120f1c7-0f97-b851-cc99-a4eca39d1ac5">product_definition_schema</p>
+</li>
+<li><p id="_0d00a352-6058-85b7-8bb9-0dce078a2c36">product_property_definition_schema</p>
+</li>
+<li><p id="_9900c1d2-cef2-66c1-ca4d-0852557eb673">product_property_representation_schema</p>
+</li>
+<li><p id="_3284ae3a-6824-0f33-08e8-b03b17996d68">qualifications_schema</p>
+</li>
+<li><p id="_c6f306bb-e5ee-c846-094a-55b2b81ba3cc">security_classification_schema</p>
+</li>
+<li><p id="_c8ef000f-c000-40a1-cb2d-877c4ea4c442">support_resource_schema</p>
+</li>
+</ul>
+</clause>
+
+
+
+<terms id="_629c52e2-2204-253f-68e6-b78b08939e92" obligation="normative">
+<title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_dcc01114-4d03-3550-1347-4ba901bda94c">For the purposes of this document, the following terms and definitions apply.</p><p id="_1df4aedb-297d-0c69-967f-f6a60db009d2">ISO and IEC maintain terminology databases for use in standardization at the following addresses:</p>
+
+<ul id="_e6ddc246-88cc-2222-8452-b939a5cefa0e"><li><p id="_93880b15-0e52-9141-f887-d290dce89ffd">ISO Online browsing platform: available at <link target="https://www.iso.org/obp"/></p>
+</li>
+<li><p id="_8a7ecb99-412c-1138-ae9d-76c4ac7b7d43">IEC Electropedia: available at <link target="https://www.electropedia.org"/></p>
+</li>
+</ul>
+<term id="_c37cfef8-8af4-245c-8857-8690d4ee392e" anchor="term-Test-term"><preferred><expression>
+<name>Test term</name>
+</expression>
+</preferred>
+<definition id="_1a59da2c-321a-a6a2-dd12-f9788f4d09fa"><verbal-definition id="_d2e4fedf-227f-d375-8358-2a3e03714998"><p id="_8477fbff-7197-aa99-a271-f9ea74717fd7">Test definition</p></verbal-definition></definition>
+ </term>
+</terms>
+
+<clause id="_fe9249bc-ecf2-f11f-4817-41c9d22535b8" inline-header="false" obligation="normative">
+<title id="_890b8511-a170-eed1-3ab3-3204e16f925b">Main clause</title>
+<p id="_eac0863c-de17-9890-b3a0-8c3ac119b3ed">No text for now.</p>
+</clause>
+
+
+</sections><bibliography><references id="_08e4a7cd-1a73-9a2a-4dac-fc841681bf21" normative="true" obligation="informative">
+<title id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><p id="_1e0e85f2-a241-464a-90af-046b5883d60f">There are no normative references in this document.</p>
+</references><references id="_c9a61214-1aba-536d-8901-2b704b278169" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title>
+</references></bibliography>
+</metanorma>

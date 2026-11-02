@@ -1,0 +1,2668 @@
+
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>@charset "UTF-8";
+/*
+    0 CSS RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline;
+}
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Cambria",serif;
+}
+
+code, pre, tt, kbd, samp {
+  font-family: "Courier New",monospace;
+  font-variant-ligatures: none;
+}
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Courier New",monospace !important;
+  font-variant-ligatures: none;
+}
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 0.8em;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cambria",serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Cambria",serif;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+.h2Annex {
+  font-family: "Cambria",serif;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
+
+dl:has(dt .stem) {
+  grid-template-columns: fit-content(8em) auto;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333;
+}
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
+  vertical-align: super;
+}
+
+a.TableFootnoteRef, a.FootnoteRef, a.footnote-number,
+sup a, a:has(> sup) {
+  vertical-align: baseline;
+}
+
+.addition {
+  color: blue;
+}
+
+.deletion {
+  color: red;
+  text-decoration: line-through;
+}
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before;
+}
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after;
+}
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em;
+}
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%;
+}
+
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
+
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
+
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
+
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
+
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
+
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+/* style dfn by override in flavor */
+dfn {
+  font-style: inherit;
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
+
+#guide-band {
+  background-color: #D183C9;
+}
+
+#guide {
+  border-bottom: solid 3px #D183C9;
+}
+
+#specification-band {
+  background-color: #65AFFF;
+}
+
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
+
+#report-band {
+  background-color: #3A405A;
+}
+
+#report {
+  border-bottom: solid 3px #3A405A;
+}
+
+#amendment-band {
+  background-color: #F26430;
+}
+
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
+
+#corrigendum-band {
+  background-color: #C84630;
+}
+
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
+
+#administrative-band {
+  background-color: #BFAE48;
+}
+
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
+
+#advisory-band {
+  background-color: #BD9391;
+}
+
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
+
+#proposal-band {
+  background-color: #39A0ED;
+}
+
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
+
+#working-draft-band {
+  background-color: #2D7393;
+}
+
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
+
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
+
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
+
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
+
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: -internal-root-color;
+  background-color: #ffffff;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body main {
+  margin: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.3;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: "";
+  content: none;
+}
+
+/* New CSS */
+body {
+  margin-left: 298px;
+  margin-right: 2em;
+}
+
+main {
+  padding-left: 4em;
+  padding-right: 2em;
+}
+
+.title-section, .prefatory-section {
+  padding-left: 4em;
+  padding-top: 2em;
+}
+
+.coverpage_docnumber, .coverpage_techcommittee {
+  text-align: right;
+  font-size: 0.9em;
+  line-height: 0.5em;
+}
+
+.doctitle-en, .doctitle-fr {
+  margin-top: 2em;
+  text-align: left;
+}
+
+.doctitle-en {
+  padding-left: 3em;
+  margin-left: -3em;
+  /*padding-top: 2em;*/
+  padding-bottom: 2em;
+}
+
+.doctitle-en span {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+.doctitle-fr span {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  font-style: italic;
+}
+
+.doctitle-part {
+  margin-top: 1em;
+}
+
+span.title, span.subtitle, span.part {
+  font-weight: 800;
+}
+
+span.partlabel {
+  display: block;
+}
+
+.coverpage_docstage {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.coverpage_warning {
+  font-size: 0.9em;
+  font-style: italic;
+  padding-bottom: 1em;
+}
+
+.boilerplate-copyright p {
+  margin-top: 1em;
+  display: block;
+  font-size: 0.9em;
+}
+
+/* TYPOGRAPHY */
+h1, .h1 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+h2, .h2 {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.2;
+}
+
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+p.zzSTDTitle1 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+p.zzSTDTitle2 {
+  font-size: 1.5em;
+}
+
+span.obligation {
+  font-weight: 400;
+}
+
+a {
+  color: black;
+  text-decoration-color: black;
+}
+
+h2 p, .h2 p {
+  display: inline;
+}
+
+ul > li {
+  list-style: none;
+}
+
+ul > li > p:first-child::before {
+  content: "—";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+}
+
+li p {
+  margin-bottom: 0.6em;
+  line-height: 1.2;
+}
+
+p.AltTerms {
+  margin-bottom: 0;
+}
+
+p.Terms {
+  margin-top: 0em;
+}
+
+/* Navigation*/
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: black;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #f7f7f7;
+  box-shadow: inset -5px 0px 10px -5px #f7f7f7 !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: black;
+}
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+#toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  font-family: "Cambria",serif;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: 0px 1px 0px 0px black !important;
+  background: none;
+}
+#toc li::before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li::before {
+  content: " ";
+  display: none;
+}
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 278px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 20px;
+    background-color: #f7f7f7;
+  }
+}
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white;
+  }
+}
+nav {
+  line-height: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #f7f7f7;
+    color: black !important;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    z-index: 103;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none;
+  }
+}
+@media print {
+  #toggle {
+    display: none;
+  }
+}
+#toggle {
+  border-right: solid black 1px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 360px;
+  }
+  .rule.toc {
+    display: none;
+  }
+  h1.toc-contents {
+    margin-top: 1em;
+  }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    margin-left: 2em;
+  }
+  main {
+    padding: 0;
+  }
+  .title-section, .prefatory-section {
+    padding-left: 0;
+    padding-top: 0;
+    width: 100%;
+  }
+}
+figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure,
+pre,
+.pseudocode {
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+  font-size: 1.0em;
+}
+
+figure figcaption {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure > img, figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+}
+
+table figure {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+    Document types + stages
+*/
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
+.document-stage-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 100%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+p.document-stage {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 210px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+  writing-mode: vertical-rl;
+}
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important;
+}
+
+p.document-stage {
+  font-weight: 300;
+  height: 160px;
+}
+
+#standard-band {
+  background-color: #0ac442;
+}
+
+#standard {
+  border-bottom: solid 3px #0ac442;
+}
+
+#governance {
+  border-bottom: solid 3px #750697;
+}
+
+#governance-band {
+  background-color: #750697;
+}
+
+#guide {
+  border-bottom: solid 3px #48a0e7;
+}
+
+#guide-band {
+  background-color: #48a0e7;
+}
+
+.coverpage-maturity {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase;
+}
+
+#working-draft {
+  border-bottom: solid 3px #fda706;
+}
+
+#working-draft-band {
+  background-color: #fda706;
+}
+
+#committee-draft {
+  border-bottom: solid 3px #fd06fd;
+}
+
+#committee-draft-band {
+  background-color: #fd06fd;
+}
+
+#draft-standard {
+  border-bottom: solid 3px #fdf906;
+}
+
+#draft-standard {
+  border-bottom: solid 3px #fdf906;
+}
+
+#standard {
+  border-bottom: solid 3px #0ac442;
+}
+
+#standard-band {
+  background-color: #0ac442;
+}
+
+#obsolete {
+  border-bottom: solid 3px #7e0d13;
+}
+
+#obsolete-band {
+  background-color: #7e0d13;
+}
+
+/* 3 Other styles */
+/*
+  3.2 Links
+*/
+a {
+  color: black;
+  text-decoration-color: black;
+}
+
+/*
+    3.3 Lists
+*/
+ul, ol {
+  margin-left: 2em;
+}
+
+#toc-list ul {
+  margin-bottom: 0.25em;
+}
+
+#toc-list ol li {
+  list-style-type: none;
+}
+
+/* https://github.com/metanorma/metanorma-iso/issues/319 : force a) parentheses for ordered lists */
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
+
+ol[class=arabic] {
+  counter-reset: arabic;
+}
+
+ol[class=roman] {
+  counter-reset: roman;
+}
+
+ol[class=alphabet_upper] {
+  counter-reset: alphabet_upper;
+}
+
+ol[class=roman_upper] {
+  counter-reset: roman_upper;
+}
+
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: alphabet2;
+}
+
+ol[class=arabic] ol[class=arabic] {
+  counter-reset: arabic2;
+}
+
+ol[class=roman] ol[class=roman] {
+  counter-reset: roman2;
+}
+
+ol[class=alphabet_upper] ol[class=alphabet_upper] {
+  counter-reset: alphabet_upper2;
+}
+
+ol[class=roman_upper] ol[class=roman_upper] {
+  counter-reset: roman_upper2;
+}
+
+ol {
+  counter-reset: alphabet;
+}
+
+ol > li {
+  list-style: none;
+  position: relative;
+}
+
+ol > li::before {
+  position: absolute;
+  left: -1.4em;
+}
+
+ol[class=roman] > li::before {
+  left: -2em;
+}
+
+ol[class=roman_upper] > li::before {
+  left: -2.3em;
+}
+
+ol[class=alphabet] > li::before {
+  counter-increment: alphabet;
+  content: counter(alphabet, lower-alpha) ") ";
+}
+
+ol[class=arabic] > li::before {
+  counter-increment: arabic;
+  content: counter(arabic, decimal) ") ";
+}
+
+ol[class=roman] > li::before {
+  counter-increment: roman;
+  content: counter(roman, lower-roman) ") ";
+}
+
+ol[class=alphabet_upper] > li::before {
+  counter-increment: alphabet_upper;
+  content: counter(alphabet_upper, upper-alpha) ") ";
+}
+
+ol[class=roman_upper] > li::before {
+  counter-increment: roman_upper;
+  content: counter(roman_upper, upper-roman) ") ";
+}
+
+ol > li::before {
+  counter-increment: alphabet;
+  content: counter(alphabet, lower-alpha) ") ";
+}
+
+ol[class=alphabet] ol[class=alphabet] > li::before {
+  counter-increment: alphabet2;
+  content: counter(alphabet2, lower-alpha) ") ";
+}
+
+ol[class=arabic] ol[class=arabic] > li::before {
+  counter-increment: arabic2;
+  content: counter(arabic2, decimal) ") ";
+}
+
+ol[class=roman] ol[class=roman] > li::before {
+  counter-increment: roman2;
+  content: counter(roman2, lower-roman) ") ";
+}
+
+ol[class=alphabet_upper] ol[class=alphabet_upper] > li::before {
+  counter-increment: alphabet_upper2;
+  content: counter(alphabet_upper2, upper-alpha) ") ";
+}
+
+ol[class=roman_upper] ol[class=roman_upper] > li::before {
+  counter-increment: roman_upper2;
+  content: counter(roman_upper2, upper-roman) ") ";
+}
+
+/*
+3.4 Rules
+*/
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0;
+}
+
+/*
+3.5 Bibliograhy
+*/
+p.Biblio, p.NormRef, div.Biblio, div.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.Biblio.note, .Biblio.Note, .NormRef.note, .NormRef.Note {
+  margin-left: 3.5em;
+}
+
+/*
+3.6 Source Code + figures
+*/
+figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure,
+pre,
+.pseudocode {
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+  font-size: 1.0em;
+}
+
+pre {
+  font-family: "Courier New",monospace;
+  font-variant-ligatures: none;
+}
+
+.AdmonitionTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left;
+}
+
+figcaption, .SourceTitle, .AdmonitionTitle, .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*
+3.7 Notes
+*/
+.Note, .note {
+  background-color: #fff495;
+  color: #47430c;
+  padding: 0.5em;
+  margin: 1.5em 0 1.5em 0;
+  text-align: left;
+}
+
+.Note p, .note p {
+  margin: 0;
+}
+
+.Admonition {
+  background-color: #ffcccc;
+  color: #47430c;
+  padding: 0.5em;
+  margin: 1.5em 0 1.5em 0;
+  text-align: left;
+}
+
+.Admonition p {
+  margin: 0;
+}
+
+div.Admonition.AdmonitionEditorial {
+  color: green;
+  background-color: white;
+}
+
+/*
+3.8 Examples
+*/
+.example {
+  background-color: #e1eef1;
+  padding: 0.5em;
+  margin: 2em 0 1em 0;
+  text-align: left;
+}
+.example p {
+  margin: 0;
+}
+.example {
+  color: #424242;
+  padding-left: 2em;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example {
+  color: black;
+  padding-left: 0.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
+
+/*
+3.9 Tables
+*/
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
+table table.plain, table table.plain th, table table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+
+td,
+th {
+  padding: 1em !important;
+}
+
+table.rouge-line-table td, table.rouge-line-table th {
+  padding: 0em !important;
+}
+
+td > p:first-child, th > p:first-child {
+  margin-top: 0em;
+}
+
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0em;
+}
+
+table > caption {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.TableFootnote {
+  text-align: left !important;
+}
+
+/*
+table.modspec {
+  @include table($border: none !important);
+  text-align: left;
+
+  color: #010d16;
+
+  tr:nth-child(even) {
+    background: #ffffff
+  }
+  tr:nth-child(odd) {
+    background: #ffffff
+  }
+
+  thead tr th {
+    background-color: #5d99d6;
+  }
+
+  td, th {
+    padding: 1em;
+  }
+
+  td.header {
+    font-weight: 400;
+  }
+}
+*/
+/*
+3.10 Footnotes
+*/
+a.footnote-number, a.TableFootnoteRef, span.TableFootnoteRef {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+.footnote {
+  font-size: 0.9em;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+#footnote_box {
+  font-size: 0.9em;
+  background: white;
+  padding: 0 10px;
+  margin: 10px;
+  border: 1px solid #888;
+  -moz-box-shadow: 0px 0px 5px #888;
+  -webkit-box-shadow: 0px 0px 5px #888;
+  box-shadow: 0px 0px 5px #888;
+}
+
+ol.footnotes-list, aside.footnote {
+  margin-left: 1em;
+}
+
+ol.footnotes-list li, aside.footnote {
+  font-size: 0.9em;
+  vertical-align: top;
+  list-style: decimal;
+  margin-bottom: 1em;
+}
+
+ol.footnotes-list:first-child {
+  margin-top: 2em;
+}
+
+ol.footnotes-list p, aside.footnote p {
+  display: inline;
+}
+
+ol > li > p::before {
+  content: "";
+  display: none;
+}
+
+/*
+3.11 Blockquotes
+*/
+.Quote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Quote .Quote {
+  margin-top: 0px;
+}
+
+.Quote .h1,
+.Quote .h2,
+.Quote .h3,
+.Quote .h4,
+.Quote .h5,
+.Quote .h6 {
+  margin-top: 0px;
+}
+
+/*
+3.12 Formulas
+*/
+.formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.formula_dl {
+  background-color: #f7f7f7;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/*
+Keywords
+*/
+span.keyword {
+  font-weight: 600;
+}
+
+.Admonition, .admonition {
+  background-color: #ffb3b3;
+  /* color: #47430c;*/
+  padding: 0.5em;
+  margin: 1.5em 0 1.5em 0;
+  text-align: left;
+}
+
+.Admonition p, .admonition p {
+  margin: 0;
+}
+
+/* Collapse TOC */
+.collapse-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.collapse-button {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml,<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="rgba(0,0,0,.54)" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg>');
+}
+
+.collapse {
+  display: none;
+}
+
+.expand {
+  transform: rotateZ(-180deg);
+}
+</style><style>pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+</style><title>Industrial automation systems and integration — Product data representation and exchange — Part 1: Basic stuff</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet" />
+
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+</head><body lang="en" xml:lang="en"><div class="title-section"><div id="toggle"> <span>•</span> </div>
+
+    
+<p class="coverpage_docnumber">10446</p>
+    
+    
+
+
+<p class="coverpage_docnumber">Sixth edition</p>
+
+
+
+
+
+
+
+<p class="coverpage_docnumber">ISO 10303-1 </p>
+
+
+<p class="coverpage_techcommittee">TC 184/SC 4/WG 12</p>
+
+
+<p class="coverpage_techcommittee"><a name="CVP_Secretariat_Loca" id="CVP_Secretariat_Loca">Secretariat</a>: ANSI</p>
+
+
+<div class="doctitle-en"><div><span class="title">Industrial automation systems and integration — </span><span class="subtitle">Product data representation and exchange —</span>
+  
+</div><div class="doctitle-part">
+  <span class="partlabel">Part 1: </span>
+  <span class="part">Basic stuff</span>
+  
+  
+</div>
+
+
+
+
+
+</div>
+
+<div class="doctitle-fr"><div><span class="title">Systèmes d’automatisation industrielle et intégration — </span><span class="subtitle">Représentation et échange de données de produits —</span>
+  
+  </div><div>
+  <span class="partlabel">Partie 1: </span>
+  <span class="part">Chose basiques</span>
+  
+  
+</div>
+
+
+
+</div>
+
+<div class="coverpage_docstage">
+  
+</div>
+
+
+<div class="coverpage_warning">
+  <div id="boilerplate-license-destination"></div>
+</div>
+
+
+
+
+
+
+<p><b>Descriptors:</b> integrated generic resource, product definition, product property, measure, application context, product property representation, person, organization, experience, qualifications, location and position in organization
+
+
+
+
+</p></div><br /><div class="prefatory-section"><div class="boilerplate-copyright">
+
+<div id="boilerplate-copyright-default"><h1 class="IntroTitle"><a class="anchor" href="#boilerplate-copyright-default"></a><a class="header" href="#boilerplate-copyright-default">COPYRIGHT PROTECTED DOCUMENT</a></h1>
+
+<p id="boilerplate-year">© <span class="std_publisher">ISO </span><span class="date">2019</span></p>
+
+<p id="boilerplate-message">All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.</p>
+
+<p id="boilerplate-address" style="text-align:left;">ISO copyright office<br /> CP 401 • Ch. de Blandonnet 8<br /> CH-1214 Vernier, Geneva<br /> Phone: +41 22 749 01 11<br /> Email:  <a href="mailto:copyright@iso.org">copyright@iso.org</a><br /> Website: www.iso.org</p>
+
+<p id="boilerplate-place">Published in Switzerland</p>
+</div>
+</div>
+
+<nav>
+
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_431c8455-570a-4a31-bc75-e19811fda77f">      
+  
+  Foreword
+</a></li>
+<li class="h1"><a href="#_78b39cfb-b351-460c-a786-3ba539da1b82">      
+  
+  1  Scope
+</a></li>
+<li class="h1"><a href="#_917fdd28-7149-4b83-a339-45740b8e0fbe">      2  Normative references</a></li>
+<li class="h1"><a href="#_182f9ed9-572f-4bde-a889-3784d6d4aa07">      
+  
+  3  Terms and definitions
+</a></li>
+<li class="h1"><a href="#_9f93ef6c-9f01-4f28-b2f9-df7e86b3f1d6">      
+  
+  4  Two different schemas in the separate block (basic_attribute_schema, support_resource_schema)
+</a></li>
+<li class="h1"><a href="#_25561f90-e85f-459f-9eb5-6c8c53245269">      
+  
+  5  Schemas
+</a></li>
+<li class="h1"><div class="collapse-group"><a href="#_381560e2-2814-449e-85d0-0d74fa7803ed">
+  
+  6  basic_attribute_schema
+</a>
+<div class="collapse-button"></div></div><ul class="content collapse"><li class="h2">
+  <a href="#_30e78d5d-aab5-4b7c-adbf-67d03f6bc9c1">      
+  
+  6.1  General
+</a>
+</li><li class="h2"><a href="#_092f055b-b938-4be8-a58c-8049fe34e49f">      
+  
+  6.2  Fundamental concepts and assumptions
+</a></li><li class="h2"><a href="#_3cf12c14-f347-4479-98a6-0cb43902e36a">      
+  
+  6.3  basic_attribute_schema type definitions
+</a></li><li class="h2"><a href="#_a8552d56-4601-4f89-9c3e-24184653ce9c">      
+  
+  6.4  basic_attribute_schema entity definitions
+</a></li><li class="h2"><a href="#_72a45d1f-4375-48bd-8156-ec615c86ea9c">      
+  
+  6.5  basic_attribute_schema function definitions
+</a></li></ul></li>
+
+
+
+
+
+
+<li class="h1"><div class="collapse-group"><a href="#_7933eb02-34c5-4ef6-bf25-4a9f899bec47">
+  
+  7  support_resource_schema
+</a>
+<div class="collapse-button"></div></div><ul class="content collapse"><li class="h2">
+  <a href="#_8c9d98a1-75b9-400f-82b7-b008b9c9eec3">      
+  
+  7.1  General
+</a>
+</li><li class="h2"><a href="#_c964052f-8a53-49e3-9bd4-a521eeba7fcb">      
+  
+  7.2  Fundamental concepts and assumptions
+</a></li><li class="h2"><a href="#_49627929-f66b-44cf-8063-b70f16afe4e5">      
+  
+  7.3  support_resource_schema type definitions
+</a></li><li class="h2"><a href="#_c832439c-d120-444f-a29d-9f5f9352223f">      
+  
+  7.4  support_resource_schema function definitions
+</a></li></ul></li>
+
+
+
+
+</ul></div>
+
+</nav>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
+</div><br /><br /><div id="_0ee2d3c3-6880-4c7c-0a0d-79231f94f799"><h1 class="ForewordTitle" id="_431c8455-570a-4a31-bc75-e19811fda77f"><a class="anchor" href="#_0ee2d3c3-6880-4c7c-0a0d-79231f94f799"></a><a class="header" href="#_0ee2d3c3-6880-4c7c-0a0d-79231f94f799">Foreword</a></h1><p id="_214b535e-379a-a65f-87a6-1a0a4fcf28bb">Foreword.</p></div><p class="zzSTDTitle1"><span class="boldtitle">Industrial automation systems and integration — Product data representation and exchange — </span><span class="nonboldtitle">Part 1:</span><span class="boldtitle">Basic stuff</span></p><div id="_518f07ca-e040-523f-dd94-ac3463f37092"><h1 id="_78b39cfb-b351-460c-a786-3ba539da1b82"><a class="anchor" href="#_518f07ca-e040-523f-dd94-ac3463f37092"></a><a class="header" href="#_518f07ca-e040-523f-dd94-ac3463f37092">1  Scope</a></h1><p id="_8fd3cacc-7522-a0af-6dc4-0a78e66b26f3">Scope.</p></div><div><h1 id="_917fdd28-7149-4b83-a339-45740b8e0fbe">2  Normative references</h1>
+<p id="_1e0e85f2-a241-464a-90af-046b5883d60f">There are no normative references in this document.</p>
+</div><div id="_629c52e2-2204-253f-68e6-b78b08939e92"><h1 id="_182f9ed9-572f-4bde-a889-3784d6d4aa07"><a class="anchor" href="#_629c52e2-2204-253f-68e6-b78b08939e92"></a><a class="header" href="#_629c52e2-2204-253f-68e6-b78b08939e92">3  Terms and definitions</a></h1><p id="_dcc01114-4d03-3550-1347-4ba901bda94c">For the purposes of this document, the following terms and definitions apply.</p><p id="_1df4aedb-297d-0c69-967f-f6a60db009d2">ISO and IEC maintain terminology databases for use in standardization at the following addresses:</p><div class="ul_wrap"><ul id="_e6ddc246-88cc-2222-8452-b939a5cefa0e"><li id="_01c42259-6512-2b50-0a8b-163e53dacc2d"><p id="_93880b15-0e52-9141-f887-d290dce89ffd">ISO Online browsing platform: available at <a href="https://www.iso.org/obp">https://www.iso.org/obp</a></p>
+</li>
+<li id="_67773aa8-9043-8351-657b-25ca152b61c0"><p id="_8a7ecb99-412c-1138-ae9d-76c4ac7b7d43">IEC Electropedia: available at <a href="https://www.electropedia.org">https://www.electropedia.org</a></p>
+</li>
+</ul></div><div id="term-Test-term"><h2 class="TermNum" id="_aade6d73-4eaf-4d76-af47-18ef2de9987a"><a class="anchor" href="#term-Test-term"></a><a class="header" href="#term-Test-term">3.1</a></h2></div><p class="Terms" style="text-align:left;"><b><dfn>Test term</dfn></b></p>
+<p id="_8477fbff-7197-aa99-a271-f9ea74717fd7">Test definition</p>
+ </div><div id="_48dea77e-8415-0631-0d03-9476cdbe1ed3"><h1 id="_9f93ef6c-9f01-4f28-b2f9-df7e86b3f1d6"><a class="anchor" href="#_48dea77e-8415-0631-0d03-9476cdbe1ed3"></a><a class="header" href="#_48dea77e-8415-0631-0d03-9476cdbe1ed3">4  Two different schemas in the separate block (basic_attribute_schema, support_resource_schema)</a></h1></div><div id="_7057db2f-5d5e-5e59-8e82-c6debc2fcb71"><h1 id="_25561f90-e85f-459f-9eb5-6c8c53245269"><a class="anchor" href="#_7057db2f-5d5e-5e59-8e82-c6debc2fcb71"></a><a class="header" href="#_7057db2f-5d5e-5e59-8e82-c6debc2fcb71">5  Schemas</a></h1></div><div id="basic_attribute_schema"><h1 id="_381560e2-2814-449e-85d0-0d74fa7803ed"><a class="anchor" href="#basic_attribute_schema"></a><a class="header" href="#basic_attribute_schema">6  basic_attribute_schema</a></h1><div id="_9d71dcf4-b3f8-19bd-f61a-f4fbe014db54"><h2 id="_30e78d5d-aab5-4b7c-adbf-67d03f6bc9c1"><a class="anchor" href="#_9d71dcf4-b3f8-19bd-f61a-f4fbe014db54"></a><a class="header" href="#_9d71dcf4-b3f8-19bd-f61a-f4fbe014db54">6.1  General</a></h2>
+
+<p id="_1b9e7cd7-5cdd-b5c9-91c9-a349c7e4f7e1">The subject of the <b>basic_attribute_schema</b> is the assignment of id, name, description and role attributes to aspects of product data. This schema defines the mechanism to define a value for these attributes and associate it with product data.</p><div id="_2caa7e7c-6b6b-5aa9-300f-02127095869f" class="Note"><p><span class="note_label">NOTE 1  </span>The concepts defined in this schema do not provide a generic capability to associate an identification, a name, a description, or a role to product data. They are applied, in order to ensure upward compatibility, in the case where a requirement to add one or more of these kinds of attributes to a particular entity data type has been identified during the revision or amendment process of the standard document in which this entity data type is defined.</p></div><div id="_ca0de5e9-6b0c-323a-ece6-3b39c996808a" class="Note"><p><span class="note_label">NOTE 2  </span>The associated entities are defined in ISO 10303-41, ISO 10303-43 and ISO 10303-44.</p></div>
+
+
+
+
+
+<p id="_a1d858b9-a8c7-326e-1cc4-7c5772039daf"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_56c307db-8b2e-5726-6894-23bba523bf1a" class="sourcecode" spellcheck="false" translation="no"><pre>SCHEMA basic_attribute_schema '{iso standard 10303 part(41) version(9) object(1) basic_attribute_schema(4)}';<br /><br />REFERENCE FROM support_resource_schema<br />  (identifier,<br />   label,<br />   text);</pre></figure>
+
+</div><div id="basic_attribute_schema."><h2 id="_092f055b-b938-4be8-a58c-8049fe34e49f"><a class="anchor" href="#basic_attribute_schema."></a><a class="header" href="#basic_attribute_schema.">6.2  Fundamental concepts and assumptions</a></h2>
+
+<p id="_8c952b09-a814-9a5a-990e-386d0e8fdcef">The following concepts are supported by this schema:</p>
+
+<div class="ul_wrap"><ul id="_fd8e7ed4-c209-6cea-ab90-119a13a639fb"><li id="_6e794e9b-cd5e-643d-0178-0295bd1a176f"><p id="_87d89048-eeec-4a8a-b9f3-71e032465236">the assignment of an identifier to product data;</p>
+</li>
+<li id="_374886b9-dfaf-696d-ff06-fdd90946cf61"><p id="_01aee773-aa3e-f6b3-fcf1-9cd09e924b3f">the assignment of a label to product data;</p>
+</li>
+<li id="_68dd8862-d33b-cea1-fcfd-63e3bc7d851e"><p id="_d6b23de3-da87-7afe-e016-4e258b96f438">the assignment of a descriptive text to product data;</p>
+</li>
+<li id="_916f858b-ac8e-f1d5-7bb3-59c622687277"><p id="_2c6654b1-a822-e49f-9bc3-116c72025b88">the assignment of a role to an association of management type data with other aspects of product data.</p>
+</li>
+</ul></div>
+
+<p id="_83e6d4a6-ed68-6518-d9ce-ee3f5b51bf48">The assignment of an identifier corresponds to the <b>id_attribute</b> entity data type. The entities to which an identifier may be assigned are specified in the <b>id_attribute_select</b> data type. These entities have a derived attribute <b>id</b>. The corresponding identifier value is provided by the <b>get_id_value</b> function. A constraint ensures that there is at most one instance of <b>id_attribute</b> assigned to an instance of an entity in the <b>id_attribute_select</b> type.</p>
+
+<p id="_faacce0c-151f-cfb3-1932-bb2bfcd20bcb">The assignment of a name corresponds to the <b>name_attribute</b> entity data type. The entities to which a name may be assigned are specified in the <b>name_attribute_select</b> data type. These entities have a derived attribute name. The corresponding label value is provided by the <b>get_name_value</b> function. A constraint ensures that there is at most one instance of <b>name_attribute</b> assigned to an instance of an entity in the <b>name_attribute_select</b> type.</p>
+
+<p id="_623ac8c2-933e-0335-c624-744db49ef9da">The assignment of a descriptive text corresponds to the <b>description_attribute</b> entity data type. The entities to which a description may be assigned are specified in the <b>description_attribute_select</b> data type. These entities have a derived attribute description. The corresponding text value is provided by the <b>get_description_value</b> function. A constraint ensures that there is at most one instance of <b>description_attribute</b> assigned to an instance of an entity in the <b>description_attribute_select</b> type.</p>
+
+<p id="_400a8d86-68eb-97f2-4488-86a97a3b67b5">The assignment of a role corresponds to the <b>role_association</b> entity data type. The entities to which a role may be assigned are specified in the <b>role_select</b> data type. These entities have a derived attribute role. The corresponding <b>object_role</b> is provided by the <b>get_role</b> function. A constraint ensures that there is at most one instance of <b>role_association</b> assigned to an instance of an entity in the <b>role_select</b> type.</p>
+</div><div id="basic_attribute_schema.types"><h2 id="_3cf12c14-f347-4479-98a6-0cb43902e36a"><a class="anchor" href="#basic_attribute_schema.types"></a><a class="header" href="#basic_attribute_schema.types">6.3  basic_attribute_schema type definitions</a></h2>
+
+<div id="basic_attribute_schema.description_attribute_select"><h3><a class="anchor" href="#basic_attribute_schema.description_attribute_select"></a><a class="header" href="#basic_attribute_schema.description_attribute_select">6.3.1  description_attribute_select</a></h3>
+
+<p id="_08c696ca-32c5-118e-e0c8-15261acd402e">A <b>description_attribute_select</b> specifies those objects that may be assigned a descriptive text.</p>
+
+<p id="_be2e4d5f-a890-2710-c1ad-517315b1da5e"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_9813b7e4-3075-f7d9-5af0-43548a87c2b8" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE description_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;<br />END_TYPE;</pre></figure>
+
+</div>
+
+<div id="basic_attribute_schema.generic_attribute_list_select"><h3><a class="anchor" href="#basic_attribute_schema.generic_attribute_list_select"></a><a class="header" href="#basic_attribute_schema.generic_attribute_list_select">6.3.2  generic_attribute_list_select</a></h3>
+
+<p id="_37bc2fa9-6335-12f3-403e-08edb27d2856">A <b>generic_attribute_list_select</b> specifies those objects that may be assigned a generic attribute list.</p>
+
+<p id="_f1c73e38-4a74-558b-0e1b-501ed382636f"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_1f4eaafb-06d6-7d75-6a0f-314755bdd606" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE generic_attribute_list_select = EXTENSIBLE GENERIC_ENTITY SELECT;<br />END_TYPE;</pre></figure>
+
+</div>
+
+<div id="basic_attribute_schema.generic_attribute_select"><h3><a class="anchor" href="#basic_attribute_schema.generic_attribute_select"></a><a class="header" href="#basic_attribute_schema.generic_attribute_select">6.3.3  generic_attribute_select</a></h3>
+
+<p id="_684c78ac-c1ac-c23a-0940-924fe3a53b0b">A <b>generic_attribute_select</b> specifies those objects that may be assigned a generic attribute.</p>
+
+<p id="_88d2c171-4184-56f5-0a3f-a7013c742575"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_fdcab5d4-2d8d-deb6-5681-70de0c2c4106" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE generic_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;<br />END_TYPE;</pre></figure>
+
+</div>
+
+<div id="basic_attribute_schema.id_attribute_select"><h3><a class="anchor" href="#basic_attribute_schema.id_attribute_select"></a><a class="header" href="#basic_attribute_schema.id_attribute_select">6.3.4  id_attribute_select</a></h3>
+
+<p id="_f81f178b-a0fc-349d-7bef-5b40b0566481">An <b>id_attribute_select</b> specifies those objects that may be assigned an identifier.</p>
+
+<p id="_00a04f85-81b4-84da-4da6-3e7bc62c5e58"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_efd9c69b-3db7-c176-5658-c3283fbb278a" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE id_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;<br />END_TYPE;</pre></figure>
+
+</div>
+
+<div id="basic_attribute_schema.name_attribute_select"><h3><a class="anchor" href="#basic_attribute_schema.name_attribute_select"></a><a class="header" href="#basic_attribute_schema.name_attribute_select">6.3.5  name_attribute_select</a></h3>
+
+<p id="_a0bd36f7-bfdd-4d82-ff42-cbaf7291b1e4">A <b>name_attribute_select</b> specifies those objects that may be assigned a name.</p>
+
+<p id="_a636922e-b0fe-fb45-47fe-edc5386d11f4"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_98b74ed7-00ec-5359-2262-b7270bbec60b" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE name_attribute_select = EXTENSIBLE GENERIC_ENTITY SELECT;<br />END_TYPE;</pre></figure>
+
+</div>
+
+<div id="basic_attribute_schema.role_select"><h3><a class="anchor" href="#basic_attribute_schema.role_select"></a><a class="header" href="#basic_attribute_schema.role_select">6.3.6  role_select</a></h3>
+
+<p id="_64d73175-1ee9-5089-caa8-3350493cce01">A <b>role_select</b> specifies those objects that may be assigned a role.</p>
+
+<p id="_63228fc1-d7fc-3104-1047-84bcdf88d035"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_9d5d7082-212a-39fd-362a-7c24f82a2c0e" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE role_select = EXTENSIBLE GENERIC_ENTITY SELECT;<br />END_TYPE;</pre></figure>
+
+</div>
+</div><div id="basic_attribute_schema.entities"><h2 id="_a8552d56-4601-4f89-9c3e-24184653ce9c"><a class="anchor" href="#basic_attribute_schema.entities"></a><a class="header" href="#basic_attribute_schema.entities">6.4  basic_attribute_schema entity definitions</a></h2>
+
+<div id="basic_attribute_schema.aggregate_id_attribute"><h3><a class="anchor" href="#basic_attribute_schema.aggregate_id_attribute"></a><a class="header" href="#basic_attribute_schema.aggregate_id_attribute">6.4.1  aggregate_id_attribute</a></h3>
+
+<p id="_e2ce9dff-8a89-c236-204b-cfd67995dcab">An <b>aggregate_id_attribute</b> is used for the case where there is more than one product data element for a specific identifier.</p><div id="_9cf5c102-47d2-2dc6-1487-fb2dcdcbec92" class="Note"><p><span class="note_label">NOTE 1  </span>This entity provides the capability to add an aggregate id attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-43:1994.</p></div>
+
+
+
+<p id="_a1263716-dc55-1823-d192-d583623a4217"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_ee74e8ac-5995-e9a9-50e9-d22e2a6e2176" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY aggregate_id_attribute;<br />  attribute_value : identifier;<br />  identified_item : SET [1:?] OF id_attribute_select;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_32ecffab-366e-0614-e652-1738055eb037"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_a5cd8abe-f05f-4528-9554-76cca04c8b74"><dt><b>attribute_value</b></dt><dd id="_0291f3c6-d4e7-9df6-2f0b-102c0d3c9c56"><p id="_55c9bbad-2497-ac4a-332c-0019d4df0c85">the <a href="#express_support_resource_schema.identifier">identifier</a> that distinguishes the <b>identified_item</b>.</p>
+</dd></dl><div id="_e575ccdd-1b2e-000d-e189-ccbacc7ccee2" class="Note"><p><span class="note_label">NOTE 2  </span>The context in which <b>attribute_value</b> is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.</p></div></div>
+
+
+
+<div class="figdl"><dl id="_2c221022-f8cc-e417-dd9b-3d4fbfb93a60"><dt><b>identified_item</b></dt><dd id="_ed3c38e8-2190-fd97-2f65-502d93911608"><p id="_432e3b1f-e9ce-0bed-6492-1beb6d21bcfe">the collection of items that are identified.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.description_attribute"><h3><a class="anchor" href="#basic_attribute_schema.description_attribute"></a><a class="header" href="#basic_attribute_schema.description_attribute">6.4.2  description_attribute</a></h3>
+
+<p id="_17b89741-69ed-2cbe-359a-5a42341d658a">A <b>description_attribute</b> is the assignment of a descriptive text string to product data.</p><div id="_f7eb5c8e-0f4f-e68e-9a68-1d776ebffbbd" class="Note"><p><span class="note_label">NOTE  </span>This entity provides the capability to add a description attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.</p></div>
+
+
+
+<p id="_84c7cbee-f9fa-620d-ca59-42c57d0dcae9"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_c380029a-1efb-036b-dbd6-56816198941a" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY description_attribute;<br />  attribute_value : text;<br />  described_item : description_attribute_select;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_7f136060-9229-2d38-13a9-6ac85451346f"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_74062be8-e0f9-8ed6-7854-82a875279e20"><dt><b>attribute_value</b></dt><dd id="_bd539f6a-130b-746b-7665-282f57c90906"><p id="_3ebabc97-b8c6-85c3-7c99-72cfc9ba05f5">the <a href="#express_support_resource_schema.text">text</a> that characterizes the <b>described_item</b>.</p>
+</dd><dt><b>described_item</b></dt><dd id="_fe0c4032-0dbb-d0af-2df3-410d435c8375"><p id="_327d66dd-ef5f-c20f-71e6-92fd4b704ca1">the item that is described.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.generic_attribute"><h3><a class="anchor" href="#basic_attribute_schema.generic_attribute"></a><a class="header" href="#basic_attribute_schema.generic_attribute">6.4.3  generic_attribute</a></h3>
+
+<p id="_e5d2cce4-38b0-94d4-b7cf-53a0641f5501">A <b>generic_attribute</b> is the declaration of a named attribute as a text string to enable it to be associated with product data. This capability shall not be used to replace more specific assignment capabilities if both are available to a specified target.</p><div id="_89028a41-4ff4-c122-67bd-d8df2c4a8844" class="Note"><p><span class="note_label">NOTE  </span>This entity provides the capability to define a generic attribute associated with product data using a method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.</p></div>
+
+
+
+<div id="_9724f1d3-209b-d9f5-8c38-77d8ff3f5fe6" class="example"><p><span class="example_label">EXAMPLE</span>  A person entity data type instance is included in both <a href="#express_basic_attribute_schema.generic_attribute_select">generic_attribute_select</a> and <a href="#express_basic_attribute_schema.name_attribute_select">name_attribute_select</a>. The name attribute of person is provided for the name value.</p></div>
+
+<p id="_e1312a9f-db54-dabf-39bb-5c11340234e8"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_40ca9ff6-df3c-a71e-19c0-5a7ceca349e4" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY generic_attribute;<br />  attribute_name : label;<br />  attribute_value : text;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_bd7927aa-519b-a81a-9046-5e566cf9be27"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_beacec16-a229-5b14-3239-d9538aa87b93"><dt><b>attribute_name</b></dt><dd id="_1481f898-de50-3dcd-fb4f-0ae1a1f205a9"><p id="_79da78cb-9bc3-b774-07ea-f2308dca8f01">the <a href="#express_support_resource_schema.label">label</a> used to name the <b>generic_attribute</b>.</p>
+</dd><dt><b>attribute_value</b></dt><dd id="_1d123dfd-101a-3699-dc10-4faa91035ea2"><p id="_40bd300b-d954-240f-4d6a-3d8020d85daa">the <a href="#express_support_resource_schema.text">text</a> that characterizes the <b>generic_attribute</b>.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.generic_attribute_assignment"><h3><a class="anchor" href="#basic_attribute_schema.generic_attribute_assignment"></a><a class="header" href="#basic_attribute_schema.generic_attribute_assignment">6.4.4  generic_attribute_assignment</a></h3>
+
+<p id="_735f0057-f091-1eac-be7e-ad0f15bf6e7d">A <b>generic_attribute_assignment</b> is the assignment of a generic attribute to element of product data.</p><div id="_76c8bb94-21a2-f13f-e881-c693bbabf1b7" class="Note"><p><span class="note_label">NOTE  </span>This entity provides the capability to add a generic attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-43:1994.</p></div>
+
+
+
+<p id="_a5f2e347-a4a4-bcf1-8dee-d632d92cf08e"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_c275a9de-2d87-a4d8-e1ca-c59c3b6107e4" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY generic_attribute_assignment;<br />  attribute : generic_attribute;<br />  item_with_attribute : generic_attribute_select;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_a0af40d2-ed6b-d37c-70ee-45400fd4698e"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_b45d7a79-b06e-48d7-c041-27059680c31d"><dt><b>attribute</b></dt><dd id="_2707b82b-fae2-59b8-b3c2-4118bf853b22"><p id="_070ef00f-1d75-778e-da3c-80ad5cc83030">the <a href="#express_basic_attribute_schema.generic_attribute">generic_attribute</a> to be associated with the product data.</p>
+</dd><dt><b>item_with_attribute</b></dt><dd id="_e5120a12-30da-768b-69ee-b7832e03b6b4"><p id="_a83b8879-13f6-eea6-4d10-df58f6f62647">the item to which the attribute is assigned.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.generic_attribute_list_assignment"><h3><a class="anchor" href="#basic_attribute_schema.generic_attribute_list_assignment"></a><a class="header" href="#basic_attribute_schema.generic_attribute_list_assignment">6.4.5  generic_attribute_list_assignment</a></h3>
+
+<p id="_c6239955-02de-86bb-646e-1576cf6a6b2c">A <b>generic_attribute_list_assignment</b> is the assignment of a named list of generic attributes to element of product data.</p><div id="_b064c53c-80a0-4d61-760c-9eb841513086" class="Note"><p><span class="note_label">NOTE  </span>This entity data type provides a capability to add a named list of generic attributes to certain product data entity data types using a method that is upwardly compatible with ISO 10303-41:1994, ISO 10303-43:1994, and ISO 10303-44:1994.</p></div>
+
+
+
+<p id="_94d5162a-805d-0ead-4801-59980ce0ce48"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_7073f754-513f-291b-a41d-67f023b45846" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY generic_attribute_list_assignment;<br />  attribute_name : label;<br />  attributes : LIST [1:?] OF generic_attribute;<br />  item_with_attribute : generic_attribute_list_select;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_f836a83c-1ac5-ec6b-b697-b2dbb339bc5c"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_1a2e86c6-f022-5b4e-1061-328eb97a5edc"><dt><b>attribute_name</b></dt><dd id="_8d136804-254f-83c9-b47b-b0d4c8512b05"><p id="_f786b5cc-772b-c796-3795-3f64179a55ce">the <a href="#express_support_resource_schema.label">label</a> used to name the list of generic attributes.</p>
+</dd><dt><b>attributes</b></dt><dd id="_0b757eb9-7c9c-ecb0-d571-ccdab3265d29"><p id="_8903a382-ea97-e069-df7f-a14fbe39c159">the list of <a href="#express_basic_attribute_schema.generic_attribute">generic_attribute</a>s that are assigned to the element of product data.</p>
+</dd><dt><b>item_with_attribute</b></dt><dd id="_a0706ee0-60f4-b69b-00b7-0ef8fb55c6ba"><p id="_8bba6315-cfcc-2d16-24f5-f14b4cbd2bec">the item to which the attributes are assigned.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.id_attribute"><h3><a class="anchor" href="#basic_attribute_schema.id_attribute"></a><a class="header" href="#basic_attribute_schema.id_attribute">6.4.6  id_attribute</a></h3>
+
+<p id="_982f9ba2-a3b7-a7fb-2a6b-b4915cb5b2d0">An <b>id_attribute</b> is the assignment of an identifier to product data.</p><div id="_0e149c28-4e0c-2f1c-a1c3-4b59b3ccb4de" class="Note"><p><span class="note_label">NOTE 1  </span>This entity provides the capability to add an id attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-43:1994.</p></div>
+
+
+
+<p id="_013f741b-9c93-f006-6de2-1475fbe451ee"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_6571b1a2-a21d-f207-840c-d04d32c47009" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY id_attribute;<br />  attribute_value : identifier;<br />  identified_item : id_attribute_select;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_968803df-7440-228a-f587-85d4c9cfcb7d"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_aa23c8ef-9f8e-2ea0-26db-e609817e277f"><dt><b>attribute_value</b></dt><dd id="_ee8e901f-24d3-3bd2-e0a7-34cf029b4fd7"><p id="_67ccabcf-f099-16b4-2e23-77f99f009cd6">the <a href="#express_support_resource_schema.identifier">identifier</a> that distinguishes the <b>identified_item</b>.</p>
+</dd></dl><div id="_e3831093-bb76-d95f-5072-3e5e75951baf" class="Note"><p><span class="note_label">NOTE 2  </span>The context in which <b>attribute_value</b> is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or be default, in an agreement of common understanding between partners sharing this information.</p></div></div>
+
+
+
+<div class="figdl"><dl id="_90d34a65-8eef-3b51-eddd-25f51625567e"><dt><b>identified_item</b></dt><dd id="_30461b16-1359-0c3d-1467-154bdeda1e5b"><p id="_c39f6099-a3c8-2dd7-fa2d-b9212ae4e5f2">the item that is identified.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.name_attribute"><h3><a class="anchor" href="#basic_attribute_schema.name_attribute"></a><a class="header" href="#basic_attribute_schema.name_attribute">6.4.7  name_attribute</a></h3>
+
+<p id="_9238c531-aab9-7d18-9dbb-8843f7fc8de5">A <b>name_attribute</b> is the assignment of a label by which the product data is known.</p><div id="_65975f81-6353-3f2d-35d1-4ad9c66df23f" class="Note"><p><span class="note_label">NOTE  </span>This entity provides the capability to add a name attribute to product data using a method that is upwardly compatible with ISO 10303-41:1994 and ISO 10303-44:1994.</p></div>
+
+
+
+<p id="_8dfeda6a-1d21-3706-5739-5bc74cf0b2a5"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_078ac172-4459-7644-bdd9-4876bccfcd2c" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY name_attribute;<br />  attribute_value : label;<br />  named_item : name_attribute_select;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_6589e7e1-1b36-9138-ab1a-6c47eea89e88"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_d6256d12-e29b-7584-5e30-a3e1dd8aac03"><dt><b>attribute_value</b></dt><dd id="_00cc48a6-b3ef-3a3c-30f1-e91a8d226994"><p id="_79b0d379-2667-3381-ec3f-b93cdc55993b">the <a href="#express_support_resource_schema.label">label</a> by which the <b>named_item</b> is known.</p>
+</dd><dt><b>named_item</b></dt><dd id="_ace1da8e-ae5a-2b39-aeea-9d9b3bdee707"><p id="_72c441cf-adf7-9fb8-011c-1e5ee4ab0300">the item to which the name is applied.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.object_role"><h3><a class="anchor" href="#basic_attribute_schema.object_role"></a><a class="header" href="#basic_attribute_schema.object_role">6.4.8  object_role</a></h3>
+
+<p id="_c4297de6-ab46-0480-b1f1-0a64df389dd6">An <b>object_role</b> is a specification of a role for the association of management type data with other aspects of product data and a description of that role.</p><div id="_2ebfb1e0-1dad-6dd6-9d14-160e4dc4b9f4" class="Note"><p><span class="note_label">NOTE  </span>This entity provides the capability to add a role attribute to an association of management type data with other aspects of product data using a method that is upwardly compatible with ISO 10303-41:1994.</p></div>
+
+
+
+<p id="_c1c69593-aa2f-dd59-036b-d4d156b48be5"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_baf0b6a5-24d4-b03f-523e-2c940f6cd327" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY object_role;<br />  name : label;<br />  description : OPTIONAL text;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_79e0fef5-df7b-5d6c-b7bf-30e15d1bf0c9"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_b3e2f662-9ddf-4b2c-b368-a445ab1ab38a"><dt><b>name</b></dt><dd id="_93f667c4-957b-97aa-253d-079fee7e6933"><p id="_0665d000-89d1-066c-507d-1b274a885fe6">the <a href="#express_support_resource_schema.label">label</a> by which the <b>object_role</b> is known.</p>
+</dd><dt><b>description</b></dt><dd id="_af4ffaf0-5bd4-dc74-6ca0-914af426a66f"><p id="_dcdd5a4d-3527-503a-0369-994211fdf54a">the <a href="#express_support_resource_schema.text">text</a> that characterizes the <b>object_role</b>. The value of the attribute need not be specified.</p>
+</dd></dl></div>
+</div>
+
+<div id="basic_attribute_schema.role_association"><h3><a class="anchor" href="#basic_attribute_schema.role_association"></a><a class="header" href="#basic_attribute_schema.role_association">6.4.9  role_association</a></h3>
+
+<p id="_c38686c0-1297-b174-7fba-158c0161b315">A <b>role_association</b> is the assignment of an <a href="#express_basic_attribute_schema.object_role">object_role</a> to an association of management type data with other aspects of product data.</p><div id="_a9e529f7-3bac-2f5e-5a97-369edad0207f" class="Note"><p><span class="note_label">NOTE  </span>This entity data type provides a capability to add a role attribute to certain entity data types that specify associations between product data and administrative or management data. Such entity data types are specified in the <a href="#express_management_resources_schema">management_resources_schema</a>.</p></div>
+
+
+
+<p id="_ff844d2e-a061-5690-5659-573eb6e4de18"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_312456ac-99b3-4bc3-9d23-534436067345" class="sourcecode" spellcheck="false" translation="no"><pre>ENTITY role_association;<br />  role : object_role;<br />  item_with_role : role_select;<br />END_ENTITY;</pre></figure>
+
+
+<p id="_daf9c5a8-f771-893f-3318-cbea90b60d20"><span style="text-decoration: underline">Attribute definitions:</span></p>
+
+<div class="figdl"><dl id="_b608ad64-0e63-ba89-0b24-000ab8074cf4"><dt><b>role</b></dt><dd id="_92aa8468-3e92-d580-b67d-ce70cdad8bc2"><p id="_e81844cc-c9f6-02bf-0d0f-6cf2a3965e45">the <a href="#express_basic_attribute_schema.object_role">object_role</a> that specifies the purpose of the association of the <b>role_association</b> with product data.</p>
+</dd><dt><b>item_with_role</b></dt><dd id="_8336f35b-4f08-5564-5a48-77bc1eaf5d41"><p id="_9b2c90eb-a060-9f20-5600-2aa3a883d107">the item to which a role is assigned.</p>
+</dd></dl></div>
+</div>
+</div><div id="basic_attribute_schema.functions"><h2 id="_72a45d1f-4375-48bd-8156-ec615c86ea9c"><a class="anchor" href="#basic_attribute_schema.functions"></a><a class="header" href="#basic_attribute_schema.functions">6.5  basic_attribute_schema function definitions</a></h2>
+
+<div id="basic_attribute_schema.get_description_value.get_description_value"><h3><a class="anchor" href="#basic_attribute_schema.get_description_value.get_description_value"></a><a class="header" href="#basic_attribute_schema.get_description_value.get_description_value">6.5.1  get_description_value</a></h3>
+
+<p id="_de8ce6b3-3e57-0217-dbe8-ff00797e22ee">The <b>get_description_value</b> function accepts an object to which a descriptive text string may be assigned and returns this description if present.</p>
+
+<p id="_5af11ae9-43ad-faae-5e8e-9ed08fd07bf2">If a <a href="#express_basic_attribute_schema.description_attribute">description_attribute</a> references the object, the function will return the value of the <a href="#express_basic_attribute_schema.description_attribute.attribute_value">attribute_value</a> attribute of this <a href="#express_basic_attribute_schema.description_attribute">description_attribute</a>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_700f49d3-036b-cc0b-6744-cfd8554d297a"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_917b4f8f-5bee-3f4a-0349-0ec21fe51dc3" class="sourcecode" spellcheck="false" translation="no"><pre>FUNCTION get_description_value(obj : description_attribute_select) : text;<br />  LOCAL<br />    description_bag : BAG OF description_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'DESCRIPTION_ATTRIBUTE.') + 'DESCRIBED_ITEM');<br />  END_LOCAL;<br />  IF SIZEOF(description_bag) = 1 THEN<br />    RETURN (description_bag[1].attribute_value);<br />  ELSE<br />    RETURN (?);<br />  END_IF;<br />END_FUNCTION;</pre></figure>
+
+
+<div id="basic_attribute_schema.get_description_value.parameters"><h4><a class="anchor" href="#basic_attribute_schema.get_description_value.parameters"></a><a class="header" href="#basic_attribute_schema.get_description_value.parameters">6.5.1.1  Parameters</a></h4>
+
+<div id="basic_attribute_schema.get_description_value.obj"><h5><a class="anchor" href="#basic_attribute_schema.get_description_value.obj"></a><a class="header" href="#basic_attribute_schema.get_description_value.obj">6.5.1.1.1  obj</a></h5>
+
+<p id="_0947e3d3-084e-2695-65cf-5fec13f60327">(input) the object for which a <a href="#express_support_resource_schema.text">text</a> is determined. This is an input to the function.</p>
+
+<p id="_6c462427-4e5d-7a40-bae5-d4511b7f648a"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_e48ea153-4351-45f2-94df-5ef61d153368" class="sourcecode" spellcheck="false" translation="no"><pre>obj : description_attribute_select</pre></figure>
+
+</div></div>
+
+
+
+<div id="basic_attribute_schema.get_description_value.variables"><h4><a class="anchor" href="#basic_attribute_schema.get_description_value.variables"></a><a class="header" href="#basic_attribute_schema.get_description_value.variables">6.5.1.2  Variables</a></h4>
+
+<div id="basic_attribute_schema.get_description_value.description_bag"><h5><a class="anchor" href="#basic_attribute_schema.get_description_value.description_bag"></a><a class="header" href="#basic_attribute_schema.get_description_value.description_bag">6.5.1.2.1  description_bag</a></h5>
+
+<p id="_009847a9-f59f-89df-7b57-e8f958b5952c"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_5a25b44a-6310-09c5-c5e6-191286412260" class="sourcecode" spellcheck="false" translation="no"><pre>description_bag : BAG OF description_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'DESCRIPTION_ATTRIBUTE.') + 'DESCRIBED_ITEM');</pre></figure>
+
+</div></div>
+
+
+</div>
+
+<div id="basic_attribute_schema.get_id_value.get_id_value"><h3><a class="anchor" href="#basic_attribute_schema.get_id_value.get_id_value"></a><a class="header" href="#basic_attribute_schema.get_id_value.get_id_value">6.5.2  get_id_value</a></h3>
+
+<p id="_d1cb0ce8-0dd8-1a16-cce2-080883f90a84">The <b>get_id_value</b> function accepts an object to which an identifier may be assigned and returns this identifier if present.</p>
+
+<p id="_5ea18f35-356c-a083-7bd1-c7d16ce69d3f">If an <a href="#express_basic_attribute_schema.id_attribute">id_attribute</a> references the object, the function will return the value of the <a href="#express_basic_attribute_schema.id_attribute.attribute_value">attribute_value</a> attribute of this <a href="#express_basic_attribute_schema.id_attribute">id_attribute</a>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_e66db192-38f1-d510-c48b-1b5d029f9ed9"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_93fd6424-1e3c-7b32-67ec-d5f8bac17ece" class="sourcecode" spellcheck="false" translation="no"><pre>FUNCTION get_id_value(obj : id_attribute_select) : identifier;<br />  LOCAL<br />    id_bag : BAG OF id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');<br />  END_LOCAL;<br />  IF SIZEOF(id_bag) = 1 THEN<br />    RETURN (id_bag[1].attribute_value);<br />  ELSE<br />    RETURN (?);<br />  END_IF;<br />END_FUNCTION;</pre></figure>
+
+
+<div id="basic_attribute_schema.get_id_value.parameters"><h4><a class="anchor" href="#basic_attribute_schema.get_id_value.parameters"></a><a class="header" href="#basic_attribute_schema.get_id_value.parameters">6.5.2.1  Parameters</a></h4>
+
+<div id="basic_attribute_schema.get_id_value.obj"><h5><a class="anchor" href="#basic_attribute_schema.get_id_value.obj"></a><a class="header" href="#basic_attribute_schema.get_id_value.obj">6.5.2.1.1  obj</a></h5>
+
+<p id="_471975b9-2cc2-27d4-76d6-b0442c400b73">(input) the object for which an <a href="#express_support_resource_schema.identifier">identifier</a> is determined. This is an input to the function.</p>
+
+<p id="_8d93c98f-089a-8434-ccc1-5a1199360548"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_b7a4353d-300e-a2cd-1f1a-700cef301572" class="sourcecode" spellcheck="false" translation="no"><pre>obj : id_attribute_select</pre></figure>
+
+</div></div>
+
+
+
+<div id="basic_attribute_schema.get_id_value.variables"><h4><a class="anchor" href="#basic_attribute_schema.get_id_value.variables"></a><a class="header" href="#basic_attribute_schema.get_id_value.variables">6.5.2.2  Variables</a></h4>
+
+<div id="basic_attribute_schema.get_id_value.id_bag"><h5><a class="anchor" href="#basic_attribute_schema.get_id_value.id_bag"></a><a class="header" href="#basic_attribute_schema.get_id_value.id_bag">6.5.2.2.1  id_bag</a></h5>
+
+<p id="_b0993385-7f05-7318-5b14-5be5a4b87b06"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_5ee6f69e-0292-1ec2-a8e6-653e84599199" class="sourcecode" spellcheck="false" translation="no"><pre>id_bag : BAG OF id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');</pre></figure>
+
+</div></div>
+
+
+</div>
+
+<div id="basic_attribute_schema.get_aggregate_id_value.get_aggregate_id_value"><h3><a class="anchor" href="#basic_attribute_schema.get_aggregate_id_value.get_aggregate_id_value"></a><a class="header" href="#basic_attribute_schema.get_aggregate_id_value.get_aggregate_id_value">6.5.3  get_aggregate_id_value</a></h3>
+
+<p id="_2174eb09-53dd-6328-bbb8-fe917f274855">The <b>get_aggregate_id_value</b> function accepts an object to which an identifier may be assigned and returns this identifier if present.</p>
+
+<p id="_48296ee3-ab35-f222-1669-4f5133677da2">If an <a href="#express_basic_attribute_schema.aggregate_id_attribute">aggregate_id_attribute</a> references the object, the function will return the value of the <a href="#express_basic_attribute_schema.aggregate_id_attribute.attribute_value">attribute_value</a> attribute of this <a href="#express_basic_attribute_schema.aggregate_id_attribute">aggregate_id_attribute</a>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_41366040-e531-8d63-d1d3-b847181d8154"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_30358a81-eccb-d412-63e3-a400d1878582" class="sourcecode" spellcheck="false" translation="no"><pre>FUNCTION get_aggregate_id_value(obj : id_attribute_select) : identifier;<br />  LOCAL<br />    aggregate_id_bag : BAG OF aggregate_id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'AGGREGATE_ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');<br />  END_LOCAL;<br />  IF SIZEOF(aggregate_id_bag) = 1 THEN<br />    RETURN (aggregate_id_bag[1].attribute_value);<br />  ELSE<br />    RETURN (?);<br />  END_IF;<br />END_FUNCTION;</pre></figure>
+
+
+<div id="basic_attribute_schema.get_aggregate_id_value.parameters"><h4><a class="anchor" href="#basic_attribute_schema.get_aggregate_id_value.parameters"></a><a class="header" href="#basic_attribute_schema.get_aggregate_id_value.parameters">6.5.3.1  Parameters</a></h4>
+
+<div id="basic_attribute_schema.get_aggregate_id_value.obj"><h5><a class="anchor" href="#basic_attribute_schema.get_aggregate_id_value.obj"></a><a class="header" href="#basic_attribute_schema.get_aggregate_id_value.obj">6.5.3.1.1  obj</a></h5>
+
+<p id="_c7427ef2-0e9e-7a4c-eaed-5d100b2dfb23">(input) the object for which an <a href="#express_support_resource_schema.identifier">identifier</a> is determined. This is an input to the function.</p>
+
+<p id="_b942445e-0cdf-65ba-73a7-d53dbadd497c"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_d63389cf-01b8-1bb5-f389-3ed99e51ee74" class="sourcecode" spellcheck="false" translation="no"><pre>obj : id_attribute_select</pre></figure>
+
+</div></div>
+
+
+
+<div id="basic_attribute_schema.get_aggregate_id_value.variables"><h4><a class="anchor" href="#basic_attribute_schema.get_aggregate_id_value.variables"></a><a class="header" href="#basic_attribute_schema.get_aggregate_id_value.variables">6.5.3.2  Variables</a></h4>
+
+<div id="basic_attribute_schema.get_aggregate_id_value.aggregate_id_bag"><h5><a class="anchor" href="#basic_attribute_schema.get_aggregate_id_value.aggregate_id_bag"></a><a class="header" href="#basic_attribute_schema.get_aggregate_id_value.aggregate_id_bag">6.5.3.2.1  aggregate_id_bag</a></h5>
+
+<p id="_8c8ae76c-55b3-5c64-f331-99f0400f6001"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_4aeeb2ba-8d8c-2fb0-ea96-7573af10b39c" class="sourcecode" spellcheck="false" translation="no"><pre>aggregate_id_bag : BAG OF aggregate_id_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'AGGREGATE_ID_ATTRIBUTE.') + 'IDENTIFIED_ITEM');</pre></figure>
+
+</div></div>
+
+
+</div>
+
+<div id="basic_attribute_schema.get_name_value.get_name_value"><h3><a class="anchor" href="#basic_attribute_schema.get_name_value.get_name_value"></a><a class="header" href="#basic_attribute_schema.get_name_value.get_name_value">6.5.4  get_name_value</a></h3>
+
+<p id="_2e63e3d5-b97b-ee09-e315-c2e4cd4fac30">The <b>get_name_value</b> function accepts an object to which a label may be assigned and returns this label if present.</p>
+
+<p id="_1914fa63-acd4-6307-eb66-ed3aeec7380a">If a <a href="#express_basic_attribute_schema.name_attribute">name_attribute</a> references the object, the function will return the value of the <a href="#express_basic_attribute_schema.name_attribute.attribute_value">attribute_value</a> attribute of this <a href="#express_basic_attribute_schema.name_attribute">name_attribute</a>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_505c1ace-77cf-9716-2c9c-24c4280bfd04"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_66cef85b-d73b-4783-9f4d-0d9bc5b63eae" class="sourcecode" spellcheck="false" translation="no"><pre>FUNCTION get_name_value(obj : name_attribute_select) : label;<br />  LOCAL<br />    name_bag : BAG OF name_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'NAME_ATTRIBUTE.') + 'NAMED_ITEM');<br />  END_LOCAL;<br />  IF SIZEOF(name_bag) = 1 THEN<br />    RETURN (name_bag[1].attribute_value);<br />  ELSE<br />    RETURN (?);<br />  END_IF;<br />END_FUNCTION;</pre></figure>
+
+
+<div id="basic_attribute_schema.get_name_value.parameters"><h4><a class="anchor" href="#basic_attribute_schema.get_name_value.parameters"></a><a class="header" href="#basic_attribute_schema.get_name_value.parameters">6.5.4.1  Parameters</a></h4>
+
+<div id="basic_attribute_schema.get_name_value.obj"><h5><a class="anchor" href="#basic_attribute_schema.get_name_value.obj"></a><a class="header" href="#basic_attribute_schema.get_name_value.obj">6.5.4.1.1  obj</a></h5>
+
+<p id="_bf8c9966-8807-bac8-7191-97adbde434fc">the object for which a <a href="#express_support_resource_schema.label">label</a> is determined. This is an input to the function.</p>
+
+<p id="_3cb4baf2-f2d1-246f-d107-37baca39f842"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_d1c56977-dcc6-08ce-5038-db4731506994" class="sourcecode" spellcheck="false" translation="no"><pre>obj : name_attribute_select</pre></figure>
+
+</div></div>
+
+
+
+<div id="basic_attribute_schema.get_name_value.variables"><h4><a class="anchor" href="#basic_attribute_schema.get_name_value.variables"></a><a class="header" href="#basic_attribute_schema.get_name_value.variables">6.5.4.2  Variables</a></h4>
+
+<div id="basic_attribute_schema.get_name_value.name_bag"><h5><a class="anchor" href="#basic_attribute_schema.get_name_value.name_bag"></a><a class="header" href="#basic_attribute_schema.get_name_value.name_bag">6.5.4.2.1  name_bag</a></h5>
+
+<p id="_f056757a-37db-bb5a-f82f-d3c23e4dc5a0"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_d4103d95-66d9-4f8c-5c11-aa0bf0cd562d" class="sourcecode" spellcheck="false" translation="no"><pre>name_bag : BAG OF name_attribute := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'NAME_ATTRIBUTE.') + 'NAMED_ITEM');</pre></figure>
+
+</div></div>
+
+
+</div>
+
+<div id="basic_attribute_schema.get_role.get_role"><h3><a class="anchor" href="#basic_attribute_schema.get_role.get_role"></a><a class="header" href="#basic_attribute_schema.get_role.get_role">6.5.5  get_role</a></h3>
+
+<p id="_b59ce644-c15b-c807-07a1-868506502ee3">The <b>get_role</b> function accepts an object to which a role may be assigned and returns this role if present.</p>
+
+<p id="_d705fc9d-e8c3-2e57-870c-19a2558b5ae2">If a <a href="#express_basic_attribute_schema.role_association">role_association</a> references the object, the function will return the <a href="#express_basic_attribute_schema.object_role">object_role</a> of the <a href="#express_basic_attribute_schema.role_association.role">role</a> attribute of this <a href="#express_basic_attribute_schema.role_association">role_association</a>. Otherwise, the indeterminate value will be returned.</p>
+
+<p id="_3077d6d2-7d80-7adb-50ff-451bd7e0320b"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_ff990d37-2f87-99a2-9e10-f3a9d03b82c0" class="sourcecode" spellcheck="false" translation="no"><pre>FUNCTION get_role(obj : role_select) : object_role;<br />  LOCAL<br />    role_bag : BAG OF role_association := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ROLE_ASSOCIATION.') + 'ITEM_WITH_ROLE');<br />  END_LOCAL;<br />  IF SIZEOF(role_bag) = 1 THEN<br />    RETURN (role_bag[1].role);<br />  ELSE<br />    RETURN (?);<br />  END_IF;<br />END_FUNCTION;</pre></figure>
+
+
+<div id="basic_attribute_schema.get_role.parameters"><h4><a class="anchor" href="#basic_attribute_schema.get_role.parameters"></a><a class="header" href="#basic_attribute_schema.get_role.parameters">6.5.5.1  Parameters</a></h4>
+
+<div id="basic_attribute_schema.get_role.obj"><h5><a class="anchor" href="#basic_attribute_schema.get_role.obj"></a><a class="header" href="#basic_attribute_schema.get_role.obj">6.5.5.1.1  obj</a></h5>
+
+<p id="_f298bc22-e3a1-6ee0-1dff-809c5af26fcf">(input) the object for which an <a href="#express_basic_attribute_schema.object_role">object_role</a> is determined. This is an input to the function.</p>
+
+<p id="_3753e661-6a62-13f9-aaf8-0acb7ad538c3"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_cdf3a76b-1f6d-b760-47c7-99ba07250da8" class="sourcecode" spellcheck="false" translation="no"><pre>obj : role_select</pre></figure>
+
+</div></div>
+
+
+
+<div id="basic_attribute_schema.get_role.variables"><h4><a class="anchor" href="#basic_attribute_schema.get_role.variables"></a><a class="header" href="#basic_attribute_schema.get_role.variables">6.5.5.2  Variables</a></h4>
+
+<div id="basic_attribute_schema.get_role.role_bag"><h5><a class="anchor" href="#basic_attribute_schema.get_role.role_bag"></a><a class="header" href="#basic_attribute_schema.get_role.role_bag">6.5.5.2.1  role_bag</a></h5>
+
+<p id="_df694e8e-d01f-e40b-21fc-d62151b0a656"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_aef4f400-ccb1-fe9e-f267-8e2fbdc51603" class="sourcecode" spellcheck="false" translation="no"><pre>role_bag : BAG OF role_association := USEDIN(obj, ('BASIC_ATTRIBUTE_SCHEMA.' + 'ROLE_ASSOCIATION.') + 'ITEM_WITH_ROLE');</pre></figure>
+
+</div></div>
+
+
+</div>
+</div></div><div id="support_resource_schema"><h1 id="_7933eb02-34c5-4ef6-bf25-4a9f899bec47"><a class="anchor" href="#support_resource_schema"></a><a class="header" href="#support_resource_schema">7  support_resource_schema</a></h1><div id="_ae3e6fea-9aeb-f5fc-3c82-ed945aa401f3"><h2 id="_8c9d98a1-75b9-400f-82b7-b008b9c9eec3"><a class="anchor" href="#_ae3e6fea-9aeb-f5fc-3c82-ed945aa401f3"></a><a class="header" href="#_ae3e6fea-9aeb-f5fc-3c82-ed945aa401f3">7.1  General</a></h2>
+
+<p id="_25e9bb3b-ee61-1af8-0f10-0ddff4605b31">The subject of the <b>support_resource_schema</b> is a description of EXPRESS declarations that are shared by more than one of the ISO 10303 integrated resource schemas.</p><div id="_b8b2e5be-cc59-4826-b1bf-2e21b7806c23" class="Note"><p><span class="note_label">NOTE  </span>In contrast to elements of the generic product description resource schemas, which are also potentially referenced by more than one ISO 10303 integrated resource schema, the elements of this schema cannot exist without (that is, are existent-dependent upon) the entities that reference them.</p></div>
+
+
+
+<p id="_2940a3dd-4329-af12-52c2-a5949597faf4"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_79fa6c0b-9f51-ae1a-919e-6e4a43901ce1" class="sourcecode" spellcheck="false" translation="no"><pre>SCHEMA support_resource_schema '{iso standard 10303 part(41) version(7) object(1) support_resource_schema(23)}';</pre></figure>
+
+</div><div id="support_resource_schema."><h2 id="_c964052f-8a53-49e3-9bd4-a521eeba7fcb"><a class="anchor" href="#support_resource_schema."></a><a class="header" href="#support_resource_schema.">7.2  Fundamental concepts and assumptions</a></h2>
+
+<p id="_be799ada-3c20-b84e-d0bf-cefacfe9c69f">An identifier is a means that enables a processor to distinguish an information from other information of the same kind. A label is textual information assigned to an item of information in order to facilitate its access by a human being.</p>
+
+<p id="_9aaea8fc-bbad-8c88-a0fc-dd9870180de4">Product data items may have an identification. The formats used to define identifiers are quite various. This International Standard defines identifiers as strings. It does not specify the internal structure and content of these strings.</p>
+
+<p id="_86ef5170-2c40-c0f6-236a-9b86296c0699">Product data items may have a label. The formats used to define labels are quite various. This International Standard defines identifiers as strings. It does not specify the internal structure and content of these strings.</p>
+</div><div id="support_resource_schema.types"><h2 id="_49627929-f66b-44cf-8063-b70f16afe4e5"><a class="anchor" href="#support_resource_schema.types"></a><a class="header" href="#support_resource_schema.types">7.3  support_resource_schema type definitions</a></h2>
+
+<div id="support_resource_schema.identifier"><h3><a class="anchor" href="#support_resource_schema.identifier"></a><a class="header" href="#support_resource_schema.identifier">7.3.1  identifier</a></h3>
+
+<p id="_300c2666-395e-61f7-75f0-49ad7a355f55">An <b>identifier</b> is a string suitable for identifying some product data.</p><div id="_4c813161-4f0c-d021-8fc0-04a47f95d1c1" class="Note"><p><span class="note_label">NOTE  </span>An identifier may or may not have a natural-language meaning.</p></div>
+
+
+
+<div id="_0befe28f-e789-5362-85e6-e018f82dba09" class="example"><p><span class="example_label">EXAMPLE</span>  In the context of a product, a part number or serial number would be an example of an identifier.</p></div>
+
+<p id="_11252144-dc85-2963-ed92-13c346bd7676"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_c8c07dff-29d7-bbc9-7f4e-9f66504fa974" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE identifier = STRING;<br />END_TYPE;</pre></figure>
+
+</div>
+
+<div id="support_resource_schema.label"><h3><a class="anchor" href="#support_resource_schema.label"></a><a class="header" href="#support_resource_schema.label">7.3.2  label</a></h3>
+
+<p id="_16547bbf-a354-aa0c-d451-1ca714526a7f">A <b>label</b> is an alphanumeric string that represents the human-interpretable name of something and shall have a natural-language meaning.</p>
+
+<div id="_834f934d-13e9-78b7-4cc1-bd7042285b6e" class="example"><p><span class="example_label">EXAMPLE</span>  ‘Smith’, ‘Widget Inc.’, and ‘Materials Test Laboratory’ are examples of labels.</p></div>
+
+<p id="_7212c69f-abe7-24b8-4ad0-11e902c918b7"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_31cbaccb-4436-896d-f15f-020b7008fa03" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE label = STRING;<br />END_TYPE;</pre></figure>
+
+</div>
+
+<div id="support_resource_schema.text"><h3><a class="anchor" href="#support_resource_schema.text"></a><a class="header" href="#support_resource_schema.text">7.3.3  text</a></h3>
+
+<p id="_fbd6c14a-1ccc-8743-84a0-7fbec20a2217">A <b>text</b> is an alphanumeric string intended to be read and understood by a human being. It is for information purposes only.</p>
+
+<p id="_a2183e34-96de-cf93-6d7e-21cb539f743b"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_aad7de9f-01e7-8f8e-4be5-6e27de0f8fd8" class="sourcecode" spellcheck="false" translation="no"><pre>TYPE text = STRING;<br />END_TYPE;</pre></figure>
+
+</div>
+</div><div id="support_resource_schema.functions"><h2 id="_c832439c-d120-444f-a29d-9f5f9352223f"><a class="anchor" href="#support_resource_schema.functions"></a><a class="header" href="#support_resource_schema.functions">7.4  support_resource_schema function definitions</a></h2>
+
+<div id="support_resource_schema.bag_to_set.bag_to_set"><h3><a class="anchor" href="#support_resource_schema.bag_to_set.bag_to_set"></a><a class="header" href="#support_resource_schema.bag_to_set.bag_to_set">7.4.1  bag_to_set</a></h3>
+
+<p id="_ad330a06-016f-e3cf-b0ad-0dc8fa1cfa86">The <b>bag_to_set</b> function converts BAGs into SETs.</p>
+
+<div id="_bd222ef5-1b0d-c61d-f059-2359e9dcad9b" class="example"><p><span class="example_label">EXAMPLE</span>  This function can be used to convert the BAGs returned by the USEDIN function into SETs.</p></div>
+
+<p id="_d9c0a3ab-cca3-277e-4277-3a628ccffccb"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_fc09fc6a-d035-22a8-fac5-264c50eed1f7" class="sourcecode" spellcheck="false" translation="no"><pre>FUNCTION bag_to_set(the_bag : BAG OF GENERIC : intype) : SET OF GENERIC : intype;<br />  LOCAL<br />    the_set : SET OF GENERIC : intype := [];<br />  END_LOCAL;<br />  IF SIZEOF(the_bag) &#x3e; 0 THEN<br />    REPEAT i := 1 TO HIINDEX(the_bag);<br />      the_set := the_set + the_bag[i];<br />    END_REPEAT;<br />  END_IF;<br />  RETURN (the_set);<br />END_FUNCTION;</pre></figure>
+
+
+<div id="support_resource_schema.bag_to_set.parameters"><h4><a class="anchor" href="#support_resource_schema.bag_to_set.parameters"></a><a class="header" href="#support_resource_schema.bag_to_set.parameters">7.4.1.1  Parameters</a></h4>
+
+<div id="support_resource_schema.bag_to_set.the_bag"><h5><a class="anchor" href="#support_resource_schema.bag_to_set.the_bag"></a><a class="header" href="#support_resource_schema.bag_to_set.the_bag">7.4.1.1.1  the_bag</a></h5>
+
+<p id="_02693ccd-3dcb-8cf7-0f94-bf4f323f273b">(input) the BAG that is to be converted into a SET.</p>
+
+<p id="_caa67c0d-c6b5-0ffc-4c56-918d7efb37cc"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_4a1b29d8-3d8d-e61d-23ba-5db9cc3dc878" class="sourcecode" spellcheck="false" translation="no"><pre>the_bag : BAG OF GENERIC : intype</pre></figure>
+
+</div></div>
+
+
+
+<div id="support_resource_schema.bag_to_set.variables"><h4><a class="anchor" href="#support_resource_schema.bag_to_set.variables"></a><a class="header" href="#support_resource_schema.bag_to_set.variables">7.4.1.2  Variables</a></h4>
+
+<div id="support_resource_schema.bag_to_set.the_set"><h5><a class="anchor" href="#support_resource_schema.bag_to_set.the_set"></a><a class="header" href="#support_resource_schema.bag_to_set.the_set">7.4.1.2.1  the_set</a></h5>
+
+<p id="_a768c18d-6753-82ad-952e-f30c670bc970"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_75f2c15f-c81e-b2ca-aad0-22ae494caa21" class="sourcecode" spellcheck="false" translation="no"><pre>the_set : SET OF GENERIC : intype := [];</pre></figure>
+
+</div></div>
+
+
+</div>
+
+<div id="support_resource_schema.type_check_function.type_check_function"><h3><a class="anchor" href="#support_resource_schema.type_check_function.type_check_function"></a><a class="header" href="#support_resource_schema.type_check_function.type_check_function">7.4.2  type_check_function</a></h3>
+
+<p id="_f5a0c167-63d5-ce23-6aaf-e7ee49c267a8">The <b>type_check_function</b> function compares the names of the data types of the instance that is referred to by the parameter <b>the_type</b> with the set of entity names specified by <b>sub_names</b>.</p>
+
+<p id="_cd4094a5-ed41-479a-74bb-cb9f01332079">Depending on the value of <b>criterion</b>, it returns TRUE if:</p>
+
+<div class="ul_wrap"><ul id="_bed1bea8-53a0-0746-cb4c-4a4ae54a3c78"><li id="_2391c5f5-138f-4bdd-876c-723282b15314"><p id="_8cd0edf1-acad-b582-e2c6-f59b524c9ff5">case 0: the intersection of the two aggregates is not empty.</p>
+<div id="_355665c2-2d1f-a474-96c6-29d63af493ae" class="Note"><p><span class="note_label">NOTE 1  </span>If <b>sub_names</b> contains the entity names of all the subtypes of a particular entity data type, this case can be used to ensure that no instance of the supertype exists.</p></div></li>
+</ul></div>
+
+
+
+<div class="ul_wrap"><ul id="_e480a1d9-cc48-4890-6fee-b36ca85847fd"><li id="_a6ba9322-232d-f169-db3e-1a3a0e17dd21"><p id="_824b29f4-0f10-33ae-cb7c-8a831c489189">case 1: the intersection of the two aggregates is empty.</p>
+<div id="_5d463e53-b6b6-711f-a918-bd36a2ca8810" class="Note"><p><span class="note_label">NOTE 2  </span>If <b>sub_names</b> contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no instance of these subtypes exists.</p></div></li>
+</ul></div>
+
+
+
+<div class="ul_wrap"><ul id="_91015116-a366-7f82-7d95-c18a9f7aaaf9"><li id="_0f45731f-7e9c-4b89-ad33-9e5aea00fc35"><p id="_d5a931cf-f31d-2b00-39de-265b2a9caa96">case 2: the intersection of the two aggregates contains exactly one name.</p>
+<div id="_ad3e4d1a-2787-5beb-7ada-e633cf22547f" class="Note"><p><span class="note_label">NOTE 3  </span>If <b>sub_names</b> contains the entity names of all the subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of subtypes of the entity exists and that only instances of subtypes of the entity exist.</p></div><div id="_c50ae34f-6edd-4a65-6671-a5c962da2166" class="Note"><p><span class="note_label">NOTE 4  </span>The concept of complex entity instance is defined in ISO 10303-11.</p></div></li>
+</ul></div>
+
+
+
+
+
+<div class="ul_wrap"><ul id="_2319625e-3988-8762-c0b1-b0a6b9a561ae"><li id="_6610c4f7-b4d8-c2df-e0e1-5fe5a48c72ff"><p id="_60b4c867-9963-71bc-b966-03959da361ac">case 3: the intersection of the two aggregates contains at most one name.</p>
+<div id="_b664503b-e7a8-f06a-1d6c-cba11fadabb7" class="Note"><p><span class="note_label">NOTE 5  </span>If <b>sub_names</b> contains the entity names of subtypes of a particular entity data type, this function can be used to ensure that no complex entity instance of these subtypes of the entity exists.</p></div></li>
+</ul></div>
+
+
+
+<p id="_c3ac898a-61bc-b4d2-6697-ab8bd19b8837"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_7d02ee72-91ec-55d6-394b-e165ec6edfa0" class="sourcecode" spellcheck="false" translation="no"><pre>FUNCTION type_check_function(the_type : GENERIC;<br />                             sub_names : SET OF STRING;<br />                             criterion : INTEGER) : LOGICAL;<br />  IF NOT EXISTS(the_type) OR (SIZEOF(sub_names) = 0) THEN<br />    RETURN (UNKNOWN);<br />  ELSE<br />    CASE criterion OF<br />    0 :<br />      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) &#x3e; 0);<br />    1 :<br />      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) = 0);<br />    2 :<br />      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) = 1);<br />    3 :<br />      RETURN (SIZEOF(sub_names * TYPEOF(the_type)) &#x3c;= 1);<br />    OTHERWISE :<br />      RETURN (UNKNOWN);<br />    END_CASE;<br />  END_IF;<br />END_FUNCTION;</pre></figure>
+
+
+<div id="support_resource_schema.type_check_function.parameters"><h4><a class="anchor" href="#support_resource_schema.type_check_function.parameters"></a><a class="header" href="#support_resource_schema.type_check_function.parameters">7.4.2.1  Parameters</a></h4>
+
+<div id="support_resource_schema.type_check_function.the_type"><h5><a class="anchor" href="#support_resource_schema.type_check_function.the_type"></a><a class="header" href="#support_resource_schema.type_check_function.the_type">7.4.2.1.1  the_type</a></h5>
+
+<p id="_0d066f9f-e75e-551f-3bcc-1bd51aa836e8">(input) the instance whose data type is checked.</p>
+
+<p id="_262034b9-23f7-eb8d-93f5-8314702d5a53"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_3e09fe96-b429-4ab8-0135-c03341d5fa49" class="sourcecode" spellcheck="false" translation="no"><pre>the_type : GENERIC</pre></figure>
+
+</div><div id="support_resource_schema.type_check_function.sub_names"><h5><a class="anchor" href="#support_resource_schema.type_check_function.sub_names"></a><a class="header" href="#support_resource_schema.type_check_function.sub_names">7.4.2.1.2  sub_names</a></h5>
+
+<p id="_a6e8b4f8-e65c-5e60-bccd-7d67af1d3df9">(input) the set of names of the entity data types that are candidates for the type of <b>the_type</b>.</p>
+
+<p id="_141a5640-4807-5251-a002-4c51029864a9"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_5ce79302-545d-3290-c267-ec842ea62b43" class="sourcecode" spellcheck="false" translation="no"><pre>sub_names : SET OF STRING</pre></figure>
+
+</div><div id="support_resource_schema.type_check_function.criterion"><h5><a class="anchor" href="#support_resource_schema.type_check_function.criterion"></a><a class="header" href="#support_resource_schema.type_check_function.criterion">7.4.2.1.3  criterion</a></h5>
+
+<p id="_afc6ffd9-0dab-08a5-9663-1e4505a0c14a">(input) the integer number value between 0 and 3.</p>
+
+<p id="_7da360b8-deaa-8a19-65ef-29ea11f83cf7"><span style="text-decoration: underline">EXPRESS specification:</span></p>
+
+<figure id="_eea1e93f-394d-c9c9-8fc2-d09fb2d12d06" class="sourcecode" spellcheck="false" translation="no"><pre>criterion : INTEGER</pre></figure>
+
+</div></div>
+
+
+
+
+
+
+</div>
+</div></div></main><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      if(!jqNav.length || !jqToggle.length) {
+        return;
+      }
+
+      const navWidthExpanded = jqNav.outerWidth();
+      const bodyPaddingLeftExpanded =
+        parseFloat(jqBody.css('paddingLeft')) > 0 ?
+          jqBody.css('paddingLeft') : navWidthExpanded + 'px';
+      const expandedToggleLeft = navWidthExpanded + 'px';
+      let bandWidth = 0;
+
+      $('.document-stage-band:visible, .document-type-band:visible')
+        .each(function() {
+          const bounds = this.getBoundingClientRect();
+          bandWidth = Math.max(bandWidth, bounds.right);
+        });
+
+      const toggleWidth = jqToggle.outerWidth();
+      const collapsedToggleLeft = bandWidth + 'px';
+      const collapsedBodyPaddingLeft = bandWidth + toggleWidth + 'px';
+      jqToggle.css({
+        'left': jqNav.is(':visible') ? expandedToggleLeft : collapsedToggleLeft,
+        'top': '0px'
+      });
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const navLeft = isNavVisible ? '-' + navWidthExpanded + 'px' : '0px';
+        const bodyPaddingLeft =
+          isNavVisible ? collapsedBodyPaddingLeft : bodyPaddingLeftExpanded;
+        const toggleLeft =
+          isNavVisible ? collapsedToggleLeft : expandedToggleLeft;
+
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+        jqToggle.stop(true, true);
+
+        if(!isNavVisible) {
+          jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
+        });
+        jqBody.animate({'paddingLeft': bodyPaddingLeft}, animationSpeed);
+        jqToggle.animate({'left': toggleLeft}, animationSpeed);
+      });
+    })();
+  </script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div ></div>", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+<script>
+$(".collapse-button").click(function () {
+$(this).toggleClass('expand'); // expand: the class to change the collapse button shape
+// collapse: the class to collapse/expand the li elements with the h2 class
+$(this).closest('li').children(".content").toggleClass('collapse');})
+</script>
+</body></html>

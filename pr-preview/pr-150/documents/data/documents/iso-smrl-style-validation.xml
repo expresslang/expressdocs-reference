@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="3.5.4" schema-version="v2.3.0" flavor="iso">
+<bibdata type="standard">
+<title language="en" type="main">Industrial automation systems and integration — Product data representation and exchange — Integrated generic resource: Testing a single schema</title>
+
+<title language="en" type="title-intro">Industrial automation systems and integration</title>
+
+<title language="en" type="title-main">Product data representation and exchange</title>
+
+<title language="en" type="title-part">Integrated generic resource: Testing a single schema</title>
+
+<title language="en" type="title-part-prefix">Part 999</title>
+
+<title language="fr" type="main">Systèmes d’automatisation industrielle et intégration — Représentation et échange de données de produits — Ressources génériques intégrées: Tester un seul schéma</title>
+
+<title language="fr" type="title-intro">Systèmes d’automatisation industrielle et intégration</title>
+
+<title language="fr" type="title-main">Représentation et échange de données de produits</title>
+
+<title language="fr" type="title-part">Ressources génériques intégrées: Tester un seul schéma</title>
+
+<title language="fr" type="title-part-prefix">Partie 999</title>
+<docidentifier type="ISO" primary="true">ISO 10303-999:2030</docidentifier><docidentifier type="iso-reference">ISO 10303-999:2030(E)</docidentifier><docidentifier type="URN">urn:iso:std:iso:10303:-999:en</docidentifier><docidentifier type="iso-undated">ISO 10303-999</docidentifier><docidentifier type="iso-with-lang">ISO 10303-999:2030(en)</docidentifier><docidentifier type="iso-tc">10446</docidentifier><docnumber>10303</docnumber><contributor><role type="author"/><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Technical committee" subtype="TC">
+<name>Industrial automation systems and integration</name>
+<identifier>TC 184</identifier><identifier type="full">TC 184/SC 4/WG 12</identifier></subdivision><subdivision type="Subcommittee" subtype="SC">
+<name>Industrial data</name>
+<identifier>SC 4</identifier></subdivision><subdivision type="Workgroup" subtype="WG"><identifier>WG 12</identifier></subdivision><abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="authorizer"><description>Agency</description></role><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="author"><description>secretariat</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Secretariat">
+<name>ANSI</name>
+</subdivision><abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></contributor><contributor><role type="authorizer"><description>committee</description></role><organization>
+<name>International Organization for Standardization</name>
+<subdivision type="Technical committee" subtype="TC">
+<name>Industrial automation systems and integration</name>
+<identifier>TC 184</identifier><identifier type="full">TC 184/SC 4/WG 12</identifier></subdivision><subdivision type="Subcommittee" subtype="SC">
+<name>Industrial data</name>
+<identifier>SC 4</identifier></subdivision><subdivision type="Workgroup" subtype="WG"><identifier>WG 12</identifier></subdivision><abbreviation>ISO</abbreviation></organization></contributor><edition>1</edition><language>en</language><script>Latn</script><status><stage abbreviation="IS">60</stage><substage>60</substage></status><copyright><from>2030</from><owner><organization>
+<name>International Organization for Standardization</name>
+<abbreviation>ISO</abbreviation></organization></owner></copyright><keyword><vocab>integrated generic resource</vocab></keyword><keyword><vocab>product definition</vocab></keyword><keyword><vocab>product property</vocab></keyword><keyword><vocab>measure</vocab></keyword><keyword><vocab>application context</vocab></keyword><keyword><vocab>product property representation</vocab></keyword><keyword><vocab>person</vocab></keyword><keyword><vocab>organization</vocab></keyword><keyword><vocab>experience</vocab></keyword><keyword><vocab>qualifications</vocab></keyword><keyword><vocab>location and position in organization</vocab></keyword><ext><doctype>international-standard</doctype><flavor>iso</flavor><structuredidentifier><project-number part="999">ISO 10303</project-number></structuredidentifier><stagename abbreviation="IS">International Standard</stagename></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<presentation-metadata><document-scheme>2024</document-scheme><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>3</doc-toc-heading-levels><pdf-toc-heading-levels>3</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_d475ef5d-bc7a-78da-9eec-cf1a1e382472" anchor="boilerplate-copyright-default" inline-header="false" obligation="normative">
+<title id="_129fe8d3-7b32-3da5-a270-59bb0ef8173e">COPYRIGHT PROTECTED DOCUMENT</title>
+<p id="_87b1cc48-d93d-8a24-2822-f39154f70029" anchor="boilerplate-year">© <span class="std_publisher">ISO </span><span class="date">2030</span></p>
+
+<p id="_dcd0efd0-9c2b-bcfd-6dcd-ce36b8143916" anchor="boilerplate-message">All rights reserved. Unless otherwise specified, or required in the context of its implementation, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission. Permission can be requested from either ISO at the address below or ISO’s member body in the country of the requester.</p>
+
+<p id="_71c22afa-6b94-ad85-9f54-347ef903ebd8" anchor="boilerplate-address" align="left">ISO copyright office<br/> CP 401 • Ch. de Blandonnet 8<br/> CH-1214 Vernier, Geneva<br/> Phone: +41 22 749 01 11<br/> Email:  <link target="mailto:copyright@iso.org"/><br/> Website:  <link target="https://www.iso.org/">www.iso.org</link></p>
+
+<p id="_93a0bcfe-1edb-b952-e8f5-db8ed91f8e23" anchor="boilerplate-place">Published in Switzerland</p>
+</clause>
+</copyright-statement>
+</boilerplate><preface><foreword id="_3890b112-6bcc-1d67-8f1e-67e8d2394067" obligation="informative">
+<title id="_41c9fad3-d4c1-eecc-4fad-f91704acc026">Foreword</title>
+<p id="_ae895acc-69ef-6bca-9cad-7d41a8406414">Some foreword.</p>
+</foreword></preface><sections>
+<clause id="_518f07ca-e040-523f-dd94-ac3463f37092" type="scope" inline-header="false" obligation="normative">
+<title id="_f70b6ff6-6131-0e24-81e1-850dbe94b63d">Scope</title>
+<p id="_8fd3cacc-7522-a0af-6dc4-0a78e66b26f3">Scope.</p>
+</clause>
+
+
+
+<terms id="_3ceb2806-1d99-3f16-c1a8-3d2740be6c19" obligation="normative">
+<title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_9608c37a-eaae-1098-3a4b-f705fd512d85">No terms and definitions are listed in this document.</p><p id="_1df4aedb-297d-0c69-967f-f6a60db009d2">ISO and IEC maintain terminology databases for use in standardization at the following addresses:</p>
+
+<ul id="_e6ddc246-88cc-2222-8452-b939a5cefa0e"><li><p id="_93880b15-0e52-9141-f887-d290dce89ffd">ISO Online browsing platform: available at <link target="https://www.iso.org/obp"/></p>
+</li>
+<li><p id="_8a7ecb99-412c-1138-ae9d-76c4ac7b7d43">IEC Electropedia: available at <link target="https://www.electropedia.org"/></p>
+</li>
+</ul>
+</terms>
+
+<clause id="_76ada126-8058-64e2-99bd-d99ad3adb248" anchor="action_schema" type="express-schema" inline-header="false" obligation="normative">
+<title id="_0866864f-9938-c995-6e79-b39dd340fb6c">action_schema</title>
+<clause id="_9259e38a-b3a7-d038-24a8-980168bd1495" inline-header="false" obligation="normative">
+<title id="_53d82e48-1024-e16a-9901-40ceda1ab9b0">General</title>
+<p id="_2457d82b-281e-ac2c-f99c-ac6f214444f3">The subject of the <strong>action_schema</strong> is the description of actions, the reasons for these actions, and the status of these actions.</p>
+
+<example id="_8609617b-f43a-39ff-3f6a-0768787669e4"><p id="_29068e2c-b877-7378-a639-5d870a818869">Reasons for action include evolving user requirements, manufacturing problems and difficulties that arise when a product is in use.</p>
+</example>
+
+<p id="_4333abbd-f640-8995-9141-aceedd91af0c"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_eb6081fd-a6c8-b3bd-930f-05b49a01a5e1" unnumbered="true"><body>SCHEMA action_schema '{iso standard 10303 part(41) version(8) object(1) action_schema(1)}';
+
+REFERENCE FROM basic_attribute_schema
+  (description_attribute,
+   description_attribute_select,
+   get_description_value,
+   get_id_value,
+   get_name_value,
+   get_role,
+   id_attribute,
+   id_attribute_select,
+   name_attribute,
+   name_attribute_select,
+   object_role,
+   role_select,
+   role_association);
+
+REFERENCE FROM support_resource_schema
+  (bag_to_set,
+   identifier,
+   label,
+   text);</body></sourcecode>
+
+</clause>
+
+<clause id="_1caf1e85-380b-2285-ed2d-8afccded33a2" anchor="action_schema." inline-header="false" level="3" obligation="normative">
+<title id="_a6a31c6f-473c-fbab-d6bd-a59359d9a7bd">Fundamental concepts and assumptions</title>
+<p id="_93c7fa5b-b534-317a-3f8c-7146ba1899c5">Action information can be attached to any aspect of product data.</p>
+</clause>
+
+<clause id="_39ccc3e5-a2dc-dfff-8344-73452614a53a" anchor="action_schema.types" inline-header="false" level="3" obligation="normative">
+<title id="_4190e8bf-3401-d1cb-d18f-1efb6a2e14ce">action_schema type definitions</title>
+<clause id="_168df31d-761e-be05-8b53-a1db39de0d75" anchor="action_schema.as_description_attribute_select" inline-header="false" level="4" obligation="normative">
+<title id="_d5ddd2da-174b-4a53-0d55-7de96d9ed6e4">as_description_attribute_select</title>
+<p id="_1b35e226-b656-e815-76ee-df0244943e94"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_e93629aa-2792-24bb-cd9e-e51a1e15cc54" unnumbered="true"><body>TYPE as_description_attribute_select = SELECT BASED_ON description_attribute_select WITH
+  (action_request_solution);
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_38c8e411-723f-f315-e5c4-e70cca39b78a" anchor="action_schema.as_id_attribute_select" inline-header="false" level="4" obligation="normative">
+<title id="_fdfba8b7-f707-a672-d2a6-0dd0e58b523d">as_id_attribute_select</title>
+<p id="_b84532c7-b73d-7108-9d48-94951db2f726"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_7d1ba2a3-7bde-6e2d-c923-f933367494f9" unnumbered="true"><body>TYPE as_id_attribute_select = SELECT BASED_ON id_attribute_select WITH
+  (action);
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_f7443508-f905-505c-2367-93e2482639af" anchor="action_schema.as_name_attribute_select" inline-header="false" level="4" obligation="normative">
+<title id="_c4a195a9-657b-3127-5454-d3dfa756696c">as_name_attribute_select</title>
+<p id="_807158ee-7371-9fb8-6652-ba5ef890b7c6"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_8ba9dc03-bd55-d055-3da2-664a5d6f3378" unnumbered="true"><body>TYPE as_name_attribute_select = SELECT BASED_ON name_attribute_select WITH
+  (action_request_solution);
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_0e1800ca-798d-e3ff-270a-142babae82ef" anchor="action_schema.as_role_select" inline-header="false" level="4" obligation="normative">
+<title id="_34b3a334-805b-11dc-1ce2-3afba4650d57">as_role_select</title>
+<p id="_4c570113-1515-e249-012e-415115f864a1"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_6cadc4c0-d3d6-2083-501f-7261821d0bf3" unnumbered="true"><body>TYPE as_role_select = SELECT BASED_ON role_select WITH
+  (directed_action_assignment);
+END_TYPE;</body></sourcecode>
+
+</clause>
+
+<clause id="_b939c240-372b-2ef7-11bd-8c1ddfbe3226" anchor="action_schema.supported_item" inline-header="false" level="4" obligation="normative">
+<title id="_7ae33873-fcb0-e00e-3177-d27d4666d9eb">supported_item</title>
+<p id="_c76e5dea-2f54-dc19-9844-fae53f8acacd">The <strong>supported_item</strong> allows for the designation of an <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref>, an <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref>, or an <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref>.<note id="_277a88e2-1864-7a35-a7d1-b73d8b005e40"><p id="_6a68e005-935d-91f4-7d3c-66513681c938">This specifies the use of an <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref>.</p>
+</note></p>
+
+
+
+<p id="_a009fbb0-f9a2-8266-c68b-17d7b1b72176"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_db2eb116-f2a7-9f62-ec7c-c085450db81b" unnumbered="true"><body>TYPE supported_item = SELECT
+  (action_directive,
+   action,
+   action_method);
+END_TYPE;</body></sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_d2a6bce5-0d2e-5309-2182-1a6788383fbd" anchor="action_schema.entities" inline-header="false" level="3" obligation="normative">
+<title id="_c9f4d2e3-20f0-a6cc-283f-f03063bcc5bb">action_schema entity definitions</title>
+<clause id="_5bb4c148-692b-962e-caf3-78345fea6362" anchor="action_schema.action" inline-header="false" level="4" obligation="normative">
+<title id="_fec4e21b-d7db-b484-07ff-ea2d548ba332">action</title>
+<p id="_98a8140a-02d4-ef74-62e1-98deb416f30c">An <strong>action</strong> is the identification of the occurrence of an activity and a description of its result.</p>
+
+<p id="_d223a8d3-28b7-4e8c-3b39-0f8cf62d976e">An <strong>action</strong> identifies an activity that has taken place, is taking place, or is expected to take place in the future.</p>
+
+<p id="_dc2823fc-08cb-8956-2715-1b2419a33e51">An action has a definition that is specified by an <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref>.<note id="_cb7b347a-403c-19f1-38f4-36044697654f"><p id="_1c0864ae-97a6-6f07-ed93-36850ef49ca3">In particular application domains, terms such as task, process, activity, operation, and event may be synonyms for <strong>action</strong>.</p>
+</note></p>
+
+
+
+<example id="_e1c62132-5f77-9c43-984e-5b7d0897b61b"><p id="_af79f9b9-f3cb-fed1-9c49-151864783a33">Change, distilling, design, a process to drill a hole, and a task such as training someone are examples of actions.</p>
+</example>
+
+<p id="_3cb25a36-0885-5e57-c4ca-16277019e9c6"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_66738943-a783-f75a-f93c-4d54b9ae4642" unnumbered="true"><body>ENTITY action;
+  name : label;
+  description : OPTIONAL text;
+  chosen_method : action_method;
+DERIVE
+  id : identifier := get_id_value(SELF);
+WHERE
+  WR1: SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ID_ATTRIBUTE.IDENTIFIED_ITEM')) &lt;= 1;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_8e05ae77-9997-29a0-4497-14723c0e137b"><underline>Attribute definitions:</underline></p>
+
+<dl id="_a9db9325-84c1-a756-10dd-e7987aba682c"><dt><strong>name</strong></dt>
+<dd id="_b61ee502-26db-a103-3e3e-d030a5764abc"><p id="_e421fe5d-d43a-4b7e-64fa-1e57b8e5f88c">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_758c5156-5e10-5905-4a06-7ed1bcb26a89"><p id="_b206a1ae-74d5-7a20-96e4-3bf3fed16de5">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>chosen_method</strong></dt>
+<dd id="_62822f0b-a20c-1afc-13ed-783a57f344f8"><p id="_8a1d7e22-72df-5ff6-710a-fe5a09d6ee57">the <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that specifies the procedure selected to carry out the <strong>action</strong> and a description of the results of that <strong>action</strong>.</p>
+</dd>
+<dt><strong>id</strong></dt>
+<dd id="_849d1a62-9b1a-c489-8931-231b1d59ae24"><p id="_2cd6e9bb-eef9-949b-36a6-82f54248e848">the <eref bibitemid="express_support_resource_schema.identifier" citeas=""><display-text>identifier</display-text></eref> that distinguishes the <strong>action</strong>.</p>
+</dd>
+<note id="_763428ea-f9dd-235e-6927-74f4b0b80f5c"><p id="_d947cf06-c651-d929-a3c5-503f8cb48bc9">This attribute is an enhancement to the definition of <strong>action</strong> using a method that is upwardly compatible with ISO 10303-41:1994.</p>
+</note><note id="_deedd501-ac9e-be31-a56c-105a810adaa3"><p id="_e4c21289-8a19-a9d2-a4c5-e9ab33a36505">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note><note id="_a89b074e-fec5-4b2a-2059-2a9329a84e42"><p id="_f222b5e2-5de5-924f-3095-c2dde391d140">The context in which id is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between partners sharing this information.</p>
+</note></dl>
+
+
+
+
+
+
+
+<p id="_f868cf12-90f5-0008-6875-f7bc1c319fbb"><underline>Formal propositions:</underline></p>
+
+<dl id="_d9450546-e209-5964-ffa7-7b0de7e97d5e"><dt><strong>WR1</strong></dt>
+<dd id="_16eba531-c19c-613f-a54c-4a395fd5c6bc"><p id="_3d1adbd6-837c-b37c-b314-620fa8584597">Each <strong>action</strong> shall be the <eref bibitemid="express_basic_attribute_schema.id_attribute.identified_item" citeas=""><display-text>identified_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref>.</p>
+</dd>
+<note id="_b4873430-dc9a-c191-bd90-a733f2b312a6"><p id="_e3480602-675e-1888-43a2-eea007894172">The <eref bibitemid="express_basic_attribute_schema.id_attribute" citeas=""><display-text>id_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_d1bd61bf-a58e-de16-b077-71073bf0f471"><p id="_20fb0094-e2f5-1f65-bae2-c7b4280b938b">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
+</clause>
+
+<clause id="_96ffb864-6e38-fe61-dbcd-3435c6d423b0" anchor="action_schema.action_directive" inline-header="false" level="4" obligation="normative">
+<title id="_eba34131-1d16-34e6-a464-b630e56a280b">action_directive</title>
+<p id="_23a3d8e4-d71c-9d5b-777f-49a8805b5acd">An <strong>action_directive</strong> is an authoritative instrument that provides directions to achieve the specified results.</p>
+
+<example id="_f327f645-9e7c-8608-f478-4729fe7c1fde"><p id="_be17e505-af18-f2ed-d5ca-dd64121e4959">ISO Directives Part 3 provides guidance for the development of standards documents within ISO.</p>
+</example>
+
+<p id="_ce8ad920-f2ab-88ac-22c1-32046bd4bb38"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_382ae919-a1e3-0f5e-9d49-aba0934b2c26" unnumbered="true"><body>ENTITY action_directive;
+  name : label;
+  description : OPTIONAL text;
+  analysis : text;
+  comment : text;
+  requests : SET [1:?] OF versioned_action_request;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_dd0735c1-ec89-17e0-1a16-1f5e585a0817"><underline>Attribute definitions:</underline></p>
+
+<dl id="_b9d8fe0c-f8b8-9c7e-ff62-0adfdf102e1f"><dt><strong>name</strong></dt>
+<dd id="_f39e6c1c-efa2-f592-6e85-60c05e223a07"><p id="_4c66bc07-555d-3326-e146-caa7c4403649">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_directive</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_ec250ae2-cb08-6c37-d19e-aa5b59819857"><p id="_28c07569-526f-e7c6-d5dd-14aa67606448">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action_directive</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>analysis</strong></dt>
+<dd id="_614e342c-8512-f866-5f30-932222d41404"><p id="_bcabb46c-db66-8bcf-d601-449b8b2cdfbb">an informal description of the results of the analysis that was carried out on the elements of the requests set. The request sets are the <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref>s referenced in the requests attribute.</p>
+</dd>
+<note id="_6393557f-6e15-831c-4ae4-7fbfbe21feb8"><p id="_d2a88c90-65b0-1eab-953a-6b5ce15810db">The reason that different requests are satisfied by the <strong>action_directive</strong> could be recorded in this attribute.</p>
+</note></dl>
+
+
+
+<dl id="_26e09dfe-45a6-b009-a13d-b548806ef7c5"><dt><strong>comment</strong></dt>
+<dd id="_a2e66195-f009-c806-dce2-2c7397f6a430"><p id="_8acd03d6-61af-482c-bbf2-815ee1fe91e1">an informal description of any other pertinent information.</p>
+</dd>
+<dt><strong>requests</strong></dt>
+<dd id="_cdc4bf98-3413-2ef7-d5c7-e574e80757e3"><p id="_145249ad-a058-eee3-38e4-ae07b6474230">a set of <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> entity data types that defines the expected results.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_bbdd4326-d7f4-3be9-bf54-b0cb2598dd57" anchor="action_schema.action_method" inline-header="false" level="4" obligation="normative">
+<title id="_4546fd5a-6c77-20c8-bad6-40db13d4468f">action_method</title>
+<p id="_35cde2be-0567-818d-1d83-25e9693ab114">An <strong>action_method</strong> is the definition of an activity. This definition includes the activity’s objectives and effects.<note id="_df570120-581a-0be0-82f1-ec7d88466b8e"><p id="_ff094146-3d81-b2bf-883e-adacdc6ba9a7">This definition may be the basis for actions or the solution for action requests.</p>
+</note></p>
+
+
+
+<example id="_acb88c12-6350-13ee-4386-be12673db365"><p id="_76f3f6c3-b97f-a396-78f4-94a2beea2bae">For the <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> whose name attribute is ‘serve dinner’, the name attribute of related instance of <strong>action_method</strong> could be ‘cook by recipe’ or ‘purchase takeout food’.</p>
+</example>
+
+<p id="_d85e8da1-21c8-f781-2cee-78d6a3a63334"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_f10a39a6-934e-d8ab-e6b9-a4394450e238" unnumbered="true"><body>ENTITY action_method;
+  name : label;
+  description : OPTIONAL text;
+  consequence : text;
+  purpose : text;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_aed3c091-6a84-e813-5180-1e6990e77364"><underline>Attribute definitions:</underline></p>
+
+<dl id="_791684ca-29a0-f1a9-1edc-3363af0beab6"><dt><strong>name</strong></dt>
+<dd id="_cfb86b07-5782-81fa-4565-ae129af8787f"><p id="_bb2b3b0c-6a9a-c8fb-8703-079599600884">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_method</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_18d69582-03c5-7178-2443-ce54429278ea"><p id="_a110ff6d-0f77-42cc-5030-c8f39914dfee">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action_method</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>consequence</strong></dt>
+<dd id="_4b7f7ead-add0-4892-55cb-14985e8b6508"><p id="_51ddc8ba-7eba-3f7c-1af8-b43ed81b5bf7">an informal description of the effects of the <strong>action_method</strong>.</p>
+</dd>
+<dt><strong>purpose</strong></dt>
+<dd id="_4bdc5e3e-4152-b404-239c-a3fe2873b115"><p id="_ea9a97b4-2c4c-f2ea-45f1-e5474645e248">an informal description of the objectives of the <strong>action_method</strong>.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_533b296c-49e7-c908-30dd-d3d15c128151" anchor="action_schema.action_method_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_56fb1262-ed62-2a7d-1b84-bb1b40614edc">action_method_relationship</title>
+<p id="_69098c6f-2335-d25f-0cb8-89840702e917">An <strong>action_method_relationship</strong> is a relationship between two instances of the entity data type <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> and provides an identification and description of this relationship.<note id="_1f5235da-6952-ce92-5b70-c61baed2091a"><p id="_930d9369-6bd7-6b70-ac4a-30933f8f80b6">The role of <strong>action_method_relationship</strong> can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.</p>
+</note><note id="_012f4cf4-3060-6edd-cd10-f7aacda75a9e"><p id="_4d053402-f01f-b620-7ff6-85d3b82846b6">This entity, together with the <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> entity, is based on the relationship template that is described in annex E.3.</p>
+</note><note id="_9adc453e-3533-d633-3027-ca0e17cecb7c"><p id="_1c69f788-8f83-114b-03df-adad0bdb0086">This entity may be used to define a procedural relationship among constituent activities.</p>
+</note></p>
+
+
+
+
+
+
+
+<p id="_06b4b274-53af-6c26-3ec9-3c1178c8fb1f"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_8506b0c1-f816-0844-2486-58515eb2d975" unnumbered="true"><body>ENTITY action_method_relationship;
+  name : label;
+  description : OPTIONAL text;
+  relating_method : action_method;
+  related_method : action_method;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_4bb2f426-c18a-fd4e-2940-87f3db94acd9"><underline>Attribute definitions:</underline></p>
+
+<dl id="_7d100875-dd4a-7d60-71ee-0bececf2a9e8"><dt><strong>name</strong></dt>
+<dd id="_5b0bb09a-e7dc-89d6-b3a2-716ea02618ba"><p id="_0d249c2b-eafa-3ffd-9898-c8f55d32a070">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_method_relationship</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_90baa6e5-7d1a-c6bf-4389-8ec7d56002ef"><p id="_8b7af724-9397-a69f-48f4-fdc34fe891bf">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action_method_relationship</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>relating_method</strong></dt>
+<dd id="_ebdb946f-5b93-50f8-3829-faf6b4fcdc40"><p id="_61fdd3bb-0bde-047a-d096-b6f9979a69c6">one of the instances of <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that is a part of the relationship.</p>
+</dd>
+<note id="_8c16437a-0f48-d2e3-ae89-9e6ff88f6025"><p id="_b678e624-38e5-0b88-7f09-247639caf1c9">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+
+<dl id="_2950826c-935c-b022-dcf1-a5aff449985e"><dt><strong>related_method</strong></dt>
+<dd id="_0eab1c2f-dd3a-96a3-6376-647c12a08de5"><p id="_048764bd-7d94-6cea-e031-43b70ed90583">the other instance of <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that is a part of the relationship. If one element of the relationship is dependent upon the other this attribute shall be the dependent one.</p>
+</dd>
+<note id="_08255abc-c8f2-8ce9-25a8-863d122c0369"><p id="_dc6742c6-d9d7-6c9f-3f76-f817af62dc01">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+</clause>
+
+<clause id="_dc81613b-facd-a1de-bda3-6807446f7c45" anchor="action_schema.action_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_c0cb6f67-118f-5df3-b1cf-8bd3ae94fc5c">action_relationship</title>
+<p id="_5c0cfdc5-268b-e68b-6969-e416027cf2be">An <strong>action_relationship</strong> is a relationship between two instances of the entity data type <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> and provides an identification and description of this relationship.<note id="_34cc27fa-7166-8aa2-7757-9030bf13a510"><p id="_dded1feb-51cc-d6ac-7895-ae5cef10c179">The role of <strong>action_relationship</strong> can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.</p>
+</note></p>
+
+
+
+<p id="_a2d0a2a0-06c7-6a61-885c-3d7a2745b21a"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_ede7b0cf-fd24-c8d2-8b2d-fb9a8343c95e" unnumbered="true"><body>ENTITY action_relationship;
+  name : label;
+  description : OPTIONAL text;
+  relating_action : action;
+  related_action : action;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_15349bde-b07d-5c74-82b0-3cb959658d7f"><underline>Attribute definitions:</underline></p>
+
+<dl id="_4f9d3677-d11c-df14-ad7e-27f74d0c9458"><dt><strong>name</strong></dt>
+<dd id="_44c8e770-d8d0-3b48-6729-1db7a980fae6"><p id="_95acc2d5-5e41-7011-868b-78e8df3aec53">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_relationship</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_71149dfc-f752-8f7b-761c-a39a2d289ca0"><p id="_fa87a51e-7d72-6efd-cc96-db8360e1e377">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action_relationship</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>relating_action</strong></dt>
+<dd id="_4a9f8271-9c3c-917e-7fdd-1ce48fa3a300"><p id="_232fc859-5ccf-4299-120e-ca799e2fe525">one of the instances of <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> that is a part of the relationship.</p>
+</dd>
+<note id="_1cac5b0d-2f48-e6bf-5009-0007c7766134"><p id="_d3872c8e-0c5d-2897-b927-765cfed5e85e">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+
+<dl id="_8ecc1b6c-53a2-b1d4-a912-d988f5fa92b9"><dt><strong>related_action</strong></dt>
+<dd id="_2ce32377-63d5-10b5-42a2-e78f3f5ee137"><p id="_7947ce8e-ffb2-640e-2044-2c8748caa43a">the other instance of <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> that is a part of the relationship. If one element of the relationship is dependent upon the other this attribute shall be the dependent one.</p>
+</dd>
+<note id="_b3a66d73-3537-aa94-46f7-256cec7e41e3"><p id="_4a5b2802-a7c7-0456-9b03-ead2b94bb9b8">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+</clause>
+
+<clause id="_03c3ff83-ad0a-aa7b-278a-e7c0d6969419" anchor="action_schema.action_request_solution" inline-header="false" level="4" obligation="normative">
+<title id="_def8810a-8f8b-e829-0df1-4bd9bed6776b">action_request_solution</title>
+<p id="_5da40f76-3c4c-a431-f993-028a0ab255ef">An <strong>action_request_solution</strong> is an association between a <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> and an <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that is a potential solution for the request.</p>
+
+<p id="_16242bcc-1888-103f-5ba5-bcaaaf9b5eca"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_b2c27660-0eec-b650-e617-199571834ccc" unnumbered="true"><body>ENTITY action_request_solution;
+  method : action_method;
+  request : versioned_action_request;
+DERIVE
+  description : text := get_description_value(SELF);
+  name : label := get_name_value(SELF);
+WHERE
+  WR1: SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'DESCRIPTION_ATTRIBUTE.DESCRIBED_ITEM')) &lt;= 1;
+  WR2: SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'NAME_ATTRIBUTE.NAMED_ITEM')) &lt;= 1;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_d81c0b0b-9a35-bb8a-ef5a-3ef72ff16d9d"><underline>Attribute definitions:</underline></p>
+
+<dl id="_0d2e2559-f338-0d6e-542d-521cb8480e62"><dt><strong>method</strong></dt>
+<dd id="_74bb0210-8922-c7b1-b91a-e2ae3d41f9be"><p id="_492af84b-fe70-b96f-26af-387b90037018">the <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that is a potential solution.</p>
+</dd>
+<dt><strong>request</strong></dt>
+<dd id="_269592cd-88f1-0e46-ae07-42df117d2fb8"><p id="_6dc4a173-b77f-ec94-30b0-d88df002d287">the <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> for which a solution is specified.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_0f3f3bc7-54ca-ba1d-6da3-e6db15dc2ae1"><p id="_53580f99-1543-91b7-4d53-b712a79b162a">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action_request_solution</strong>.</p>
+</dd>
+<note id="_6437265f-7535-fbf6-a1d4-9eddf0d51fcb"><p id="_0c76d2d5-bbbc-1fe9-a4f7-7c2602b12f82">This attribute is an upwardly compatible addition to <strong>action_request_solution</strong> as specified in ISO 10303-41:1994.</p>
+</note></dl>
+
+
+
+<dl id="_eac2a589-bb75-737c-e2b0-99520e6f650f"><dt><strong>name</strong></dt>
+<dd id="_237431db-6e33-83ce-4924-31d41fca1c94"><p id="_0677b104-93e8-aebb-ae1f-397b724c96ee">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_request_solution</strong> is known.</p>
+</dd>
+<note id="_d7f58915-068f-cb58-ec0c-4fb3d05640b7"><p id="_98c73701-b006-4142-252c-75a04e3fa6d0">This attribute is an upwardly compatible addition to <strong>action_request_solution</strong> as specified in ISO 10303-41:1994.</p>
+</note></dl>
+
+
+
+<p id="_aafb4dee-d004-a5ab-6292-359d83550e9a"><underline>Formal propositions:</underline></p>
+
+<dl id="_9efa61ce-d872-1664-61b8-62a0e942efe8"><dt><strong>WR1</strong></dt>
+<dd id="_aa03295d-9a0f-8505-8af6-2edef7a65baa"><p id="_c1a913ef-f5f9-2d26-8291-5df6a52249ba">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.description_attribute.described_item" citeas=""><display-text>described_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref>.</p>
+</dd>
+<note id="_78983fc5-ca41-dd31-9197-56e1f2fe647d"><p id="_eb923b36-cfc7-f704-0184-a987f7e8c042">The <eref bibitemid="express_basic_attribute_schema.description_attribute" citeas=""><display-text>description_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note></dl>
+
+
+
+<dl id="_d9196b3b-a2cc-9a52-26a7-2ec66c75647b"><dt><strong>WR2</strong></dt>
+<dd id="_a565ce39-6d7b-e03e-64d2-4d75bb2b61b5"><p id="_1fbb4e13-3974-2cc1-6cc8-3990703991e2">Each <strong>action_request_solution</strong> shall be the <eref bibitemid="express_basic_attribute_schema.name_attribute.named_item" citeas=""><display-text>named_item</display-text></eref> in at most one <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref>.</p>
+</dd>
+<note id="_22a83f4e-9318-c825-00df-1a490983a7b3"><p id="_8be5208a-936d-1b61-d5ab-70d0c6b8d980">The <eref bibitemid="express_basic_attribute_schema.name_attribute" citeas=""><display-text>name_attribute</display-text></eref> data type is defined in <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> of this part of ISO 10303.</p>
+</note><note id="_746d7377-2976-3ec5-eacf-8e7b817509cd"><p id="_35c90459-6bf2-705d-13c4-1cad593963c5">A template for constraining the population of the entity data types defined in the <eref bibitemid="express_basic_attribute_schema" citeas=""><display-text>basic_attribute_schema</display-text></eref> is described in annex E.</p>
+</note></dl>
+
+
+
+
+</clause>
+
+<clause id="_7c0b05e0-9eff-9237-d3fd-9ae39896e263" anchor="action_schema.action_request_status" inline-header="false" level="4" obligation="normative">
+<title id="_ed75cf15-23a6-f9ce-ebe6-1e127b407835">action_request_status</title>
+<p id="_5f7bdf82-073c-d311-359d-23bcc8217f0c">An <strong>action_request_status</strong> is the association of a status with a <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref>.</p>
+
+<p id="_4daba8e8-01e9-b667-0c92-b1583e068172"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_dc645ff5-aa66-f493-befd-7599343d8003" unnumbered="true"><body>ENTITY action_request_status;
+  status : label;
+  assigned_request : versioned_action_request;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_01364167-5f74-5169-9ac8-09f1b30eaef8"><underline>Attribute definitions:</underline></p>
+
+<dl id="_7f24b383-4ee6-f4e4-a7c5-e4aed9a9f52b"><dt><strong>status</strong></dt>
+<dd id="_9748c281-b044-1a5b-8403-8f16d985ee18"><p id="_c203d69a-6119-7c84-336b-9d8a77cffab7">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> that provides a user interpretable designation for the level of completion of the action.</p>
+</dd>
+<note id="_da41e7bf-a486-1f21-e0a1-0d2700504b84"><p id="_8385aebe-602d-b59d-2131-1d23479de62d">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+
+<dl id="_4a44a1cf-2e98-4b90-5504-dcb5be9cf232"><dt><strong>assigned_request</strong></dt>
+<dd id="_435c410c-8509-7c39-e280-fed3778da1d9"><p id="_846884a6-fc06-a67c-a159-1e9acdcdd2cb">the <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> to which the <strong>status</strong> applies.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_95878c61-cf20-5153-cc6f-e57f31b87e5a" anchor="action_schema.action_resource" inline-header="false" level="4" obligation="normative">
+<title id="_9f62517b-98c3-f88b-8544-acd62bd8d7a8">action_resource</title>
+<p id="_745a14fa-d303-eb92-7d7c-1056c7834e28">An <strong>action_resource</strong> is a thing that is identified as being needed to carry out an action.</p>
+
+<p id="_d07cc370-887f-9b15-ef6b-e69990a32176"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_9f63da8a-d418-4439-9461-4d99886ed9f7" unnumbered="true"><body>ENTITY action_resource;
+  name : label;
+  description : OPTIONAL text;
+  usage : SET [1:?] OF supported_item;
+  kind : action_resource_type;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_ab548b68-22d5-5587-cf47-b92fc5ada945"><underline>Attribute definitions:</underline></p>
+
+<dl id="_b11baad1-0ec3-8ce0-494c-cedac03f8694"><dt><strong>name</strong></dt>
+<dd id="_8f44f8eb-6004-d8bf-9eaf-5907b2f106a6"><p id="_867ee544-887d-cf1d-2968-2f20f494a56c">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_resource</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_40262d36-70e0-0464-c213-a1389a20a3d1"><p id="_ea861dae-6c2f-d09d-0612-e130c848760a">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action_resource</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>usage</strong></dt>
+<dd id="_23c104df-5a7a-f7a8-246b-e9f0e117d427"><p id="_886393ea-bef7-b4cf-e2a2-841ca0e0b099">a set of <eref bibitemid="express_action_schema.supported_item" citeas=""><display-text>supported_item</display-text></eref>s for which the <strong>action_resource</strong> is used.</p>
+</dd>
+<dt><strong>kind</strong></dt>
+<dd id="_cae19ffe-5387-4d34-7f09-84d922286967"><p id="_079923e5-7c0d-5986-8a6e-7c8ff78df6a3">the <eref bibitemid="express_action_schema.action_resource_type" citeas=""><display-text>action_resource_type</display-text></eref> that specifies the sort of <strong>action_resource</strong> that is being used.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_01df8f03-1a8e-22f0-08e4-775b79287c52" anchor="action_schema.action_resource_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_7e2bdcb9-edd0-9062-e3c2-11898f7542a6">action_resource_relationship</title>
+<p id="_7f8531e6-3068-12a1-0554-8daa0a503ab2">An <strong>action_resource_relationship</strong> is a relationship between two instances of the entity data type <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> and provides an identification and description of this relationship.<note id="_be692a96-3a95-5efb-63af-8924540b8b7b"><p id="_dd1e3425-3133-f6f2-1165-53fa8a820f85">The role of <strong>action_resource_relationship</strong> can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.</p>
+</note><note id="_ab68c7b5-f76d-3686-15b2-c87d44d2e700"><p id="_698b486c-3a6e-f8ea-c4fd-d732aa471de9">This entity, together with the <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> entity, is based on the relationship template that is described in annex E.3.</p>
+</note></p>
+
+
+
+
+
+<p id="_5b06b98c-350c-b9e4-0cfc-c1862f741b2f"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_c784e475-55d4-42e0-48f2-dfe7d721ab0d" unnumbered="true"><body>ENTITY action_resource_relationship;
+  name : label;
+  description : OPTIONAL text;
+  relating_resource : action_resource;
+  related_resource : action_resource;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_eab64248-ef03-ff98-81e8-6d6640e84de7"><underline>Attribute definitions:</underline></p>
+
+<dl id="_59ce244b-23d6-ac63-fb8d-e903968b723a"><dt><strong>name</strong></dt>
+<dd id="_29b8c491-d032-98c8-4f6c-1dab635a8629"><p id="_1603f84b-50b7-f4d8-d181-ef47e1aa00e5">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_resource_relationship</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_8930ddd2-2fc3-f8ff-839b-025ddc24f89d"><p id="_a35e4ce9-0fc8-a759-a00e-7572e55e920e">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>action_resource_relationship</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>relating_resource</strong></dt>
+<dd id="_71ae9b36-8284-32af-9b21-0219ce056fc3"><p id="_25b92ead-aacb-5772-e937-815dd44a9f8a">one of the instances of <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> that is a part of the relationship.</p>
+</dd>
+<note id="_d1d3a5e8-e3b7-45c2-53ee-c7092461ac7f"><p id="_0a165ee4-7895-91ed-90e7-dbb33c82de82">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+
+<dl id="_b667e347-3518-4669-3570-10dd5fb521c9"><dt><strong>related_resource</strong></dt>
+<dd id="_771f8f7f-bc73-a44d-2cb0-a4b0aa3f8bc2"><p id="_68d7da20-64d9-66a5-6c09-6ddedbac6c41">the other instance of <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> that is a part of the relationship. If one element of the relationship is dependent upon the other this attribute shall be the dependent one.</p>
+</dd>
+<note id="_9d764dc9-552f-dc51-1abb-50dab853893b"><p id="_7424b91f-6fe6-74df-6061-dc452e2ffd11">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+</clause>
+
+<clause id="_e278a18b-8352-cdd9-1fb8-de93337d3d12" anchor="action_schema.action_resource_type" inline-header="false" level="4" obligation="normative">
+<title id="_7072a1d1-55e3-968b-34d3-64afa30609b6">action_resource_type</title>
+<p id="_3564f908-e19a-9928-37ce-f5405514601d">An <strong>action_resource_type</strong> is the identification of the kind of <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> needed to carry out an action.</p>
+
+<example id="_71631a9a-2241-19a4-8447-0ab8f0757f77"><p id="_18f962f3-017d-dbf0-3d82-400c1202150b">This entity may be used to specify the kind of tool needed to perform a process operation.</p>
+</example>
+
+<p id="_2a5f8cd0-10ce-6c23-191b-aa67f32971c0"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_a3503730-36a0-44ba-0553-4da426648dd7" unnumbered="true"><body>ENTITY action_resource_type;
+  name : label;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_9bbca220-91e7-d91c-c13d-ef6283077775"><underline>Attribute definitions:</underline></p>
+
+<dl id="_5f31d438-e4c6-372e-79a1-9e99546f355e"><dt><strong>name</strong></dt>
+<dd id="_58960c58-e366-7a5b-81e4-a005c5b18f54"><p id="_19402578-f9fa-c602-f555-4ea93c27ac8f">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>action_resource_type</strong> is known.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_e2e72493-13e3-0d93-82c6-7414945bb3b7" anchor="action_schema.action_status" inline-header="false" level="4" obligation="normative">
+<title id="_17b1687a-14c6-a5d2-aece-ec17a0693f4f">action_status</title>
+<p id="_71dcd1f3-9278-43e3-9208-9912bd1ad542">An <strong>action_status</strong> is the association of a status with an <eref bibitemid="express_action_schema.executed_action" citeas=""><display-text>executed_action</display-text></eref>.<note id="_e6b84998-6067-578a-e484-b8614adbaf37"><p id="_fb4f64c2-f736-9397-680a-44c817796084">Information about the date and time may be associated with the <strong>action_status</strong> through the use of <eref bibitemid="express_management_resources_schema.date_assignment" citeas=""><display-text>date_assignment</display-text></eref>, <eref bibitemid="express_management_resources_schema.date_and_time_assignment" citeas=""><display-text>date_and_time_assignment</display-text></eref>, or <eref bibitemid="express_management_resources_schema.time_assignment" citeas=""><display-text>time_assignment</display-text></eref>.</p>
+</note></p>
+
+
+
+<p id="_36a6a925-58c2-d988-2b01-3bb9e93fff40"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_dff4d0cf-6300-52c0-8795-372a91c60b65" unnumbered="true"><body>ENTITY action_status;
+  status : label;
+  assigned_action : executed_action;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_87b11be2-0c76-2e1d-00a8-5a7af9d539e6"><underline>Attribute definitions:</underline></p>
+
+<dl id="_fc12cbf1-eb4e-518d-b746-3fa5da20bdc4"><dt><strong>status</strong></dt>
+<dd id="_271e8354-5cfa-ccd0-73c5-ea46d7ae402d"><p id="_b87a3fe6-11fb-b2ca-effa-fc2ca022b959">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> that provides a user interpretable designation for the level of completion of the action.</p>
+</dd>
+<note id="_89a9aebe-54aa-b562-4aa9-ac9532c1451d"><p id="_31b40902-a656-0450-4888-46895f529f8a">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+
+<example id="_7fd006b5-4b94-45fc-0acb-2a491905b981"><p id="_ed17d51c-6050-0640-bd71-f52749de69eb">Terms such as ‘pending’, ‘completed’, or ‘scheduled’ are examples of status.</p>
+</example>
+
+<dl id="_6ce61e57-12dd-84d2-2185-d117b42a5afe"><dt><strong>assigned_action</strong></dt>
+<dd id="_3d90386b-33f9-5097-bf47-22582e8e220e"><p id="_050a0fab-54b0-4677-ecf3-6c1dc9d216a4">the <eref bibitemid="express_action_schema.executed_action" citeas=""><display-text>executed_action</display-text></eref> to which the status applies.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_ca4042e7-8aab-21aa-90f5-14714b5a5714" anchor="action_schema.directed_action" inline-header="false" level="4" obligation="normative">
+<title id="_3e410df2-f10e-b8f9-def8-38b3c7da242c">directed_action</title>
+<p id="_b2b55b14-45d7-1afe-161b-15b98f74111b">A <strong>directed_action</strong> is a type of <eref bibitemid="express_action_schema.executed_action" citeas=""><display-text>executed_action</display-text></eref> that is governed by an <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref>.</p>
+
+<example id="_5c33ef33-ccf5-068d-ad4f-8ae1a2d0aba8"><p id="_386ca7d3-b287-53d1-d1da-ef6571bf8aae">A <strong>directed_action</strong> could be the inspection of a building as directed by city officials according to the city building codes for earthquake safety. The action is the inspection of the building. The directive is issued by city officials guided by the city building codes. In an application protocol, the building authority may be associated with an <eref bibitemid="express_management_resources_schema.organization_assignment" citeas=""><display-text>organization_assignment</display-text></eref>. The building codes may be associated with a <eref bibitemid="express_management_resources_schema.document_reference" citeas=""><display-text>document_reference</display-text></eref>.</p>
+</example>
+
+<p id="_aedefb6d-c177-7a84-c679-7cb3fe869c30"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_215ed4fe-8008-7ca7-0888-2d692e51fd4e" unnumbered="true"><body>ENTITY directed_action
+  SUBTYPE OF (executed_action);
+  directive : action_directive;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_aebe037f-e9d0-603e-7ee3-472a7c29d53f"><underline>Attribute definitions:</underline></p>
+
+<dl id="_47e4e0df-5cd8-6d29-9b68-ef1e5be10134"><dt><strong>directive</strong></dt>
+<dd id="_5337e9fc-3984-9436-43c2-21cb84796e15"><p id="_9fc11d78-42f9-96d0-63e2-6d0f0e864e65">the <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> that governs the <strong>directed_action</strong>.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_eeaf4de2-0f3d-aba6-5476-299558e11d54" anchor="action_schema.directed_action_assignment" inline-header="false" level="4" obligation="normative">
+<title id="_dc24f16a-039f-87e5-4bd2-73997fe261f4">directed_action_assignment</title>
+<p id="_f94db2c1-fdb1-7e73-eb71-06fd7acfe09a">A <strong>directed_action_assignment</strong> is an association of a <eref bibitemid="express_action_schema.directed_action" citeas=""><display-text>directed_action</display-text></eref> with product data.</p>
+
+<p id="_69953f64-f7ab-8727-599b-6e7efdd91377"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_a860b738-5b19-51ed-dac8-fa13694d9e20" unnumbered="true"><body>ENTITY directed_action_assignment
+  ABSTRACT SUPERTYPE;
+  assigned_directed_action : directed_action;
+DERIVE
+  role : object_role := get_role(SELF);
+WHERE
+  WR1: SIZEOF(USEDIN(SELF, 'BASIC_ATTRIBUTE_SCHEMA.' + 'ROLE_ASSOCIATION.ITEM_WITH_ROLE')) &lt;= 1;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_f24a6b25-8d87-8df4-8b7e-bba7fb43a8dc"><underline>Attribute definitions:</underline></p>
+
+<dl id="_de58157e-9033-ad4f-b5d5-8c6d2a5a88e9"><dt><strong>assigned_directed_action</strong></dt>
+<dd id="_118f3067-5465-183f-aa24-192220ff3576"><p id="_b96bf4aa-e11c-7ed6-0f16-adbc014e50fa">the instance of the <strong>directed_action</strong> entity data that is to be associated with product data.</p>
+</dd>
+<dt><strong>role</strong></dt>
+<dd id="_0607f086-4e32-f314-633c-c546430a28dc"><p id="_a1a122db-59cd-1793-8308-c83b33845d0f">the <strong>object_role</strong> that specifies the purpose of the association of the <strong>directed_action_assignment</strong> with product data.</p>
+</dd>
+</dl>
+
+<p id="_c445eb5d-348f-fff0-c1c4-c43610b30740"><underline>Formal propositions:</underline></p>
+
+<dl id="_19ea7d04-e950-d405-b254-f9a9c08bccdb"><dt><strong>WR1</strong></dt>
+<dd id="_bd366212-d282-7be5-72ad-b9f6a1ceb48d"><p id="_2e2d8729-2dab-7860-fdef-528283982e4d">Each <strong>directed_action_assignment</strong> shall be <strong>item_with_role</strong> in at most one <eref bibitemid="express_basic_attribute_schema.role_association" citeas=""><display-text>role_association</display-text></eref>.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_936af917-98b6-ef89-0c1f-526dbedca3a7" anchor="action_schema.executed_action" inline-header="false" level="4" obligation="normative">
+<title id="_5590f4f4-4093-b51b-ebd5-071fc613bd20">executed_action</title>
+<p id="_9f6bfb28-3995-c6a7-6846-8cabe79536d2">An <strong>executed_action</strong> is a type of <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> that is completed, partially completed, or just identified. It may but need not have status information associated with it.<note id="_f599727d-f10d-b1b9-954c-42d1af1bb319"><p id="_d7a4defe-c63c-7b1e-6e21-185a66f814b6">The role of <strong>executed_action</strong> can be defined in the annotated EXPRESS schemas that use or specialize this entity, or by default, in an agreement of common understanding between the partners sharing this information.</p>
+</note><note id="_4003f5db-cce2-b092-cec0-5d54aef5d94c"><p id="_bfa72782-07f3-7178-9301-561965439551">Status information is associated to <strong>executed_action</strong> through <eref bibitemid="express_action_schema.action_status" citeas=""><display-text>action_status</display-text></eref>.</p>
+</note></p>
+
+
+
+
+
+<example id="_1a22c783-ec1c-9e50-b0d9-7cd25da36dff"><p id="_c74906ba-d87f-8ced-6ba0-84763eb6fd36">An <strong>executed_action</strong> could be to ‘paint the office’ with a status of ‘scheduled’. The action is ‘paint the office’. The status further qualifies the action as ‘planned’, ‘scheduled’, or ‘completed’.</p>
+</example>
+
+<p id="_d5f23e32-bd37-a630-feb4-315b2f46c76c"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_1a04e423-88b5-bb50-44e9-06c028aa9c58" unnumbered="true"><body>ENTITY executed_action
+  SUBTYPE OF (action);
+END_ENTITY;</body></sourcecode>
+
+</clause>
+
+<clause id="_2ebd376d-ac5d-81d3-262c-4088131f3525" anchor="action_schema.versioned_action_request" inline-header="false" level="4" obligation="normative">
+<title id="_f37b35d8-a64a-516b-0fbe-73af88ed6002">versioned_action_request</title>
+<p id="_7d4ace28-51aa-59a9-4386-8b9a95389267">A <strong>versioned_action_request</strong> is a specification of a desired result.<note id="_b6bf9109-73ad-fdfe-4019-e00250816efb"><p id="_f144f9c9-6b5f-f615-18c4-3ab501bfd666">The desired result being identified and described may be obtained through one of more <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref>s.</p>
+</note></p>
+
+
+
+<p id="_770c6ebd-f928-91bf-9c43-79f0f43a4d57"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_edd8de7d-9b6c-d690-a610-edeba8c85829" unnumbered="true"><body>ENTITY versioned_action_request;
+  id : identifier;
+  version : OPTIONAL label;
+  purpose : text;
+  description : OPTIONAL text;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_c6a8d24a-6bf8-a8a4-cd90-c80034b7c8f5"><underline>Attribute definitions:</underline></p>
+
+<dl id="_39595b61-e8bb-0bbf-70be-17ff5c3fa81b"><dt><strong>id</strong></dt>
+<dd id="_293c8e38-bdca-f534-b145-986402405f1c"><p id="_3e5069e5-8775-bd8a-1928-715f3de0bda7">the <eref bibitemid="express_support_resource_schema.identifier" citeas=""><display-text>identifier</display-text></eref> that distinguishes the <strong>versioned_action_request</strong>.</p>
+</dd>
+<note id="_c0b0557e-570d-7419-98e0-e7e51e7d590d"><p id="_782e40a5-324f-34f3-14c4-925daa3d3395">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note><note id="_4888d8c0-f443-085f-2bec-b9868e8fbb8c"><p id="_4e60b652-ded9-23a7-5cbe-ca98d1997084">The context in which id is used as a discriminating characteristic can be identified in an annotated Express schema that uses or specializes this entity, or by default, in an agreement of common understanding between partners sharing this information.</p>
+</note></dl>
+
+
+
+
+
+<dl id="_0486814f-b99d-6ad7-443c-87838fdc24d5"><dt><strong>version</strong></dt>
+<dd id="_f118cf37-a0f9-d102-9bae-3e811e56a4fa"><p id="_8c2ff4bc-5439-9369-1cff-05d987f113a4">the identification of the version of the <strong>versioned_action_request</strong>. The value of the attribute need not be specified.</p>
+</dd>
+<dt><strong>purpose</strong></dt>
+<dd id="_ecf7b2a9-379b-269a-d24e-72d98f659e72"><p id="_8c7a0bb4-90d4-fd84-ea39-a7a93d6c6cbe">an informal description of the reason for the <strong>versioned_action_request</strong>.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_1beba1e9-2a30-b972-25f4-a034e5e686de"><p id="_ef65f0c9-b709-9788-9b99-9dbe92ceaa48">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>versioned_action_request</strong>. The value of the attribute need not be specified.</p>
+</dd>
+</dl>
+</clause>
+
+<clause id="_47bea6e7-2f79-93d3-27c9-54e19e0d6283" anchor="action_schema.versioned_action_request_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_be772ebb-99f9-5c23-4666-0ea2a1ca1f39">versioned_action_request_relationship</title>
+<p id="_b3110f5d-c57e-74b5-0f5b-6b2061b2f85d">A <strong>versioned_action_request_relationship</strong> is a relationship between two <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> objects.<note id="_aebdcc6b-ce6e-70d6-2dad-eff8ecc79300"><p id="_ce0eb266-9f2a-8f87-893c-06f086aaa2a3">Two <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> objects may be related if they address similar problems.</p>
+</note><note id="_9136ee87-7b39-b5b8-8854-3933e95d198b"><p id="_83d9e1e9-72eb-9f63-20cf-7b647d96feae">A <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> may be a version of a work request. It might be related to a different version of the work request using a <strong>versioned_action_request_relationship</strong>.</p>
+</note></p>
+
+
+
+
+
+<p id="_0e3a6c74-3889-a895-d00d-c6c1a8a9f8d4"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_0e155568-1971-c0ba-d4f7-31a3439c2c2e" unnumbered="true"><body>ENTITY versioned_action_request_relationship;
+  id : identifier;
+  name : label;
+  description : OPTIONAL text;
+  relating_versioned_action_request : versioned_action_request;
+  related_versioned_action_request : versioned_action_request;
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_f8ada038-e38e-5171-2508-925cb797c152"><underline>Attribute definitions:</underline></p>
+
+<dl id="_4f469111-9e71-486a-8029-ac3c45ba9af6"><dt><strong>id</strong></dt>
+<dd id="_15c6a3be-7738-8951-fc39-afe0b15b7ebd"><p id="_533571fc-9f5b-87fb-0ee5-68ad3ab4e3a5">the <eref bibitemid="express_support_resource_schema.identifier" citeas=""><display-text>identifier</display-text></eref> that distinguishes the <strong>versioned_action_request_relationship</strong>.</p>
+</dd>
+<dt><strong>name</strong></dt>
+<dd id="_deca724f-b968-59b0-8ee6-8a48446f20ee"><p id="_49dbd783-775e-299e-8394-40ac83597f9f">the <eref bibitemid="express_support_resource_schema.label" citeas=""><display-text>label</display-text></eref> by which the <strong>versioned_action_request_relationship</strong> is known.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_1cb08a5e-fa28-7492-5b2c-2b1b52d59f52"><p id="_6764221d-2bd4-ee0e-a764-413400c254b3">the <eref bibitemid="express_support_resource_schema.text" citeas=""><display-text>text</display-text></eref> that characterizes the <strong>versioned_action_request_relationship</strong>. The value of this attribute need not be specified.</p>
+</dd>
+<dt><strong>relating_versioned_action_request</strong></dt>
+<dd id="_ab5c3c63-6688-f69f-e3b1-3d6e8fba01de"><p id="_a320c6a6-489c-3514-9d5d-f8107db84ade">one of the instances of <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> that is a part of the relationship.</p>
+</dd>
+<note id="_b950c3be-c54e-5471-99f1-b78221912331"><p id="_3b275198-80e4-0873-c2d0-a89134cd84f7">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+
+<dl id="_06f571c1-12c7-7f93-f83b-ec7ba32bb23e"><dt><strong>related_versioned_action_request</strong></dt>
+<dd id="_43ac55cd-e476-f5bb-d34c-16e5d00894e6"><p id="_dd9217da-909d-7647-1f70-b9e692d1050a">the other instance of <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> that is a part of the relationship. If one element of the relationship is dependent upon the other, this attribute shall be the dependent one.</p>
+</dd>
+<note id="_08666fd6-cea7-1f1e-2458-4095442b6946"><p id="_1af20d97-cc1c-10ae-fc02-0f72d1071538">The meaning of this attribute can be defined in the annotated EXPRESS schemas that use or specialize this entity, or in an agreement of common understanding between the partners sharing this information.</p>
+</note></dl>
+
+
+</clause>
+
+<clause id="_1ac5f4d8-a725-a055-f73b-8247fb452ec6" anchor="action_schema.action_directive_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_4233d640-e577-bc62-ed34-ae76b743fdb7">action_directive_relationship</title>
+<p id="_f823f072-3989-e8a4-6a7f-f6ff6bce0275">An <strong>action_directive_relationship</strong> is a relationship between two <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> objects.</p>
+
+<p id="_4f30b750-049c-7cd7-26b4-25cfd79c6383"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_d7c9f35c-e7c6-8ce3-655c-a942909ce9af" unnumbered="true"><body>ENTITY action_directive_relationship;
+  name : label;
+  description : OPTIONAL STRING;
+  relating : action_directive;
+  related : action_directive;
+  relation_type : STRING;
+WHERE
+  WR1: acyclic_action_directive_relationship(SELF, [related], 'ACTION_SCHEMA.ACTION_DIRECTIVE_RELATIONSHIP');
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_01db2391-03e6-763d-377d-67ed646f2695"><underline>Attribute definitions:</underline></p>
+
+<dl id="_cec5f79b-6ba0-d469-1758-d6e06b8cbd89"><dt><strong>name</strong></dt>
+<dd id="_6d391480-5c4e-f535-45ba-adeb13140705"><p id="_8dbc3606-168e-ac52-bbd7-c6bc9ba8550f">shall be unique within a population of <strong>action_directive_relationship</strong>.</p>
+</dd>
+<dt><strong>description</strong></dt>
+<dd id="_d5288fa5-af5a-09a7-a26e-2f259a72d921"><p id="_29d04abb-afa3-b5e6-7c1f-2042175842be">the text or the set of texts that provide further information about the <strong>action_directive_relationship</strong>. The value of this attribute need not be specified.</p>
+</dd>
+<dt><strong>relating</strong></dt>
+<dd id="_3d254817-7f64-f15d-599d-5e59cff72f16"><p id="_5cbaa153-0154-9411-a52a-a0c66d275d22">one object of <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> that is part of the relationship.</p>
+</dd>
+<dt><strong>related</strong></dt>
+<dd id="_d66b4c22-65e1-2223-9fe2-8ad36b57c79d"><p id="_cb046f80-0aba-9085-f5fd-54e0ed547acf">the other object of <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> that is part of the relationship.</p>
+</dd>
+<dt><strong>relation_type</strong></dt>
+<dd id="_5483fc76-4b82-8f45-4ec2-dd921fb3c597"><p id="_05e66cd1-c000-b5bb-8077-30fc23f0e292">the meaning of the relationship.</p>
+</dd>
+</dl>
+
+<p id="_83ac8987-46d4-c430-e25b-6b7bacf84ab2"><underline>Formal propositions:</underline></p>
+
+<dl id="_db8a4c8c-0f86-2073-57ef-fb102a5f2db8"><dt><strong>WR1</strong></dt>
+<dd id="_004cc189-ecd5-f0c6-b4dc-50299490b7bc"><p id="_f6fb746d-2560-5f1c-3107-eb5a05481dae">A <strong>action_directive_relationship</strong> shall not participate in its own definition.</p>
+</dd>
+</dl>
+</clause>
+</clause>
+
+<clause id="_267686eb-0d9a-8e0c-03a7-b720f77cc6b5" anchor="action_schema.functions" inline-header="false" level="3" obligation="normative">
+<title id="_e1421a81-3305-8c97-99a8-db96e7420f26">action_schema function definitions</title>
+<clause id="_788804f6-a617-a587-4c80-cff524710991" anchor="action_schema.acyclic_action_method_relationship.acyclic_action_method_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_eaf50868-fa5f-0122-eaee-bfcb1b16d0dc">acyclic_action_method_relationship</title>
+<p id="_919c1ad6-5928-c582-7b31-e644fcefdce6">The <strong>acyclic_action_method_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_method_relationship" citeas=""><display-text>action_method_relationship</display-text></eref> or any of its subtypes.</p>
+
+<p id="_ad881a8d-3e2d-71d7-37dd-db8597fb213a">The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.<note id="_aa1e25b8-0f34-fd18-2ad9-d1808081332c"><p id="_f340bdad-dc53-c4b4-5af4-2691501d203a">The algorithm of the function is explained in annex E.2.</p>
+</note><note id="_9ef93ebd-3fee-48de-2c75-f0cbafc6d49a"><p id="_81648dca-9137-49a7-48fa-87232c472648">This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <eref bibitemid="express_action_schema.action_method_relationship" citeas=""><display-text>action_method_relationship</display-text></eref> entity include rules that use this function.</p>
+</note></p>
+
+
+
+
+
+<p id="_50a365e0-c477-1fbe-c362-945ccd7c15a6"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_ca0f4b52-45d4-4445-1777-9dd90ee5b013" unnumbered="true"><body>FUNCTION acyclic_action_method_relationship(relation : action_method_relationship;
+                                            relatives : SET [1:?] OF action_method;
+                                            specific_relation : STRING) : BOOLEAN;
+  LOCAL
+    x : SET OF action_method_relationship;
+  END_LOCAL;
+  IF relation.relating_method IN relatives THEN
+    RETURN (FALSE);
+  END_IF;
+  x := QUERY(am &lt;* bag_to_set(USEDIN(relation.relating_method, ('ACTION_SCHEMA.' + 'ACTION_METHOD_RELATIONSHIP.') + 'RELATED')) | specific_relation IN TYPEOF(am));
+  REPEAT i := 1 TO HIINDEX(x);
+    IF NOT acyclic_action_method_relationship(x[i], relatives + relation.relating_method, specific_relation) THEN
+      RETURN (FALSE);
+    END_IF;
+  END_REPEAT;
+  RETURN (TRUE);
+END_FUNCTION;</body></sourcecode>
+
+
+<p id="_4be11cce-6dcb-ef48-8284-b06c5d524466"><underline>Argument definitions:</underline></p>
+
+<dl id="_cc9cccf4-1ee5-ebd0-9bab-5f7e4b71a89d"><dt><strong>relation</strong></dt>
+<dd id="_19669b98-dafe-6e80-c0c4-53566b1e1318"><p id="_c28c388d-480d-a6fd-5609-36995fc4f1cb">(input) the candidate <eref bibitemid="express_action_schema.action_method_relationship" citeas=""><display-text>action_method_relationship</display-text></eref> to be checked.</p>
+</dd>
+<dt><strong>relatives</strong></dt>
+<dd id="_7d9027b5-d6a5-41c1-2b9b-da2906eb2460"><p id="_024f1685-10dc-5160-73e4-14bd540ee63d">(input) the set of instances of the entity data type <eref bibitemid="express_action_schema.action_method" citeas=""><display-text>action_method</display-text></eref> that the function is searching for in the <eref bibitemid="express_action_schema.action_method_relationship.relating_method" citeas=""><display-text>relating_method</display-text></eref> parameter of the relation argument.</p>
+</dd>
+<dt><strong>specific_relation</strong></dt>
+<dd id="_91e94a46-566c-72b7-ddd7-f11719a99a09"><p id="_d501f430-e329-c103-dfa9-a32ab84c4122">(input) the fully qualified name of a subtype of the <eref bibitemid="express_action_schema.action_method_relationship" citeas=""><display-text>action_method_relationship</display-text></eref> entity.</p>
+</dd>
+</dl>
+
+<p id="_74c63486-cb41-488a-c775-7db2a83d4d09"><underline>Argument definitions:</underline></p>
+
+<dl id="_9d3621b7-697d-4fd1-ed4f-45d143b8e5be"><dt><strong>x</strong></dt>
+<dd/></dl>
+</clause>
+
+<clause id="_ef386fdf-275d-cc85-0ec5-3402bb6c6954" anchor="action_schema.acyclic_action_relationship.acyclic_action_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_90c04b7e-62ed-51ec-3997-c2d9f063dc93">acyclic_action_relationship</title>
+<p id="_ed6ee314-49e4-1092-8ce6-1e7df1930a6c">The <strong>acyclic_action_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_relationship" citeas=""><display-text>action_relationship</display-text></eref> or any of its subtypes.</p>
+
+<p id="_5c54b693-ffd5-6fb4-6659-b9c74f5840bf">The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.<note id="_1446f27d-3f36-20de-bcb8-4e1af021ecec"><p id="_baaa9fcc-1bcc-1124-5831-ce35d37a5e14">The algorithm of the function is explained in annex E.2.</p>
+</note><note id="_e841536b-0cbd-a523-7fb3-c569cb119b4d"><p id="_0f3afe35-a000-9f52-2648-49c646b48e25">This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <eref bibitemid="express_action_schema.action_relationship" citeas=""><display-text>action_relationship</display-text></eref> entity include rules that use this function.</p>
+</note></p>
+
+
+
+
+
+<p id="_07c06ead-9c8a-3f69-fde7-660e1a82d010"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_9301b2fc-b7cf-9154-e1b2-f538ee136feb" unnumbered="true"><body>FUNCTION acyclic_action_relationship(relation : action_relationship;
+                                     relatives : SET [1:?] OF action;
+                                     specific_relation : STRING) : BOOLEAN;
+  LOCAL
+    x : SET OF action_relationship;
+  END_LOCAL;
+  IF relation.relating_action IN relatives THEN
+    RETURN (FALSE);
+  END_IF;
+  x := QUERY(actn &lt;* bag_to_set(USEDIN(relation.relating_action, ('ACTION_SCHEMA.' + 'ACTION_RELATIONSHIP.') + 'RELATED_ACTION')) | specific_relation IN TYPEOF(actn));
+  REPEAT i := 1 TO HIINDEX(x);
+    IF NOT acyclic_action_relationship(x[i], relatives + relation.relating_action, specific_relation) THEN
+      RETURN (FALSE);
+    END_IF;
+  END_REPEAT;
+  RETURN (TRUE);
+END_FUNCTION;</body></sourcecode>
+
+
+<p id="_6a945a57-13dd-93c4-8289-5e7d2e55e550"><underline>Argument definitions:</underline></p>
+
+<dl id="_4243c7e0-9249-efda-d30d-428c7e3416f4"><dt><strong>relation</strong></dt>
+<dd id="_60e9835c-c19a-ac66-6353-cd0fff0c5048"><p id="_d00d4eb5-c559-fd49-dc82-1b66823d552b">(input) the candidate <eref bibitemid="express_action_schema.action_relationship" citeas=""><display-text>action_relationship</display-text></eref> to be checked.</p>
+</dd>
+<dt><strong>relatives</strong></dt>
+<dd id="_1f9d9fe9-7e0a-825a-976d-4646ccfe15d0"><p id="_b6d07e50-f7a8-d833-7c02-e845fa5c9c1a">(input) the set of instances of the entity data type <eref bibitemid="express_action_schema.action" citeas=""><display-text>action</display-text></eref> for which the function is searching in the <eref bibitemid="express_action_schema.action_relationship.relating_action" citeas=""><display-text>relating_action</display-text></eref> parameter of the relation argument.</p>
+</dd>
+<dt><strong>specific_relation</strong></dt>
+<dd id="_989d32e0-f051-1645-1ae4-0b5a450d7ba6"><p id="_38f28630-9b44-9449-c963-2afcbbb3f342">(input) the fully qualified name of a subtype of the <eref bibitemid="express_action_schema.action_relationship" citeas=""><display-text>action_relationship</display-text></eref> entity.</p>
+</dd>
+</dl>
+
+<p id="_18745f8d-7b8f-9782-b06a-5e226dd221da"><underline>Argument definitions:</underline></p>
+
+<dl id="_b760fe04-e954-a916-2f6c-5a29a4091547"><dt><strong>x</strong></dt>
+<dd/></dl>
+</clause>
+
+<clause id="_f77c2bc0-7e9f-28b5-d2d7-7be690ada036" anchor="action_schema.acyclic_action_resource_relationship.acyclic_action_resource_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_9b37fb99-4135-46e9-765d-15d50efaefd3">acyclic_action_resource_relationship</title>
+<p id="_c49a6316-7773-fa9d-de2a-bd0f647e823d">The <strong>acyclic_action_resource_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> or any of its subtypes.</p>
+
+<p id="_0f5e10ef-4fc1-b3e9-1534-a27d74d25114">The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.<note id="_7be3ea0a-f09d-c503-66e2-16bfbf1eaecf"><p id="_07994795-5e58-27ef-76da-69e0ed518074">The algorithm of the function is explained in annex E.2.</p>
+</note><note id="_fdab9d81-ec4a-5516-4f3f-231d2520c976"><p id="_12ff8736-a200-cf94-06bf-2efb6f9da8a5">This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> entity include rules that use this function.</p>
+</note></p>
+
+
+
+
+
+<p id="_9491008f-f362-219a-f8fc-d4cfcd1b0654"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_cdb7630b-994e-95ca-ad92-f302188bf897" unnumbered="true"><body>FUNCTION acyclic_action_resource_relationship(relation : action_resource_relationship;
+                                              relatives : SET [1:?] OF action_resource;
+                                              specific_relation : STRING) : BOOLEAN;
+  LOCAL
+    x : SET OF action_resource_relationship;
+  END_LOCAL;
+  IF relation.relating_resource IN relatives THEN
+    RETURN (FALSE);
+  END_IF;
+  x := QUERY(ar &lt;* bag_to_set(USEDIN(relation.relating_resource, ('ACTION_SCHEMA.' + 'ACTION_RESOURCE_RELATIONSHIP.') + 'RELATED_RESOURCE')) | specific_relation IN TYPEOF(ar));
+  REPEAT i := 1 TO HIINDEX(x);
+    IF NOT acyclic_action_resource_relationship(x[i], relatives + relation.relating_resource, specific_relation) THEN
+      RETURN (FALSE);
+    END_IF;
+  END_REPEAT;
+  RETURN (TRUE);
+END_FUNCTION;</body></sourcecode>
+
+
+<p id="_8a054a24-f446-09ab-9185-ae1c2bb7cdea"><underline>Argument definitions:</underline></p>
+
+<dl id="_18fc92b4-eeef-18c7-0f2c-e54b12d9586a"><dt><strong>relation</strong></dt>
+<dd id="_a36e6b37-0f60-454d-bfb3-4303afb9f185"><p id="_7ad30c96-786a-d9fc-103d-f7bee2973843">(input) the candidate <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> to be checked.</p>
+</dd>
+<dt><strong>relatives</strong></dt>
+<dd id="_f335f9a4-3c63-0ce5-14b5-1bfec4805593"><p id="_f471f8fe-25e4-4518-1fac-c0d02e545684">(input) the set of instances of the entity data type <eref bibitemid="express_action_schema.action_resource" citeas=""><display-text>action_resource</display-text></eref> that the function is searching for in the <eref bibitemid="express_action_schema.action_resource_relationship.relating_resource" citeas=""><display-text>relating_resource</display-text></eref> parameter of the relation argument.</p>
+</dd>
+<dt><strong>specific_relation</strong></dt>
+<dd id="_780ab384-3787-ab85-d03a-d96c1af90d36"><p id="_47890a27-3a6b-cb33-a6ad-6f3b02ab6c36">(input) the fully qualified name of a subtype of the <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> entity.</p>
+</dd>
+</dl>
+
+<p id="_d30c8e34-1741-b608-2c6c-89b4fae34b96"><underline>Argument definitions:</underline></p>
+
+<dl id="_52c702c7-e7d8-ae72-d98c-80ca8a4feedb"><dt><strong>x</strong></dt>
+<dd/></dl>
+</clause>
+
+<clause id="_eb1d8469-4fca-f920-251a-36a04057599b" anchor="action_schema.acyclic_versioned_action_request_relationship.acyclic_versioned_action_request_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_e682d1d1-76c5-b455-7b2f-a9221ddbb7a0">acyclic_versioned_action_request_relationship</title>
+<p id="_48a5e318-aa17-26c4-f4a2-14b009ca8c2e">The <strong>acyclic_versioned_action_request_relationship</strong> function determines whether the graph of instances of the entity data type <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> that contains relation as one of its links contains a cycle. This function may be used to evaluate either an <eref bibitemid="express_action_schema.action_resource_relationship" citeas=""><display-text>action_resource_relationship</display-text></eref> or any of its subtypes.</p>
+
+<p id="_558b586b-9927-99f3-f6b7-033ddc91fbc0">The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.<note id="_fb440edc-8d08-f51c-6712-20e25e2ba5f4"><p id="_980fb2d1-e2a5-0e77-d266-eadb65e74cdd">The algorithm of the function is explained in annex E.2.</p>
+</note><note id="_84f40343-e242-aa7a-9cef-3c9b464a17c5"><p id="_4d979d09-7f5f-f4fd-3b90-6dae0eb76888">This function is not used in this schema. It is defined here because other ISO 10303 integrated resources and application protocols that use the <eref bibitemid="express_action_schema.versioned_action_request_relationship" citeas=""><display-text>versioned_action_request_relationship</display-text></eref> entity include rules that use this function.</p>
+</note></p>
+
+
+
+
+
+<p id="_b2a09d19-ad48-8d0a-6da4-81317815f644"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_4d3de58f-1123-fd55-a08b-2836a298c84e" unnumbered="true"><body>FUNCTION acyclic_versioned_action_request_relationship(relation : versioned_action_request_relationship;
+                                                       relatives : SET OF versioned_action_request;
+                                                       specific_relation : STRING) : BOOLEAN;
+  LOCAL
+    x : SET OF versioned_action_request_relationship;
+  END_LOCAL;
+  IF relation.relating_versioned_action_request IN relatives THEN
+    RETURN (FALSE);
+  END_IF;
+  x := QUERY(varr &lt;* bag_to_set(USEDIN(relation.relating_versioned_action_request, ('ACTION_SCHEMA.' + 'VERSIONED_ACTION_REQUEST_RELATIONSHIP.') + 'RELATED_VERSIONED_ACTION_REQUEST')) | specific_relation IN TYPEOF(varr));
+  REPEAT i := 1 TO HIINDEX(x);
+    IF NOT acyclic_versioned_action_request_relationship(x[i], relatives + relation.relating_versioned_action_request, specific_relation) THEN
+      RETURN (FALSE);
+    END_IF;
+  END_REPEAT;
+  RETURN (TRUE);
+END_FUNCTION;</body></sourcecode>
+
+
+<p id="_e191227f-ff07-9d22-320c-b7a3dc6208a1"><underline>Argument definitions:</underline></p>
+
+<dl id="_20c0f056-ba61-cdea-df0c-a1af7aa63428"><dt><strong>relation</strong></dt>
+<dd id="_71bf471d-23e7-d921-2bd1-41180df94995"><p id="_734cc1c2-fa8b-0978-b628-45f497fc964c">(input) the candidate <eref bibitemid="express_action_schema.versioned_action_request_relationship" citeas=""><display-text>versioned_action_request_relationship</display-text></eref> to be checked.</p>
+</dd>
+<dt><strong>relatives</strong></dt>
+<dd id="_bbe71633-e46e-4f9c-f44a-2b87faa5e8ef"><p id="_85ac72fc-e3e0-81e1-f438-1bd6903cac3d">(input) the set of instances of the entity data type <eref bibitemid="express_action_schema.versioned_action_request" citeas=""><display-text>versioned_action_request</display-text></eref> that the function is searching for in the <eref bibitemid="express_action_schema.versioned_action_request_relationship.relating_versioned_action_request" citeas=""><display-text>relating_versioned_action_request</display-text></eref> parameter of the relation argument.</p>
+</dd>
+<dt><strong>specific_relation</strong></dt>
+<dd id="_1c73f2d1-a3fe-bfb2-e83b-c3f68b4aa85b"><p id="_93ef1b0a-0ac2-c067-f874-6a67f59ded76">(input) the fully qualified name of a subtype of the <eref bibitemid="express_action_schema.versioned_action_request_relationship" citeas=""><display-text>versioned_action_request_relationship</display-text></eref> entity.</p>
+</dd>
+</dl>
+
+<p id="_7de44d5f-a16d-7bcd-d80b-8735590f81b1"><underline>Argument definitions:</underline></p>
+
+<dl id="_53c1ef4b-2d4f-b597-6132-1d160074818a"><dt><strong>x</strong></dt>
+<dd/></dl>
+</clause>
+
+<clause id="_eb1e366c-4059-637d-4f20-1e7561aeb971" anchor="action_schema.acyclic_action_directive_relationship.acyclic_action_directive_relationship" inline-header="false" level="4" obligation="normative">
+<title id="_e7ea86cf-1a9e-8a08-de9d-ed142a4cb02b">acyclic_action_directive_relationship</title>
+<p id="_68f13e1b-a1f2-aef9-61d0-0dba87f03b81">The <strong>acyclic_action_directive_relationship</strong> function determines whether the graph of instance of the entity data type <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> that contains relation as one of its links contains a cycle. this function may be used to evaluate either a <eref bibitemid="express_action_schema.action_directive_relationship" citeas=""><display-text>action_directive_relationship</display-text></eref> or any of its subtypes.</p>
+
+<p id="_a4f52662-7e60-19b5-ce8e-f2d5312245bf">The function returns TRUE if no cycle has been detected. Otherwise it returns FALSE.<note id="_91d59402-108f-3392-09f3-65376783ba52"><p id="_90d85650-2008-9010-c845-85d16e777c13">The algorithm of the function is explained in annex E.2.</p>
+</note></p>
+
+
+
+<p id="_fb0dacce-1311-9896-c6a5-f9ab0d5beb4b"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_751bd593-78f1-fe1f-c2a0-80875e624316" unnumbered="true"><body>FUNCTION acyclic_action_directive_relationship(relation : action_directive_relationship;
+                                               relatives : SET [1:?] OF action_directive;
+                                               specific_relation : STRING) : BOOLEAN;
+  LOCAL
+    x : SET OF action_directive_relationship;
+  END_LOCAL;
+  IF relation.relating IN relatives THEN
+    RETURN (FALSE);
+  END_IF;
+  x := QUERY(adr &lt;* bag_to_set(USEDIN(relation.relating, ('ACTION_SCHEMA.' + 'ACTION_DIRECTIVE_RELATIONSHIP.') + 'RELATED')) | specific_relation IN TYPEOF(adr));
+  REPEAT i := 1 TO HIINDEX(x);
+    IF NOT acyclic_action_directive_relationship(x[i], relatives + relation.relating, specific_relation) THEN
+      RETURN (FALSE);
+    END_IF;
+  END_REPEAT;
+  RETURN (TRUE);
+END_FUNCTION;</body></sourcecode>
+
+
+<p id="_8d250150-0302-7c57-c40f-4732cb7dfd46"><underline>Argument definitions:</underline></p>
+
+<dl id="_c6218557-2099-87c7-fce3-5417d3986642"><dt><strong>relation</strong></dt>
+<dd id="_6e9f30c8-0fcf-6906-73fe-36c90d6baa36"><p id="_b1430ee0-c593-4a63-747b-0430722c9832">(input) the candidate <eref bibitemid="express_action_schema.action_directive_relationship" citeas=""><display-text>action_directive_relationship</display-text></eref> to be checked.</p>
+</dd>
+<dt><strong>relatives</strong></dt>
+<dd id="_fe4482d4-8b78-5179-4035-46bdd6f90974"><p id="_9afddf39-ffb2-f199-65e3-edcd6ee900e1">(input) the set of instances of the entity data type <eref bibitemid="express_action_schema.action_directive" citeas=""><display-text>action_directive</display-text></eref> for which the function is searching in the <eref bibitemid="express_action_schema.action_directive_relationship.relating" citeas=""><display-text>relating</display-text></eref> parameter of the relation argument.</p>
+</dd>
+<dt><strong>specific_relation</strong></dt>
+<dd id="_5143cbbe-5023-7fcf-980b-1cd370fd9b57"><p id="_6a14239c-b6bd-6d20-2095-7b32b7168d59">(input) the fully qualified name of a subtype of the <eref bibitemid="express_action_schema.action_directive_relationship" citeas=""><display-text>action_directive_relationship</display-text></eref> entity.</p>
+</dd>
+</dl>
+
+<p id="_387da7af-222f-2c36-5140-888d5a253430"><underline>Argument definitions:</underline></p>
+
+<dl id="_484a3726-fd56-666a-76b7-699ef2418211"><dt><strong>x</strong></dt>
+<dd/></dl>
+</clause>
+</clause>
+</clause>
+
+<clause id="_49c9591e-1283-7094-04e5-d4f8645a38f3" anchor="language_schema" type="express-schema" inline-header="false" obligation="normative">
+<title id="_190d21be-8270-7602-96db-d4b4a8e22888">language_schema</title>
+<clause id="_8394c735-e156-c8e4-ab07-096d78090fbe" inline-header="false" obligation="normative">
+<title id="_0175f76d-716b-304d-d5e0-55b2c2c71130">General</title>
+<p id="_1f387b53-487e-7cb3-c220-4d7553d2cc3b">The subject of the <strong>language_schema</strong> specifies the data structure for the representation of language support.- IP1: The name attribute of the language shall be an alpha-3 bibliographic code of ISO 639-2.- IP2: If present, the description attribute shall identify a country with an alpha-2 code specified in ISO 3166-1.</p>
+
+<p id="_81a6ad20-f8cc-83ec-fbee-49cdad4d8621"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_bd9afc39-674d-ad1d-2b70-d978b8b031da" unnumbered="true"><body>SCHEMA language_schema '{iso standard 10303 part(41) version(1) object(1) location_schema(13)}';
+
+REFERENCE FROM group_schema
+  (group);</body></sourcecode>
+
+</clause>
+
+<clause id="_6e0c6dde-c67a-21dd-91c1-4f3b0cf12f66" anchor="language_schema." inline-header="false" level="3" obligation="normative">
+<title id="_5bd7cce9-876a-f89d-e298-14891a143bf0">Fundamental concepts and assumptions</title>
+<p id="_ef8a239b-a8a1-febd-44be-123e8cf27988">This specifies the representation of the language used in text attributes and the association of translations to these texts.</p>
+</clause>
+
+<clause id="_1e496a39-c6b8-5492-0848-cbb3009dc808" anchor="language_schema.entities" inline-header="false" level="3" obligation="normative">
+<title id="_d8ddbd33-4a13-a034-b590-8be1cce6d1f2">language_schema entity definitions</title>
+<clause id="_978efc4f-4691-3860-8c5b-b03c02d832ad" anchor="language_schema.language" inline-header="false" level="4" obligation="normative">
+<title id="_c17494f8-ea20-3cd5-4caf-d7b066f75d08">language</title>
+<p id="_79e2c2ec-3e58-aa50-93ab-5301ba4ff59d">A <strong>language</strong> is a type of <eref bibitemid="express_group_schema.group" citeas=""><display-text>group</display-text></eref> that is a specification of the language in which an information is given. The group shall specify in its name a language code according to ISO 639-2, and, if present, in its description a country code according to ISO 3166-1.Informal proposition</p>
+
+<p id="_1bdd3177-408b-5974-12c7-c5fe752761d0"><underline>EXPRESS specification:</underline></p>
+
+<sourcecode id="_9cbe1d52-8338-574c-d50a-436148932f83" unnumbered="true"><body>ENTITY language
+  SUBTYPE OF (group);
+WHERE
+  WR1: SELF\group.name &lt;&gt; '';
+END_ENTITY;</body></sourcecode>
+
+
+<p id="_2b006e0e-d377-c541-cd03-2713b4f200f1"><underline>Formal propositions:</underline></p>
+
+<dl id="_f7810624-9226-b7cb-65d3-f7f8e4f696e1"><dt><strong>WR1</strong></dt>
+<dd id="_c6e02d45-1320-f47a-28b1-f5194fafd8e7"><p id="_a09d7be6-7afe-5837-1414-7c15c687b4e5">The name attribute of the language shall be specified.</p>
+</dd>
+</dl>
+
+<p id="_fa536215-5765-90b6-69f4-27f18eba49f5"><underline>Informal propositions:</underline></p>
+
+<dl id="_e801fd6b-6345-7d56-5c4f-7abea5423a89"><dt><strong>IP1</strong></dt>
+<dd/><dt><strong>IP2</strong></dt>
+<dd/></dl>
+</clause>
+</clause>
+</clause>
+
+
+</sections><bibliography><references id="_08e4a7cd-1a73-9a2a-4dac-fc841681bf21" normative="true" obligation="informative">
+<title id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><p id="_1e0e85f2-a241-464a-90af-046b5883d60f">There are no normative references in this document.</p>
+</references><references id="_c9a61214-1aba-536d-8901-2b704b278169" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title>
+</references><references hidden="true" normative="false"><bibitem anchor="express_action_schema.action_directive" id="_49b1b278-3d89-abfd-7696-b93a88eb7b4c" type="internal">
+<docidentifier type="repository">express/action_schema.action_directive</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action" id="_82af3033-f064-4a9a-e5d3-7d867dbca4e4" type="internal">
+<docidentifier type="repository">express/action_schema.action</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_method" id="_e84b7705-ad1f-ac7c-e9d1-27425c0a3ad8" type="internal">
+<docidentifier type="repository">express/action_schema.action_method</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_resource" id="_a68fd531-06ba-dc06-4031-3d4c528e9293" type="internal">
+<docidentifier type="repository">express/action_schema.action_resource</docidentifier>
+</bibitem>
+<bibitem anchor="express_support_resource_schema.label" id="_5997a5fb-c383-7c40-2373-3257217794e4" type="internal">
+<docidentifier type="repository">express/support_resource_schema.label</docidentifier>
+</bibitem>
+<bibitem anchor="express_support_resource_schema.text" id="_27d2374c-fd1e-fec7-cd51-1754e535fac9" type="internal">
+<docidentifier type="repository">express/support_resource_schema.text</docidentifier>
+</bibitem>
+<bibitem anchor="express_support_resource_schema.identifier" id="_5f59babc-5a70-a25c-f756-9b19bd658f1e" type="internal">
+<docidentifier type="repository">express/support_resource_schema.identifier</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.id_attribute.identified_item" id="_bcf85dd6-187f-5c6e-02d3-95794eba1fcd" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.id_attribute.identified_item</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.id_attribute" id="_3e954eb6-b145-a734-d04e-7b44c92419cd" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.id_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema" id="_64a82555-ce69-fde0-f7ec-c14b1e44dbdb" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.versioned_action_request" id="_a9c1fdd3-a923-7207-8aa7-7218322cdb33" type="internal">
+<docidentifier type="repository">express/action_schema.versioned_action_request</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.description_attribute.described_item" id="_4c3b6b58-64b7-5b3a-3467-20e872d36c4a" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.description_attribute.described_item</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.description_attribute" id="_1ec457af-b3e1-ff22-2fca-9a80ccac09ed" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.description_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.name_attribute.named_item" id="_83502884-ce62-47b3-6926-ef11422e0bf2" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.name_attribute.named_item</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.name_attribute" id="_02465830-9eaf-ffbc-0e0d-fb1631f6323b" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.name_attribute</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.supported_item" id="_4ae4b090-d7ff-08c5-0805-a7233dd50766" type="internal">
+<docidentifier type="repository">express/action_schema.supported_item</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_resource_type" id="_364f6cbd-ec44-f4cc-2041-272d52dc6c66" type="internal">
+<docidentifier type="repository">express/action_schema.action_resource_type</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.executed_action" id="_2293ddab-de9a-3e11-454a-ecfb7937bfde" type="internal">
+<docidentifier type="repository">express/action_schema.executed_action</docidentifier>
+</bibitem>
+<bibitem anchor="express_management_resources_schema.date_assignment" id="_1b0d3dbb-1c3b-9f74-119c-00f6afa29982" type="internal">
+<docidentifier type="repository">express/management_resources_schema.date_assignment</docidentifier>
+</bibitem>
+<bibitem anchor="express_management_resources_schema.date_and_time_assignment" id="_4087c818-31a4-2968-fa35-3aede9b88bed" type="internal">
+<docidentifier type="repository">express/management_resources_schema.date_and_time_assignment</docidentifier>
+</bibitem>
+<bibitem anchor="express_management_resources_schema.time_assignment" id="_0f57f728-e378-92fa-1c5f-7c69fa5e5e2b" type="internal">
+<docidentifier type="repository">express/management_resources_schema.time_assignment</docidentifier>
+</bibitem>
+<bibitem anchor="express_management_resources_schema.organization_assignment" id="_533a86d2-ae07-d215-fbbe-8c8ad4ea4c14" type="internal">
+<docidentifier type="repository">express/management_resources_schema.organization_assignment</docidentifier>
+</bibitem>
+<bibitem anchor="express_management_resources_schema.document_reference" id="_96e8e3dd-2521-a00f-4346-104f8a9334ac" type="internal">
+<docidentifier type="repository">express/management_resources_schema.document_reference</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.directed_action" id="_0522ce37-a941-c4fd-aba9-8b5f446d7621" type="internal">
+<docidentifier type="repository">express/action_schema.directed_action</docidentifier>
+</bibitem>
+<bibitem anchor="express_basic_attribute_schema.role_association" id="_6d4e5fef-3f24-db18-f941-44fa0a6b8b81" type="internal">
+<docidentifier type="repository">express/basic_attribute_schema.role_association</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_status" id="_a2f7d75b-c8d7-0505-c830-f6499598c5ac" type="internal">
+<docidentifier type="repository">express/action_schema.action_status</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_method_relationship" id="_de984ac7-ea95-8768-bc68-e5a4dcedbd27" type="internal">
+<docidentifier type="repository">express/action_schema.action_method_relationship</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_method_relationship.relating_method" id="_5f491e18-90a9-de01-393b-70fd5e1df606" type="internal">
+<docidentifier type="repository">express/action_schema.action_method_relationship.relating_method</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_relationship" id="_6883898b-f02d-9aa5-60df-36cf046d33a4" type="internal">
+<docidentifier type="repository">express/action_schema.action_relationship</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_relationship.relating_action" id="_5b74b028-057c-67e6-c545-8491039f8448" type="internal">
+<docidentifier type="repository">express/action_schema.action_relationship.relating_action</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_resource_relationship" id="_70f80cf3-80ad-f925-aaa0-e4efc4775dd7" type="internal">
+<docidentifier type="repository">express/action_schema.action_resource_relationship</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_resource_relationship.relating_resource" id="_cdb173fe-ce1e-7d75-88a5-231c3b6fa15a" type="internal">
+<docidentifier type="repository">express/action_schema.action_resource_relationship.relating_resource</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.versioned_action_request_relationship" id="_0d336774-c14b-b987-402c-5063443bbbd3" type="internal">
+<docidentifier type="repository">express/action_schema.versioned_action_request_relationship</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.versioned_action_request_relationship.relating_versioned_action_request" id="_4d21462a-fd3e-5405-d120-6d7b14eca9e5" type="internal">
+<docidentifier type="repository">express/action_schema.versioned_action_request_relationship.relating_versioned_action_request</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_directive_relationship" id="_7003e54a-8a83-9172-4419-11f04c554e1c" type="internal">
+<docidentifier type="repository">express/action_schema.action_directive_relationship</docidentifier>
+</bibitem>
+<bibitem anchor="express_action_schema.action_directive_relationship.relating" id="_2296ca7d-5633-17e1-9733-1e8282243bc6" type="internal">
+<docidentifier type="repository">express/action_schema.action_directive_relationship.relating</docidentifier>
+</bibitem>
+<bibitem anchor="express_group_schema.group" id="_fe23aa15-3f47-8328-4ba3-6d1cab0aff2c" type="internal">
+<docidentifier type="repository">express/group_schema.group</docidentifier>
+</bibitem>
+</references></bibliography>
+</metanorma>
