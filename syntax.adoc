@@ -84,6 +84,12 @@ These different types of remarks can be in multiple instances, for example,
 multiple `(*"{TAG}" ... *)` remarks can be made in an EXPRESS file to describe
 the particular object.
 
+A note, example, figure or table can carry its own ID after a colon, such as
+`(*"{TAG}.__note:two" ... *)`. Each ID makes a separate remark that can be
+referred to from other remarks, for example
+`<<express:{TAG}.__note:two>>`. The ID is any name unique among the remarks of
+that type on `{TAG}`.
+
 These named remarks are not bound to any particular location in an EXPRESS file.
 For example, they can be made immediately after the declaration of the EXPRESS
 object, or collected at the top or bottom of the EXPRESS file.
