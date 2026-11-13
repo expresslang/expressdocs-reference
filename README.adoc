@@ -1,6 +1,6 @@
 == Annotated EXPRESS
 
-image:https://github.com/metanorma/annotated-express/actions/workflows/docker.yml/badge.svg["Build Status", link="https://github.com/metanorma/annotated-express/actions/workflows/docker.yml"]
+image:https://github.com/expresslang/expressdocs-reference/actions/workflows/docker.yml/badge.svg["Build Status", link="https://github.com/expresslang/expressdocs-reference/actions/workflows/docker.yml"]
 
 === Introduction
 
